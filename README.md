@@ -7,7 +7,7 @@ Projekt tworzony przy użyciu:
 * C++17
 * HTML 5.2
 * CSS
-* PHP 7.4.0
+* PHP 8.0.0
 * JavaScript
 * Python 3.9.0
 
