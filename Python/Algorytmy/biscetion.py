@@ -1,3 +1,5 @@
+#wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja
+
 def f(x):
     return -4*x +2
 
