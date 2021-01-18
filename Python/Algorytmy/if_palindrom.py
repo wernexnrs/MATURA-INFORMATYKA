@@ -1,3 +1,5 @@
+#sprawdzanie, czy dany ciąg znaków tworzy palindrom
+
 def if_palindrom(string):
     lista = list(string)
     lista2 = lista[::-1]
