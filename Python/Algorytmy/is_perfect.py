@@ -1,3 +1,5 @@
+#sprawdzanie, czy liczba jest liczbą doskonałą
+
 def is_perfect(n):
     s = 1
     for i in range(2,n):
