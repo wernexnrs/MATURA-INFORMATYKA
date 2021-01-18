@@ -1,3 +1,5 @@
+#rozkładanie liczby na czynniki pierwsze
+
 def prime_factors(n):
     factors = []
     k = 2
