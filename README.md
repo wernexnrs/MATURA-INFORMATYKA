@@ -17,7 +17,7 @@ Projekt tworzony przy użyciu:
 # Algorytmy wymienione w wymaganiach 
 
 1. algorytmy na liczbach całkowitych, np.:
-    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
+   * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
     * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
     * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
     * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
@@ -42,8 +42,8 @@ Projekt tworzony przy użyciu:
     * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
     * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,](#konwersja) 
-    * [ ] szyfr Cezara,](#konwersja) 
-    * [ ] szyfr przestawieniowy,](#konwersja) 
+    * [ ] szyfr Cezara,
+    * [ ] szyfr przestawieniowy,
    
 <a name="konwersja"/>
 
