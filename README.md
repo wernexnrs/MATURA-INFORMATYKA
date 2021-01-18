@@ -9,33 +9,36 @@ Projekt tworzony przy użyciu:
 **opisuje podstawowe algorytmy i stosuje:**
 1. algorytmy na liczbach całkowitych, np.:
     * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
-    * [x] sprawdzanie, czy liczba jest liczbą pierwszą, doskonałą,
-    * [x] rozkładanie liczby na czynniki pierwsze,
-    * [x] iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,
-    * [x] iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,
-    * [x] wydawanie reszty metodą zachłanną,
+    * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
+    * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
+    * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
+    * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,](#nwd) 
+    * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
+    * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
 2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
     * algorytmy sortowania ciągu liczb: 
-      * [x] bąbelkowy, 
-      * [x] przez wybór, 
-      * [x] przez wstawianie liniowe, 
-      * [x] przez scalanie, 
+      * [x] [bąbelkowy, ](#bob) 
+      * [x] [przez wybór, ](#wybor) 
+      * [x] [przez wstawianie liniowe, ](#lin) 
+      * [x] [przez scalanie, ](#scalanie) 
       * [ ] szybki, 
       * [ ] kubełkowy,
 3. algorytmy numeryczne, np.:
-    * [x] szybkie podnoszenie do potęgi,
-    * [x] wyznaczanie miejsc zerowych funkcji metodą połowienia,
+    * [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
+    * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
 4. algorytmy na tekstach, np.:
-    * [x] sprawdzanie, czy dany ciąg znaków tworzy palindrom, anagram,
-    * [x] porządkowanie alfabetyczne,
-    * [x] wyszukiwanie wzorca w tekście,
+    * [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
+    * [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
+    * [x] [porządkowanie alfabetyczne,](#alfa) 
+    * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5.algorytmy kompresji i szyfrowania, np.:
-    * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
-    * [ ] szyfr Cezara,
-    * [ ] szyfr przestawieniowy,
+    * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,](#konwersja) 
+    * [ ] szyfr Cezara,](#konwersja) 
+    * [ ] szyfr przestawieniowy,](#konwersja) 
+   
+<a name="konwersja"/>
 
 ### reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym
-<a name="konwersja"/>
 
 ```python
 dec_numbers = [15,12,2,4,7,8]
@@ -64,6 +67,8 @@ def to_base2(s, b):
 print(to_base(12, 16))
 print(to_base2(12, 16))
 ```
+<a name="is_prime"/>
+
 ### sprawdzanie, czy liczba jest liczbą pierwszą
 ```python
 def is_prime(x):
@@ -74,6 +79,8 @@ def is_prime(x):
         return True
     return False
 ```
+<a name="is_perfect"/>
+
 ### sprawdzanie, czy liczba jest liczbą doskonała
 ```python
 def is_perfect(n):
@@ -85,6 +92,8 @@ def is_perfect(n):
         return True
     return False
 ```
+<a name="prime_factors"/>
+
 ### rozkładanie liczby na czynniki pierwsze
 ```python
 def prime_factors(n):
@@ -97,6 +106,8 @@ def prime_factors(n):
         k += 1
     return factors 
 ```
+<a name="nwd"/>
+
 ### iteracyjna i rekurencyjna realizacja algorytmu Euklidesa
 ```python
 def nwd(a, b): return nwd(b, a%b) if b else a #recursive
@@ -115,6 +126,8 @@ def nwd2(a, b):
 
 def nww(a, b): return a*b//nwd(a, b)
 ```
+<a name="fib"/>
+
 ### iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego
 ```python
 def f(n):
@@ -134,6 +147,8 @@ for i in range(10): #first 10 numbers
 for i in range(10): #first 10 numbers    
     print(recur_f(i))
 ```
+<a name="zachlanna"/>
+
 ## wydawanie reszty metodą zachłanną
 ```python
 do_wydania = 6 #zł
@@ -156,6 +171,8 @@ while (wybrana_moneta > 0):
 
 print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
 ```
+<a name="bob"/>
+
 ## sortowanie bąbelkowe
 ```python
 def bubbleSort(arr): 
@@ -171,6 +188,8 @@ arr = [64, 34, 25, 12, 22, 11, 90]
   
 print(bubbleSort(arr))
 ```
+<a name="wybor"/>
+
 ## sortowanie przez wybór
 ```python
 def selection_sort(tab):
@@ -186,6 +205,8 @@ tab = [64, 34, 25, 12, 22, 11, 90]
     
 print(selection_sort(tab))
 ```
+<a name="lin"/>
+
 ## sortowanie przez wstawianie liniowe
 ```python
 def insertionSort(A): 
@@ -202,6 +223,9 @@ arr = [12, 11, 13, 5, 6]
 
 print(insertionSort(arr))
 ```
+
+<a name="scalanie"/>
+
 ## sortowanie przez scalanie
 ```python
 def mergeSort(arr):
@@ -241,6 +265,8 @@ arr = [12, 11, 13, 5, 6, 7]
 
 print(mergeSort(arr))
 ```
+<a name="fast_power"/>
+
 ## szybkie podnoszenie do potęgi
 ```python
 def fast_power(x,n):
@@ -264,6 +290,8 @@ def fast_power2(x,n):
 print(fast_power(3,6))
 print(fast_power2(3,6))
 ```
+<a name="bisekcja"/>
+
 ## wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja
 ```python
 def f(x):
@@ -285,6 +313,8 @@ def bisection(a,b,precyzja = 0.0001):
       
 print("{:.3f}".format( bisection(-100, 100) ))
 ```
+<a name="palindrom"/>
+
 ## sprawdzanie, czy dany ciąg znaków tworzy palindrom
 ```python
 def if_palindrom(string):
@@ -298,6 +328,8 @@ string = "ala"
 
 print(if_palindrom(string))
 ```
+<a name="anagram"/>
+
 ## sprawdzanie, czy dany ciąg znaków tworzy anagram
 ```python
 def if_anagram(string,string2):
@@ -310,6 +342,8 @@ string2 = "nagaram"
 
 print(if_anagram(string,string2))
 ```
+<a name="alfa"/>
+
 ## porządkowanie alfabetyczne
 ```python
 def sort(lista):
@@ -333,6 +367,8 @@ def sort_poco(lista):
 
 print(sort_poco(lista))    
 ```
+<a name="pattern"/>
+
 ## wyszukiwanie wzorca w tekście
 ```python
 def is_pattern(pattern,word):
