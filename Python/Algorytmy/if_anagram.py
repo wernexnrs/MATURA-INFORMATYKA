@@ -1,3 +1,5 @@
+#sprawdzanie, czy dany ciąg znaków tworzy anagram
+
 def if_anagram(string,string2):
     if sorted(string) == sorted(string2):
         return True
