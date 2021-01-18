@@ -1,3 +1,5 @@
+#wydawanie reszty metodą zachłanną
+
 do_wydania = 6 #zł
 
 monety = [1,2,5]
