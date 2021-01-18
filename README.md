@@ -1,11 +1,11 @@
-## MATURA
+## MATURA 2021
 Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. 
 
 ## Technologie
 Projekt tworzony przy użyciu:
 * Python 3.9.1
 
-## Wymagania
+# Algorytmy wymienione w wymaganiach
 **opisuje podstawowe algorytmy i stosuje:**
 1. algorytmy na liczbach całkowitych, np.:
     * [x] reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,
@@ -201,7 +201,7 @@ arr = [12, 11, 13, 5, 6]
 
 print(insertionSort(arr))
 ```
-## przez scalanie
+## sortowanie przez scalanie
 ```python
 def mergeSort(arr):
     if len(arr) > 1:
