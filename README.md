@@ -1,5 +1,7 @@
+<center><h2> 🔥 **Wernex#9840** 🔥 </h2></center>
+
 ## MATURA 2021
-Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. 🔥 **#Wernex** 🔥
+Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. 
 
 ## Technologie
 Projekt tworzony przy użyciu:
@@ -23,7 +25,7 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
 # Algorytmy wymienione w wymaganiach 
 
 1. algorytmy na liczbach całkowitych, np.:
-   * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
+    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
     * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
     * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
     * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
