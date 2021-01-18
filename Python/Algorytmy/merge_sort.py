@@ -1,3 +1,5 @@
+#algorytmy sortowania ciągu liczb - przez scalanie
+
 def mergeSort(arr):
     if len(arr) > 1:
 
