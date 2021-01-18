@@ -8,7 +8,7 @@ Projekt tworzony przy użyciu:
 ## Wymagania
 **opisuje podstawowe algorytmy i stosuje:**
 1. algorytmy na liczbach całkowitych, np.:
-    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](###sprawdzanie,-czy-liczba-jest-liczbą-pierwszą)
+    * [x] reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,
     * [x] sprawdzanie, czy liczba jest liczbą pierwszą, doskonałą,
     * [x] rozkładanie liczby na czynniki pierwsze,
     * [x] iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,
@@ -132,4 +132,215 @@ for i in range(10): #first 10 numbers
     
 for i in range(10): #first 10 numbers    
     print(recur_f(i))
+```
+## wydawanie reszty metodą zachłanną
+```python
+do_wydania = 6 #zł
+
+monety = [1,2,5]
+count = 0
+historia = []
+
+wybrana_moneta = int(input())
+
+while (wybrana_moneta > 0):
+    nominal = 0
+    for i in range(len(monety)):
+        if monety[i] <= wybrana_moneta and monety[i] > nominal:
+            nominal = monety[i]
+    wybrana_moneta = wybrana_moneta - nominal
+
+    historia.append(nominal)
+    count+=1
+
+print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
+```
+## sortowanie bąbelkowe
+```python
+def bubbleSort(arr): 
+    n = len(arr) 
+    for i in range(n): 
+        for j in range(0, n-i-1): 
+            if arr[j] > arr[j+1]: 
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+  
+
+arr = [64, 34, 25, 12, 22, 11, 90] 
+  
+print(bubbleSort(arr))
+```
+## sortowanie przez wybór
+```python
+def selection_sort(tab):
+    for i in range(len(tab)):
+        mini = i 
+        for j in range(i+1, len(tab)): 
+            if tab[mini] > tab[j]: 
+                mini = j         
+        tab[i], tab[mini] = tab[mini], tab[i]
+    return tab
+
+tab = [64, 34, 25, 12, 22, 11, 90] 
+    
+print(selection_sort(tab))
+```
+## sortowanie przez wstawianie liniowe
+```python
+def insertionSort(A): 
+    for i in range(1, len(A)):
+        liczba = A[i]
+
+        while i > 0 and A[i - 1] > liczba:
+            A[i] = A[i -1]
+            i -=1
+        A[i] = liczba
+    return A
+  
+arr = [12, 11, 13, 5, 6]
+
+print(insertionSort(arr))
+```
+## przez scalanie
+```python
+def mergeSort(arr):
+    if len(arr) > 1:
+
+        mid = len(arr)//2
+        
+        L = arr[:mid]
+        R = arr[mid:]
+        
+        mergeSort(L)
+        mergeSort(R)
+ 
+        i = j = k = 0
+ 
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+ 
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+ 
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
+    return arr
+
+arr = [12, 11, 13, 5, 6, 7]
+
+print(mergeSort(arr))
+```
+## szybkie podnoszenie do potęgi
+```python
+def fast_power(x,n):
+    if n == 0:
+        return 1
+    elif n % 2 != 0:
+        return x * x**(n-1)
+    else:
+        a = x**(n/2)
+    return a**2
+
+#albo
+def fast_power2(x,n):
+    if n == 0:
+        return 1
+    elif n % 2 != 0:
+        return x * (x**((n-1)/2))**2
+    return (x**(n/2))**2
+
+
+print(fast_power(3,6))
+print(fast_power2(3,6))
+```
+## wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja
+```python
+def f(x):
+    return -4*x +2
+
+def bisection(a,b,precyzja = 0.0001): 
+    if f(a)*f(b) >= 0: 
+        return None
+    c = a 
+    while (b-a) >= precyzja: 
+        c = (a+b)/2
+        if (f(c) == 0.0): 
+            break
+        if (f(c)*f(a) < 0): 
+            b = c 
+        else: 
+            a = c      
+    return c
+      
+print("{:.3f}".format( bisection(-100, 100) ))
+```
+## sprawdzanie, czy dany ciąg znaków tworzy palindrom
+```python
+def if_palindrom(string):
+    lista = list(string)
+    lista2 = lista[::-1]
+    if lista == lista2:
+        return True
+    return False
+
+string = "ala"
+
+print(if_palindrom(string))
+```
+## sprawdzanie, czy dany ciąg znaków tworzy anagram
+```python
+def if_anagram(string,string2):
+    if sorted(string) == sorted(string2):
+        return True
+    return False
+
+string = "anagram"
+string2 = "nagaram"
+
+print(if_anagram(string,string2))
+```
+## porządkowanie alfabetyczne
+```python
+def sort(lista):
+    return sorted(lista)
+
+lista = ["C","D","A","O"]
+
+print(sort(lista))
+
+#to jest python po co mam znac rozbudowana wersje..
+
+#przez wstawianie
+def sort_poco(lista):
+    for i in range(len(lista)):
+        mini = i 
+        for j in range(i+1, len(lista)): 
+            if lista[mini] > lista[j]: 
+                mini = j         
+        lista[i], lista[mini] = lista[mini], lista[i]
+    return lista
+
+print(sort_poco(lista))    
+```
+## wyszukiwanie wzorca w tekście
+```python
+def is_pattern(pattern,word):
+    return pattern in word
+
+pattern = "motyw"
+word = "lokomotywa"
+
+print(is_pattern(pattern,word))
+
+#implementacje iteracyjną zrobię kiedy indziej 
 ```
