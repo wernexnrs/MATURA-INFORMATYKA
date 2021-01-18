@@ -1,3 +1,5 @@
+#szybkie podnoszenie do potęgi
+
 def fast_power(x,n):
     if n == 0:
         return 1
@@ -7,6 +9,7 @@ def fast_power(x,n):
         a = x**(n/2)
     return a**2
 
+#albo
 def fast_power2(x,n):
     if n == 0:
         return 1
