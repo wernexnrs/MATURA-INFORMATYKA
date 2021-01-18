@@ -1,4 +1,6 @@
-<center><h2> 🔥 **Wernex#9840** 🔥 </h2></center>
+<p align="center">
+   <h1> 🔥 **Wernex#9840** 🔥 </h1>
+</p>
 
 ## MATURA 2021
 Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. 
