@@ -5,6 +5,7 @@ Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną
 Projekt tworzony przy użyciu:
 * Python 3.9.1
 
+## Wymagania
 11. opisuje podstawowe algorytmy i stosuje:
   1. algorytmy na liczbach całkowitych, np.:
     * reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,
