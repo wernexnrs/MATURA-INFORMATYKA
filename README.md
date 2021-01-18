@@ -8,7 +8,7 @@ Projekt tworzony przy użyciu:
 ## Wymagania
 **opisuje podstawowe algorytmy i stosuje:**
 1. algorytmy na liczbach całkowitych, np.:
-    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#link1)
+    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](###sprawdzanie,-czy-liczba-jest-liczbą-pierwszą)
     * [x] sprawdzanie, czy liczba jest liczbą pierwszą, doskonałą,
     * [x] rozkładanie liczby na czynniki pierwsze,
     * [x] iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,
