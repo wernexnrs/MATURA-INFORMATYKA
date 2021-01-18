@@ -1,3 +1,5 @@
+#iteracyjna i rekurencyjna realizacja algorytmu Euklidesa
+
 def nwd(a, b): return nwd(b, a%b) if b else a #recursive
 
 #^the same
