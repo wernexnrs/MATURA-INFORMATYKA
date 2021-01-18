@@ -1,3 +1,5 @@
+#algorytmy sortowania ciągu liczb - przez wybór
+
 def selection_sort(tab):
     for i in range(len(tab)):
         mini = i 
