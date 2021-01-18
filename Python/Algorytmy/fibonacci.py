@@ -1,7 +1,8 @@
-def fibonacci_list(n):
-    fibonacci = [0,1]
-    for i in range(n-1):
-        fibonacci.append(fibonacci[-1] + fibonacci[-2])
-    return fibonacci
-    
-fibonacci_list(4)[4] #nth  
+def f(n):
+    a, b = 0, 1
+    for i in range(0, n):
+        a, b = b, a + b
+    return a
+
+for i in range(10): #first 10 numbers
+    print(f(i))
