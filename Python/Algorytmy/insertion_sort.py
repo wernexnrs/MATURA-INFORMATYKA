@@ -1,3 +1,5 @@
+#algorytmy sortowania ciągu liczb - przez wstawianie liniowe
+
 def insertionSort(A): 
     for i in range(1, len(A)):
         liczba = A[i]
