@@ -38,7 +38,7 @@ Projekt tworzony przy użyciu:
     * [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
     * [x] [porządkowanie alfabetyczne,](#alfa) 
     * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
-5.algorytmy kompresji i szyfrowania, np.:
+5. algorytmy kompresji i szyfrowania, np.:
     * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,](#konwersja) 
     * [ ] szyfr Cezara,](#konwersja) 
     * [ ] szyfr przestawieniowy,](#konwersja) 
