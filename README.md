@@ -5,6 +5,12 @@ Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną
 Projekt tworzony przy użyciu:
 * Python 3.9.1
 
+## Przydatne linki
+<a href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Informatory/2015/aneks/Aneks_informatyka_EM_standardowy.pdf">Pełne wymagania maturalne</a><br>
+<a href="https://pl.spoj.com/">Polski SPOJ</a> - pełno problemów algorytmicznych do rozwiązania<br>
+Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">Informatyka</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">dane</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip">rozwiązania</a>
+
+
 <a name="main"/>
 
 # TOC
