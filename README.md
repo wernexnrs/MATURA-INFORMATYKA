@@ -1,4 +1,4 @@
-<p align="center">
+<p style="text-aling: center; color: green;">
    <h1> 🔥 **Wernex#9840** 🔥 </h1>
 </p>
 
