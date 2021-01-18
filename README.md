@@ -36,6 +36,7 @@ Projekt tworzony przy użyciu:
 
 ### reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym
 <a name="konwersja"/>
+
 ```python
 dec_numbers = [15,12,2,4,7,8]
 
