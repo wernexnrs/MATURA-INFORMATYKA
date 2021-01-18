@@ -34,8 +34,8 @@ Projekt tworzony przy użyciu:
     * [ ] szyfr Cezara,
     * [ ] szyfr przestawieniowy,
 
-## reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym
-#link1
+### reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym
+
 ```python
 dec_numbers = [15,12,2,4,7,8]
 
@@ -63,7 +63,7 @@ def to_base2(s, b):
 print(to_base(12, 16))
 print(to_base2(12, 16))
 ```
-## sprawdzanie, czy liczba jest liczbą pierwszą
+### sprawdzanie, czy liczba jest liczbą pierwszą
 ```python
 def is_prime(x):
     if x > 1:
@@ -73,7 +73,7 @@ def is_prime(x):
         return True
     return False
 ```
-## sprawdzanie, czy liczba jest liczbą doskonała
+### sprawdzanie, czy liczba jest liczbą doskonała
 ```python
 def is_perfect(n):
     s = 1
@@ -84,7 +84,7 @@ def is_perfect(n):
         return True
     return False
 ```
-## rozkładanie liczby na czynniki pierwsze
+### rozkładanie liczby na czynniki pierwsze
 ```python
 def prime_factors(n):
     factors = []
@@ -96,7 +96,7 @@ def prime_factors(n):
         k += 1
     return factors 
 ```
-## iteracyjna i rekurencyjna realizacja algorytmu Euklidesa
+### iteracyjna i rekurencyjna realizacja algorytmu Euklidesa
 ```python
 def nwd(a, b): return nwd(b, a%b) if b else a #recursive
 
@@ -114,7 +114,7 @@ def nwd2(a, b):
 
 def nww(a, b): return a*b//nwd(a, b)
 ```
-## iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego
+### iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego
 ```python
 def f(n):
     a, b = 0, 1
