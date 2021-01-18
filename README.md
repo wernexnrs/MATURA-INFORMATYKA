@@ -6,29 +6,30 @@ Projekt tworzony przy użyciu:
 * Python 3.9.1
 
 ## Wymagania
-11. opisuje podstawowe algorytmy i stosuje:
-  1. algorytmy na liczbach całkowitych, np.:
-    * reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,
-    * sprawdzanie, czy liczba jest liczbą pierwszą, doskonałą,
-    * rozkładanie liczby na czynniki pierwsze,
-    * iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,
-    * iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,
-    * wydawanie reszty metodą zachłanną,
-  2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
-jednoczesne znajdowanie największego i najmniejszego elementu w zbiorze: algorytm naiwny i optymalny,
-algorytmy sortowania ciągu liczb: bąbelkowy, przez wybór, przez wstawianie liniowe lub binarne, przez scalanie, szybki, kubełkowy,
-algorytmy numeryczne, np.:
-obliczanie wartości pierwiastka kwadratowego,
-obliczanie wartości wielomianu za pomocą schematu Hornera,
-zastosowania schematu Hornera: reprezentacja liczb w różnych systemach liczbowych, szybkie podnoszenie do potęgi,
-wyznaczanie miejsc zerowych funkcji metodą połowienia,
-obliczanie pola obszarów zamkniętych,
-algorytmy na tekstach, np.:
-sprawdzanie, czy dany ciąg znaków tworzy palindrom, anagram,
-porządkowanie alfabetyczne,
-wyszukiwanie wzorca w tekście,
-obliczanie wartości wyrażenia podanego w postaci odwrotnej notacji polskiej,
-algorytmy kompresji i szyfrowania, np.:
-kody znaków o zmiennej długości, np. alfabet Morse’a, kod Huffmana,
- szyfr Cezara,
-szyfr przestawieniowy,
+**opisuje podstawowe algorytmy i stosuje:**
+1. algorytmy na liczbach całkowitych, np.:
+    * [x] reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,
+    * [x] sprawdzanie, czy liczba jest liczbą pierwszą, doskonałą,
+    * [x] rozkładanie liczby na czynniki pierwsze,
+    * [x] iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,
+    * [x] iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,
+    * [x] wydawanie reszty metodą zachłanną,
+2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
+    * algorytmy sortowania ciągu liczb: 
+      * [x] bąbelkowy, 
+      * [x] przez wybór, 
+      * [x] przez wstawianie liniowe, 
+      * [x] przez scalanie, 
+      * [ ] szybki, 
+      * [ ] kubełkowy,
+3. algorytmy numeryczne, np.:
+    * [x] szybkie podnoszenie do potęgi,
+    * [x] wyznaczanie miejsc zerowych funkcji metodą połowienia,
+4. algorytmy na tekstach, np.:
+    * [x] sprawdzanie, czy dany ciąg znaków tworzy palindrom, anagram,
+    * [x] porządkowanie alfabetyczne,
+    * [x] wyszukiwanie wzorca w tekście,
+5.algorytmy kompresji i szyfrowania, np.:
+    * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
+    * [ ] szyfr Cezara,
+    * [ ] szyfr przestawieniowy,
