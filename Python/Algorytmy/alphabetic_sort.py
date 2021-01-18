@@ -1,3 +1,5 @@
+#porządkowanie alfabetyczne
+
 def sort(lista):
     return sorted(lista)
 
