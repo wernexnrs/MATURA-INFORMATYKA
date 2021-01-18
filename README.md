@@ -1,5 +1,5 @@
 ## MATURA 2021
-Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. <span style="color:green;">Wernex</span>
+Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. 🔥 **#Wernex** 🔥
 
 ## Technologie
 Projekt tworzony przy użyciu:
