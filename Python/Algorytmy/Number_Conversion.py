@@ -1,3 +1,5 @@
+#reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym
+
 dec_numbers = [15,12,2,4,7,8]
 
 dec_TO_bin = [bin(i)[2:] for i in dec_numbers]
