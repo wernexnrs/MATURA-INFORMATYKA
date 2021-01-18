@@ -7,8 +7,13 @@ Projekt tworzony przy użyciu:
 
 <a name="main"/>
 
-# Algorytmy wymienione w wymaganiach
-**opisuje podstawowe algorytmy i stosuje:**
+# TOC
+1. [Algorytmy wymienione w wymaganiach](#a1)
+2. [Dodatkowe algorytmy](#a2)
+2. [Tricki](#a3)
+
+# Algorytmy wymienione w wymaganiach <a name="a1"/>
+
 1. algorytmy na liczbach całkowitych, np.:
     * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
     * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
