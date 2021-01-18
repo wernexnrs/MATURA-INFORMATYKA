@@ -7,7 +7,9 @@ def nwd(a, b):
     return a
 
 #iteration
-def nwd_i(a, b):
+def nwd2(a, b):
     while b:
         a, b = b, a%b
     return a
+
+def nww(a, b): return a*b//nwd(a, b)
