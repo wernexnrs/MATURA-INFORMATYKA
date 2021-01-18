@@ -8,7 +8,7 @@ Projekt tworzony przy użyciu:
 ## Wymagania
 **opisuje podstawowe algorytmy i stosuje:**
 1. algorytmy na liczbach całkowitych, np.:
-    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](##reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym)
+    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#link1)
     * [x] sprawdzanie, czy liczba jest liczbą pierwszą, doskonałą,
     * [x] rozkładanie liczby na czynniki pierwsze,
     * [x] iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,
@@ -35,6 +35,7 @@ Projekt tworzony przy użyciu:
     * [ ] szyfr przestawieniowy,
 
 ## reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym
+#link1
 ```python
 dec_numbers = [15,12,2,4,7,8]
 
