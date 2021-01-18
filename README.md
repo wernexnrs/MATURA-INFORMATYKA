@@ -5,6 +5,8 @@ Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną
 Projekt tworzony przy użyciu:
 * Python 3.9.1
 
+<a name="main"/>
+
 # Algorytmy wymienione w wymaganiach
 **opisuje podstawowe algorytmy i stosuje:**
 1. algorytmy na liczbach całkowitych, np.:
@@ -38,7 +40,7 @@ Projekt tworzony przy użyciu:
    
 <a name="konwersja"/>
 
-### reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym
+### reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym[⬆️](#main)
 
 ```python
 dec_numbers = [15,12,2,4,7,8]
@@ -69,7 +71,7 @@ print(to_base2(12, 16))
 ```
 <a name="is_prime"/>
 
-### sprawdzanie, czy liczba jest liczbą pierwszą
+### sprawdzanie, czy liczba jest liczbą pierwszą[⬆️](#main)
 ```python
 def is_prime(x):
     if x > 1:
@@ -81,7 +83,7 @@ def is_prime(x):
 ```
 <a name="is_perfect"/>
 
-### sprawdzanie, czy liczba jest liczbą doskonała
+### sprawdzanie, czy liczba jest liczbą doskonała[⬆️](#main)
 ```python
 def is_perfect(n):
     s = 1
@@ -94,7 +96,7 @@ def is_perfect(n):
 ```
 <a name="prime_factors"/>
 
-### rozkładanie liczby na czynniki pierwsze
+### rozkładanie liczby na czynniki pierwsze[⬆️](#main)
 ```python
 def prime_factors(n):
     factors = []
@@ -108,7 +110,7 @@ def prime_factors(n):
 ```
 <a name="nwd"/>
 
-### iteracyjna i rekurencyjna realizacja algorytmu Euklidesa
+### iteracyjna i rekurencyjna realizacja algorytmu Euklidesa[⬆️](#main)
 ```python
 def nwd(a, b): return nwd(b, a%b) if b else a #recursive
 
@@ -128,7 +130,7 @@ def nww(a, b): return a*b//nwd(a, b)
 ```
 <a name="fib"/>
 
-### iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego
+### iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego[⬆️](#main)
 ```python
 def f(n):
     a, b = 0, 1
@@ -149,7 +151,7 @@ for i in range(10): #first 10 numbers
 ```
 <a name="zachlanna"/>
 
-## wydawanie reszty metodą zachłanną
+## wydawanie reszty metodą zachłanną[⬆️](#main)
 ```python
 do_wydania = 6 #zł
 
@@ -173,7 +175,7 @@ print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
 ```
 <a name="bob"/>
 
-## sortowanie bąbelkowe
+## sortowanie bąbelkowe[⬆️](#main)
 ```python
 def bubbleSort(arr): 
     n = len(arr) 
@@ -190,7 +192,7 @@ print(bubbleSort(arr))
 ```
 <a name="wybor"/>
 
-## sortowanie przez wybór
+## sortowanie przez wybór[⬆️](#main)
 ```python
 def selection_sort(tab):
     for i in range(len(tab)):
@@ -207,7 +209,7 @@ print(selection_sort(tab))
 ```
 <a name="lin"/>
 
-## sortowanie przez wstawianie liniowe
+## sortowanie przez wstawianie liniowe[⬆️](#main)
 ```python
 def insertionSort(A): 
     for i in range(1, len(A)):
@@ -226,7 +228,7 @@ print(insertionSort(arr))
 
 <a name="scalanie"/>
 
-## sortowanie przez scalanie
+## sortowanie przez scalanie[⬆️](#main)
 ```python
 def mergeSort(arr):
     if len(arr) > 1:
@@ -267,7 +269,7 @@ print(mergeSort(arr))
 ```
 <a name="fast_power"/>
 
-## szybkie podnoszenie do potęgi
+## szybkie podnoszenie do potęgi[⬆️](#main)
 ```python
 def fast_power(x,n):
     if n == 0:
@@ -292,7 +294,7 @@ print(fast_power2(3,6))
 ```
 <a name="bisekcja"/>
 
-## wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja
+## wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja[⬆️](#main)
 ```python
 def f(x):
     return -4*x +2
@@ -315,7 +317,7 @@ print("{:.3f}".format( bisection(-100, 100) ))
 ```
 <a name="palindrom"/>
 
-## sprawdzanie, czy dany ciąg znaków tworzy palindrom
+## sprawdzanie, czy dany ciąg znaków tworzy palindrom[⬆️](#main)
 ```python
 def if_palindrom(string):
     lista = list(string)
@@ -330,7 +332,7 @@ print(if_palindrom(string))
 ```
 <a name="anagram"/>
 
-## sprawdzanie, czy dany ciąg znaków tworzy anagram
+## sprawdzanie, czy dany ciąg znaków tworzy anagram[⬆️](#main)
 ```python
 def if_anagram(string,string2):
     if sorted(string) == sorted(string2):
@@ -344,7 +346,7 @@ print(if_anagram(string,string2))
 ```
 <a name="alfa"/>
 
-## porządkowanie alfabetyczne
+## porządkowanie alfabetyczne[⬆️](#main)
 ```python
 def sort(lista):
     return sorted(lista)
@@ -369,7 +371,7 @@ print(sort_poco(lista))
 ```
 <a name="pattern"/>
 
-## wyszukiwanie wzorca w tekście
+## wyszukiwanie wzorca w tekście[⬆️](#main)
 ```python
 def is_pattern(pattern,word):
     return pattern in word
