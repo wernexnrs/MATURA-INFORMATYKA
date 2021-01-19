@@ -1,4 +1,4 @@
-# 🔥 Wernex#9840 🔥 
+# 🔥 <a href="https://discord.com/users/596478466849767475/">Wernex#9840</a> 🔥 
 
 ## MATURA 2021
 <p><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. </b></p>
