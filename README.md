@@ -52,32 +52,37 @@ Projekt tworzony przy użyciu:
 ## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
 
 ```python
+int("number_string",base) ANY --> DEC
+
 dec_numbers = [15,12,2,4,7,8]
 
 dec_TO_bin = [bin(i)[2:] for i in dec_numbers]
 dec_TO_oct = [oct(i)[2:] for i in dec_numbers]
 dec_TO_hex = [hex(i)[2:] for i in dec_numbers]
 
-
 bin_TO_dec = [int(i,2) for i in dec_TO_bin]
 oct_TO_dec = [int(i,8) for i in dec_TO_oct]
 hex_TO_dec = [int(i,16) for i in dec_TO_hex]
-
-#to_base(number,base)
-BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-def to_base(n, b): 
-    return BS[n] if n < b else to_base(n // b, b) + BS[n % b]
-
-def to_base2(s, b):
-    res = ""
-    while s:
-        res+=BS[s%b]
-        s//= b
-    return res[::-1] or "0"
-
-print(to_base(12, 16))
-print(to_base2(12, 16))
 ```
+
+```python
+BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+#recursive one-liner version DEC --> ANY
+def to_base(n, b): #to_base(number,base)
+    return BS[n] if n < b else to_base(n // b, b) + BS[n % b]
+```
+
+```python
+#iterated version DEC --> ANY
+def to_base(n, b):
+    res = ""
+    while n:
+        res+=BS[n%b]
+        n //= b
+    return res[::-1]
+```
+
 <a name="is_prime"/>
 
 ## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#main)
