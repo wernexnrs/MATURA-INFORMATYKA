@@ -380,7 +380,7 @@ def is_pattern(pattern,word):
    * [x] [Pierwiastek kwadratowy](#sqrt)
    * [x] [Pierwiastek n-tego stopnia](#sqrt2)  
    * [x] [Suma liczb od a do b](#suma)
-   
+   * [x] [Iloczyn liczb od a do b](#iloczyn)   
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
@@ -475,7 +475,7 @@ def sqrt2(x,p):
 
 <a name="suma"/>
 
-## Pierwiastek n-tego stopnia [⬆️](#main)
+## Suma liczb od a do b [⬆️](#main)
 
 ```python
 def suma(a,b):
@@ -485,5 +485,17 @@ def suma2(a,b):
     wynik = 0
     for i in range(a,b+1): 
         wynik += i
+    return wynik
+```
+
+<a name="iloczyn"/>
+
+## Iloczyn liczb od a do b [⬆️](#main)
+
+```python
+def iloczyn(a,b):
+    wynik = 1
+    for i in range(a,b+1): 
+        wynik *= i
     return wynik
 ```
