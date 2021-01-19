@@ -377,7 +377,9 @@ def is_pattern(pattern,word):
    * [x] [Czy liczba jest podzielna przez n bez reszty](#n)
    * [x] [Czy liczba jest wielokrotnością n](#multiple)
    * [x] [Silnia (n)](#factorial)
-
+   * [x] [Pierwiastek kwadratowy)](#sqrt)
+   * [x] [Pierwiastek n-tego stopnia)](#sqrt2)   
+   
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
@@ -447,4 +449,25 @@ def fact(n):
       return None
    else:
       return n*fact(n-1)
+```
+
+<a name="sqrt"/>
+
+## Pierwiastek kwadratowy [⬆️](#main)
+
+```python
+from math import sqrt
+
+print(sqrt(4)) #2
+```
+
+<a name="sqrt2"/>
+
+## Pierwiastek n-tego stopnia [⬆️](#main)
+
+```python
+#sqrt2(number,stopien)
+
+def sqrt2(x,p):
+    return x**(1/p)
 ```
