@@ -12,7 +12,8 @@ Projekt tworzony przy użyciu:
 # TOC
 1. [Algorytmy wymienione w wymaganiach](#a1)
 2. [Dodatkowe algorytmy](#a2)
-3. [Tricki](#a3)
+3. Tricki
+3. [Funkcje i metody](#a4)
 
 <a name="a1"/>
 
@@ -515,3 +516,36 @@ lista_slow = ",".join(lista_slow)
 print(Counter(lista_slow))
 
 ```
+
+<a name="a4"/>
+
+# Funkcje i metody
+
+## STRING
+
+1. Metody
+Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.
+
+  * .capitalize() -> zmienia pierwszy znak na duży
+  * .lower() -> zmienia ciąg na małe litery
+  * .upper() -> zmienia ciąg na wielkie litery
+  * .center() -> wyśrodkowany string
+  * .count() -> zwraca długość ciągu znaków
+  * .endswith() -> True jeżeli kończy sie podanym argumentem
+  * .find() -> zwraca index pierwszego znaku szukanego ciągu
+  * .index() -> zwraca index pierwszego napotkanego znaku szukanego ciągu
+  * .isalpha() -> True jeżeli same litery
+  * .isdecimal() -> True jeżeli same liczby
+  * .islower() -> True jeżeli same małe znaki
+  * .isnumeric() -> True jeżeli same liczby ascii
+  * .isspace() -> True jeżeli same białe znaki
+  * .istitle() -> True jeżeli pierwsza litera każdego słowa jest wielka
+  * .isupper() -> True jeżeli same duze litery
+  * .islower() -> True jeżeli same małe litery
+  * .title() -> zmienia pierwszy znak każdego słowa na wielki
+  * .swapcase() -> zamienia małe na wielkie, wielkie na małe litery
+  * .strip() -> usuwa białe znaki z początku i końca lub znaki podane jako argument
+  * .splitlines() -> zwraca liste ciągu znaków odzielonych końcem lini
+  * .split() -> zwraca liste ciągu znaków odzielonych argumentem
+  * .replace() -> zamienia argument1 na argument2
+  * .join() -> łączy ciągi znaków 
