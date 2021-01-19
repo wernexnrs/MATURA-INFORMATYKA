@@ -23,7 +23,7 @@ Projekt tworzony przy użyciu:
 # Algorytmy wymienione w wymaganiach 
 
 1. algorytmy na liczbach całkowitych, np.:
-    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
+   * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
    * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
    * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
@@ -31,13 +31,12 @@ Projekt tworzony przy użyciu:
    * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
    * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
 2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
-   * algorytmy sortowania ciągu liczb: 
-      * [x] [bąbelkowy, ](#bob) 
-      * [x] [przez wybór, ](#wybor) 
-      * [x] [przez wstawianie liniowe, ](#lin) 
-      * [x] [przez scalanie, ](#scalanie) 
-      * [ ] szybki, 
-      * [ ] kubełkowy,
+   * [x] [bąbelkowy, ](#bob) 
+   * [x] [przez wybór, ](#wybor) 
+   * [x] [przez wstawianie liniowe, ](#lin) 
+   * [x] [przez scalanie, ](#scalanie) 
+   * [ ] szybki, 
+   * [ ] kubełkowy,
 3. algorytmy numeryczne, np.:
    * [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
    * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
@@ -386,6 +385,7 @@ def is_pattern(pattern,word):
    * [x] [Suma liczb od a do b](#suma)
    * [x] [Iloczyn liczb od a do b](#iloczyn)  
    * [x] [Krotność](#kro)  
+   
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
