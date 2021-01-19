@@ -527,25 +527,25 @@ print(Counter(lista_slow))
 Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.
 
   * __.capitalize()__ -> zmienia pierwszy znak na duży
-  * .lower() -> zmienia ciąg na małe litery
-  * .upper() -> zmienia ciąg na wielkie litery
-  * .center() -> wyśrodkowany string
-  * .count() -> zwraca długość ciągu znaków
-  * .endswith() -> True jeżeli kończy sie podanym argumentem
-  * .find() -> zwraca index pierwszego znaku szukanego ciągu
-  * .index() -> zwraca index pierwszego napotkanego znaku szukanego ciągu
-  * .isalpha() -> True jeżeli same litery
-  * .isdecimal() -> True jeżeli same liczby
-  * .islower() -> True jeżeli same małe znaki
-  * .isnumeric() -> True jeżeli same liczby ascii
-  * .isspace() -> True jeżeli same białe znaki
-  * .istitle() -> True jeżeli pierwsza litera każdego słowa jest wielka
-  * .isupper() -> True jeżeli same duze litery
-  * .islower() -> True jeżeli same małe litery
-  * .title() -> zmienia pierwszy znak każdego słowa na wielki
-  * .swapcase() -> zamienia małe na wielkie, wielkie na małe litery
-  * .strip() -> usuwa białe znaki z początku i końca lub znaki podane jako argument
-  * .splitlines() -> zwraca liste ciągu znaków odzielonych końcem lini
-  * .split() -> zwraca liste ciągu znaków odzielonych argumentem
-  * .replace() -> zamienia argument1 na argument2
-  * .join() -> łączy ciągi znaków 
+  * __.lower()__ -> zmienia ciąg na małe litery
+  * __.upper()__ -> zmienia ciąg na wielkie litery
+  * __.center()__ -> wyśrodkowany string
+  * __.count()__ -> zwraca długość ciągu znaków
+  * __.endswith()__ -> True jeżeli kończy sie podanym argumentem
+  * __.find()__ -> zwraca index pierwszego znaku szukanego ciągu
+  * __.index()__ -> zwraca index pierwszego napotkanego znaku szukanego ciągu
+  * __.isalpha()__ -> True jeżeli same litery
+  * __.isdecimal()__ -> True jeżeli same liczby
+  * __.islower()__ -> True jeżeli same małe znaki
+  * __.isnumeric()__ -> True jeżeli same liczby ascii
+  * __.isspace()__ -> True jeżeli same białe znaki
+  * __.istitle()__ -> True jeżeli pierwsza litera każdego słowa jest wielka
+  * __.isupper()__ -> True jeżeli same duze litery
+  * __.islower()__ -> True jeżeli same małe litery
+  * __.title()__ -> zmienia pierwszy znak każdego słowa na wielki
+  * __.swapcase()__ -> zamienia małe na wielkie, wielkie na małe litery
+  * __.strip()__ -> usuwa białe znaki z początku i końca lub znaki podane jako argument
+  * __.splitlines()__ -> zwraca liste ciągu znaków odzielonych końcem lini
+  * __.split()__ -> zwraca liste ciągu znaków odzielonych argumentem
+  * __.replace()__ -> zamienia argument1 na argument2
+  * __.join()__ -> łączy ciągi znaków 
