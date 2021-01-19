@@ -26,9 +26,10 @@ Projekt tworzony przy użyciu:
 
 # TOC
 1. [Algorytmy wymienione w wymaganiach](#a1)
-2. [Dodatkowe algorytmy](#a2)
-3. Tricki
-4. [Metody](#a4)
+2. [Algorytmy, które pojawiły się w arkuszach (nie całe zadania)](#a5)
+3. [Dodatkowe algorytmy](#a2)
+4. Tricki
+5. [Metody](#a4)
    * [string](#string)
    * [listy](#listy)
    * [słowniki](#słowniki)
@@ -386,6 +387,58 @@ def sort(lista):
 def is_pattern(pattern,word):
     return pattern in word
 ```
+
+<a name="a5"/>
+
+# Algorytmy, które pojawiły się w arkuszach, a nie zostały jeszcze wymienione (nie całe zadania)
+ - [x] [kod binarny - zlicz ile liczb jest podzielnych przez 2 a ile przez 8](#bin1)
+ - [x] [kod binarny - zlicz ile liczb ma wiecej zer niż jedynek](#bin2)
+ - [x] [Numery lini list w 2 plikach, które mają takie same liczby](#bin3)
+ 
+ <a name="bin1"/>
+ 
+ ## Kod binarny - zlicz ile liczb jest podzielnych przez 2 a ile przez 8
+ ```python
+ przezdwa = przezosiem = 0
+   for line in file:
+        line = int(line,2)
+
+        if line%2 == 0:
+            przezdwa += 1
+        if line%8 == 0:
+            przezosiem += 1
+            
+print(przezdwa,"|",przezosiem)
+ ```
+ 
+ <a name="bin2"/>
+ 
+ ## Kod binarny - zlicz ile liczb ma wiecej zer niż jedynek
+ ```python
+ for line in file:
+     for char in line:
+         if char == "0": zera+=1
+         elif char == "1": jedynki+=1
+     if zera > jedynki:
+         wynik+=1
+     zera = 0
+     jedynki = 0
+        
+print(wynik)
+ ```
+
+ <a name="bin3"/>
+ 
+ ## Listy w liniach w 2 plikach, które mają takie same liczby
+ ```python
+ for (a,b) in zip(dane1,dane2):
+     a = list(set(a.strip().split()))
+     b = list(set(b.strip().split()))
+
+     if a == b:
+         print(index)
+     index += 1
+ ```
 
 <a name="a2"/>
 
