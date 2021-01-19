@@ -16,7 +16,7 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
 
 # TOC
 1. [Algorytmy wymienione w wymaganiach](#a1)
-2. Dodatkowe algorytmy
+2. [Dodatkowe algorytmy](#a2)
 3. Funckje pythona
 4. Tricki
 
@@ -24,7 +24,7 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
 
 # Algorytmy wymienione w wymaganiach 
 
-1. algorytmy na liczbach całkowitych, np.:
+1. Algorytmy na liczbach całkowitych, np.:
     * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
     * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
     * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
@@ -32,7 +32,7 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
     * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,](#nwd) 
     * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
     * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
-2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
+2. Algorytmy wyszukiwania i porządkowania (sortowania), np.:
     * algorytmy sortowania ciągu liczb: 
       * [x] [bąbelkowy, ](#bob) 
       * [x] [przez wybór, ](#wybor) 
@@ -40,15 +40,15 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
       * [x] [przez scalanie, ](#scalanie) 
       * [ ] szybki, 
       * [ ] kubełkowy,
-3. algorytmy numeryczne, np.:
+3. Algorytmy numeryczne, np.:
     * [x] [szybkie podnoszenie do potęgi,](#fast) 
     * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
-4. algorytmy na tekstach, np.:
+4. Algorytmy na tekstach, np.:
     * [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
     * [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
     * [x] [porządkowanie alfabetyczne,](#alfa) 
     * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
-5. algorytmy kompresji i szyfrowania, np.:
+5. Algorytmy kompresji i szyfrowania, np.:
     * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a, 
     * [ ] szyfr Cezara,
     * [ ] szyfr przestawieniowy,
