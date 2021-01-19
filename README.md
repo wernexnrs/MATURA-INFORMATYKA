@@ -22,7 +22,7 @@ Projekt tworzony przy użyciu:
 
 # Algorytmy wymienione w wymaganiach 
 
-1. algorytmy na liczbach całkowitych, np.:
+1. algorytmy na liczbach całkowitych,
    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
    * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
@@ -375,16 +375,15 @@ def is_pattern(pattern,word):
 <a name="a2"/>
 
 # Dodatkowe algorytmy
-
-   * [x] [Czy liczba jest parzysta](#even)
-   * [x] [Czy liczba jest podzielna przez n bez reszty](#n)
-   * [x] [Czy liczba jest wielokrotnością n](#multiple)
-   * [x] [Silnia (n)](#factorial)
-   * [x] [Pierwiastek kwadratowy](#sqrt)
-   * [x] [Pierwiastek n-tego stopnia](#sqrt2)  
-   * [x] [Suma liczb od a do b](#suma)
-   * [x] [Iloczyn liczb od a do b](#iloczyn)  
-   * [x] [Krotność](#kro)  
+* [x] [Czy liczba jest parzysta](#even)
+* [x] [Czy liczba jest podzielna przez n bez reszty](#n)
+* [x] [Czy liczba jest wielokrotnością n](#multiple)
+* [x] [Silnia (n)](#factorial)
+* [x] [Pierwiastek kwadratowy](#sqrt)
+* [x] [Pierwiastek n-tego stopnia](#sqrt2)  
+* [x] [Suma liczb od a do b](#suma)
+* [x] [Iloczyn liczb od a do b](#iloczyn)  
+* [x] [Krotność](#kro)  
    
 <a name="even"/>
 
