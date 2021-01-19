@@ -1,7 +1,9 @@
 # 🔥 Wernex#9840 🔥 
 
 ## MATURA 2021
-Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. 
+<p><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. </b></p>
+<p><b>Bardzo proszę o nadsyłanie prostrzych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i></b></p>
+
 
 ## Technologie
 Projekt tworzony przy użyciu:
