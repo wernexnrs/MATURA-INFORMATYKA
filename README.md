@@ -14,9 +14,9 @@ Projekt tworzony przy użyciu:
 2. [Dodatkowe algorytmy](#a2)
 3. Tricki
 4. [Metody](#a4)
-  * [string](#string)
-  * [listy](#listy)
-  * [słowniki](#słowniki)
+   * [string](#string)
+   * [listy](#listy)
+   * [słowniki](#słowniki)
 
 <a name="a1"/>
 
