@@ -399,7 +399,11 @@ def is_pattern(pattern,word):
   - [x] [Suma liczb od a do b](#suma)
   - [x] [Iloczyn liczb od a do b](#iloczyn)  
   - [x] [Krotność](#kro)  
-   
+  - [x] [Mediana](#med) 
+  - [x] [Średnia arytmetyczna](#ary) 
+  - [x] [Średnia ważona](#waz) 
+  - [x] [Średnia geometryczna](#geo)
+  - [x] [Odchylenie standardowe](#odchylenie) 
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
@@ -521,7 +525,7 @@ def iloczyn(a,b):
 
 <a name="kro"/>
 
-## Krotność np. znaków w ciągu[⬆️](#main)
+## Krotność np. znaków w ciągu [⬆️](#main)
 
 ```python
 from collections import Counter
@@ -534,6 +538,65 @@ print(Counter(lista_slow))
 
 ```
 
+<a name="med"/>
+
+## Mediana [⬆️](#main)
+
+```python
+def mediana(lista):
+    if len(lista) % 2 == 0:
+        mediana = lista[int(len(lista)/2)] + lista[int(len(lista)/2-1)]
+        mediana /= 2
+    else:
+        mediana = lista[int(len(lista)/2)]
+    return mediana
+ ```
+
+<a name="ary"/>
+
+## Średnia arytmetyczna [⬆️](#main)
+
+```python
+def srednia(x):
+    return sum(x)/len(x)
+ ```
+ 
+<a name="waz"/>
+
+## Średnia ważona [⬆️](#main)
+
+```python
+def srednia(lista,wagi):
+    wynik = sum((i*j for i,j in zip(lista,wagi)))/sum(wagi)
+    return wynik
+ ```
+ 
+ <a name="geo"/>
+
+## Średnia geometryczna [⬆️](#main)
+
+```python
+def srednia(lista):
+    wynik = 1
+    for i in lista:
+        wynik *= i
+    wynik = wynik**(1/len(lista))
+    return wynik
+ ```
+ 
+<a name="waz_geo"/>
+
+## Ważona średnia geometryczna [⬆️](#main)
+
+```python
+def srednia(lista):
+    wynik = 1
+    for i in lista:
+        wynik *= i
+    wynik = wynik**(1/len(lista))
+    return wynik
+ ```
+ 
 <a name="a4"/>
 
 # Metody
