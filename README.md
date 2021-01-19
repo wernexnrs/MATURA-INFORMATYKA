@@ -377,8 +377,9 @@ def is_pattern(pattern,word):
    * [x] [Czy liczba jest podzielna przez n bez reszty](#n)
    * [x] [Czy liczba jest wielokrotnością n](#multiple)
    * [x] [Silnia (n)](#factorial)
-   * [x] [Pierwiastek kwadratowy)](#sqrt)
-   * [x] [Pierwiastek n-tego stopnia)](#sqrt2)   
+   * [x] [Pierwiastek kwadratowy](#sqrt)
+   * [x] [Pierwiastek n-tego stopnia](#sqrt2)  
+   * [x] [Suma liczb od a do b](#suma)
    
 <a name="even"/>
 
@@ -470,4 +471,19 @@ print(sqrt(4)) #2
 
 def sqrt2(x,p):
     return x**(1/p)
+```
+
+<a name="suma"/>
+
+## Pierwiastek n-tego stopnia [⬆️](#main)
+
+```python
+def suma(a,b):
+    return sum(range(a,b+1))
+
+def suma2(a,b):
+    wynik = 0
+    for i in range(a,b+1): 
+        wynik += i
+    return wynik
 ```
