@@ -284,9 +284,9 @@ arr = [12, 11, 13, 5, 6, 7]
 print(mergeSort(arr))
 ```
 
-<a name="fast_power"/>
+<a name="fast"/>
 
-## Szybkie podnoszenie do potęgi [⬆️](#fast)
+## Szybkie podnoszenie do potęgi [⬆️](#main)
 ```python
 def fast_power(x,n):
     if n == 0:
