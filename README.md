@@ -13,7 +13,10 @@ Projekt tworzony przy użyciu:
 1. [Algorytmy wymienione w wymaganiach](#a1)
 2. [Dodatkowe algorytmy](#a2)
 3. Tricki
-3. [Funkcje i metody](#a4)
+3. [Metody](#a4)
+  * [string](#string)
+  * [listy](#listy)
+  * [słowniki](#słowniki)
 
 <a name="a1"/>
 
@@ -519,11 +522,11 @@ print(Counter(lista_slow))
 
 <a name="a4"/>
 
-# Funkcje i metody
+# Metody
+
+<a name="string"/>
 
 ## STRING
-
-1. Metody
 <p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
 
   * __.capitalize()__ -> zmienia pierwszy znak na duży
@@ -549,3 +552,31 @@ print(Counter(lista_slow))
   * __.split()__ -> zwraca liste ciągu znaków odzielonych argumentem
   * __.replace()__ -> zamienia argument1 na argument2
   * __.join()__ -> łączy ciągi znaków 
+  
+ <a name="listy"/>
+ 
+## LISTY
+  * __.append()__ -> Dodaje element na koniec listy
+  * __.clear()__ -> Czyści liste
+  * __.copy()__ -> Zwraca płytką kopię listy
+  * __.count()__ -> Zwraca liczbę wystąpień argumentu
+  * __.extend()__ -> Rozszerza listę
+  * __.index()__ -> Zwraca index pierwszego napotkanego argumentu
+  * __.insert()__ -> Wstawia element na dany index
+  * __.pop()__ -> Usuwa element na danym indexie
+  * __.remove()__ -> Usuwa element o danej wartości
+  * __.reverse()__ -> Odwraca listę
+  * __.sort()__ -> Sortuje listę
+
+<a name="slowniki"/>
+
+## SŁOWNIKI
+  * __.clear()__	Czyści słownik
+  * __.copy()__	Plytka kopia
+  * __.get()__	Zwraca wartość danego klucza
+  * __.items()__	Zwraca listę krotek kluczy i wartości
+  * __.keys()__	Zwraca listę kluczy
+  * __.pop()__	Usuwa element z danym kluczem jako argumentem
+  * __.popitem()__	Usuwa ostatni wstawiony do słownika element
+  * __.update()__	Updates the dictionary with the specified key-value pairs
+  * __.values()__	Zwraca listę wartości
