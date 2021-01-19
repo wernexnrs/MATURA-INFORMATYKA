@@ -14,18 +14,20 @@ Projekt tworzony przy użyciu:
 2. [Dodatkowe algorytmy](#a2)
 3. [Tricki](#a3)
 
-# Algorytmy wymienione w wymaganiach <a name="a1"/>
+<a name="a1"/>
+
+# Algorytmy wymienione w wymaganiach 
 
 1. algorytmy na liczbach całkowitych, np.:
-    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
-    * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
-    * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
-    * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
-    * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,](#nwd) 
-    * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
-    * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
+   * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
+   * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
+   * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
+   * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
+   * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,](#nwd) 
+   * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
+   * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
 2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
-    * algorytmy sortowania ciągu liczb: 
+   * algorytmy sortowania ciągu liczb: 
       * [x] [bąbelkowy, ](#bob) 
       * [x] [przez wybór, ](#wybor) 
       * [x] [przez wstawianie liniowe, ](#lin) 
@@ -33,21 +35,21 @@ Projekt tworzony przy użyciu:
       * [ ] szybki, 
       * [ ] kubełkowy,
 3. algorytmy numeryczne, np.:
-    * [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
-    * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
+   * [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
+   * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
 4. algorytmy na tekstach, np.:
-    * [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
-    * [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-    * [x] [porządkowanie alfabetyczne,](#alfa) 
-    * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
+   * [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
+   * [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
+   * [x] [porządkowanie alfabetyczne,](#alfa) 
+   * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
-    * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
-    * [ ] szyfr Cezara,
-    * [ ] szyfr przestawieniowy,
+   * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
+   * [ ] szyfr Cezara,
+   * [ ] szyfr przestawieniowy,
    
 <a name="konwersja"/>
 
-### reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
+## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
 
 ```python
 dec_numbers = [15,12,2,4,7,8]
@@ -78,7 +80,7 @@ print(to_base2(12, 16))
 ```
 <a name="is_prime"/>
 
-### sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#main)
+## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#main)
 ```python
 def is_prime(x):
     if x > 1:
@@ -88,9 +90,10 @@ def is_prime(x):
         return True
     return False
 ```
+
 <a name="is_perfect"/>
 
-### sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#main)
+## Sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#main)
 ```python
 def is_perfect(n):
     s = 1
@@ -101,9 +104,10 @@ def is_perfect(n):
         return True
     return False
 ```
+
 <a name="prime_factors"/>
 
-### rozkładanie liczby na czynniki pierwsze [⬆️](#main)
+## Rozkładanie liczby na czynniki pierwsze [⬆️](#main)
 ```python
 def prime_factors(n):
     factors = []
@@ -115,9 +119,10 @@ def prime_factors(n):
         k += 1
     return factors 
 ```
+
 <a name="nwd"/>
 
-### iteracyjna i rekurencyjna realizacja algorytmu Euklidesa [⬆️](#main)
+## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa [⬆️](#main)
 ```python
 def nwd(a, b): return nwd(b, a%b) if b else a #recursive
 
@@ -135,9 +140,10 @@ def nwd2(a, b):
 
 def nww(a, b): return a*b//nwd(a, b)
 ```
+
 <a name="fib"/>
 
-### iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#main)
+## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#main)
 ```python
 def f(n):
     a, b = 0, 1
@@ -156,9 +162,10 @@ for i in range(10): #first 10 numbers
 for i in range(10): #first 10 numbers    
     print(recur_f(i))
 ```
+
 <a name="zachlanna"/>
 
-## wydawanie reszty metodą zachłanną [⬆️](#main)
+## Wydawanie reszty metodą zachłanną [⬆️](#main)
 ```python
 do_wydania = 6 #zł
 
@@ -180,9 +187,10 @@ while (wybrana_moneta > 0):
 
 print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
 ```
+
 <a name="bob"/>
 
-## sortowanie bąbelkowe [⬆️](#main)
+## Sortowanie bąbelkowe [⬆️](#main)
 ```python
 def bubbleSort(arr): 
     n = len(arr) 
@@ -197,9 +205,10 @@ arr = [64, 34, 25, 12, 22, 11, 90]
   
 print(bubbleSort(arr))
 ```
+
 <a name="wybor"/>
 
-## sortowanie przez wybór [⬆️](#main)
+## Sortowanie przez wybór [⬆️](#main)
 ```python
 def selection_sort(tab):
     for i in range(len(tab)):
@@ -214,9 +223,10 @@ tab = [64, 34, 25, 12, 22, 11, 90]
     
 print(selection_sort(tab))
 ```
+
 <a name="lin"/>
 
-## sortowanie przez wstawianie liniowe [⬆️](#main)
+## Sortowanie przez wstawianie liniowe [⬆️](#main)
 ```python
 def insertionSort(A): 
     for i in range(1, len(A)):
@@ -235,7 +245,7 @@ print(insertionSort(arr))
 
 <a name="scalanie"/>
 
-## sortowanie przez scalanie [⬆️](#main)
+## Sortowanie przez scalanie [⬆️](#main)
 ```python
 def mergeSort(arr):
     if len(arr) > 1:
@@ -274,9 +284,10 @@ arr = [12, 11, 13, 5, 6, 7]
 
 print(mergeSort(arr))
 ```
+
 <a name="fast_power"/>
 
-## szybkie podnoszenie do potęgi [⬆️](#main)
+## Szybkie podnoszenie do potęgi [⬆️](#main)
 ```python
 def fast_power(x,n):
     if n == 0:
@@ -299,9 +310,10 @@ def fast_power2(x,n):
 print(fast_power(3,6))
 print(fast_power2(3,6))
 ```
+
 <a name="bisekcja"/>
 
-## wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
+## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
 ```python
 def f(x):
     return -4*x +2
@@ -322,9 +334,10 @@ def bisection(a,b,precyzja = 0.0001):
       
 print("{:.3f}".format( bisection(-100, 100) ))
 ```
+
 <a name="palindrom"/>
 
-## sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
+## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
 ```python
 def if_palindrom(string):
     lista = list(string)
@@ -337,9 +350,10 @@ string = "ala"
 
 print(if_palindrom(string))
 ```
+
 <a name="anagram"/>
 
-## sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
+## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
 ```python
 def if_anagram(string,string2):
     if sorted(string) == sorted(string2):
@@ -351,9 +365,10 @@ string2 = "nagaram"
 
 print(if_anagram(string,string2))
 ```
+
 <a name="alfa"/>
 
-## porządkowanie alfabetyczne [⬆️](#main)
+## Porządkowanie alfabetyczne [⬆️](#main)
 ```python
 def sort(lista):
     return sorted(lista)
@@ -376,9 +391,10 @@ def sort_poco(lista):
 
 print(sort_poco(lista))    
 ```
+
 <a name="pattern"/>
 
-## wyszukiwanie wzorca w tekście [⬆️](#main)
+## Wyszukiwanie wzorca w tekście [⬆️](#main)
 ```python
 def is_pattern(pattern,word):
     return pattern in word
@@ -395,10 +411,10 @@ print(is_pattern(pattern,word))
 
 # Dodatkowe algorytmy
 
-* [x] [Czy liczba jest parzysta](#even)
-* [x] [Czy liczba jest podzielna przez n bez reszty](#n)
-* [x] [Czy liczba jest wielokrotnością n](#multiple)
-* [x] [Silnia (n)](#factorial)
+   * [x] [Czy liczba jest parzysta](#even)
+   * [x] [Czy liczba jest podzielna przez n bez reszty](#n)
+   * [x] [Czy liczba jest wielokrotnością n](#multiple)
+   * [x] [Silnia (n)](#factorial)
 
 <a name="even"/>
 
