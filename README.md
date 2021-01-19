@@ -26,29 +26,29 @@ Projekt tworzony przy użyciu:
    - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
    - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    - [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
-   * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
-   * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa, + NWW](#nwd) 
-   * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
-   * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
+   - [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
+   - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa, + NWW](#nwd) 
+   - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
+   - [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
 2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
-   * [x] [bąbelkowy, ](#bob) 
-   * [x] [przez wybór, ](#wybor) 
-   * [x] [przez wstawianie liniowe, ](#lin) 
-   * [x] [przez scalanie, ](#scalanie) 
-   * [ ] szybki, 
-   * [ ] kubełkowy,
+   - [x] [bąbelkowy, ](#bob) 
+   - [x] [przez wybór, ](#wybor) 
+   - [x] [przez wstawianie liniowe, ](#lin) 
+   - [x] [przez scalanie, ](#scalanie) 
+   - [ ] szybki, 
+   - [ ] kubełkowy,
 3. algorytmy numeryczne, np.:
-   * [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
-   * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
+   - [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
+   - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
 4. algorytmy na tekstach, np.:
-   * [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
-   * [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-   * [x] [porządkowanie alfabetyczne,](#alfa) 
-   * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
+   - [x] [porządkowanie alfabetyczne,](#alfa) 
+   - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
-   * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
-   * [ ] szyfr Cezara,
-   * [ ] szyfr przestawieniowy,
+   - [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
+   - [ ] szyfr Cezara,
+   - [ ] szyfr przestawieniowy,
    
 <a name="konwersja"/>
 
@@ -375,15 +375,15 @@ def is_pattern(pattern,word):
 <a name="a2"/>
 
 # Dodatkowe algorytmy
-* [x] [Czy liczba jest parzysta](#even)
-* [x] [Czy liczba jest podzielna przez n bez reszty](#n)
-* [x] [Czy liczba jest wielokrotnością n](#multiple)
-* [x] [Silnia (n)](#factorial)
-* [x] [Pierwiastek kwadratowy](#sqrt)
-* [x] [Pierwiastek n-tego stopnia](#sqrt2)  
-* [x] [Suma liczb od a do b](#suma)
-* [x] [Iloczyn liczb od a do b](#iloczyn)  
-* [x] [Krotność](#kro)  
+  - [x] [Czy liczba jest parzysta](#even)
+  - [x] [Czy liczba jest podzielna przez n bez reszty](#n)
+  - [x] [Czy liczba jest wielokrotnością n](#multiple)
+  - [x] [Silnia (n)](#factorial)
+  - [x] [Pierwiastek kwadratowy](#sqrt)
+  - [x] [Pierwiastek n-tego stopnia](#sqrt2)  
+  - [x] [Suma liczb od a do b](#suma)
+  - [x] [Iloczyn liczb od a do b](#iloczyn)  
+  - [x] [Krotność](#kro)  
    
 <a name="even"/>
 
