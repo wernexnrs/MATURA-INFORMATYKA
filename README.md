@@ -524,7 +524,7 @@ print(Counter(lista_slow))
 ## STRING
 
 1. Metody
-Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.
+<p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
 
   * __.capitalize()__ -> zmienia pierwszy znak na duży
   * __.lower()__ -> zmienia ciąg na małe litery
