@@ -66,15 +66,17 @@ hex_TO_dec = [int(i,16) for i in dec_TO_hex]
 ```
 
 ```python
-BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 #recursive one-liner version DEC --> ANY
+
+BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def to_base(n, b): #to_base(number,base)
     return BS[n] if n < b else to_base(n // b, b) + BS[n % b]
 ```
 
 ```python
 #iterated version DEC --> ANY
+
+BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def to_base(n, b):
     res = ""
     while n:
