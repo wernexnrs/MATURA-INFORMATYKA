@@ -41,7 +41,7 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
       * [ ] szybki, 
       * [ ] kubełkowy,
 3. algorytmy numeryczne, np.:
-    * [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
+    * [x] [szybkie podnoszenie do potęgi,](#fast) 
     * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
 4. algorytmy na tekstach, np.:
     * [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
@@ -286,7 +286,7 @@ print(mergeSort(arr))
 
 <a name="fast_power"/>
 
-## Szybkie podnoszenie do potęgi [⬆️](#fast_prime)
+## Szybkie podnoszenie do potęgi [⬆️](#fast)
 ```python
 def fast_power(x,n):
     if n == 0:
