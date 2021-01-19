@@ -23,7 +23,7 @@ Projekt tworzony przy użyciu:
 # Algorytmy wymienione w wymaganiach 
 
 1. algorytmy na liczbach całkowitych, np.:
-   * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
+    * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
    * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
    * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
@@ -571,12 +571,12 @@ print(Counter(lista_slow))
 <a name="slowniki"/>
 
 ## SŁOWNIKI
-  * __.clear()__	Czyści słownik
-  * __.copy()__	Plytka kopia
-  * __.get()__	Zwraca wartość danego klucza
-  * __.items()__	Zwraca listę krotek kluczy i wartości
-  * __.keys()__	Zwraca listę kluczy
-  * __.pop()__	Usuwa element z danym kluczem jako argumentem
-  * __.popitem()__	Usuwa ostatni wstawiony do słownika element
-  * __.update()__	Updates the dictionary with the specified key-value pairs
-  * __.values()__	Zwraca listę wartości
+  * __.clear()__ -> Czyści słownik
+  * __.copy()__ -> Plytka kopia
+  * __.get()__ -> Zwraca wartość danego klucza
+  * __.items()__ -> Zwraca listę krotek kluczy i wartości
+  * __.keys()__ -> Zwraca listę kluczy
+  * __.pop()__ -> Usuwa element z danym kluczem jako argumentem
+  * __.popitem()__ -> Usuwa ostatni wstawiony do słownika element
+  * __.update()__ -> Updates the dictionary with the specified key-value pairs
+  * __.values()__ -> Zwraca listę wartości
