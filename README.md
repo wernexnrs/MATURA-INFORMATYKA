@@ -2,7 +2,7 @@
 
 ## MATURA 2021
 <p><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. </b></p>
-<p><b>Bardzo proszę o nadsyłanie prostrzych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i></b></p>
+<p><b>Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i></b></p>
 
 
 ## Technologie
