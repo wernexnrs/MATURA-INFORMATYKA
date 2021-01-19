@@ -286,7 +286,7 @@ print(mergeSort(arr))
 
 <a name="fast_power"/>
 
-## Szybkie podnoszenie do potęgi [⬆️](#main)
+## Szybkie podnoszenie do potęgi [⬆️](#fast_prime)
 ```python
 def fast_power(x,n):
     if n == 0:
