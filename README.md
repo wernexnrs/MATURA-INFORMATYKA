@@ -23,9 +23,9 @@ Projekt tworzony przy użyciu:
 # Algorytmy wymienione w wymaganiach 
 
 1. algorytmy na liczbach całkowitych,
-   * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
-   * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
-   * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
+   - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
+   - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
+   - [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
    * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
    * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa, + NWW](#nwd) 
    * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
