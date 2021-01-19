@@ -7,24 +7,16 @@ Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną
 Projekt tworzony przy użyciu:
 * Python 3.9.1
 
-## Przydatne linki
-<a href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Informatory/2015/aneks/Aneks_informatyka_EM_standardowy.pdf">Pełne wymagania maturalne</a><br>
-<a href="https://pl.spoj.com/">Polski SPOJ</a> - pełno problemów algorytmicznych do rozwiązania<br>
-Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">Informatyka</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">dane</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip">rozwiązania</a>
-
 <a name="main"/>
 
 # TOC
 1. [Algorytmy wymienione w wymaganiach](#a1)
 2. [Dodatkowe algorytmy](#a2)
-3. Funckje pythona
-4. Tricki
+3. [Tricki](#a3)
 
-<a name="a1"/>
+# Algorytmy wymienione w wymaganiach <a name="a1"/>
 
-# Algorytmy wymienione w wymaganiach 
-
-1. Algorytmy na liczbach całkowitych, np.:
+1. algorytmy na liczbach całkowitych, np.:
     * [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
     * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
     * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
@@ -32,7 +24,7 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
     * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,](#nwd) 
     * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
     * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
-2. Algorytmy wyszukiwania i porządkowania (sortowania), np.:
+2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
     * algorytmy sortowania ciągu liczb: 
       * [x] [bąbelkowy, ](#bob) 
       * [x] [przez wybór, ](#wybor) 
@@ -40,22 +32,22 @@ Zadania od CKE: <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Ma
       * [x] [przez scalanie, ](#scalanie) 
       * [ ] szybki, 
       * [ ] kubełkowy,
-3. Algorytmy numeryczne, np.:
-    * [x] [szybkie podnoszenie do potęgi,](#fast) 
+3. algorytmy numeryczne, np.:
+    * [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
     * [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
-4. Algorytmy na tekstach, np.:
+4. algorytmy na tekstach, np.:
     * [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
     * [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
     * [x] [porządkowanie alfabetyczne,](#alfa) 
     * [x] [wyszukiwanie wzorca w tekście,](#pattern) 
-5. Algorytmy kompresji i szyfrowania, np.:
-    * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a, 
+5. algorytmy kompresji i szyfrowania, np.:
+    * [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
     * [ ] szyfr Cezara,
     * [ ] szyfr przestawieniowy,
    
 <a name="konwersja"/>
 
-### Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
+### reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
 
 ```python
 dec_numbers = [15,12,2,4,7,8]
@@ -86,7 +78,7 @@ print(to_base2(12, 16))
 ```
 <a name="is_prime"/>
 
-### Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#main)
+### sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#main)
 ```python
 def is_prime(x):
     if x > 1:
@@ -98,7 +90,7 @@ def is_prime(x):
 ```
 <a name="is_perfect"/>
 
-### Sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#main)
+### sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#main)
 ```python
 def is_perfect(n):
     s = 1
@@ -111,7 +103,7 @@ def is_perfect(n):
 ```
 <a name="prime_factors"/>
 
-### Rozkładanie liczby na czynniki pierwsze [⬆️](#main)
+### rozkładanie liczby na czynniki pierwsze [⬆️](#main)
 ```python
 def prime_factors(n):
     factors = []
@@ -125,7 +117,7 @@ def prime_factors(n):
 ```
 <a name="nwd"/>
 
-### Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa [⬆️](#main)
+### iteracyjna i rekurencyjna realizacja algorytmu Euklidesa [⬆️](#main)
 ```python
 def nwd(a, b): return nwd(b, a%b) if b else a #recursive
 
@@ -145,7 +137,7 @@ def nww(a, b): return a*b//nwd(a, b)
 ```
 <a name="fib"/>
 
-### Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#main)
+### iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#main)
 ```python
 def f(n):
     a, b = 0, 1
@@ -166,7 +158,7 @@ for i in range(10): #first 10 numbers
 ```
 <a name="zachlanna"/>
 
-## Wydawanie reszty metodą zachłanną [⬆️](#main)
+## wydawanie reszty metodą zachłanną [⬆️](#main)
 ```python
 do_wydania = 6 #zł
 
@@ -190,7 +182,7 @@ print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
 ```
 <a name="bob"/>
 
-## Sortowanie bąbelkowe [⬆️](#main)
+## sortowanie bąbelkowe [⬆️](#main)
 ```python
 def bubbleSort(arr): 
     n = len(arr) 
@@ -207,7 +199,7 @@ print(bubbleSort(arr))
 ```
 <a name="wybor"/>
 
-## Sortowanie przez wybór  [⬆️](#main)
+## sortowanie przez wybór [⬆️](#main)
 ```python
 def selection_sort(tab):
     for i in range(len(tab)):
@@ -222,10 +214,9 @@ tab = [64, 34, 25, 12, 22, 11, 90]
     
 print(selection_sort(tab))
 ```
-
 <a name="lin"/>
 
-## Sortowanie przez wstawianie liniowe [⬆️](#main)
+## sortowanie przez wstawianie liniowe [⬆️](#main)
 ```python
 def insertionSort(A): 
     for i in range(1, len(A)):
@@ -244,7 +235,7 @@ print(insertionSort(arr))
 
 <a name="scalanie"/>
 
-## Sortowanie przez scalanie [⬆️](#main)
+## sortowanie przez scalanie [⬆️](#main)
 ```python
 def mergeSort(arr):
     if len(arr) > 1:
@@ -283,10 +274,9 @@ arr = [12, 11, 13, 5, 6, 7]
 
 print(mergeSort(arr))
 ```
+<a name="fast_power"/>
 
-<a name="fast"/>
-
-## Szybkie podnoszenie do potęgi [⬆️](#main)
+## szybkie podnoszenie do potęgi [⬆️](#main)
 ```python
 def fast_power(x,n):
     if n == 0:
@@ -309,10 +299,9 @@ def fast_power2(x,n):
 print(fast_power(3,6))
 print(fast_power2(3,6))
 ```
-
 <a name="bisekcja"/>
 
-## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
+## wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
 ```python
 def f(x):
     return -4*x +2
@@ -333,10 +322,9 @@ def bisection(a,b,precyzja = 0.0001):
       
 print("{:.3f}".format( bisection(-100, 100) ))
 ```
-
 <a name="palindrom"/>
 
-## Ssprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
+## sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
 ```python
 def if_palindrom(string):
     lista = list(string)
@@ -349,10 +337,9 @@ string = "ala"
 
 print(if_palindrom(string))
 ```
-
 <a name="anagram"/>
 
-## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
+## sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
 ```python
 def if_anagram(string,string2):
     if sorted(string) == sorted(string2):
@@ -364,10 +351,9 @@ string2 = "nagaram"
 
 print(if_anagram(string,string2))
 ```
-
 <a name="alfa"/>
 
-## Porządkowanie alfabetyczne [⬆️](#main)
+## porządkowanie alfabetyczne [⬆️](#main)
 ```python
 def sort(lista):
     return sorted(lista)
@@ -390,10 +376,9 @@ def sort_poco(lista):
 
 print(sort_poco(lista))    
 ```
-
 <a name="pattern"/>
 
-## Wyszukiwanie wzorca w tekście [⬆️](#main)
+## wyszukiwanie wzorca w tekście [⬆️](#main)
 ```python
 def is_pattern(pattern,word):
     return pattern in word
@@ -404,4 +389,78 @@ word = "lokomotywa"
 print(is_pattern(pattern,word))
 
 #implementacje iteracyjną zrobię kiedy indziej 
+```
+
+<a name="a2"/>
+
+# Dodatkowe algorytmy
+
+* [x] [Czy liczba jest parzysta](#even)
+* [x] [Czy liczba jest podzielna przez n bez reszty](#n)
+* [x] [Czy liczba jest wielokrotnością n](#multiple)
+* [x] [Silnia (n)](#factorial)
+
+<a name="even"/>
+
+## Czy liczba jest parzysta [⬆️](#main)
+```python
+def is_even(x):
+   if x%2 == 0:
+      return True
+   return False
+```
+
+<a name="n"/>
+
+## Czy liczba jest podzielna przez n bez reszty [⬆️](#main)
+```python
+def divisible(x,n):
+   if x%n == 0:
+      return True
+   return False
+```
+
+<a name="multiple"/>
+
+## Czy liczba jest wielokrotnością n [⬆️](#main)
+```python
+numbers = []
+
+def x_range(n):
+    for i in range(n):
+        numbers.append(i)
+    return numbers
+
+def is_multiple(x,n):
+   if x in x_range(n):
+      return True
+   return False
+
+print(is_multiple(3,333))
+```
+
+<a name="factorial"/>
+
+## Silnia (n) [⬆️](#main)
+```python
+from math import factorial
+
+print(factorial(5))
+
+#iteration
+def fact_2(n):
+   factorial = 1
+   if int(n) >= 1:
+      for i in range (1,int(n)+1):
+         factorial = factorial * i
+   return factorial
+
+#recursive
+def fact(n):
+   if n == 1:
+      return n
+   elif n < 1:
+      return None
+   else:
+      return n*fact(n-1)
 ```
