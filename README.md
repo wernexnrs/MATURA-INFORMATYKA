@@ -13,7 +13,7 @@ Projekt tworzony przy użyciu:
 1. [Algorytmy wymienione w wymaganiach](#a1)
 2. [Dodatkowe algorytmy](#a2)
 3. Tricki
-3. [Metody](#a4)
+4. [Metody](#a4)
   * [string](#string)
   * [listy](#listy)
   * [słowniki](#słowniki)
