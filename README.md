@@ -584,18 +584,14 @@ def srednia(lista):
     return wynik
  ```
  
-<a name="waz_geo"/>
+<a name="odchylenie"/>
 
-## Ważona średnia geometryczna [⬆️](#main)
+## Odchylenie standardowe [⬆️](#main)
 
 ```python
-def srednia(lista):
-    wynik = 1
-    for i in lista:
-        wynik *= i
-    wynik = wynik**(1/len(lista))
-    return wynik
- ```
+def odchylenie(lista):
+    return sum(i**2 for i in lista)/len(lista) - (sum(lista)/len(lista))**2
+```
  
 <a name="a4"/>
 
