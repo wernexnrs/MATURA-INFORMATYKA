@@ -380,7 +380,8 @@ def is_pattern(pattern,word):
    * [x] [Pierwiastek kwadratowy](#sqrt)
    * [x] [Pierwiastek n-tego stopnia](#sqrt2)  
    * [x] [Suma liczb od a do b](#suma)
-   * [x] [Iloczyn liczb od a do b](#iloczyn)   
+   * [x] [Iloczyn liczb od a do b](#iloczyn)  
+   * [x] [Krotność](#kro)  
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
@@ -498,4 +499,19 @@ def iloczyn(a,b):
     for i in range(a,b+1): 
         wynik *= i
     return wynik
+```
+
+<a name="kro"/>
+
+## Krotność np. znaków w ciągu[⬆️](#main)
+
+```python
+from collections import Counter
+
+lista_slow=['nie','zdam','matury']
+
+lista_slow = ",".join(lista_slow)
+
+print(Counter(lista_slow))
+
 ```
