@@ -23,7 +23,7 @@ Projekt tworzony przy użyciu:
    * [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    * [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
    * [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
-   * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa,](#nwd) 
+   * [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa, + NWW](#nwd) 
    * [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
    * [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
 2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
@@ -52,7 +52,7 @@ Projekt tworzony przy użyciu:
 ## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
 
 ```python
-int("number_string",base) ANY --> DEC
+#int("number_string",base) ANY --> DEC
 
 dec_numbers = [15,12,2,4,7,8]
 
@@ -131,20 +131,26 @@ def prime_factors(n):
 
 ## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa [⬆️](#main)
 ```python
-def nwd(a, b): return nwd(b, a%b) if b else a #recursive
+#recursive one-liner version
+def nwd(a, b): return nwd(b, a%b) if b else a 
 
-#^the same
+#recursive version
 def nwd(a, b):
     if b > 0:
         return nwd(b, a%b)
     return a
+```
 
-#iteration
+```python
+#iterated version
 def nwd2(a, b):
     while b:
         a, b = b, a%b
     return a
+```
 
+```python
+#Najmniejsza wspólna wielokrotność
 def nww(a, b): return a*b//nwd(a, b)
 ```
 
@@ -152,23 +158,23 @@ def nww(a, b): return a*b//nwd(a, b)
 
 ## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#main)
 ```python
+#Iterated version
+
 def f(n):
     a, b = 0, 1
     for i in range(0, n):
         a, b = b, a + b
     return a
+```
 
-def recur_f(n):
+```python
+#Recursive version
+
+def f(n):
    if n <= 1:
        return n
-   return(recur_f(n-1) + recur_f(n-2))
-    
-for i in range(10): #first 10 numbers
-    print(f(i))
-    
-for i in range(10): #first 10 numbers    
-    print(recur_f(i))
-```
+   return(f(n-1) + f(n-2))
+```    
 
 <a name="zachlanna"/>
 
@@ -199,24 +205,22 @@ print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
 
 ## Sortowanie bąbelkowe [⬆️](#main)
 ```python
+#In place
+
 def bubbleSort(arr): 
     n = len(arr) 
     for i in range(n): 
         for j in range(0, n-i-1): 
             if arr[j] > arr[j+1]: 
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
-  
-
-arr = [64, 34, 25, 12, 22, 11, 90] 
-  
-print(bubbleSort(arr))
 ```
 
 <a name="wybor"/>
 
 ## Sortowanie przez wybór [⬆️](#main)
 ```python
+#In place
+
 def selection_sort(tab):
     for i in range(len(tab)):
         mini = i 
@@ -224,17 +228,14 @@ def selection_sort(tab):
             if tab[mini] > tab[j]: 
                 mini = j         
         tab[i], tab[mini] = tab[mini], tab[i]
-    return tab
-
-tab = [64, 34, 25, 12, 22, 11, 90] 
-    
-print(selection_sort(tab))
 ```
 
 <a name="lin"/>
 
 ## Sortowanie przez wstawianie liniowe [⬆️](#main)
 ```python
+#In place
+
 def insertionSort(A): 
     for i in range(1, len(A)):
         liczba = A[i]
@@ -243,28 +244,21 @@ def insertionSort(A):
             A[i] = A[i -1]
             i -=1
         A[i] = liczba
-    return A
-  
-arr = [12, 11, 13, 5, 6]
-
-print(insertionSort(arr))
 ```
 
 <a name="scalanie"/>
 
 ## Sortowanie przez scalanie [⬆️](#main)
 ```python
+#In place
+
 def mergeSort(arr):
     if len(arr) > 1:
-
         mid = len(arr)//2
-        
         L = arr[:mid]
         R = arr[mid:]
-        
         mergeSort(L)
         mergeSort(R)
- 
         i = j = k = 0
  
         while i < len(L) and j < len(R):
@@ -285,17 +279,14 @@ def mergeSort(arr):
             arr[k] = R[j]
             j += 1
             k += 1
-    return arr
-
-arr = [12, 11, 13, 5, 6, 7]
-
-print(mergeSort(arr))
 ```
 
 <a name="fast_power"/>
 
 ## Szybkie podnoszenie do potęgi [⬆️](#main)
 ```python
+#fast_power(number,power)
+
 def fast_power(x,n):
     if n == 0:
         return 1
@@ -304,18 +295,15 @@ def fast_power(x,n):
     else:
         a = x**(n/2)
     return a**2
+```
 
-#albo
+```python
 def fast_power2(x,n):
     if n == 0:
         return 1
     elif n % 2 != 0:
         return x * (x**((n-1)/2))**2
     return (x**(n/2))**2
-
-
-print(fast_power(3,6))
-print(fast_power2(3,6))
 ```
 
 <a name="bisekcja"/>
@@ -325,6 +313,7 @@ print(fast_power2(3,6))
 def f(x):
     return -4*x +2
 
+#bisection(od,do)
 def bisection(a,b,precyzja = 0.0001): 
     if f(a)*f(b) >= 0: 
         return None
@@ -346,31 +335,22 @@ print("{:.3f}".format( bisection(-100, 100) ))
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
 ```python
-def if_palindrom(string):
+def is_palindrom(string):
     lista = list(string)
     lista2 = lista[::-1]
     if lista == lista2:
         return True
     return False
-
-string = "ala"
-
-print(if_palindrom(string))
 ```
 
 <a name="anagram"/>
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
 ```python
-def if_anagram(string,string2):
+def is_anagram(string,string2):
     if sorted(string) == sorted(string2):
         return True
     return False
-
-string = "anagram"
-string2 = "nagaram"
-
-print(if_anagram(string,string2))
 ```
 
 <a name="alfa"/>
@@ -379,24 +359,6 @@ print(if_anagram(string,string2))
 ```python
 def sort(lista):
     return sorted(lista)
-
-lista = ["C","D","A","O"]
-
-print(sort(lista))
-
-#to jest python po co mam znac rozbudowana wersje..
-
-#przez wstawianie
-def sort_poco(lista):
-    for i in range(len(lista)):
-        mini = i 
-        for j in range(i+1, len(lista)): 
-            if lista[mini] > lista[j]: 
-                mini = j         
-        lista[i], lista[mini] = lista[mini], lista[i]
-    return lista
-
-print(sort_poco(lista))    
 ```
 
 <a name="pattern"/>
@@ -405,13 +367,6 @@ print(sort_poco(lista))
 ```python
 def is_pattern(pattern,word):
     return pattern in word
-
-pattern = "motyw"
-word = "lokomotywa"
-
-print(is_pattern(pattern,word))
-
-#implementacje iteracyjną zrobię kiedy indziej 
 ```
 
 <a name="a2"/>
@@ -469,16 +424,22 @@ print(is_multiple(3,333))
 from math import factorial
 
 print(factorial(5))
+```
 
-#iteration
-def fact_2(n):
+```python
+#Iterated version
+
+def fact(n):
    factorial = 1
    if int(n) >= 1:
       for i in range (1,int(n)+1):
          factorial = factorial * i
    return factorial
+```
 
-#recursive
+```python
+#Recursive version
+
 def fact(n):
    if n == 1:
       return n
