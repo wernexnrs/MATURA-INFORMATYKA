@@ -63,7 +63,7 @@ Projekt tworzony przy użyciu:
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
    - [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
-   - [ ] szyfr Cezara,
+   - [x] [szyfr Cezara,](#cezar)
    - [ ] szyfr przestawieniowy,
    
 <a name="konwersja"/>
@@ -386,6 +386,23 @@ def sort(lista):
 ```python
 def is_pattern(pattern,word):
     return pattern in word
+```
+
+
+<a name="cezar"/>
+
+## Szyfr Cezara [⬆️](#main)
+```python
+def koduj(wiadomosc,klucz):
+    wynik = ""
+    wiadomosc = wiadomosc.upper().replace(" ", "")
+    for i in wiadomosc:
+        wynik += chr((ord(i) + klucz - 65) % 26 + 65)
+    return wynik
+
+def dekoduj(wiadomosc,klucz):
+    klucz *= -1
+    return koduj(wiadomosc,klucz)
 ```
 
 <a name="a5"/>
