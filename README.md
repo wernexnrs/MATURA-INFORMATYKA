@@ -64,8 +64,8 @@ Projekt tworzony przy użyciu:
    - [x] [porządkowanie alfabetyczne,](#alfa) 
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
-   - [ ] kody znaków o zmiennej długości,
-    * [ ] [alfabet Morse’a](#morse)
+   * kody znaków o zmiennej długości,
+      * [ ] [alfabet Morse’a](#morse)
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
    
