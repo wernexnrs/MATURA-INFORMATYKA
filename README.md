@@ -65,7 +65,7 @@ Projekt tworzony przy użyciu:
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
    * kody znaków o zmiennej długości,
-      * [ ] [Kompresja danych](#morse) # nie jest wpisane w wymaganiach ale wyżej mamy "algorytmy kompresji [...]"
+      * [ ] [Kompresja danych](#len) # nie jest wpisane w wymaganiach ale wyżej mamy "algorytmy kompresji [...]"
       * [ ] [alfabet Morse’a](#morse)
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
@@ -397,9 +397,10 @@ def is_pattern(pattern,word):
 ## Kompresja danych [⬆️](#main)
 Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pliku to: a,b,c,d,e,f i chcemy zmniejszysz rozmiar tego pliku kompresją, gdzie każdy kod znaku ma różną długość.
 
-|          | a  |   b |   c |   d |    e |   f  |
-| Częstość | 45 |  13 |  12 |  16 |    9 |   5  |
-|   code   | 0  | 101 | 100 | 111 | 1101 | 1100 |
+| | a | b | c | d | e | f |
+| --- | --- | --- | --- | --- | --- | --- |
+| Częstość | 45 | 13 | 12 | 16 | 9 | 5 |
+| code | 0 | 101 | 100 | 111 | 1101 | 1100 |
 
 Plik taki zajmnie (45*1 + 13*3 + 12*3 + 16*3 + 9*4 + 5*4) * 1000 = 224,000 bity
 
