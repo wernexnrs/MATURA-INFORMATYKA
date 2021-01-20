@@ -686,7 +686,7 @@ def odchylenie(lista):
  Odchylenie standardowe jest pierwiastkiem kadratowym z wariancji
  
  ### Ze wzoru:
- ![equation](https://latex.codecogs.com/svg.latex?\sigma^{2}%20=%20\frac{a_{1}^{2}+a_{2}^{2}+{...}+a_{n}^{2}}{n}%20-%20(\bar{a})^{2})
+![equation](https://latex.codecogs.com/svg.latex?\sigma^{2}%20=%20\frac{a_{1}^{2}+a_{2}^{2}+{...}+a_{n}^{2}}{n}%20-%20(\bar{a})^{2})
  
 <a name="a4"/>
 
