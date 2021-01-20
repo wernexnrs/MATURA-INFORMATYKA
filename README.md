@@ -4,7 +4,6 @@
 <p><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. </b></p>
 <p><b>Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i></b></p>
 
-
 ## Technologie
 Projekt tworzony przy użyciu:
 * Python 3.9.1
@@ -28,7 +27,7 @@ Projekt tworzony przy użyciu:
 1. [Algorytmy wymienione w wymaganiach](#a1)
 2. [Algorytmy, które pojawiły się w arkuszach (nie całe zadania)](#a2)
 3. [Dodatkowe algorytmy](#a3)
-4. [Tricki](#a4)
+4. Tricki
 5. [Funkcje wbudowane](#a5)
 6. [Metody](#a6)
    * [string](#string)
@@ -62,10 +61,12 @@ Projekt tworzony przy użyciu:
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
    - [x] [porządkowanie alfabetyczne,](#alfa) 
+      * Większości obiektów
+      * Słowników
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
    * kody znaków o zmiennej długości,
-      * [ ] [Kompresja danych](#len) # nie jest wpisane w wymaganiach ale wyżej mamy "algorytmy kompresji [...]"
+      * [ ] [Kompresja danych](#len)
       * [ ] [alfabet Morse’a](#morse)
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
@@ -91,15 +92,28 @@ hex_TO_dec = [int(i,16) for i in dec_TO_hex]
 ```python
 #recursive one-liner version DEC --> ANY
 
-BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 def to_base(n, b): #to_base(number,base)
     return BS[n] if n < b else to_base(n // b, b) + BS[n % b]
 ```
 
 ```python
+#recursive version DEC --> ANY
+
+BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+def to_base(n, b): #to_base(number,base)
+    if n < b:
+      return BS[n] 
+    return to_base(n // b, b) + BS[n % b]
+```
+
+```python
 #iterated version DEC --> ANY
 
-BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 def to_base(n, b):
     res = ""
     while n:
@@ -155,26 +169,32 @@ def prime_factors(n):
 ## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa [⬆️](#main)
 ```python
 #recursive one-liner version
-def nwd(a, b): return nwd(b, a%b) if b else a 
 
+def nwd(a, b): return nwd(b, a % b) if b else a 
+```
+
+```python
 #recursive version
+
 def nwd(a, b):
     if b > 0:
-        return nwd(b, a%b)
+        return nwd(b, a % b)
     return a
 ```
 
 ```python
 #iterated version
-def nwd2(a, b):
+
+def nwd(a, b):
     while b:
-        a, b = b, a%b
+        a, b = b, a % b
     return a
 ```
 
 ```python
 #Najmniejsza wspólna wielokrotność
-def nww(a, b): return a*b//nwd(a, b)
+
+def nww(a, b): return a * b // nwd(a, b)
 ```
 
 <a name="fib"/>
@@ -196,32 +216,31 @@ def f(n):
 def f(n):
    if n <= 1:
        return n
-   return(f(n-1) + f(n-2))
+   return f(n-1) + f(n-2)
 ```    
 
 <a name="zachlanna"/>
 
 ## Wydawanie reszty metodą zachłanną [⬆️](#main)
 ```python
-do_wydania = 6 #zł
-
+do_wydania = 6 
 monety = [1,2,5]
-count = 0
-historia = []
 
-wybrana_moneta = int(input())
+def wydawanie(do_wydania,monety):
+   count = 0
+   historia = []
 
-while (wybrana_moneta > 0):
-    nominal = 0
-    for i in range(len(monety)):
-        if monety[i] <= wybrana_moneta and monety[i] > nominal:
-            nominal = monety[i]
-    wybrana_moneta = wybrana_moneta - nominal
+   while do_wydania > 0:
+       nominal = 0
+       for i in range(len(monety)):
+           if monety[i] <= do_wydania and monety[i] > nominal:
+               nominal = monety[i]
+       do_wydania -= nominal
 
-    historia.append(nominal)
-    count+=1
+       historia.append(nominal)
+       count+=1
 
-print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
+   return f'Reszte wydasz w {count} monetach, te monety to {historia}'
 ```
 
 <a name="bob"/>
@@ -230,10 +249,9 @@ print(f'Reszte wydasz w {count} monetach, te monety to {historia}')
 ```python
 #In place
 
-def bubbleSort(arr): 
-    n = len(arr) 
-    for i in range(n): 
-        for j in range(0, n-i-1): 
+def bubble_sort(arr): 
+    for i in range(len(arr)): 
+        for j in range(len(arr)-i-1): 
             if arr[j] > arr[j+1]: 
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 ```
@@ -259,7 +277,7 @@ def selection_sort(tab):
 ```python
 #In place
 
-def insertionSort(A): 
+def insertion_sort(A): 
     for i in range(1, len(A)):
         liczba = A[i]
 
@@ -275,31 +293,31 @@ def insertionSort(A):
 ```python
 #In place
 
-def mergeSort(arr):
-    if len(arr) > 1:
-        mid = len(arr)//2
-        L = arr[:mid]
-        R = arr[mid:]
-        mergeSort(L)
-        mergeSort(R)
+def merge_sort(tab):
+    if len(tab) > 1:
+        mid = len(tab)//2
+        L = tab[:mid]
+        R = tab[mid:]
+        merge_sort(L)
+        merge_sort(R)
         i = j = k = 0
  
         while i < len(L) and j < len(R):
             if L[i] < R[j]:
-                arr[k] = L[i]
+                tab[k] = L[i]
                 i += 1
             else:
-                arr[k] = R[j]
+                tab[k] = R[j]
                 j += 1
             k += 1
  
         while i < len(L):
-            arr[k] = L[i]
+            tab[k] = L[i]
             i += 1
             k += 1
  
         while j < len(R):
-            arr[k] = R[j]
+            tab[k] = R[j]
             j += 1
             k += 1
 ```
@@ -314,9 +332,9 @@ def fast_power(x,n):
     if n == 0:
         return 1
     elif n % 2 != 0:
-        return x * x**(n-1)
+        return x * x ** (n-1)
     else:
-        a = x**(n/2)
+        a = x ** (n/2)
     return a**2
 ```
 
@@ -325,8 +343,8 @@ def fast_power2(x,n):
     if n == 0:
         return 1
     elif n % 2 != 0:
-        return x * (x**((n-1)/2))**2
-    return (x**(n/2))**2
+        return x * ( x ** ( (n-1) / 2 ) ) ** 2
+    return ( x ** (n / 2) ) ** 2
 ```
 
 <a name="bisekcja"/>
@@ -334,18 +352,18 @@ def fast_power2(x,n):
 ## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
 ```python
 def f(x):
-    return -4*x +2
+    return -4 * x + 2
 
 #bisection(od,do)
 def bisection(a,b,precyzja = 0.0001): 
-    if f(a)*f(b) >= 0: 
+    if f(a) * f(b) >= 0: 
         return None
     c = a 
-    while (b-a) >= precyzja: 
-        c = (a+b)/2
-        if (f(c) == 0.0): 
+    while b-a >= precyzja: 
+        c = (a + b) / 2
+        if f(c) == 0.0: 
             break
-        if (f(c)*f(a) < 0): 
+        if f(c) * f(a) < 0: 
             b = c 
         else: 
             a = c      
@@ -360,8 +378,7 @@ print("{:.3f}".format( bisection(-100, 100) ))
 ```python
 def is_palindrom(string):
     lista = list(string)
-    lista2 = lista[::-1]
-    if lista == lista2:
+    if lista == lista[::-1]:
         return True
     return False
 ```
@@ -379,9 +396,28 @@ def is_anagram(string,string2):
 <a name="alfa"/>
 
 ## Porządkowanie alfabetyczne [⬆️](#main)
+
+### Większości obiektów
 ```python
 def sort(lista):
     return sorted(lista)
+```
+
+### Słowników
+```python
+#Po wartościach
+
+def sort_dict_by_value(x):
+    return {k: v for k, v in sorted(x.items(), key = lambda item: item[1])}
+```
+
+```python
+#Po kluczach
+
+from collections import OrderedDict
+
+def sort_dict_by_key(x):
+   return OrderedDict(sorted(x.items())) # to jest bez sensu powyzej pythona 3.7 sa inne metody ide spac zmienei jutro
 ```
 
 <a name="pattern"/>
