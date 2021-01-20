@@ -26,10 +26,11 @@ Projekt tworzony przy użyciu:
 
 # TOC
 1. [Algorytmy wymienione w wymaganiach](#a1)
-2. [Algorytmy, które pojawiły się w arkuszach (nie całe zadania)](#a5)
-3. [Dodatkowe algorytmy](#a2)
-4. Tricki
-5. [Metody](#a4)
+2. [Algorytmy, które pojawiły się w arkuszach (nie całe zadania)](#a2)
+3. [Dodatkowe algorytmy](#a3)
+4. [Tricki](#a4)
+5. [Funkcje wbudowane](#a5)
+6. [Metody](#a6)
    * [string](#string)
    * [listy](#listy)
    * [słowniki](#słowniki)
@@ -422,7 +423,7 @@ print(tekst)
 ```
 
 
-<a name="a5"/>
+<a name="a2"/>
 
 # Algorytmy, które pojawiły się w arkuszach, a nie zostały jeszcze wymienione (nie całe zadania)
  - [x] [kod binarny - zlicz ile liczb jest podzielnych przez 2 a ile przez 8](#bin1)
@@ -474,7 +475,7 @@ print(wynik)
      index += 1
  ```
 
-<a name="a2"/>
+<a name="a3"/>
 
 # Dodatkowe algorytmy
   - [x] [Czy liczba jest parzysta](#even)
@@ -785,3 +786,77 @@ c | d                       # max każdego klucza
    * __.elements()__ -> Zwracan iteracje kluczy: 'klucz'*vaule
    * __.most_common()__ -> zwraca liste krotek malejąca według wartości kluczy
    * __.subtract()__ -> zwraca counter jako wynik odejmowania z zachowaniem ujemnych wartości
+   
+<a name="a5"/>
+  
+# Funkcje wbudowane
+   * __.abs() -> 
+   * __.delattr() -> 
+   * __.hash() -> 
+   * __.memoryview() -> 
+   * __.set() -> 
+   * __.all() -> 
+   * __.dict() -> 
+   * __.help() -> 
+   * __.min() -> 
+   * __.setattr() -> 
+   * __.any() -> 
+   * __.dir() -> 
+   * __.hex() -> 
+   * __.next() -> 
+   * __.slice() -> 
+   * __.ascii() -> 
+   * __.divmod() -> 
+   * __.id() -> 
+   * __.object() -> 
+   * __.sorted() -> 
+   * __.bin() -> 
+   * __.enumerate() -> 
+   * __.input() -> 
+   * __.oct() -> 
+   * __.staticmethod() -> 
+   * __.bool() -> 
+   * __.eval() -> 
+   * __.int() -> 
+   * __.open() -> 
+   * __.str() -> 
+   * __.breakpoint() -> 
+   * __.exec() -> 
+   * __.isinstance() -> 
+   * __.ord() -> 
+   * __.sum() -> 
+   * __.bytearray() -> 
+   * __.filter() -> 
+   * __.issubclass() -> 
+   * __.pow() -> 
+   * __.super() -> 
+   * __.bytes() -> 
+   * __.float() -> 
+   * __.iter() -> 
+   * __.print() -> 
+   * __.tuple() -> 
+   * __.callable() -> 
+   * __.format() -> 
+   * __.len() -> 
+   * __.property() -> 
+   * __.type() -> 
+   * __.chr() -> 
+   * __.frozenset() -> 
+   * __.list() -> 
+   * __.range() -> 
+   * __.vars() -> 
+   * __.classmethod() -> 
+   * __.getattr() -> 
+   * __.locals() -> 
+   * __.repr() -> 
+   * __.zip() -> 
+   * __.compile() -> 
+   * __.globals() -> 
+   * __.map() -> 
+   * __.reversed() -> 
+   * __.__import__() -> 
+   * __.complex() ->
+   * __.hasattr() -> 
+   * __.max() -> 
+   * __.round() -> 
+
