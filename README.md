@@ -64,7 +64,7 @@ Projekt tworzony przy użyciu:
 5. algorytmy kompresji i szyfrowania, np.:
    - [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
    - [x] [szyfr Cezara,](#cezar)
-   - [ ] szyfr przestawieniowy,
+   - [x] [szyfr przestawieniowy,](#przes)
    
 <a name="konwersja"/>
 
@@ -388,7 +388,6 @@ def is_pattern(pattern,word):
     return pattern in word
 ```
 
-
 <a name="cezar"/>
 
 ## Szyfr Cezara [⬆️](#main)
@@ -404,6 +403,23 @@ def dekoduj(wiadomosc,klucz):
     klucz *= -1
     return koduj(wiadomosc,klucz)
 ```
+
+<a name="przes"/>
+
+## Szyfr przestawieniowy [⬆️](#main)
+```python
+tekst = "LA AAMK CORUAKB RUAKI P EIKS AIBSEKA" #jump =  1 to decrypt
+tekst = list(tekst)
+jump = 1
+
+def przes(lista):
+    for i in range(0,len(tekst)-2,2):
+        tekst[i],tekst[i+jump] = tekst[i+jump],tekst[i]
+    tekst = "".join(tekst)
+    return tekst
+print(tekst)
+```
+
 
 <a name="a5"/>
 
