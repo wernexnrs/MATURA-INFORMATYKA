@@ -394,15 +394,20 @@ def is_pattern(pattern,word):
 
 <a name="len"/>
 
-## Kompresja danych [⬆️](#main)
+## Kompresja danych [⬆️](#main
+
+### Prefix free
+
 Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pliku to: a,b,c,d,e,f i chcemy zmniejszysz rozmiar tego pliku kompresją, gdzie każdy kod znaku ma różną długość.
 
 | | a | b | c | d | e | f |
 | --- | --- | --- | --- | --- | --- | --- |
 | Częstość | 45 | 13 | 12 | 16 | 9 | 5 |
-| code | 0 | 101 | 100 | 111 | 1101 | 1100 |
+| Fixed-length code | 0 | 101 | 100 | 111 | 1101 | 1100 |
 
 Plik taki zajmnie (45*1 + 13*3 + 12*3 + 16*3 + 9*4 + 5*4) * 1000 = 224,000 bity
+
+Kod jest nazywany "prefix (free) code", jeżeli w systemie nie ma kodu słowa, który byłby prefixem innego kodu słowa.
 
 ```python
 to niezle
