@@ -631,6 +631,8 @@ def srednia(x):
     return sum(x)/len(x)
  ```
  
+ ### Ze wzoru:
+ ![equation](https://latex.codecogs.com/svg.latex?\bar{x}%20=%20\frac{x_{n}%20+%20x_{n}%20+{...}%20+%20x_{n}%20}{n})
 <a name="waz"/>
 
 ## Średnia ważona [⬆️](#main)
