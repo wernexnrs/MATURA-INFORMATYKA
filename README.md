@@ -474,7 +474,7 @@ print(wynik)
   - [x] [Średnia arytmetyczna](#ary) 
   - [x] [Średnia ważona](#waz) 
   - [x] [Średnia geometryczna](#geo)
-  - [x] [Wariancja i dchylenie standardoweOdchylenie standardowe](#odchylenie) 
+  - [x] [Wariancja i odchylenie standardowe](#odchylenie) 
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
@@ -676,7 +676,7 @@ def srednia(lista):
  
 <a name="odchylenie"/>
 
-## Wariancja i dchylenie standardowe [⬆️](#main)
+## Wariancja i odchylenie standardowe [⬆️](#main)
 
 ```python
 def odchylenie(lista):
