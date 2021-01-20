@@ -469,11 +469,12 @@ print(wynik)
   - [x] [Suma liczb od a do b](#suma)
   - [x] [Iloczyn liczb od a do b](#iloczyn)  
   - [x] [Krotność](#kro)  
+  - [x] [Moda](#moda)  
   - [x] [Mediana](#med) 
   - [x] [Średnia arytmetyczna](#ary) 
   - [x] [Średnia ważona](#waz) 
   - [x] [Średnia geometryczna](#geo)
-  - [x] [Odchylenie standardowe](#odchylenie) 
+  - [x] [Wariancja i dchylenie standardoweOdchylenie standardowe](#odchylenie) 
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
@@ -608,6 +609,19 @@ print(Counter(lista_slow))
 
 ```
 
+<a name="moda"/>
+
+## Moda/dominanta [⬆️](#main)
+
+```python
+from collections import Counter
+
+lista=[1,2,3,4,5,6,7,8,9,2,2,4,4,4,4]
+
+def moda(lista):
+    return Counter(lista).most_common(1)[0][0]
+ ```
+ 
 <a name="med"/>
 
 ## Mediana [⬆️](#main)
@@ -633,6 +647,7 @@ def srednia(x):
  
  ### Ze wzoru:
  ![equation](https://latex.codecogs.com/svg.latex?\bar{x}%20=%20\frac{x_{n}%20+%20x_{n}%20+{...}%20+%20x_{n}%20}{n})
+ 
 <a name="waz"/>
 
 ## Średnia ważona [⬆️](#main)
@@ -642,6 +657,9 @@ def srednia(lista,wagi):
     wynik = sum((i*j for i,j in zip(lista,wagi)))/sum(wagi)
     return wynik
  ```
+ 
+  ### Ze wzoru:
+ ![equation](https://latex.codecogs.com/svg.latex?\bar{x}_{w}%20=%20\frac{x_{1}%20*%20w_{1}%20+%20x_{2}%20*%20w_{2}%20+%20{...}%20+%20x_{n}%20*%20w_{n}}{w_{1}%20+%20w_{2}%20+%20{...}%20+%20w_{n}})
  
  <a name="geo"/>
 
@@ -658,12 +676,17 @@ def srednia(lista):
  
 <a name="odchylenie"/>
 
-## Odchylenie standardowe [⬆️](#main)
+## Wariancja i dchylenie standardowe [⬆️](#main)
 
 ```python
 def odchylenie(lista):
     return sum(i**2 for i in lista)/len(lista) - (sum(lista)/len(lista))**2
 ```
+ 
+ Odchylenie standardowe jest pierwiastkiem kadratowym z wariancji
+ 
+ ### Ze wzoru:
+ ![equation](https://latex.codecogs.com/svg.latex?\sigma^{2}%20=%20\frac{a_{1}^{2}+a_{2}^{2}+{...}+a_{n}^{2}}{n}%20-%20(\bar{a})^{2})
  
 <a name="a4"/>
 
