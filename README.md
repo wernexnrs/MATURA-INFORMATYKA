@@ -646,7 +646,7 @@ def srednia(x):
  ```
  
  ### Ze wzoru:
- ![equation](https://latex.codecogs.com/svg.latex?\bar{x}%20=%20\frac{x_{n}%20+%20x_{n}%20+{...}%20+%20x_{n}%20}{n})
+![equation](https://latex.codecogs.com/svg.latex?\bar{x}%20=%20\frac{x_{n}%20+%20x_{n}%20+{...}%20+%20x_{n}%20}{n})
  
 <a name="waz"/>
 
@@ -658,8 +658,8 @@ def srednia(lista,wagi):
     return wynik
  ```
  
-  ### Ze wzoru:
- ![equation](https://latex.codecogs.com/svg.latex?\bar{x}_{w}%20=%20\frac{x_{1}%20*%20w_{1}%20+%20x_{2}%20*%20w_{2}%20+%20{...}%20+%20x_{n}%20*%20w_{n}}{w_{1}%20+%20w_{2}%20+%20{...}%20+%20w_{n}})
+### Ze wzoru:
+![equation](https://latex.codecogs.com/svg.latex?\bar{x}_{w}%20=%20\frac{x_{1}%20*%20w_{1}%20+%20x_{2}%20*%20w_{2}%20+%20{...}%20+%20x_{n}%20*%20w_{n}}{w_{1}%20+%20w_{2}%20+%20{...}%20+%20w_{n}})
  
  <a name="geo"/>
 
@@ -685,7 +685,7 @@ def odchylenie(lista):
  
  Odchylenie standardowe jest pierwiastkiem kadratowym z wariancji
  
- ### Ze wzoru:
+### Ze wzoru:
 ![equation](https://latex.codecogs.com/svg.latex?\sigma^{2}%20=%20\frac{a_{1}^{2}+a_{2}^{2}+{...}+a_{n}^{2}}{n}%20-%20(\bar{a})^{2})
  
 <a name="a4"/>
