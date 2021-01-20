@@ -64,7 +64,8 @@ Projekt tworzony przy użyciu:
    - [x] [porządkowanie alfabetyczne,](#alfa) 
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
-   - [ ] kody znaków o zmiennej długości, np. alfabet Morse’a,
+   - [ ] kody znaków o zmiennej długości,
+    * [ ] [alfabet Morse’a](#morse)
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
    
@@ -388,6 +389,13 @@ def sort(lista):
 ```python
 def is_pattern(pattern,word):
     return pattern in word
+```
+
+<a name="morse"/>
+
+## Alfabet Morse’a [⬆️](#main)
+```python
+to niezle
 ```
 
 <a name="cezar"/>
