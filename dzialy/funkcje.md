@@ -1,4 +1,4 @@
-# Funkcje wbudowane
+# Najważniejsze funkcje wbudowane
    * __abs()__ -> 
    * __delattr()__ -> 
    * __hash()__ -> 
