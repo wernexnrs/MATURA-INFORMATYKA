@@ -1,6 +1,7 @@
 <h1 align="center"> 🔥 <a href="https://discord.com/users/596478466849767475/">Wernex#9840</a> 🔥 </h1>
 
-## MATURA 2021
+<h1 align="center"> MATURA 2021 </h1>
+
 <p><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. </b></p>
 <p><b>Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i></b></p>
 
@@ -109,7 +110,7 @@
 
 <a name="a2"/>
 
-#Przydatne biblioteki wbudowane
+# Przydatne biblioteki wbudowane
 
 ## Collections
 
@@ -139,7 +140,7 @@ c | d                       # max każdego klucza
 
 <a name="string"/>
 
-## STRING
+### STRING
 <p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
 
   * __.capitalize()__ -> zmienia pierwszy znak na duży
@@ -168,7 +169,7 @@ c | d                       # max każdego klucza
   
 <a name="list"/>
  
-## LISTY
+### LISTY
   * __.append()__ -> Dodaje element na koniec listy
   * __.clear()__ -> Czyści liste
   * __.copy()__ -> Zwraca płytką kopię listy
@@ -183,7 +184,7 @@ c | d                       # max każdego klucza
 
 <a name="dict"/>
 
-## SŁOWNIKI
+### SŁOWNIKI
   * __.clear()__ -> Czyści słownik
   * __.copy()__ -> Plytka kopia
   * __.get()__ -> Zwraca wartość danego klucza
