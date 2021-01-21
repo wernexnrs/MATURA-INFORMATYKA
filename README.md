@@ -40,7 +40,7 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 
 # Najważniejsze funkcje wbudowane [⬆️](#main)
    * __abs()__ -> Zwraca wartość bezwględna liczby
-   * __set()__ -> Zwraca set
+   * __set()__ -> Zwraca zbiór
    * __dict()__ -> Zwraca słownik
    * __tuple()__ -> Zwraca krotkę
    * __str()__ -> Zwraca string
