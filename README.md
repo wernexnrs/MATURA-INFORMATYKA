@@ -583,16 +583,16 @@ print(tekst)
 
 # Zadania z arkuszy
 
-1.2015 maj
+1. 2015 maj
    - [x] [4.1](#bin1)
    - [x] [4.2](#bin2)
    - [x] [4.3](#bin3)
-2.2018 czerwiec
+2. 2018 czerwiec
    - [x] [4.1](#e1)
    - [x] [4.2](#e2)
    - [x] [4.3](#e3)
  
- ## 2015 maj
+ # 2015 maj
  
 <a name="bin1"/>
 W pliku liczby.txt znajduje się 1000 liczb naturalnych zapisanych binarnie. Każda liczba zapisana jest w osobnym wierszu.
@@ -646,7 +646,7 @@ with open("Dane_PR/liczby.txt") as file:
 print(lista.index(max(lista))+1,"|",lista.index(min(lista))+1)
  ```
 
- ## 2018 czerwiec
+ # 2018 czerwiec
 Pliki dane1.txt i dane2.txt zawierają po 1000 wierszy. W każdym wierszu tych plików zapisany jest uporządkowany niemalejąco ciąg dziesięciu liczb całkowitych o wartościach z przedziału 〈0,100〉 , oddzielonych spacjami. 
 
 <a name="e1"/>
