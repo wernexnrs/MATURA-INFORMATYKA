@@ -129,7 +129,7 @@ c & d                       # min każdego klucza
 c | d                       # max każdego klucza
 #Output:Counter({'a': 3, 'b': 2})
 ```
-<h6> Metody </h6>
+<h5> Metody </h5>
 
    * __.elements()__ -> Zwracan iteracje kluczy: 'klucz'*vaule
    * __.most_common()__ -> zwraca liste krotek malejąca według wartości kluczy
