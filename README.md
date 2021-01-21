@@ -114,6 +114,8 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 
 ## Collections
 
+<a name="counter"/>
+
 ### Counter() [⬆️](#main)
 ```python
 c = Counter(a=3, b=1)
