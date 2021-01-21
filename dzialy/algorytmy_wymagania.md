@@ -31,15 +31,19 @@
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
    - [x] [porządkowanie alfabetyczne,](#alfa) 
+   
       * Większości obiektów
       * Słowników
+      
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
    
 5. __algorytmy kompresji i szyfrowania__
 
    * kody znaków o zmiennej długości,
+   
       * [ ] [Kompresja danych](#len) #nie potrafie
       * [ ] [alfabet Morse’a](#morse) #nie wiem  
+      
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
    
