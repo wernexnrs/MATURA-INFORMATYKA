@@ -1,4 +1,6 @@
-# Algorytmy wymienione w wymaganiach 
+<h1 align="center"> Algorytmy wymienione w wymaganiach </h1>
+
+<a name="main"/>
 
 1. algorytmy na liczbach całkowitych,
    - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
