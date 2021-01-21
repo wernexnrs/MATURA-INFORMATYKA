@@ -287,7 +287,7 @@ def merge_sort(tab):
             k += 1
 ```
 
-<a name="szybkie"/>
+<a name="fast"/>
 
 ## Sortowanie szybkie [⬆️](#main)
 ```python
