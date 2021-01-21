@@ -22,14 +22,14 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 
 # TOC
 1. [Algorytmy wymienione w wymaganiach](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-2. [Zadania z arkuszy](#https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
-3. [Dodatkowe algorytmy](#https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+2. [Zadania z arkuszy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+3. [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 4. [Najważniejsze funkcje wbudowane](#a1)
 5. [Przydatne biblioteki wbudowane](#a2)
 
-   * [Collections](#collections)
+   * Collections
     * [Counter](#counter)
-6. [Metody](#a3)
+6. Metody
    
    * [Na napisach](#string)
    * [Na listach](#list)
@@ -114,9 +114,7 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 
 ## Collections
 
-<a name="counter"/>
-
-### Counter()
+### Counter() [⬆️](#main)
 ```python
 c = Counter(a=3, b=1)
 d = Counter(a=1, b=2)
@@ -130,13 +128,12 @@ c | d                       # max każdego klucza
 #Output:Counter({'a': 3, 'b': 2})
 ```
 <h6> Metody </h6>
+
    * __.elements()__ -> Zwracan iteracje kluczy: 'klucz'*vaule
    * __.most_common()__ -> zwraca liste krotek malejąca według wartości kluczy
    * __.subtract()__ -> zwraca counter jako wynik odejmowania z zachowaniem ujemnych wartości
  
-<a name="a3"/>
-
-# Metody [⬆️](#main)
+# Metody 
 
 <a name="string"/>
 
