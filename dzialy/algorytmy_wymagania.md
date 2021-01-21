@@ -1,39 +1,41 @@
-<h1 align="center"> Algorytmy wymienione w wymaganiach </h1>
-
 <a name="main"/>
 
-1. algorytmy na liczbach całkowitych,
+<h1 align="center"> Algorytmy wymienione w wymaganiach </h1>
+
+1. __algorytmy na liczbach całkowitych:__ 
    - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
    - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    - [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
    - [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
    - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa, + NWW](#nwd) 
    - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
-   - [x] [wydawanie reszty metodą zachłanną,](#zachlanna) 
-2. algorytmy wyszukiwania i porządkowania (sortowania), np.:
+   - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)    
+2. __algorytmy wyszukiwania i porządkowania (sortowania):__ 
    - [x] [bąbelkowy, ](#bob) 
    - [x] [przez wybór, ](#wybor) 
    - [x] [przez wstawianie liniowe, ](#lin) 
    - [x] [przez scalanie,](#scalanie) 
    - [x] [szybki,](#fast)
-   - [x] [kubełkowy,](#box)
-3. algorytmy numeryczne, np.:
+   - [x] [kubełkowy,](#box)  
+3. __algorytmy numeryczne__
    - [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
-   - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
-4. algorytmy na tekstach, np.:
+   - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
+4. __algorytmy na tekstach__
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
    - [x] [porządkowanie alfabetyczne,](#alfa) 
       * Większości obiektów
       * Słowników
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
-5. algorytmy kompresji i szyfrowania, np.:
+5. __algorytmy kompresji i szyfrowania__
    * kody znaków o zmiennej długości,
       * [ ] [Kompresja danych](#len) #nie potrafie
-      * [ ] [alfabet Morse’a](#morse) #nie wiem
+      * [ ] [alfabet Morse’a](#morse) #nie wiem  
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
    
+</ol>
+
 <a name="konwersja"/>
 
 ## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
