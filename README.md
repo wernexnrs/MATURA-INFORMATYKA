@@ -66,7 +66,7 @@ Projekt tworzony przy użyciu:
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) 
 5. algorytmy kompresji i szyfrowania, np.:
    * kody znaków o zmiennej długości,
-      * [ ] [Kompresja danych](#len)
+      * [ ] [Kompresja danych](#len) #nie potrafie
       * [ ] [alfabet Morse’a](#morse)
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
@@ -444,17 +444,19 @@ Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pl
 
 Plik taki zajmnie (45*1 + 13*3 + 12*3 + 16*3 + 9*4 + 5*4) * 1000 = 224,000 bity
 
-
-
 ```python
-to niezle
+text = "01101100"
+
+cipher = {'0': 'a','101': 'b','100': 'c', '111': 'd', '1101': 'e', '1100': 'f'}
+
+Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powodzenia.
 ```
 
 <a name="morse"/>
 
 ## Alfabet Morse’a [⬆️](#main)
 ```python
-to niezle
+Nie wiem
 ```
 
 <a name="cezar"/>
