@@ -442,7 +442,7 @@ Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pl
 | Częstość | 45 | 13 | 12 | 16 | 9 | 5 |
 | Fixed-length code | 0 | 101 | 100 | 111 | 1101 | 1100 |
 
-Plik taki zajmnie (45*1 + 13*3 + 12*3 + 16*3 + 9*4 + 5*4) * 1000 = 224,000 bity
+Plik taki zajmnie (45 * 1 + 13 * 3 + 12 * 3 + 16 * 3 + 9 * 4 + 5 * 4) * 1000 = 224,000 bity
 
 ```python
 text = "01101100"
