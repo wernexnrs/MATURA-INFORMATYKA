@@ -67,7 +67,7 @@ Projekt tworzony przy użyciu:
 5. algorytmy kompresji i szyfrowania, np.:
    * kody znaków o zmiennej długości,
       * [ ] [Kompresja danych](#len) #nie potrafie
-      * [ ] [alfabet Morse’a](#morse)
+      * [ ] [alfabet Morse’a](#morse) #nie wiem
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
    
