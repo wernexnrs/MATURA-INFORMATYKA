@@ -39,60 +39,63 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 <a name="a1"/>
 
 # Najważniejsze funkcje wbudowane [⬆️](#main)
-   * __abs()__ -> 
+   * __abs()__ -> Zwraca wartość bezwględna liczby
+   * __set()__ -> Zwraca set
+   * __dict()__ -> Zwraca słownik
+   * __tuple()__ -> Zwraca krotkę
+   * __str()__ -> Zwraca string
+   * __bool()__ -> Zwraca prawdę/fałsz
+   * __int()__ -> Zwraca liczbę całkowitą
+   * __float()__ -> Zwraca liczbę zmiennoprzecinkową
+   * __min()__ -> Zwraca minimalna wartość z obiektu
+   * __sum()__ -> Zwraca sume liczb w obiekcie
+   * __max()__ -> Zwraca maksymalną liczbę z obiektu
+   * __pow()__ -> Zwraca potęgę
+   * __hex()__ -> Zwraca wartość heksadecymalną liczby dzisiętnej
+   * __bin()__ -> Zwraca wartość binarną liczby dzisiętnej
+   * __oct()__ -> Zwraca wartość oktalną liczby dzisiętnej
+   * __id()__ -> Zwraca adres komórki w pamięci zmiennej
+   * __sorted()__ -> Sortuje listę
+   * __len()__ -> Zwraca długość obiektu
+   * __input()__ -> Pobiera wartość na wejściu
+   * __print()__ -> Wyświetla wartość
+   * __range()__ -> Zwraca sekwencje liczb
+   * __round()__ -> Zaokrągla liczbę 
+   
    * __delattr()__ -> 
    * __hash()__ -> 
    * __memoryview()__ -> 
-   * __set()__ -> 
    * __all()__ -> 
-   * __dict()__ -> 
    * __help()__ -> 
-   * __min()__ -> 
    * __setattr()__ -> 
    * __any()__ -> 
    * __dir()__ -> 
-   * __hex()__ -> 
    * __next()__ -> 
    * __slice()__ -> 
    * __ascii()__ -> 
    * __divmod()__ -> 
-   * __id()__ -> 
    * __object()__ -> 
-   * __sorted()__ -> 
-   * __bin()__ -> 
    * __enumerate()__ -> 
-   * __input()__ -> 
-   * __oct()__ -> 
    * __staticmethod()__ -> 
-   * __bool()__ -> 
    * __eval()__ -> 
-   * __int()__ -> 
    * __open()__ -> 
-   * __str()__ -> 
    * __breakpoint()__ -> 
    * __exec()__ -> 
    * __isinstance()__ -> 
    * __ord()__ -> 
-   * __sum()__ -> 
    * __bytearray()__ -> 
    * __filter()__ -> 
    * __issubclass()__ -> 
-   * __pow()__ -> 
    * __super()__ -> 
    * __bytes()__ -> 
-   * __float()__ -> 
    * __iter()__ -> 
-   * __print()__ -> 
-   * __tuple()__ -> 
    * __callable()__ -> 
    * __format()__ -> 
-   * __len()__ -> 
    * __property()__ -> 
    * __type()__ -> 
    * __chr()__ -> 
    * __frozenset()__ -> 
    * __list()__ -> 
-   * __range()__ -> 
    * __vars()__ -> 
    * __classmethod()__ -> 
    * __getattr()__ -> 
@@ -106,8 +109,7 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
    * __import__()__ -> 
    * __complex()__ ->
    * __hasattr()__ -> 
-   * __max()__ -> 
-   * __round()__ -> 
+   
 
 <a name="a2"/>
 
