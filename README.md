@@ -51,9 +51,9 @@ Projekt tworzony przy użyciu:
    - [x] [bąbelkowy, ](#bob) 
    - [x] [przez wybór, ](#wybor) 
    - [x] [przez wstawianie liniowe, ](#lin) 
-   - [x] [przez scalanie, ](#scalanie) 
-   - [ ] szybki, 
-   - [ ] kubełkowy,
+   - [x] [przez scalanie,](#scalanie) 
+   - [x] [szybki,](#fast)
+   - [x] [kubełkowy,](#box)
 3. algorytmy numeryczne, np.:
    - [x] [szybkie podnoszenie do potęgi,](#fast_prime) 
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja) 
@@ -320,6 +320,93 @@ def merge_sort(tab):
             tab[k] = R[j]
             j += 1
             k += 1
+```
+
+<a name="szybkie"/>
+
+## Sortowanie szybkie [⬆️](#main)
+```python
+
+def partition(arr, low, high):
+    
+    i = (low-1)        
+    pivot = arr[high]     
+  
+    for j in range(low, high): 
+        if arr[j] <= pivot: 
+            i = i+1
+            arr[i], arr[j] = arr[j], arr[i] 
+  
+    arr[i+1], arr[high] = arr[high], arr[i+1] 
+    return (i+1)
+
+def quickSort(arr, low, high):
+    
+    if len(arr) == 1: 
+        return arr
+    
+    if low < high: 
+        pi = partition(arr, low, high) 
+        quickSort(arr, low, pi-1) 
+        quickSort(arr, pi+1, high) 
+  
+  
+arr = [10, 7, 8, 9, 1, 5] 
+n = len(arr) 
+quickSort(arr, 0, n-1)
+
+print(arr)
+
+```
+
+<a name="box"/>
+
+## Sortowanie kubełkowe [⬆️](#main)
+```python
+# Python3 program to sort an array  
+# using bucket sort  
+def insertionSort(b): 
+    for i in range(1, len(b)): 
+        up = b[i] 
+        j = i - 1
+        while j >= 0 and b[j] > up:  
+            b[j + 1] = b[j] 
+            j -= 1
+        b[j + 1] = up      
+    return b      
+              
+def bucketSort(x): 
+    arr = [] 
+    slot_num = 10 # 10 means 10 slots, each 
+                  # slot's size is 0.1 
+    for i in range(slot_num): 
+        arr.append([]) 
+          
+    # Put array elements in different buckets  
+    for j in x: 
+        index_b = int(slot_num * j)  
+        arr[index_b].append(j) 
+      
+    # Sort individual buckets  
+    for i in range(slot_num): 
+        arr[i] = insertionSort(arr[i]) 
+          
+    # concatenate the result 
+    k = 0
+    for i in range(slot_num): 
+        for j in range(len(arr[i])): 
+            x[k] = arr[i][j] 
+            k += 1
+    return x 
+  
+# Driver Code 
+x = [0.897, 0.565, 0.656, 
+     0.1234, 0.665, 0.3434]  
+print("Sorted Array is") 
+print(bucketSort(x)) 
+  
+# This code is contributed by 
+# Oneil Hsiao 
 ```
 
 <a name="fast_power"/>
@@ -859,73 +946,73 @@ c | d                       # max każdego klucza
 <a name="a5"/>
   
 # Funkcje wbudowane
-   * __.abs()__ -> 
-   * __.delattr()__ -> 
-   * __.hash()__ -> 
-   * __.memoryview()__ -> 
-   * __.set()__ -> 
-   * __.all()__ -> 
-   * __.dict()__ -> 
-   * __.help()__ -> 
-   * __.min()__ -> 
-   * __.setattr()__ -> 
-   * __.any()__ -> 
-   * __.dir()__ -> 
-   * __.hex()__ -> 
-   * __.next()__ -> 
-   * __.slice()__ -> 
-   * __.ascii()__ -> 
-   * __.divmod()__ -> 
-   * __.id()__ -> 
-   * __.object()__ -> 
-   * __.sorted()__ -> 
-   * __.bin()__ -> 
-   * __.enumerate()__ -> 
-   * __.input()__ -> 
-   * __.oct()__ -> 
-   * __.staticmethod()__ -> 
-   * __.bool()__ -> 
-   * __.eval()__ -> 
-   * __.int()__ -> 
-   * __.open()__ -> 
-   * __.str()__ -> 
-   * __.breakpoint()__ -> 
-   * __.exec()__ -> 
-   * __.isinstance()__ -> 
-   * __.ord()__ -> 
-   * __.sum()__ -> 
-   * __.bytearray()__ -> 
-   * __.filter()__ -> 
-   * __.issubclass()__ -> 
-   * __.pow()__ -> 
-   * __.super()__ -> 
-   * __.bytes()__ -> 
-   * __.float()__ -> 
-   * __.iter()__ -> 
-   * __.print()__ -> 
-   * __.tuple()__ -> 
-   * __.callable()__ -> 
-   * __.format()__ -> 
-   * __.len()__ -> 
-   * __.property()__ -> 
-   * __.type()__ -> 
-   * __.chr()__ -> 
-   * __.frozenset()__ -> 
-   * __.list()__ -> 
-   * __.range()__ -> 
-   * __.vars()__ -> 
-   * __.classmethod()__ -> 
-   * __.getattr()__ -> 
-   * __.locals()__ -> 
-   * __.repr()__ -> 
-   * __.zip()__ -> 
-   * __.compile()__ -> 
-   * __.globals()__ -> 
-   * __.map()__ -> 
-   * __.reversed()__ -> 
-   * __.__import__()__ -> 
-   * __.complex()__ ->
-   * __.hasattr()__ -> 
-   * __.max()__ -> 
-   * __.round()__ -> 
+   * __abs()__ -> 
+   * __delattr()__ -> 
+   * __hash()__ -> 
+   * __memoryview()__ -> 
+   * __set()__ -> 
+   * __all()__ -> 
+   * __dict()__ -> 
+   * __help()__ -> 
+   * __min()__ -> 
+   * __setattr()__ -> 
+   * __any()__ -> 
+   * __dir()__ -> 
+   * __hex()__ -> 
+   * __next()__ -> 
+   * __slice()__ -> 
+   * __ascii()__ -> 
+   * __divmod()__ -> 
+   * __id()__ -> 
+   * __object()__ -> 
+   * __sorted()__ -> 
+   * __bin()__ -> 
+   * __enumerate()__ -> 
+   * __input()__ -> 
+   * __oct()__ -> 
+   * __staticmethod()__ -> 
+   * __bool()__ -> 
+   * __eval()__ -> 
+   * __int()__ -> 
+   * __open()__ -> 
+   * __str()__ -> 
+   * __breakpoint()__ -> 
+   * __exec()__ -> 
+   * __isinstance()__ -> 
+   * __ord()__ -> 
+   * __sum()__ -> 
+   * __bytearray()__ -> 
+   * __filter()__ -> 
+   * __issubclass()__ -> 
+   * __pow()__ -> 
+   * __super()__ -> 
+   * __bytes()__ -> 
+   * __float()__ -> 
+   * __iter()__ -> 
+   * __print()__ -> 
+   * __tuple()__ -> 
+   * __callable()__ -> 
+   * __format()__ -> 
+   * __len()__ -> 
+   * __property()__ -> 
+   * __type()__ -> 
+   * __chr()__ -> 
+   * __frozenset()__ -> 
+   * __list()__ -> 
+   * __range()__ -> 
+   * __vars()__ -> 
+   * __classmethod()__ -> 
+   * __getattr()__ -> 
+   * __locals()__ -> 
+   * __repr()__ -> 
+   * __zip()__ -> 
+   * __compile()__ -> 
+   * __globals()__ -> 
+   * __map()__ -> 
+   * __reversed()__ -> 
+   * __import__()__ -> 
+   * __complex()__ ->
+   * __hasattr()__ -> 
+   * __max()__ -> 
+   * __round()__ -> 
 
