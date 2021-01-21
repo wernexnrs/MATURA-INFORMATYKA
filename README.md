@@ -28,7 +28,7 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 5. [Przydatne biblioteki wbudowane](#a2)
 
    * Collections
-    * [Counter](#counter)
+     * [Counter()](#counter)
 6. Metody
    
    * [Na napisach](#string)
