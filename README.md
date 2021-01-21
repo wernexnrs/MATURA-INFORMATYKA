@@ -22,19 +22,19 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 <a name="main"/>
 
 # TOC
-1. [Algorytmy wymienione w wymaganiach](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-2. [Zadania z arkuszy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
-3. [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
-4. [Najważniejsze funkcje wbudowane](#a1)
-5. [Przydatne biblioteki wbudowane](#a2)
-
-   * Collections
-     * [Counter()](#counter)
-6. Metody
-   
-   * [Na napisach](#string)
-   * [Na listach](#list)
-   * [Na słownikach](#dict)
+> 1. [Algorytmy wymienione w wymaganiach](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
+> 2. [Zadania z arkuszy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+> 3. [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+> 4. [Najważniejsze funkcje wbudowane](#a1)
+> 5. [Przydatne biblioteki wbudowane](#a2)
+> 
+>    * Collections
+>      * [Counter()](#counter)
+> 6. Metody
+>    
+>    * [Na napisach](#string)
+>    * [Na listach](#list)
+>    * [Na słownikach](#dict)
 
 <a name="a1"/>
 
