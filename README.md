@@ -2,8 +2,8 @@
 
 <h1 align="center"> MATURA 2021 </h1>
 
-<p><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. </b></p>
-<p><b>Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i></b></p>
+<p align="center"><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. <br>
+Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i>.</b></p>
 
 ## Przydatne linki
    - <a href="https://pl.spoj.com/">POLSKI SPOJ</a> - pełno problemów algorytmicznych do rozwiązania
@@ -37,7 +37,7 @@
 
 <a name="a1"/>
 
-# Najważniejsze funkcje wbudowane
+# Najważniejsze funkcje wbudowane [⬆️](#main)
    * __abs()__ -> 
    * __delattr()__ -> 
    * __hash()__ -> 
@@ -110,7 +110,7 @@
 
 <a name="a2"/>
 
-# Przydatne biblioteki wbudowane
+# Przydatne biblioteki wbudowane [⬆️](#main)
 
 ## Collections
 
@@ -136,11 +136,11 @@ c | d                       # max każdego klucza
  
 <a name="a3"/>
 
-# Metody
+# Metody [⬆️](#main)
 
 <a name="string"/>
 
-### STRING
+### STRING [⬆️](#main)  
 <p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
 
   * __.capitalize()__ -> zmienia pierwszy znak na duży
@@ -169,7 +169,7 @@ c | d                       # max każdego klucza
   
 <a name="list"/>
  
-### LISTY
+### LISTY [⬆️](#main)
   * __.append()__ -> Dodaje element na koniec listy
   * __.clear()__ -> Czyści liste
   * __.copy()__ -> Zwraca płytką kopię listy
@@ -184,7 +184,7 @@ c | d                       # max każdego klucza
 
 <a name="dict"/>
 
-### SŁOWNIKI
+### SŁOWNIKI [⬆️](#main)
   * __.clear()__ -> Czyści słownik
   * __.copy()__ -> Plytka kopia
   * __.get()__ -> Zwraca wartość danego klucza
