@@ -31,7 +31,10 @@
    - [x] [4.3](#e3)
  
  # 2020 czerwiec
- 
+W pliku pary.txt znajduje się 100 wierszy. Każdy wiersz zawiera parę danych składającą się z liczby całkowitej z przedziału od 3 do 100 i słowa (ciągu znaków) złożonego z małych liter alfabetu angielskiego o długości od 1 do 50 znaków. Liczba i słowo są oddzielone znakiem spacji. 
+
+Mocna hipoteza Goldbacha mówi, że każda parzysta liczba całkowita większa od 4 jest sumą  dwóch nieparzystych liczb pierwszych, np. liczba 20 jest równa sumie 3 + 17 lub sumie 7 + 13. Każdą liczbę parzystą z pliku pary.txt przedstaw w postaci sumy dwóch liczb pierwszych. Wypisz tę liczbę oraz dwa składniki sumy w kolejności niemalejącej. Jeżeli istnieje więcej rozwiązań (tak jak dla liczby 20) należy wypisać składniki sumy o największej różnicy. Wyniki podaj w oddzielnych wierszach, w kolejności zgodnej z kolejnością danych w pliku pary.txt. Liczby w każdym wierszu rozdziel znakiem spacji, np. dla liczby 20 należy wypisać 20 3 17. 
+
  <a name="czerwiec1"/>
  
   ```python
@@ -54,8 +57,9 @@ with open("Dane_PR2\pary.txt") as file:
                     print(num,j,num-j)
                     break
   ```
-  
-   <a name="czerwiec2"/>
+Dla każdego słowa z pliku pary.txt znajdź długość najdłuższego spójnego fragmentu tego słowa złożonego z identycznych liter. Wypisz znalezione fragmenty słów i ich długości oddzielone spacją, po jednej parze w każdym wierszu. Jeżeli istnieją dwa fragmenty o takiej samej największej długości, podaj pierwszy z nich. Wyniki podaj w kolejności zgodnej z kolejnością danych w pliku pary.txt. 
+
+<a name="czerwiec2"/>
    
   ```python
   with open("Dane_PR2\pary.txt") as file:
@@ -74,7 +78,19 @@ with open("Dane_PR2\pary.txt") as file:
         print(longest_seq, len(longest_seq))  
   ```
   
-   <a name="czerwiec3"/>
+Para (liczba1, słowo1) jest mniejsza od pary (liczba2, słowo2), gdy:
+– liczba1 < liczba2,
+albo
+– liczba1 = liczba2 oraz słowo1 jest leksykograficznie (w porządku alfabetycznym) mniejsze od słowo2.
+
+Przykład:
+
+para (1, bbbb) jest mniejsza od pary (2, aaa), natomiast para (3, aaa) jest mniejsza od pary (3, ab).
+
+Rozważ wszystkie pary (liczba, słowo) zapisane w wierszach pliku pary.txt, dla których liczba jest równa długości słowa, i wypisz spośród nich taką parę, która jest mniejsza od wszystkich pozostałych. W pliku pary.txt jest jedna taka para. 
+
+  
+<a name="czerwiec3"/>
    
   ```python
   lista = []
@@ -88,7 +104,15 @@ lista.sort()
 print(lista[0])
   ```
  # 2020 kwiecień
- 
+Luką w ciągu liczbowym nazywamy bezwzględną wartość różnicy między dwoma kolejnymi elementami.
+Przykładowo – w czteroelementowym ciągu: 5, 2, 7, 10 są trzy luki:
+   − luka pomiędzy pierwszym a drugim elementem wynosi 3;
+   − luka pomiędzy drugim a trzecim elementem wynosi 5;
+   − luka pomiędzy trzecim a czwartym elementem wynosi 3.
+Największa luka w tym ciągu ma wartość 5. W pliku dane4.txt znajduje się ciąg złożony z 1 000 dodatnich liczb całkowitych nie większych od 2⋅10^9
+
+Podaj wartość największej luki oraz wartość najmniejszej luki pomiędzy elementami ciągu z pliku dane4.txt. 
+
 <a name="kwiecien1"/>
    
   ```python
@@ -108,6 +132,20 @@ for i in lista[1:]:
 print(min(luki))
 print(max(luki))
   ```
+  
+Fragment ciągu nazywamy regularnym, jeśli wszystkie jego luki mają tę samą wartość. Przykładowo – w ciągu:
+4, 11, 4, 1, 4, 7, 11, 12, 13, 14, 7, 0, 3 
+
+regularnymi są następujące fragmenty:
+
+   − 4, 11, 4 – luka między jego elementami wynosi 7;
+   − 4, 1, 4, 7 – luka między jego elementami wynosi 3;
+   − 7, 11 – luka między jego elementami wynosi 4;
+   − 11, 12, 13, 14 – luka między jego elementami wynosi 1;
+   − 14, 7, 0 – luka między jego elementami wynosi 7;
+   − 0, 3 – luka między jego elementami wynosi 3.
+   
+Znajdź najdłuższy fragment regularny w ciągu z pliku dane4.txt. Podaj jego długość oraz wartości (liczby) znajdujące się na początku i końcu tego fragmentu. W pliku z danymi jest jeden taki fragment. W powyższym przykładzie długość najdłuższego fragmentu regularnego jest równa 4. Takie fragmenty w przykładzie są dwa. Jeden zaczyna się od liczby 4 i kończy liczbą 7, a drugi zaczyna się od liczby 11 i kończy liczbą 14.
   
  <a name="kwiecien2"/>
    
@@ -135,7 +173,14 @@ print(max(max_list)+1)
 print("poczatek",lista[max_list.index(max(max_list))-max(max_list)])  
 print("koniec",lista[max_list.index(max(max_list))])
   ```
-  
+Krotnością luki nazywamy liczbę jej wystąpień. Najczęstszą luką nazywamy lukę o największej krotności.
+Przykładowo – w ciągu:
+5, 2, 7, 10
+
+luka 5 ma krotność 1, a luka 3 ma krotność 2 i wobec tego jest najczęstszą luką.
+
+Podaj krotność najczęstszej luki oraz wartości wszystkich najczęstszych luk w ciągu z pliku dane4.txt.
+W przykładzie z zadania 4.2 (ciąg 4, 11, 4, 1, 4, 7, 11, 12, 13, 14, 7, 0, 3) krotność najczęstszej luki wynosi 4. Tę krotność mają luki 7 i 3.
  <a name="kwiecien3"/>
    
   ```python
