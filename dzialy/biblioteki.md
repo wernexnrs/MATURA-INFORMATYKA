@@ -34,5 +34,6 @@ c | d                       # max każdego klucza
 
 <a name="order"/>
 
-### OrderedDict()
+### OrderedDict() [⬆️](#main)
+
 Zwraca podsłownik, którym można zarządzać
