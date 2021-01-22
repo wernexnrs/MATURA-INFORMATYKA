@@ -1,4 +1,4 @@
-# Zadania z arkuszy
+<h1 align="center">  Zadania z arkuszy </h1>
 
 1. 2015 maj
 
