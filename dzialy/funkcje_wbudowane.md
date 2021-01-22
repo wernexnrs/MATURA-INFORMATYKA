@@ -1,4 +1,4 @@
-# Najważniejsze funkcje wbudowane
+<h1 align="center">  Najważniejsze funkcje wbudowane </h1>
 
    > * __abs()__ -> Zwraca wartość bezwględna liczby
    > * __set()__ -> Zwraca zbiór
