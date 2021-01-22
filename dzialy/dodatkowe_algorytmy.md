@@ -1,4 +1,5 @@
-# Dodatkowe algorytmy
+<h1 align="center">  Dodatkowe algorytmy </h1>
+
   - [x] [Czy liczba jest parzysta](#even)
   - [x] [Czy liczba jest podzielna przez n bez reszty](#n)
   - [x] [Czy liczba jest wielokrotnością n](#multiple)
