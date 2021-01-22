@@ -1,4 +1,4 @@
-# Przydatne biblioteki
+# Przydatne moduły
 
   * __Collections__
     * [Counter()](counter)
@@ -6,7 +6,9 @@
       * .most_common()
       * .subtract()
     * [OrderedDict()](order)
-  * __Math__
+  * __math__
+  * __random__
+  * __statistics__
   
 
 ## Collections
