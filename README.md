@@ -25,5 +25,5 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
 > 2. [Zadania z arkuszy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
 > 3. [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 > 4. [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
-> 5. [Przydatne biblioteki](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
+> 5. [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
 > 6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
