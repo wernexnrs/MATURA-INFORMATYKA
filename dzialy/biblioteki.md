@@ -1,5 +1,14 @@
 # Przydatne biblioteki
 
+  * __Collections__
+    * [Counter()](counter)
+      * .elements()
+      * .most_common()
+      * .subtract()
+    * [OrderedDict()](order)
+  * __Math__
+  
+
 ## Collections
 
 <a name="counter"/>
@@ -22,3 +31,8 @@ c | d                       # max każdego klucza
    * __.elements()__ -> Zwracan iteracje kluczy: 'klucz'*vaule
    * __.most_common()__ -> zwraca liste krotek malejąca według wartości kluczy
    * __.subtract()__ -> zwraca counter jako wynik odejmowania z zachowaniem ujemnych wartości
+
+<a name="order"/>
+
+### OrderedDict()
+Zwraca podsłownik, którym można zarządzać
