@@ -44,6 +44,8 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
    * __set()__ -> Zwraca zbiór
    * __dict()__ -> Zwraca słownik
    * __tuple()__ -> Zwraca krotkę
+   * __frozenset()__ -> Zwraca zbiór niemożliwy do edycji
+   * __list()__ -> Zwraca listę
    * __str()__ -> Zwraca string
    * __bool()__ -> Zwraca prawdę/fałsz
    * __int()__ -> Zwraca liczbę całkowitą
@@ -55,6 +57,7 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
    * __hex()__ -> Zwraca wartość heksadecymalną liczby dzisiętnej
    * __bin()__ -> Zwraca wartość binarną liczby dzisiętnej
    * __oct()__ -> Zwraca wartość oktalną liczby dzisiętnej
+   * __complex()__ -> Zwraca liczbę zespoloną 
    * __id()__ -> Zwraca adres komórki w pamięci zmiennej
    * __sorted()__ -> Sortuje listę
    * __len()__ -> Zwraca długość obiektu
@@ -62,55 +65,25 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
    * __print()__ -> Wyświetla wartość
    * __range()__ -> Zwraca sekwencje liczb
    * __round()__ -> Zaokrągla liczbę 
-   
-   * __delattr()__ -> 
-   * __hash()__ -> 
-   * __memoryview()__ -> 
-   * __all()__ -> 
-   * __help()__ -> 
-   * __setattr()__ -> 
-   * __any()__ -> 
-   * __dir()__ -> 
-   * __next()__ -> 
-   * __slice()__ -> 
-   * __ascii()__ -> 
-   * __divmod()__ -> 
-   * __object()__ -> 
-   * __enumerate()__ -> 
-   * __staticmethod()__ -> 
-   * __eval()__ -> 
-   * __open()__ -> 
-   * __breakpoint()__ -> 
-   * __exec()__ -> 
-   * __isinstance()__ -> 
-   * __ord()__ -> 
-   * __bytearray()__ -> 
-   * __filter()__ -> 
-   * __issubclass()__ -> 
-   * __super()__ -> 
-   * __bytes()__ -> 
+   * __open()__ -> Podpięcie pliku
+   * __format()__ -> Formaty stringa
+   * __zip()__ -> Łączenie obiektów
+   * __map()__ -> Rzutowanie obiektów
+   * __any()__ -> Zwraca True, jeżeli któryś element w obiekcie jest prawdą
+   * __all()__ -> Zwraca True, jeżeli każy element w obiekcie jest prawdą
+   * __ord()__ -> Zwraca numer reprezentujący znak w tablicy UNICODE
+   * __chr()__ -> Zwraca znak numeru z tablicy UNICODE
+   * __help()__ -> System pomocy
+   * __type()__ -> Zwraca klase zmiennej
+   * __reversed()__ -> Zwraca odwróconą listę
+   * __eval()__ -> Jeżeli string w zmiennej jest poprawnym kodem pythona wykonuje go
    * __iter()__ -> 
-   * __callable()__ -> 
-   * __format()__ -> 
-   * __property()__ -> 
-   * __type()__ -> 
-   * __chr()__ -> 
-   * __frozenset()__ -> 
-   * __list()__ -> 
-   * __vars()__ -> 
-   * __classmethod()__ -> 
-   * __getattr()__ -> 
-   * __locals()__ -> 
-   * __repr()__ -> 
-   * __zip()__ -> 
-   * __compile()__ -> 
-   * __globals()__ -> 
-   * __map()__ -> 
-   * __reversed()__ -> 
-   * __import__()__ -> 
-   * __complex()__ ->
-   * __hasattr()__ -> 
-   
+   * __next()__ -> 
+   * __divmod()__ -> Zwraca krotke dzielnia i reszte z tego dzielenia 
+   * __enumerate()__ -> 
+   * __isinstance()__ -> Zwraca prawde jeżeli dany obiekt jest danego typu
+   * __filter()__ -> Zwraca iterator funkcji, która zwraca true/false. Jeżeli true filtruje obiekt zgodnie z wartościami z funkcji.
+   * __callable()__ -> Zwraca prawde jeżeli obiekt jest gotowy do wywołania
 
 <a name="a2"/>
 
