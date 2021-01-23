@@ -1,3 +1,5 @@
+<a name="main"/>
+
 <h1 align="center">  Zadania z arkuszy </h1>
 
 1. 2020 czerwiec
@@ -56,7 +58,7 @@
    
 
  
- # 2020 czerwiec
+ # 2020 czerwiec [⬆️](#main)
 W pliku pary.txt znajduje się 100 wierszy. Każdy wiersz zawiera parę danych składającą się z liczby całkowitej z przedziału od 3 do 100 i słowa (ciągu znaków) złożonego z małych liter alfabetu angielskiego o długości od 1 do 50 znaków. Liczba i słowo są oddzielone znakiem spacji. 
 
 Mocna hipoteza Goldbacha mówi, że każda parzysta liczba całkowita większa od 4 jest sumą  dwóch nieparzystych liczb pierwszych, np. liczba 20 jest równa sumie 3 + 17 lub sumie 7 + 13. Każdą liczbę parzystą z pliku pary.txt przedstaw w postaci sumy dwóch liczb pierwszych. Wypisz tę liczbę oraz dwa składniki sumy w kolejności niemalejącej. Jeżeli istnieje więcej rozwiązań (tak jak dla liczby 20) należy wypisać składniki sumy o największej różnicy. Wyniki podaj w oddzielnych wierszach, w kolejności zgodnej z kolejnością danych w pliku pary.txt. Liczby w każdym wierszu rozdziel znakiem spacji, np. dla liczby 20 należy wypisać 20 3 17. 
@@ -129,7 +131,7 @@ with open("Dane_PR2\pary.txt") as file:
 lista.sort()
 print(lista[0])
   ```
- # 2020 kwiecień
+ # 2020 kwiecień [⬆️](#main)
 Luką w ciągu liczbowym nazywamy bezwzględną wartość różnicy między dwoma kolejnymi elementami.
 Przykładowo – w czteroelementowym ciągu: 5, 2, 7, 10 są trzy luki:
    − luka pomiędzy pierwszym a drugim elementem wynosi 3;
@@ -227,7 +229,7 @@ for i in range(1,len(lista)):
 print(Counter(luki))
   ```
   
- # 2019 czerwiec
+ # 2019 czerwiec [⬆️](#main)
  
 <a name="2019czerwiec1"/>
    
@@ -289,7 +291,7 @@ with open("MIN-R2A1P-193_dane/pierwsze_przyklad.txt") as file:
 print(count)
  ```
  
-  # 2019 maj
+  # 2019 maj [⬆️](#main)
 W pliku liczby.txt zapisano 500 liczb całkowitych dodatnich po jednej w każdym wierszu. Każda liczba jest z zakresu od 1 do 100 000. 
 
 <a name="2019maj1"/>
@@ -365,7 +367,7 @@ with open("Dane_PR/liczby.txt") as file:
 '''
  ```
 
-# 2018 czerwiec
+# 2018 czerwiec [⬆️](#main)
 Pliki dane1.txt i dane2.txt zawierają po 1000 wierszy. W każdym wierszu tych plików zapisany jest uporządkowany niemalejąco ciąg dziesięciu liczb całkowitych o wartościach z przedziału 〈0,100〉 , oddzielonych spacjami. 
 
 <a name="e1"/>
@@ -421,7 +423,7 @@ with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2
         index += 1
  ```
 
-# 2018 maj , DO POPRAWY
+# 2018 maj , DO POPRAWY [⬆️](#main)
 
 W ramach projektu WEGA naukowcom udało się odczytać sygnały radiowe pochodzące z przestrzeni kosmicznej. Po wstępnej obróbce zapisali je do pliku sygnaly.txt. W pliku sygnaly.txt znajduje się 1000 wierszy. Każdy wiersz zawiera jedno niepuste słowo złożone z wielkich liter alfabetu angielskiego. Długość jednego słowa nie przekracza 100 znaków. 
 
@@ -494,7 +496,7 @@ except ValueError:
             print(i)
  ```
  
- # 2015 maj (nowa)
+ # 2015 maj (nowa) [⬆️](#main)
  
 W pliku liczby.txt znajduje się 1000 liczb naturalnych zapisanych binarnie. Każda liczba zapisana jest w osobnym wierszu.
 
