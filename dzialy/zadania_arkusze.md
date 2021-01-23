@@ -20,9 +20,9 @@
 
 3. 2019 maj
 
-   - [x] 4.1
-   - [x] 4.2
-   - [x] 4.3
+   - [x] [4.1](#2019maj1)
+   - [x] [4.2](#2019maj2)
+   - [x] [4.3](#2019maj3)
    
 4. 2018 czerwiec
 
@@ -137,9 +137,9 @@ Przykładowo – w czteroelementowym ciągu: 5, 2, 7, 10 są trzy luki:
    − luka pomiędzy trzecim a czwartym elementem wynosi 3.
 Największa luka w tym ciągu ma wartość 5. W pliku dane4.txt znajduje się ciąg złożony z 1 000 dodatnich liczb całkowitych nie większych od 2⋅10^9
 
-Podaj wartość największej luki oraz wartość najmniejszej luki pomiędzy elementami ciągu z pliku dane4.txt. 
-
 <a name="kwiecien1"/>
+   
+Podaj wartość największej luki oraz wartość najmniejszej luki pomiędzy elementami ciągu z pliku dane4.txt. 
    
   ```python
 lista = []
@@ -159,6 +159,8 @@ print(min(luki))
 print(max(luki))
   ```
   
+<a name="kwiecien2"/>
+
 Fragment ciągu nazywamy regularnym, jeśli wszystkie jego luki mają tę samą wartość. Przykładowo – w ciągu:
 4, 11, 4, 1, 4, 7, 11, 12, 13, 14, 7, 0, 3 
 
@@ -172,10 +174,8 @@ regularnymi są następujące fragmenty:
    − 0, 3 – luka między jego elementami wynosi 3.
    
 Znajdź najdłuższy fragment regularny w ciągu z pliku dane4.txt. Podaj jego długość oraz wartości (liczby) znajdujące się na początku i końcu tego fragmentu. W pliku z danymi jest jeden taki fragment. W powyższym przykładzie długość najdłuższego fragmentu regularnego jest równa 4. Takie fragmenty w przykładzie są dwa. Jeden zaczyna się od liczby 4 i kończy liczbą 7, a drugi zaczyna się od liczby 11 i kończy liczbą 14.
-  
- <a name="kwiecien2"/>
-   
-  ```python
+
+```python
 lista,luki,max_list = [],[],[]
 
 with open("dane/dane4.txt") as file:
@@ -199,6 +199,9 @@ print(max(max_list)+1)
 print("poczatek",lista[max_list.index(max(max_list))-max(max_list)])  
 print("koniec",lista[max_list.index(max(max_list))])
   ```
+
+ <a name="kwiecien3"/>
+ 
 Krotnością luki nazywamy liczbę jej wystąpień. Najczęstszą luką nazywamy lukę o największej krotności.
 Przykładowo – w ciągu:
 5, 2, 7, 10
@@ -207,8 +210,7 @@ luka 5 ma krotność 1, a luka 3 ma krotność 2 i wobec tego jest najczęstszą
 
 Podaj krotność najczęstszej luki oraz wartości wszystkich najczęstszych luk w ciągu z pliku dane4.txt.
 W przykładzie z zadania 4.2 (ciąg 4, 11, 4, 1, 4, 7, 11, 12, 13, 14, 7, 0, 3) krotność najczęstszej luki wynosi 4. Tę krotność mają luki 7 i 3.
- <a name="kwiecien3"/>
-   
+
   ```python
 from collections import Counter
 
@@ -286,15 +288,91 @@ with open("MIN-R2A1P-193_dane/pierwsze_przyklad.txt") as file:
             count+=1
 print(count)
  ```
-
-
- # 2015 maj
  
-<a name="bin1"/>
+  # 2019 maj
+W pliku liczby.txt zapisano 500 liczb całkowitych dodatnich po jednej w każdym wierszu. Każda liczba jest z zakresu od 1 do 100 000. 
+
+<a name="2019maj1"/>
+
+Podaj, ile z podanych liczb jest potęgami liczby 3 (czyli liczbami postaci 1 = 3^0, 3 = 3^1, 9 = 3^2 itd.). 
+
+ ```python
+ lista = []
+count = i = liczba = 0
+
+while liczba < 100000:
+    liczba = 3**i
+    lista.append(liczba)
+    i+=1
+
+with open("Dane_PR/liczby.txt") as file:
+    for line in file:
+        if int(line) in lista:
+            count +=1
+
+print(count)
+ ```
+ 
+ <a name="2019maj2"/>
+
+Silnią liczby naturalnej k większej od 0 nazywamy wartość iloczynu 1·2·…·k i oznaczamy przez k!.
+Przyjmujemy, że 0!=1. Zatem mamy:
+0! = 1,
+1! = 1,
+2! = 1·2 = 2,
+3! = 1·2·3 = 6,
+4! = 1·2·3·4 = 24 itd.
+Dowolną liczbę naturalną możemy rozbić na cyfry, a następnie policzyć sumę silni jej cyfr. Na przykład dla liczby 343 mamy 3! + 4! + 3! = 6 + 24 + 6 = 36. Podaj, w kolejności ich występowania w pliku liczby.txt, wszystkie liczby, które są równe sumie silni swoich cyfr. 
+
+ ```python
+import math
+wynik = 0
+with open("Dane_PR/liczby.txt") as file:
+    for line in file:
+        line = line.strip()
+        for char in line:
+            char = int(char)
+            wynik += math.factorial(char)
+        if wynik == int(line):
+            print(line)
+        wynik = 0
+ ```
+ 
+ <a name="2019maj3"/>
+
+W pliku liczby.txt znajdź najdłuższy ciąg liczb występujących kolejno po sobie i taki, że największy wspólny dzielnik ich wszystkich jest większy od 1 (innymi słowy: istnieje taka liczba całkowita większa od 1, która jest dzielnikiem każdej z tych liczb). Jako odpowiedź podaj wartość pierwszej liczby w takim ciągu, długość ciągu oraz największą liczbę całkowitą, która jest dzielnikiem każdej liczby w tym ciągu. W pliku z danymi jest tylko jeden taki ciąg o największej długości. 
+Uwaga: Możesz skorzystać z zależności NWD(a, b, c) = NWD(NWD(a, b), c). 
+
+ ```python
+def NWD(a,b):
+    if b > 0:
+        return NWD(b,(a%b))
+    else:
+        return a
+
+
+lista = [3, 7, 4, 6, 10, 2, 5]
+
+first = NWD(NWD(lista[0],lista[0]+1),lista[0]+2)
+
+for i in range(1,len(lista)):
+    if first == NWD(NWD(i,i+1),i+2):
+        print(first)
+    first = NWD(NWD(i,i+1),i+2)   
+'''
+with open("Dane_PR/liczby.txt") as file:
+    for line in file:
+'''
+ ```
+
+ # 2015 maj (nowa)
+ 
 W pliku liczby.txt znajduje się 1000 liczb naturalnych zapisanych binarnie. Każda liczba zapisana jest w osobnym wierszu.
 
+<a name="bin1"/>
 
- ## Podaj, ile liczb z pliku liczby.txt ma w swoim zapisie binarnym więcej zer niż jedynek.
+Podaj, ile liczb z pliku liczby.txt ma w swoim zapisie binarnym więcej zer niż jedynek.
+
  ```python
 zera = jedynki = wynik = 0
 
@@ -313,7 +391,8 @@ print(wynik)
  
  <a name="bin2"/>
  
- ## Podaj, ile liczb w pliku liczby.txt jest podzielnych przez 2 oraz ile liczb jest podzielnych przez 8. 
+ Podaj, ile liczb w pliku liczby.txt jest podzielnych przez 2 oraz ile liczb jest podzielnych przez 8. 
+ 
  ```python
 przezdwa = przezosiem = 0
 
@@ -331,7 +410,8 @@ print(przezdwa,"|",przezosiem)
 
  <a name="bin3"/>
  
- ## Znajdź najmniejszą i największą liczbę w pliku liczby.txt. Jako odpowiedź podaj numery wierszy, w których się one znajdują. 
+Znajdź najmniejszą i największą liczbę w pliku liczby.txt. Jako odpowiedź podaj numery wierszy, w których się one znajdują. 
+
  ```python
 lista = []
 
@@ -347,7 +427,8 @@ Pliki dane1.txt i dane2.txt zawierają po 1000 wierszy. W każdym wierszu tych p
 
 <a name="e1"/>
 
- ## Porównaj ciągi zapisane w odpowiadających sobie wierszach w plikach dane1.txt i dane2.txt. Podaj, w ilu wierszach zapisane są ciągi, których ostania liczba jest taka sama. 
+Porównaj ciągi zapisane w odpowiadających sobie wierszach w plikach dane1.txt i dane2.txt. Podaj, w ilu wierszach zapisane są ciągi, których ostania liczba jest taka sama. 
+
  ```python
 count = 0
 with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
@@ -360,7 +441,8 @@ print(count)
  
  <a name="e2"/>
 
- ## Podaj, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt) takich, że w jednym i drugim ciągu jest 5 liczb parzystych i 5 liczb nieparzystych. 
+Podaj, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt) takich, że w jednym i drugim ciągu jest 5 liczb parzystych i 5 liczb nieparzystych. 
+
  ```python
 count = parzyste = parzyste2 =0
 
@@ -382,7 +464,8 @@ print(count)
  
  <a name="e3"/>
 
- ## Policz, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt), które utworzone są z takich samych liczb. Liczba powtórzeń takich samych liczb w ciągach może być różna. Wypisz numery wierszy, w których takie pary ciągów się znajdują. 
+Policz, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt), które utworzone są z takich samych liczb. Liczba powtórzeń takich samych liczb w ciągach może być różna. Wypisz numery wierszy, w których takie pary ciągów się znajdują. 
+
  ```python
 index = 1
 with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
