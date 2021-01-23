@@ -32,9 +32,9 @@
 
 5. 2018 maj
 
-   - [x] 4.1
-   - [x] 4.2
-   - [x] 4.3
+   - [x] [4.1](#2018maj1)
+   - [x] [4.2](#2018maj2)
+   - [x] [4.3](#2018maj3)
    
 6. 2017 czerwiec
 
@@ -48,7 +48,7 @@
    - [x] 4.2
    - [x] 4.3
    
-8. 2015 maj
+8. 2015 maj (nowa)
 
    - [x] [4.1](#bin1)
    - [x] [4.2](#bin2)
@@ -365,6 +365,135 @@ with open("Dane_PR/liczby.txt") as file:
 '''
  ```
 
+# 2018 czerwiec
+Pliki dane1.txt i dane2.txt zawierają po 1000 wierszy. W każdym wierszu tych plików zapisany jest uporządkowany niemalejąco ciąg dziesięciu liczb całkowitych o wartościach z przedziału 〈0,100〉 , oddzielonych spacjami. 
+
+<a name="e1"/>
+
+Porównaj ciągi zapisane w odpowiadających sobie wierszach w plikach dane1.txt i dane2.txt. Podaj, w ilu wierszach zapisane są ciągi, których ostania liczba jest taka sama. 
+
+ ```python
+count = 0
+with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
+    for (a,b) in zip(dane1,dane2):
+        a,b = a.strip(),b.strip()
+        if a[-3:] == b[-3:]:
+            count +=1
+print(count)
+ ```
+ 
+ <a name="e2"/>
+
+Podaj, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt) takich, że w jednym i drugim ciągu jest 5 liczb parzystych i 5 liczb nieparzystych. 
+
+ ```python
+count = parzyste = parzyste2 =0
+
+with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
+    for (a,b) in zip(dane1,dane2):
+        a,b = a.strip().split(),b.strip().split()
+        for i,j in zip(a,b):
+            i,j = int(i),int(j)
+            if i % 2 == 0:
+                parzyste+=1
+            if j % 2 == 0:
+                parzyste2+=1
+        if parzyste == 5 and parzyste2 == 5:
+            count+=1
+        parzyste = parzyste2 = 0
+print(count)
+
+ ```
+ 
+ <a name="e3"/>
+
+Policz, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt), które utworzone są z takich samych liczb. Liczba powtórzeń takich samych liczb w ciągach może być różna. Wypisz numery wierszy, w których takie pary ciągów się znajdują. 
+
+ ```python
+index = 1
+with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
+    for (a,b) in zip(dane1,dane2):
+        a = list(set(a.strip().split()))
+        b = list(set(b.strip().split()))
+
+        if a == b:
+            print(index)
+        index += 1
+ ```
+
+# 2018 maj , DO POPRAWY
+
+W ramach projektu WEGA naukowcom udało się odczytać sygnały radiowe pochodzące z przestrzeni kosmicznej. Po wstępnej obróbce zapisali je do pliku sygnaly.txt. W pliku sygnaly.txt znajduje się 1000 wierszy. Każdy wiersz zawiera jedno niepuste słowo złożone z wielkich liter alfabetu angielskiego. Długość jednego słowa nie przekracza 100 znaków. 
+
+<a name="2018maj1"/>
+
+Naukowcy zauważyli, że po złączeniu dziesiątych liter co czterdziestego słowa (zaczynając od słowa czterdziestego) otrzymamy pewne przesłanie. Wypisz to przesłanie. Uwaga: Każde co czterdzieste słowo ma co najmniej 10 znaków. 
+
+ ```python
+wynik = ""
+lista = []
+lista2 = []
+
+with open("Dane_PR/przyklad.txt") as file:
+    for line in file:
+        lista.append(line.strip())
+
+for word in range(39,len(lista),40):
+    lista2.append(lista[word])
+
+for line in lista2:
+    wynik += line[9]
+print(wynik)
+ ```
+ 
+ <a name="2018maj2"/>
+ 
+Znajdź słowo, w którym występuje największa liczba różnych liter. Wypisz to słowo i liczbę występujących w nim różnych liter. Jeśli słów o największej liczbie różnych liter jest więcej niż jedno, wypisz pierwsze z nich pojawiające się w pliku z danymi. 
+
+
+  ```python
+from collections import Counter
+
+slownik = dict()
+
+with open("Dane_PR/przyklad.txt") as file:
+    for line in file:
+        slowo = line.strip()
+        line = Counter(list(line.strip()))
+        
+        for k in line:
+            if line[k] > 1:
+                line[k] = 1
+        slownik[slowo] = sum(line.values())
+
+print({k: v for k, v in sorted(slownik.items(), reverse=True, key = lambda item: item[1])})
+ ```
+ 
+W tym zadaniu rozważmy odległość liter w alfabecie – np. litery A i B są od siebie oddalone o 1, A i E o 4, F i D o 2, a każda litera od siebie samej jest oddalona o 0. Wypisz wszystkie słowa, w których każde dwie litery oddalone są od siebie w alfabecie co najwyżej o 10. Słowa wypisz w kolejności występowania w pliku sygnaly.txt, po jednym w wierszu. Na przykład CGECF jest takim słowem, ale ABEZA nie jest (odległość A – Z wynosi 25). 
+ 
+ <a name="2018maj3"/>
+ 
+  ```python
+lista,temp  = [],""
+
+with open("Dane_PR/przyklad.txt") as file:
+    for line in file:
+        line = list(line.strip())
+        for i, c in enumerate(line):
+            if abs(ord(c) - ord(line[i-1])) <= 10:
+                temp += c
+            else:
+                temp = ""
+        lista.append(temp)
+
+try:
+    for i in range(len(lista)):
+        lista.remove("")
+except ValueError:
+        for i in lista:
+            print(i)
+ ```
+ 
  # 2015 maj (nowa)
  
 W pliku liczby.txt znajduje się 1000 liczb naturalnych zapisanych binarnie. Każda liczba zapisana jest w osobnym wierszu.
@@ -422,58 +551,4 @@ with open("Dane_PR/liczby.txt") as file:
 print(lista.index(max(lista))+1,"|",lista.index(min(lista))+1)
  ```
 
- # 2018 czerwiec
-Pliki dane1.txt i dane2.txt zawierają po 1000 wierszy. W każdym wierszu tych plików zapisany jest uporządkowany niemalejąco ciąg dziesięciu liczb całkowitych o wartościach z przedziału 〈0,100〉 , oddzielonych spacjami. 
-
-<a name="e1"/>
-
-Porównaj ciągi zapisane w odpowiadających sobie wierszach w plikach dane1.txt i dane2.txt. Podaj, w ilu wierszach zapisane są ciągi, których ostania liczba jest taka sama. 
-
- ```python
-count = 0
-with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
-    for (a,b) in zip(dane1,dane2):
-        a,b = a.strip(),b.strip()
-        if a[-3:] == b[-3:]:
-            count +=1
-print(count)
- ```
  
- <a name="e2"/>
-
-Podaj, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt) takich, że w jednym i drugim ciągu jest 5 liczb parzystych i 5 liczb nieparzystych. 
-
- ```python
-count = parzyste = parzyste2 =0
-
-with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
-    for (a,b) in zip(dane1,dane2):
-        a,b = a.strip().split(),b.strip().split()
-        for i,j in zip(a,b):
-            i,j = int(i),int(j)
-            if i % 2 == 0:
-                parzyste+=1
-            if j % 2 == 0:
-                parzyste2+=1
-        if parzyste == 5 and parzyste2 == 5:
-            count+=1
-        parzyste = parzyste2 = 0
-print(count)
-
- ```
- 
- <a name="e3"/>
-
-Policz, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt), które utworzone są z takich samych liczb. Liczba powtórzeń takich samych liczb w ciągach może być różna. Wypisz numery wierszy, w których takie pary ciągów się znajdują. 
-
- ```python
-index = 1
-with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2:
-    for (a,b) in zip(dane1,dane2):
-        a = list(set(a.strip().split()))
-        b = list(set(b.strip().split()))
-
-        if a == b:
-            print(index)
-        index += 1
- ```
