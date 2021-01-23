@@ -17,18 +17,44 @@
    - [x] [4.1](#2019czerwiec1)
    - [x] [4.2](#2019czerwiec2)
    - [x] [4.3](#2019czerwiec3)
+
+3. 2019 maj
+
+   - [x] 4.1
+   - [x] 4.2
+   - [x] 4.3
    
-2. 2015 maj
+4. 2018 czerwiec
+
+   - [x] [4.1](#e1)
+   - [x] [4.2](#e2)
+   - [x] [4.3](#e3)
+
+5. 2018 maj
+
+   - [x] 4.1
+   - [x] 4.2
+   - [x] 4.3
+   
+6. 2017 czerwiec
+
+   - [x] 4.1
+   - [x] 4.2
+   - [x] 4.3
+   
+7. 2017 maju (nowa)
+
+   - [x] 4.1
+   - [x] 4.2
+   - [x] 4.3
+   
+8. 2015 maj
 
    - [x] [4.1](#bin1)
    - [x] [4.2](#bin2)
    - [x] [4.3](#bin3)
    
-3. 2018 czerwiec
 
-   - [x] [4.1](#e1)
-   - [x] [4.2](#e2)
-   - [x] [4.3](#e3)
  
  # 2020 czerwiec
 W pliku pary.txt znajduje się 100 wierszy. Każdy wiersz zawiera parę danych składającą się z liczby całkowitej z przedziału od 3 do 100 i słowa (ciągu znaków) złożonego z małych liter alfabetu angielskiego o długości od 1 do 50 znaków. Liczba i słowo są oddzielone znakiem spacji. 
