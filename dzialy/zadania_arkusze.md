@@ -544,6 +544,132 @@ except ValueError:
             print(i)
  ```
  
+<a name="2017czerwiec1"/>
+ 
+# 2017 Czerwiec [⬆️](#main)
+Plik punkty.txt zawiera 1000 wierszy, w których zapisane są po dwie liczby całkowite z przedziału [0, 10000], oddzielone pojedynczym odstępem. Para liczb w każdym wierszu odpowiada współrzędnym (x, y) jednego punktu w układzie kartezjańskim. W danych punkty się nie powtarzają. 
+
+ ### 4.1
+ 
+ Ile jest punktów, których obie współrzędne są liczbami pierwszymi? 
+ 
+```python
+import re
+
+def is_prime(x):
+    if x > 1:
+        for i in range(2,x):
+            if (x % i) == 0:
+                return False
+        return True
+    return False
+
+count = 0
+
+with open("MIN-DANE-2017/punkty.txt") as file:
+    for line in file:
+        line = re.split('\W+', line.strip())
+        if is_prime(int(line[0])) and is_prime(int(line[1])):
+            print(int(line[0]),int(line[1]))
+            count += 1
+print(count)
+```
+
+<a name="2017czerwiec2"/>
+
+ ### 4.2
+ 
+Dwie liczby są cyfropodobne, jeżeli do zapisania każdej z nich wykorzystujemy takie same cyfry dziesiętne. Podaj ile jest punktów, których współrzędne są cyfropodobne. 
+
+```python
+import re
+
+def is_anagram(x,y):
+    x = set(sorted(list(x)))
+    y = set(sorted(list(y)))
+    if x == y:
+        return True
+    return False
+
+count = 0
+
+with open("MIN-DANE-2017/punkty.txt") as file:
+    for line in file:
+        line = re.split('\W+', line.strip())
+        if is_anagram(line[0],line[1]):
+            print(line[0],line[1])
+            count += 1
+print(count)
+```
+
+<a name="2017czerwiec3"/>
+
+ ### 4.3
+ 
+Znajdź najbardziej oddalone od siebie punkty. Podaj współrzędne znalezionych punktów oraz odległość między nimi zaokrągloną do liczby całkowitej. Jest tylko jedna para takich punktów. 
+
+```python
+from operator import itemgetter
+import re, math
+
+lista = []
+odleglosci = []
+def odleglosc(x1,y1,x2,y2):
+    return (x1,y1),(x2,y2), int(math.sqrt((x1-x2)**2 + (y1-y2)**2))
+
+count = 0
+
+with open("MIN-DANE-2017/punkty.txt") as file:
+    for line in file:
+        line = re.split('\W+', line.strip())
+        lista.append(line)
+
+
+for i in range(len(lista)):
+    
+    x1 = int(lista[i][0])
+    y1 = int(lista[i][1])
+
+    for j in range(1,len(lista)):
+        odleglosci.append(odleglosc(x1,y1,int(lista[j][0]),int(lista[j][1])))
+
+odleglosci.sort(key=itemgetter(2))
+    
+print(odleglosci[-1])
+```
+
+<a name="2017czerwiec4"/>
+
+ ### 4.4
+Długość boku kwadratu K równa się 10000. Środek symetrii tego kwadratu znajduje się w początku układu współrzędnych XY, a jego boki są równoległe do osi układu. Podaj liczbę punktów, które leżą odpowiednio:
+
+   - wewnątrz kwadratu K (bez jego boków),
+   - na bokach kwadratu K,
+   - na zewnątrz kwadratu K (bez jego boków). 
+
+```python
+import re
+
+inside = 0
+na_boku = 0
+poza = 0
+
+with open("MIN-DANE-2017/punkty.txt") as file:
+    for line in file:
+        line = re.split('\W+', line.strip())
+        x = int(line[0])
+        y = int(line[1])
+        #print(x,y)
+        if x < 5000 and y < 5000:
+            inside += 1
+        elif (x == 5000 or x == -5000) or (y == 5000 or y == -5000):
+            na_boku += 1
+        elif (x > 5000 or x < -5000) or (y > 5000 or y < -5000):
+            poza +=1
+
+print(inside,na_boku,poza)
+```
+
  <a name="bin1"/>
  
  # 2015 maj (nowa) [⬆️](#main)
