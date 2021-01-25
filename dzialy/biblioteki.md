@@ -15,6 +15,9 @@
   * __re__
     * [funkcje](#refunc)
     * [Metacharacters](#meta)
+    * [Specjalne sekwencje](#special)
+    * [Zbiory](#sets)
+    * [Białe znaki](#biale)
   
 <a name="counter"/>
 
@@ -138,15 +141,60 @@ RegEx w pythonie.
 ### Metacharacters [⬆️](#main)
 
 | znak | opis | przykład |
-----------------------------
-| [] |	A set of characters | "[a-m]"	|
-| \ |	Signals a special sequence (can also be used to escape special characters) |	"\d"	 |
-| . |	Any character (except newline character)	| "he..o"	|
-| ^	| Starts with	| "^hello"	|
-| $	| Ends with	| "world$"	|
-| *	| Zero or more occurrences|	"aix*"|	
+| :--: | :--: | :--: |
+| [] |	Zbiór znaków | "[a-m]"	|
+| \ |	Sygnał specjalnej sekwencji |	"\d"	 |
+| . |	każdy znak oprócz końca linii	| "he..o"	|
+| ^	| Zaczyna się od	| "^hello"	|
+| $	| Kończy się na	| "world$"	|
+| *	| Zero or more occurrences |	"aix*"|	
 | +	| One or more occurrences	| "aix+"	|
-| {} |	Exactly the specified number of occurrences	| "al{2}"	|
-| "|"	| Either or	| "falls|stays"|
+| {} |	Wystąpnienia danego znaku	| "al{2}"	|
+| "|"	| to albo to	| "falls|stays"|
 
+<a name="special"/>
 
+### Specjalne sekwencje
+
+| znak |	opis | przykład |
+| :--: | :--: | :--: |
+| \A	| Zwraca dopasowanie, jeżeli ciąg jest na początku stringa	| "\AThe"	|
+| \b	| Zwraca dopasowanie, jeżeli ciąg jest na początku lub na końcu stringa (r - raw string) | r"\bain" r"ain\b"	|
+| \B	| Zwraca dopasowanie, jeżeli ciąg jest w stringu lecz nie na końcu ani początku. (r - raw string) |	r"\Bain" r"ain\B"	|
+| \d	| Zwraca dopasowanie liczb w ciągu	| "\d"	|
+| \D	| Zwraca dopasowanie, gdzie nie ma liczb |	"\D"	|
+| \s	| Zwraca dopasowanie białych znaków | "\s"	|
+| \S	| Zwraca dopasowanie, gdzie nie ma białych znaków	| "\S"	|
+| \w	| Zwraca dopasowanie, gdzie ciąg znaków zawiera litery alfabetu angielskiegu, liczby i podłogę	| "\w"	|
+| \W	| Zwraca	dopasowanie gdzie nie ma tego co up | "\W"	|
+| \Z	| Zwraca dopasowanie, jeżeli ciąg jest na końcu stringa	| "Spain\Z" |
+
+<a name="sets"/>
+
+### Zbiory
+
+| zbiór |	opis | 
+| :--: | :--: |
+| [arn]	| Zwraca dopasowanie gdzie jakis z elementów znajduje się w stringu	|
+| [a-n]	| Zwraca dopasowanie wszystkiego co ma małe litery od a do n	|
+| [^arn]	| Wszystko bez wymienionych |
+| [0123]	| Zwraca dopasowanie wymienionych liczb	|
+| [0-9]	| Zwraca dopasowanie liczb od 0 do 9	|
+| [0-5][0-9]	| zwraca wszystko od 00 do 59	|
+| [a-zA-Z]	| Zwraca wszsytko co w alfabecie czy duże czy małe	|
+| [+]	| Zwraca szukane znaki tutaj + |
+
+<a name="biale"/>
+
+### Białe znaki
+| znak |	opis | 
+| :--: | :--: |
+| \'	| Pojedyńczy cytat	|
+| \\	| Backslash	|
+| \n	| enter	|
+| \r	| Carriage Return	|
+| \t	| tabulator	|
+| \b	| Backspace	|
+| \f	| Form Feed	|
+| \ooo	| liczba ósemkowa	|
+| \xhh	| liczba szesnastkowa |
