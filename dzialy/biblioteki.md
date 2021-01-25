@@ -131,10 +131,10 @@ RegEx w pythonie.
 
 ### Funkcje [⬆️](#main)
 
-- __findall() -> Returns a list containing all matches
-- __search() -> Returns a Match object if there is a match anywhere in the string
-- __split() -> Returns a list where the string has been split at each match
-- __sub() -> Replaces one or many matches with a string
+- __findall()__ -> Returns a list containing all matches
+- __search()__ -> Returns a Match object if there is a match anywhere in the string
+- __split()__ -> Returns a list where the string has been split at each match
+- __sub()__ -> Replaces one or many matches with a string
 
 <a name="meta"/>
 
