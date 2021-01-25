@@ -1,11 +1,11 @@
 # Przydatne moduły
 
   * __Collections__
-    * [Counter()](counter)
+    * [Counter()](#counter)
       * .elements()
       * .most_common()
       * .subtract()
-    * [OrderedDict()](order)
+    * [OrderedDict()](#order)
   * __math__
   * __random__
   * __statistics__
