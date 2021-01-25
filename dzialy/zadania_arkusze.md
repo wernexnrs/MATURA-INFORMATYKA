@@ -43,6 +43,7 @@
    - [x] [4.1](#2017czerwiec1)
    - [x] [4.2](#2017czerwiec2)
    - [x] [4.3](#2017czerwiec3)
+   - [x] [4.4](#2017czerwiec4)
    
 7. 2017 maj (nowa) - [LINK](https://arkusze.pl/matura-informatyka-2017-maj-poziom-rozszerzony/)
 
