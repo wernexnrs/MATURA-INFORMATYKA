@@ -21,12 +21,12 @@
    - [ ] [szybkie podnoszenie do potęgi,](#fast_power) do przekminienia
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
 4. __algorytmy na tekstach__
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-   - [x] [porządkowanie alfabetyczne,](#alfa) do przekminienia
+   - [ ] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) Muszę napisać własną funkcje
+   - [ ] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) Muszę napisać własną funkcje
+   - [ ] [porządkowanie alfabetyczne,](#alfa) Muszę napisać własną funkcje
       * Większości obiektów
       * Słowników    
-   - [x] [wyszukiwanie wzorca w tekście,](#pattern)   
+   - [ ] [wyszukiwanie wzorca w tekście,](#pattern) Muszę napisać własną funkcje
 5. __algorytmy kompresji i szyfrowania__
    * kody znaków o zmiennej długości,
       * [ ] [Kompresja danych](#len) #nie potrafie
