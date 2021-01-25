@@ -18,12 +18,12 @@
    - [x] [szybki,](#fast)
    - [x] [kubełkowy,](#box)  
 3. __algorytmy numeryczne__
-   - [x] [szybkie podnoszenie do potęgi,](#fast_power) 
+   - [ ] [szybkie podnoszenie do potęgi,](#fast_power) do przekminienia
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
 4. __algorytmy na tekstach__
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-   - [x] [porządkowanie alfabetyczne,](#alfa) 
+   - [x] [porządkowanie alfabetyczne,](#alfa) do przekminienia
       * Większości obiektów
       * Słowników    
    - [x] [wyszukiwanie wzorca w tekście,](#pattern)   
