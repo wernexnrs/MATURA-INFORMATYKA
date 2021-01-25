@@ -56,12 +56,13 @@
    - [x] [4.2](#bin2)
    - [x] [4.3](#bin3)
    
-
  
+<a name="czerwiec1"/>
+  
  # 2020 czerwiec [⬆️](#main)
 W pliku pary.txt znajduje się 100 wierszy. Każdy wiersz zawiera parę danych składającą się z liczby całkowitej z przedziału od 3 do 100 i słowa (ciągu znaków) złożonego z małych liter alfabetu angielskiego o długości od 1 do 50 znaków. Liczba i słowo są oddzielone znakiem spacji. 
 
- <a name="czerwiec1"/>
+### 4.1
 
 Mocna hipoteza Goldbacha mówi, że każda parzysta liczba całkowita większa od 4 jest sumą  dwóch nieparzystych liczb pierwszych, np. liczba 20 jest równa sumie 3 + 17 lub sumie 7 + 13. Każdą liczbę parzystą z pliku pary.txt przedstaw w postaci sumy dwóch liczb pierwszych. Wypisz tę liczbę oraz dwa składniki sumy w kolejności niemalejącej. Jeżeli istnieje więcej rozwiązań (tak jak dla liczby 20) należy wypisać składniki sumy o największej różnicy. Wyniki podaj w oddzielnych wierszach, w kolejności zgodnej z kolejnością danych w pliku pary.txt. Liczby w każdym wierszu rozdziel znakiem spacji, np. dla liczby 20 należy wypisać 20 3 17. 
 
@@ -87,7 +88,9 @@ with open("Dane_PR2\pary.txt") as file:
   ```
   
 <a name="czerwiec2"/> 
-  
+
+### 4.2
+
 Dla każdego słowa z pliku pary.txt znajdź długość najdłuższego spójnego fragmentu tego słowa złożonego z identycznych liter. Wypisz znalezione fragmenty słów i ich długości oddzielone spacją, po jednej parze w każdym wierszu. Jeżeli istnieją dwa fragmenty o takiej samej największej długości, podaj pierwszy z nich. Wyniki podaj w kolejności zgodnej z kolejnością danych w pliku pary.txt. 
 
   ```python
@@ -108,6 +111,8 @@ Dla każdego słowa z pliku pary.txt znajdź długość najdłuższego spójnego
   ```
   
 <a name="czerwiec3"/>
+
+### 4.3
 
 Para (liczba1, słowo1) jest mniejsza od pary (liczba2, słowo2), gdy:
 – liczba1 < liczba2,
@@ -131,6 +136,9 @@ with open("Dane_PR2\pary.txt") as file:
 lista.sort()
 print(lista[0])
   ```
+  
+ <a name="kwiecien1"/>
+ 
  # 2020 kwiecień [⬆️](#main)
 Luką w ciągu liczbowym nazywamy bezwzględną wartość różnicy między dwoma kolejnymi elementami.
 Przykładowo – w czteroelementowym ciągu: 5, 2, 7, 10 są trzy luki:
@@ -139,8 +147,8 @@ Przykładowo – w czteroelementowym ciągu: 5, 2, 7, 10 są trzy luki:
    − luka pomiędzy trzecim a czwartym elementem wynosi 3.
 Największa luka w tym ciągu ma wartość 5. W pliku dane4.txt znajduje się ciąg złożony z 1 000 dodatnich liczb całkowitych nie większych od 2⋅10^9
 
-<a name="kwiecien1"/>
-   
+### 4.1
+
 Podaj wartość największej luki oraz wartość najmniejszej luki pomiędzy elementami ciągu z pliku dane4.txt. 
    
   ```python
@@ -162,6 +170,8 @@ print(max(luki))
   ```
   
 <a name="kwiecien2"/>
+
+### 4.2
 
 Fragment ciągu nazywamy regularnym, jeśli wszystkie jego luki mają tę samą wartość. Przykładowo – w ciągu:
 4, 11, 4, 1, 4, 7, 11, 12, 13, 14, 7, 0, 3 
@@ -204,6 +214,8 @@ print("koniec",lista[max_list.index(max(max_list))])
 
  <a name="kwiecien3"/>
  
+### 4.3
+
 Krotnością luki nazywamy liczbę jej wystąpień. Najczęstszą luką nazywamy lukę o największej krotności.
 Przykładowo – w ciągu:
 5, 2, 7, 10
@@ -228,10 +240,15 @@ for i in range(1,len(lista)):
 
 print(Counter(luki))
   ```
-  
- # 2019 czerwiec [⬆️](#main)
- 
+
 <a name="2019czerwiec1"/>
+
+ # 2019 czerwiec [⬆️](#main)
+Liczby pierwsze to liczby naturalne większe od 1, które mają dokładnie dwa dzielniki: jedynkę i samą siebie. Dane są dwa pliki: liczby.txt i pierwsze.txt. Plik liczby.txt zawiera 300 wierszy. W każdym wierszu tego pliku znajduje się jedna liczba całkowita dodatnia z zakresu od 1 do 100 000. Plik pierwsze.txt zawiera 200 wierszy. W każdym wierszu tego pliku znajduje się jedna liczba pierwsza z zakresu od 10 do 1 300 000.
+
+ ### 4.1
+
+Podaj, (zachowując ich kolejność) te liczby z pliku liczby.txt, które są liczbami pierwszymi z przedziału 〈100; 5000〉. Odpowiedź zapisz w pliku wyniki4_1.txt. 
    
  ```python
 def is_prime(x):
@@ -250,7 +267,11 @@ with open("MIN-R2A1P-193_dane/liczby.txt") as file:
  ```
  
  <a name="2019czerwiec2"/>
-   
+ 
+### 4.2
+
+Podaj, w kolejności ich występowania w pliku pierwsze.txt, wszystkie te liczby, które czytane od prawej do lewej również są liczbami pierwszymi. Odpowiedź zapisz w pliku wyniki4_2.txt. 
+
  ```python
 def is_prime(x):
     if x > 2:
@@ -269,7 +290,17 @@ with open("MIN-R2A1P-193_dane/pierwsze.txt") as file:
  ```
  
  <a name="2019czerwiec3"/>
-   
+ 
+### 4.3
+
+Niech w(N) oznacza sumę cyfr liczby N. Dla danej liczby N tworzymy ciąg, w którym N<sub>1</sub> = w(N), a każdy kolejny element jest sumą cyfr występujących w poprzednim elemencie. Ciąg kończy się, gdy jego wyraz jest liczbą jednocyfrową. Tę liczbę nazywamy wagą liczby N. 
+
+Przykład 1.
+Niech N = 1109
+N1 = 1 + 1 + 0 + 9 = 11
+N2 = 1 + 1 = 2
+Zatem waga liczby  N = 1109 jest równa 2. 
+
  ```python
 def waga(n=''):
     wynik = 0
@@ -291,10 +322,12 @@ with open("MIN-R2A1P-193_dane/pierwsze_przyklad.txt") as file:
 print(count)
  ```
  
-  # 2019 maj [⬆️](#main)
-W pliku liczby.txt zapisano 500 liczb całkowitych dodatnich po jednej w każdym wierszu. Każda liczba jest z zakresu od 1 do 100 000. 
-
 <a name="2019maj1"/>
+
+# 2019 maj [⬆️](#main)
+W pliku liczby.txt zapisano 500 liczb całkowitych dodatnich po jednej w każdym wierszu. Każda liczba jest z zakresu od 1 do 100 000.
+
+### 4.1
 
 Podaj, ile z podanych liczb jest potęgami liczby 3 (czyli liczbami postaci 1 = 3^0, 3 = 3^1, 9 = 3^2 itd.). 
 
@@ -316,6 +349,8 @@ print(count)
  ```
  
  <a name="2019maj2"/>
+ 
+### 4.2
 
 Silnią liczby naturalnej k większej od 0 nazywamy wartość iloczynu 1·2·…·k i oznaczamy przez k!.
 Przyjmujemy, że 0!=1. Zatem mamy:
@@ -341,6 +376,8 @@ with open("Dane_PR/liczby.txt") as file:
  ```
  
  <a name="2019maj3"/>
+ 
+### 4.3
 
 W pliku liczby.txt znajdź najdłuższy ciąg liczb występujących kolejno po sobie i taki, że największy wspólny dzielnik ich wszystkich jest większy od 1 (innymi słowy: istnieje taka liczba całkowita większa od 1, która jest dzielnikiem każdej z tych liczb). Jako odpowiedź podaj wartość pierwszej liczby w takim ciągu, długość ciągu oraz największą liczbę całkowitą, która jest dzielnikiem każdej liczby w tym ciągu. W pliku z danymi jest tylko jeden taki ciąg o największej długości. 
 Uwaga: Możesz skorzystać z zależności NWD(a, b, c) = NWD(NWD(a, b), c). 
@@ -367,10 +404,12 @@ with open("Dane_PR/liczby.txt") as file:
 '''
  ```
 
+<a name="e1"/>
+
 # 2018 czerwiec [⬆️](#main)
 Pliki dane1.txt i dane2.txt zawierają po 1000 wierszy. W każdym wierszu tych plików zapisany jest uporządkowany niemalejąco ciąg dziesięciu liczb całkowitych o wartościach z przedziału 〈0,100〉 , oddzielonych spacjami. 
 
-<a name="e1"/>
+### 4.1
 
 Porównaj ciągi zapisane w odpowiadających sobie wierszach w plikach dane1.txt i dane2.txt. Podaj, w ilu wierszach zapisane są ciągi, których ostania liczba jest taka sama. 
 
@@ -384,7 +423,9 @@ with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2
 print(count)
  ```
  
- <a name="e2"/>
+<a name="e2"/>
+ 
+### 4.2
 
 Podaj, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt) takich, że w jednym i drugim ciągu jest 5 liczb parzystych i 5 liczb nieparzystych. 
 
@@ -407,7 +448,9 @@ print(count)
 
  ```
  
- <a name="e3"/>
+<a name="e3"/>
+
+### 4.3
 
 Policz, ile jest par ciągów (w odpowiadających sobie wierszach plików dane1.txt i dane2.txt), które utworzone są z takich samych liczb. Liczba powtórzeń takich samych liczb w ciągach może być różna. Wypisz numery wierszy, w których takie pary ciągów się znajdują. 
 
@@ -422,12 +465,14 @@ with open("NM_DANE_PR/dane1.txt") as dane1,open("NM_DANE_PR/dane2.txt") as dane2
             print(index)
         index += 1
  ```
+ 
+<a name="2018maj1"/>
 
 # 2018 maj , DO POPRAWY [⬆️](#main)
 
 W ramach projektu WEGA naukowcom udało się odczytać sygnały radiowe pochodzące z przestrzeni kosmicznej. Po wstępnej obróbce zapisali je do pliku sygnaly.txt. W pliku sygnaly.txt znajduje się 1000 wierszy. Każdy wiersz zawiera jedno niepuste słowo złożone z wielkich liter alfabetu angielskiego. Długość jednego słowa nie przekracza 100 znaków. 
 
-<a name="2018maj1"/>
+### 4.1
 
 Naukowcy zauważyli, że po złączeniu dziesiątych liter co czterdziestego słowa (zaczynając od słowa czterdziestego) otrzymamy pewne przesłanie. Wypisz to przesłanie. Uwaga: Każde co czterdzieste słowo ma co najmniej 10 znaków. 
 
@@ -448,10 +493,11 @@ for line in lista2:
 print(wynik)
  ```
  
- <a name="2018maj2"/>
- 
-Znajdź słowo, w którym występuje największa liczba różnych liter. Wypisz to słowo i liczbę występujących w nim różnych liter. Jeśli słów o największej liczbie różnych liter jest więcej niż jedno, wypisz pierwsze z nich pojawiające się w pliku z danymi. 
+<a name="2018maj2"/>
 
+### 4.2
+
+Znajdź słowo, w którym występuje największa liczba różnych liter. Wypisz to słowo i liczbę występujących w nim różnych liter. Jeśli słów o największej liczbie różnych liter jest więcej niż jedno, wypisz pierwsze z nich pojawiające się w pliku z danymi. 
 
   ```python
 from collections import Counter
@@ -471,9 +517,11 @@ with open("Dane_PR/przyklad.txt") as file:
 print({k: v for k, v in sorted(slownik.items(), reverse=True, key = lambda item: item[1])})
  ```
  
-W tym zadaniu rozważmy odległość liter w alfabecie – np. litery A i B są od siebie oddalone o 1, A i E o 4, F i D o 2, a każda litera od siebie samej jest oddalona o 0. Wypisz wszystkie słowa, w których każde dwie litery oddalone są od siebie w alfabecie co najwyżej o 10. Słowa wypisz w kolejności występowania w pliku sygnaly.txt, po jednym w wierszu. Na przykład CGECF jest takim słowem, ale ABEZA nie jest (odległość A – Z wynosi 25). 
- 
  <a name="2018maj3"/>
+ 
+ ### 4.3
+ 
+W tym zadaniu rozważmy odległość liter w alfabecie – np. litery A i B są od siebie oddalone o 1, A i E o 4, F i D o 2, a każda litera od siebie samej jest oddalona o 0. Wypisz wszystkie słowa, w których każde dwie litery oddalone są od siebie w alfabecie co najwyżej o 10. Słowa wypisz w kolejności występowania w pliku sygnaly.txt, po jednym w wierszu. Na przykład CGECF jest takim słowem, ale ABEZA nie jest (odległość A – Z wynosi 25). 
  
   ```python
 lista,temp  = [],""
@@ -496,12 +544,14 @@ except ValueError:
             print(i)
  ```
  
+ <a name="bin1"/>
+ 
  # 2015 maj (nowa) [⬆️](#main)
  
 W pliku liczby.txt znajduje się 1000 liczb naturalnych zapisanych binarnie. Każda liczba zapisana jest w osobnym wierszu.
-
-<a name="bin1"/>
-
+ 
+### 4.1
+ 
 Podaj, ile liczb z pliku liczby.txt ma w swoim zapisie binarnym więcej zer niż jedynek.
 
  ```python
@@ -522,6 +572,8 @@ print(wynik)
  
  <a name="bin2"/>
  
+ ### 4.2
+ 
  Podaj, ile liczb w pliku liczby.txt jest podzielnych przez 2 oraz ile liczb jest podzielnych przez 8. 
  
  ```python
@@ -541,6 +593,8 @@ print(przezdwa,"|",przezosiem)
 
  <a name="bin3"/>
  
+ ### 4.3
+ 
 Znajdź najmniejszą i największą liczbę w pliku liczby.txt. Jako odpowiedź podaj numery wierszy, w których się one znajdują. 
 
  ```python
@@ -552,5 +606,3 @@ with open("Dane_PR/liczby.txt") as file:
         
 print(lista.index(max(lista))+1,"|",lista.index(min(lista))+1)
  ```
-
- 
