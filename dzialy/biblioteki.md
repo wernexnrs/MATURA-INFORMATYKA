@@ -1,23 +1,28 @@
-# Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać.
+## Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać. Bardzo proszę o nadsyłanie innych przydatnych modułów do nauki, z chęcia je przyswoje.
 
 # Przydatne moduły
 
-  * __collections__
+  * __collections__ - słowniki
     * [Counter()](#counter)
       * .elements()
       * .most_common()
       * .subtract()
     * [OrderedDict()](#order)
-  * __math__
+  * __math__ - matematyka
     * [funkcje](#funkcje)
-  * __statistics__
+  * __statistics__ - statystyka
     * [funkcje](#statfunc)
-  * __re__
+  * __re__ - RegEX
     * [funkcje](#refunc)
     * [Metacharacters](#meta)
     * [Specjalne sekwencje](#special)
     * [Zbiory](#sets)
     * [Białe znaki](#biale)
+  * __fractions__ - ułamki
+  * __itertools__
+  * __functools__
+  * __enum__
+  
   
 <a name="counter"/>
 
