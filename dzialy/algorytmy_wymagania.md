@@ -7,7 +7,7 @@
    - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    - [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
    - [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
-   - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa, + NWW](#nwd) 
+   - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW,](#nwd) 
    - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
    - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)    
 2. __algorytmy wyszukiwania i porządkowania (sortowania):__ 
@@ -129,7 +129,7 @@ def prime_factors(n):
 
 <a name="nwd"/>
 
-## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa [⬆️](#main)
+## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW [⬆️](#main)
 ```python
 #recursive one-liner version
 
