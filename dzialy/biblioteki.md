@@ -10,14 +10,15 @@
     * [OrderedDict()](#order)
   * __math__
     * [funkcje](#funkcje)
-  * __random__
   * __statistics__
+    * [funkcje](#statfunc)
   * __re__
+    * [funkcje](#refunc)
+    * [Metacharacters](#meta)
   
+<a name="counter"/>
 
 ## collections
-
-<a name="counter"/>
 
 ### Counter() [⬆️](#main)
 ```python
@@ -73,9 +74,9 @@ e E
 '''
 ```
 
-## math
-
 <a name="funkcje"/>
+
+## math
 
 ### Funkcje [⬆️](#main)
 
@@ -91,15 +92,61 @@ e E
 - __hypot(x, y)__ -> Zwraca wartość sqrt(x*x + y*y). Jest to długość przeciwprostokątnej w trójkącie prostokątnym o przyprostokątnych, których długości są równe x oraz y, lub odległość punktu (x, y) od środka układu współrzędnych.
 - __log(x,y)__ -> Zwraca logarytm o podstawie y argumentu x.
 - __log10(x)__ -> Zwraca logarytm o podstawie 10 argumentu x.
-- __log2(x)__  -> Zwraca logarytm o podstawie 2 argumentu x.
+- __log2(x)__ -> Zwraca logarytm o podstawie 2 argumentu x.
 - __pow(x, y)__ -> Zwraca wartość x**y.
 - __sqrt(x)__ -> Zwraca pierwiastek kwadratowy argumentu x.
 - __dist()__ -> Zwraca dystans między dwoma punktami
 - __factorial()__  -> zwraca silnie
-- __fsum()__  -> zwraca sume elementów obiektu
-- __gcd()__  -> zwraca największy wspólny dzielnik
-- __e__  -> zwraca wartość liczby Eulera (2.7182...)
-- __pi__  -> zwraca wartość PI (3.1415...)
+- __fsum()__ -> zwraca sume elementów obiektu
+- __prod()__ -> zwraca iloczyn elementów obiektu
+- __gcd()__ -> zwraca największy wspólny dzielnik
+- __e__ -> zwraca wartość liczby Eulera (2.7182...)
+- __pi__ -> zwraca wartość PI (3.1415...)
 
+
+<a name="statfunc"/>
+
+## statistics
+
+### Funkcje [⬆️](#main)
+
+- __mean()__ -> Średnia arytmetyczna
+- __median()__ -> Mediana
+- __median_high()__ -> w zbiorze parzystym zwraca większa wartość środkową
+- __median_low()__ -> w zbiorze parzystym zwraca mniejsza wartość środkową
+- __mode()__ -> moda/dominanta
+- __pstdev()__ -> Calculates the standard deviation from an entire population
+- __stdev()__ -> Calculates the standard deviation from a sample of data
+- __pvariance()__ -> Calculates the variance of an entire population
+- __variance()__ -> Calculates the variance from a sample of data
+
+<a name="refunc"/>
+
+## re
+
+RegEx w pythonie.
+
+### Funkcje [⬆️](#main)
+
+- __findall() -> Returns a list containing all matches
+- __search() -> Returns a Match object if there is a match anywhere in the string
+- __split() -> Returns a list where the string has been split at each match
+- __sub() -> Replaces one or many matches with a string
+
+<a name="meta"/>
+
+### Metacharacters [⬆️](#main)
+
+| znak | opis  | przykład |
+-------
+| [] |	A set of characters | "[a-m]"	|
+| \ |	Signals a special sequence (can also be used to escape special characters) |	"\d"	 |
+| . |	Any character (except newline character)	|"he..o"	|
+| ^	| Starts with	| "^hello"	|
+| $	| Ends with	| "world$"	|
+| *	| Zero or more occurrences|	"aix*"|	
+| +	| One or more occurrences	|"aix+"	|
+| {} |	Exactly the specified number of occurrences	|"al{2}"	|
+| |	|Either or	|"falls|stays"|
 
 
