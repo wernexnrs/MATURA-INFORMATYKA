@@ -375,26 +375,16 @@ print(bucketSort(x))
 <a name="fast_power"/>
 
 ## Szybkie podnoszenie do potęgi [⬆️](#main)
-```python
-#fast_power(number,power)
 
-def fast_power(x,n):
-    if n == 0:
-        return 1
-    elif n % 2 != 0:
-        return x * x ** (n-1)
-    else:
-        a = x ** (n/2)
-    return a**2
+to musze przemyśleć 
+
+```python
+#Iterated version
+
 ```
 
 ```python
-def fast_power2(x,n):
-    if n == 0:
-        return 1
-    elif n % 2 != 0:
-        return x * ( x ** ( (n-1) / 2 ) ) ** 2
-    return ( x ** (n / 2) ) ** 2
+#Recursive version
 ```
 
 <a name="bisekcja"/>
@@ -418,8 +408,6 @@ def bisection(a,b,precyzja = 0.0001):
         else: 
             a = c      
     return c
-      
-print("{:.3f}".format( bisection(-100, 100) ))
 ```
 
 <a name="palindrom"/>
