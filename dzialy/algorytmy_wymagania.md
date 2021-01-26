@@ -18,7 +18,7 @@
    - [x] [szybki,](#fast)
    - [x] [kubełkowy,](#box)  
 3. __algorytmy numeryczne__
-   - [ ] [szybkie podnoszenie do potęgi,](#fast_power) do przekminienia
+   - [x] [szybkie podnoszenie do potęgi,](#fast_power)
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
 4. __algorytmy na tekstach__
    - [ ] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) Muszę napisać własną funkcje
@@ -376,15 +376,17 @@ print(bucketSort(x))
 
 ## Szybkie podnoszenie do potęgi [⬆️](#main)
 
-to musze przemyśleć 
-
 ```python
 #Iterated version
 
-```
-
-```python
-#Recursive version
+def fast_power(base, power):
+    result,mod = 1,1000000007
+    while power > 0:
+        if power % 2 == 1:
+            result = (result * base) % mod
+        power //= 2
+        base = (base * base) % mod
+    return result
 ```
 
 <a name="bisekcja"/>
@@ -414,9 +416,23 @@ def bisection(a,b,precyzja = 0.0001):
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
 ```python
+#With list and slices
+
 def is_palindrom(string):
     lista = list(string)
     if lista == lista[::-1]:
+        return True
+    return False
+```
+
+```python
+#With 2 strings
+
+def is_palindrom(string):
+    wynik = ""
+    for i in string[::-1]:
+        wynik += i
+    if wynik == string:
         return True
     return False
 ```
@@ -425,6 +441,8 @@ def is_palindrom(string):
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
 ```python
+#With sorting
+
 def is_anagram(string,string2):
     if sorted(string) == sorted(string2):
         return True
@@ -446,7 +464,7 @@ def sort(lista):
 #Po wartościach
 
 def sort_dict_by_value(x):
-    return {k: v for k, v in sorted(x.items(), key = lambda item: item[1])}
+    return dict(sorted(x.items(), key=lambda item: item[1]))
 ```
 
 ```python
@@ -455,15 +473,25 @@ def sort_dict_by_value(x):
 from collections import OrderedDict
 
 def sort_dict_by_key(x):
-   return OrderedDict(sorted(x.items())) # to jest bez sensu powyzej pythona 3.7 sa inne metody ide spac zmienei jutro
+   return OrderedDict(sorted(x.items()))
 ```
 
+```python
+#Po kluczach
+
+def sort_dict_by_key(x):
+    return dict(sorted(x.items(), key=lambda item: item[0]))
+```
 <a name="pattern"/>
 
 ## Wyszukiwanie wzorca w tekście [⬆️](#main)
 ```python
 def is_pattern(pattern,word):
     return pattern in word
+```
+
+```python
+do napisania
 ```
 
 <a name="len"/>
@@ -494,7 +522,7 @@ Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powo
 
 ## Alfabet Morse’a [⬆️](#main)
 ```python
-Nie wiem
+Do napisania
 ```
 
 <a name="cezar"/>
