@@ -21,9 +21,9 @@
    - [x] [szybkie podnoszenie do potęgi,](#fast_power)
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
 4. __algorytmy na tekstach__
-   - [ ] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) Muszę napisać własną funkcje
-   - [ ] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) Muszę napisać własną funkcje
-   - [ ] [porządkowanie alfabetyczne,](#alfa) Muszę napisać własną funkcje
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) Muszę napisać własną funkcje
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) Muszę napisać własną funkcje
+   - [x] [porządkowanie alfabetyczne,](#alfa) Muszę napisać własną funkcje
       * Większości obiektów
       * Słowników    
    - [ ] [wyszukiwanie wzorca w tekście,](#pattern) Muszę napisać własną funkcje
