@@ -71,7 +71,9 @@ Para (liczba1, słowo1) jest mniejsza od pary (liczba2, słowo2), gdy:
 
 albo
 
- – liczba1 = liczba2 oraz słowo1 jest leksykograficznie (w porządku alfabetycznym) mniejsze od słowo2.
+ – liczba1 = liczba2 
+ 
+oraz słowo1 jest leksykograficznie (w porządku alfabetycznym) mniejsze od słowo2.
 
 Przykład:
 
