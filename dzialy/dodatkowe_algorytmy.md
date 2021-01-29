@@ -20,7 +20,7 @@
 ## Czy liczba jest parzysta [⬆️](#main)
 ```python
 def is_even(x):
-   if x%2 == 0:
+   if x % 2 == 0:
       return True
    return False
 ```
