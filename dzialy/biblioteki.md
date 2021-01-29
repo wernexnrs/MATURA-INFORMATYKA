@@ -20,6 +20,7 @@
     * [Białe znaki](#biale)
   * __fractions__ - ułamki
   * __itertools__
+  * __operator__
   * __functools__
   * __enum__
   
