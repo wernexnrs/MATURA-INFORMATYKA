@@ -15,6 +15,8 @@
   - [x] [Średnia ważona](#waz) 
   - [x] [Średnia geometryczna](#geo)
   - [x] [Wariancja i odchylenie standardowe](#odchylenie) 
+  - [x] [Potęgowanie](#power) 
+  
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
@@ -228,4 +230,8 @@ def odchylenie(lista):
 ### Ze wzoru:
 ![equation](https://quicklatex.com/cache3/6b/ql_dbc23eb476667943870c8c8fe0e3af6b_l3.png)
  
-<a name="a4"/>
+<a name="power"/>
+
+```python
+
+```
