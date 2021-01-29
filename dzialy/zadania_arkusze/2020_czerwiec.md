@@ -1,11 +1,64 @@
  <a name="main"/> 
  
  <h1 align="center">2020 czerwiec</h1>
-
+ 
+  - [1.2](#1.2)
+  - [1.3](#1.3)
   - [4.1](#4.1)
   - [4.2](#4.2)
   - [4.3](#4.3)
-  
+
+<a name="1.2"/> 
+
+## 1.2 [⬆️](#main)
+
+Niech n będzie dodatnią liczbą całkowitą, a A[1..n] i B[1..n] będą n-elementowymi tablicami liczb całkowitych.Dla nieujemnej liczby całkowitej k, gdzie k < n, powiemy, że tablice A i B są k-podobne, gdy
+
+A[1..k] = B[n-k+1..n] oraz A[k+1..n] = B[1..n-k]
+
+Liczbę k nazywamy świadectwem podobieństwa.
+
+Uwaga: dla k = 0 przyjmujemy, że prawdziwe jest A[1..0] = B[n+1..n]. 
+
+Zapisz w wybranej przez siebie notacji (w postaci pseudokodu, listy kroków lub w wybranym języku programowania) funkcję czy_k_podobne(n, A, B, k), gdzie A i B są n-elementowymi tablicami liczb całkowitych. Wynikiem funkcji jest PRAWDA, jeśli tablice A i B są k-podobne dla zadanego parametru k, natomiast FAŁSZ – w przeciwnym przypadku. 
+
+```python
+n = 3
+k = 0
+
+A = [5, 7, 9]
+B = [5, 7, 9]
+
+
+def czy_k_podobne(n, A, B, k):
+    for i in range(k):
+
+        if A[i] != B[n - k + i]:
+            return False
+    for i in range(n - k):
+
+        if B[i] != A[k + i]:
+            return False
+    return True
+
+print(czy_k_podobne(n, A, B, k))
+```
+
+<a name="1.3"/> 
+
+## 1.3 [⬆️](#main)
+
+Zapisz w wybranej przez siebie notacji funkcję czy_podobne(n, A, B), która dla danych tablic A i B daje odpowiedź PRAWDA, jeśli istnieje takie k, dla którego tablice A i B są k-podobne, natomiast FAŁSZ – w przeciwnym przypadku. 
+
+```python
+def czy_podobne(n, A, B):
+    for k in range(n):
+        if czy_k_podobne(n, A, B, k):
+            return True
+        else:
+            return False
+```
+
 <a name="4.1"/> 
   
 W pliku pary.txt znajduje się 100 wierszy. Każdy wiersz zawiera parę danych składającą się z liczby całkowitej z przedziału od 3 do 100 i słowa (ciągu znaków) złożonego z małych liter alfabetu angielskiego o długości od 1 do 50 znaków. Liczba i słowo są oddzielone znakiem spacji. 
