@@ -212,11 +212,11 @@ def wydawanie(do_wydania,monety):
 ```python
 #In place
 
-def bubble_sort(arr): 
-    for i in range(len(arr)): 
-        for j in range(len(arr)-i-1): 
-            if arr[j] > arr[j+1]: 
-                arr[j], arr[j+1] = arr[j+1], arr[j]
+def bubble_sort(tab): 
+    for i in range(len(tab)):
+        for j in range(len(tab) - i - 1):
+            if tab[j] > tab[j + 1]:
+                tab[j + 1], tab[j] = tab[j], tab[j + 1]
 ```
 
 <a name="wybor"/>
