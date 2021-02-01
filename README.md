@@ -19,6 +19,7 @@ Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znale
   > * <a href="https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/">EXCEL</a> - wprowadzenie i troszke teorii
   > * <a href="https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/">Python</a> - wprowadzenie i troszke teorii
   > * <a href="https://calculatic.pl/poradnik/podstawowe-funkcje-excela/">EXCEL</a> - podstawowe funkcje
+  > * <a href="http://pythontutor.com/">Tutor</a> - wizualizacja kodu
 
 # TOC
 > 1. [Algorytmy wymienione w wymaganiach](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
