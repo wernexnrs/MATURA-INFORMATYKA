@@ -424,6 +424,16 @@ def is_palindrom(string):
     return False
 ```
 
+```py
+# Recursive approach
+
+def isPalindrom(string):
+    if len(string) == 1: return True
+    if len(string) == 2: return True if string[0] == string[1] else False
+
+    return isPalindrom(string[1, -1]) if string[0] == string[-1] else False
+```
+
 <a name="anagram"/>
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
