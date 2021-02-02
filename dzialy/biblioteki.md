@@ -1,4 +1,4 @@
-## Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać. Bardzo proszę o nadsyłanie innych przydatnych modułów do nauki, z chęcia je przyswoje.
+## Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać. 
 
 # Przydatne moduły
 
