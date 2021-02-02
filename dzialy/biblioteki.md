@@ -31,13 +31,8 @@
     * [product](#product)
     * [chain](#chain)
     * [islice](#islice)
-    * [compress](#compress)
-    * [filterfalse](#filterfalse)
-    * [dropwhile](#dropwhile)
-    * [takewhile](#takewhile)
     * [accumulate](#accumulate)
     * [groupby](#groupby)
-    * [tee](#tee)
   * __operator__
   * __functools__
   * __enum__
@@ -445,4 +440,31 @@ for i in result:
 1
 3
 '''
+```
+
+<a name="accumulate"/>
+
+### accumulate()
+
+Operacje podczas iteracji
+
+```python
+import itertools, operator
+
+numbers = [1, 5, 4, 3]
+
+print(list(itertools.accumulate(numbers))) # [1, 6, 10, 13], dodawanie
+print( list(itertools.accumulate(numbers, operator.mul))) # [1, 5, 20, 60], mnożenie
+```
+
+<a name="groupby"/>
+
+### groupby()
+
+Grupowanie obiektów.
+
+Obiekt musi być posortowany po grupowanej wartości inaczej dane te zostaną pominiete.
+
+```python
+itertools.groupby(object,key) # moze kiedys
 ```
