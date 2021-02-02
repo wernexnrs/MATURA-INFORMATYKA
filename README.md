@@ -3,7 +3,7 @@
 <h1 align="center"> MATURA 2021 </h1>
 
 <p align="center"><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. <br>
-Bardzo proszę o nadsyłanie szybszych, łatwiejszych, innych rozwiązań, znalezionych błedów czy sugestii na discordzie lub w dziale <i>issues<i>.<br>
+Bardzo proszę o wnsozenie poprawek.<br>
  Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.</b></p>
 
 ## Przydatne linki
