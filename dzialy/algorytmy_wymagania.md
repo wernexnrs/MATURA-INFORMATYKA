@@ -288,25 +288,27 @@ def merge_sort(tab):
 <a name="fast"/>
 
 ## Sortowanie szybkie [⬆️](#main)
+Prostsze rozwiązanie, ogólnie to zamysłem szybkiego sortowania jest sortowanie w miejscu i niewykorzystywanie wbudowanych funkcji, to rozwiązanie może sie przydać na praktyczną cześć, nie teoretyczną. Zużywa więcej pamięci niż operowanie na indexach i jest dużo wolniejsze.
+
 ```python
 def quicksort(arr):
-    if len(arr) == 1: return arr
+    if len(arr) <= 1:
+        return arr
+    
+    less = []
+    equal = []
+    greater = []
 
-    pivot = arr.pop(len(arr)//2)
-    higher = []
-    lower = []
+    pivot = arr[0]
+    for x in arr:
+        if x < pivot: less.append(x)
+        elif x == pivot: equal.append(x)
+        else: greater.append(x)
+    return quicksort(less) + equal + quicksort(greater)
 
-    for value in arr:
-        if value > pivot: higher.append(value)
-        else: lower.append(value)
+arr = [60, 20, 11, 122, 214, 345, 1324, 1, 2, 3, 6, 74, 3, 9]
 
-    return quicksort(lower) + [pivot] + quicksort(higher)
-
-
-from random import randint
-arr = [randint(1, 100) for i in range(50)]
-quicksort(arr)
-
+print(quicksort(arr))
 ```
 
 <a name="box"/>
