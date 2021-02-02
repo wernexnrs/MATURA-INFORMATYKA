@@ -294,21 +294,23 @@ Prostsze rozwiązanie, ogólnie to zamysłem szybkiego sortowania jest sortowani
 def quicksort(arr):
     if len(arr) <= 1:
         return arr
-    
+
     less = []
-    equal = []
     greater = []
 
-    pivot = arr[0]
+    pivot = arr.pop(len(arr) // 2)
     for x in arr:
-        if x < pivot: less.append(x)
-        elif x == pivot: equal.append(x)
-        else: greater.append(x)
-    return quicksort(less) + equal + quicksort(greater)
+        if x <= pivot:
+            less.append(x)
+        else:
+            greater.append(x)
+    return quicksort(less) + [pivot] + quicksort(greater)
+
 
 arr = [60, 20, 11, 122, 214, 345, 1324, 1, 2, 3, 6, 74, 3, 9]
 
 print(quicksort(arr))
+
 ```
 
 ```python
