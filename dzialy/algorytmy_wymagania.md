@@ -289,32 +289,23 @@ def merge_sort(tab):
 
 ## Sortowanie szybkie [⬆️](#main)
 ```python
-def partition(arr, low, high):
-    i = low - 1
-    pivot = arr[high]
+def quicksort(arr):
+    if len(arr) == 1: return arr
 
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
+    pivot = arr.pop(len(arr)//2)
+    higher = []
+    lower = []
 
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
+    for value in arr:
+        if value > pivot: higher.append(value)
+        else: lower.append(value)
 
-
-def quicksort(arr, low, high):
-    if len(arr) == 1:
-        return arr
-
-    if low < high:
-        pi = partition(arr, low, high)
-        quicksort(arr, low, pi - 1)
-        quicksort(arr, pi + 1, high)
+    return quicksort(lower) + [pivot] + quicksort(higher)
 
 
-arr = [10, 7, 8, 9, 1, 5]
-quicksort(arr, 0, len(arr) - 1)
-print(arr)
+from random import randint
+arr = [randint(1, 100) for i in range(50)]
+quicksort(arr)
 
 ```
 
@@ -433,6 +424,16 @@ def is_palindrom(string):
     return False
 ```
 
+```py
+# Recursive approach
+
+def isPalindrom(string):
+    if len(string) == 1: return True
+    if len(string) == 2: return True if string[0] == string[1] else False
+
+    return isPalindrom(string[1:-1]) if string[0] == string[-1] else False
+```
+
 <a name="anagram"/>
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
@@ -497,7 +498,7 @@ do napisania
 ### Prefix free
 Kod jest nazywany "prefix (free) code", jeżeli w systemie nie ma kodu słowa, który byłby prefixem innego kodu słowa.
 
-Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pliku to: a,b,c,d,e,f i chcemy zmniejszysz rozmiar tego pliku kompresją, gdzie każdy kod znaku ma różną długość.
+Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pliku to: a,b,c,d,e,f i chcemy zmniejszyć rozmiar tego pliku kompresją, gdzie każdy kod znaku ma różną długość.
 
 | | a | b | c | d | e | f |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -518,7 +519,44 @@ Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powo
 
 ## Alfabet Morse’a [⬆️](#main)
 ```python
-Do napisania
+# define coding dict
+morseEncode = {
+    'a': '.-',     'b': '-...',   'c': '-.-.',   ' ': '  ',
+    'd': '-..',    'e': '.',      'f': '..-.',   '': '',
+    'g': '--.',    'h': '....',   'i': '..',
+    'j': '.---',   'k': '-.-',    'l': '.-..',
+    'm': '--',     'n': '-.',     'o': '---',
+    'p': '.--.',   'q': '--.-',   'r': '.-.',
+    's': '...',    't': '-',      'u': '..-',
+    'v': '...-',   'w': '.--',    'x': '-..-',
+    'y': '-.--',   'z': '--..',   '1': '.----',
+    '2': '..---',  '3': '...--',  '4': '....-',
+    '5': '.....',  '6': '-....',  '7': '--...',
+    '9': '---..',  '8': '----.',  '0': '-----',
+}
+# swap coding table for decoding dict
+morseDecode = {val : key for key, val in morseEncode.items()}
+morseDecode.update({'_': ' '})
+# define coding function
+def morseCode(string, decode = False):
+    string = string.lower()
+    output = ""
+    if not decode: # then encode
+        for char in string:
+            output += morseEncode.get(char, '') # print '*' for unexpected characters
+            if char != ' ': output += ' '
+    else:
+        string = string.replace('  ', ' _ ')
+        for char in string.split(' '):
+            output += morseDecode.get(char, '') # print '*' for unexpected codes
+    return output
+
+# test
+string = "Keep learning"
+coded = morseCode(string)
+print("Coded:", coded)
+decoded = morseCode(coded, decode = True)
+print("Decoded:", decoded)
 ```
 
 <a name="cezar"/>
