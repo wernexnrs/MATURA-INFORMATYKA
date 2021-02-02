@@ -26,18 +26,18 @@
     * [cycle](#cycle)
     * [repeat](#repeat)
     * [starmap](#starmap)
-    * combinations 
-    * permutations 
-    * product 
-    * chain 
-    * islice 
-    * compress 
-    * filterfalse 
-    * dropwhile
-    * takewhile
-    * accumulate 
-    * groupby 
-    * tee 
+    * [combinations](#combinations)
+    * [permutations](#permutations)
+    * [product](#product)
+    * [chain](#chain)
+    * [islice](#islice)
+    * [compress](#compress)
+    * [filterfalse](#filterfalse)
+    * [dropwhile](#dropwhile)
+    * [takewhile](#takewhile)
+    * [accumulate](#accumulate)
+    * [groupby](#groupby)
+    * [tee](#tee)
   * __operator__
   * __functools__
   * __enum__
@@ -259,7 +259,9 @@ data2 = list(zip(itertools.count(start = 0, step = 1), data))
 <a name="zip_longest"/>
 
 ### zip_longest()
+
 zip -> iteruje tyle razy ile wynosi długość krótszego obiektu
+
 zip_longest -> iteruje tyle razy ile wynosi długość dłuższego obiektu
 
 ```python
@@ -318,4 +320,129 @@ print(list(map(pow, range(5), itertools.repeat(2)))
 
 ```python
 
+print(list(itertools.starmap(pow, [(0,2), (1,2), (2,2)] )))
+
+# Output: [0, 1, 4]
+```
+
+<a name="combinations"/>
+
+### combinations()
+
+Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność nie ma znaczenia.
+
+```python
+chars = ['a', 'b', 'c', 'd']
+
+result = itertools.combinations(chars, 2)
+
+for i in result:
+    print(i)
+'''
+('a', 'b') nie ma powtórzeń np ('b', 'a') bo to to samo
+('a', 'c')
+('a', 'd')
+('b', 'c')
+('b', 'd')
+('c', 'd')
+'''
+```
+
+<a name="permutations"/>
+
+### permutations()
+
+Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność MA znaczenie.
+
+```python
+chars = ['a', 'b', 'c', 'd']
+
+result = itertools.permutations(chars, 2)
+
+for i in result:
+    print(i)
+'''
+('a', 'b')
+('a', 'c')
+('a', 'd')
+('b', 'a')
+('b', 'c')
+('b', 'd')
+('c', 'a')
+('c', 'b')
+('c', 'd')
+('d', 'a')
+('d', 'b')
+('d', 'c')
+'''
+```
+
+<a name="product"/>
+
+### product()
+
+Wszystkie możliwe sposoby na zgrupowanie pewnej ilości liczb, gdzie kolejność MA znaczenie wraz z powtórzeniami tych znaków.
+
+```python
+numbers = [0, 1, 2, 3]
+
+result = itertools.product(numbers, repeat=2)
+
+for i in result:
+    print(i)
+'''
+(0, 0)
+(0, 1)
+(1, 0)
+(1, 1)
+'''
+```
+
+<a name="chain"/>
+
+### chain()
+
+Iteracja po kilku obiektach na raz
+
+```python
+numbers = [0, 1, 2, 3]
+chars = ['a', 'b', 'c', 'd']
+es = ['first', 'second', 'third', 'fourth']
+
+result = itertools.chain(numbers, chars, es)
+
+for i in result:
+    print(i)
+'''
+0
+1
+2
+3
+a
+b
+c
+d
+first
+second
+third
+fourth
+'''
+```
+
+<a name="islice"/>
+
+### islice()
+
+Slice obiektu bez wykorzystywania kopii jak np podczas krojenia list.
+
+```python
+# islice(object,start,stop,step)
+result = itertools.islice(range(10), 1, 5, 2)
+
+for i in result:
+    print(i)
+'''
+1
+3
+'''
 ```
