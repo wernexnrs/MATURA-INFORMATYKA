@@ -30,7 +30,7 @@
 5. __algorytmy kompresji i szyfrowania__
    * kody znaków o zmiennej długości,
       * [ ] [Kompresja danych](#len) #nie potrafie
-      * [ ] [alfabet Morse’a](#morse) #nie wiem        
+      * [x] [alfabet Morse’a](#morse)      
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
 
