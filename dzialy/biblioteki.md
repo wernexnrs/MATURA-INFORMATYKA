@@ -19,7 +19,25 @@
     * [Zbiory](#sets)
     * [Białe znaki](#biale)
   * __fractions__ - ułamki
+    * [Fraction](#ulamki)
   * __itertools__
+    * [count](#count)
+    * [zip_longest](#zip_longest)
+    * [cycle](#cycle)
+    * [repeat](#repeat)
+    * [starmap](#starmap)
+    * combinations 
+    * permutations 
+    * product 
+    * chain 
+    * islice 
+    * compress 
+    * filterfalse 
+    * dropwhile
+    * takewhile
+    * accumulate 
+    * groupby 
+    * tee 
   * __operator__
   * __functools__
   * __enum__
@@ -204,3 +222,100 @@ RegEx w pythonie.
 | \f	| Form Feed	|
 | \ooo	| liczba ósemkowa	|
 | \xhh	| liczba szesnastkowa |
+
+<a name="ulamki"/>
+
+## fractions [⬆️](#main)
+
+class fractions.Fraction(numerator=0, denominator=1)
+
+```python
+from fractions import Fraction
+Fraction(16, -10)
+#Fraction(-8, 5)
+>>> Fraction(123)
+#Fraction(123, 1)
+>>> Fraction()
+#Fraction(0, 1)
+>>> Fraction('3/7')
+#Fraction(3, 7)
+>>> Fraction(' -3/7 ')
+#Fraction(-3, 7)
+```
+<a name="count"/>
+
+## itertools [⬆️](#main)
+
+### count()
+
+```python
+data = [100,200,300,400]
+
+data2 = list(zip(itertools.count(start = 0, step = 1), data))
+
+#Output:  [(0, 100), (1, 200), (2, 300), (3,400)]
+```
+
+<a name="zip_longest"/>
+
+### zip_longest()
+zip -> iteruje tyle razy ile wynosi długość krótszego obiektu
+zip_longest -> iteruje tyle razy ile wynosi długość dłuższego obiektu
+
+```python
+#normal zip
+
+data = [100,200,300,400]
+
+data2 = list(zip(range(10), data))
+
+#Output:  [(0, 100), (1, 200), (2, 300), (3,400)]
+```
+
+```python
+#itertools zip
+
+data = [100,200,300,400]
+
+data2 = list(itertools.zip_longest(range(10), data))
+
+#Output:  [(0, 100), (1, 200), (2, 300), (3, 400), (4, None), (5, None), (6, None), (7, None), (8, None), (9, None)]
+```
+
+<a name="cycle"/>
+
+### cycle()
+
+```python
+data = itertools.cycle([0,1])
+
+for _ in range(6):
+    print(next(data))
+    
+#Output:  0 1 0 1 0 1
+```
+
+<a name="repeat"/>
+
+### repeat()
+
+```python
+data = itertools.repeat(2, times=3)
+
+for _ in range(6):
+    print(next(data))
+    
+#Output:  2 2 2 StopIteration
+
+print(list(map(pow, range(5), itertools.repeat(2)))
+
+# Output: [0, 1, 4, 9, 16]
+```
+
+<a name="starmap"/>
+
+### starmap()
+
+```python
+
+```
