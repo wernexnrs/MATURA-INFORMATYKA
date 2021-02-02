@@ -4,7 +4,7 @@
 
 <p align="center"><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. <br>
 Bardzo proszę o wnoszenie poprawek.<br>
-Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.</b>
+Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.<br>
 Polecam ciemny motyw github'a</b></p>
 
 ## Przydatne linki
