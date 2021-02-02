@@ -11,12 +11,12 @@
    - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
    - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)    
 2. __algorytmy wyszukiwania i porządkowania (sortowania):__ 
-   - [x] [bąbelkowy, ](#bob) 
-   - [x] [przez wybór, ](#wybor) 
-   - [x] [przez wstawianie liniowe, ](#lin) 
-   - [x] [przez scalanie,](#scalanie) 
+   - [x] [bąbelkowy, ](#bob) #przydałoby się lepsze rozwiązanie
+   - [x] [przez wybór, ](#wybor) #przydałoby się lepsze rozwiązanie
+   - [x] [przez wstawianie liniowe, ](#lin) #przydałoby się lepsze rozwiązanie
+   - [x] [przez scalanie,](#scalanie) #przydałoby się lepsze rozwiązanie
    - [x] [szybki,](#fast)
-   - [x] [kubełkowy,](#box)  
+   - [x] [kubełkowy,](#box)  #przydałoby się lepsze rozwiązanie
 3. __algorytmy numeryczne__
    - [x] [szybkie podnoszenie do potęgi,](#fast_power)
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
