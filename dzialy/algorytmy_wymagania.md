@@ -311,6 +311,38 @@ arr = [60, 20, 11, 122, 214, 345, 1324, 1, 2, 3, 6, 74, 3, 9]
 print(quicksort(arr))
 ```
 
+```python
+# In place
+
+def partition(arr, low, high):
+    i = low - 1
+    pivot = arr[high]
+
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+
+def quicksort(arr, low, high):
+    if len(arr) == 1:
+        return arr
+
+    if low < high:
+        pi = partition(arr, low, high)
+        quicksort(arr, low, pi - 1)
+        quicksort(arr, pi + 1, high)
+
+
+arr = [10, 7, 8, 9, 1, 5]
+quicksort(arr, 0, len(arr) - 1)
+print(arr)
+
+```
+
 <a name="box"/>
 
 ## Sortowanie kubełkowe [⬆️](#main)
