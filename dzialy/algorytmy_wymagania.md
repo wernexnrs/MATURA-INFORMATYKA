@@ -14,22 +14,22 @@
    - [x] [bąbelkowy, ](#bob)
    - [x] [przez wybór, ](#wybor) 
    - [x] [przez wstawianie liniowe, ](#lin) 
-   - [x] [przez scalanie,](#scalanie) #przydałoby się lepsze rozwiązanie
+   - [x] [przez scalanie,](#scalanie) # przydałoby się lepsze rozwiązanie
    - [x] [szybki,](#fast)
-   - [x] [kubełkowy,](#box)  #przydałoby się lepsze rozwiązanie
+   - [x] [kubełkowy,](#box)  # przydałoby się lepsze rozwiązanie
 3. __algorytmy numeryczne__
    - [x] [szybkie podnoszenie do potęgi,](#fast_power)
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
 4. __algorytmy na tekstach__
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) 
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-   - [x] [porządkowanie alfabetyczne,](#alfa) 
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) # indexy - do napisania
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) # indexy - do napisania
+   - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania
       * Większości obiektów
       * Słowników    
-   - [ ] [wyszukiwanie wzorca w tekście,](#pattern) Muszę napisać własną funkcje
+   - [x] [wyszukiwanie wzorca w tekście,](#pattern) # indexy - do napisania
 5. __algorytmy kompresji i szyfrowania__
    * kody znaków o zmiennej długości,
-      * [ ] [Kompresja danych](#len) #nie potrafie
+      * [ ] [Kompresja danych](#len) # do napisania
       * [x] [alfabet Morse’a](#morse)      
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
