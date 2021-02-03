@@ -23,7 +23,7 @@
 4. __algorytmy na tekstach__
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) # indexy - do napisania
-   - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania
+   - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania i rozwinięcie zagadnienia
       * Większości obiektów
       * Słowników    
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) # indexy - do napisania
@@ -72,6 +72,14 @@ def to_base(n, b): #to_base(number,base)
     return to_base(n // b, b) + BS[n % b]
 ```
 
+<b>
+   
+```
+Pseudocode
+```
+
+</b>
+
 ```python
 #iterated version DEC --> ANY
 
@@ -88,7 +96,7 @@ def to_base(n, b):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -338,7 +346,7 @@ def wydawanie(do_wydania,monety):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -475,7 +483,7 @@ def merge_sort(tab):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -543,7 +551,7 @@ print(arr)
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -601,7 +609,7 @@ print(bucketSort(x))
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -626,7 +634,7 @@ def fast_power(base, power):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -657,7 +665,7 @@ def bisection(a,b,precyzja = 0.0001):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -712,7 +720,7 @@ def is_palindrom(string, pal):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -736,7 +744,7 @@ def is_anagram(string,string2):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -789,7 +797,7 @@ def is_pattern(pattern,word):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -881,7 +889,7 @@ def dekoduj(wiadomosc,klucz):
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
@@ -905,7 +913,7 @@ print(tekst)
 <b>
    
 ```
-
+Pseudocode
 ```
 
 </b>
