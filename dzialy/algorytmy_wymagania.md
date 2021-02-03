@@ -147,7 +147,7 @@ Dla i = 1,2 … n
 	Dla  j = [2, 3, n]
 		Jeżeli i mod j -> 0
 			s <- s + 1
-	Jeżeli n -> s oraz n jest rózne od 1
+	Jeżeli n -> s oraz n != 1
 		Zwróć Prawde
 	Zwróć Fałsz
 ```
@@ -159,12 +159,11 @@ Dla i = 1,2 … n
 ## Rozkładanie liczby na czynniki pierwsze [⬆️](#main)
 ```python
 def prime_factors(n):
-    factors = []
     k = 2
     while n != 1:
         while n % k == 0:
             n //= k
-            factors.append(k)
+            print(k) # albo do tablicy sobie wrzucać
         k += 1
     return factors 
 ```
@@ -177,7 +176,7 @@ div - operator dzielenia całkowitego
 
 k = 2
 
-Dopóki n jest rózne od 1
+Dopóki n != 1
 	Dopóki n mod k -> 0
 		n -> n div k
 		Wypisz k
@@ -279,7 +278,14 @@ def f(n):
 <b>
    
 ```
+a -> 0
+b -> 1
+n - n'ty wyraz ciągu 
 
+Dla i = 1,2 ... n
+	t = a
+	a = b
+	b = t + b
 ```
 
 </b>
@@ -296,7 +302,11 @@ def f(n):
 <b>
    
 ```
-
+def f(n)
+	Jeżeli n <= 1
+		Zwróć n
+	W innym wypadku
+		Zwróć f(n-1) + f(n-2)
 ```
 
 </b>
