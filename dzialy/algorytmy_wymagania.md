@@ -407,7 +407,7 @@ Dla i = 1,2 … n
 			mini = j
 	t = A[i]
 	A[i] = A[mini]
-	A[mini] = A[i]
+	A[mini] = t
 ```
 
 </b>
