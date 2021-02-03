@@ -208,7 +208,14 @@ def nwd(a, b):
 <b>
    
 ```
+a - liczba całkowita
+b - liczba całkowita
 
+def nwd(a, b):
+	Jeżeli b > 0:
+		Zwróc nwd(b, a % b)
+	W innym wypadku
+		Zwróć a
 ```
 
 </b>
@@ -225,7 +232,14 @@ def nwd(a, b):
 <b>
    
 ```
+a - liczba całkowita
+b - liczba całkowita
 
+def nwd(a, b):
+	Dopóki b != 0
+		t = a
+		a = b
+		b = t mod b 
 ```
 
 </b>
@@ -239,7 +253,12 @@ def nww(a, b): return a * b // nwd(a, b)
 <b>
    
 ```
+a - liczba całkowita
+b - liczba całkowita
+div - dzielenie całkowite
 
+def nww(a, b):
+	Zwróć a * b div nwd(a,b)
 ```
 
 </b>
