@@ -1,5 +1,6 @@
-# Metody 
 <a name="main"/>
+
+<h1 align="center"> Metody </h1>
  
 ### STRING [⬆️](#main)  
 <p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
