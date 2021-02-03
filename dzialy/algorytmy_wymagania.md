@@ -104,13 +104,13 @@ def is_prime(x):
 A = [1,2 … n]
 
 Dla i = 1,2 … n
-	Jeżeli i > 1
-      Dla j = 2,3 ... i
-         Jeżeli i mod j == 0
-            Zwróć Fałsz
-      Zwróć Prawde
-   W innym wypadku
-	   Zwróć Fałsz
+    Jeżeli i > 1
+        Dla j = 2,3 ... i
+            Jeżeli i mod j == 0
+                Zwróć Fałsz
+        Zwróć Prawde
+    W innym wypadku
+        Zwróć Fałsz
 
 ```
 
