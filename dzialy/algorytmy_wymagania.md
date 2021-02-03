@@ -423,7 +423,16 @@ def insertion_sort(A):
 <b>
    
 ```
+n -> liczba całkowita
+A -> [1,2 ... n]
 
+Dla i = 1, 2, ... , n
+	liczba = A[i]
+	
+	Dopóki i > 0 oraz A[i - 1] > liczba
+		A[i] -> A[i - 1]
+		i -> i - 1
+	A[i] = liczba
 ```
 
 </b>
