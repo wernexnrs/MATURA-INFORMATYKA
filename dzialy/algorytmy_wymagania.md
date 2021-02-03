@@ -21,7 +21,7 @@
    - [x] [szybkie podnoszenie do potęgi,](#fast_power)
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
 4. __algorytmy na tekstach__
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom) # indexy - do napisania
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) # indexy - do napisania
    - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania
       * Większości obiektów
@@ -698,7 +698,15 @@ def isPalindrom(string):
 ```
 
 ```python
-#wersja operująca jedynie na indeksach - do napisania
+def is_palindrom(string, pal):
+    if len(string) != len(pal):
+        return None
+
+    for i in range(len(string)):
+        for j in range(len(pal) - 1,-1,-1):
+            if string[i] == pal[i]:
+                return True
+            return False
 ```
 
 <b>
