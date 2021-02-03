@@ -91,12 +91,30 @@ def to_base(n, b):
 ```python
 def is_prime(x):
     if x > 1:
-        for i in range(2,x):
-            if (x % i) == 0:
+        for i in range(2, x):
+            if x % i == 0:
                 return False
         return True
     return False
 ```
+
+<b>
+   
+```
+A = [1,2 … n]
+
+Dla i = 1,2 … n
+	Jeżeli i > 1
+      Dla j = 2,3 ... i
+         Jeżeli i mod j == 0
+            Zwróć Fałsz
+      Zwróć Prawde
+   W innym wypadku
+	   Zwróć Fałsz
+
+```
+
+</b>
 
 <a name="is_perfect"/>
 
@@ -112,6 +130,24 @@ def is_perfect(n):
     return False
 ```
 
+<b>
+   
+```
+A = [1,2 … n]
+
+Dla i = 1,2 … n
+	s <- 1
+   Dla  j = [2, 3, n]
+      Jeżeli i mod j -> 0
+         s <- s + 1
+   Jeżeli n -> s oraz n jest rózne od 1
+      Zwróć Prawde
+   Zwróć Fałsz
+
+```
+
+</b>
+
 <a name="prime_factors"/>
 
 ## Rozkładanie liczby na czynniki pierwsze [⬆️](#main)
@@ -126,6 +162,25 @@ def prime_factors(n):
         k += 1
     return factors 
 ```
+
+<b>
+   
+```
+n = liczba całkowita
+div - operator dzielenia całkowitego
+
+k = 2
+
+Dopóki n jest rózne od 1
+   Dopóki n mod k -> 0
+      n -> n div k
+      Wypisz k
+   k += 1
+
+```
+
+</b>
+
 
 <a name="nwd"/>
 
@@ -218,6 +273,22 @@ def bubble_sort(tab):
             if tab[j] > tab[j + 1]:
                 tab[j + 1], tab[j] = tab[j], tab[j + 1]
 ```
+
+<b>
+   
+```
+A = [1,2 … n]
+
+Dla i = 1,2 … n
+	Dla j = 1,2 ... n – i – 1
+		Jeżeli A[j] > A[j + 1]
+			t = A[j + 1] 
+			A[j + 1] = A[j]
+			A[j] = t
+
+```
+
+</b>
 
 <a name="wybor"/>
 
