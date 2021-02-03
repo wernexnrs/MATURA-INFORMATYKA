@@ -1,7 +1,8 @@
 <a name="main"/>
 
 <h1 align="center"> Metody </h1>
- 
+
+<h3 align="center">Nie jest to wyczerpanie tematu. </h3>
 ### STRING [⬆️](#main)  
 <p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
 
