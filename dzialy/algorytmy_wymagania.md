@@ -12,8 +12,8 @@
    - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)    
 2. __algorytmy wyszukiwania i porządkowania (sortowania):__ 
    - [x] [bąbelkowy, ](#bob)
-   - [x] [przez wybór, ](#wybor) #przydałoby się lepsze rozwiązanie
-   - [x] [przez wstawianie liniowe, ](#lin) #przydałoby się lepsze rozwiązanie
+   - [x] [przez wybór, ](#wybor) 
+   - [x] [przez wstawianie liniowe, ](#lin) 
    - [x] [przez scalanie,](#scalanie) #przydałoby się lepsze rozwiązanie
    - [x] [szybki,](#fast)
    - [x] [kubełkowy,](#box)  #przydałoby się lepsze rozwiązanie
@@ -83,7 +83,14 @@ def to_base(n, b):
         res+=BS[n%b]
         n //= b
     return res[::-1]
+
+<b>
+   
 ```
+
+```
+
+</b>
 
 <a name="is_prime"/>
 
@@ -104,14 +111,13 @@ def is_prime(x):
 A = [1,2 … n]
 
 Dla i = 1,2 … n
-    Jeżeli i > 1
-        Dla j = 2,3 ... i
-            Jeżeli i mod j == 0
-                Zwróć Fałsz
-        Zwróć Prawde
-    W innym wypadku
-        Zwróć Fałsz
-
+	Jeżeli i > 1
+		Dla j = 2,3 ... i
+			Jeżeli i mod j == 0
+				Zwróć Fałsz
+		Zwróć Prawde
+	W innym wypadku
+		Zwróć Fałsz
 ```
 
 </b>
@@ -137,13 +143,12 @@ A = [1,2 … n]
 
 Dla i = 1,2 … n
 	s <- 1
-   Dla  j = [2, 3, n]
-      Jeżeli i mod j -> 0
-         s <- s + 1
-   Jeżeli n -> s oraz n jest rózne od 1
-      Zwróć Prawde
-   Zwróć Fałsz
-
+	Dla  j = [2, 3, n]
+		Jeżeli i mod j -> 0
+			s <- s + 1
+	Jeżeli n -> s oraz n jest rózne od 1
+		Zwróć Prawde
+	Zwróć Fałsz
 ```
 
 </b>
@@ -172,11 +177,10 @@ div - operator dzielenia całkowitego
 k = 2
 
 Dopóki n jest rózne od 1
-   Dopóki n mod k -> 0
-      n -> n div k
-      Wypisz k
-   k += 1
-
+	Dopóki n mod k -> 0
+		n -> n div k
+		Wypisz k
+	k += 1
 ```
 
 </b>
@@ -200,6 +204,14 @@ def nwd(a, b):
     return a
 ```
 
+<b>
+   
+```
+
+```
+
+</b>
+
 ```python
 #iterated version
 
@@ -209,11 +221,27 @@ def nwd(a, b):
     return a
 ```
 
+<b>
+   
+```
+
+```
+
+</b>
+
 ```python
 #Najmniejsza wspólna wielokrotność
 
 def nww(a, b): return a * b // nwd(a, b)
 ```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="fib"/>
 
@@ -228,6 +256,14 @@ def f(n):
     return a
 ```
 
+<b>
+   
+```
+
+```
+
+</b>
+
 ```python
 #Recursive version
 
@@ -236,6 +272,14 @@ def f(n):
        return n
    return f(n-1) + f(n-2)
 ```    
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="zachlanna"/>
 
@@ -261,6 +305,14 @@ def wydawanie(do_wydania,monety):
    return f'Reszte wydasz w {count} monetach, te monety to {historia}'
 ```
 
+<b>
+   
+```
+
+```
+
+</b>
+
 <a name="bob"/>
 
 ## Sortowanie bąbelkowe [⬆️](#main)
@@ -285,7 +337,6 @@ Dla i = 1,2 … n
 			t = A[j + 1] 
 			A[j + 1] = A[j]
 			A[j] = t
-
 ```
 
 </b>
@@ -305,6 +356,24 @@ def selection_sort(tab):
         tab[i], tab[mini] = tab[mini], tab[i]
 ```
 
+<b>
+   
+```
+A = [1,2 … n]
+n - ilość liczb
+
+Dla i = 1,2 … n
+	mini = i
+	Dla j = i+1, ... n
+		Jeżeli A[mini] > A[j]
+			mini = j
+	t = A[i]
+	A[i] = A[mini]
+	A[mini] = A[i]
+```
+
+</b>
+
 <a name="lin"/>
 
 ## Sortowanie przez wstawianie liniowe [⬆️](#main)
@@ -320,6 +389,14 @@ def insertion_sort(A):
             i -=1
         A[i] = liczba
 ```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="scalanie"/>
 
@@ -355,6 +432,14 @@ def merge_sort(tab):
             j += 1
             k += 1
 ```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="fast"/>
 
@@ -416,6 +501,14 @@ print(arr)
 
 ```
 
+<b>
+   
+```
+
+```
+
+</b>
+
 <a name="box"/>
 
 ## Sortowanie kubełkowe [⬆️](#main)
@@ -466,6 +559,14 @@ print(bucketSort(x))
 # Oneil Hsiao 
 ```
 
+<b>
+   
+```
+
+```
+
+</b>
+
 <a name="fast_power"/>
 
 ## Szybkie podnoszenie do potęgi [⬆️](#main)
@@ -482,6 +583,14 @@ def fast_power(base, power):
         base = (base * base) % mod
     return result
 ```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="bisekcja"/>
 
@@ -505,6 +614,14 @@ def bisection(a,b,precyzja = 0.0001):
             a = c      
     return c
 ```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="palindrom"/>
 
@@ -531,7 +648,7 @@ def is_palindrom(string):
     return False
 ```
 
-```py
+```python
 # Recursive approach
 
 def isPalindrom(string):
@@ -540,6 +657,18 @@ def isPalindrom(string):
 
     return isPalindrom(string[1:-1]) if string[0] == string[-1] else False
 ```
+
+```python
+#wersja operująca jedynie na indeksach - do napisania
+```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="anagram"/>
 
@@ -552,6 +681,18 @@ def is_anagram(string,string2):
         return True
     return False
 ```
+
+```python
+#wersja operująca jedynie na indeksach - do napisania
+```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="alfa"/>
 
@@ -595,8 +736,16 @@ def is_pattern(pattern,word):
 ```
 
 ```python
-do napisania
+#Wersja operująca jedynie na indeksach - do napisania
 ```
+
+<b>
+   
+```
+
+```
+
+</b>
 
 <a name="len"/>
 
@@ -682,6 +831,14 @@ def dekoduj(wiadomosc,klucz):
     return koduj(wiadomosc,klucz)
 ```
 
+<b>
+   
+```
+
+```
+
+</b>
+
 <a name="przes"/>
 
 ## Szyfr przestawieniowy [⬆️](#main)
@@ -697,3 +854,11 @@ def przes(lista):
     return tekst
 print(tekst)
 ```
+
+<b>
+   
+```
+
+```
+
+</b>
