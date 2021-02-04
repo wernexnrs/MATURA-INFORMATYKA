@@ -2,8 +2,7 @@
 
 1. [Czerwiec 2020](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec.md) - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
 
-3. [Kwiecień 2020 Matura próbna](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_kwiecien.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-probna-informatyka-2020-kwiec
-ien-poziom-rozszerzony/)
+3. [Kwiecień 2020 Matura próbna](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_kwiecien.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-probna-informatyka-2020-kwiecien-poziom-rozszerzony/)
 
 4. [Czerwiec 2019](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-czerwiec-poziom-rozszerzony/)
 
