@@ -4,55 +4,56 @@
 
 1. [2020 czerwiec](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec.md) - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
    
-2. 2020 kwiecien - [LINK](https://arkusze.pl/matura-probna-informatyka-2020-kwiecien-poziom-rozszerzony/)
-   
-   - [x] [4.1](#kwiecien1)
-   - [x] [4.2](#kwiecien2)
-   - [x] [4.3](#kwiecien3)
-   
-3. 2019 czerwiec - [LINK](https://arkusze.pl/matura-informatyka-2019-czerwiec-poziom-rozszerzony/)
-   
-   - [x] [4.1](#2019czerwiec1)
-   - [x] [4.2](#2019czerwiec2)
-   - [x] [4.3](#2019czerwiec3)
+2. [Czerwiec 2020]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
 
-3. 2019 maj - [LINK](https://arkusze.pl/matura-informatyka-2019-maj-poziom-rozszerzony/)
+3. [Kwiecień 2020 Matura próbna]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-probna-informatyka-2020-kwiecien-poziom-rozszerzony/)
 
-   - [x] [4.1](#2019maj1)
-   - [x] [4.2](#2019maj2)
-   - [x] [4.3](#2019maj3)
-   
-4. 2018 czerwiec - [LINK](https://arkusze.pl/matura-informatyka-2018-czerwiec-poziom-rozszerzony/)
+4. [Czerwiec 2019]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-czerwiec-poziom-rozszerzony/)
 
-   - [x] [4.1](#e1)
-   - [x] [4.2](#e2)
-   - [x] [4.3](#e3)
+5. [Maj 2019]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-maj-poziom-rozszerzony/)
 
-5. 2018 maj - [LINK](https://arkusze.pl/matura-informatyka-2018-maj-poziom-rozszerzony/)
+6. [Czerwiec 2018]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2018-czerwiec-poziom-rozszerzony/)
 
-   - [x] [4.1](#2018maj1)
-   - [x] [4.2](#2018maj2)
-   - [x] [4.3](#2018maj3)
-   
-6. 2017 czerwiec - [LINK](https://arkusze.pl/matura-informatyka-2017-czerwiec-poziom-rozszerzony/)
+7. [Maj 2018]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2018-maj-poziom-rozszerzony/)
 
-   - [x] [4.1](#2017czerwiec1)
-   - [x] [4.2](#2017czerwiec2)
-   - [x] [4.3](#2017czerwiec3)
-   - [x] [4.4](#2017czerwiec4)
-   
-7. 2017 maj (nowa) - [LINK](https://arkusze.pl/matura-informatyka-2017-maj-poziom-rozszerzony/)
+8. [Czerwiec 2017]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-czerwiec-poziom-rozszerzony/)
 
-   - [x] [4.1](#2017maj1)
-   - [x] [4.2](#2017maj2)
-   - [x] [4.3](#2017maj3)
-   
-8. 2015 maj (nowa) - [LINK](https://arkusze.pl/matura-informatyka-2015-maj-poziom-rozszerzony/)
+9. [Maj 2017]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-maj-poziom-rozszerzony/)
 
-   - [x] [4.1](#bin1)
-   - [x] [4.2](#bin2)
-   - [x] [4.3](#bin3)
-  
+10. [Maj 2017 Matura stara]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2017-maj-poziom-rozszerzony/)
+
+11. [Czerwiec 2016]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2016-czerwiec-poziom-rozszerzony/)
+
+12. [Maj 2016]() - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2016-maj-poziom-rozszerzony/)
+
+13. [Maj 2016 Matura stara - [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2016-maj-poziom-rozszerzony/)
+
+14. Czerwiec 2015 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2015-czerwiec-poziom-rozszerzony/)
+
+15. Maj 2015 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2015-maj-poziom-rozszerzony/)
+
+16. Maj 2015 Matura stara - [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2015-maj-poziom-rozszerzony/) 
+
+17. Maj 2014 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2014-maj-poziom-rozszerzony/)
+
+18. Maj 2013 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2013-maj-poziom-rozszerzony/)
+
+19. Maj 2012 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2012-maj-poziom-rozszerzony/)
+
+20. Maj 2011 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2011-maj-poziom-rozszerzony/)
+
+21. Maj 2010 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2010-maj-poziom-rozszerzony/)
+
+22. Maj 2009 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2009-maj-poziom-rozszerzony/)
+
+23. Maj 2008 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2008-maj-poziom-rozszerzony/)
+
+24. Maj 2007 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2007-maj-poziom-rozszerzony/)
+
+25. Maj 2006 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2006-maj-poziom-rozszerzony/)
+
+26. Maj 2005 - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2005-maj-poziom-rozszerzony/)
+
  <a name="kwiecien1"/>
  
  # 2020 kwiecień [⬆️](#main)
