@@ -29,4 +29,4 @@ Polecam ciemny motyw github'a</b></p>
 > 4. [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
 > 5. [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
 > 6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
-> 7. [EXCEL](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/excel.md)
+> 7. [EXCEL](https://support.microsoft.com/pl-pl/office/funkcje-programu-excel-wed%C5%82ug-kategorii-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb) - Wszystkie funkcje
