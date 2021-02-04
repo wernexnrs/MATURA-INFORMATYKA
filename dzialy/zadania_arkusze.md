@@ -1,28 +1,26 @@
 <h1 align="center"> Zadania z arkuszy </h1>
 
-1. [2020 czerwiec](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec.md) - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
-   
-2. [Czerwiec 2020]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
+1. [Czerwiec 2020](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec.md) - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
 
-3. [Kwiecień 2020 Matura próbna]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-probna-informatyka-2020-kwiecien-poziom-rozszerzony/)
+3. [Kwiecień 2020 Matura próbna](https://github.com/wernexnrs123/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-probna-informatyka-2020-kwiecien-poziom-rozszerzony/)
 
-4. [Czerwiec 2019]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-czerwiec-poziom-rozszerzony/)
+4. [Czerwiec 2019](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-czerwiec-poziom-rozszerzony/)
 
-5. [Maj 2019]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-maj-poziom-rozszerzony/)
+5. [Maj 2019](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-maj-poziom-rozszerzony/)
 
-6. [Czerwiec 2018]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2018-czerwiec-poziom-rozszerzony/)
+6. [Czerwiec 2018](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2018-czerwiec-poziom-rozszerzony/)
 
-7. [Maj 2018]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2018-maj-poziom-rozszerzony/)
+7. [Maj 2018](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2018-maj-poziom-rozszerzony/)
 
-8. [Czerwiec 2017]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-czerwiec-poziom-rozszerzony/)
+8. [Czerwiec 2017](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-czerwiec-poziom-rozszerzony/)
 
-9. [Maj 2017]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-maj-poziom-rozszerzony/)
+9. [Maj 2017](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-maj-poziom-rozszerzony/)
 
-10. [Maj 2017 Matura stara]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2017-maj-poziom-rozszerzony/)
+10. [Maj 2017 Matura stara](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj_stare.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2017-maj-poziom-rozszerzony/)
 
-11. [Czerwiec 2016]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2016-czerwiec-poziom-rozszerzony/)
+11. [Czerwiec 2016](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2016-czerwiec-poziom-rozszerzony/)
 
-12. [Maj 2016]() --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2016-maj-poziom-rozszerzony/)
+12. [Maj 2016](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2016-maj-poziom-rozszerzony/)
 
 13. Maj 2016 Matura stara --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2016-maj-poziom-rozszerzony/)
 
