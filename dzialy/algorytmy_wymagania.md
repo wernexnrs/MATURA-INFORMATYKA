@@ -31,8 +31,8 @@
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) # indexy - do napisania
    - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania i rozwinięcie zagadnienia
-	- Większości obiektów
-	- Słowników    
+	 - Większości obiektów
+	 - Słowników    
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) # indexy - do napisania
    
 5. __algorytmy kompresji i szyfrowania__
@@ -50,15 +50,16 @@
 ```python
 #int("number_string",base) ANY --> DEC
 
-dec_numbers = [15,12,2,4,7,8]
+dec_numbers = [15, 12, 2, 4, 7, 8]
 
 dec_TO_bin = [bin(i)[2:] for i in dec_numbers]
 dec_TO_oct = [oct(i)[2:] for i in dec_numbers]
 dec_TO_hex = [hex(i)[2:] for i in dec_numbers]
 
-bin_TO_dec = [int(i,2) for i in dec_TO_bin]
-oct_TO_dec = [int(i,8) for i in dec_TO_oct]
-hex_TO_dec = [int(i,16) for i in dec_TO_hex]
+bin_TO_dec = [int(i, 2) for i in dec_TO_bin]
+oct_TO_dec = [int(i, 8) for i in dec_TO_oct]
+hex_TO_dec = [int(i, 16) for i in dec_TO_hex]
+
 ```
 
 ```python
@@ -66,8 +67,10 @@ hex_TO_dec = [int(i,16) for i in dec_TO_hex]
 
 BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-def to_base(n, b): #to_base(number,base)
+
+def to_base(n, b):  # to_base(number,base)
     return BS[n] if n < b else to_base(n // b, b) + BS[n % b]
+
 ```
 
 ```python
@@ -75,10 +78,12 @@ def to_base(n, b): #to_base(number,base)
 
 BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-def to_base(n, b): #to_base(number,base)
+
+def to_base(n, b):  # to_base(number,base)
     if n < b:
-      return BS[n] 
+        return BS[n]
     return to_base(n // b, b) + BS[n % b]
+
 ```
 
 <b>
@@ -94,12 +99,14 @@ Pseudocode
 
 BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+
 def to_base(n, b):
     res = ""
     while n:
-        res+=BS[n%b]
+        res += BS[n % b]
         n //= b
     return res[::-1]
+
 ```
 
 <b>
@@ -121,6 +128,7 @@ def is_prime(x):
                 return False
         return True
     return False
+    
 ```
 
 <b>
@@ -146,12 +154,13 @@ Dla i = 1,2 … n
 ```python
 def is_perfect(n):
     s = 1
-    for i in range(2,n):
+    for i in range(2, n):
         if n % i == 0:
             s += i
     if n == s and n != 1:
         return True
     return False
+
 ```
 
 <b>
@@ -180,9 +189,9 @@ def prime_factors(n):
     while n != 1:
         while n % k == 0:
             n //= k
-            print(k) # albo do tablicy sobie wrzucać
+            print(k)  # albo do tablicy sobie wrzucać
         k += 1
-    return factors 
+
 ```
 
 <b>
@@ -219,6 +228,7 @@ def nwd(a, b):
     if b > 0:
         return nwd(b, a % b)
     return a
+    
 ```
 
 <b>
@@ -243,6 +253,7 @@ def nwd(a, b):
     while b:
         a, b = b, a % b
     return a
+    
 ```
 
 <b>
@@ -264,6 +275,7 @@ def nwd(a, b):
 #Najmniejsza wspólna wielokrotność
 
 def nww(a, b): return a * b // nwd(a, b)
+
 ```
 
 <b>
@@ -290,6 +302,7 @@ def f(n):
     for i in range(0, n):
         a, b = b, a + b
     return a
+    
 ```
 
 <b>
@@ -311,9 +324,10 @@ Dla i = 1,2 ... n
 #Recursive version
 
 def f(n):
-   if n <= 1:
-       return n
-   return f(n-1) + f(n-2)
+    if n <= 1:
+        return n
+    return f(n - 1) + f(n - 2)
+
 ```    
 
 <b>
@@ -332,24 +346,29 @@ def f(n)
 
 ## Wydawanie reszty metodą zachłanną [⬆️](#main)
 ```python
-do_wydania = 6 
-monety = [1,2,5]
+do_wydania = 6
+monety = [1, 2, 5]
 
-def wydawanie(do_wydania,monety):
-   count = 0
-   historia = []
 
-   while do_wydania > 0:
-       nominal = 0
-       for i in range(len(monety)):
-           if monety[i] <= do_wydania and monety[i] > nominal:
-               nominal = monety[i]
-       do_wydania -= nominal
+def wydawanie(do_wydania, monety):
+    count = 0
+    historia = []
 
-       historia.append(nominal)
-       count+=1
+    while do_wydania > 0:
+        nominal = 0
+        for i in range(len(monety)):
+            if do_wydania >= monety[i] > nominal:
+                nominal = monety[i]
+        do_wydania -= nominal
 
-   return f'Reszte wydasz w {count} monetach, te monety to {historia}'
+        historia.append(nominal)
+        count += 1
+
+    return f'Reszte wydasz w {count} monetach, te monety to {historia}'
+
+
+print(wydawanie(do_wydania, monety))
+
 ```
 
 <b>
@@ -371,6 +390,7 @@ def bubble_sort(tab):
         for j in range(len(tab) - i - 1):
             if tab[j] > tab[j + 1]:
                 tab[j + 1], tab[j] = tab[j], tab[j + 1]
+		
 ```
 
 <b>
@@ -401,6 +421,7 @@ def selection_sort(tab):
             if tab[mini] > tab[j]: 
                 mini = j         
         tab[i], tab[mini] = tab[mini], tab[i]
+	
 ```
 
 <b>
@@ -427,14 +448,15 @@ Dla i = 1,2 … n
 ```python
 #In place
 
-def insertion_sort(A): 
+def insertion_sort(A):
     for i in range(1, len(A)):
         liczba = A[i]
 
         while i > 0 and A[i - 1] > liczba:
-            A[i] = A[i -1]
-            i -=1
+            A[i] = A[i - 1]
+            i -= 1
         A[i] = liczba
+
 ```
 
 <b>
@@ -487,6 +509,7 @@ def merge_sort(tab):
             tab[k] = R[j]
             j += 1
             k += 1
+	    
 ```
 
 <b>
@@ -571,48 +594,43 @@ Pseudocode
 ```python
 # Python3 program to sort an array  
 # using bucket sort  
-def insertionSort(b): 
-    for i in range(1, len(b)): 
-        up = b[i] 
+def insertionSort(b):
+    for i in range(1, len(b)):
+        up = b[i]
         j = i - 1
-        while j >= 0 and b[j] > up:  
-            b[j + 1] = b[j] 
+        while j >= 0 and b[j] > up:
+            b[j + 1] = b[j]
             j -= 1
-        b[j + 1] = up      
-    return b      
-              
-def bucketSort(x): 
-    arr = [] 
-    slot_num = 10 # 10 means 10 slots, each 
-                  # slot's size is 0.1 
-    for i in range(slot_num): 
-        arr.append([]) 
-          
-    # Put array elements in different buckets  
-    for j in x: 
-        index_b = int(slot_num * j)  
-        arr[index_b].append(j) 
-      
-    # Sort individual buckets  
-    for i in range(slot_num): 
-        arr[i] = insertionSort(arr[i]) 
-          
-    # concatenate the result 
+        b[j + 1] = up
+    return b
+
+
+def bucketSort(x):
+    arr = []
+    slot_num = 10  
+
+    for i in range(slot_num):
+        arr.append([])
+
+    for j in x:
+        index_b = int(slot_num * j)
+        arr[index_b].append(j)
+
+    for i in range(slot_num):
+        arr[i] = insertionSort(arr[i])
+
     k = 0
-    for i in range(slot_num): 
-        for j in range(len(arr[i])): 
-            x[k] = arr[i][j] 
+    for i in range(slot_num):
+        for j in range(len(arr[i])):
+            x[k] = arr[i][j]
             k += 1
-    return x 
-  
-# Driver Code 
-x = [0.897, 0.565, 0.656, 
-     0.1234, 0.665, 0.3434]  
-print("Sorted Array is") 
-print(bucketSort(x)) 
-  
-# This code is contributed by 
-# Oneil Hsiao 
+    return x
+
+
+x = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
+print("Sorted Array is")
+print(bucketSort(x))
+
 ```
 
 <b>
@@ -631,13 +649,14 @@ Pseudocode
 #Iterated version
 
 def fast_power(base, power):
-    result,mod = 1,1000000007
+    result, mod = 1, 1000000007
     while power > 0:
         if power % 2 == 1:
             result = (result * base) % mod
         power //= 2
         base = (base * base) % mod
     return result
+
 ```
 
 <b>
@@ -655,20 +674,22 @@ Pseudocode
 def f(x):
     return -4 * x + 2
 
-#bisection(od,do)
-def bisection(a,b,precyzja = 0.0001): 
-    if f(a) * f(b) >= 0: 
+
+# bisection(od,do)
+def bisection(a, b, precyzja=0.0001):
+    if f(a) * f(b) >= 0:
         return None
-    c = a 
-    while b-a >= precyzja: 
+    c = a
+    while b - a >= precyzja:
         c = (a + b) / 2
-        if f(c) == 0.0: 
+        if f(c) == 0.0:
             break
-        if f(c) * f(a) < 0: 
-            b = c 
-        else: 
-            a = c      
+        if f(c) * f(a) < 0:
+            b = c
+        else:
+            a = c
     return c
+
 ```
 
 <b>
@@ -690,6 +711,7 @@ def is_palindrom(string):
     if lista == lista[::-1]:
         return True
     return False
+    
 ```
 
 ```python
@@ -702,16 +724,21 @@ def is_palindrom(string):
     if wynik == string:
         return True
     return False
+    
 ```
 
 ```python
 # Recursive approach
 
 def isPalindrom(string):
-    if len(string) == 1: return True
-    if len(string) == 2: return True if string[0] == string[1] else False
-
+    if len(string) == 1:
+        return True
+    if len(string) == 2:
+        if string[0] == string[1]:
+            return True
+        return False
     return isPalindrom(string[1:-1]) if string[0] == string[-1] else False
+
 ```
 
 ```python
@@ -720,10 +747,11 @@ def is_palindrom(string, pal):
         return None
 
     for i in range(len(string)):
-        for j in range(len(pal) - 1,-1,-1):
+        for j in range(len(pal) - 1, -1, -1):
             if string[i] == pal[i]:
                 return True
             return False
+
 ```
 
 <b>
@@ -744,6 +772,7 @@ def is_anagram(string,string2):
     if sorted(string) == sorted(string2):
         return True
     return False
+    
 ```
 
 ```python
@@ -773,7 +802,7 @@ def sort(lista):
 #Po wartościach
 
 def sort_dict_by_value(x):
-    return dict(sorted(x.items(), key=lambda item: item[1]))
+    return dict(sorted(x.items(), key = lambda item: item[1]))
 ```
 
 ```python
@@ -789,7 +818,7 @@ def sort_dict_by_key(x):
 #Po kluczach
 
 def sort_dict_by_key(x):
-    return dict(sorted(x.items(), key=lambda item: item[0]))
+    return dict(sorted(x.items(), key = lambda item: item[0]))
 ```
 <a name="pattern"/>
 
@@ -841,58 +870,64 @@ Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powo
 ```python
 # define coding dict
 morseEncode = {
-    'a': '.-',     'b': '-...',   'c': '-.-.',   ' ': '  ',
-    'd': '-..',    'e': '.',      'f': '..-.',   '': '',
-    'g': '--.',    'h': '....',   'i': '..',
-    'j': '.---',   'k': '-.-',    'l': '.-..',
-    'm': '--',     'n': '-.',     'o': '---',
-    'p': '.--.',   'q': '--.-',   'r': '.-.',
-    's': '...',    't': '-',      'u': '..-',
-    'v': '...-',   'w': '.--',    'x': '-..-',
-    'y': '-.--',   'z': '--..',   '1': '.----',
-    '2': '..---',  '3': '...--',  '4': '....-',
-    '5': '.....',  '6': '-....',  '7': '--...',
-    '8': '---..',  '9': '----.',  '0': '-----',
+    'a': '.-', 'b': '-...', 'c': '-.-.', ' ': '  ',
+    'd': '-..', 'e': '.', 'f': '..-.', '': '',
+    'g': '--.', 'h': '....', 'i': '..',
+    'j': '.---', 'k': '-.-', 'l': '.-..',
+    'm': '--', 'n': '-.', 'o': '---',
+    'p': '.--.', 'q': '--.-', 'r': '.-.',
+    's': '...', 't': '-', 'u': '..-',
+    'v': '...-', 'w': '.--', 'x': '-..-',
+    'y': '-.--', 'z': '--..', '1': '.----',
+    '2': '..---', '3': '...--', '4': '....-',
+    '5': '.....', '6': '-....', '7': '--...',
+    '8': '---..', '9': '----.', '0': '-----',
 }
 # swap coding table for decoding dict
-morseDecode = {val : key for key, val in morseEncode.items()}
+morseDecode = {val: key for key, val in morseEncode.items()}
 morseDecode.update({'_': ' '})
+
+
 # define coding function
-def morseCode(string, decode = False):
+def morseCode(string, decode=False):
     string = string.lower()
     output = ""
-    if not decode: # then encode
+    if not decode:  # then encode
         for char in string:
-            output += morseEncode.get(char, '') # print '*' for unexpected characters
+            output += morseEncode.get(char, '')  # print '*' for unexpected characters
             if char != ' ': output += ' '
     else:
         string = string.replace('  ', ' _ ')
         for char in string.split(' '):
-            output += morseDecode.get(char, '') # print '*' for unexpected codes
+            output += morseDecode.get(char, '')  # print '*' for unexpected codes
     return output
+
 
 # test
 string = "Keep learning"
 coded = morseCode(string)
 print("Coded:", coded)
-decoded = morseCode(coded, decode = True)
+decoded = morseCode(coded, decode=True)
 print("Decoded:", decoded)
+
 ```
 
 <a name="cezar"/>
 
 ## Szyfr Cezara [⬆️](#main)
 ```python
-def koduj(wiadomosc,klucz):
+def koduj(wiadomosc, klucz):
     wynik = ""
     wiadomosc = wiadomosc.upper().replace(" ", "")
     for i in wiadomosc:
         wynik += chr((ord(i) + klucz - 65) % 26 + 65)
     return wynik
 
-def dekoduj(wiadomosc,klucz):
+
+def dekoduj(wiadomosc, klucz):
     klucz *= -1
-    return koduj(wiadomosc,klucz)
+    return koduj(wiadomosc, klucz)
+
 ```
 
 <b>
@@ -907,16 +942,19 @@ Pseudocode
 
 ## Szyfr przestawieniowy [⬆️](#main)
 ```python
-tekst = "LA AAMK CORUAKB RUAKI P EIKS AIBSEKA" #jump =  1 to decrypt
-tekst = list(tekst)
-jump = 1
+tekst = "LA AAMK CORUAKB RUAKI P EIKS AIBSEKA"  # jump =  1 to decrypt
 
-def przes(lista):
-    for i in range(0,len(tekst)-2,2):
-        tekst[i],tekst[i+jump] = tekst[i+jump],tekst[i]
+
+def przes(tekst, jump=1):
+    tekst = list(tekst)
+    for i in range(0, len(tekst) - 2, 2):
+        tekst[i], tekst[i + jump] = tekst[i + jump], tekst[i]
     tekst = "".join(tekst)
     return tekst
-print(tekst)
+
+
+print(przes(tekst, jump=1))
+
 ```
 
 <b>
