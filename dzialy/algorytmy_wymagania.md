@@ -737,7 +737,8 @@ def isPalindrom(string):
             return True
         return False
     return isPalindrom(string[1:-1]) if string[0] == string[-1] else False
-
+    
+# This code is contributed by Pixel
 ```
 
 ```python
