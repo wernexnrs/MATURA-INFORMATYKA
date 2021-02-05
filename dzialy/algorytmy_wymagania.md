@@ -1,4 +1,4 @@
-<a name="main"/>
+<a name="main"/></a>
 
 <h1 align="center"> Algorytmy wymienione w wymaganiach </h1>
 
@@ -31,19 +31,15 @@
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) # indexy - do napisania
    - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania i rozwinięcie zagadnienia
-   
-      * Większości obiektów
-      * Słowników    
-      
+	- Większości obiektów
+	- Słowników    
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) # indexy - do napisania
    
 5. __algorytmy kompresji i szyfrowania__
 
-   * kody znaków o zmiennej długości,
-   
-      * [ ] [Kompresja danych](#len) # do napisania
-      * [x] [alfabet Morse’a](#morse)      
-      
+   - kody znaków o zmiennej długości,
+	- [ ] [Kompresja danych](#len) # do napisania
+	- [x] [alfabet Morse’a](#morse)        
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
 
