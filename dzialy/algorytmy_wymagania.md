@@ -29,7 +29,7 @@
 4. __algorytmy na tekstach__
 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) # indexy - do napisania
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
    - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania i rozwinięcie zagadnienia
 	 - Większości obiektów
 	 - Słowników    
@@ -728,7 +728,7 @@ def is_palindrom(string):
 ```
 
 ```python
-# Recursive approach
+# Recursive version
 
 def isPalindrom(string):
     if len(string) == 1:
@@ -742,6 +742,8 @@ def isPalindrom(string):
 ```
 
 ```python
+#Iterated version
+
 def is_palindrom(string, pal):
     if len(string) != len(pal):
         return None
@@ -776,7 +778,33 @@ def is_anagram(string,string2):
 ```
 
 ```python
-#wersja operująca jedynie na indeksach - do napisania
+string = "elivs"
+pattern = "lives"
+
+
+def sort_1(string):
+    string = list(string)
+    for i in range(len(string)):
+        for j in range(1, len(pattern)):
+            if string[j] < string[j - 1]:
+                string[j], string[j - 1] = string[j - 1], string[j]
+    return "".join(string)
+
+
+def is_anagram(string, pattern):
+    if len(string) != len(pattern):
+        return False
+
+    string = sort_1(string)
+    pattern = sort_1(pattern)
+    for i in range(len(string)):
+        if string[i] != pattern[i]:
+            return False
+        return True
+
+
+print(is_anagram(string, pattern))
+
 ```
 
 <b>
