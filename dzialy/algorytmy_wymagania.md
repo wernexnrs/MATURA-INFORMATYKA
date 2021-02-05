@@ -3,6 +3,7 @@
 <h1 align="center"> Algorytmy wymienione w wymaganiach </h1>
 
 1. __algorytmy na liczbach całkowitych:__ 
+
    - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
    - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
    - [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
@@ -10,27 +11,39 @@
    - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW,](#nwd) 
    - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
    - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)    
+   
 2. __algorytmy wyszukiwania i porządkowania (sortowania):__ 
+
    - [x] [bąbelkowy, ](#bob)
    - [x] [przez wybór, ](#wybor) 
    - [x] [przez wstawianie liniowe, ](#lin) 
    - [x] [przez scalanie,](#scalanie) # przydałoby się lepsze rozwiązanie
    - [x] [szybki,](#fast)
    - [x] [kubełkowy,](#box)  # przydałoby się lepsze rozwiązanie
+   
 3. __algorytmy numeryczne__
+
    - [x] [szybkie podnoszenie do potęgi,](#fast_power)
    - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
+   
 4. __algorytmy na tekstach__
+
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) # indexy - do napisania
    - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania i rozwinięcie zagadnienia
+   
       * Większości obiektów
       * Słowników    
+      
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) # indexy - do napisania
+   
 5. __algorytmy kompresji i szyfrowania__
+
    * kody znaków o zmiennej długości,
+   
       * [ ] [Kompresja danych](#len) # do napisania
       * [x] [alfabet Morse’a](#morse)      
+      
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
 
