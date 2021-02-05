@@ -38,8 +38,8 @@
 5. __algorytmy kompresji i szyfrowania__
 
    - kody znaków o zmiennej długości,
-	- [ ] [Kompresja danych](#len) # do napisania
-	- [x] [alfabet Morse’a](#morse)        
+	 * [ ] [Kompresja danych](#len) # do napisania
+	 * [x] [alfabet Morse’a](#morse)        
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
 
