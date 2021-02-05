@@ -523,7 +523,6 @@ Pseudocode
 <a name="fast"/>
 
 ## Sortowanie szybkie [⬆️](#main)
-Prostsze rozwiązanie, ogólnie to zamysłem szybkiego sortowania jest sortowanie w miejscu i niewykorzystywanie wbudowanych funkcji, to rozwiązanie może sie przydać na praktyczną cześć, nie teoretyczną. Zużywa więcej pamięci niż operowanie na indexach i jest dużo wolniejsze.
 
 ```python
 def quicksort(arr):
