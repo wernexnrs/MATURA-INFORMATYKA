@@ -24,9 +24,9 @@
 
 13. Maj 2016 Matura stara --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2016-maj-poziom-rozszerzony/)
 
-14. Czerwiec 2015 --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2015-czerwiec-poziom-rozszerzony/)
+14. [Czerwiec 2015](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2015-czerwiec-poziom-rozszerzony/)
 
-15. Maj 2015 --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2015-maj-poziom-rozszerzony/)
+15. [Maj 2015](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2015-maj-poziom-rozszerzony/)
 
 16. Maj 2015 Matura stara --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2015-maj-poziom-rozszerzony/) 
 
