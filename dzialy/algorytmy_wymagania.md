@@ -851,6 +851,8 @@ print(isAnagram(string, pattern))
 
 ## Porządkowanie alfabetyczne [⬆️](#main)
 
+Jeżeli mamy napis, którego litery mają być posortowane alfabetycznie, rzutujemy napis do listy i wykonujemy na liście sortowanie bąbelkowe, łączymy i gotowe.
+
 ### Większości obiektów
 ```python
 def sort(lista):
