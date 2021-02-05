@@ -30,7 +30,7 @@
 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-   - [x] [porządkowanie alfabetyczne,](#alfa) # mile widziane inne rozwiązania i rozwinięcie zagadnienia
+   - [x] [porządkowanie alfabetyczne,](#alfa)
 	 - Większości obiektów
 	 - Słowników    
    - [x] [wyszukiwanie wzorca w tekście,](#pattern) # indexy - do napisania
@@ -863,25 +863,23 @@ def sort(lista):
 ```python
 #Po wartościach
 
-def sort_dict_by_value(x):
-    return dict(sorted(x.items(), key = lambda item: item[1]))
+dict(sorted(x.items(), key = lambda item: item[1]))
 ```
 
 ```python
 #Po kluczach
 
-from collections import OrderedDict
+dict(sorted(x.items()))
 
-def sort_dict_by_key(x):
-   return OrderedDict(sorted(x.items()))
 ```
 
 ```python
 #Po kluczach
 
-def sort_dict_by_key(x):
-    return dict(sorted(x.items(), key = lambda item: item[0]))
+slownik = dict(sorted(x.items(), key=lambda item: item[0]))
+
 ```
+
 <a name="pattern"/>
 
 ## Wyszukiwanie wzorca w tekście [⬆️](#main)
