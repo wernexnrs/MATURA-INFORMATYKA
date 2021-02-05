@@ -815,6 +815,38 @@ Pseudocode
 
 </b>
 
+```python
+string = "asd"
+pattern = "das"
+
+
+def isIn(char, string):
+    charInside = False
+    for i in range(len(string)):
+        if char == string[i]:
+            charInside = True
+    return True if charInside else False
+
+
+def isAnagram(string, pattern):
+    if len(string) != len(pattern):
+        return False
+
+    for i in range(len(string)):
+        if not isIn(string[i], pattern):
+            return False
+
+    for i in range(len(pattern)):
+        if not isIn(pattern[i], string):
+            return False
+    return True
+
+
+print(isAnagram(string, pattern))
+
+# This code is contributed by Pixel
+```
+
 <a name="alfa"/>
 
 ## Porządkowanie alfabetyczne [⬆️](#main)
