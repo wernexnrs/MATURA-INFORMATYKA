@@ -89,13 +89,22 @@ def to_base(n, b):  # to_base(number,base)
 <b>
    
 ```
-Pseudocode
+n -> liczba
+b -> baza
+BS -> "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+def to_base(n, b):
+	Jeżeli n < b:
+		Zwróć BS[n]
+	W innym wypadku:
+		Zwróć to_base(n // b, b) + BS[n % b]
+	
 ```
 
 </b>
 
 ```python
-#iterated version DEC --> ANY
+#iterated version witch slices DEC --> ANY
 
 BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -109,10 +118,60 @@ def to_base(n, b):
 
 ```
 
+```python
+BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+def to_base(n, b):
+    size = 0
+    res = []
+    end = ""
+    while n:
+        res += BS[n % b]
+        n //= b
+        size += 1
+
+    j = size - 1
+    for i in range(j):
+        temp = res[i]
+        res[i] = res[j]
+        res[j] = temp
+
+    for i in range(size):
+        end += res[i]
+    return end
+
+
+print(to_base(8, 2))
+
+```
+
 <b>
    
 ```
-Pseudocode
+n -> liczba
+b -> baza
+BS -> "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+res -> ""
+end -> []
+size -> 0
+
+def to_base(n, b):
+	Dopóki n != 0:
+		res += BS[n % b]
+        	n //= b
+        	size += 1
+    	j = size - 1
+	
+	Dla i = 1,2, ..., j
+		temp = res[i]
+        	res[i] = res[j]
+        	res[j] = temp
+	
+	Dla i = 1,2, ..., size
+		end += res[i]
+	Zwróć end
+
 ```
 
 </b>
