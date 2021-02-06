@@ -89,8 +89,6 @@ def to_base(n, b):  # to_base(number,base)
 <b>
    
 ```
-n -> liczba
-b -> baza
 BS -> "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def to_base(n, b):
@@ -104,21 +102,8 @@ def to_base(n, b):
 </b>
 
 ```python
-#iterated version witch slices DEC --> ANY
+#iterated version DEC --> ANY
 
-BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-
-def to_base(n, b):
-    res = ""
-    while n:
-        res += BS[n % b]
-        n //= b
-    return res[::-1]
-
-```
-
-```python
 BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
@@ -149,32 +134,45 @@ print(to_base(8, 2))
 <b>
    
 ```
-n -> liczba
-b -> baza
-BS -> "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-res -> ""
-end -> []
-size -> 0
+BS <- "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+res <- ""
+end <- []
+size <- 0
 
 def to_base(n, b):
 	Dopóki n != 0:
 		res += BS[n % b]
-        	n //= b
-        	size += 1
-    	j = size - 1
+        	n <- n div b # dzielenie całkowite
+        	size++
+    	j <- size - 1
 	
 	Dla i = 1,2, ..., j
-		temp = res[i]
-        	res[i] = res[j]
-        	res[j] = temp
+		temp <- res[i]
+        	res[i] <- res[j]
+        	res[j] <- temp
 	
 	Dla i = 1,2, ..., size
-		end += res[i]
+		end <- end + res[i]
 	Zwróć end
 
 ```
 
 </b>
+
+```python
+#iterated version with slices DEC --> ANY
+
+BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+def to_base(n, b):
+    res = ""
+    while n:
+        res += BS[n % b]
+        n //= b
+    return res[::-1]
+
+```
 
 <a name="is_prime"/>
 
@@ -193,7 +191,7 @@ def is_prime(x):
 <b>
    
 ```
-A = [1,2 … n]
+A <- [1,2 … n]
 
 Dla i = 1,2 … n
 	Jeżeli i > 1
@@ -230,9 +228,9 @@ A = [1,2 … n]
 Dla i = 1,2 … n
 	s <- 1
 	Dla  j = [2, 3, n]
-		Jeżeli i mod j -> 0
+		Jeżeli i mod j == 0
 			s <- s + 1
-	Jeżeli n -> s oraz n != 1
+	Jeżeli n == s oraz n != 1
 		Zwróć Prawde
 	Zwróć Fałsz
 ```
@@ -259,13 +257,13 @@ def prime_factors(n):
 n = liczba całkowita
 div - operator dzielenia całkowitego
 
-k = 2
+k <- 2
 
 Dopóki n != 1
-	Dopóki n mod k -> 0
-		n -> n div k
+	Dopóki n mod k == 0
+		n <- n div k # dzielenie całkowite
 		Wypisz k
-	k += 1
+	k++
 ```
 
 </b>
@@ -323,9 +321,10 @@ b - liczba całkowita
 
 def nwd(a, b):
 	Dopóki b != 0
-		t = a
-		a = b
-		b = t mod b 
+		t <- a
+		a <- b
+		b <- t mod b 
+	Zwróć a
 ```
 
 </b>
@@ -367,14 +366,14 @@ def f(n):
 <b>
    
 ```
-a -> 0
-b -> 1
+a <- 0
+b <- 1
 n - n'ty wyraz ciągu 
 
 Dla i = 1,2 ... n
-	t = a
-	a = b
-	b = t + b
+	t <- a
+	a <- b
+	b <- t + b
 ```
 
 </b>
@@ -433,7 +432,21 @@ print(wydawanie(do_wydania, monety))
 <b>
    
 ```
-Pseudocode
+do_wydania <- 6
+monety <- [1, 2, 5]
+count <- 0
+historia <- []
+
+Dopóki do_wydania > 0:
+	nominal <- 0
+	
+	Dla i = 1,2,3, ... , rozmiar tablicy (bedzie podany, najczesciej n)
+		Jeżeli do_wydania >= monety[i] > nominal:
+			nominal <- monety[i]
+			historia[i] <- nominal
+		do_wydania <- do_wydania - nominal
+		count++
+		
 ```
 
 </b>
@@ -460,9 +473,9 @@ A = [1,2 … n]
 Dla i = 1,2 … n
 	Dla j = 1,2 ... n – i – 1
 		Jeżeli A[j] > A[j + 1]
-			t = A[j + 1] 
-			A[j + 1] = A[j]
-			A[j] = t
+			t <- A[j + 1] 
+			A[j + 1] <- A[j]
+			A[j] <- t
 ```
 
 </b>
@@ -486,17 +499,17 @@ def selection_sort(tab):
 <b>
    
 ```
-A = [1,2 … n]
-n - ilość liczb
+A <- [1,2 … n]
+n <- ilość liczb
 
 Dla i = 1,2 … n
 	mini = i
 	Dla j = i+1, ... n
 		Jeżeli A[mini] > A[j]
-			mini = j
-	t = A[i]
-	A[i] = A[mini]
-	A[mini] = t
+			mini <- j
+	t <- A[i]
+	A[i] <- A[mini]
+	A[mini] <- t
 ```
 
 </b>
@@ -521,16 +534,16 @@ def insertion_sort(A):
 <b>
    
 ```
-n -> liczba całkowita
-A -> [1,2 ... n]
+n <- liczba całkowita
+A <- [1,2 ... n]
 
 Dla i = 1, 2, ... , n
-	liczba = A[i]
+	liczba <- A[i]
 	
 	Dopóki i > 0 oraz A[i - 1] > liczba
-		A[i] -> A[i - 1]
-		i -> i - 1
-	A[i] = liczba
+		A[i] <- A[i - 1]
+		i <- i - 1
+	A[i] <- liczba
 ```
 
 </b>
@@ -604,7 +617,31 @@ arr = [60, 20, 11, 122, 214, 345, 1324, 1, 2, 3, 6, 74, 3, 9]
 
 print(quicksort(arr))
 
+# This code is contributed by Pixel
 ```
+
+<b>
+	
+```
+n <- wielkosć tablicy
+
+def qs(arr)
+    Jeżeli n <= 1:
+        Zwróc arr
+
+    less <- []
+    greater <- []
+    pivot <- n div 2 # dzielenie całkowite
+
+    Dla x = 1,2,3, ... , n
+        Jeżeli x <= pivot
+            less[x] <- arr[x]
+        W innym wypadku
+            greater[x] <- arr[x]
+    Zwróć qs(less) + [pivot] + qs(greater)
+```
+
+</b>
 
 ```python
 # In place
