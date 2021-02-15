@@ -263,7 +263,7 @@ Dopóki n != 1
 	Dopóki n mod k == 0
 		n <- n div k # dzielenie całkowite
 		Wypisz k
-	k++
+	k <- k + 1
 ```
 
 </b>
@@ -445,7 +445,7 @@ Dopóki do_wydania > 0:
 			nominal <- monety[i]
 			historia[i] <- nominal
 		do_wydania <- do_wydania - nominal
-		count++
+		count <- count + 1
 		
 ```
 
@@ -504,7 +504,7 @@ n <- ilość liczb
 
 Dla i = 1,2 … n
 	mini = i
-	Dla j = i+1, ... n
+	Dla j = i + 1, ... n
 		Jeżeli A[mini] > A[j]
 			mini <- j
 	t <- A[i]
@@ -744,12 +744,12 @@ Pseudocode
 #Iterated version
 
 def fast_power(base, power):
-    result, mod = 1, 1000000007
+    result, m = 1, 1000000007
     while power > 0:
         if power % 2 == 1:
-            result = (result * base) % mod
+            result = (result * base) % m
         power //= 2
-        base = (base * base) % mod
+        base = (base * base) % m
     return result
 
 ```
@@ -757,7 +757,19 @@ def fast_power(base, power):
 <b>
    
 ```
-Pseudocode
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def fast_power(base,power):
+	result <- 1
+	mod <- 1000000007
+	Dopóki power > 0:
+		Jeżeli power mod 2 == 1:
+			result <- (result * base) mod m
+		power <- power div 2
+		base = (base * base) mod m
+	Zwróć result
+	
 ```
 
 </b>
@@ -786,14 +798,6 @@ def bisection(a, b, precyzja=0.0001):
     return c
 
 ```
-
-<b>
-   
-```
-Pseudocode
-```
-
-</b>
 
 <a name="palindrom"/>
 
@@ -855,7 +859,13 @@ def is_palindrom(string, pal):
 <b>
    
 ```
-Pseudocode
+def is_palindrom(string, pal):
+	Dla i = 1, 2, ... n
+		Dla j = n, n-1, n-2 ... n-n
+			Jeżeli string[i] == pal[i]
+				Zwróć Prawdę
+			W innym wypadku
+				Zwróc Fałsz
 ```
 
 </b>
