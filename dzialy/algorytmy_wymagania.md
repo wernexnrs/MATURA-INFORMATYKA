@@ -1084,7 +1084,7 @@ print("Decoded:", decoded)
 ```python
 def koduj(wiadomosc, klucz):
     wynik = ""
-    wiadomosc = wiadomosc.upper().replace(" ", "")
+    wiadomosc = wiadomosc.upper().strip().replace(" ", "")
     for i in wiadomosc:
         wynik += chr((ord(i) + klucz - 65) % 26 + 65)
     return wynik
