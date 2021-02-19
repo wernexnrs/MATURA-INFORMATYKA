@@ -1,11 +1,8 @@
 <h1 align="center"> Zadania z arkuszy </h1>
 
-Zbiór zadań od CKE - > * <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">Arkusz</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">dane</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip">rozwiązania</a>
+Zbiór zadań od CKE - > <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">Arkusz</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">dane</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip">rozwiązania</a>
 
 1. [Zadanie 58. Wiązka zadań Systemy liczbowe - str. 106](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md)
-
-
-1. [Czerwiec 2020](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec.md) - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
 
 Matura
 
