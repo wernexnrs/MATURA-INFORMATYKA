@@ -7,27 +7,33 @@ Bardzo proszę o wnoszenie poprawek.<br>
 Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.<br>
 Polecam ciemny motyw github'a</b></p>
 
-## Przydatne linki
+# Przydatne linki
 
-  > * <a href="https://pl.spoj.com/">POLSKI SPOJ</a> - pełno problemów algorytmicznych do rozwiązania
-  > * <a href="https://discord.gg/3hyj3kXQkt">DISCORD MATURALNY</a>
-  > * <a href="http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Informatory/2015/aneks/Aneks_2021_informatyka_EM_niewidomi.pdf">Wymagania maturalne</a>
-  > * <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">Arkusz</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">dane</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip">rozwiązania</a> - Zadania do ćwiczeń od CKE
-  > * <a href="https://cke.gov.pl/egzamin-maturalny/egzamin-w-nowej-formule/materialy-dodatkowe/probny-egzamin/informatyka-poziom-rozszerzony/">Próbne egzaminy</a>
-  > * <a href="https://arkusze.pl/informatyka-matura-poziom-rozszerzony/">Wszystkie arkusze</a>
-  > * <a href="https://docs.python.org/3/">Dokumentacja pythona</a>
-  > * <a href="https://www.w3schools.com/python/default.asp">Zagadnienia z pythona w przystępnej formie</a>
-  > * <a href="https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/">EXCEL</a> - wprowadzenie i troszke teorii
-  > * <a href="https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/">Python</a> - wprowadzenie i troszke teorii
-  > * <a href="https://calculatic.pl/poradnik/podstawowe-funkcje-excela/">EXCEL</a> - podstawowe funkcje
-  > * <a href="http://pythontutor.com/">Tutor</a> - wizualizacja kodu
+* [POLSKI SPOJ](https://pl.spoj.com/) - pełno problemów algorytmicznych do rozwiązania
+* [DISCORD MATURALNY](https://discord.gg/3hyj3kXQkt)
+* [Wymagania maturalne na rok 2021](http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Informatory/2015/aneks/Aneks_2021_informatyka_EM_niewidomi.pdf)
+* [Arkusz](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf) -- [dane](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip) -- [rozwiązania](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip) - Zadania do ćwiczeń od CKE
+* [Próbne egzaminy](https://cke.gov.pl/egzamin-maturalny/egzamin-w-nowej-formule/materialy-dodatkowe/probny-egzamin/informatyka-poziom-rozszerzony/)
+* [Wszystkie arkusze](https://arkusze.pl/informatyka-matura-poziom-rozszerzony/)
+* [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
+* [Tutor](http://pythontutor.com/) - wizualizacja kodu
+  
+# EXCEL
 
-# TOC
-> 1. [Algorytmy wymienione w wymaganiach](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-> 2. [Zadania z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
-> 3. [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
-> 4. [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
-> 5. [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
-> 6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
-> 7. [EXCEL](https://support.microsoft.com/pl-pl/office/funkcje-programu-excel-wed%C5%82ug-kategorii-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb) - Wszystkie funkcje
-> 8. [ACCESS](https://support.microsoft.com/pl-pl/access) - Info
+* [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
+* [Podstawowe funkcje](https://calculatic.pl/poradnik/podstawowe-funkcje-excela/)
+* [Wszystkie funkcje](https://support.microsoft.com/pl-pl/office/funkcje-programu-excel-wed%C5%82ug-kategorii-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb)
+
+# ACCESS
+
+* [Informacje](https://support.microsoft.com/pl-pl/access)
+ 
+# PYTHON
+
+1. [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
+2. [Zadania z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+3. [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+4. [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
+5. [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
+6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
+7. [Dokumentacja pythona](https://docs.python.org/3/)
