@@ -1,5 +1,7 @@
 <h1 align="center"> 🔥 <a href="https://discord.com/users/596478466849767475/">Wernex#9840</a> 🔥 </h1>
 
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=wernexnrs)](https://github.com/anuraghazra/github-readme-stats)
+
 <h1 align="center"> MATURA 2021 </h1>
 
 <p align="center"><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. <br>
@@ -7,7 +9,7 @@ Bardzo proszę o wnoszenie poprawek.<br>
 Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.<br>
 Polecam ciemny motyw github'a</b></p>
 
-# Przydatne linki
+## Przydatne linki
 
 * [POLSKI SPOJ](https://pl.spoj.com/) - pełno problemów algorytmicznych do rozwiązania
 * [DISCORD MATURALNY](https://discord.gg/3hyj3kXQkt)
@@ -18,17 +20,17 @@ Polecam ciemny motyw github'a</b></p>
 * [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
 * [Tutor](http://pythontutor.com/) - wizualizacja kodu
   
-# EXCEL
+## EXCEL
 
 * [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
 * [Podstawowe funkcje](https://calculatic.pl/poradnik/podstawowe-funkcje-excela/)
 * [Wszystkie funkcje](https://support.microsoft.com/pl-pl/office/funkcje-programu-excel-wed%C5%82ug-kategorii-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb)
 
-# ACCESS
+## ACCESS
 
 * [Informacje](https://support.microsoft.com/pl-pl/access)
  
-# PYTHON
+## PYTHON
 
 1. [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
 2. [Zadania z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
@@ -37,3 +39,6 @@ Polecam ciemny motyw github'a</b></p>
 5. [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
 6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
 7. [Dokumentacja pythona](https://docs.python.org/3/)
+
+## Licencja 
+Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
