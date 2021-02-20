@@ -1,7 +1,5 @@
 <h1 align="center"> 🔥 <a href="https://discord.com/users/596478466849767475/">Wernex#9840</a> 🔥 </h1>
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=wernexnrs)](https://github.com/anuraghazra/github-readme-stats)
-
 <h1 align="center"> MATURA 2021 </h1>
 
 <p align="center"><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. <br>
