@@ -23,7 +23,6 @@
     - [x] [Średnia ważona](#waz) 
     - [x] [Średnia geometryczna](#geo)
     - [x] [Wariancja i odchylenie standardowe](#odchylenie) 
-    - [x] [Potęgowanie](#power) 
 
 4. __algorytmy na tekstach__
 
