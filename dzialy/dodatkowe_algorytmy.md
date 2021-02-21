@@ -266,6 +266,9 @@ def moda(lista):
 
 ## Mediana [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def mediana(lista):
     for i in range(len(lista)):
@@ -284,10 +287,15 @@ def mediana(lista):
  ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/mediana.png)
 
+</details>
+
 <a name="ary"/>
 
 ## Średnia arytmetyczna [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def srednia(x):
     return sum(x)/len(x)
@@ -295,11 +303,16 @@ def srednia(x):
  
  ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/srednia.png)
- 
+
+</details>
+
 <a name="waz"/>
 
 ## Średnia ważona [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def srednia(lista, wagi):
     wynik = sum((i * j for i, j in zip(lista, wagi))) / sum(wagi)
@@ -309,11 +322,16 @@ def srednia(lista, wagi):
  
 ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/srednia_wazona.png)
- 
+
+</details>
+
  <a name="geo"/>
 
 ## Średnia geometryczna [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def srednia(lista):
     wynik = 1
@@ -326,10 +344,15 @@ def srednia(lista):
  ### Ze wzoru:
 ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/d97e78adc3acddf0b54ed5624ab2ceff2057bf40)
 
+</details>
+
 <a name="odchylenie"/>
 
 ## Wariancja i odchylenie standardowe [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def odchylenie(lista):
     return sum(i ** 2 for i in lista) / len(lista) - (sum(lista) / len(lista)) ** 2
@@ -339,3 +362,4 @@ def odchylenie(lista):
 ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/wariancja.png)
  
+</details>
