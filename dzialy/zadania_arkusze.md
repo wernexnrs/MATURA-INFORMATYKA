@@ -2,10 +2,13 @@
 
 ## Zbiór zadań od CKE - > <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">Arkusz</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">dane</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip">rozwiązania CPP</a>
 
-1. [Zadanie 58. Wiązka zadań Systemy liczbowe - str. 106](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md)
+1. [Zadanie 58. Systemy liczbowe - str. 106](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md)
 
-2. [Zadanie 59. Wiązka zadań Ciekawe liczby - str. 112](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/59.md)
+2. [Zadanie 59. Ciekawe liczby - str. 112](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/59.md)
 
+3. [Zadanie 60. Dzielniki  - str. 117](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md)
+
+4. [Zadanie 61. Ciągi arytmetyczne - str. 118](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/61.md)
 ## Matura
 
 1. [Czerwiec 2020](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec.md) - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
