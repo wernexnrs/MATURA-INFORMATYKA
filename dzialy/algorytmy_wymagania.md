@@ -43,6 +43,8 @@
    - [x] [szyfr Cezara,](#cezar)
    - [ ] [szyfr przestawieniowy,](#przes) # do napisania
 
+### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
+
 <a name="konwersja"/>
 
 ## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main) 
