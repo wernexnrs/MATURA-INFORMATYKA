@@ -45,8 +45,13 @@
 
 <a name="konwersja"/>
 
-## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main)
 
+	
+## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main) 
+<details>
+	
+<summary>Rozwiń</summary>
+	
 ```python
 #int("number_string",base) ANY --> DEC
 
@@ -173,6 +178,8 @@ def to_base(n, b):
     return res[::-1]
 
 ```
+
+</details>
 
 <a name="is_prime"/>
 
