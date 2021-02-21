@@ -37,10 +37,10 @@
    * __type()__ -> Zwraca klase zmiennej
    * __reversed()__ -> Zwraca odwróconą listę
    * __eval()__ -> Jeżeli string w zmiennej jest poprawnym kodem pythona wykonuje go
-   * __iter()__ -> 
-   * __next()__ -> 
+   * __iter()__ -> Tworzy iterator
+   * __next()__ -> Zwraca kolejny element iteratora
    * __divmod()__ -> Zwraca krotke dzielnia i reszte z tego dzielenia 
-   * __enumerate()__ -> 
+   * __enumerate(iterable, start=0)__ -> Zwraca krotke ponumerowanych elementów
    * __isinstance()__ -> Zwraca prawde jeżeli dany obiekt jest danego typu
    * __filter()__ -> Zwraca iterator funkcji, która zwraca true/false. Jeżeli true filtruje obiekt zgodnie z wartościami z funkcji.
    * __callable()__ -> Zwraca prawde jeżeli obiekt jest gotowy do wywołania
