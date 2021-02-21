@@ -30,10 +30,10 @@
 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-   - [x] [porządkowanie alfabetyczne,](#alfa)
-	 - Większości obiektów
-	 - Słowników    
-   - [x] [wyszukiwanie wzorca w tekście,](#pattern) # indexy - do napisania
+   - [ ] [porządkowanie alfabetyczne,](#alfa) # do napisania
+	 - Większości obiektów # do napisania
+	 - Słowników # do napisania
+   - [ ] [wyszukiwanie wzorca w tekście,](#pattern) # do napisania
    
 5. __algorytmy kompresji i szyfrowania__
 
@@ -41,12 +41,10 @@
 	 * [ ] [Kompresja danych](#len) # do napisania
 	 * [x] [alfabet Morse’a](#morse)        
    - [x] [szyfr Cezara,](#cezar)
-   - [x] [szyfr przestawieniowy,](#przes)
+   - [ ] [szyfr przestawieniowy,](#przes) # do napisania
 
 <a name="konwersja"/>
 
-
-	
 ## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main) 
 <details>
 	
@@ -107,64 +105,6 @@ def to_base(n, b):
 </b>
 
 ```python
-#iterated version DEC --> ANY
-
-BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-
-def to_base(n, b):
-    size = 0
-    res = []
-    end = ""
-    while n:
-        res += BS[n % b]
-        n //= b
-        size += 1
-
-    j = size - 1
-    for i in range(j):
-        temp = res[i]
-        res[i] = res[j]
-        res[j] = temp
-
-    for i in range(size):
-        end += res[i]
-    return end
-
-
-print(to_base(8, 2))
-
-```
-
-<b>
-   
-```
-BS <- "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-res <- ""
-end <- []
-size <- 0
-
-def to_base(n, b):
-	Dopóki n != 0:
-		res += BS[n % b]
-        	n <- n div b # dzielenie całkowite
-        	size++
-    	j <- size - 1
-	
-	Dla i = 1,2, ..., j
-		temp <- res[i]
-        	res[i] <- res[j]
-        	res[j] <- temp
-	
-	Dla i = 1,2, ..., size
-		end <- end + res[i]
-	Zwróć end
-
-```
-
-</b>
-
-```python
 #iterated version with slices DEC --> ANY
 
 BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -184,6 +124,11 @@ def to_base(n, b):
 <a name="is_prime"/>
 
 ## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 def is_prime(x):
     if x > 1:
@@ -212,9 +157,16 @@ Dla i = 1,2 … n
 
 </b>
 
+</details>
+
 <a name="is_perfect"/>
 
 ## Sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 def is_perfect(n):
     s = 1
@@ -244,9 +196,17 @@ Dla i = 1,2 … n
 
 </b>
 
+
+</details>
+
 <a name="prime_factors"/>
 
 ## Rozkładanie liczby na czynniki pierwsze [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 def prime_factors(n):
     k = 2
@@ -275,10 +235,16 @@ Dopóki n != 1
 
 </b>
 
+</details>
 
 <a name="nwd"/>
 
 ## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #recursive one-liner version
 
@@ -356,9 +322,16 @@ def nww(a, b):
 
 </b>
 
+</details>
+
 <a name="fib"/>
 
 ## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #Iterated version
 
@@ -407,9 +380,16 @@ def f(n)
 
 </b>
 
+</details>
+
 <a name="zachlanna"/>
 
 ## Wydawanie reszty metodą zachłanną [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 do_wydania = 6
 monety = [1, 2, 5]
@@ -458,9 +438,16 @@ Dopóki do_wydania > 0:
 
 </b>
 
+</details>
+
 <a name="bob"/>
 
 ## Sortowanie bąbelkowe [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #In place
 
@@ -487,9 +474,16 @@ Dla i = 1,2 … n
 
 </b>
 
+</details>
+
 <a name="wybor"/>
 
 ## Sortowanie przez wybór [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #In place
 
@@ -521,9 +515,16 @@ Dla i = 1,2 … n
 
 </b>
 
+</details>
+
 <a name="lin"/>
 
 ## Sortowanie przez wstawianie liniowe [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #In place
 
@@ -554,6 +555,8 @@ Dla i = 1, 2, ... , n
 ```
 
 </b>
+
+</details>
 
 <a name="scalanie"/>
 
@@ -603,6 +606,10 @@ Pseudocode
 
 ## Sortowanie szybkie [⬆️](#main)
 
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 def quicksort(arr):
     if len(arr) <= 1:
@@ -650,45 +657,7 @@ def qs(arr)
 
 </b>
 
-```python
-# In place
-
-def partition(arr, low, high):
-    i = low - 1
-    pivot = arr[high]
-
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
-
-
-def quicksort(arr, low, high):
-    if len(arr) == 1:
-        return arr
-
-    if low < high:
-        pi = partition(arr, low, high)
-        quicksort(arr, low, pi - 1)
-        quicksort(arr, pi + 1, high)
-
-
-arr = [10, 7, 8, 9, 1, 5]
-quicksort(arr, 0, len(arr) - 1)
-print(arr)
-
-```
-
-<b>
-   
-```
-Pseudocode
-```
-
-</b>
+</details>
 
 <a name="box"/>
 
@@ -747,6 +716,10 @@ Pseudocode
 
 ## Szybkie podnoszenie do potęgi [⬆️](#main)
 
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #Iterated version
 
@@ -779,11 +752,14 @@ def fast_power(base,power):
 	
 ```
 
+</details>
+	
 </b>
 
 <a name="bisekcja"/>
 
 ## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
+
 ```python
 def f(x):
     return -4 * x + 2
@@ -806,9 +782,22 @@ def bisection(a, b, precyzja=0.0001):
 
 ```
 
+<b>
+   
+```
+Pseudocode
+```
+
+</b>
+
 <a name="palindrom"/>
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #With list and slices
 
@@ -876,6 +865,8 @@ def is_palindrom(string, pal):
 ```
 
 </b>
+
+</details>
 
 <a name="anagram"/>
 
@@ -960,51 +951,6 @@ print(isAnagram(string, pattern))
 # This code is contributed by Pixel
 ```
 
-<a name="alfa"/>
-
-## Porządkowanie alfabetyczne [⬆️](#main)
-
-Jeżeli mamy napis, którego litery mają być posortowane alfabetycznie, rzutujemy napis do listy i wykonujemy na liście sortowanie bąbelkowe, łączymy i gotowe.
-
-### Większości obiektów
-```python
-def sort(lista):
-    return sorted(lista)
-```
-
-### Słowników
-```python
-#Po wartościach
-
-dict(sorted(x.items(), key = lambda item: item[1]))
-```
-
-```python
-#Po kluczach
-
-dict(sorted(x.items()))
-
-```
-
-```python
-#Po kluczach
-
-slownik = dict(sorted(x.items(), key=lambda item: item[0]))
-
-```
-
-<a name="pattern"/>
-
-## Wyszukiwanie wzorca w tekście [⬆️](#main)
-```python
-def is_pattern(pattern,word):
-    return pattern in word
-```
-
-```python
-#Wersja operująca jedynie na indeksach - do napisania
-```
-
 <b>
    
 ```
@@ -1012,6 +958,18 @@ Pseudocode
 ```
 
 </b>
+
+<a name="alfa"/>
+
+## Porządkowanie alfabetyczne [⬆️](#main)
+
+zaraz opracuje
+
+<a name="pattern"/>
+
+## Wyszukiwanie wzorca w tekście [⬆️](#main)
+
+zaraz opracuje
 
 <a name="len"/>
 
@@ -1040,6 +998,11 @@ Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powo
 <a name="morse"/>
 
 ## Alfabet Morse’a [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 # define coding dict
 morseEncode = {
@@ -1083,8 +1046,11 @@ print("Coded:", coded)
 decoded = morseCode(coded, decode=True)
 print("Decoded:", decoded)
 
+# This code is contributed by Pixel
 ```
 
+</details>
+	
 <a name="cezar"/>
 
 ## Szyfr Cezara [⬆️](#main)
@@ -1128,6 +1094,10 @@ def przes(tekst, jump=1):
 
 print(przes(tekst, jump=1))
 
+```
+
+```python
+wersja na teorie
 ```
 
 <b>
