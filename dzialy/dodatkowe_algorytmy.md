@@ -1,14 +1,21 @@
 <h1 align="center">  Dodatkowe algorytmy </h1>
+1. __algorytmy na liczbach całkowitych:__ 
 
   - [x] [Czy liczba jest parzysta](#even)
   - [x] [Czy liczba jest podzielna przez n bez reszty](#n)
-  - [x] [Czy liczba jest wielokrotnością n](#multiple)
+  - [x] [Czy liczba jest wielokrotnością n](#multiple)   
+
+2. __algorytmy wyszukiwania i porządkowania (sortowania):__ 
+
+  - [x] [Krotność](#kro)  
+
+3. __algorytmy numeryczne__
+
   - [x] [Silnia (n)](#factorial)
   - [x] [Pierwiastek kwadratowy](#sqrt)
   - [x] [Pierwiastek n-tego stopnia](#sqrt2)  
   - [x] [Suma liczb od a do b](#suma)
   - [x] [Iloczyn liczb od a do b](#iloczyn)  
-  - [x] [Krotność](#kro)  
   - [x] [Moda](#moda)  
   - [x] [Mediana](#med) 
   - [x] [Średnia arytmetyczna](#ary) 
@@ -16,6 +23,14 @@
   - [x] [Średnia geometryczna](#geo)
   - [x] [Wariancja i odchylenie standardowe](#odchylenie) 
   - [x] [Potęgowanie](#power) 
+
+4. __algorytmy na tekstach__
+   .......
+5. __algorytmy kompresji i szyfrowania__
+   .......
+   - kody znaków o zmiennej długości,
+      .......
+
   
 <a name="even"/>
 
