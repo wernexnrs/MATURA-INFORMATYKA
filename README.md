@@ -30,11 +30,15 @@ Polecam ciemny motyw github'a</b></p>
 * [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
 * [Podstawowe funkcje](https://calculatic.pl/poradnik/podstawowe-funkcje-excela/)
 * [Wszystkie funkcje](https://support.microsoft.com/pl-pl/office/funkcje-programu-excel-wed%C5%82ug-kategorii-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb)
+* [Kurs z podstaw](https://www.youtube.com/playlist?list=PL16E33B75DED3E944)
+* [Kurs "do matury"](https://www.youtube.com/playlist?list=PLKmH7u1gA9hr0U59uCEDhr_G2Yn2yV0M5)
 
 ## :orange_book: ACCESS
 
 * [Informacje](https://support.microsoft.com/pl-pl/access)
 * [w3schools - SQL](https://www.w3schools.com/sql/) - Zagadnienia w przystępnej formie
+* [Niepełny kurs "do matury"](https://www.youtube.com/playlist?list=PLKmH7u1gA9hpm3ZqWhsn2XvGAeX3b9SM0)
+* [Kurs "do matury"](https://www.youtube.com/playlist?list=PLiG7bZwihoShBM1xR0K_st-QyxJyq5iWl)
  
 ## :blue_book: PYTHON
 
