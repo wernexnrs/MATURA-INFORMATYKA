@@ -22,7 +22,6 @@ Polecam ciemny motyw github'a</b></p>
 * [Arkusz](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf) -- [dane](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip) -- [rozwiązania](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip) - Zadania do ćwiczeń od CKE
 * [Próbne egzaminy](https://cke.gov.pl/egzamin-maturalny/egzamin-w-nowej-formule/materialy-dodatkowe/probny-egzamin/informatyka-poziom-rozszerzony/)
 * [Wszystkie arkusze](https://arkusze.pl/informatyka-matura-poziom-rozszerzony/)
-* [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
 * [Tutor](http://pythontutor.com/) - wizualizacja kodu
   
 ## :green_book: EXCEL
@@ -49,7 +48,7 @@ Polecam ciemny motyw github'a</b></p>
 5. [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
 6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
 7. [Dokumentacja pythona](https://docs.python.org/3/)
-
+8. [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
 ## :copyright: Licencja 
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
 
