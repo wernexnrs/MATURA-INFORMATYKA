@@ -256,7 +256,7 @@ def moda(lista):
  
 ```python
  def moda(lista):
-    return max(set(lista), key=lista.count)
+    return max(set(lista), key = lista.count)
  ``` 
  
 </details>
@@ -299,6 +299,16 @@ def mediana(lista):
 def srednia(x):
     return sum(x)/len(x)
  ```
+
+```python
+def srednia(x):
+    count = 0
+    licznik = 0
+    for i in range(len(x)):
+        count += 1
+        licznik += x[i]
+    return licznik/count
+ ```
  
  ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/srednia.png)
@@ -316,6 +326,17 @@ def srednia(x):
 def srednia(lista, wagi):
     wynik = sum((i * j for i, j in zip(lista, wagi))) / sum(wagi)
     return wynik
+
+ ```
+
+```python
+def srednia(lista, wagi):
+    wynik_wagi = 0
+    wynik = 0
+    for i in range(len(wagi)):
+        wynik_wagi += wagi[i]
+        wynik += lista[i] * wagi[i]
+    return wynik/wynik_wagi
 
  ```
  
@@ -353,11 +374,31 @@ def srednia(lista):
   <summary>Rozwiń</summary>
     
 ```python
-def odchylenie(lista):
+def wariancja(lista):
     return sum(i ** 2 for i in lista) / len(lista) - (sum(lista) / len(lista)) ** 2
 
 ```
- 
+
+```python
+def srednia(x):
+    count = 0
+    licznik = 0
+    for i in range(len(x)):
+        count += 1
+        licznik += x[i]
+    return licznik / count
+
+
+def wariancja2(lista):
+    n = 0
+    suma = 0
+    for i in range(len(lista)):
+        n += 1
+        suma += lista[i] ** 2
+    return suma / n - srednia(lista) ** 2
+
+```
+
 ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/wariancja.png)
  
