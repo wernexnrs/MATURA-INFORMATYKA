@@ -41,6 +41,10 @@
 <a name="even"/>
 
 ## Czy liczba jest parzysta [⬆️](#main)
+
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def is_even(x):
    if x % 2 == 0:
@@ -48,38 +52,50 @@ def is_even(x):
    return False
 ```
 
+</details>
+    
 <a name="n"/>
 
 ## Czy liczba jest podzielna przez n bez reszty [⬆️](#main)
+
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def divisible(x,n):
-   if x%n == 0:
+   if x % n == 0:
       return True
    return False
 ```
+
+</details>
 
 <a name="multiple"/>
 
 ## Czy liczba jest wielokrotnością n [⬆️](#main)
+
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
-numbers = []
 
-def x_range(n):
-    for i in range(n):
-        numbers.append(i)
-    return numbers
-
-def is_multiple(x,n):
-   if x in x_range(n):
-      return True
-   return False
-
+def is_multiple2(x,n):
+    if n % x == 0:
+        return True
+    return False
+    
 print(is_multiple(3,333))
 ```
+
+</details>
 
 <a name="factorial"/>
 
 ## Silnia (n) [⬆️](#main)
+
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 from math import factorial
 
@@ -91,8 +107,8 @@ print(factorial(5))
 
 def fact(n):
    factorial = 1
-   if int(n) >= 1:
-      for i in range (1,int(n)+1):
+   if n >= 1:
+      for i in range (1, n + 1):
          factorial = factorial * i
    return factorial
 ```
@@ -105,66 +121,99 @@ def fact(n):
       return n
    elif n < 1:
       return None
-   else:
-      return n*fact(n-1)
+   return n*fact(n-1)
 ```
+
+</details>
 
 <a name="sqrt"/>
 
 ## Pierwiastek kwadratowy [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+
 ```python
 from math import sqrt
 
-print(sqrt(4)) #2
+print(sqrt(4))
 ```
+
+```python
+#sqrt1(number,stopien)
+
+def sqrt1(x):
+    return x ** (1/2)
+```
+
+</details>
 
 <a name="sqrt2"/>
 
 ## Pierwiastek n-tego stopnia [⬆️](#main)
 
-```python
-#sqrt2(number,stopien)
+<details>
+  <summary>Rozwiń</summary>
 
-def sqrt2(x,p):
-    return x**(1/p)
+```python
+#sqrt1(number,stopien)
+
+def sqrt1(x,p):
+    return x ** (1/p)
 ```
 
 <a name="suma"/>
 
+</details>
+
 ## Suma liczb od a do b [⬆️](#main)
+
+<details>
+  <summary>Rozwiń</summary>
+    
+```python
+def suma(a,b):
+    return sum(range(a, b + 1))
+```
 
 ```python
 def suma(a,b):
-    return sum(range(a,b+1))
-
-def suma2(a,b):
     wynik = 0
-    for i in range(a,b+1): 
+    for i in range(a, b +1 ): 
         wynik += i
     return wynik
 ```
+
+</details>
 
 <a name="iloczyn"/>
 
 ## Iloczyn liczb od a do b [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 def iloczyn(a,b):
     wynik = 1
-    for i in range(a,b+1): 
+    for i in range(a, b + 1): 
         wynik *= i
     return wynik
 ```
+
+</details>
 
 <a name="kro"/>
 
 ## Krotność np. znaków w ciągu [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 from collections import Counter
 
-lista_slow=['nie','zdam','matury']
+lista_slow = ['nie','zdam','matury']
 
 lista_slow = ",".join(lista_slow)
 
@@ -172,32 +221,68 @@ print(Counter(lista_slow))
 
 ```
 
+```python
+def freq(str):
+    dict = {}
+    for n in str:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
+
+print(freq('slowo'))
+```
+
+</details>
+
 <a name="moda"/>
 
 ## Moda/dominanta [⬆️](#main)
 
+<details>
+  <summary>Rozwiń</summary>
+    
 ```python
 from collections import Counter
 
-lista=[1,2,3,4,5,6,7,8,9,2,2,4,4,4,4]
+lista=[1,2,3,4,5]
 
 def moda(lista):
+    if all(i == 1 for i in Counter(lista).values()):
+        return lista
     return Counter(lista).most_common(1)[0][0]
  ```
  
+```python
+ def moda(lista):
+    return max(set(lista), key=lista.count)
+ ``` 
+ 
+</details>
+
 <a name="med"/>
 
 ## Mediana [⬆️](#main)
 
 ```python
 def mediana(lista):
+    for i in range(len(lista)):
+        for j in range(len(lista) - i - 1):
+            if lista[j] > lista[j + 1]:
+                lista[j + 1], lista[j] = lista[j], lista[j + 1]
+
     if len(lista) % 2 == 0:
-        mediana = lista[int(len(lista)/2)] + lista[int(len(lista)/2-1)]
+        mediana = lista[int(len(lista) / 2)] + lista[int(len(lista) / 2 - 1)]
         mediana /= 2
     else:
-        mediana = lista[int(len(lista)/2)]
+        mediana = lista[int(len(lista) / 2)]
     return mediana
  ```
+ 
+ ### Ze wzoru:
+![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/mediana.png)
 
 <a name="ary"/>
 
@@ -209,20 +294,21 @@ def srednia(x):
  ```
  
  ### Ze wzoru:
-![equation](https://latex.codecogs.com/svg.latex?\bar{x}%20=%20\frac{x_{n}%20+%20x_{n}%20+{...}%20+%20x_{n}%20}{n})
+![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/srednia.png)
  
 <a name="waz"/>
 
 ## Średnia ważona [⬆️](#main)
 
 ```python
-def srednia(lista,wagi):
-    wynik = sum((i*j for i,j in zip(lista,wagi)))/sum(wagi)
+def srednia(lista, wagi):
+    wynik = sum((i * j for i, j in zip(lista, wagi))) / sum(wagi)
     return wynik
+
  ```
  
 ### Ze wzoru:
-![equation](https://latex.codecogs.com/svg.latex?\bar{x}_{w}%20=%20\frac{x_{1}%20*%20w_{1}%20+%20x_{2}%20*%20w_{2}%20+%20{...}%20+%20x_{n}%20*%20w_{n}}{w_{1}%20+%20w_{2}%20+%20{...}%20+%20w_{n}})
+![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/srednia_wazona.png)
  
  <a name="geo"/>
 
@@ -233,26 +319,23 @@ def srednia(lista):
     wynik = 1
     for i in lista:
         wynik *= i
-    wynik = wynik**(1/len(lista))
+    wynik = wynik ** (1/len(lista))
     return wynik
  ```
  
+ ### Ze wzoru:
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/d97e78adc3acddf0b54ed5624ab2ceff2057bf40)
+
 <a name="odchylenie"/>
 
 ## Wariancja i odchylenie standardowe [⬆️](#main)
 
 ```python
 def odchylenie(lista):
-    return sum(i**2 for i in lista)/len(lista) - (sum(lista)/len(lista))**2
+    return sum(i ** 2 for i in lista) / len(lista) - (sum(lista) / len(lista)) ** 2
+
 ```
- 
- Odchylenie standardowe jest pierwiastkiem kadratowym z wariancji
  
 ### Ze wzoru:
-![equation](https://quicklatex.com/cache3/6b/ql_dbc23eb476667943870c8c8fe0e3af6b_l3.png)
+![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/wariancja.png)
  
-<a name="power"/>
-
-```python
-
-```
