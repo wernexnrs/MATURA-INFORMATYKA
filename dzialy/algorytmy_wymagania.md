@@ -627,17 +627,17 @@ def merge_sort(tab):
 	Dopóki i < len(L) oraz j < len(R)
 		Jeżeli L[i] < R[i]
 			i <- i + 1
-		k = k + 1
+		k <- k + 1
 		
 	Dopóki i < len(L)
         	tab[k] = L[i]
-        	i = i + 1
-        	k = k + 1
+        	i <- i + 1
+        	k <- k + 1
 
     	Dopóki j < len(R)
         	tab[k] = R[j]
-        	j = j + 1
-        	k = k + 1
+        	j <- j + 1
+        	k <- k + 1
 ```
 
 </b>
@@ -705,10 +705,6 @@ def qs(arr)
 
 ## Sortowanie kubełkowe [⬆️](#main)
 
-<details>
-	
-<summary>Rozwiń</summary>
-
 ```python
 # Not in place
 
@@ -745,8 +741,6 @@ def BucketSort(arr):
 ```
 
 </b>
-
-</details>
 
 <a name="fast_power"/>
 
@@ -933,10 +927,6 @@ def is_palindrom(string, pal):
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
 
-<details>
-	
-<summary>Rozwiń</summary>
-
 ```python
 #With sorting
 
@@ -1011,8 +1001,6 @@ Pseudocode
 ```
 
 </b>
-
-</details>
 
 <a name="alfa"/>
 
