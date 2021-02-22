@@ -17,9 +17,9 @@
    - [x] [bąbelkowy, ](#bob)
    - [x] [przez wybór, ](#wybor) 
    - [x] [przez wstawianie liniowe, ](#lin) 
-   - [x] [przez scalanie,](#scalanie) # przydałoby się lepsze rozwiązanie
+   - [x] [przez scalanie,](#scalanie
    - [x] [szybki,](#fast)
-   - [x] [kubełkowy,](#box)  # przydałoby się lepsze rozwiązanie
+   - [x] [kubełkowy,](#box)
    
 3. __algorytmy numeryczne__
 
@@ -30,9 +30,7 @@
 
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
-   - [ ] [porządkowanie alfabetyczne,](#alfa) # do napisania
-	 - Większości obiektów # do napisania
-	 - Słowników # do napisania
+   - [x] [porządkowanie alfabetyczne,](#alfa)
    - [ ] [wyszukiwanie wzorca w tekście,](#pattern) # do napisania
    
 5. __algorytmy kompresji i szyfrowania__
@@ -41,7 +39,7 @@
 	 * [ ] [Kompresja danych](#len) # do napisania
 	 * [x] [alfabet Morse’a](#morse)        
    - [x] [szyfr Cezara,](#cezar)
-   - [ ] [szyfr przestawieniowy,](#przes) # do napisania
+   - [x] [szyfr przestawieniowy,](#przes)
 
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
 
