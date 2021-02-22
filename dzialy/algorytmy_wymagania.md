@@ -562,47 +562,87 @@ Dla i = 1, 2, ... , n
 
 <a name="scalanie"/>
 
+
+
 ## Sortowanie przez scalanie [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #In place
 
 def merge_sort(tab):
-    if len(tab) > 1:
-        mid = len(tab)//2
-        L = tab[:mid]
-        R = tab[mid:]
-        merge_sort(L)
-        merge_sort(R)
-        i = j = k = 0
- 
-        while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                tab[k] = L[i]
-                i += 1
-            else:
-                tab[k] = R[j]
-                j += 1
-            k += 1
- 
-        while i < len(L):
+    if len(tab) < 2:
+        return tab
+
+    i = j = k = 0
+    mid = len(tab) // 2
+    L, R = tab[:mid], tab[mid:]
+    merge_sort(L)
+    merge_sort(R)
+
+    while i < len(L) and j < len(R):
+        if L[i] < R[j]:
             tab[k] = L[i]
             i += 1
-            k += 1
- 
-        while j < len(R):
+        else:
             tab[k] = R[j]
             j += 1
-            k += 1
-	    
+        k += 1
+
+    while i < len(L):
+        tab[k] = L[i]
+        i += 1
+        k += 1
+
+    while j < len(R):
+        tab[k] = R[j]
+        j += 1
+        k += 1  
 ```
 
 <b>
    
 ```
-Pseudocode
+n <- długość tablicy
+div <- dzielenie całkowite
+len() <- długość obiektu
+
+def merge_sort(tab):
+	Jeżeli n < 2:
+		Zwróć tab
+	i <- 0
+	j <- 0
+	k <- 0
+	
+	L <- tab[:mid]
+	R <- tab[mid:]
+	merge_sort(L)
+        merge_sort(R)
+	
+	Dla i = 1, 2, .. 
+	
+	Dopóki i < len(L) oraz j < len(R)
+		Jeżeli L[i] < R[i]
+			i <- i + 1
+		k = k + 1
+		
+	Dopóki i < len(L)
+        	tab[k] = L[i]
+        	i = i + 1
+        	k = k + 1
+
+    	Dopóki j < len(R)
+        	tab[k] = R[j]
+        	j = j + 1
+        	k = k + 1
 ```
 
 </b>
+
+</details>
 
 <a name="fast"/>
 
@@ -664,55 +704,49 @@ def qs(arr)
 <a name="box"/>
 
 ## Sortowanie kubełkowe [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
-# Python3 program to sort an array  
-# using bucket sort  
-def insertionSort(b):
-    for i in range(1, len(b)):
-        up = b[i]
-        j = i - 1
-        while j >= 0 and b[j] > up:
-            b[j + 1] = b[j]
-            j -= 1
-        b[j + 1] = up
-    return b
+# Not in place
+
+def bucketSort(arr):
+    buckets, output = [[] for _ in range(len(arr))], []
+
+    for i in range(len(arr)):
+        buckets[int(len(arr) * arr[i])].append(arr[i])
+
+    for i in range(len(buckets)):
+        insertion_sort(buckets[i])
+
+        while len(buckets[i]) > 0:
+            output.append(buckets[i].pop(0))
+    return output
 
 
-def bucketSort(x):
-    arr = []
-    slot_num = 10  
-
-    for i in range(slot_num):
-        arr.append([])
-
-    for j in x:
-        index_b = int(slot_num * j)
-        arr[index_b].append(j)
-
-    for i in range(slot_num):
-        arr[i] = insertionSort(arr[i])
-
-    k = 0
-    for i in range(slot_num):
-        for j in range(len(arr[i])):
-            x[k] = arr[i][j]
-            k += 1
-    return x
-
-
-x = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
-print("Sorted Array is")
-print(bucketSort(x))
-
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        liczba = arr[i]
+        while i > 0 and arr[i - 1] > liczba:
+            arr[i] = arr[i - 1]
+            i -= 1
+        arr[i] = liczba
 ```
 
 <b>
    
 ```
-Pseudocode
+n <- dlugość tablicy
+
+def BucketSort(arr):
+	Dla 
 ```
 
 </b>
+
+</details>
 
 <a name="fast_power"/>
 
@@ -762,6 +796,10 @@ def fast_power(base,power):
 
 ## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
 
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 def f(x):
     return -4 * x + 2
@@ -787,10 +825,29 @@ def bisection(a, b, precyzja=0.0001):
 <b>
    
 ```
-Pseudocode
+def f(x):
+	Zwróć -4 * x + 2
+
+
+def bisection(a, b, precyzja=0.0001):
+
+	Jeżeli f(a) * f(b) >= 0:
+		Zwróć None
+	    c <- a
+	    Dopóki b - a >= precyzja:
+		c -< (a + b) / 2
+		Jeżeli f(c) == 0.0:
+		    break
+		Jeżeli f(c) * f(a) < 0:
+		    b <- c
+		else:
+		    a <- c
+	    Zwróć c
 ```
 
 </b>
+
+</details>
 
 <a name="palindrom"/>
 
@@ -857,6 +914,8 @@ def is_palindrom(string, pal):
 <b>
    
 ```
+n - długość tablicy
+
 def is_palindrom(string, pal):
 	Dla i = 1, 2, ... n
 		Dla j = n, n-1, n-2 ... n-n
@@ -873,6 +932,11 @@ def is_palindrom(string, pal):
 <a name="anagram"/>
 
 ## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 #With sorting
 
@@ -884,16 +948,12 @@ def is_anagram(string,string2):
 ```
 
 ```python
-string = "elivs"
-pattern = "lives"
-
-
 def sort_1(string):
     string = list(string)
     for i in range(len(string)):
-        for j in range(1, len(pattern)):
-            if string[j] < string[j - 1]:
-                string[j], string[j - 1] = string[j - 1], string[j]
+        for j in range(len(string) - i - 1):
+            if string[j] > string[j + 1]:
+                string[j], string[j + 1] = string[j + 1], string[j]
     return "".join(string)
 
 
@@ -908,9 +968,6 @@ def is_anagram(string, pattern):
             return False
         return True
 
-
-print(is_anagram(string, pattern))
-
 ```
 
 <b>
@@ -922,9 +979,6 @@ Pseudocode
 </b>
 
 ```python
-string = "asd"
-pattern = "das"
-
 
 def isIn(char, string):
     charInside = False
@@ -946,10 +1000,7 @@ def isAnagram(string, pattern):
         if not isIn(pattern[i], string):
             return False
     return True
-
-
-print(isAnagram(string, pattern))
-
+    
 # This code is contributed by Pixel
 ```
 
@@ -961,11 +1012,35 @@ Pseudocode
 
 </b>
 
+</details>
+
 <a name="alfa"/>
 
 ## Porządkowanie alfabetyczne [⬆️](#main)
 
-zaraz opracuje
+<details>
+	
+<summary>Rozwiń</summary>
+
+```python
+#Sortowanie liter bąbelkowo
+
+slowo = "niezdammatury"
+
+
+def bubble_sort(tab):
+    tab = list(tab)
+    for i in range(len(tab)):
+        for j in range(len(tab) - i - 1):
+            if tab[j] > tab[j + 1]:
+                tab[j + 1], tab[j] = tab[j], tab[j + 1]
+    return "".join(tab)
+
+
+print(bubble_sort(slowo))
+```
+
+</details>
 
 <a name="pattern"/>
 
@@ -1056,6 +1131,11 @@ print("Decoded:", decoded)
 <a name="cezar"/>
 
 ## Szyfr Cezara [⬆️](#main)
+
+<details>
+	
+<summary>Rozwiń</summary>
+
 ```python
 def koduj(wiadomosc, klucz):
     wynik = ""
@@ -1074,27 +1154,38 @@ def dekoduj(wiadomosc, klucz):
 <b>
    
 ```
-Pseudocode
+wiadomosc <- przechowuje ciąg wielkich liter alfabetu angielskiego, bez spacji i znaków specjalnych
+ord() - pokazuje kod znaku w unicode
+chr() - pokazuje znak kodu unicode
+n <- długość ciągu znaków
+klucz <- liczba całkowita z przedziału 1-26
+
+koduj(wiadomosc, klucz):
+	wynik = ""
+	Dla i = 1, 2, 3 ... n
+		wynik += chr((ord(i) + klucz - 65) % 26 + 65)
+	Zwróć wynik
 ```
 
 </b>
+
+</details>
 
 <a name="przes"/>
 
 ## Szyfr przestawieniowy [⬆️](#main)
 ```python
-tekst = "LA AAMK CORUAKB RUAKI P EIKS AIBSEKA"  # jump =  1 to decrypt
+tekst = " IDNMEMZTAR ,APUNYE AO IEWTŻMJGS  REDAATNU"  # jump =  3 to decrypt
 
 
-def przes(tekst, jump=1):
+def przes(tekst, jump):
     tekst = list(tekst)
     for i in range(0, len(tekst) - 2, 2):
         tekst[i], tekst[i + jump] = tekst[i + jump], tekst[i]
-    tekst = "".join(tekst)
-    return tekst
+    return "".join(tekst)
 
 
-print(przes(tekst, jump=1))
+print(przes(tekst, jump=3))
 
 ```
 
