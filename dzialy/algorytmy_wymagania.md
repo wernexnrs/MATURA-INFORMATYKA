@@ -17,7 +17,7 @@
    - [x] [bąbelkowy, ](#bob)
    - [x] [przez wybór, ](#wybor) 
    - [x] [przez wstawianie liniowe, ](#lin) 
-   - [x] [przez scalanie,](#scalanie
+   - [x] [przez scalanie,](#scalanie)
    - [x] [szybki,](#fast)
    - [x] [kubełkowy,](#box)
    
