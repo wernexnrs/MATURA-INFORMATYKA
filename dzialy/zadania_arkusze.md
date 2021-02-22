@@ -38,7 +38,7 @@
 
 15. [Maj 2015](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2015-maj-poziom-rozszerzony/)
 
-16. Maj 2015 Matura stara --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2015-maj-poziom-rozszerzony/) 
+16. Maj 2015 Matura stara --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2015-maj-poziom-rozszerzony/)
 
 17. Maj 2014 --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2014-maj-poziom-rozszerzony/)
 
@@ -60,6 +60,6 @@
 
 26. Maj 2005 --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2005-maj-poziom-rozszerzony/)
 
-## Matura próbna 
+## Matura próbna
 
 1. [Kwiecień 2020 Matura próbna](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_kwiecien.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-probna-informatyka-2020-kwiecien-poziom-rozszerzony/)

@@ -1,55 +1,48 @@
-<a name="main"/></a>
-
+<a name="main"></a>
 <h1 align="center"> Algorytmy wymienione w wymaganiach </h1>
 
-1. __algorytmy na liczbach całkowitych:__ 
-
-   - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)  
-   - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime) 
+1. __algorytmy na liczbach całkowitych:__
+   - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)
+   - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime)
    - [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
-   - [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors) 
-   - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW,](#nwd) 
-   - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib) 
-   - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)    
-   
-2. __algorytmy wyszukiwania i porządkowania (sortowania):__ 
+   - [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors)
+   - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW,](#nwd)
+   - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib)
+   - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)
 
+2. __algorytmy wyszukiwania i porządkowania (sortowania):__
    - [x] [bąbelkowy, ](#bob)
-   - [x] [przez wybór, ](#wybor) 
-   - [x] [przez wstawianie liniowe, ](#lin) 
+   - [x] [przez wybór, ](#wybor)
+   - [x] [przez wstawianie liniowe, ](#lin)
    - [x] [przez scalanie,](#scalanie)
    - [x] [szybki,](#fast)
    - [x] [kubełkowy,](#box)
-   
+
 3. __algorytmy numeryczne__
-
    - [x] [szybkie podnoszenie do potęgi,](#fast_power)
-   - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)  
-   
+   - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)
+
 4. __algorytmy na tekstach__
-
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram) 
+   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram)
    - [x] [porządkowanie alfabetyczne,](#alfa)
-   - [ ] [wyszukiwanie wzorca w tekście,](#pattern) # do napisania
-   
-5. __algorytmy kompresji i szyfrowania__
+   - [ ] [wyszukiwanie wzorca w tekście,](#pattern)
+     > do napisania
 
+5. __algorytmy kompresji i szyfrowania__
    - kody znaków o zmiennej długości,
-	 * [ ] [Kompresja danych](#len) # do napisania
-	 * [x] [alfabet Morse’a](#morse)        
+	 * [ ] [Kompresja danych](#len)
+       > do napisania
+	 * [x] [alfabet Morse’a](#morse)
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
 
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
+<a name="konwersja"></a>
 
-<a name="konwersja"/>
+## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#)
+<details><summary>Rozwiń</summary>
 
-## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#main) 
-<details>
-	
-<summary>Rozwiń</summary>
-	
 ```python
 #int("number_string",base) ANY --> DEC
 
@@ -62,7 +55,6 @@ dec_TO_hex = [hex(i)[2:] for i in dec_numbers]
 bin_TO_dec = [int(i, 2) for i in dec_TO_bin]
 oct_TO_dec = [int(i, 8) for i in dec_TO_oct]
 hex_TO_dec = [int(i, 16) for i in dec_TO_hex]
-
 ```
 
 ```python
@@ -73,7 +65,6 @@ BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def to_base(n, b):  # to_base(number,base)
     return BS[n] if n < b else to_base(n // b, b) + BS[n % b]
-
 ```
 
 ```python
@@ -81,16 +72,13 @@ def to_base(n, b):  # to_base(number,base)
 
 BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-
 def to_base(n, b):  # to_base(number,base)
     if n < b:
         return BS[n]
     return to_base(n // b, b) + BS[n % b]
-
 ```
-
 <b>
-   
+
 ```
 BS -> "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -99,9 +87,7 @@ def to_base(n, b):
 		Zwróć BS[n]
 	W innym wypadku:
 		Zwróć to_base(n // b, b) + BS[n % b]
-	
 ```
-
 </b>
 
 ```python
@@ -116,18 +102,12 @@ def to_base(n, b):
         res += BS[n % b]
         n //= b
     return res[::-1]
-
 ```
-
 </details>
 
-<a name="is_prime"/>
-
-## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#)
+<a name="is_prime"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 def is_prime(x):
@@ -137,11 +117,9 @@ def is_prime(x):
                 return False
         return True
     return False
-    
 ```
-
 <b>
-   
+
 ```
 A <- [1,2 … n]
 
@@ -154,18 +132,12 @@ Dla i = 1,2 … n
 	W innym wypadku
 		Zwróć Fałsz
 ```
-
 </b>
-
 </details>
 
-<a name="is_perfect"/>
-
-## Sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#)
+<a name="is_perfect"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 def is_perfect(n):
@@ -176,11 +148,9 @@ def is_perfect(n):
     if n == s and n != 1:
         return True
     return False
-
 ```
-
 <b>
-   
+
 ```
 A = [1,2 … n]
 
@@ -193,19 +163,12 @@ Dla i = 1,2 … n
 		Zwróć Prawde
 	Zwróć Fałsz
 ```
-
 </b>
-
-
 </details>
 
-<a name="prime_factors"/>
-
-## Rozkładanie liczby na czynniki pierwsze [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Rozkładanie liczby na czynniki pierwsze [⬆️](#)
+<a name="prime_factors"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 def prime_factors(n):
@@ -215,11 +178,9 @@ def prime_factors(n):
             n //= k
             print(k)  # albo do tablicy sobie wrzucać
         k += 1
-
 ```
-
 <b>
-   
+
 ```
 n = liczba całkowita
 div - operator dzielenia całkowitego
@@ -232,23 +193,17 @@ Dopóki n != 1
 		Wypisz k
 	k <- k + 1
 ```
-
 </b>
-
 </details>
 
-<a name="nwd"/>
-
-## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW [⬆️](#)
+<a name="nwd"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #recursive one-liner version
 
-def nwd(a, b): return nwd(b, a % b) if b else a 
+def nwd(a, b): return nwd(b, a % b) if b else a
 ```
 
 ```python
@@ -258,11 +213,9 @@ def nwd(a, b):
     if b > 0:
         return nwd(b, a % b)
     return a
-    
 ```
-
 <b>
-   
+
 ```
 a - liczba całkowita
 b - liczba całkowita
@@ -273,7 +226,6 @@ def nwd(a, b):
 	W innym wypadku
 		Zwróć a
 ```
-
 </b>
 
 ```python
@@ -283,11 +235,9 @@ def nwd(a, b):
     while b:
         a, b = b, a % b
     return a
-    
 ```
-
 <b>
-   
+
 ```
 a - liczba całkowita
 b - liczba całkowita
@@ -296,21 +246,18 @@ def nwd(a, b):
 	Dopóki b != 0
 		t <- a
 		a <- b
-		b <- t mod b 
+		b <- t mod b
 	Zwróć a
 ```
-
 </b>
 
 ```python
 #Najmniejsza wspólna wielokrotność
 
 def nww(a, b): return a * b // nwd(a, b)
-
 ```
-
 <b>
-   
+
 ```
 a - liczba całkowita
 b - liczba całkowita
@@ -319,18 +266,12 @@ div - dzielenie całkowite
 def nww(a, b):
 	Zwróć a * b div nwd(a,b)
 ```
-
 </b>
-
 </details>
 
-<a name="fib"/>
-
-## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#)
+<a name="fib"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #Iterated version
@@ -340,22 +281,19 @@ def f(n):
     for i in range(0, n):
         a, b = b, a + b
     return a
-    
 ```
-
 <b>
-   
+
 ```
 a <- 0
 b <- 1
-n - n'ty wyraz ciągu 
+n - n'ty wyraz ciągu
 
 Dla i = 1,2 ... n
 	t <- a
 	a <- b
 	b <- t + b
 ```
-
 </b>
 
 ```python
@@ -365,11 +303,9 @@ def f(n):
     if n <= 1:
         return n
     return f(n - 1) + f(n - 2)
-
-```    
-
+```
 <b>
-   
+
 ```
 def f(n)
 	Jeżeli n <= 1
@@ -377,23 +313,16 @@ def f(n)
 	W innym wypadku
 		Zwróć f(n-1) + f(n-2)
 ```
-
 </b>
-
 </details>
 
-<a name="zachlanna"/>
-
-## Wydawanie reszty metodą zachłanną [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Wydawanie reszty metodą zachłanną [⬆️](#)
+<a name="zachlanna"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 do_wydania = 6
 monety = [1, 2, 5]
-
 
 def wydawanie(do_wydania, monety):
     count = 0
@@ -411,13 +340,10 @@ def wydawanie(do_wydania, monety):
 
     return f'Reszte wydasz w {count} monetach, te monety to {historia}'
 
-
 print(wydawanie(do_wydania, monety))
-
 ```
-
 <b>
-   
+
 ```
 do_wydania <- 6
 monety <- [1, 2, 5]
@@ -426,79 +352,62 @@ historia <- []
 
 Dopóki do_wydania > 0:
 	nominal <- 0
-	
+
 	Dla i = 1,2,3, ... , rozmiar tablicy (bedzie podany, najczesciej n)
 		Jeżeli do_wydania >= monety[i] > nominal:
 			nominal <- monety[i]
 			historia[i] <- nominal
 		do_wydania <- do_wydania - nominal
 		count <- count + 1
-		
 ```
-
 </b>
-
 </details>
 
-<a name="bob"/>
-
-## Sortowanie bąbelkowe [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sortowanie bąbelkowe [⬆️](#)
+<a name="bob"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #In place
 
-def bubble_sort(tab): 
+def bubble_sort(tab):
     for i in range(len(tab)):
         for j in range(len(tab) - i - 1):
             if tab[j] > tab[j + 1]:
                 tab[j + 1], tab[j] = tab[j], tab[j + 1]
-		
 ```
-
 <b>
-   
+
 ```
 A = [1,2 … n]
 
 Dla i = 1,2 … n
 	Dla j = 1,2 ... n – i – 1
 		Jeżeli A[j] > A[j + 1]
-			t <- A[j + 1] 
+			t <- A[j + 1]
 			A[j + 1] <- A[j]
 			A[j] <- t
 ```
-
 </b>
-
 </details>
 
-<a name="wybor"/>
-
-## Sortowanie przez wybór [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sortowanie przez wybór [⬆️](#)
+<a name="wybor"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #In place
 
 def selection_sort(tab):
     for i in range(len(tab)):
-        mini = i 
-        for j in range(i+1, len(tab)): 
-            if tab[mini] > tab[j]: 
-                mini = j         
+        mini = i
+        for j in range(i+1, len(tab)):
+            if tab[mini] > tab[j]:
+                mini = j
         tab[i], tab[mini] = tab[mini], tab[i]
-	
 ```
-
 <b>
-   
+
 ```
 A <- [1,2 … n]
 n <- ilość liczb
@@ -512,18 +421,12 @@ Dla i = 1,2 … n
 	A[i] <- A[mini]
 	A[mini] <- t
 ```
-
 </b>
-
 </details>
 
-<a name="lin"/>
-
-## Sortowanie przez wstawianie liniowe [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sortowanie przez wstawianie liniowe [⬆️](#)
+<a name="lin"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #In place
@@ -536,37 +439,27 @@ def insertion_sort(A):
             A[i] = A[i - 1]
             i -= 1
         A[i] = liczba
-
 ```
-
 <b>
-   
+
 ```
 n <- liczba całkowita
 A <- [1,2 ... n]
 
 Dla i = 1, 2, ... , n
 	liczba <- A[i]
-	
+
 	Dopóki i > 0 oraz A[i - 1] > liczba
 		A[i] <- A[i - 1]
 		i <- i - 1
 	A[i] <- liczba
 ```
-
 </b>
-
 </details>
 
-<a name="scalanie"/>
-
-
-
-## Sortowanie przez scalanie [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sortowanie przez scalanie [⬆️](#)
+<a name="scalanie"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #In place
@@ -598,11 +491,10 @@ def merge_sort(tab):
     while j < len(R):
         tab[k] = R[j]
         j += 1
-        k += 1  
+        k += 1
 ```
-
 <b>
-   
+
 ```
 n <- długość tablicy
 div <- dzielenie całkowite
@@ -614,19 +506,19 @@ def merge_sort(tab):
 	i <- 0
 	j <- 0
 	k <- 0
-	
+
 	L <- tab[:mid]
 	R <- tab[mid:]
 	merge_sort(L)
         merge_sort(R)
-	
-	Dla i = 1, 2, .. 
-	
+
+	Dla i = 1, 2, ..
+
 	Dopóki i < len(L) oraz j < len(R)
 		Jeżeli L[i] < R[i]
 			i <- i + 1
 		k <- k + 1
-		
+
 	Dopóki i < len(L)
         	tab[k] = L[i]
         	i <- i + 1
@@ -637,18 +529,12 @@ def merge_sort(tab):
         	j <- j + 1
         	k <- k + 1
 ```
-
 </b>
-
 </details>
 
-<a name="fast"/>
-
-## Sortowanie szybkie [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sortowanie szybkie [⬆️](#)
+<a name="fast"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 def quicksort(arr):
@@ -673,9 +559,8 @@ print(quicksort(arr))
 
 # This code is contributed by Pixel
 ```
-
 <b>
-	
+
 ```
 n <- wielkosć tablicy
 
@@ -694,14 +579,12 @@ def qs(arr)
             greater[x] <- arr[x]
     Zwróć qs(less) + [pivot] + qs(greater)
 ```
-
 </b>
-
 </details>
 
-<a name="box"/>
-
-## Sortowanie kubełkowe [⬆️](#main)
+## Sortowanie kubełkowe [⬆️](#)
+<a name="box"></a>
+<details open><summary>Rozwiń</summary>
 
 ```python
 # Not in place
@@ -728,25 +611,20 @@ def insertion_sort(arr):
             i -= 1
         arr[i] = liczba
 ```
-
 <b>
-   
+
 ```
 n <- dlugość tablicy
 
 def BucketSort(arr):
-	Dla 
+	Dla
 ```
-
 </b>
+</details>
 
-<a name="fast_power"/>
-
-## Szybkie podnoszenie do potęgi [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Szybkie podnoszenie do potęgi [⬆️](#)
+<a name="fast_power"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #Iterated version
@@ -759,11 +637,9 @@ def fast_power(base, power):
         power //= 2
         base = (base * base) % m
     return result
-
 ```
-
 <b>
-   
+
 ```
 mod - reszta z dzielenia
 div - dzielenie całkowite
@@ -777,20 +653,14 @@ def fast_power(base,power):
 		power <- power div 2
 		base = (base * base) mod m
 	Zwróć result
-	
 ```
 
 </details>
-	
 </b>
 
-<a name="bisekcja"/>
-
-## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#)
+<a name="bisekcja"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 def f(x):
@@ -811,11 +681,9 @@ def bisection(a, b, precyzja=0.0001):
         else:
             a = c
     return c
-
 ```
-
 <b>
-   
+
 ```
 def f(x):
 	Zwróć -4 * x + 2
@@ -836,18 +704,12 @@ def bisection(a, b, precyzja=0.0001):
 		    a <- c
 	    Zwróć c
 ```
-
 </b>
-
 </details>
 
-<a name="palindrom"/>
-
-## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#)
+<a name="palindrom"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #With list and slices
@@ -857,7 +719,6 @@ def is_palindrom(string):
     if lista == lista[::-1]:
         return True
     return False
-    
 ```
 
 ```python
@@ -870,7 +731,6 @@ def is_palindrom(string):
     if wynik == string:
         return True
     return False
-    
 ```
 
 ```python
@@ -884,7 +744,7 @@ def isPalindrom(string):
             return True
         return False
     return isPalindrom(string[1:-1]) if string[0] == string[-1] else False
-    
+
 # This code is contributed by Pixel
 ```
 
@@ -900,11 +760,9 @@ def is_palindrom(string, pal):
             if string[i] == pal[i]:
                 return True
             return False
-
 ```
-
 <b>
-   
+
 ```
 n - długość tablicy
 
@@ -916,14 +774,12 @@ def is_palindrom(string, pal):
 			W innym wypadku
 				Zwróc Fałsz
 ```
-
 </b>
-
 </details>
 
-<a name="anagram"/>
-
-## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#main)
+## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#)
+<a name="anagram"></a>
+<details open><summary>Rozwiń</summary>
 
 ```python
 #With sorting
@@ -932,7 +788,6 @@ def is_anagram(string,string2):
     if sorted(string) == sorted(string2):
         return True
     return False
-    
 ```
 
 ```python
@@ -955,15 +810,12 @@ def is_anagram(string, pattern):
         if string[i] != pattern[i]:
             return False
         return True
-
 ```
-
 <b>
-   
+
 ```
 Pseudocode
 ```
-
 </b>
 
 ```python
@@ -988,25 +840,20 @@ def isAnagram(string, pattern):
         if not isIn(pattern[i], string):
             return False
     return True
-    
+
 # This code is contributed by Pixel
 ```
-
 <b>
-   
+
 ```
 Pseudocode
 ```
-
 </b>
+</details>
 
-<a name="alfa"/>
-
-## Porządkowanie alfabetyczne [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Porządkowanie alfabetyczne [⬆️](#)
+<a name="alfa"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 #Sortowanie liter bąbelkowo
@@ -1025,28 +872,27 @@ def bubble_sort(tab):
 
 print(bubble_sort(slowo))
 ```
-
 </details>
 
-<a name="pattern"/>
-
-## Wyszukiwanie wzorca w tekście [⬆️](#main)
+## Wyszukiwanie wzorca w tekście [⬆️](#)
+<a name="pattern"></a>
 
 zaraz opracuje
 
-<a name="len"/>
-
-## Kompresja danych [⬆️](#main)
+## Kompresja danych [⬆️](#)
+<a name="len"></a>
 
 ### Prefix free
+<details open><summary>Rozwiń</summary>
+
 Kod jest nazywany "prefix (free) code", jeżeli w systemie nie ma kodu słowa, który byłby prefixem innego kodu słowa.
 
 Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pliku to: a,b,c,d,e,f i chcemy zmniejszyć rozmiar tego pliku kompresją, gdzie każdy kod znaku ma różną długość.
 
-| | a | b | c | d | e | f |
-| --- | --- | --- | --- | --- | --- | --- |
-| Częstość | 45 | 13 | 12 | 16 | 9 | 5 |
-| Fixed-length code | 0 | 101 | 100 | 111 | 1101 | 1100 |
+|                   |   a   |   b   |   c   |   d   |   e   |   f   |
+| ----------------: | :---: | :---: | :---: | :---: | :---: | :---: |
+|          Częstość |  45   |  13   |  12   |  16   |   9   |   5   |
+| Fixed-length code |   0   |  101  |  100  |  111  | 1101  | 1100  |
 
 Plik taki zajmnie (45 * 1 + 13 * 3 + 12 * 3 + 16 * 3 + 9 * 4 + 5 * 4) * 1000 = 224,000 bity
 
@@ -1057,14 +903,11 @@ cipher = {'0': 'a','101': 'b','100': 'c', '111': 'd', '1101': 'e', '1100': 'f'}
 
 Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powodzenia.
 ```
+</details>
 
-<a name="morse"/>
-
-## Alfabet Morse’a [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Alfabet Morse’a [⬆️](#)
+<a name="morse">
+<details><summary>Rozwiń</summary>
 
 ```python
 # define coding dict
@@ -1086,7 +929,6 @@ morseEncode = {
 morseDecode = {val: key for key, val in morseEncode.items()}
 morseDecode.update({'_': ' '})
 
-
 # define coding function
 def morseCode(string, decode=False):
     string = string.lower()
@@ -1101,7 +943,6 @@ def morseCode(string, decode=False):
             output += morseDecode.get(char, '')  # print '*' for unexpected codes
     return output
 
-
 # test
 string = "Keep learning"
 coded = morseCode(string)
@@ -1111,16 +952,11 @@ print("Decoded:", decoded)
 
 # This code is contributed by Pixel
 ```
-
 </details>
-	
-<a name="cezar"/>
 
-## Szyfr Cezara [⬆️](#main)
-
-<details>
-	
-<summary>Rozwiń</summary>
+## Szyfr Cezara [⬆️](#)
+<a name="cezar"></a>
+<details><summary>Rozwiń</summary>
 
 ```python
 def koduj(wiadomosc, klucz):
@@ -1134,11 +970,9 @@ def koduj(wiadomosc, klucz):
 def dekoduj(wiadomosc, klucz):
     klucz *= -1
     return koduj(wiadomosc, klucz)
-
 ```
-
 <b>
-   
+
 ```
 wiadomosc <- przechowuje ciąg wielkich liter alfabetu angielskiego, bez spacji i znaków specjalnych
 ord() - pokazuje kod znaku w unicode
@@ -1152,14 +986,13 @@ koduj(wiadomosc, klucz):
 		wynik += chr((ord(i) + klucz - 65) % 26 + 65)
 	Zwróć wynik
 ```
-
 </b>
-
 </details>
 
-<a name="przes"/>
+## Szyfr przestawieniowy [⬆️](#)
+<a name="przes"></a>
+<details open><summary>Rozwiń</summary>
 
-## Szyfr przestawieniowy [⬆️](#main)
 ```python
 tekst = " IDNMEMZTAR ,APUNYE AO IEWTŻMJGS  REDAATNU"  # jump =  3 to decrypt
 
@@ -1172,17 +1005,15 @@ def przes(tekst, jump):
 
 
 print(przes(tekst, jump=3))
-
 ```
 
 ```python
 wersja na teorie
 ```
-
 <b>
-   
+
 ```
 Pseudocode
 ```
-
 </b>
+</details>
