@@ -905,7 +905,7 @@ Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powo
 ```
 </details>
 
-<a name="morse">
+<a name="morse"></a>
 ## Alfabet Morse’a [⬆️](#)
 <details><summary>Rozwiń</summary>
 
