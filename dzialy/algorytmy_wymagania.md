@@ -38,8 +38,8 @@
    - [x] [szyfr przestawieniowy,](#przes)
 
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
-<a name="konwersja"></a>
 
+<a name="konwersja"></a>
 ## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#)
 <details><summary>Rozwiń</summary>
 
@@ -105,8 +105,8 @@ def to_base(n, b):
 ```
 </details>
 
-## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#)
 <a name="is_prime"></a>
+## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -135,8 +135,8 @@ Dla i = 1,2 … n
 </b>
 </details>
 
-## Sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#)
 <a name="is_perfect"></a>
+## Sprawdzanie, czy liczba jest liczbą doskonała [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -166,8 +166,8 @@ Dla i = 1,2 … n
 </b>
 </details>
 
-## Rozkładanie liczby na czynniki pierwsze [⬆️](#)
 <a name="prime_factors"></a>
+## Rozkładanie liczby na czynniki pierwsze [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -196,8 +196,8 @@ Dopóki n != 1
 </b>
 </details>
 
-## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW [⬆️](#)
 <a name="nwd"></a>
+## Iiteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -269,8 +269,8 @@ def nww(a, b):
 </b>
 </details>
 
-## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#)
 <a name="fib"></a>
+## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -316,8 +316,8 @@ def f(n)
 </b>
 </details>
 
-## Wydawanie reszty metodą zachłanną [⬆️](#)
 <a name="zachlanna"></a>
+## Wydawanie reszty metodą zachłanną [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -363,8 +363,8 @@ Dopóki do_wydania > 0:
 </b>
 </details>
 
-## Sortowanie bąbelkowe [⬆️](#)
 <a name="bob"></a>
+## Sortowanie bąbelkowe [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -391,8 +391,8 @@ Dla i = 1,2 … n
 </b>
 </details>
 
-## Sortowanie przez wybór [⬆️](#)
 <a name="wybor"></a>
+## Sortowanie przez wybór [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -424,8 +424,8 @@ Dla i = 1,2 … n
 </b>
 </details>
 
-## Sortowanie przez wstawianie liniowe [⬆️](#)
 <a name="lin"></a>
+## Sortowanie przez wstawianie liniowe [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -457,8 +457,8 @@ Dla i = 1, 2, ... , n
 </b>
 </details>
 
-## Sortowanie przez scalanie [⬆️](#)
 <a name="scalanie"></a>
+## Sortowanie przez scalanie [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -532,8 +532,8 @@ def merge_sort(tab):
 </b>
 </details>
 
-## Sortowanie szybkie [⬆️](#)
 <a name="fast"></a>
+## Sortowanie szybkie [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -582,8 +582,8 @@ def qs(arr)
 </b>
 </details>
 
-## Sortowanie kubełkowe [⬆️](#)
 <a name="box"></a>
+## Sortowanie kubełkowe [⬆️](#)
 <details open><summary>Rozwiń</summary>
 
 ```python
@@ -622,8 +622,8 @@ def BucketSort(arr):
 </b>
 </details>
 
-## Szybkie podnoszenie do potęgi [⬆️](#)
 <a name="fast_power"></a>
+## Szybkie podnoszenie do potęgi [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -658,8 +658,8 @@ def fast_power(base,power):
 </details>
 </b>
 
-## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#)
 <a name="bisekcja"></a>
+## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -707,8 +707,8 @@ def bisection(a, b, precyzja=0.0001):
 </b>
 </details>
 
-## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#)
 <a name="palindrom"></a>
+## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -777,8 +777,8 @@ def is_palindrom(string, pal):
 </b>
 </details>
 
-## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#)
 <a name="anagram"></a>
+## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#)
 <details open><summary>Rozwiń</summary>
 
 ```python
@@ -851,8 +851,8 @@ Pseudocode
 </b>
 </details>
 
-## Porządkowanie alfabetyczne [⬆️](#)
 <a name="alfa"></a>
+## Porządkowanie alfabetyczne [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -874,13 +874,13 @@ print(bubble_sort(slowo))
 ```
 </details>
 
-## Wyszukiwanie wzorca w tekście [⬆️](#)
 <a name="pattern"></a>
+## Wyszukiwanie wzorca w tekście [⬆️](#)
 
 zaraz opracuje
 
-## Kompresja danych [⬆️](#)
 <a name="len"></a>
+## Kompresja danych [⬆️](#)
 
 ### Prefix free
 <details open><summary>Rozwiń</summary>
@@ -905,8 +905,8 @@ Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powo
 ```
 </details>
 
-## Alfabet Morse’a [⬆️](#)
 <a name="morse">
+## Alfabet Morse’a [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -954,8 +954,8 @@ print("Decoded:", decoded)
 ```
 </details>
 
-## Szyfr Cezara [⬆️](#)
 <a name="cezar"></a>
+## Szyfr Cezara [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -989,8 +989,8 @@ koduj(wiadomosc, klucz):
 </b>
 </details>
 
-## Szyfr przestawieniowy [⬆️](#)
 <a name="przes"></a>
+## Szyfr przestawieniowy [⬆️](#)
 <details open><summary>Rozwiń</summary>
 
 ```python
