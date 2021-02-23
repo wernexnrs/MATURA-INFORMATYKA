@@ -23,7 +23,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Próbne egzaminy](https://cke.gov.pl/egzamin-maturalny/egzamin-w-nowej-formule/materialy-dodatkowe/probny-egzamin/informatyka-poziom-rozszerzony/)
 * [Wszystkie arkusze](https://arkusze.pl/informatyka-matura-poziom-rozszerzony/)
 * [Tutor](http://pythontutor.com/) - wizualizacja kodu
-  
+
 ## :green_book: EXCEL
 
 * [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
@@ -38,7 +38,7 @@ Polecam ciemny motyw github'a</b></p>
 * [w3schools - SQL](https://www.w3schools.com/sql/) - Zagadnienia w przystępnej formie
 * [Niepełny kurs "do matury"](https://www.youtube.com/playlist?list=PLKmH7u1gA9hpm3ZqWhsn2XvGAeX3b9SM0)
 * [Kurs "do matury"](https://www.youtube.com/playlist?list=PLiG7bZwihoShBM1xR0K_st-QyxJyq5iWl)
- 
+
 ## :blue_book: PYTHON
 
 1. [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
@@ -49,7 +49,7 @@ Polecam ciemny motyw github'a</b></p>
 6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
 7. [Dokumentacja pythona](https://docs.python.org/3/)
 8. [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
-## :copyright: Licencja 
+## :copyright: Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
 
 [contributors-shield]: https://img.shields.io/github/contributors/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge

@@ -1,7 +1,6 @@
-## Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać. 
+## Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać.
 
 # Przydatne moduły
-
   * __collections__ - słowniki
     * [Counter()](#counter)
       * .elements()
@@ -36,21 +35,18 @@
   * __operator__
   * __functools__
   * __enum__
-  
-  
-<a name="counter"/>
 
 ## collections
-
-### Counter() [⬆️](#main)
+### Counter() [⬆️](#)
+<a name="counter"></a>
 ```python
 c = Counter(a=3, b=1)
 d = Counter(a=1, b=2)
-c + d                       # dodawanie 
+c + d                       # dodawanie
 #Output: Counter({'a': 4, 'b': 3})
 c - d                       # odejmowanie, zachowanie tylko dodatnich liczb
 #Output:Counter({'a': 2})
-c & d                       # min każdego klucza 
+c & d                       # min każdego klucza
 #Output:Counter({'a': 1, 'b': 1})
 c | d                       # max każdego klucza
 #Output:Counter({'a': 3, 'b': 2})
@@ -61,13 +57,11 @@ c | d                       # max każdego klucza
    * __.most_common()__ -> zwraca liste krotek malejąca według wartości kluczy
    * __.subtract()__ -> zwraca counter jako wynik odejmowania z zachowaniem ujemnych wartości
 
-<a name="order"/>
-
-### OrderedDict() [⬆️](#main)
-
+### OrderedDict() [⬆️](#)
 Właściwości:
+<a name="order"></a>
  - Gdy porównamy 2 słowniki klasy dict, które zawierają te same elementy, niezależnie od ich kolejności dostaniemy True. Słowniki klasy OrderedDict do zwrócenia prawdy muszą mieć tą samą kolejność elementów.
- 
+
 Zwraca podsłownik, którym można zarządzać np.:
 ```python
 d = collections.OrderedDict()
@@ -96,11 +90,10 @@ e E
 '''
 ```
 
-<a name="funkcje"/>
-
 ## math
+<a name="funkcje"></a>
 
-### Funkcje [⬆️](#main)
+### Funkcje [⬆️](#)
 
 - __cos(x)__ -> Zwraca cosinus argumentu x.
 - __sin(x)__ ->  Zwraca sinus argumentu x.
@@ -126,11 +119,10 @@ e E
 - __pi__ -> zwraca wartość PI (3.1415...)
 
 
-<a name="statfunc"/>
-
 ## statistics
+<a name="statfunc"></a>
 
-### Funkcje [⬆️](#main)
+### Funkcje [⬆️](#)
 
 - __mean()__ -> Średnia arytmetyczna
 - __median()__ -> Mediana
@@ -142,85 +134,79 @@ e E
 - __pvariance()__ -> Calculates the variance of an entire population
 - __variance()__ -> Calculates the variance from a sample of data
 
-<a name="refunc"/>
-
 ## re
+<a name="refunc"></a>
 
 RegEx w pythonie.
 
-### Funkcje [⬆️](#main)
+### Funkcje [⬆️](#)
 
 - __findall()__ -> Returns a list containing all matches
 - __search()__ -> Returns a Match object if there is a match anywhere in the string
 - __split()__ -> Returns a list where the string has been split at each match
 - __sub()__ -> Replaces one or many matches with a string
 
-<a name="meta"/>
+### Metacharacters [⬆️](#)
+<a name="meta"></a>
 
-### Metacharacters [⬆️](#main)
-
-| znak | opis | przykład |
-| :--: | :--: | :--: |
-| [] |	Zbiór znaków | "[a-m]"	|
-| \ |	Sygnał specjalnej sekwencji |	"\d"	 |
-| . |	każdy znak oprócz końca linii	| "he..o"	|
-| ^	| Zaczyna się od	| "^hello"	|
-| $	| Kończy się na	| "world$"	|
-| *	| Zero or more occurrences |	"aix*"|	
-| +	| One or more occurrences	| "aix+"	|
-| {} |	Wystąpnienia danego znaku	| "al{2}"	|
-| "|"	| to albo to	| "falls|stays"|
-
-<a name="special"/>
+| znak | opis | przykład
+| :--: | :--: | :--:
+| [] |	Zbiór znaków | "[a-m]"
+| \ |	Sygnał specjalnej sekwencji |	"\d"
+| . |	każdy znak oprócz końca linii	| "he..o"
+| ^	| Zaczyna się od	| "^hello"
+| $	| Kończy się na	| "world$"
+| *	| Zero or more occurrences |	"aix*"
+| +	| One or more occurrences	| "aix+"
+| {} |	Wystąpnienia danego znaku	| "al{2}"
+| "|"	| to albo to	| "falls|stays"
 
 ### Specjalne sekwencje
+<a name="special"></a>
 
-| znak |	opis | przykład |
-| :--: | :--: | :--: |
-| \A	| Zwraca dopasowanie, jeżeli ciąg jest na początku stringa	| "\AThe"	|
-| \b	| Zwraca dopasowanie, jeżeli ciąg jest na początku lub na końcu stringa (r - raw string) | r"\bain" r"ain\b"	|
-| \B	| Zwraca dopasowanie, jeżeli ciąg jest w stringu lecz nie na końcu ani początku. (r - raw string) |	r"\Bain" r"ain\B"	|
-| \d	| Zwraca dopasowanie liczb w ciągu	| "\d"	|
-| \D	| Zwraca dopasowanie, gdzie nie ma liczb |	"\D"	|
-| \s	| Zwraca dopasowanie białych znaków | "\s"	|
-| \S	| Zwraca dopasowanie, gdzie nie ma białych znaków	| "\S"	|
-| \w	| Zwraca dopasowanie, gdzie ciąg znaków zawiera litery alfabetu angielskiegu, liczby i podłogę	| "\w"	|
-| \W	| Zwraca	dopasowanie gdzie nie ma tego co up | "\W"	|
-| \Z	| Zwraca dopasowanie, jeżeli ciąg jest na końcu stringa	| "Spain\Z" |
-
-<a name="sets"/>
+| znak |	opis | przykład
+| :--: | :--: | :--:
+| \A	| Zwraca dopasowanie, jeżeli ciąg jest na początku stringa	| "\AThe"
+| \b	| Zwraca dopasowanie, jeżeli ciąg jest na początku lub na końcu stringa (r - raw string) | r"\bain" r"ain\b"
+| \B	| Zwraca dopasowanie, jeżeli ciąg jest w stringu lecz nie na końcu ani początku. (r - raw string) |	r"\Bain" r"ain\B"
+| \d	| Zwraca dopasowanie liczb w ciągu	| "\d"
+| \D	| Zwraca dopasowanie, gdzie nie ma liczb |	"\D"
+| \s	| Zwraca dopasowanie białych znaków | "\s"
+| \S	| Zwraca dopasowanie, gdzie nie ma białych znaków	| "\S"
+| \w	| Zwraca dopasowanie, gdzie ciąg znaków zawiera litery alfabetu angielskiegu, liczby i podłogę	| "\w"
+| \W	| Zwraca	dopasowanie gdzie nie ma tego co up | "\W"
+| \Z	| Zwraca dopasowanie, jeżeli ciąg jest na końcu stringa	| "Spain\Z"
 
 ### Zbiory
+<a name="sets"></a>
 
-| zbiór |	opis | 
-| :--: | :--: |
-| [arn]	| Zwraca dopasowanie gdzie jakis z elementów znajduje się w stringu	|
-| [a-n]	| Zwraca dopasowanie wszystkiego co ma małe litery od a do n	|
-| [^arn]	| Wszystko bez wymienionych |
-| [0123]	| Zwraca dopasowanie wymienionych liczb	|
-| [0-9]	| Zwraca dopasowanie liczb od 0 do 9	|
-| [0-5][0-9]	| zwraca wszystko od 00 do 59	|
-| [a-zA-Z]	| Zwraca wszsytko co w alfabecie czy duże czy małe	|
-| [+]	| Zwraca szukane znaki tutaj + |
-
-<a name="biale"/>
+| zbiór |	opis
+| :--: | :--:
+| [arn]	| Zwraca dopasowanie gdzie jakis z elementów znajduje się w stringu
+| [a-n]	| Zwraca dopasowanie wszystkiego co ma małe litery od a do n
+| [^arn]	| Wszystko bez wymienionych
+| [0123]	| Zwraca dopasowanie wymienionych liczb
+| [0-9]	| Zwraca dopasowanie liczb od 0 do 9
+| [0-5][0-9]	| zwraca wszystko od 00 do 59
+| [a-zA-Z]	| Zwraca wszsytko co w alfabecie czy duże czy małe
+| [+]	| Zwraca szukane znaki tutaj +
 
 ### Białe znaki
-| znak |	opis | 
-| :--: | :--: |
-| \'	| Pojedyńczy cytat	|
-| \\	| Backslash	|
-| \n	| enter	|
-| \r	| Carriage Return	|
-| \t	| tabulator	|
-| \b	| Backspace	|
-| \f	| Form Feed	|
-| \ooo	| liczba ósemkowa	|
-| \xhh	| liczba szesnastkowa |
+<a name="biale"></a>
+| znak |	opis
+| :--: | :--:
+| \'	| Pojedyńczy cytat
+| \\	| Backslash
+| \n	| enter
+| \r	| Carriage Return
+| \t	| tabulator
+| \b	| Backspace
+| \f	| Form Feed
+| \ooo	| liczba ósemkowa
+| \xhh	| liczba szesnastkowa
 
-<a name="ulamki"/>
-
-## fractions [⬆️](#main)
+## fractions [⬆️](#)
+<a name="ulamki"></a>
 
 class fractions.Fraction(numerator=0, denominator=1)
 
@@ -237,12 +223,11 @@ Fraction(16, -10)
 >>> Fraction(' -3/7 ')
 #Fraction(-3, 7)
 ```
-<a name="count"/>
 
-## itertools [⬆️](#main)
+## itertools [⬆️](#)
+<a name="count"></a>
 
 ### count()
-
 ```python
 data = [100,200,300,400]
 
@@ -251,9 +236,8 @@ data2 = list(zip(itertools.count(start = 0, step = 1), data))
 #Output:  [(0, 100), (1, 200), (2, 300), (3,400)]
 ```
 
-<a name="zip_longest"/>
-
 ### zip_longest()
+<a name="zip_longest"></a>
 
 zip -> iteruje tyle razy ile wynosi długość krótszego obiektu
 
@@ -279,29 +263,27 @@ data2 = list(itertools.zip_longest(range(10), data))
 #Output:  [(0, 100), (1, 200), (2, 300), (3, 400), (4, None), (5, None), (6, None), (7, None), (8, None), (9, None)]
 ```
 
-<a name="cycle"/>
-
 ### cycle()
+<a name="cycle"></a>
 
 ```python
 data = itertools.cycle([0,1])
 
 for _ in range(6):
     print(next(data))
-    
+
 #Output:  0 1 0 1 0 1
 ```
 
-<a name="repeat"/>
-
 ### repeat()
+<a name="repeat"></a>
 
 ```python
 data = itertools.repeat(2, times=3)
 
 for _ in range(6):
     print(next(data))
-    
+
 #Output:  2 2 2 StopIteration
 
 print(list(map(pow, range(5), itertools.repeat(2)))
@@ -309,9 +291,8 @@ print(list(map(pow, range(5), itertools.repeat(2)))
 # Output: [0, 1, 4, 9, 16]
 ```
 
-<a name="starmap"/>
-
 ### starmap()
+<a name="starmap"></a>
 
 ```python
 
@@ -320,9 +301,8 @@ print(list(itertools.starmap(pow, [(0,2), (1,2), (2,2)] )))
 # Output: [0, 1, 4]
 ```
 
-<a name="combinations"/>
-
 ### combinations()
+<a name="combinations"></a>
 
 Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność nie ma znaczenia.
 
@@ -343,9 +323,8 @@ for i in result:
 '''
 ```
 
-<a name="permutations"/>
-
 ### permutations()
+<a name="permutations"></a>
 
 Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność MA znaczenie.
 
@@ -372,9 +351,8 @@ for i in result:
 '''
 ```
 
-<a name="product"/>
-
 ### product()
+<a name="product"></a>
 
 Wszystkie możliwe sposoby na zgrupowanie pewnej ilości liczb, gdzie kolejność MA znaczenie wraz z powtórzeniami tych znaków.
 
@@ -393,9 +371,8 @@ for i in result:
 '''
 ```
 
-<a name="chain"/>
-
 ### chain()
+<a name="chain"></a>
 
 Iteracja po kilku obiektach na raz
 
@@ -424,9 +401,8 @@ fourth
 '''
 ```
 
-<a name="islice"/>
-
 ### islice()
+<a name="islice"></a>
 
 Slice obiektu bez wykorzystywania kopii jak np podczas krojenia list.
 
@@ -442,9 +418,8 @@ for i in result:
 '''
 ```
 
-<a name="accumulate"/>
-
 ### accumulate()
+<a name="accumulate"></a>
 
 Operacje podczas iteracji
 
@@ -457,9 +432,8 @@ print(list(itertools.accumulate(numbers))) # [1, 6, 10, 13], dodawanie
 print( list(itertools.accumulate(numbers, operator.mul))) # [1, 5, 20, 60], mnożenie
 ```
 
-<a name="groupby"/>
-
 ### groupby()
+<a name="groupby"></a>
 
 Grupowanie obiektów.
 

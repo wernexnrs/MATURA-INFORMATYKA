@@ -17,14 +17,14 @@
    * __hex()__ -> Zwraca wartość heksadecymalną liczby dzisiętnej
    * __bin()__ -> Zwraca wartość binarną liczby dzisiętnej
    * __oct()__ -> Zwraca wartość oktalną liczby dzisiętnej
-   * __complex()__ -> Zwraca liczbę zespoloną 
+   * __complex()__ -> Zwraca liczbę zespoloną
    * __id()__ -> Zwraca adres komórki w pamięci zmiennej
    * __sorted()__ -> Sortuje listę
    * __len()__ -> Zwraca długość obiektu
    * __input()__ -> Pobiera wartość na wejściu
    * __print()__ -> Wyświetla wartość
    * __range()__ -> Zwraca sekwencje liczb
-   * __round()__ -> Zaokrągla liczbę 
+   * __round()__ -> Zaokrągla liczbę
    * __open()__ -> Podpięcie pliku
    * __format()__ -> Formaty stringa
    * __zip()__ -> Łączenie obiektów
@@ -39,7 +39,7 @@
    * __eval()__ -> Jeżeli string w zmiennej jest poprawnym kodem pythona wykonuje go
    * __iter()__ -> Tworzy iterator
    * __next()__ -> Zwraca kolejny element iteratora
-   * __divmod()__ -> Zwraca krotke dzielnia i reszte z tego dzielenia 
+   * __divmod()__ -> Zwraca krotke dzielnia i reszte z tego dzielenia
    * __enumerate(iterable, start=0)__ -> Zwraca krotke ponumerowanych elementów
    * __isinstance()__ -> Zwraca prawde jeżeli dany obiekt jest danego typu
    * __filter()__ -> Zwraca iterator funkcji, która zwraca true/false. Jeżeli true filtruje obiekt zgodnie z wartościami z funkcji.

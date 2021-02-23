@@ -1,17 +1,13 @@
-<a name="main"/>
-
 <h1 align="center"> Metody </h1>
-
 <h3 align="center">Nie jest to wyczerpanie tematu. </h3>
 
-### STRING [⬆️](#main)  
+### STRING [⬆️](#)
 <p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
-
   * __.capitalize()__ -> zmienia pierwszy znak na duży
   * __.lower()__ -> zmienia ciąg na małe litery
   * __.upper()__ -> zmienia ciąg na wielkie litery
   * __.center(length, char = " ")__ -> wyśrodkowany string
-  * __.count(value, start = 0, end = -1)__ -> zwraca ilość wystąpień danego znaku 
+  * __.count(value, start = 0, end = -1)__ -> zwraca ilość wystąpień danego znaku
   * __.endswith(value, start = 0, end = -1)__ -> True jeżeli kończy sie podaną wartością
   * __.find(value, start = 0, end = -1)__ -> zwraca index pierwszego znaku szukanego ciągu, -1 jeżeli nie ma
   * __.index()__ -> To samo co find tylko tutaj zwraca błąd, jeżeli znaku nie ma w stringu
@@ -30,8 +26,8 @@
   * __.split(separator, maxsplit = -1)__ -> zwraca liste ciągu znaków odzielonych argumentem
   * __.replace(x, y, count)__ -> zamienia x na y
   * __".".join(iterable)__ -> łączy ciągi znaków w tym wypadku kropką
- 
-### LISTY [⬆️](#main)
+
+### LISTY [⬆️](#)
   * __.append()__ -> Dodaje element na koniec listy
   * __.clear()__ -> Czyści liste
   * __.copy()__ -> Zwraca płytką kopię listy
@@ -44,7 +40,7 @@
   * __.reverse()__ -> Odwraca listę
   * __.sort(reverse = True | False, key = myFunc)__ -> Sortuje listę w miejscu
 
-### SŁOWNIKI [⬆️](#main)
+### SŁOWNIKI [⬆️](#)
   * __.clear()__ -> Czyści słownik
   * __.copy()__ -> Plytka kopia
   * __.get(keyname, value)__ -> Zwraca wartość danego klucza
@@ -56,8 +52,8 @@
   * __.update()__ -> Updates the dictionary with the specified key-value pairs
   * __.values()__ -> Zwraca listę wartości
 
-### ZBIORY [⬆️](#main)
-  * __.add()__ -> Dodaje element 
+### ZBIORY [⬆️](#)
+  * __.add()__ -> Dodaje element
   * __.clear()__ -> Usuwa wszystkie elementy
   * __.copy()__ -> Zwraca kopie
   * __x.difference(y)__ -> Zwraca zbiór elementów z x których nie ma w y
@@ -70,6 +66,6 @@
   * __x.symmetric_difference(y)__ -> Zwraca elementy które nie są częscią wspólną zbiorów
   * __.union()__ -> Zwraca zbiór wszystkich elementów bez powtórzeń
 
-### KROTKI [⬆️](#main)
+### KROTKI [⬆️](#)
   * __.count(x)__ ->	Zwraca liczbę powtórzeń wartości
   * __.index(x)__ ->	Zwraca index wartości i błąd jeżeli wartości nie ma
