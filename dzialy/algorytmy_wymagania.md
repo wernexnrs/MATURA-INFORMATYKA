@@ -1058,7 +1058,10 @@ print(przes(tekst, 3))
 <a name="cezar"></a>
 ## Szyfr Cezara [⬆️](#)
 <details><summary>Rozwiń</summary>
+	
+Jest to rodzaj szyfru podstawieniowego, w którym każda litera tekstu jawnego (niezaszyfrowanego) zastępowana jest inną, oddaloną od niej o stałą liczbę pozycji w alfabecie. <br>
 
+Jeżeli przesunięcie będzie równie 13, uzyskamy szyfr ROT13.
 ```python
 def koduj(wiadomosc, klucz):
     wynik = ""
