@@ -31,10 +31,11 @@
 5. __algorytmy kompresji i szyfrowania__
    - kody znaków o zmiennej długości,
 	 * [x] [Kompresja danych](#len)
-	 * [x] [alfabet Morse’a](#morse)
-   - [x] [szyfr Cezara,](#cezar)
-   - [x] [szyfr przestawieniowy,](#przes)
-
+	 * [x] [Alfabet Morse’a](#morse)
+   - szyfry przestawieniowe,
+	* [x] [Transpozycyjny](#przes)
+	* [ ] [Szyfr AtBash](#atbash)
+	* [x] [Szyfr Cezara](#cezar)
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
 
 <a name="konwersja"></a>
@@ -1002,6 +1003,56 @@ print("Decoded:", decoded)
 ```
 </details>
 
+<a name="atbash"></a>
+## Szyfr AtBash[⬆️](#)
+<details open><summary>Rozwiń</summary>
+	
+```python
+txt = "Nie zdam maturki elo"
+
+
+def atbash(txt):
+    txt = list(txt)
+    for i in range(len(txt)):
+        if "A" <= txt[i] <= "Z":  # wielkie litery
+            txt[i] = chr(ord("Z") - (ord(txt[i]) - ord("A")))
+
+        if "a" <= txt[i] <= "z":  # małe litery
+            txt[i] = chr(ord("z") - (ord(txt[i]) - ord("a")))
+
+        if txt[i] == " ":
+            txt[i] = " "
+
+    return "".join(txt)
+
+
+print(atbash(txt))
+
+```
+</details>
+
+<a name="przes"></a>
+## Transpozycyjny szyfr przestawieniowy [⬆️](#)
+<details><summary>Rozwiń</summary>
+
+Szyfry przestawieniowe dokonują przestawienia znaków w tekście. Tekst zaszyfrowany jest permutacją tekstu jawnego, tzn. zawiera wszystkie znaki tekstu jawnego, jednak ustawione w innej kolejności. Operacja taka nosi nazwę transpozycji.
+
+ 
+```python
+tekst = "InEz Dma amTrUy ,b ojsett rdun aes"  # jump =  3 to decrypt
+
+
+def przes(tekst, jump):
+    tekst = list(tekst)
+    for i in range(0, len(tekst)-1, jump):
+        tekst[i], tekst[i + 1] = tekst[i + 1], tekst[i]
+    return "".join(tekst)
+
+
+print(przes(tekst, 3))
+```
+</details>
+
 <a name="cezar"></a>
 ## Szyfr Cezara [⬆️](#)
 <details><summary>Rozwiń</summary>
@@ -1035,27 +1086,4 @@ koduj(wiadomosc, klucz):
 	Zwróć wynik
 ```
 </b>
-</details>
-
-<a name="przes"></a>
-
-## Szyfr przestawieniowy [⬆️](#)
-<details><summary>Rozwiń</summary>
-
-Szyfry przestawieniowe dokonują przestawienia znaków w tekście. Tekst zaszyfrowany jest permutacją tekstu jawnego, tzn. zawiera wszystkie znaki tekstu jawnego, jednak ustawione w innej kolejności. Operacja taka nosi nazwę transpozycji.
-
- 
-```python
-tekst = "InEz Dma amTrUy ,b ojsett rdun aes"  # jump =  3 to decrypt
-
-
-def przes(tekst, jump):
-    tekst = list(tekst)
-    for i in range(0, len(tekst)-1, jump):
-        tekst[i], tekst[i + 1] = tekst[i + 1], tekst[i]
-    return "".join(tekst)
-
-
-print(przes(tekst, 3))
-```
 </details>
