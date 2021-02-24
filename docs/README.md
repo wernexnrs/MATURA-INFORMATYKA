@@ -38,7 +38,7 @@ Polecam ciemny motyw github'a</b></p>
 * [w3schools - SQL](https://www.w3schools.com/sql/) - Zagadnienia w przystępnej formie
 * [Niepełny kurs "do matury"](https://www.youtube.com/playlist?list=PLKmH7u1gA9hpm3ZqWhsn2XvGAeX3b9SM0)
 * [Kurs "do matury"](https://www.youtube.com/playlist?list=PLiG7bZwihoShBM1xR0K_st-QyxJyq5iWl)
-* [www.informatykaplus.edu.pl](http://www.informatykaplus.edu.pl/infp.php/bazy_danych_wyklady.html) - wykłady z jakiegoś projektu
+* [informatykaplus.edu.pl](http://www.informatykaplus.edu.pl/infp.php/bazy_danych_wyklady.html) - wykłady z jakiegoś projektu
 
 ## :blue_book: PYTHON
 
@@ -50,20 +50,21 @@ Polecam ciemny motyw github'a</b></p>
 * [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
 * [Dokumentacja pythona](https://docs.python.org/3/)
 * [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
-* [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
-
 
 ## :closed_book: C++ / Pascal
 * [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
 * [Algorytmy.edu.pl](http://www.algorytm.edu.pl/) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
-* [Algorytm.org](http://www.algorytm.org/algorytmy/) - Liista algorytmów
+* [Algorytm.org](http://www.algorytm.org/algorytmy/) - Lista algorytmów
 * [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - wykłady z jakiegoś projektu
 * [pl.khanacademy.org](https://pl.khanacademy.org/computing/computer-science/algorithms) - algorytmy z wyjaśnieniami
-* [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnienaimi na yt, gorąco polecam
 * [binarnie.pl](https://binarnie.pl/category/matura-z-informatyki-nauka/) - dużo teorii, algorytmów
-* [Kurs C++ - cpp0x](https://cpp0x.pl/kursy/Kurs-C++/1)
-* [C++, PYTHON, EXCEL, ACCESS](https://www.youtube.com/user/genek72gmail/videos) - YT, rozwiązywanie zadań maturalnych
+* [Kurs C++](https://cpp0x.pl/kursy/Kurs-C++/1) - cpp0x
 * [allinonebyplucek.blogspot.com](https://allinonebyplucek.blogspot.com/p/informatyka-c.html) - skrót teorii do c++
+
+## :notebook: Rozwiązania zadań maturalnych
+* [C++, PYTHON, EXCEL, ACCESS](https://www.youtube.com/user/genek72gmail/videos) - YT, rozwiązywanie zadań maturalnych
+* [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnienaimi na yt, gorąco polecam
+* [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
 
 ## :copyright: Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
