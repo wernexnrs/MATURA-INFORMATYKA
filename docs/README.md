@@ -49,6 +49,17 @@ Polecam ciemny motyw github'a</b></p>
 6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
 7. [Dokumentacja pythona](https://docs.python.org/3/)
 8. [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
+
+
+## :closed_book: C++ / Pascal
+1. [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
+2. [Algorytmy.edu.pl](http://www.algorytm.edu.pl/) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
+3. [Algorytm.org](http://www.algorytm.org/algorytmy/) - Liista algorytmów
+4. [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - Jakieś kursy pdf
+5. [pl.khanacademy.org](https://pl.khanacademy.org/computing/computer-science/algorithms) - algorytmy z wyjaśnieniami
+6. [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnienaimi na yt, gorąco polecam
+7. [binarnie.pl](https://binarnie.pl/category/matura-z-informatyki-nauka/) - dużo teorii, algorytmów
+
 ## :copyright: Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
 
