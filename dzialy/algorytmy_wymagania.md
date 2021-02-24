@@ -26,13 +26,11 @@
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram)
    - [x] [porządkowanie alfabetyczne, (leksykograficzne)](#alfa)
-   - [ ] [wyszukiwanie wzorca w tekście,](#pattern)
-     > do napisania
+   - [x] [wyszukiwanie wzorca w tekście,](#pattern)
 
 5. __algorytmy kompresji i szyfrowania__
    - kody znaków o zmiennej długości,
-	 * [ ] [Kompresja danych](#len)
-       > do napisania
+	 * [x] [Kompresja danych](#len)
 	 * [x] [alfabet Morse’a](#morse)
    - [x] [szyfr Cezara,](#cezar)
    - [x] [szyfr przestawieniowy,](#przes)
