@@ -2,26 +2,26 @@
 
 1. __algorytmy numeryczne__
 
-    - [x] [Suma liczb od a do b](#suma)
-    - [x] [Iloczyn liczb od a do b](#iloczyn)
-    - [x] [Czy liczba jest parzysta](#even)
-    - [x] [Czy liczba jest podzielna przez n bez reszty](#n)
-    - [x] [Czy liczba jest wielokrotnością n](#multiple)
-    - [ ] Najwiekszy i najmniejszy element w zbiorze
-    - [ ] Moc liczby
+   - [x] [Suma liczb od a do b](#suma)
+   - [x] [Iloczyn liczb od a do b](#iloczyn)
+   - [x] [Czy liczba jest parzysta](#even)
+   - [x] [Czy liczba jest podzielna przez n bez reszty](#n)
+   - [x] [Czy liczba jest wielokrotnością n](#multiple)
+   - [ ] Najwiekszy i najmniejszy element w zbiorze
+   - [ ] Moc liczby
 
 1. __algorytmy arytmetyczne__
 
-    - [x] [Silnia (n)](#factorial)
-    - [x] [Pierwiastek kwadratowy](#sqrt)
-    - [x] [Pierwiastek n-tego stopnia](#sqrt2)
-    - [x] [Moda](#moda)
-    - [x] [Mediana](#med)
-    - [x] [Średnia arytmetyczna](#ary)
-    - [x] [Średnia ważona](#waz)
-    - [x] [Średnia geometryczna](#geo)
-    - [x] [Wariancja i odchylenie standardowe](#odchylenie)
-    - [ ] Symbol Newtona
+   - [x] [Silnia (n)](#factorial)
+   - [x] [Pierwiastek kwadratowy](#sqrt)
+   - [x] [Pierwiastek n-tego stopnia](#sqrt2)
+   - [x] [Moda](#moda)
+   - [x] [Mediana](#med)
+   - [x] [Średnia arytmetyczna](#ary)
+   - [x] [Średnia ważona](#waz)
+   - [x] [Średnia geometryczna](#geo)
+   - [x] [Wariancja i odchylenie standardowe](#odchylenie)
+   - [ ] Symbol Newtona
 
 3. __algorytmy na łańcuchach__  
 
@@ -34,12 +34,13 @@
    - [ ] Naprzemienność dużych i małych liter w tekście
 
    - Wzorzec w tekście,
-	     * [ ] Algorytm Manachera	
-         * [ ] Algorytm N 
-         * [ ] Algorytm Knutha-Morrisa-Pratta
-         * [ ] Algorytm Boyer-Moore'a
-         * [ ] Algorytm Galila Seiferasa
-         * [ ] Algorytm Karpa-Rabina
+
+   	* [ ] Algorytm Manachera	
+        * [ ] Algorytm N 
+        * [ ] Algorytm Knutha-Morrisa-Pratta
+        * [ ] Algorytm Boyer-Moore'a
+        * [ ] Algorytm Galila Seiferasa
+        * [ ] Algorytm Karpa-Rabina
 
 4. __kombinatoryka__
     
