@@ -25,7 +25,7 @@
 4. __algorytmy na tekstach__
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
    - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram)
-   - [x] [porządkowanie alfabetyczne,](#alfa)
+   - [x] [porządkowanie alfabetyczne, (leksykograficzne)](#alfa)
    - [ ] [wyszukiwanie wzorca w tekście,](#pattern)
      > do napisania
 
@@ -885,6 +885,8 @@ zaraz opracuje
 ### Prefix free
 <details open><summary>Rozwiń</summary>
 
+Raczej nie obowiązuje na maturze, ale kto wie.
+
 Kod jest nazywany "prefix (free) code", jeżeli w systemie nie ma kodu słowa, który byłby prefixem innego kodu słowa.
 
 Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pliku to: a,b,c,d,e,f i chcemy zmniejszyć rozmiar tego pliku kompresją, gdzie każdy kod znaku ma różną długość.
@@ -897,11 +899,40 @@ Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pl
 Plik taki zajmnie (45 * 1 + 13 * 3 + 12 * 3 + 16 * 3 + 9 * 4 + 5 * 4) * 1000 = 224,000 bity
 
 ```python
-text = "01101100"
+#Iterated version
 
-cipher = {'0': 'a','101': 'b','100': 'c', '111': 'd', '1101': 'e', '1100': 'f'}
+text = "010111010011111001001100"
 
-Odkoduj napis w zmiennej text zakładając, że jest to prefix (free) code. Powodzenia.
+cipher = {'0': 'n', '101': 'i', '100': 'm', '111': 'z', '1101': 'e', '1100': 'd', '1001': 'a', '00': ' '}
+
+
+def decrypt(cipher, text): #brak obsługi błedów, jeżeli zmienna text skonstruowana jest niepoprawnie.
+    res = ""
+    while text:
+        for k in cipher:
+            if text.startswith(k):
+                res += cipher[k]
+                text = text[len(k):]
+    return res
+
+
+to_code = "zdam"
+
+
+def encrypt(cipher, text):
+    res = ""
+    for char in text:
+        if char in cipher.values():
+            for k, v in cipher.items():
+                if v == char:
+                    res += k
+        else:
+            res += "-"
+    return res
+
+
+print(decrypt(cipher, text))
+print(encrypt(cipher, to_code))
 ```
 </details>
 
