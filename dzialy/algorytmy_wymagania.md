@@ -33,9 +33,9 @@
 	 * [x] [Kompresja danych](#len)
 	 * [x] [Alfabet Morse’a](#morse)
    - szyfry przestawieniowe,
-	* [x] [Transpozycyjny](#przes)
-	* [ ] [Szyfr AtBash](#atbash)
-	* [x] [Szyfr Cezara](#cezar)
+	 * [x] [Transpozycyjny](#przes)
+	 * [ ] [Szyfr AtBash](#atbash)
+	 * [x] [Szyfr Cezara](#cezar)
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
 
 <a name="konwersja"></a>
