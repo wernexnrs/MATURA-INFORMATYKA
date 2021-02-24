@@ -10,7 +10,7 @@
    - [ ] Najwiekszy i najmniejszy element w zbiorze
    - [ ] Moc liczby
 
-1. __algorytmy arytmetyczne__
+2. __algorytmy arytmetyczne__
 
    - [x] [Silnia (n)](#factorial)
    - [x] [Pierwiastek kwadratowy](#sqrt)
@@ -32,31 +32,28 @@
    - [ ] Wyszukiwanie najdłuższego wspólnego podciągu
    - [x] [Krotność znaków w łańcuchu](#kro)
    - [ ] Naprzemienność dużych i małych liter w tekście
-
-   - Wzorzec w tekście,
-
-   	* [ ] Algorytm Manachera	
-        * [ ] Algorytm N 
-        * [ ] Algorytm Knutha-Morrisa-Pratta
-        * [ ] Algorytm Boyer-Moore'a
-        * [ ] Algorytm Galila Seiferasa
-        * [ ] Algorytm Karpa-Rabina
+   - [ ] Algorytm Manachera	
+   - [ ] Algorytm N 
+   - [ ] Algorytm Knutha-Morrisa-Pratta
+   - [ ] Algorytm Boyer-Moore'a
+   - [ ] Algorytm Galila Seiferasa
+   - [ ] Algorytm Karpa-Rabina
 
 4. __kombinatoryka__
     
-    - [ ] Porządek leksykograficzny
-    - [ ] Wyszukiwanie liczby palindromów w tekście
+   - [ ] Porządek leksykograficzny
+   - [ ] Wyszukiwanie liczby palindromów w tekście
 
 5. __geometria__
 
-    - [ ] Wyznaczenie punktów przecięcia okręgu z prostą
-    - [ ] Wyznaczanie punktu przecięcia dwóch prostych
-    - [ ] Przynależność punktu do odcinka
-    - [ ] Przynależność punktu do wielokąta
-    - [ ] Środek odcinka
-    - [ ] Długość odcinka
-    - [ ] Znajdowanie punktu tworzącego figure
-    - [ ] Sprawdzanie czy proste są prostopadłe / równoległe
+   - [ ] Wyznaczenie punktów przecięcia okręgu z prostą
+   - [ ] Wyznaczanie punktu przecięcia dwóch prostych
+   - [ ] Przynależność punktu do odcinka
+   - [ ] Przynależność punktu do wielokąta
+   - [ ] Środek odcinka
+   - [ ] Długość odcinka
+   - [ ] Znajdowanie punktu tworzącego figure
+   - [ ] Sprawdzanie czy proste są prostopadłe / równoległe
 
 7. __algorytmy kompresji i szyfrowania__  
 
