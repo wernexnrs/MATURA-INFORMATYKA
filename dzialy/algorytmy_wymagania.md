@@ -34,7 +34,7 @@
 	 * [x] [Alfabet Morse’a](#morse)
    - szyfry przestawieniowe,
 	 * [x] [Transpozycyjny](#przes)
-	 * [ ] [Szyfr AtBash](#atbash)
+	 * [x] [Szyfr AtBash](#atbash)
 	 * [x] [Szyfr Cezara](#cezar)
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
 
