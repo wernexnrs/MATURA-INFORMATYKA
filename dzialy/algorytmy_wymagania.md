@@ -1006,7 +1006,9 @@ print("Decoded:", decoded)
 <a name="atbash"></a>
 ## Szyfr AtBash[⬆️](#)
 <details open><summary>Rozwiń</summary>
-	
+
+Jest to monoalfabetyczny szyfr podstawieniowy, ograniczony. Zasada jego działania polega na podstawieniu zamiast danej litery, litery leżącej po drugiej stronie alfabetu w takiej samej odległości. Np. zamiast litery A powinniśmy podstawić literę Z, za literę C wstawiamy literę X.
+
 ```python
 txt = "Nie zdam maturki elo"
 
@@ -1032,7 +1034,7 @@ print(atbash(txt))
 </details>
 
 <a name="przes"></a>
-## Transpozycyjny szyfr przestawieniowy [⬆️](#)
+## Transpozycyjny [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Szyfry przestawieniowe dokonują przestawienia znaków w tekście. Tekst zaszyfrowany jest permutacją tekstu jawnego, tzn. zawiera wszystkie znaki tekstu jawnego, jednak ustawione w innej kolejności. Operacja taka nosi nazwę transpozycji.
