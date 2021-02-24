@@ -1038,8 +1038,9 @@ koduj(wiadomosc, klucz):
 </details>
 
 <a name="przes"></a>
+
 ## Szyfr przestawieniowy [⬆️](#)
-<details open><summary>Rozwiń</summary>
+<details><summary>Rozwiń</summary>
 
 Szyfry przestawieniowe dokonują przestawienia znaków w tekście. Tekst zaszyfrowany jest permutacją tekstu jawnego, tzn. zawiera wszystkie znaki tekstu jawnego, jednak ustawione w innej kolejności. Operacja taka nosi nazwę transpozycji.
 
