@@ -64,30 +64,33 @@ with open('Dane_PR2\pary.txt') as file:
 ```py
 with open("Dane_PR2\pary.txt") as file:
     for line in file:
-        num, word = line.strip().split()
-
-        seq = word[0]
-        longest_seq = word[0]
-        for char in word[1:]:
-            if char == seq[-1]:
-                seq += char
+        line, slowo = line.strip().split()
+        res = slowo[0]
+        longest = slowo[0]
+        for i in range(1, len(slowo)):
+            if slowo[i - 1] == slowo[i]:
+                res += slowo[i - 1]
             else:
-                seq = char
-            if len(seq) > len(longest_seq):
-                longest_seq = seq
-        print(longest_seq, len(longest_seq))
+                res = slowo[i]
+            if len(res) > len(longest):
+                longest = res
+        print(longest, len(longest))
 
 ```
 
 ## 4.3
 
 ```py
-arr = []
+lista = []
+
 with open("Dane_PR2\pary.txt") as file:
     for line in file:
-        num, word = line.strip().split()
-        num = int(num)
-        if num == len(word):
-            arr.append((num, word))
-print(sorted(arr)[0])
+        line, slowo = line.strip().split()
+        line = int(line)
+
+        if line == len(slowo):
+            lista.append((line, slowo))
+
+print(sorted(lista)[0])
+
 ```
