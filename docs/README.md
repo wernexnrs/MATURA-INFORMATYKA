@@ -38,28 +38,32 @@ Polecam ciemny motyw github'a</b></p>
 * [w3schools - SQL](https://www.w3schools.com/sql/) - Zagadnienia w przystępnej formie
 * [Niepełny kurs "do matury"](https://www.youtube.com/playlist?list=PLKmH7u1gA9hpm3ZqWhsn2XvGAeX3b9SM0)
 * [Kurs "do matury"](https://www.youtube.com/playlist?list=PLiG7bZwihoShBM1xR0K_st-QyxJyq5iWl)
+* [www.informatykaplus.edu.pl](http://www.informatykaplus.edu.pl/infp.php/bazy_danych_wyklady.html) - wykłady z jakiegoś projektu
 
 ## :blue_book: PYTHON
 
-1. [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-2. [Zadania z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
-3. [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
-4. [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
-5. [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
-6. [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
-7. [Dokumentacja pythona](https://docs.python.org/3/)
-8. [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
+* [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
+* [Rozwiązania zadań z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+* [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+* [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
+* [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
+* [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
+* [Dokumentacja pythona](https://docs.python.org/3/)
+* [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
+* [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
 
 
 ## :closed_book: C++ / Pascal
-1. [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
-2. [Algorytmy.edu.pl](http://www.algorytm.edu.pl/) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
-3. [Algorytm.org](http://www.algorytm.org/algorytmy/) - Liista algorytmów
-4. [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - Jakieś kursy pdf
-5. [pl.khanacademy.org](https://pl.khanacademy.org/computing/computer-science/algorithms) - algorytmy z wyjaśnieniami
-6. [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnienaimi na yt, gorąco polecam
-7. [binarnie.pl](https://binarnie.pl/category/matura-z-informatyki-nauka/) - dużo teorii, algorytmów
-8. [Kurs C++ - cpp0x](https://cpp0x.pl/kursy/Kurs-C++/1)
+* [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
+* [Algorytmy.edu.pl](http://www.algorytm.edu.pl/) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
+* [Algorytm.org](http://www.algorytm.org/algorytmy/) - Liista algorytmów
+* [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - wykłady z jakiegoś projektu
+* [pl.khanacademy.org](https://pl.khanacademy.org/computing/computer-science/algorithms) - algorytmy z wyjaśnieniami
+* [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnienaimi na yt, gorąco polecam
+* [binarnie.pl](https://binarnie.pl/category/matura-z-informatyki-nauka/) - dużo teorii, algorytmów
+* [Kurs C++ - cpp0x](https://cpp0x.pl/kursy/Kurs-C++/1)
+* [C++, PYTHON, EXCEL, ACCESS](https://www.youtube.com/user/genek72gmail/videos) - YT, rozwiązywanie zadań maturalnych
+* [allinonebyplucek.blogspot.com](https://allinonebyplucek.blogspot.com/p/informatyka-c.html) - skrót teorii do c++
 
 ## :copyright: Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
