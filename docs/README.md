@@ -43,10 +43,10 @@ Polecam ciemny motyw github'a</b></p>
 ## :blue_book: PYTHON
 
 * [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-* [Rozwiązania zadań z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+* [Rozwiązania zadań z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) #zachęcam do wstawiania swoich
 * [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 * [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
-* [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md)
+* [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md) #to trzeba rozwinąć, nie mam siły
 * [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
 * [Dokumentacja pythona](https://docs.python.org/3/)
 * [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
