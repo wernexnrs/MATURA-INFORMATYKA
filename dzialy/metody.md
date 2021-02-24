@@ -3,6 +3,7 @@
 
 ### STRING [⬆️](#)
 <p>Wszystkie metody na napisach zwracają wartości. Nie zmieniają oryginalnego ciągu znaków.</p>
+
   * __.capitalize()__ -> zmienia pierwszy znak na duży
   * __.lower()__ -> zmienia ciąg na małe litery
   * __.upper()__ -> zmienia ciąg na wielkie litery
