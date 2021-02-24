@@ -65,6 +65,7 @@ Polecam ciemny motyw github'a</b></p>
 * [C++, PYTHON, EXCEL, ACCESS](https://www.youtube.com/user/genek72gmail/videos) - YT, rozwiązywanie zadań maturalnych
 * [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnieniami na yt, gorąco polecam
 * [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
+* [Dysk google](https://drive.google.com/drive/folders/13Fs_7YpmVpXV-IkYjDcUBLdQQkdditpx) - Algorytmy, rozwiązania zadań z accessa
 
 ## :copyright: Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
