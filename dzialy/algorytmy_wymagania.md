@@ -1041,27 +1041,20 @@ koduj(wiadomosc, klucz):
 ## Szyfr przestawieniowy [⬆️](#)
 <details open><summary>Rozwiń</summary>
 
+Szyfry przestawieniowe dokonują przestawienia znaków w tekście. Tekst zaszyfrowany jest permutacją tekstu jawnego, tzn. zawiera wszystkie znaki tekstu jawnego, jednak ustawione w innej kolejności. Operacja taka nosi nazwę transpozycji.
+
+ 
 ```python
-tekst = " IDNMEMZTAR ,APUNYE AO IEWTŻMJGS  REDAATNU"  # jump =  3 to decrypt
+tekst = "InEz Dma amTrUy ,b ojsett rdun aes"  # jump =  3 to decrypt
 
 
 def przes(tekst, jump):
     tekst = list(tekst)
-    for i in range(0, len(tekst) - 2, 2):
-        tekst[i], tekst[i + jump] = tekst[i + jump], tekst[i]
+    for i in range(0, len(tekst)-1, jump):
+        tekst[i], tekst[i + 1] = tekst[i + 1], tekst[i]
     return "".join(tekst)
 
 
-print(przes(tekst, jump=3))
+print(przes(tekst, 3))
 ```
-
-```python
-wersja na teorie
-```
-<b>
-
-```
-Pseudocode
-```
-</b>
 </details>
