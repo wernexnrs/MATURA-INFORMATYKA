@@ -55,13 +55,6 @@
    - [ ] Znajdowanie punktu tworzącego figure
    - [ ] Sprawdzanie czy proste są prostopadłe / równoległe
 
-7. __algorytmy kompresji i szyfrowania__  
-
-   - kody znaków o zmiennej długości,
-
-      .......
-
-
 ## Czy liczba jest parzysta [⬆️](#main)
 <a name="even"></a>
 <details><summary>Rozwiń</summary>
