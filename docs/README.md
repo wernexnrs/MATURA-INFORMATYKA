@@ -59,6 +59,7 @@ Polecam ciemny motyw github'a</b></p>
 5. [pl.khanacademy.org](https://pl.khanacademy.org/computing/computer-science/algorithms) - algorytmy z wyjaśnieniami
 6. [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnienaimi na yt, gorąco polecam
 7. [binarnie.pl](https://binarnie.pl/category/matura-z-informatyki-nauka/) - dużo teorii, algorytmów
+8. [Kurs C++ - cpp0x](https://cpp0x.pl/kursy/Kurs-C++/1)
 
 ## :copyright: Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
