@@ -1,31 +1,66 @@
-<h1 align="center">  Dodatkowe algorytmy </h1>
+<h1 align="center"> Dodatkowe algorytmy </h1>
 
-1. __algorytmy na liczbach całkowitych:__
+1. __algorytmy numeryczne__
+
+    - [x] [Suma liczb od a do b](#suma)
+    - [x] [Iloczyn liczb od a do b](#iloczyn)
     - [x] [Czy liczba jest parzysta](#even)
     - [x] [Czy liczba jest podzielna przez n bez reszty](#n)
     - [x] [Czy liczba jest wielokrotnością n](#multiple)
+    - [ ] Najwiekszy i najmniejszy element w zbiorze
+    - [ ] Moc liczby
 
-2. __algorytmy wyszukiwania i porządkowania (sortowania):__
-    - [x] [Krotność](#kro)
+1. __algorytmy arytmetyczne__
 
-3. __algorytmy numeryczne__
     - [x] [Silnia (n)](#factorial)
     - [x] [Pierwiastek kwadratowy](#sqrt)
     - [x] [Pierwiastek n-tego stopnia](#sqrt2)
-    - [x] [Suma liczb od a do b](#suma)
-    - [x] [Iloczyn liczb od a do b](#iloczyn)
     - [x] [Moda](#moda)
     - [x] [Mediana](#med)
     - [x] [Średnia arytmetyczna](#ary)
     - [x] [Średnia ważona](#waz)
     - [x] [Średnia geometryczna](#geo)
     - [x] [Wariancja i odchylenie standardowe](#odchylenie)
+    - [ ] Symbol Newtona
 
-4. __algorytmy na tekstach__  
-    .......
+3. __algorytmy na łańcuchach__  
 
-5. __algorytmy kompresji i szyfrowania__  
+   - [ ] Zliczanie znaków w ciągu
+   - [ ] Zliczanie słów w łańcuchu
+   - [ ] Wyszukiwanie najdłuższego słowa w łańcuchu
+   - [ ] Wyszukiwanie najdłuższego wspólnego podłańcucha
+   - [ ] Wyszukiwanie najdłuższego wspólnego podciągu
+   - [x] [Krotność znaków w łańcuchu](#kro)
+   - [ ] Naprzemienność dużych i małych liter w tekście
+
+   - Wzorzec w tekście,
+	     * [ ] Algorytm Manachera	
+         * [ ] Algorytm N 
+         * [ ] Algorytm Knutha-Morrisa-Pratta
+         * [ ] Algorytm Boyer-Moore'a
+         * [ ] Algorytm Galila Seiferasa
+         * [ ] Algorytm Karpa-Rabina
+
+4. __kombinatoryka__
+    
+    - [ ] Porządek leksykograficzny
+    - [ ] Wyszukiwanie liczby palindromów w tekście
+
+5. __geometria__
+
+    - [ ] Wyznaczenie punktów przecięcia okręgu z prostą
+    - [ ] Wyznaczanie punktu przecięcia dwóch prostych
+    - [ ] Przynależność punktu do odcinka
+    - [ ] Przynależność punktu do wielokąta
+    - [ ] Środek odcinka
+    - [ ] Długość odcinka
+    - [ ] Znajdowanie punktu tworzącego figure
+    - [ ] Sprawdzanie czy proste są prostopadłe / równoległe
+
+7. __algorytmy kompresji i szyfrowania__  
+
    - kody znaków o zmiennej długości,
+
       .......
 
 
