@@ -63,7 +63,7 @@ Polecam ciemny motyw github'a</b></p>
 
 ## :notebook: Rozwiązania zadań maturalnych
 * [C++, PYTHON, EXCEL, ACCESS](https://www.youtube.com/user/genek72gmail/videos) - YT, rozwiązywanie zadań maturalnych
-* [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnienaimi na yt, gorąco polecam
+* [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnieniami na yt, gorąco polecam
 * [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
 
 ## :copyright: Licencja
