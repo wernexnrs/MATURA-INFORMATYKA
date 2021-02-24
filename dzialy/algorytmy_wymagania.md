@@ -1005,7 +1005,7 @@ print("Decoded:", decoded)
 
 <a name="atbash"></a>
 ## Szyfr AtBash[⬆️](#)
-<details open><summary>Rozwiń</summary>
+<details><summary>Rozwiń</summary>
 
 Jest to monoalfabetyczny szyfr podstawieniowy, ograniczony. Zasada jego działania polega na podstawieniu zamiast danej litery, litery leżącej po drugiej stronie alfabetu w takiej samej odległości. Np. zamiast litery A powinniśmy podstawić literę Z, za literę C wstawiamy literę X.
 
