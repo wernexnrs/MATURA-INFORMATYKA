@@ -876,8 +876,27 @@ print(bubble_sort(slowo))
 
 <a name="pattern"></a>
 ## Wyszukiwanie wzorca w tekście [⬆️](#)
+<details><summary>Rozwiń</summary>
+	
+```py
+def is_pattern(tekst, pattern):
+    for i in range(len(tekst)):
+        j = 0
+        while j < len(pattern) and tekst[i + j] == pattern[j]:
+            j += 1
+        if j > 0 and j == len(pattern):
+            return True
+    return False
+```
 
-zaraz opracuje
+<b>
+
+```
+pseudocode
+```
+</b>
+
+</details>
 
 <a name="len"></a>
 ## Kompresja danych [⬆️](#)
