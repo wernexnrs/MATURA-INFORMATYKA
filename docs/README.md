@@ -53,7 +53,7 @@ Polecam ciemny motyw github'a</b></p>
 
 ## :closed_book: C++ / Pascal
 * [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
-* [Algorytmy.edu.pl](http://www.algorytm.edu.pl/) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
+* [Algorytmy.edu.pl](http://www.algorytm.edu.pl/algorytmy-maturalne.html) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
 * [Algorytm.org](http://www.algorytm.org/algorytmy/) - Lista algorytmów
 * [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - wykłady z jakiegoś projektu
 * [pl.khanacademy.org](https://pl.khanacademy.org/computing/computer-science/algorithms) - algorytmy z wyjaśnieniami
