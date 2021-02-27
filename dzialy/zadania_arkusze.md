@@ -9,6 +9,19 @@
 3. [Zadanie 60. Dzielniki  - str. 117](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md)
 
 4. [Zadanie 61. Ciągi arytmetyczne - str. 118](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/61.md)
+
+5. [Zadanie 62. Liczby ósemkowe - str. 119](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/62.md)
+
+6. [Zadanie 63. Ciągi zerojedynkowe - str. 120](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md)
+
+7. Zadanie 64.
+
+8. Zadanie 65.
+
+9. Zadanie 66.
+
+10. Zadanie 67.
+
 ## Matura
 
 1. [Czerwiec 2020](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec.md) - [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
