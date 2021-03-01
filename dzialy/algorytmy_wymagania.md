@@ -387,6 +387,31 @@ Dla i = 1,2 … n
 			A[j + 1] <- A[j]
 			A[j] <- t
 ```
+
+```py
+# Wersja zoptymalizowana 
+arr = [1,1,1,1,1,1,2]
+
+
+def swap(arr,x,y): #to albo swap jak wyżej
+    temp = arr[x]
+    arr[x] = arr[y]
+    arr[y] = temp
+
+def bubblesort(arr):
+
+    for i in range(len(arr)):
+        issorted = True
+        for j in range(1,len(arr)-i):
+            if arr[j] < arr[j-1]:
+                swap(arr,j ,j-1)
+                issorted = False
+        if issorted:
+            break
+
+bubblesort(arr)
+print(arr)
+```
 </b>
 </details>
 
