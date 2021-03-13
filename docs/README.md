@@ -60,6 +60,7 @@ Polecam ciemny motyw github'a</b></p>
 * [binarnie.pl](https://binarnie.pl/category/matura-z-informatyki-nauka/) - dużo teorii, algorytmów
 * [Kurs C++](https://cpp0x.pl/kursy/Kurs-C++/1) - cpp0x
 * [allinonebyplucek.blogspot.com](https://allinonebyplucek.blogspot.com/p/informatyka-c.html) - skrót teorii do c++
+* [Repozytorium c++/excel](https://github.com/mazxaxz/matura-informatyka-all-in-one)
 
 ## :notebook: Rozwiązania zadań maturalnych
 * [C++, PYTHON, EXCEL, ACCESS](https://www.youtube.com/user/genek72gmail/videos) - YT, rozwiązywanie zadań maturalnych
