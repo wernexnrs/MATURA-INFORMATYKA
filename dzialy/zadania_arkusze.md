@@ -14,7 +14,7 @@
 
 6. [Zadanie 63. Ciągi zerojedynkowe - str. 120](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md)
 
-7. Zadanie 64.
+7. [Zadanie 64. Obrazki - str.121](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/64.md)
 
 8. Zadanie 65.
 
