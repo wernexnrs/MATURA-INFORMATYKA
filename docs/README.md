@@ -14,6 +14,11 @@ Bardzo proszę o wnoszenie poprawek.<br>
 Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.<br>
 Polecam ciemny motyw github'a</b></p>
 
+### Zachęcam:
+- Do wstawiania swoich rozwiązań z akruszy w każdym języku - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) - dzięki temu możemy trzymać wszystko w jednym miejscu. [TUTORIAL](https://www.youtube.com/watch?v=nT8KGYVurIU)
+- Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
+- Do rozwijania listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+
 ## :link: Przydatne linki
 
 * [POLSKI SPOJ](https://pl.spoj.com/) - pełno problemów algorytmicznych do rozwiązania
