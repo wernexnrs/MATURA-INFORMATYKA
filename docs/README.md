@@ -34,12 +34,13 @@ Polecam ciemny motyw github'a</b></p>
 * [Repozytorium c++/excel](https://github.com/mazxaxz/matura-informatyka-all-in-one)
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=uySyv8St9aw&list=PL6aekdNhY7DAK6UraEDhxhMng89wrO9y9) - sortowania
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=UFOqUCpAUZY&list=PL6aekdNhY7DCOVVTixns3ZfOfw9xFn-Rx) - Rozwiązania z polskiego Spoja [C#]
-* [Rekurencja](https://www.youtube.com/watch?v=Pd7blw4A0qg&list=PLikGmVz62acwbr4aohYmEpv1YX7DWJnmP)
+* [Rekurencja](https://www.youtube.com/watch?v=Pd7blw4A0qg&list=PLikGmVz62acwbr4aohYmEpv1YX7DWJnmP) - YT
 * [Selection sort](https://www.youtube.com/watch?v=Ns4TPTC8whw&list=PLikGmVz62acwaYlZymm3mgPsN9Ogr4m1x) - YT
 * [Quick sort](https://www.youtube.com/watch?v=ywWBy6J5gz8&list=PLikGmVz62acx1SbJ8UUYkniRo2HbVpIOw) - YT
 * [Merge sort](https://www.youtube.com/watch?v=XaqR3G_NVoo&list=PLikGmVz62acwGzui7mSFReGzpbuF1IPaM) - YT
 * [Insertion sort](https://www.youtube.com/watch?v=ROalU379l3U&list=PLikGmVz62acywhDHJy-91TA4HXGc5cqz1) - YT
 * [Bubble sort](https://www.youtube.com/watch?v=uJLwnsLn0_Q&list=PLikGmVz62aczkKRmociYK8Uzix1Mnf21p) - YT
+
 ## :green_book: EXCEL
 
 * [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
