@@ -78,3 +78,5 @@
 - [ ] [Marzec 2021 Matura próbna](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_marzec_pr.md) --- [POBIERZ ARKUSZ](https://drive.google.com/file/d/1WlUyLp5RMR4vf7IxUSFgt7sEFVQoWy7v/view?usp=sharing)
 
 - [x] [Kwiecień 2020 Matura próbna](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-probna-informatyka-2020-kwiecien-poziom-rozszerzony/)
+
+- [ ] [Grudzień 2014 Matura Przykładowa](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2014_grudzien_pr.md) --- [POBIERZ ARKUSZ](https://drive.google.com/file/d/1093cRHeTPFGILJO-iSE-Owjsd-bX10ij/view?usp=sharing)
