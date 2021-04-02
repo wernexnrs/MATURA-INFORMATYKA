@@ -34,7 +34,12 @@ Polecam ciemny motyw github'a</b></p>
 * [Repozytorium c++/excel](https://github.com/mazxaxz/matura-informatyka-all-in-one)
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=uySyv8St9aw&list=PL6aekdNhY7DAK6UraEDhxhMng89wrO9y9) - sortowania
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=UFOqUCpAUZY&list=PL6aekdNhY7DCOVVTixns3ZfOfw9xFn-Rx) - Rozwiązania z polskiego Spoja [C#]
-
+* [Rekurencja](https://www.youtube.com/watch?v=Pd7blw4A0qg&list=PLikGmVz62acwbr4aohYmEpv1YX7DWJnmP)
+* [Selection sort](https://www.youtube.com/watch?v=Ns4TPTC8whw&list=PLikGmVz62acwaYlZymm3mgPsN9Ogr4m1x) - YT
+* [Quick sort](https://www.youtube.com/watch?v=ywWBy6J5gz8&list=PLikGmVz62acx1SbJ8UUYkniRo2HbVpIOw) - YT
+* [Merge sort](https://www.youtube.com/watch?v=XaqR3G_NVoo&list=PLikGmVz62acwGzui7mSFReGzpbuF1IPaM) - YT
+* [Insertion sort](https://www.youtube.com/watch?v=ROalU379l3U&list=PLikGmVz62acywhDHJy-91TA4HXGc5cqz1) - YT
+* [Bubble sort](https://www.youtube.com/watch?v=uJLwnsLn0_Q&list=PLikGmVz62aczkKRmociYK8Uzix1Mnf21p) - YT
 ## :green_book: EXCEL
 
 * [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
@@ -44,6 +49,8 @@ Polecam ciemny motyw github'a</b></p>
 * [WebCrew Tomasz Jaśniewski](https://www.youtube.com/playlist?list=PLKmH7u1gA9hr0U59uCEDhr_G2Yn2yV0M5) - kurs YT
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=msEff53_htw&list=PL6aekdNhY7DAh6BDzprcOWo0qj9J7-vdH) - kurs YT
 * [PMSOCHO Piotr Majcher](https://www.youtube.com/channel/UC0v0AUvV3vy0WFTkGl28wMA/videos) - kurs YT
+* [Pełno kursów YT](https://www.youtube.com/watch?v=PU8ACyYxJBk&list=PLikGmVz62aczV-1qWC2oQtL_Tod8bkXGv)
+* [Jeszcze więcej kursów](https://www.youtube.com/watch?v=tuk99Sgc6Fw&list=PLoyECfvEFOjbdwpIOtm_8PFzB_CPAD2_H)
 
 ## :orange_book: ACCESS
 
@@ -52,6 +59,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Niepełny kurs "do matury"](https://www.youtube.com/playlist?list=PLKmH7u1gA9hpm3ZqWhsn2XvGAeX3b9SM0)
 * [Kurs "do matury"](https://www.youtube.com/playlist?list=PLiG7bZwihoShBM1xR0K_st-QyxJyq5iWl)
 * [informatykaplus.edu.pl](http://www.informatykaplus.edu.pl/infp.php/bazy_danych_wyklady.html) - wykłady z jakiegoś projektu
+* [Kursy YT](https://www.youtube.com/watch?v=vrtNPp2r6qQ&list=PLikGmVz62aczN2wx5NFGtJxRgux0lXuCM)
 
 ## :blue_book: PYTHON
 
