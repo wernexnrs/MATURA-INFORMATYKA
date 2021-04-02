@@ -1,10 +1,15 @@
+<p align="center">
+
 ![build][build-shield]
 [![Issues][issues-shield]][issues-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![GNU License][license-shield]][license-url]
+[![_last-commit]][commit]
+[![_commit-activity-m]][commits]
 
+</p>
 <h1 align="center"> 🔥 <a href="https://discord.com/users/596478466849767475/">Wernex#9840</a> 🔥 </h1>
 
 <h1 align="center"> MATURA 2021 </h1>
@@ -134,3 +139,13 @@ Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATUR
 [_ee08]: https://shields.io/discord/723560181996191914?label=EE.08%2FEE.09&logo=discord&style=social&link=https://discord.gg/RJMZQEC
 [ee08]: https://discord.gg/RJMZQEC
 
+[commit]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/commit
+[commits]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/commits/master
+
+[_commit-activity-m]: https://img.shields.io/github/commit-activity/m/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_commit-activity-w]: https://img.shields.io/github/commit-activity/w/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_commit-activity-y]: https://img.shields.io/github/commit-activity/y/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_contributors]: https://img.shields.io/github/all-contributors/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_last-commit]: https://shields.io/github/last-commit/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_repo-size]: https://shields.io/github/repo-size/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
+[zip]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/archive/master.zip
