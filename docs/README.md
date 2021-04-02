@@ -14,6 +14,13 @@ Bardzo proszę o wnoszenie poprawek.<br>
 Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.<br>
 Polecam ciemny motyw github'a</b></p>
 
+### Serwery Discord
+  - [![_do-matury]][do-matury]  
+    Wspólna nauka do matury, nie tylko z informatyki
+
+  - [![_ee08]][ee08]  
+    Przygotowanie do egzaminów zawodowych EE.08 i EE.09
+    
 ### Zachęcam:
 - Do wstawiania swoich rozwiązań z akruszy w każdym języku - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) - dzięki temu możemy trzymać wszystko w jednym miejscu. [TUTORIAL](https://www.youtube.com/watch?v=nT8KGYVurIU)
 - Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
@@ -21,6 +28,7 @@ Polecam ciemny motyw github'a</b></p>
 
 ## :link: Przydatne linki
 
+* [Pixel48/getLearn](https://github.com/Pixel48/getLearn) - opracowane przez społeczność materiały do nauki
 * [POLSKI SPOJ](https://pl.spoj.com/) - pełno problemów algorytmicznych do rozwiązania
 * [DISCORD MATURALNY](https://discord.gg/3hyj3kXQkt)
 * [Wymagania maturalne na rok 2021](http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Informatory/2015/aneks/Aneks_2021_informatyka_EM_niewidomi.pdf)
@@ -98,6 +106,7 @@ Polecam ciemny motyw github'a</b></p>
 * [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnieniami na yt, gorąco polecam
 * [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
 * [Dysk google](https://drive.google.com/drive/folders/13Fs_7YpmVpXV-IkYjDcUBLdQQkdditpx) - Algorytmy, rozwiązania zadań z accessa
+* [Jack477](https://github.com/Jack477/Arkusze_informatyka_Python) - Rozwiązania arkuszy na GitHub
 
 ## :copyright: Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
@@ -118,3 +127,10 @@ Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATUR
 
 [license-shield]: https://img.shields.io/github/license/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
 [license-url]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE
+
+[_do-matury]: https://shields.io/discord/796048059507015732?label=Do%20matury&logo=discord&style=social&link=https://discord.gg/3hyj3kXQkt
+[do-matury]: https://discord.gg/3hyj3kXQkt
+
+[_ee08]: https://shields.io/discord/723560181996191914?label=EE.08%2FEE.09&logo=discord&style=social&link=https://discord.gg/RJMZQEC
+[ee08]: https://discord.gg/RJMZQEC
+
