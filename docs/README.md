@@ -61,6 +61,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Kurs "do matury"](https://www.youtube.com/playlist?list=PLiG7bZwihoShBM1xR0K_st-QyxJyq5iWl)
 * [informatykaplus.edu.pl](http://www.informatykaplus.edu.pl/infp.php/bazy_danych_wyklady.html) - wykłady z jakiegoś projektu
 * [Kursy YT](https://www.youtube.com/watch?v=vrtNPp2r6qQ&list=PLikGmVz62aczN2wx5NFGtJxRgux0lXuCM)
+* [Pasja informatyki](https://www.youtube.com/watch?v=99JAI24Zd24&list=PLOYHgt8dIdoymv-Wzvs8M-OsKFD31VTVZ) - kurs mysql
 
 ## :blue_book: PYTHON
 
@@ -80,6 +81,7 @@ Polecam ciemny motyw github'a</b></p>
 * [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - wykłady z jakiegoś projektu
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=cMtg4bpKI9w&list=PL6aekdNhY7DAkl9D3i55ppfwOpeSqIsh9) - kurs c++, YT
 * [allinonebyplucek.blogspot.com](https://allinonebyplucek.blogspot.com/p/informatyka-c.html) - skrót teorii do c++
+* [Pasja informatyki](https://www.youtube.com/watch?v=ErOzmh3BiXU&list=PLOYHgt8dIdoxx0Y5wzs7CFpmBzb40PaDo) - kurs C++
 
 ## :notebook: Rozwiązania zadań maturalnych
 
