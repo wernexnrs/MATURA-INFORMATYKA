@@ -25,6 +25,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Tutor](http://pythontutor.com/) - wizualizacja kodu
 
 ## :wrench: Algorytmika
+
 * [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
 * [Algorytmy.edu.pl](http://www.algorytm.edu.pl/algorytmy-maturalne.html) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
 * [Algorytm.org](http://www.algorytm.org/algorytmy/) - Lista algorytmów
@@ -65,12 +66,14 @@ Polecam ciemny motyw github'a</b></p>
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=vek4MqPGvVU&list=PL6aekdNhY7DBGiMXnmBYjImq_vW32QftK) - kurs python, YT
 
 ## :closed_book: C++ / Pascal
+
 * [cpp0x.pl](https://cpp0x.pl/kursy/) - kurs C++
 * [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - wykłady z jakiegoś projektu
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=cMtg4bpKI9w&list=PL6aekdNhY7DAkl9D3i55ppfwOpeSqIsh9) - kurs c++, YT
 * [allinonebyplucek.blogspot.com](https://allinonebyplucek.blogspot.com/p/informatyka-c.html) - skrót teorii do c++
 
 ## :notebook: Rozwiązania zadań maturalnych
+
 * [Konrad Buzak](https://www.youtube.com/user/genek72gmail/videos) - YT
 * [infomatura](https://www.youtube.com/channel/UClzG_Qs0EPVJnbPEoVuDrZA/videos) - YT
 * [codeminator](https://www.youtube.com/channel/UC_2wsz5jrtHBixjGTKupBSg/videos) - YT
@@ -78,7 +81,6 @@ Polecam ciemny motyw github'a</b></p>
 * [Matura export](https://www.youtube.com/channel/UCXgCS0R1YH60P51jkrq1FsQ/playlists) - YT
 * [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnieniami na yt, gorąco polecam
 * [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
-
 * [Dysk google](https://drive.google.com/drive/folders/13Fs_7YpmVpXV-IkYjDcUBLdQQkdditpx) - Algorytmy, rozwiązania zadań z accessa
 
 ## :copyright: Licencja
