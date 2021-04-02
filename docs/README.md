@@ -32,10 +32,8 @@ Polecam ciemny motyw github'a</b></p>
 
 * [Pixel48/getLearn](https://github.com/Pixel48/getLearn) - opracowane przez społeczność materiały do nauki
 * [POLSKI SPOJ](https://pl.spoj.com/) - pełno problemów algorytmicznych do rozwiązania
-* [DISCORD MATURALNY](https://discord.gg/3hyj3kXQkt)
 * [Wymagania maturalne na rok 2021](http://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Informatory/2015/aneks/Aneks_2021_informatyka_EM_niewidomi.pdf)
 * [Arkusz](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf) -- [dane](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip) -- [rozwiązania](https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip) - Zadania do ćwiczeń od CKE
-* [Próbne egzaminy](https://cke.gov.pl/egzamin-maturalny/egzamin-w-nowej-formule/materialy-dodatkowe/probny-egzamin/informatyka-poziom-rozszerzony/)
 * [Wszystkie arkusze](https://arkusze.pl/informatyka-matura-poziom-rozszerzony/)
 * [Tutor](http://pythontutor.com/) - wizualizacja kodu
 
