@@ -39,6 +39,15 @@ for line in lista:
     zestawienie[line[1]].extend([line[0]])
 
 for k, v in zestawienie.items():
-    print(k, v)
+    komorkowe = 0
+    stacjonarne = 0
+    for i in v:
+        if len(i) == 7:
+            stacjonarne += 1
+        elif len(i) == 8:
+            komorkowe += 1
+
+    print(k, komorkowe, stacjonarne)
+
 
 ```
