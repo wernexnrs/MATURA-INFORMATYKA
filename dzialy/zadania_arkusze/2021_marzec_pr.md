@@ -31,11 +31,6 @@ with open("Dane_2103/telefony.txt") as file:
 
 del lista[0]
 
-dni = []
-
-for line in lista:
-    dni.append(line[1])
-
 zestawienie = dict()
 
 for line in lista:
@@ -45,4 +40,5 @@ for line in lista:
 
 for k, v in zestawienie.items():
     print(k, v)
+
 ```
