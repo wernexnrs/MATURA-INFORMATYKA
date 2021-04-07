@@ -24,9 +24,9 @@ Polecam ciemny motyw github'a</b></p>
     Przygotowanie do egzaminów zawodowych EE.08 i EE.09
     
 ### Zachęcam:
-- Do wstawiania swoich rozwiązań z akruszy w każdym języku - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) - dzięki temu możemy trzymać wszystko w jednym miejscu. [TUTORIAL](https://www.youtube.com/watch?v=nT8KGYVurIU)
-- Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-- Do rozwijania listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+- Do wstawiania swoich rozwiązań z akruszy w każdym języku - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) - dzięki temu możemy trzymać wszystko w jednym miejscu. [TUTORIAL](https://www.youtube.com/watch?v=nT8KGYVurIU)
+- Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
+- Do rozwijania listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 
 ## :link: Przydatne linki
 
@@ -78,12 +78,12 @@ Polecam ciemny motyw github'a</b></p>
 
 ## :blue_book: PYTHON
 
-* [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-* [Rozwiązania zadań z arkuszy i zbiorów zadań](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) #zachęcam do wstawiania swoich
-* [Dodatkowe algorytmy](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
-* [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
-* [Przydatne moduły](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md) #to trzeba rozwinąć, nie mam siły
-* [Przydatne metody](https://github.com/wernexnrs123/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
+* [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
+* [Rozwiązania zadań z arkuszy i zbiorów zadań](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) #zachęcam do wstawiania swoich
+* [Dodatkowe algorytmy](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+* [Najważniejsze funkcje wbudowane](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/funkcje_wbudowane.md)
+* [Przydatne moduły](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/biblioteki.md) #to trzeba rozwinąć, nie mam siły
+* [Przydatne metody](https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/metody.md)
 * [Dokumentacja pythona](https://docs.python.org/3/)
 * [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=vek4MqPGvVU&list=PL6aekdNhY7DBGiMXnmBYjImq_vW32QftK) - kurs python, YT
@@ -109,24 +109,24 @@ Polecam ciemny motyw github'a</b></p>
 * [Jack477](https://github.com/Jack477/Arkusze_informatyka_Python) - Rozwiązania arkuszy na GitHub
 
 ## :copyright: Licencja
-Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE)
+Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE)
 
-[contributors-shield]: https://img.shields.io/github/contributors/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[contributors-url]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[contributors-url]: https://github.com/wernexnrs/MATURA-INFORMATYKA/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[forks-url]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/network/members
+[forks-shield]: https://img.shields.io/github/forks/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[forks-url]: https://github.com/wernexnrs/MATURA-INFORMATYKA/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[stars-url]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/stargazers
+[stars-shield]: https://img.shields.io/github/stars/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[stars-url]: https://github.com/wernexnrs/MATURA-INFORMATYKA/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[issues-url]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/issues
+[issues-shield]: https://img.shields.io/github/issues/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[issues-url]: https://github.com/wernexnrs/MATURA-INFORMATYKA/issues
 
 [build-shield]: https://img.shields.io/badge/build-in%20progress-yellow?style=for-the-badge
 
-[license-shield]: https://img.shields.io/github/license/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[license-url]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/LICENSE
+[license-shield]: https://img.shields.io/github/license/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[license-url]: https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE
 
 [_do-matury]: https://shields.io/discord/796048059507015732?label=Do%20matury&logo=discord&style=social&link=https://discord.gg/3hyj3kXQkt
 [do-matury]: https://discord.gg/3hyj3kXQkt
@@ -134,13 +134,13 @@ Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs123/MATUR
 [_ee08]: https://shields.io/discord/723560181996191914?label=EE.08%2FEE.09&logo=discord&style=social&link=https://discord.gg/RJMZQEC
 [ee08]: https://discord.gg/RJMZQEC
 
-[commit]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/commit
-[commits]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/commits/master
+[commit]: https://github.com/wernexnrs/MATURA-INFORMATYKA/commit
+[commits]: https://github.com/wernexnrs/MATURA-INFORMATYKA/commits/master
 
-[_commit-activity-m]: https://img.shields.io/github/commit-activity/m/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[_commit-activity-w]: https://img.shields.io/github/commit-activity/w/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[_commit-activity-y]: https://img.shields.io/github/commit-activity/y/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[_contributors]: https://img.shields.io/github/all-contributors/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[_last-commit]: https://shields.io/github/last-commit/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[_repo-size]: https://shields.io/github/repo-size/wernexnrs123/MATURA-INFORMATYKA.svg?style=for-the-badge
-[zip]: https://github.com/wernexnrs123/MATURA-INFORMATYKA/archive/master.zip
+[_commit-activity-m]: https://img.shields.io/github/commit-activity/m/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_commit-activity-w]: https://img.shields.io/github/commit-activity/w/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_commit-activity-y]: https://img.shields.io/github/commit-activity/y/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_contributors]: https://img.shields.io/github/all-contributors/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_last-commit]: https://shields.io/github/last-commit/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[_repo-size]: https://shields.io/github/repo-size/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
+[zip]: https://github.com/wernexnrs/MATURA-INFORMATYKA/archive/master.zip
