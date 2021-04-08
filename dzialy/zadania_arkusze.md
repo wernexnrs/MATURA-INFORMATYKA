@@ -39,7 +39,7 @@
 
 - [ ] [Maj 2017](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-maj-poziom-rozszerzony/)
 
-- [ ] [Maj 2017 Matura stara](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj_stare.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2017-maj-poziom-rozszerzony/)
+- [x] [Maj 2017 Matura stara](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj_stare.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2017-maj-poziom-rozszerzony/)
 
 - [x] [Czerwiec 2016](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2016-czerwiec-poziom-rozszerzony/)
 
