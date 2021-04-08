@@ -24,7 +24,7 @@ Polecam ciemny motyw github'a</b></p>
     Przygotowanie do egzaminów zawodowych EE.08 i EE.09
     
 ### Zachęcam:
-- Do wstawiania swoich rozwiązań z akruszy w każdym języku - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) - dzięki temu możemy trzymać wszystko w jednym miejscu. [TUTORIAL](https://www.youtube.com/watch?v=nT8KGYVurIU)
+- Do wstawiania swoich rozwiązań z arkuszy w każdym języku - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) - dzięki temu możemy trzymać wszystko w jednym miejscu. [TUTORIAL](https://www.youtube.com/watch?v=nT8KGYVurIU)
 - Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
 - Do rozwijania listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 
