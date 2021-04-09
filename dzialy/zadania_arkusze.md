@@ -59,7 +59,7 @@
 
 - [ ] [Maj 2012](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2012_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2012-maj-poziom-rozszerzony/)
 
-- [ ] [Maj 2011](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2011_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2011-maj-poziom-rozszerzony/)
+- [x] [Maj 2011](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2011_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2011-maj-poziom-rozszerzony/)
 
 - [ ] [Maj 2010](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2010-maj-poziom-rozszerzony/)
 
