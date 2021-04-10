@@ -1,6 +1,6 @@
-<h1 align="center">2019 Czerwiec</h1>
+<h1 align="center">7 czerwca 2019 r.</h1>
  
-[SPIS ARKUSZY](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+[SPIS ARKUSZY](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) --- [PLIKI](https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2019_czerwiec)
 
 ## 4.1
 
@@ -19,7 +19,6 @@ with open("MIN-R2A1P-193_dane/liczby.txt") as file:
         line = int(line)
         if is_prime(line) and line in range(100, 5001):
             print(line)
-
 ```
 
 ## 4.2
@@ -40,7 +39,6 @@ with open("MIN-R2A1P-193_dane/pierwsze.txt") as file:
         liczba = int(line[::-1])
         if is_prime(liczba):
             print(line)
-
 ```
 
 ## 4.3
@@ -65,5 +63,4 @@ with open("MIN-R2A1P-193_dane/pierwsze_przyklad.txt") as file:
         if waga(line) == '1':
             count += 1
 print(count)
-
 ```
