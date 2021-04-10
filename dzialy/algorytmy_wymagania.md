@@ -491,7 +491,7 @@ Dla i = 1, 2, ... , n
 def merge_sort(tab):
     if len(tab) < 2:
         return tab
-
+	
     i = j = k = 0
     mid = len(tab) // 2
     L, R = tab[:mid], tab[mid:]
@@ -523,6 +523,8 @@ def merge_sort(tab):
 n <- długość tablicy
 div <- dzielenie całkowite
 len() <- długość obiektu
+mid <- n // 2
+// -> operator dzielenia całkowitego
 
 def merge_sort(tab):
 	Jeżeli n < 2:
