@@ -90,7 +90,7 @@
 
 - [x] [Maj 2015](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-stara-informatyka-2015-maj-poziom-podstawowy/)
 
-- [ ] [Maj 2014](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2014_maj_podstawa/2014_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2014-maj-poziom-podstawowy/)
+- [x] [Maj 2014](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2014_maj_podstawa/2014_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2014-maj-poziom-podstawowy/)
 
 - [ ] [Maj 2013](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2013_maj_podstawa/2013_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2013-maj-poziom-podstawowy/)
 
