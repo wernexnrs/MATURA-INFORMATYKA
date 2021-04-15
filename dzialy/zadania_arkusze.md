@@ -18,7 +18,7 @@
 
 ## Matura
 
-- ![py] ![excel] ![access] ![noc++] ![nojava] [11 maja 2020 r.](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
+- ![py]-![excel]-![access]-![noc++]-![nojava] [11 maja 2020 r.](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2020-czerwiec-poziom-rozszerzony/)
 
 - ![py] ![noexcel] ![access] ![noc++] ![nojava] [7 czerwca 2019 r.](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_czerwiec/2019_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2019-czerwiec-poziom-rozszerzony/)
 
