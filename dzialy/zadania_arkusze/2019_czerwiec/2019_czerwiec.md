@@ -64,3 +64,62 @@ with open("MIN-R2A1P-193_dane/pierwsze_przyklad.txt") as file:
             count += 1
 print(count)
 ```
+
+## 5 [[EXCEL] POBIERZ]() - brak 
+
+### 5.*
+- [Wyjaśnienie]() - brak
+
+## 6 [[ACCESS] POBIERZ]()
+
+### 6.1
+- [Wyjaśnienie]() - brak
+
+#### Kwarenda o nazwie 6_1(wynik)
+```sql
+SELECT TOP 1 Agenci.Imie, Agenci.Nazwisko, Zainteresowanie.Id_oferty
+FROM Agenci INNER JOIN (Oferty INNER JOIN Zainteresowanie ON Oferty.Id_oferty = Zainteresowanie.Id_oferty) ON Agenci.Id_agenta = Oferty.Id_agenta
+GROUP BY Agenci.Imie, Agenci.Nazwisko, Zainteresowanie.Id_oferty, Oferty.Id_agenta
+ORDER BY Count(Zainteresowanie.Id_klienta) DESC;
+```
+
+### 6.2
+- [Wyjaśnienie]() - brak
+
+#### Kwarenda o nazwie 6_2(wynik)
+```sql
+SELECT Oferty.Woj, Avg(Oferty.Cena) AS ŚredniaOfCena
+FROM Oferty
+GROUP BY Oferty.Woj
+ORDER BY Oferty.Woj;
+```
+
+### 6.3
+- [Wyjaśnienie]() - brak
+
+#### Kwarenda o nazwie 6_3(wynik)
+```sql
+SELECT Oferty.Id_oferty, Agenci.Imie, Agenci.Nazwisko, Oferty.Woj, Oferty.Pow, Oferty.Cena
+FROM Agenci INNER JOIN Oferty ON Agenci.Id_agenta = Oferty.Id_agenta
+WHERE (((Oferty.Id_oferty) Like "*MT") AND ((Oferty.Status) Like "A"));
+```
+
+### 6.4
+- [Wyjaśnienie]() - brak
+
+#### Kwarenda o nazwie 6_4(wynik)
+```sql
+SELECT Agenci.imie, Agenci.nazwisko
+FROM Agenci
+WHERE (((Agenci.Id_agenta) Not In (SELECT id_agenta FROM oferty WHERE status="S" AND data_zglosz LIKE "2017*")));
+```
+
+### 6.5
+- [Wyjaśnienie]() - brak
+
+#### Kwarenda o nazwie 6_5(wynik)
+```sql
+SELECT Oferty.Id_oferty, Oferty.Pow, Oferty.L_pokoi, Oferty.L_laz, Oferty.Cena, Agenci.Imie, Agenci.Nazwisko, Oferty.Status
+FROM Agenci INNER JOIN Oferty ON Agenci.Id_agenta = Oferty.Id_agenta
+WHERE (((Oferty.Pow)>180) AND ((Oferty.L_laz)>1) AND ((Oferty.Status) Like "A"));
+```
