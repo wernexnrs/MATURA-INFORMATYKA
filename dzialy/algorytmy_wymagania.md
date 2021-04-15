@@ -2,40 +2,40 @@
 <h1 align="center"> Algorytmy wymienione w wymaganiach </h1>
 
 1. __algorytmy na liczbach całkowitych:__
-   - [x] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)
-   - [x] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime)
-   - [x] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
-   - [x] [rozkładanie liczby na czynniki pierwsze,](#prime_factors)
-   - [x] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW,](#nwd)
-   - [x] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib)
-   - [x] [wydawanie reszty metodą zachłanną,](#zachlanna)
+   - ![py] ![noc++] ![nojava] [reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym,](#konwersja)
+   - ![py] ![noc++] ![nojava] [sprawdzanie, czy liczba jest liczbą pierwszą,](#is_prime)
+   - ![py] ![noc++] ![nojava] [sprawdzanie, czy liczba jest liczbą doskonała,](#is_perfect)
+   - ![py] ![noc++] ![nojava] [rozkładanie liczby na czynniki pierwsze,](#prime_factors)
+   - ![py] ![noc++] ![nojava] [iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW,](#nwd)
+   - ![py] ![noc++] ![nojava] [iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego,](#fib)
+   - ![py] ![noc++] ![nojava] [wydawanie reszty metodą zachłanną,](#zachlanna)
 
 2. __algorytmy wyszukiwania i porządkowania (sortowania):__
-   - [x] [bąbelkowy, ](#bob)
-   - [x] [przez wybór, ](#wybor)
-   - [x] [przez wstawianie liniowe, ](#lin)
-   - [x] [przez scalanie,](#scalanie)
-   - [x] [szybki,](#fast)
-   - [x] [kubełkowy,](#box)
+   - ![py] ![noc++] ![nojava] [bąbelkowy, ](#bob)
+   - ![py] ![noc++] ![nojava] [przez wybór, ](#wybor)
+   - ![py] ![noc++] ![nojava] [przez wstawianie liniowe, ](#lin)
+   - ![py] ![noc++] ![nojava] [przez scalanie,](#scalanie)
+   - ![py] ![noc++] ![nojava] [szybki,](#fast)
+   - ![py] ![noc++] ![nojava] [kubełkowy,](#box)
 
 3. __algorytmy numeryczne__
-   - [x] [szybkie podnoszenie do potęgi,](#fast_power)
-   - [x] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)
+   - ![py] ![noc++] ![nojava] [szybkie podnoszenie do potęgi,](#fast_power)
+   - ![py] ![noc++] ![nojava] [wyznaczanie miejsc zerowych funkcji metodą połowienia,](#bisekcja)
 
 4. __algorytmy na tekstach__
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
-   - [x] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram)
-   - [x] [porządkowanie alfabetyczne, (leksykograficzne)](#alfa)
-   - [x] [wyszukiwanie wzorca w tekście,](#pattern)
+   - ![py] ![noc++] ![nojava] [sprawdzanie, czy dany ciąg znaków tworzy palindrom,](#palindrom)
+   - ![py] ![noc++] ![nojava] [sprawdzanie, czy dany ciąg znaków tworzy anagram,](#anagram)
+   - ![py] ![noc++] ![nojava] [porządkowanie alfabetyczne, (leksykograficzne)](#alfa)
+   - ![py] ![noc++] ![nojava] [wyszukiwanie wzorca w tekście,](#pattern)
 
 5. __algorytmy kompresji i szyfrowania__
    - kody znaków o zmiennej długości,
-	 * [x] [Kompresja danych](#len)
-	 * [x] [Alfabet Morse’a](#morse)
+	 * ![py] ![noc++] ![nojava] [Kompresja danych](#len)
+	 * ![py] ![noc++] ![nojava] [Alfabet Morse’a](#morse)
    - szyfry przestawieniowe,
-	 * [x] [Transpozycyjny](#przes)
-	 * [x] [Szyfr AtBash](#atbash)
-	 * [x] [Szyfr Cezara](#cezar)
+	 * ![py] ![noc++] ![nojava] [Transpozycyjny](#przes)
+	 * ![py] ![noc++] ![nojava] [Szyfr AtBash](#atbash)
+	 * ![py] ![noc++] ![nojava] [Szyfr Cezara](#cezar)
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
 
 <a name="konwersja"></a>
@@ -1126,3 +1126,12 @@ koduj(wiadomosc, klucz):
 ```
 </b>
 </details>
+
+[py]: https://img.shields.io/badge/Python-%E2%9C%94-green?style=flat-square&logo=python
+[notpy]: https://img.shields.io/badge/Python-%E2%9C%98-red?style=flat-square&logo=python
+
+[java]: https://img.shields.io/badge/Java-%E2%9C%94-green?style=flat-square&logo=Java&logoColor=yellow
+[nojava]: https://img.shields.io/badge/Java-%E2%9C%98-red?style=flat-square&logo=Java&logoColor=yellow
+
+[c++]: https://img.shields.io/badge/C++-%E2%9C%94-green?style=flat-square&logo=c%2B%2B&logoColor=blue
+[noc++]: https://img.shields.io/badge/C++-%E2%9C%98-red?style=flat-square&logo=c%2B%2B&logoColor=blue 
