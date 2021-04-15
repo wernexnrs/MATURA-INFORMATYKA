@@ -361,7 +361,7 @@ def wariancja2(lista):
 
 
 [py]: https://img.shields.io/badge/Python-%E2%9C%94-green?style=flat-square&logo=python
-[notpy]: https://img.shields.io/badge/Python-%E2%9C%98-red?style=flat-square&logo=python
+[nopy]: https://img.shields.io/badge/Python-%E2%9C%98-red?style=flat-square&logo=python
 
 [java]: https://img.shields.io/badge/Java-%E2%9C%94-green?style=flat-square&logo=Java&logoColor=yellow
 [nojava]: https://img.shields.io/badge/Java-%E2%9C%98-red?style=flat-square&logo=Java&logoColor=yellow
