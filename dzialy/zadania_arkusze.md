@@ -2,19 +2,19 @@
 
 ## Zbiór zadań od CKE - > <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf">Arkusz</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip">dane</a> -- <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip">rozwiązania CPP</a>
 
-- ![py] ![noc++] ![nojava] [Zadanie 58. Systemy liczbowe - str. 106](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md) 
+- ![py] ![c++] ![nojava] [Zadanie 58. Systemy liczbowe - str. 106](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md) 
 
-- ![py] ![noc++] ![nojava] [Zadanie 59. Ciekawe liczby - str. 112](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/59.md)
+- ![py] ![c++] ![nojava] [Zadanie 59. Ciekawe liczby - str. 112](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/59.md)
 
-- ![py] ![noc++] ![nojava] [Zadanie 60. Dzielniki  - str. 117](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md)
+- ![py] ![c++] ![nojava] [Zadanie 60. Dzielniki  - str. 117](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md)
 
-- ![py] ![noc++] ![nojava] [Zadanie 61. Ciągi arytmetyczne - str. 118](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/61.md)
+- ![py] ![c++] ![nojava] [Zadanie 61. Ciągi arytmetyczne - str. 118](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/61.md)
 
-- ![py] ![noc++] ![nojava] [Zadanie 62. Liczby ósemkowe - str. 119](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/62.md)
+- ![py] ![c++] ![nojava] [Zadanie 62. Liczby ósemkowe - str. 119](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/62.md)
 
-- ![notpy] ![noc++] ![nojava] [Zadanie 63. Ciągi zerojedynkowe - str. 120](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md)
+- ![notpy] ![c++] ![nojava] [Zadanie 63. Ciągi zerojedynkowe - str. 120](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md)
 
-- ![notpy] ![noc++] ![nojava] [Zadanie 64. Obrazki - str.121](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/64.md)
+- ![notpy] ![c++] ![nojava] [Zadanie 64. Obrazki - str.121](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/64.md)
 
 ## Matura
 
