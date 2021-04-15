@@ -2,58 +2,58 @@
 
 1. __algorytmy numeryczne__
 
-   - [x] [Suma liczb od a do b](#suma)
-   - [x] [Iloczyn liczb od a do b](#iloczyn)
-   - [x] [Czy liczba jest parzysta](#even)
-   - [x] [Czy liczba jest podzielna przez n bez reszty](#n)
-   - [x] [Czy liczba jest wielokrotnością n](#multiple)
-   - [ ] Najwiekszy i najmniejszy element w zbiorze
-   - [ ] Moc liczby
+   - ![py] ![noc++] ![nojava] [Suma liczb od a do b](#suma)
+   - ![py] ![noc++] ![nojava] [Iloczyn liczb od a do b](#iloczyn)
+   - ![py] ![noc++] ![nojava] [Czy liczba jest parzysta](#even)
+   - ![py] ![noc++] ![nojava] [Czy liczba jest podzielna przez n bez reszty](#n)
+   - ![py] ![noc++] ![nojava] [Czy liczba jest wielokrotnością n](#multiple)
+   - ![nopy] ![noc++] ![nojava] Najwiekszy i najmniejszy element w zbiorze
+   - ![nopy] ![noc++] ![nojava] Moc liczby
 
 2. __algorytmy arytmetyczne__
 
-   - [x] [Silnia (n)](#factorial)
-   - [x] [Pierwiastek kwadratowy](#sqrt)
-   - [x] [Pierwiastek n-tego stopnia](#sqrt2)
-   - [x] [Moda](#moda)
-   - [x] [Mediana](#med)
-   - [x] [Średnia arytmetyczna](#ary)
-   - [x] [Średnia ważona](#waz)
-   - [x] [Średnia geometryczna](#geo)
-   - [x] [Wariancja i odchylenie standardowe](#odchylenie)
-   - [ ] Symbol Newtona
+   - ![py] ![noc++] ![nojava] [Silnia (n)](#factorial)
+   - ![py] ![noc++] ![nojava] [Pierwiastek kwadratowy](#sqrt)
+   - ![py] ![noc++] ![nojava] [Pierwiastek n-tego stopnia](#sqrt2)
+   - ![py] ![noc++] ![nojava] [Moda](#moda)
+   - ![py] ![noc++] ![nojava] [Mediana](#med)
+   - ![py] ![noc++] ![nojava] [Średnia arytmetyczna](#ary)
+   - ![py] ![noc++] ![nojava] [Średnia ważona](#waz)
+   - ![py] ![noc++] ![nojava] [Średnia geometryczna](#geo)
+   - ![py] ![noc++] ![nojava] [Wariancja i odchylenie standardowe](#odchylenie)
+   - ![nopy] ![noc++] ![nojava] Symbol Newtona
 
 3. __algorytmy na łańcuchach__  
 
-   - [ ] Zliczanie znaków w ciągu
-   - [ ] Zliczanie słów w łańcuchu
-   - [ ] Wyszukiwanie najdłuższego słowa w łańcuchu
-   - [ ] Wyszukiwanie najdłuższego wspólnego podłańcucha
-   - [ ] Wyszukiwanie najdłuższego wspólnego podciągu
-   - [x] [Krotność znaków w łańcuchu](#kro)
-   - [ ] Naprzemienność dużych i małych liter w tekście
-   - [ ] Algorytm Manachera	
-   - [ ] Algorytm N 
-   - [ ] Algorytm Knutha-Morrisa-Pratta
-   - [ ] Algorytm Boyer-Moore'a
-   - [ ] Algorytm Galila Seiferasa
-   - [ ] Algorytm Karpa-Rabina
+   - ![nopy] ![noc++] ![nojava] Zliczanie znaków w ciągu
+   - ![nopy] ![noc++] ![nojava] Zliczanie słów w łańcuchu
+   - ![nopy] ![noc++] ![nojava] Wyszukiwanie najdłuższego słowa w łańcuchu
+   - ![nopy] ![noc++] ![nojava] Wyszukiwanie najdłuższego wspólnego podłańcucha
+   - ![nopy] ![noc++] ![nojava] Wyszukiwanie najdłuższego wspólnego podciągu
+   - ![py] ![noc++] ![nojava] [Krotność znaków w łańcuchu](#kro)
+   - ![nopy] ![noc++] ![nojava] Naprzemienność dużych i małych liter w tekście
+   - ![nopy] ![noc++] ![nojava] Algorytm Manachera	
+   - ![nopy] ![noc++] ![nojava] Algorytm N 
+   - ![nopy] ![noc++] ![nojava] Algorytm Knutha-Morrisa-Pratta
+   - ![nopy] ![noc++] ![nojava] Algorytm Boyer-Moore'a
+   - ![nopy] ![noc++] ![nojava] Algorytm Galila Seiferasa
+   - ![nopy] ![noc++] ![nojava] Algorytm Karpa-Rabina
 
 4. __kombinatoryka__
     
-   - [ ] Porządek leksykograficzny
-   - [ ] Wyszukiwanie liczby palindromów w tekście
+   - ![nopy] ![noc++] ![nojava] Porządek leksykograficzny
+   - ![nopy] ![noc++] ![nojava] Wyszukiwanie liczby palindromów w tekście
 
 5. __geometria__
 
-   - [ ] Wyznaczenie punktów przecięcia okręgu z prostą
-   - [ ] Wyznaczanie punktu przecięcia dwóch prostych
-   - [ ] Przynależność punktu do odcinka
-   - [ ] Przynależność punktu do wielokąta
-   - [ ] Środek odcinka
-   - [ ] Długość odcinka
-   - [ ] Znajdowanie punktu tworzącego figure
-   - [ ] Sprawdzanie czy proste są prostopadłe / równoległe
+   - ![nopy] ![noc++] ![nojava] Wyznaczenie punktów przecięcia okręgu z prostą
+   - ![nopy] ![noc++] ![nojava] Wyznaczanie punktu przecięcia dwóch prostych
+   - ![nopy] ![noc++] ![nojava] Przynależność punktu do odcinka
+   - ![nopy] ![noc++] ![nojava] Przynależność punktu do wielokąta
+   - ![nopy] ![noc++] ![nojava] Środek odcinka
+   - ![nopy] ![noc++] ![nojava] Długość odcinka
+   - ![nopy] ![noc++] ![nojava] Znajdowanie punktu tworzącego figure
+   - ![nopy] ![noc++] ![nojava] Sprawdzanie czy proste są prostopadłe / równoległe
 
 ## Czy liczba jest parzysta [⬆️](#main)
 <a name="even"></a>
@@ -358,3 +358,13 @@ def wariancja2(lista):
 ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/wariancja.png)
 </details>
+
+
+[py]: https://img.shields.io/badge/Python-%E2%9C%94-green?style=flat-square&logo=python
+[notpy]: https://img.shields.io/badge/Python-%E2%9C%98-red?style=flat-square&logo=python
+
+[java]: https://img.shields.io/badge/Java-%E2%9C%94-green?style=flat-square&logo=Java&logoColor=yellow
+[nojava]: https://img.shields.io/badge/Java-%E2%9C%98-red?style=flat-square&logo=Java&logoColor=yellow
+
+[c++]: https://img.shields.io/badge/C++-%E2%9C%94-green?style=flat-square&logo=c%2B%2B&logoColor=blue
+[noc++]: https://img.shields.io/badge/C++-%E2%9C%98-red?style=flat-square&logo=c%2B%2B&logoColor=blue 
