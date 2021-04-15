@@ -70,7 +70,7 @@ print(count)
 ### 5.*
 - [Wyjaśnienie]() - brak
 
-## 6 [[ACCESS] POBIERZ]()
+## 6 [[ACCESS] POBIERZ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_czerwiec/6.accdb?raw=true)
 
 ### 6.1
 - [Wyjaśnienie]() - brak
