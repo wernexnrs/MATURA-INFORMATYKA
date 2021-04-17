@@ -236,6 +236,22 @@ def moda(lista):
  def moda(lista):
     return max(set(lista), key = lista.count)
  ```
+ 
+ ```py
+ # Na teorię
+ def moda2(T):
+    maxi = 0
+    n = len(T)
+    for i in range(n):
+        count = 0
+        for j in range(n):
+            if T[i] == T[j]:
+                count += 1
+        if count > maxi:
+            maxi = count
+            moda = T[i]
+    return moda
+ ```
 </details>
 
 ## Mediana [⬆️](#main)
