@@ -28,7 +28,7 @@
 
 - ![py] ![excel] ![access] ![noc++] ![nojava] [11 maja 2018](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2018-maj-poziom-rozszerzony/)
 
-- ![py] ![noexcel] ![noaccess] ![noc++] ![nojava] [Czerwiec 2017](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-czerwiec-poziom-rozszerzony/)
+- ![py] ![noexcel] ![noaccess] ![noc++] ![nojava] [6 czerwca 2017](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_czerwiec.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-czerwiec-poziom-rozszerzony/)
 
 - ![notpy] ![noexcel] ![noaccess] ![noc++] ![nojava] [Maj 2017](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2017-maj-poziom-rozszerzony/)
 
