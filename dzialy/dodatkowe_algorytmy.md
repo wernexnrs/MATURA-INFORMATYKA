@@ -206,8 +206,7 @@ print(Counter(lista_slow))
 def freq(str):
     dict = {}
     for n in str:
-        keys = dict.keys()
-        if n in keys:
+        if n in dict.keys():
             dict[n] += 1
         else:
             dict[n] = 1
