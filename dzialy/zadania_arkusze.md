@@ -92,7 +92,7 @@
  
 - ![notpy] ![noexcel] ![noaccess] ![noc++] ![nojava] [Maj 2011](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2011-maj-poziom-podstawowy/)
  
-- ![notpy] ![noexcel] ![noaccess] ![noc++] ![nojava] [Maj 2010](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2010-maj-poziom-podstawowy/)
+- ![py] ![noexcel] ![noaccess] ![noc++] ![nojava] [Maj 2010](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2010-maj-poziom-podstawowy/)
 
 - ![py] ![noexcel] ![noaccess] ![noc++] ![nojava] [Maj 2009](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md) --- [POBIERZ ARKUSZ](https://arkusze.pl/matura-informatyka-2009-maj-poziom-podstawowy/)
 
