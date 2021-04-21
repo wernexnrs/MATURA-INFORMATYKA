@@ -21,27 +21,37 @@ with open("Dane_2103/wynik4_1.tx.txt", "w") as file2:
 with open("Dane_2103/galerie.txt") as file:
     with open("Dane_2103/wynik4_2a.txt", "w") as file2:
         for line in file:
-            line = line.strip()
-            kod_kraju, miasto, *liczby = line.split()
-
-            liczby = list(map(int, filter(lambda a: a != '0', liczby)))
-            wymiary = [a * b for a, b in zip(liczby[::2], liczby[1::2])]
-            file2.write(miasto + " " + str(sum(wymiary)) + " " + str(len(wymiary)) + "\n")
+            kod_kraju, miasto, *liczby = line.strip().split()
+            liczby = list(map(int, filter(lambda x: x != '0', liczby)))
+            
+            powierzchnie = [liczby[i - 1] * liczby[i] for i in range(1, len(liczby), 2)]
+            
+            #albo
+            '''
+            powierzchnie = [a * b for a, b in zip(liczby[::2], liczby[1::2])]
+            '''
+            
+            file2.write(miasto + " " + str(sum(powierzchnie)) + " " + str(len(powierzchnie)) + "\n")
 
 ```
 
 # 4.2b
 ```py
+maxi = 0
+mini = 999999999999999999999999
 lista = []
-
-with open("Dane_2103/galerie_przyklad.txt") as file:
+with open("Dane_2103/galerie.txt") as file:
     for line in file:
-        line = line.strip()
-        kod_kraju, miasto, *liczby = line.split()
+        kod_kraju, miasto, *liczby = line.strip().split()
+        liczby = list(map(int, filter(lambda x: x != '0', liczby)))
 
-        liczby = list(map(int, filter(lambda a: a != '0', liczby)))
-        wymiary = [a * b for a, b in zip(liczby[::2], liczby[1::2])]
-        lista.append((miasto, sum(wymiary)))
+        powierzchnie = [liczby[i - 1] * liczby[i] for i in range(1, len(liczby), 2)]
+
+        # albo
+        '''
+        powierzchnie = [a * b for a, b in zip(liczby[::2], liczby[1::2])]
+        '''
+        lista.append((miasto, sum(powierzchnie)))
 
 maxi = sorted(lista, key=lambda x: x[1], reverse=True)[0]
 mini = sorted(lista, key=lambda x: x[1])[0]
@@ -50,11 +60,29 @@ with open("Dane_2103/wynik4_2b.txt", "w") as file2:
     file2.write(maxi[0] + " " + str(maxi[1]) + "\n")
     file2.write(mini[0] + " " + str(mini[1]) + "\n")
 
+    # albo
+'''
+        suma_pow = sum(powierzchnie)
+        if suma_pow > maxi:
+            maxi = suma_pow
+            maxi_miasto = miasto
+
+        if suma_pow < mini:
+            mini = suma_pow
+            mini_miasto = miasto
+
+        
+with open("Dane_2103/wynik4_2b.txt", "w") as file2:
+    file2.write(maxi_miasto + " " + str(maxi) + "\n")
+    file2.write(mini_miasto+ " " + str(mini) + "\n")
+
+'''
+
 ```
 
 # 4.3
 ```py
-lista = []
+lokale = []
 
 with open("Dane_2103/galerie_przyklad.txt") as file:
     for line in file:
@@ -62,11 +90,23 @@ with open("Dane_2103/galerie_przyklad.txt") as file:
         kod_kraju, miasto, *liczby = line.split()
 
         liczby = list(map(int, filter(lambda a: a != '0', liczby)))
-        wymiary = [a * b for a, b in zip(liczby[::2], liczby[1::2])]
-        lista.append((miasto, len(set(wymiary))))
+        
+        powierzchnie = [liczby[i - 1] * liczby[i] for i in range(1, len(liczby), 2)]
 
-maxi = sorted(lista, key=lambda x: x[1], reverse=True)[0]
-mini = sorted(lista, key=lambda x: x[1])[0]
+        # albo
+        '''
+        powierzchnie = [a * b for a, b in zip(liczby[::2], liczby[1::2])]
+        '''
+        lokale.append((miasto, len(set(powierzchnie))))
+        
+maxi = max(lokale, key=lambda x: x[1])
+mini = min(lokale, key=lambda x: x[1])
+
+# albo
+'''
+maxi = sorted(lokale, key=lambda x: x[1], reverse=True)[0]
+mini = sorted(lokale, key=lambda x: x[1])[0]
+'''
 
 with open("Dane_2103/wynik4_3.txt", "w") as file2:
     file2.write(maxi[0] + " " + str(maxi[1]) + "\n")
