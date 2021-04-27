@@ -31,7 +31,7 @@
 5. __algorytmy kompresji i szyfrowania__
    - kody znaków o zmiennej długości,
 	 * ![py] ![noc++] ![nojava] [Kompresja danych](#len)
-	 * ![py] ![noc++] ![nojava] [Alfabet Morse’a](#morse)
+	 * ![py] ![c++] ![nojava] [Alfabet Morse’a](#morse)
    - szyfry przestawieniowe,
 	 * ![py] ![noc++] ![nojava] [Transpozycyjny](#przes)
 	 * ![py] ![noc++] ![nojava] [Szyfr AtBash](#atbash)
@@ -1034,6 +1034,68 @@ decoded = morseCode(coded, decode=True)
 print("Decoded:", decoded)
 
 # This code is contributed by Pixel
+```
+
+```cpp
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+map<string, string> codeTab{
+    {"a", ".-"},{"b", "-..."},{"c", "-.-."},{"d", "-.."},
+    {"e", "."},{"f", "..-."},{"g", "--."},{"h", "...."},
+    {"i", ".."},{"j", ".---"},{"k", "-.-"},{"l", ".-.."},
+    {"m", "--"},{"n", "-."},{"o", "---"},{"p", ".--."},
+    {"q", "--.-"},{"r", ".-."},{"s", "..."},{"t", "-"},
+    {"u", "..-"},{"v", "...-"},{"w", ".--"},{"x", "-..-"},
+    {"y", "-.--"},{"z", "--.."},{"1", ".----"},{"2", "..---"},
+    {"3", "...--"},{"4", "....-"},{"5", "....."},{"6", "-...."},
+    {"7", "--..."},{"8", "---.."},{"9", "----."},{"0", "-----"},
+    {"", ""},{" ", "_"}, {" ", "WDA"}
+};
+
+string code(string in, bool decode=false){
+    string out = "";
+    if(decode){
+        string val = "";
+        for(int i = 0; i<in.length(); i++){
+            map<string, string>::iterator it;
+            if(in[i] != ' '){
+                val += in[i];
+            }
+            else{
+                if(in[i-1] == ' ' && in[i+1] == ' ')
+                    val = "_";
+                for (it = codeTab.begin(); it != codeTab.end(); it++){
+                    if(val == it->second){
+                        out += it->first;
+                    }
+                }
+                val = "";
+            }
+        }
+    }
+    else{
+        for(int i = 0; i<in.length(); i++){
+            string s(1, in[i]);
+            if(s != " ") 
+                out += ' ';
+            if(s == " ") 
+                out += "  ";
+            else{
+                out += codeTab[s];
+            }
+        }
+    }
+
+    return out;
+}
+
+int main(){
+    cout <<"encoded: "<< code("keep learning") << endl;
+    cout <<"decoded: "<< code("-.- . . .--.   .-.. . .- .-. -. .. -. --. ", true) << endl;
+}
 ```
 </details>
 
