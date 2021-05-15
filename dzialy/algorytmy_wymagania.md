@@ -659,6 +659,7 @@ def BucketSort(arr):
 ## Szybkie podnoszenie do potęgi [⬆️](#)
 <details><summary>Rozwiń</summary>
 
+### Potęgowanie modularne (Metoda euklidesa. Szybko znajduje wartość base ^ power mod 1000000007).
 ```python
 #Iterated version
 
@@ -686,6 +687,44 @@ def fast_power(base,power):
 		power <- power div 2
 		base = (base * base) mod m
 	Zwróć result
+```
+
+### Potęgowanie metodą poprzez podnoszenie do kwadratu (wolniejsze od potęgowania modularnego, ale znajduje wartości większe niż a^n mod wartość).
+```python
+def fast_pow(a, n):
+    if n == 0:
+        return 1 * (a != 0)
+    # jeżeli wykładnik jest nieparzysty, to zmniejsz o jeden, by stał się parzysty,
+    # a następnie oblicz potęgę a do parzystego wykładnika i pomnóż to przez a,
+    # aby dostać a * a^parzysty_wykładnik.
+    # na przykład: a^5 = a^4 * a
+    if n % 2 == 1:
+        return fast_pow(a, n - 1) * a
+    # dla parzystego wykładnika szukamy potęgę z wykładnikiem o połowę mniejszym.
+    # robiąc to, można dojść do a^2, co potem się składa na a^4 itd...
+    # np. a^4 = a^2 * a^2.
+    # kiedy n == 2, to funkcja szuka a^1, bo 2 div 2 == 1.
+    # kiedy n == 1, to funkcja szuka a^0 * a, bo 1 jest liczbą nieparzystą, więc trafia do drugiego warunku.
+    a = fast_pow(a, n // 2)
+    return a * a
+```
+<b>
+
+```
+a - podstawa
+n - wykładnik
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+funkcja fast_pow(a, n)
+	Jeżeli n == 0
+		Jeżeli a != 0
+			Zwróć 1
+		Zwróć 0
+	Jeżeli n mod 2 == 1
+		Zwróć fast_pow(a, n - 1) * a
+	a = fast_pow(a, n div 2)
+	return a * a
 ```
 
 </details>
