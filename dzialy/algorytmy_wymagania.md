@@ -724,7 +724,7 @@ funkcja fast_pow(a, n)
 	Jeżeli n mod 2 == 1
 		Zwróć fast_pow(a, n - 1) * a
 	a = fast_pow(a, n div 2)
-	return a * a
+	Zwróć a * a
 ```
 
 </details>
