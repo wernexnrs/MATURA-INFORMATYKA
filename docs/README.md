@@ -54,14 +54,6 @@ Polecam ciemny motyw github'a</b></p>
 * [Insertion sort](https://www.youtube.com/watch?v=ROalU379l3U&list=PLikGmVz62acywhDHJy-91TA4HXGc5cqz1) - YT
 * [Bubble sort](https://www.youtube.com/watch?v=uJLwnsLn0_Q&list=PLikGmVz62aczkKRmociYK8Uzix1Mnf21p) - YT
 
-### Krótkie filmy na temat algorytmów sortowania z wytłumaczeniem (YouTube, J. ANG):
-
-* [Bubble sort (bąbelkowe)](https://www.youtube.com/watch?v=xli_FI7CuzA)
-* [Selection sort (przez wybór)](https://www.youtube.com/watch?v=g-PGLbMth_g)
-* [Insertion sort (przez wstawianie liniowe)](https://www.youtube.com/watch?v=JU767SDMDvA)
-* [Merge sort (przez scalanie)](https://www.youtube.com/watch?v=4VqmGXwpLqc)
-* [Quick sort (szybkie)](https://www.youtube.com/watch?v=Hoixgm4-P4M) - warto też obejrzeć inne filmy, na ten temat.
-
 ## :green_book: EXCEL
 
 * [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
