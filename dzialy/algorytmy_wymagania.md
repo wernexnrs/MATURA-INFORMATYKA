@@ -563,47 +563,55 @@ def merge_sort(tab):
 <details><summary>Rozwiń</summary>
 
 ```python
-def quicksort(arr):
-    if len(arr) <= 1:
-        return arr
+def quicksort(t):
+    # jeżeli tablica jest pusta lub ma jeden element, to nie trzeba nic robić, można ją zwrócić.
+    if len(t) <= 1:
+        return t
 
-    less = []
+    # wybierasz pivot (tutaj na końcu)
+    pivot = t[-1]
+    smaller = []
     greater = []
 
-    pivot = arr.pop(len(arr) // 2)
-    for x in arr:
-        if x <= pivot:
-            less.append(x)
+    # wszystkie mniejsze lub równe wartości od pivota idą do listy smaller a większe do greater.
+    # len(t) - 1, bo pracujemy na elementach bez ostatniego, którym jest pivot.
+    for i in range(0, len(t) - 1):
+        if t[i] <= pivot:
+            smaller.append(t[i])
         else:
-            greater.append(x)
-    return quicksort(less) + [pivot] + quicksort(greater)
+            greater.append(t[i])
+
+    # zwracasz tablicę, gdzie wszystkie mniejsze wartości są po lewej, a większe po prawej od pivota,
+    # a pivot trafia na miejsce końcowe w tablicy wyjściowej.
+    return quicksort(smaller) + [pivot] + quicksort(greater)
 
 
-arr = [60, 20, 11, 122, 214, 345, 1324, 1, 2, 3, 6, 74, 3, 9]
+if __name__ == '__main__':
+    arr = [60, 20, 11, 122, 214, 345, 1324, 1, 2, 3, 6, 74, 3, 9]
+    print(quicksort(arr))
 
-print(quicksort(arr))
-
-# This code is contributed by Pixel
 ```
 <b>
 
 ```
-n <- wielkosć tablicy
+tab[1..n] - tablica wejściowa
+dł() - funkcja zwracająca rozmiar tablicy
 
-def qs(arr)
-    Jeżeli n <= 1:
-        Zwróc arr
+def quicksort(tab)
+	Jeżeli dł(tab) <= 1:
+		Zwróć tab
 
-    less <- []
-    greater <- []
-    pivot <- n div 2 # dzielenie całkowite
+	pivot <- tab[dł(tab)]
+	smaller <- []
+	greater <- []
 
-    Dla x = 1,2,3, ... , n
-        Jeżeli x <= pivot
-            less[x] <- arr[x]
-        W innym wypadku
-            greater[x] <- arr[x]
-    Zwróć qs(less) + [pivot] + qs(greater)
+	Dla i = 1,2,3, ... , dł(tab) - 1
+		Jeżeli tab[i] <= pivot
+			Dodaj element tab[i] na koniec smaller
+		W innym wypadku
+			Dodaj element tab[i] na koniec greater
+
+	Zwróć quicksort(smaller) + [pivot] + quicksort(greater)
 ```
 </b>
 </details>
