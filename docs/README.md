@@ -42,6 +42,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
 * [Algorytmy.edu.pl](http://www.algorytm.edu.pl/algorytmy-maturalne.html) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
 * [Algorytm.org](http://www.algorytm.org/algorytmy/) - Lista algorytmów
+* [Algorytmy z podstawy programowej](https://www.youtube.com/playlist?list=PLpEP9TjZ__-Ff6YYZSZ0EAd54AdVFXOf5) - YT
 * [pl.khanacademy.org](https://pl.khanacademy.org/computing/computer-science/algorithms) - algorytmy z wyjaśnieniami
 * [binarnie.pl](https://binarnie.pl/category/matura-z-informatyki-nauka/) - dużo teorii, algorytmów
 * [Repozytorium c++/excel](https://github.com/mazxaxz/matura-informatyka-all-in-one)
@@ -102,6 +103,7 @@ Polecam ciemny motyw github'a</b></p>
 * [infomatura](https://www.youtube.com/channel/UClzG_Qs0EPVJnbPEoVuDrZA/videos) - YT
 * [codeminator](https://www.youtube.com/channel/UC_2wsz5jrtHBixjGTKupBSg/videos) - YT
 * [encodeme](https://www.youtube.com/channel/UCAgkC-bNToPAUqHZXRCuUUA/videos) - YT
+* [Małgorzata Piekarska](https://www.youtube.com/channel/UCdQEVPEepyZC0ewLTNrknOA/videos) - Rozwiązania z zakresu SQL, Access, Excel
 * [Matura export](https://www.youtube.com/channel/UCXgCS0R1YH60P51jkrq1FsQ/playlists) - YT
 * [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnieniami na yt, gorąco polecam
 * [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
