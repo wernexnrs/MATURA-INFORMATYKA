@@ -6,7 +6,13 @@
 [![GNU License][license-shield]][license-url]
 [![_last-commit]][commit]
 [![_commit-activity-m]][commits]
-
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
 <h1 align="center"> 🔥 <a href="https://discord.com/users/596478466849767475/">Wernex#9840</a> 🔥 </h1>
 
 <h1 align="center"> MATURA 2021 </h1>
@@ -146,3 +152,5 @@ Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs/MATURA-I
 [_last-commit]: https://shields.io/github/last-commit/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
 [_repo-size]: https://shields.io/github/repo-size/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
 [zip]: https://github.com/wernexnrs/MATURA-INFORMATYKA/archive/master.zip
+    </body>
+</html>
