@@ -1,3 +1,5 @@
+<div align="center">
+  
 ![build][build-shield]
 [![Issues][issues-shield]][issues-url]
 [![Contributors][contributors-shield]][contributors-url]
@@ -6,6 +8,8 @@
 [![GNU License][license-shield]][license-url]
 [![_last-commit]][commit]
 [![_commit-activity-m]][commits]
+ 
+</div>
   
 <h1 align="center"> 🔥 <a href="https://discord.com/users/596478466849767475/">Wernex#9840</a> 🔥 </h1>
 
