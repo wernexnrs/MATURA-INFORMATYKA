@@ -32,7 +32,7 @@ Polecam ciemny motyw github'a</b></p>
 - Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
 - Do rozwijania listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 
-## :link: Przydatne linki
+## 🔗 Przydatne linki
 
 * [Pixel48/getLearn](https://github.com/Pixel48/getLearn) - opracowane przez społeczność materiały do nauki
 * [POLSKI SPOJ](https://pl.spoj.com/) - pełno problemów algorytmicznych do rozwiązania
@@ -41,7 +41,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Wszystkie arkusze](https://arkusze.pl/informatyka-matura-poziom-rozszerzony/)
 * [Tutor](http://pythontutor.com/) - wizualizacja kodu
 
-## :wrench: Algorytmika
+## 🔧 Algorytmika
 
 * [Algorytmy i struktury danych - mgr. Jerzy Wałaszek](https://eduinf.waw.pl/inf/alg/001_search/index.php) - Pełno algorytmów z opisami i zadań. Ponad program.
 * [Algorytmy.edu.pl](http://www.algorytm.edu.pl/algorytmy-maturalne.html) - Niepełna lista algorytmów maturalnych z wyjaśnieniem
@@ -59,7 +59,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Insertion sort](https://www.youtube.com/watch?v=ROalU379l3U&list=PLikGmVz62acywhDHJy-91TA4HXGc5cqz1) - YT
 * [Bubble sort](https://www.youtube.com/watch?v=uJLwnsLn0_Q&list=PLikGmVz62aczkKRmociYK8Uzix1Mnf21p) - YT
 
-## :green_book: EXCEL
+## 📗 EXCEL
 
 * [Wprowadzenie i troszke teorii](https://www.korepetycjezinformatyki.pl/arkusz-kalkulacyjny/)
 * [Podstawowe funkcje](https://calculatic.pl/poradnik/podstawowe-funkcje-excela/)
@@ -71,7 +71,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Pełno kursów YT](https://www.youtube.com/watch?v=PU8ACyYxJBk&list=PLikGmVz62aczV-1qWC2oQtL_Tod8bkXGv)
 * [Jeszcze więcej kursów](https://www.youtube.com/watch?v=tuk99Sgc6Fw&list=PLoyECfvEFOjbdwpIOtm_8PFzB_CPAD2_H)
 
-## :orange_book: ACCESS
+## 📙 ACCESS
 
 * [Informacje](https://support.microsoft.com/pl-pl/access)
 * [w3schools - SQL](https://www.w3schools.com/sql/) - Zagadnienia w przystępnej formie
@@ -81,7 +81,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Kursy YT](https://www.youtube.com/watch?v=vrtNPp2r6qQ&list=PLikGmVz62aczN2wx5NFGtJxRgux0lXuCM)
 * [Pasja informatyki](https://www.youtube.com/watch?v=99JAI24Zd24&list=PLOYHgt8dIdoymv-Wzvs8M-OsKFD31VTVZ) - kurs mysql
 
-## :blue_book: PYTHON
+## 📘 PYTHON
 
 * [Algorytmy wymienione w wymaganiach na rok 2021](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
 * [Rozwiązania zadań z arkuszy i zbiorów zadań](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) #zachęcam do wstawiania swoich
@@ -93,7 +93,7 @@ Polecam ciemny motyw github'a</b></p>
 * [w3schools](https://www.w3schools.com/python/default.asp) - Zagadnienia w przystępnej formie
 * [Kanał o wszystkim](https://www.youtube.com/watch?v=vek4MqPGvVU&list=PL6aekdNhY7DBGiMXnmBYjImq_vW32QftK) - kurs python, YT
 
-## :closed_book: C++ / Pascal
+## 📕 C++ / Pascal
 
 * [cpp0x.pl](https://cpp0x.pl/kursy/) - kurs C++
 * [informatykaplus.edu.pl](http://informatykaplus.edu.pl/infp.php/algorytmika_programowanie_kursy.html) - wykłady z jakiegoś projektu
@@ -101,7 +101,7 @@ Polecam ciemny motyw github'a</b></p>
 * [allinonebyplucek.blogspot.com](https://allinonebyplucek.blogspot.com/p/informatyka-c.html) - skrót teorii do c++
 * [Pasja informatyki](https://www.youtube.com/watch?v=ErOzmh3BiXU&list=PLOYHgt8dIdoxx0Y5wzs7CFpmBzb40PaDo) - kurs C++
 
-## :notebook: Rozwiązania zadań maturalnych
+## 📓 Rozwiązania zadań maturalnych
 
 * [Konrad Buzak](https://www.youtube.com/user/genek72gmail/videos) - YT
 * [infomatura](https://www.youtube.com/channel/UClzG_Qs0EPVJnbPEoVuDrZA/videos) - YT
@@ -114,7 +114,7 @@ Polecam ciemny motyw github'a</b></p>
 * [Dysk google](https://drive.google.com/drive/folders/13Fs_7YpmVpXV-IkYjDcUBLdQQkdditpx) - Algorytmy, rozwiązania zadań z accessa
 * [Jack477](https://github.com/Jack477/Arkusze_informatyka_Python) - Rozwiązania arkuszy na GitHub
 
-## :copyright: Licencja
+## ©️ Licencja
 Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE)
 
 [contributors-shield]: https://img.shields.io/github/contributors/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
