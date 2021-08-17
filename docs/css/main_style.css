@@ -1,0 +1,22 @@
+a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.markdown-body{
+    color: white;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 40px;
+    font-size: 20px;
+    width: 1200px;
+    height: 100%;
+    margin: 50px auto 50px auto;
+    padding: 30px 0 30px 0;
+    padding: 10px 50px 10px 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+.markdown-body > p{
+    text-align: center;
+}
+

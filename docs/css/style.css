@@ -1,0 +1,93 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    margin: 0 !important;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+  list-style-type: none;
+  font-size: 25px;
+  width: 30%;
+  background-color: blue;
+  transition: all 0.7s;
+}
+
+li{
+  display: inline-block;
+  background-color: red;
+  padding: 0 15px 0 15px;
+}
+
+li:hover{
+  background-color: aqua;
+}
+
+.fix_menu{
+	margin-top: 10px;
+	transition: all 0.7s;
+	font-size: 20px;
+}
+
+#menu {
+  height: 80px;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.7s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  background-image: url("../images/bg_menu.png");
+}
+
+.fixed{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 40px !important;
+  transition: all 0.7s;
+  margin-bottom: 40px;
+}
+
+.fix_content{
+  padding-top: 40px;
+}
+
+footer{
+  position:relative;
+  border-radius: 80px 80px 0 0;
+  height: 200px;
+  width: 100%;
+  background-image: url("../images/bg_footer.png");
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+footer img{
+  position: absolute; 
+  transition: all 0.7s;
+  height: 180px;
+  width: 180px;
+  margin: 10px 40px 0 40px;
+  top: 0px; 
+  left: 0px; 
+}
+
+footer img:hover{
+  transition: all 0.7s;
+  top: -50px; 
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 6px 6px 4px rgba(0, 0, 0, .7));
+}
+
+footer a{
+  display: inline-block;
+}
+
+footer a img{
+  position: relative;
+  width: 180px;
+}
