@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+		<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">	
+    </head>
+    <base target="_blank">
+    <body>
+        <div id="container"> 
+            <div id="menu">
+                <ul id="menu_ul">
+                    <a href="#"><li>Strona główna</li></a>
+                    <a href="#"><li>Działy</li></a>
+                    <a href="#"><li>Faq</li></a>
+                </ul>
+            </div>
+
+
+            <zero-md id ="main" src="readme.md">
+                 <template>
+                    <link rel="stylesheet" href="css/main_style.css">
+                </template>
+            </zero-md>
+
+
+        <footer>
+            <a href=""><img src="images/discord_icon.svg"></a>
+            <a href=""><img src="images/github_icon.svg"></a>
+        </footer>
+    </body>
+
+    <script>
+        const nav = document.querySelector('#menu');
+        const content = document.querySelector('#main');
+		const menu = document.querySelector('#menu_ul');
+        let navTop = nav.offsetTop;
+
+        function fixedNav() {
+        if (window.scrollY-0.01 >= navTop) {    
+            nav.classList.add('fixed');
+            content.classList.add('fix_content');
+			menu.classList.add('fix_menu');
+        } else {
+            nav.classList.remove('fixed');    
+            content.classList.remove('fix_content');  
+			menu.classList.remove('fix_menu');  
+        }
+        }
+
+        window.addEventListener('scroll', fixedNav);
+    </script>
+    
+</html>
