@@ -28,7 +28,7 @@ Polecam ciemny motyw github'a</b></p>
 - Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
 - Do rozwijania listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 
-## :link: Przydatne linki
+## <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png" height="23px" width="23px"> Przydatne linki
 
 * [Pixel48/getLearn](https://github.com/Pixel48/getLearn) - opracowane przez społeczność materiały do nauki
 * [POLSKI SPOJ](https://pl.spoj.com/) - pełno problemów algorytmicznych do rozwiązania
