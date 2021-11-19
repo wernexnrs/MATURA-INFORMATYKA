@@ -11,7 +11,7 @@
    - ![py] ![noc++] ![nojava] [wydawanie reszty metodą zachłanną,](#zachlanna)
 
 2. __algorytmy wyszukiwania i porządkowania (sortowania):__
-   - ![py] ![noc++] ![nojava] [bąbelkowy, ](#bob)
+   - ![py] ![c++] ![nojava] [bąbelkowy, ](#bob)
    - ![py] ![noc++] ![nojava] [przez wybór, ](#wybor)
    - ![py] ![noc++] ![nojava] [przez wstawianie liniowe, ](#lin)
    - ![py] ![noc++] ![nojava] [przez scalanie,](#scalanie)
@@ -364,7 +364,29 @@ Dopóki do_wydania > 0:
 
 <a name="bob"></a>
 ## Sortowanie bąbelkowe [⬆️](#)
-<details><summary>Rozwiń</summary>
+	
+<details><summary>Rozwiń  C++</summary>
+
+```cpp
+void babelkowe(int* tab, int rozmiar) {
+	int  k { 0 };
+
+	for (int i = 0; i < rozmiar; i++) {
+		for (int j = 0; j < rozmiar - i - 1; j++) {
+			if (tab[j] < tab[j + 1]) {
+				k = tab[j + 1];
+				tab[j + 1] = tab[j];
+				tab[j] = k;
+			}
+		}
+	}
+
+	for (int i = 0; i < rozmiar; i++) cout << tab[i] << " ";
+}
+```
+</details>
+	
+<details><summary>Rozwiń Python</summary>
 
 ```python
 #In place
