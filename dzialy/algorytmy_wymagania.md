@@ -35,7 +35,7 @@
    - szyfry przestawieniowe,
 	 * ![py] ![noc++] ![nojava] [Transpozycyjny](#przes)
 	 * ![py] ![noc++] ![nojava] [Szyfr AtBash](#atbash)
-	 * ![py] ![noc++] ![nojava] [Szyfr Cezara](#cezar)
+	 * ![py] ![c++] ![nojava] [Szyfr Cezara](#cezar)
 ### Rzeczy, które nie są zwinięte w jakis sposób potrzebują poprawy
 
 <a name="konwersja"></a>
@@ -1060,7 +1060,9 @@ print(encrypt(cipher, to_code))
 <a name="morse"></a>
 ## Alfabet Morse’a [⬆️](#)
 <details><summary>Rozwiń</summary>
-
+	
+<details><summary>Python</summary>
+	
 ```python
 # define coding dict
 morseEncode = {
@@ -1086,13 +1088,13 @@ def morseCode(string, decode=False):
     string = string.lower()
     output = ""
     if not decode:  # then encode
-        for char in string:
-            output += morseEncode.get(char, '')  # print '*' for unexpected characters
-            if char != ' ': output += ' '
+	for char in string:
+	    output += morseEncode.get(char, '')  # print '*' for unexpected characters
+	    if char != ' ': output += ' '
     else:
-        string = string.replace('  ', ' _ ')
-        for char in string.split(' '):
-            output += morseDecode.get(char, '')  # print '*' for unexpected codes
+	string = string.replace('  ', ' _ ')
+	for char in string.split(' '):
+	    output += morseDecode.get(char, '')  # print '*' for unexpected codes
     return output
 
 # test
@@ -1104,7 +1106,9 @@ print("Decoded:", decoded)
 
 # This code is contributed by Pixel
 ```
-
+</details>
+<details><summary>C++</summary>
+	
 ```cpp
 #include <iostream>
 #include <map>
@@ -1127,35 +1131,35 @@ map<string, string> codeTab{
 string code(string in, bool decode=false){
     string out = "";
     if(decode){
-        string val = "";
-        for(int i = 0; i<in.length(); i++){
-            map<string, string>::iterator it;
-            if(in[i] != ' '){
-                val += in[i];
-            }
-            else{
-                if(in[i-1] == ' ' && in[i+1] == ' ')
-                    val = "_";
-                for (it = codeTab.begin(); it != codeTab.end(); it++){
-                    if(val == it->second){
-                        out += it->first;
-                    }
-                }
-                val = "";
-            }
-        }
+	string val = "";
+	for(int i = 0; i<in.length(); i++){
+	    map<string, string>::iterator it;
+	    if(in[i] != ' '){
+		val += in[i];
+	    }
+	    else{
+		if(in[i-1] == ' ' && in[i+1] == ' ')
+		    val = "_";
+		for (it = codeTab.begin(); it != codeTab.end(); it++){
+		    if(val == it->second){
+			out += it->first;
+		    }
+		}
+		val = "";
+	    }
+	}
     }
     else{
-        for(int i = 0; i<in.length(); i++){
-            string s(1, in[i]);
-            if(s != " ") 
-                out += ' ';
-            if(s == " ") 
-                out += "  ";
-            else{
-                out += codeTab[s];
-            }
-        }
+	for(int i = 0; i<in.length(); i++){
+	    string s(1, in[i]);
+	    if(s != " ") 
+		out += ' ';
+	    if(s == " ") 
+		out += "  ";
+	    else{
+		out += codeTab[s];
+	    }
+	}
     }
 
     return out;
@@ -1167,7 +1171,8 @@ int main(){
 }
 ```
 </details>
-
+</details>	
+	
 <a name="atbash"></a>
 ## Szyfr AtBash[⬆️](#)
 <details><summary>Rozwiń</summary>
@@ -1223,6 +1228,8 @@ print(przes(tekst, 3))
 <a name="cezar"></a>
 ## Szyfr Cezara [⬆️](#)
 <details><summary>Rozwiń</summary>
+
+<details><summary>Python</summary>
 	
 Jest to rodzaj szyfru podstawieniowego, w którym każda litera tekstu jawnego (niezaszyfrowanego) zastępowana jest inną, oddaloną od niej o stałą liczbę pozycji w alfabecie. <br>
 
@@ -1257,7 +1264,22 @@ koduj(wiadomosc, klucz):
 ```
 </b>
 </details>
+<details><summary>C++</summary>
+	
+```cpp
+void gr7(string wiadomosc, int klucz) {
+    string wynik;
 
+    for (char i : wiadomosc)
+        if(isupper(i)) wynik += static_cast<char>((static_cast<int>(i + klucz) - 65) % 26 + 65);
+        else wynik += static_cast<char>((static_cast<int>(i + klucz) - 97) % 26 + 97);
+
+    cout << wynik;
+}
+```
+</details>
+</details>
+	
 [py]: https://img.shields.io/badge/Python-%E2%9C%94-green?style=flat-square&logo=python
 [notpy]: https://img.shields.io/badge/Python-%E2%9C%98-red?style=flat-square&logo=python
 
