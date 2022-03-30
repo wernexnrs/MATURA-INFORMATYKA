@@ -26,7 +26,7 @@
 3. __algorytmy na łańcuchach__  
 
    - ![nopy] ![noc++] ![nojava] Zliczanie znaków w ciągu
-   - ![nopy] ![noc++] ![nojava] Zliczanie słów w łańcuchu
+   - ![py] ![noc++] ![nojava] [Zliczanie słów w łańcuchu](#iloscslow)
    - ![nopy] ![noc++] ![nojava] Wyszukiwanie najdłuższego słowa w łańcuchu
    - ![nopy] ![noc++] ![nojava] Wyszukiwanie najdłuższego wspólnego podłańcucha
    - ![nopy] ![noc++] ![nojava] Wyszukiwanie najdłuższego wspólnego podciągu
@@ -372,6 +372,18 @@ def wariancja2(lista):
 
 ### Ze wzoru:
 ![equation](https://raw.githubusercontent.com/wernexnrs123/MATURA-INFORMATYKA/master/dzialy/images/wariancja.png)
+</details>
+   
+## Zliczanie słów w łańcuchu [⬆️](#main)
+<a name="iloscslow"></a>
+<details><summary>Rozwiń</summary>
+
+```python
+slowo = "Ala ma kota"
+i = len(slowo.split())
+
+print(i)
+```
 </details>
 
 
