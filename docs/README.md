@@ -107,7 +107,6 @@ Polecam ciemny motyw github'a</b></p>
 * [Matura export](https://www.youtube.com/channel/UCXgCS0R1YH60P51jkrq1FsQ/playlists) - YT
 * [maturainformatyka.buz.info.pl](https://maturainformatyka.buz.info.pl/) - zadania z arkuszy z wyjaśnieniami na yt, gorąco polecam
 * [informatura.pl](http://informatura.pl/rozwiazania) - Rozwiązania zadań z arkuszy
-* [Dysk google](https://drive.google.com/drive/folders/13Fs_7YpmVpXV-IkYjDcUBLdQQkdditpx) - Algorytmy, rozwiązania zadań z accessa
 * [Jack477](https://github.com/Jack477/Arkusze_informatyka_Python) - Rozwiązania arkuszy na GitHub
 
 ## <img src="https://github.githubassets.com/images/icons/emoji/unicode/00a9.png" height="23px" width="23px"> Licencja
