@@ -141,7 +141,7 @@ Dla i = 1,2 … n
 ```python
 def is_perfect(n):
     s = 1
-    for i in range(2, n):
+    for i in range(2, n//2+1):
         if n % i == 0:
             s += i
     if n == s and n != 1:
