@@ -12,7 +12,6 @@
 <h1 align="center"> MATURA 2021 </h1>
 
 <p align="center"><b>Projekt powstał w celu zgromadzenia pomocnych zagadnień na mature rozszerzoną z informatyki. <br>
-Bardzo proszę o wnoszenie poprawek.<br>
 Algorytmy wymienione w wymaganiach przez CKE są jedynie przykładem.<br>
 Polecam ciemny motyw github'a</b></p>
 
@@ -24,9 +23,9 @@ Polecam ciemny motyw github'a</b></p>
     Przygotowanie do egzaminów zawodowych EE.08 i EE.09
     
 ### Zachęcam:
-- Do wstawiania swoich rozwiązań z arkuszy w każdym języku - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md) - dzięki temu możemy trzymać wszystko w jednym miejscu. [TUTORIAL](https://www.youtube.com/watch?v=nT8KGYVurIU)
-- Do rozwijania listy algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
-- Do rozwijania listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
+- Rozwiązania arkuszy - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+- Lista algorytmów wymienionych przez CKE - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/algorytmy_wymagania.md)
+- Listy dodatkowych algorytmów - [TUTAJ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/dodatkowe_algorytmy.md)
 
 ## <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png" height="23px" width="23px"> Przydatne linki
 
