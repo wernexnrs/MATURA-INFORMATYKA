@@ -140,13 +140,14 @@ Dla i = 1,2 … n
 
 ```python
 def is_perfect(n):
-    s = 1
-    for i in range(2, n):
-        if n % i == 0:
-            s += i
-    if n == s and n != 1:
+    sum_div = 0
+    for i in range(1, n // 2 + 1):
+        if (n % i == 0):
+            sum_div = sum_div + i
+    if (sum_div == n):
         return True
-    return False
+    else:
+        return False
 ```
 <b>
 
