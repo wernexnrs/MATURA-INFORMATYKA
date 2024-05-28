@@ -110,26 +110,29 @@ def to_base(n, b):
 
 ```python
 def is_prime(x):
-    if x > 1:
-        for i in range(2, int(x**0.5)):
-            if x % i == 0:
-                return False
-        return True
-    return False
+    if x <= 1:
+        return False
+    for i in range(2, int(x**0.5) + 1):
+        if x % i == 0:
+            return False
+    return True
 ```
 <b>
 
 ```
-A <- [1,2 … n]
+Funkcja is_prime(x):
+    Jeżeli x <= 1
+        Zwróć Fałsz
+    Koniec jeżeli
 
-Dla i = 1,2 … n
-	Jeżeli i > 1
-		Dla j = 2,3 ... i
-			Jeżeli i mod j == 0
-				Zwróć Fałsz
-		Zwróć Prawde
-	W innym wypadku
-		Zwróć Fałsz
+    Dla i od 2 do całkowitej wartości (pierwiastek kwadratowy z x) + 1:
+        Jeżeli x mod i == 0
+            Zwróć Fałsz
+        Koniec jeżeli
+    Koniec dla
+
+    Zwróć Prawda
+Koniec funkcji
 ```
 </b>
 </details>
