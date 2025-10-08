@@ -1,11 +1,24 @@
-![build][build-shield]
-[![Issues][issues-shield]][issues-url]
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![GNU License][license-shield]][license-url]
-[![_last-commit]][commit]
-[![_commit-activity-m]][commits]
+## 📊 Repository Stats
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&logo=github&color=yellow" />
+  <img src="https://img.shields.io/github/forks/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&logo=github&color=blue" />
+  <img src="https://img.shields.io/github/repo-size/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=informational" />
+  <img src="https://img.shields.io/github/license/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=lightgrey" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=orange" />
+  <img src="https://img.shields.io/github/commit-activity/m/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=purple" />
+  <img src="https://img.shields.io/github/contributors/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=green" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/issues/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=red" />
+  <img src="https://img.shields.io/github/issues-closed/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=darkred" />
+  <img src="https://img.shields.io/github/issues-pr/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=brightgreen" />
+  <img src="https://img.shields.io/github/issues-pr-closed/wernexnrs/MATURA-INFORMATYKA?style=for-the-badge&color=darkgreen" />
+</p>
 
 <h1 align="center"> MATURA 2021 </h1>
 
@@ -142,3 +155,4 @@ Projekt objęty jest licencją [GNU GPL 3](https://github.com/wernexnrs/MATURA-I
 [_last-commit]: https://shields.io/github/last-commit/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
 [_repo-size]: https://shields.io/github/repo-size/wernexnrs/MATURA-INFORMATYKA.svg?style=for-the-badge
 [zip]: https://github.com/wernexnrs/MATURA-INFORMATYKA/archive/master.zip
+
