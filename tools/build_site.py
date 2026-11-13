@@ -735,7 +735,7 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
 <footer class="footer">
   <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="{repo}/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
-  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo.</span></p>
   <p><a href="{repo}" target="_blank" rel="noopener">GitHub</a> · <a href="{repo}/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="{root}linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>
@@ -971,7 +971,7 @@ def home_page(stats, exams, exam_titles, page_map):
     <li><b>100% otwarte</b><span>licencja MIT</span></li>
   </ul>
   <button class="hero-search" type="button" data-open-search><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj: sito, NWD, bisekcja, 2019 maj…</span><kbd>/</kbd></button>
-  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo.</span></p>
 </section>
 <section class="tiles">
   <a class="tile" style="--c:var(--g1)" href="algorytmy.html"><span class="tile-icon" aria-hidden="true">⇅</span><span class="num">{n_algo}</span><h2>Algorytmy z wymagań CKE</h2><p>Liczby, sortowania, wyszukiwanie, numeryczne, teksty, szyfry, geometria.</p></a>

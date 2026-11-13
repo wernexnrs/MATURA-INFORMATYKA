@@ -469,3 +469,5 @@ th { background: var(--surface-2); }
 }
 .sidebar li[style] a::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--c); margin-right: 8px; vertical-align: 2px; }
 .sidebar li[style] a.active { border-left-color: var(--c); color: var(--text); }
+.powered-slogan { margin-left: 4px; padding-left: 10px; border-left: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); color: var(--text); font-weight: 800; }
+@media (max-width: 560px) { .powered { flex-wrap: wrap; justify-content: center; } .powered-slogan { border-left: 0; padding-left: 0; margin-left: 0; width: 100%; text-align: center; } }

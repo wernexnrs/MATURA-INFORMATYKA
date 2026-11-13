@@ -17,7 +17,7 @@
 
 Darmowe materiały do **matury rozszerzonej z informatyki**: wszystkie algorytmy z wymagań egzaminacyjnych CKE napisane w **Pythonie** (z pseudokodem), dodatkowe algorytmy oraz **rozwiązania zadań z arkuszy maturalnych** z odpowiedziami. Wiele stron każe płacić za dostęp do tych samych algorytmów — tutaj wszystko jest za darmo, bez reklam i bez logowania.
 
-<p align="center"><sub>✦ Powered by AI · Claude Opus 5.5 (High)</sub></p>
+<p align="center"><sub>✦ Powered by AI · Claude Opus 5.5 (High) — <b>Inni kasują. My uczymy za darmo.</b></sub></p>
 
 ## Co tu znajdziesz
 
