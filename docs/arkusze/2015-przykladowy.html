@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Przykładowy arkusz CKE — formuła 2015 | Matura z informatyki</title>
+<meta name="description" content="Przykładowy arkusz CKE — formuła 2015 - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a, 2b i 2c, 3a, 3b, 3c i 3d, 4a i 4b).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Przykładowy arkusz CKE — formuła 2015">
+<meta property="og:description" content="Przykładowy arkusz CKE — formuła 2015 - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a, 2b i 2c, 3a, 3b, 3c i 3d, 4a i 4b).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Przykładowy arkusz CKE — formuła 2015", "description": "Przykładowy arkusz CKE — formuła 2015 - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a, 2b i 2c, 3a, 3b, 3c i 3d, 4a i 4b).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#2a-2b-i-2c">2a, 2b i 2c</a></li><li><a href="#3a">3a</a></li><li><a href="#3b">3b</a></li><li><a href="#3c-i-3d">3c i 3d</a></li><li><a href="#4a-i-4b">4a i 4b</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Przykładowy arkusz CKE — formuła 2015</span></nav>
+<h1 class="page-title">Przykładowy arkusz CKE — formuła 2015</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="2a-2b-i-2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-2b-i-2c">2a, 2b i 2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pierwiastek_liniowo(n):
+    # 2a - brakująca instrukcja: k &lt;- k + 1
+    k = 1
+    sprawdzenia = 0
+    while True:
+        sprawdzenia += 1  # sprawdzenie warunku z wiersza (2)
+        if not (k + 1) * (k + 1) &lt;= n:
+            break
+        k = k + 1
+    return k, sprawdzenia
+
+
+def pierwiastek_binarnie(n):
+    # 2b - brakująca instrukcja: k &lt;- s (wyszukiwanie binarne w przedziale [k, m])
+    k = 1
+    m = n
+    sprawdzenia = 0
+    while True:
+        sprawdzenia += 1
+        if not (k + 1) * (k + 1) &lt;= n:
+            break
+        s = (k + m) // 2
+        if s * s &lt;= n:
+            k = s
+        else:
+            m = s
+    return k, sprawdzenia
+
+
+for n in [32, 1024]:
+    print(n, pierwiastek_liniowo(n)[1], pierwiastek_binarnie(n)[1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2a: k ← k + 1; liczba sprawdzeń: 5 (n = 32) i 32 (n = 1024). 2b: k ← s. 2c: 6 (n = 32) i 6 (n = 1024).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3a" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3a">3a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def schody(a):
+    # zwraca listę (schody, długość, liczba progów)
+    wynik = []
+    n = len(a)
+    i = 0
+    while i &lt; n - 1:
+        if a[i + 1] &lt;= a[i]:
+            j = i
+            progi = 0
+            while j &lt; n - 1 and a[j + 1] &lt;= a[j]:
+                if a[j + 1] &lt; a[j]:
+                    progi += 1
+                j += 1
+            wynik.append((a[i:j + 1], j - i + 1, progi))
+            i = j
+        else:
+            i += 1
+    return wynik
+
+
+ciag = [2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]
+for schodki, dlugosc, progi in schody(ciag):
+    print(schodki, dlugosc, progi)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (2, 2, 2) 3 0; (3, 1, 1) 3 1; (3, 3, 1) 3 1; (11, 7, 7, 6) 4 2; (7, 7) 2 0; (9, 9, 7) 3 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3b" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3b">3b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_progow(a):
+    licznik = 0
+    for i in range(len(a) - 1):
+        if a[i] &gt; a[i + 1]:
+            licznik += 1
+    return licznik
+
+
+print(liczba_progow([2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> algorytm powyżej (dla ciągu z 3a: 5 progów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3c-i-3d" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3c-i-3d">3c i 3d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najw_liczba_progow(a):
+    najw = 0
+    w_schodach = 0
+    for i in range(len(a) - 1):
+        if a[i] &lt; a[i + 1]:
+            # a[i + 1] może być początkiem nowych schodów
+            if w_schodach &gt; najw:
+                najw = w_schodach
+            w_schodach = 0
+        elif a[i] &gt; a[i + 1]:
+            w_schodach += 1
+    # schody mogą kończyć się ostatnim elementem ciągu
+    if w_schodach &gt; najw:
+        najw = w_schodach
+    return najw
+
+
+print(najw_liczba_progow([3, 7, 7, 6, 5, 4, 4, 4, 5]))
+print(najw_liczba_progow([2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3c: algorytm powyżej (dla przykładu z treści: 3). 3d: 2(n − 1) porównań — w każdym z n − 1 obrotów pętli w najgorszym razie wykonywane są dwa porównania (wykrycie nowych schodów i wykrycie progu).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-i-4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a-i-4b">4a i 4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wiersze_z_anagramami = 0
+ile = {}  # posortowane cyfry liczby -&gt; ile liczb ma taki zestaw cyfr
+
+with open(&quot;dane_anagramy.txt&quot;) as file:
+    for line in file:
+        a, b = line.split()
+        # anagramy cyfrowe mają ten sam posortowany zapis cyfr
+        klucz_a = &quot;&quot;.join(sorted(a))
+        klucz_b = &quot;&quot;.join(sorted(b))
+        if klucz_a == klucz_b:
+            wiersze_z_anagramami += 1
+        ile[klucz_a] = ile.get(klucz_a, 0) + 1
+        ile[klucz_b] = ile.get(klucz_b, 0) + 1
+
+with open(&quot;wyniki_anagramy.txt&quot;, &quot;w&quot;) as wynik:
+    print(&quot;a)&quot;, wiersze_z_anagramami, file=wynik)
+    print(&quot;b)&quot;, max(ile.values()), file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 258; b) 11</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dodaj coś od siebie</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

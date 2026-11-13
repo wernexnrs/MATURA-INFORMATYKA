@@ -81,7 +81,7 @@ print(najwiekszy([2, 4, 6, 8]))
 
 ## 4.1
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 miesiace = [0] * 13
@@ -99,7 +99,7 @@ for miesiac in range(1, 13):
 
 ## 4.2
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 kobiety = {}
@@ -118,7 +118,7 @@ for miejsce in kobiety:
 
 ## 4.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 suma_kobiety = 0
@@ -160,7 +160,7 @@ print(f"{suma_mezczyzni:.2f}")
 
 ## 4.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 przedzialy = {}  # początek przedziału (20, 30, ..., 70) -> liczba osób
@@ -177,164 +177,6 @@ for poczatek in range(20, 80, 10):
     print(f"{poczatek}-{poczatek + 9}", przedzialy.get(poczatek, 0))
 ```
 **Odpowiedź:** 20-29: 62, 30-39: 56, 40-49: 64, 50-59: 56, 60-69: 71, 70-79: 22 (+ wykres kolumnowy)
-
-## 5.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-maturzysci = {}  # id -> (nazwisko, imie)
-with open("maturzysta.txt") as file:
-    next(file)
-    for line in file:
-        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
-        maturzysci[id_z] = (nazwisko, imie)
-
-informatyka = []
-with open("zdaje.txt") as file:
-    next(file)
-    for line in file:
-        id_z, id_p = line.strip().split(";")
-        if id_p == "15":  # 15 - informatyka (plik przedmioty.txt)
-            informatyka.append(maturzysci[id_z])
-
-for nazwisko, imie in sorted(informatyka):
-    print(nazwisko, imie)
-```
-**Odpowiedź:** Badowski Fryderyk, Barszcz Tomasz, Makowicz Magda, Nowak Paweł, Nowakowski Marek, Rybicka Maria, Wysocka Justyna
-
-## 5.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-dodatkowe = {}  # id przedmiotu dodatkowego -> nazwa
-with open("przedmioty.txt") as file:
-    next(file)
-    for line in file:
-        id_p, nazwa, data, godzina, typ = line.strip().split(";")
-        if typ == "dodatkowy":
-            dodatkowe[id_p] = nazwa
-
-ile = {}
-with open("zdaje.txt") as file:
-    next(file)
-    for line in file:
-        id_z, id_p = line.strip().split(";")
-        if id_p in dodatkowe:
-            ile[id_p] = ile.get(id_p, 0) + 1
-
-najczestszy = max(ile, key=ile.get)
-print(dodatkowe[najczestszy], ile[najczestszy])
-```
-**Odpowiedź:** wiedza o społeczeństwie, 8 osób
-
-## 5.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-maturzysci = {}  # id -> (nazwisko, imie)
-with open("maturzysta.txt") as file:
-    next(file)
-    for line in file:
-        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
-        maturzysci[id_z] = (nazwisko, imie)
-
-dodatkowe = set()
-with open("przedmioty.txt") as file:
-    next(file)
-    for line in file:
-        id_p, nazwa, data, godzina, typ = line.strip().split(";")
-        if typ == "dodatkowy":
-            dodatkowe.add(id_p)
-
-ile = {}  # id zdającego -> liczba przedmiotów dodatkowych
-with open("zdaje.txt") as file:
-    next(file)
-    for line in file:
-        id_z, id_p = line.strip().split(";")
-        if id_p in dodatkowe:
-            ile[id_z] = ile.get(id_z, 0) + 1
-
-najwiecej = max(ile.values())
-for id_z in ile:
-    if ile[id_z] == najwiecej:
-        print(*maturzysci[id_z], najwiecej)
-```
-**Odpowiedź:** Barańska Joanna, Zalicki Marcin, Bajda Maria - po 3 przedmioty
-
-## 5.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wybrane = set()
-with open("zdaje.txt") as file:
-    next(file)
-    for line in file:
-        id_z, id_p = line.strip().split(";")
-        wybrane.add(id_p)
-
-with open("przedmioty.txt") as file:
-    next(file)
-    for line in file:
-        id_p, nazwa, data, godzina, typ = line.strip().split(";")
-        if typ == "dodatkowy" and id_p not in wybrane:
-            print(nazwa)
-```
-**Odpowiedź:** język łaciński i kultura antyczna
-
-## 5.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-przedmioty = {}  # id -> (nazwa, typ)
-with open("przedmioty.txt") as file:
-    next(file)
-    for line in file:
-        id_p, nazwa, data, godzina, typ = line.strip().split(";")
-        przedmioty[id_p] = (nazwa, typ)
-
-najmlodszy = None
-najpozniejsza_data = ""
-with open("maturzysta.txt") as file:
-    next(file)
-    for line in file:
-        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
-        if data > najpozniejsza_data:  # daty RRRR-MM-DD można porównywać jak napisy
-            najpozniejsza_data = data
-            najmlodszy = id_z
-            dane = (imie, nazwisko)
-
-print(*dane)
-with open("zdaje.txt") as file:
-    next(file)
-    for line in file:
-        id_z, id_p = line.strip().split(";")
-        if id_z == najmlodszy:
-            print(*przedmioty[id_p])
-```
-**Odpowiedź:** Marek Nowakowski: język polski, matematyka, język niemiecki, informatyka
-
-## 5.6
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-mezczyzni = 0
-
-with open("maturzysta.txt") as file:
-    next(file)
-    for line in file:
-        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
-        if int(pesel[-2]) % 2 == 1:
-            mezczyzni += 1
-
-print(mezczyzni)
-```
-**Odpowiedź:** 180
 
 ## 6.1
 

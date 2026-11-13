@@ -35,12 +35,22 @@ Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rze
     * [islice](#islice)
     * [accumulate](#accumulate)
     * [groupby](#groupby)
+    * [pairwise](#pairwise)
   * __operator__ - operatory jako funkcje
     * [itemgetter i funkcje operatorów](#itemgetter)
   * __functools__ - narzędzia dla funkcji
     * [reduce](#reduce)
     * [lru_cache / cache](#cache)
     * [cmp_to_key](#cmp_to_key)
+  * __bisect__ - wyszukiwanie binarne w posortowanej liście
+    * [bisect_left / bisect_right / insort](#bisect)
+  * __heapq__ - kopiec (kolejka priorytetowa)
+    * [heappush / heappop / nlargest](#heapq)
+  * __datetime__ - daty i czas
+    * [date / datetime / timedelta](#datetime)
+    * [calendar](#calendar)
+  * __sys__ - ustawienia interpretera
+    * [setrecursionlimit](#sys)
   * __enum__ - typy wyliczeniowe
     * [Enum](#enum-klasa)
 
@@ -63,6 +73,22 @@ print(c.most_common(2))
 #Output: [('a', 5), ('b', 2)]
 print(Counter([3, 1, 3, 3, 2]).most_common(1)[0][0])  # najczęstszy element
 #Output: 3
+```
+
+```python
+# typowe zastosowania Counter
+from collections import Counter
+
+print(Counter("kajak") == Counter("jakak"))     # czy słowa są anagramami
+#Output: True
+c = Counter("mississippi")
+print(sorted(c.items()))
+#Output: [('i', 4), ('m', 1), ('p', 2), ('s', 4)]
+print(sum(1 for v in c.values() if v > 1))     # ile różnych liter się powtarza
+#Output: 3
+najczestsza, ile = Counter([4, 1, 4, 2, 1, 4]).most_common(1)[0]
+print(najczestsza, ile)
+#Output: 4 3
 ```
 
 ```python
@@ -163,6 +189,48 @@ print(q)
 #Output: deque([3, 1, 2])
 ```
 
+   * __append(x)__ / __appendleft(x)__ -> dodaje element na koniec / na początek
+   * __pop()__ / __popleft()__ -> usuwa i zwraca element z końca / z początku (kolejka FIFO: `append` + `popleft`)
+   * __rotate(n)__ -> przesuwa elementy cyklicznie o `n` w prawo (ujemne `n` - w lewo)
+   * __deque(maxlen=k)__ -> kolejka o ograniczonej długości: po dodaniu elementu ponad limit najstarszy z drugiego końca jest usuwany
+
+```python
+# BFS: najkrótsza droga w labiryncie ("#" - ściana), ruchy góra / dół / lewo / prawo
+from collections import deque
+
+plansza = ["..#.",
+           ".##.",
+           "...."]
+n, m = len(plansza), len(plansza[0])
+odl = [[-1] * m for _ in range(n)]
+odl[0][0] = 0
+kolejka = deque([(0, 0)])
+while kolejka:
+    w, k = kolejka.popleft()
+    for dw, dk in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+        nw, nk = w + dw, k + dk
+        if 0 <= nw < n and 0 <= nk < m and plansza[nw][nk] == "." and odl[nw][nk] == -1:
+            odl[nw][nk] = odl[w][k] + 1
+            kolejka.append((nw, nk))
+print(odl[0][3])
+#Output: 7
+```
+
+```python
+# deque z maxlen - pamięta tylko k ostatnich elementów (okno przesuwne)
+from collections import deque
+
+ostatnie = deque(maxlen=3)
+for x in [5, 1, 4, 2, 8]:
+    ostatnie.append(x)
+    print(list(ostatnie), sum(ostatnie))
+#Output: [5] 5
+#Output: [5, 1] 6
+#Output: [5, 1, 4] 10
+#Output: [1, 4, 2] 7
+#Output: [4, 2, 8] 14
+```
+
 ## math
 <a name="funkcje"></a>
 
@@ -221,6 +289,37 @@ for x in [0.1] * 10:
     suma += x
 print(suma, math.fsum([0.1] * 10))
 #Output: 0.9999999999999999 1.0
+```
+
+```python
+# typowe zastosowania na maturze
+import math
+
+def czy_pierwsza(n):
+    if n < 2:
+        return False
+    for d in range(2, math.isqrt(n) + 1):   # wystarczy sprawdzić dzielniki do pierwiastka
+        if n % d == 0:
+            return False
+    return True
+
+print([n for n in range(30) if czy_pierwsza(n)])
+#Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+n = (10**15 + 1) ** 2 - 1
+print(math.isqrt(n), int(math.sqrt(n)))       # isqrt jest dokładne, sqrt liczy na float
+#Output: 1000000000000000 1000000000000001
+print(math.isqrt(49) ** 2 == 49, math.isqrt(50) ** 2 == 50)  # czy liczba jest kwadratem
+#Output: True False
+print(math.gcd(12, 18, 24), math.lcm(4, 6, 10))  # wiele argumentów (Python 3.9+)
+#Output: 6 60
+a, b = 12, 18
+g = math.gcd(a, b)
+print(f"{a // g}/{b // g}")                   # skracanie ułamka 12/18
+#Output: 2/3
+print([math.comb(4, k) for k in range(5)])    # wiersz trójkąta Pascala
+#Output: [1, 4, 6, 4, 1]
+print(math.perm(5), math.perm(5, 3), math.comb(49, 6))
+#Output: 120 60 13983816
 ```
 
 ## statistics
@@ -480,6 +579,9 @@ print(list(result))
 #Output: [('a', 'b'), ('a', 'c'), ('a', 'd'), ('b', 'c'), ('b', 'd'), ('c', 'd')]
 print(len(list(itertools.combinations(range(10), 3))))
 #Output: 120
+liczby = [3, 7, 5, 5, 2, 8]
+print(sum(1 for x, y in itertools.combinations(liczby, 2) if x + y == 10))  # ile par daje sumę 10
+#Output: 3
 ```
 
 ### permutations()
@@ -568,6 +670,19 @@ print(list(itertools.accumulate(numbers, max)))           # bieżące maksimum
 #Output: [1, 5, 5, 5]
 ```
 
+```python
+# sumy prefiksowe: suma fragmentu a[i..j] w czasie O(1)
+from itertools import accumulate
+
+a = [2, 7, 1, 8, 2, 8]
+pref = list(accumulate(a, initial=0))  # initial - wartość na początku (Python 3.8+)
+print(pref)
+#Output: [0, 2, 9, 10, 18, 20, 28]
+i, j = 1, 3
+print(pref[j + 1] - pref[i], sum(a[i:j + 1]))
+#Output: 16 16
+```
+
 ### groupby()
 <a name="groupby"></a>
 
@@ -587,6 +702,29 @@ for litera, grupa in itertools.groupby(slowa, key=lambda s: s[0]):
 #Output: k ['kot', 'koza']
 #Output: m ['mysz']
 #Output: p ['pies', 'pyton']
+```
+
+### pairwise()
+<a name="pairwise"></a>
+
+Kolejne pary sąsiednich elementów: `(a0, a1), (a1, a2), ...` (od Pythona 3.10). Działa jak `zip(a, a[1:])`, ale dla dowolnego obiektu iterowalnego, także pliku.
+
+```python
+from itertools import pairwise
+
+print(list(pairwise([1, 4, 9, 16])))
+#Output: [(1, 4), (4, 9), (9, 16)]
+print(list(pairwise("abc")))
+#Output: [('a', 'b'), ('b', 'c')]
+a = [3, 5, 8, 6, 7, 9, 10, 2]
+print(all(x < y for x, y in pairwise(a)))  # czy ciąg jest rosnący
+#Output: False
+najdl = dl = 1                             # najdłuższy spójny fragment rosnący
+for x, y in pairwise(a):
+    dl = dl + 1 if y > x else 1
+    najdl = max(najdl, dl)
+print(najdl)
+#Output: 4
 ```
 
 ## operator [⬆️](#)
@@ -657,6 +795,20 @@ print(fib(10), fib(100))
 #Output: 55 354224848179261915075
 ```
 
+```python
+# @cache: liczba dróg w siatce (ruchy tylko w prawo i w dół)
+from functools import cache
+
+@cache
+def drogi(w, k):
+    if w == 0 or k == 0:
+        return 1
+    return drogi(w - 1, k) + drogi(w, k - 1)
+
+print(drogi(2, 2), drogi(16, 16))
+#Output: 6 601080390
+```
+
 Przy bardzo głębokiej rekurencji (np. `fib(5000)` od razu) Python zgłosi `RecursionError` - wtedy pomaga `sys.setrecursionlimit(10000)` albo wersja iteracyjna.
 
 ### cmp_to_key()
@@ -678,6 +830,178 @@ def porownaj(a, b):
 liczby = [3, 30, 34, 5, 9]
 print("".join(sorted(map(str, liczby), key=cmp_to_key(porownaj))))
 #Output: 9534330
+```
+
+## bisect [⬆️](#)
+<a name="bisect"></a>
+
+Wyszukiwanie binarne w __posortowanej__ liście - O(log n) zamiast O(n) przy przeglądaniu po kolei.
+
+- __bisect_left(a, x)__ -> Indeks pierwszego elementu `>= x` (miejsce wstawienia `x` przed równymi). Tyle elementów listy jest mniejszych od `x`.
+- __bisect_right(a, x)__ (to samo co __bisect(a, x)__) -> Indeks pierwszego elementu `> x`. Tyle elementów jest `<= x`.
+- __insort(a, x)__ -> Wstawia `x` tak, żeby lista pozostała posortowana (szukanie jest szybkie, ale samo wstawienie to O(n)).
+- Od Pythona 3.10 funkcje przyjmują `key=`, jak `sorted()`.
+
+```python
+from bisect import bisect_left, bisect_right, insort
+
+a = [1, 3, 3, 3, 7, 9]
+print(bisect_left(a, 3), bisect_right(a, 3), bisect_left(a, 4))
+#Output: 1 4 4
+print(bisect_right(a, 3) - bisect_left(a, 3))  # ile razy występuje 3
+#Output: 3
+print(bisect_right(a, 7) - bisect_left(a, 2))  # ile elementów z przedziału [2, 7]
+#Output: 4
+i = bisect_left(a, 7)
+print(i < len(a) and a[i] == 7)                # czy 7 jest w liście
+#Output: True
+insort(a, 5)
+print(a)
+#Output: [1, 3, 3, 3, 5, 7, 9]
+progi = [30, 50, 75, 90]                       # numer przedziału, do którego należy wynik
+oceny = "FDCBA"
+print([oceny[bisect_right(progi, p)] for p in [12, 30, 74, 90, 100]])
+#Output: ['F', 'D', 'C', 'A', 'A']
+```
+
+## heapq [⬆️](#)
+<a name="heapq"></a>
+
+Kopiec (kolejka priorytetowa) na zwykłej liście: `kopiec[0]` to zawsze __najmniejszy__ element, a dodanie i zdjęcie elementu kosztuje O(log n). Python ma tylko kopiec minimalny - kopiec maksymalny uzyskamy, wstawiając liczby ze znakiem minus.
+
+- __heappush(kopiec, x)__ -> Dodaje element.
+- __heappop(kopiec)__ -> Usuwa i zwraca najmniejszy element.
+- __heapify(lista)__ -> Zamienia listę w kopiec w miejscu (O(n)).
+- __nlargest(k, iterable, key=None)__ / __nsmallest(k, iterable, key=None)__ -> Lista `k` największych / najmniejszych elementów.
+- Elementami mogą być krotki `(priorytet, dane)` - porównywane są najpierw po priorytecie.
+
+```python
+import heapq
+
+kopiec = []
+for x in [5, 1, 8, 3, 2]:
+    heapq.heappush(kopiec, x)
+print(kopiec[0], [heapq.heappop(kopiec) for _ in range(3)])
+#Output: 1 [1, 2, 3]
+a = [9, 4, 7, 1]
+heapq.heapify(a)
+print(heapq.heappop(a), a[0])
+#Output: 1 4
+print(heapq.nlargest(3, [5, 1, 8, 3, 9, 2]), heapq.nsmallest(2, [5, 1, 8, 3, 9, 2]))
+#Output: [9, 8, 5] [1, 2]
+print(heapq.nlargest(2, ["kot", "hipopotam", "pies"], key=len))
+#Output: ['hipopotam', 'pies']
+maks = []                                      # kopiec maksymalny - liczby z minusem
+for x in [5, 1, 8]:
+    heapq.heappush(maks, -x)
+print(-heapq.heappop(maks))
+#Output: 8
+zadania = [(3, "pranie"), (1, "matura"), (2, "zakupy")]
+heapq.heapify(zadania)
+while zadania:
+    priorytet, nazwa = heapq.heappop(zadania)
+    print(priorytet, nazwa)
+#Output: 1 matura
+#Output: 2 zakupy
+#Output: 3 pranie
+```
+
+## datetime [⬆️](#)
+<a name="datetime"></a>
+
+Daty w zadaniach maturalnych: ile dni minęło między pomiarami, jaki to dzień tygodnia, dane z kolejnych dni.
+
+- __date(rok, miesiąc, dzień)__ -> Data.
+- __date.fromisoformat("2024-05-08")__ -> Data z napisu w formacie `RRRR-MM-DD` (taki format ma wiele plików CKE).
+- __datetime.strptime(napis, format)__ -> Data i czas z napisu w dowolnym formacie, np. `"%d.%m.%Y"` (`%d` dzień, `%m` miesiąc, `%Y` rok, `%H:%M` godzina); `.date()` zostawia samą datę.
+- __d2 - d1__ -> Różnica dat (`timedelta`); liczba dni to `(d2 - d1).days`.
+- __d + timedelta(days=n)__ -> Data przesunięta o `n` dni (są też `weeks=`, `hours=`, `minutes=`).
+- __.weekday()__ -> Dzień tygodnia: 0 = poniedziałek, ..., 6 = niedziela. __.isoweekday()__ -> 1 = poniedziałek, ..., 7 = niedziela.
+- __.year__, __.month__, __.day__ -> Części daty.
+- __.strftime(format)__ -> Data jako napis, np. `d.strftime("%d.%m.%Y")`. Nazwy dni i miesięcy (`%A`, `%B`) zależą od ustawień systemu, więc polskie nazwy lepiej trzymać we własnej liście.
+- Daty można porównywać (`<`, `==`), sortować i używać jako kluczy słownika. Napisy `RRRR-MM-DD` sortują się poprawnie nawet jako zwykły tekst.
+
+```python
+from datetime import date, datetime, timedelta
+
+d1 = date(2024, 2, 27)
+d2 = date.fromisoformat("2024-03-02")
+print(d2 - d1, (d2 - d1).days)                 # 2024 jest rokiem przestępnym
+#Output: 4 days, 0:00:00 4
+print(d1 + timedelta(days=3), d1 - timedelta(weeks=1))
+#Output: 2024-03-01 2024-02-20
+dni = ["poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"]
+print(d2.weekday(), d2.isoweekday(), dni[d2.weekday()])
+#Output: 5 6 sobota
+print(d2.year, d2.month, d2.day, d2.strftime("%d.%m.%Y"))
+#Output: 2024 3 2 02.03.2024
+d3 = datetime.strptime("08.05.2023", "%d.%m.%Y").date()
+print(d3, d3 > d2, min(d1, d2, d3))
+#Output: 2023-05-08 False 2023-05-08
+maj = [date(2023, 5, 1) + timedelta(days=i) for i in range(31)]
+print(sum(1 for d in maj if d.weekday() == 6))  # ile niedziel było w maju 2023
+#Output: 4
+t1 = datetime(2024, 5, 8, 9, 0)
+t2 = datetime(2024, 5, 8, 12, 30)
+print(t2 - t1, (t2 - t1).total_seconds() / 60)  # różnica w minutach
+#Output: 3:30:00 210.0
+```
+
+```python
+# odstępy (w dniach) między kolejnymi datami z pliku
+from datetime import date
+
+with open("pomiary.txt", "w") as f:
+    f.write("2023-12-30\n2024-01-02\n2024-01-03\n2024-03-01\n")
+
+with open("pomiary.txt") as f:
+    daty = [date.fromisoformat(linia.strip()) for linia in f]
+print([(b - a).days for a, b in zip(daty, daty[1:])])
+#Output: [3, 1, 58]
+```
+
+### calendar
+<a name="calendar"></a>
+
+- __calendar.isleap(rok)__ -> `True`, jeżeli rok jest przestępny (podzielny przez 4 i niepodzielny przez 100 albo podzielny przez 400).
+- __calendar.monthrange(rok, miesiąc)__ -> Krotka (dzień tygodnia 1. dnia miesiąca, liczba dni w miesiącu); dni tygodnia numerowane jak w `weekday()` (od Pythona 3.12 jako stałe `calendar.MONDAY`... - `int()` zamienia je na liczbę).
+- __calendar.leapdays(r1, r2)__ -> Liczba lat przestępnych w przedziale `[r1, r2)`.
+
+```python
+import calendar
+
+print(calendar.isleap(2024), calendar.isleap(1900), calendar.isleap(2000))
+#Output: True False True
+pierwszy, ile_dni = calendar.monthrange(2024, 2)   # luty 2024 zaczął się w czwartek (3)
+print(int(pierwszy), ile_dni, calendar.monthrange(2023, 2)[1])
+#Output: 3 29 28
+print(calendar.leapdays(2000, 2025))
+#Output: 7
+rok = 2100
+print(rok % 4 == 0 and (rok % 100 != 0 or rok % 400 == 0))  # to samo bez modułu
+#Output: False
+```
+
+## sys [⬆️](#)
+<a name="sys"></a>
+
+- __sys.setrecursionlimit(n)__ -> Podnosi limit głębokości rekurencji (domyślnie ok. 1000 wywołań, potem `RecursionError`). Przy bardzo głębokiej rekurencji program może mimo to przepełnić stos - wtedy lepiej przepisać algorytm na pętlę.
+- __sys.getrecursionlimit()__ -> Zwraca aktualny limit.
+
+```python
+import sys
+
+sys.setrecursionlimit(10000)
+print(sys.getrecursionlimit())
+#Output: 10000
+
+def dlugosc(lista, i=0):        # rekurencyjne liczenie długości listy
+    if i == len(lista):
+        return 0
+    return 1 + dlugosc(lista, i + 1)
+
+print(dlugosc([0] * 5000))      # przy domyślnym limicie: RecursionError
+#Output: 5000
 ```
 
 ## enum [⬆️](#)

@@ -41,16 +41,6 @@ Materiały spoza repozytorium, które pomagają w nauce do matury z informatyki.
 * [Pełno kursów YT](https://www.youtube.com/watch?v=PU8ACyYxJBk&list=PLikGmVz62aczV-1qWC2oQtL_Tod8bkXGv)
 * [Jeszcze więcej kursów](https://www.youtube.com/watch?v=tuk99Sgc6Fw&list=PLoyECfvEFOjbdwpIOtm_8PFzB_CPAD2_H)
 
-## ACCESS 
-
-* [Informacje](https://support.microsoft.com/pl-pl/access)
-* [w3schools - SQL](https://www.w3schools.com/sql/) - Zagadnienia w przystępnej formie
-* [Niepełny kurs "do matury"](https://www.youtube.com/playlist?list=PLKmH7u1gA9hpm3ZqWhsn2XvGAeX3b9SM0)
-* [Kurs "do matury"](https://www.youtube.com/playlist?list=PLiG7bZwihoShBM1xR0K_st-QyxJyq5iWl)
-* [informatykaplus.edu.pl](http://www.informatykaplus.edu.pl/infp.php/bazy_danych_wyklady.html) - wykłady z jakiegoś projektu
-* [Kursy YT](https://www.youtube.com/watch?v=vrtNPp2r6qQ&list=PLikGmVz62aczN2wx5NFGtJxRgux0lXuCM)
-* [Pasja informatyki](https://www.youtube.com/watch?v=99JAI24Zd24&list=PLOYHgt8dIdoymv-Wzvs8M-OsKFD31VTVZ) - kurs mysql
-
 ## PYTHON
 
 * [Dokumentacja pythona](https://docs.python.org/3/)

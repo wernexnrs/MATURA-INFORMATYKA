@@ -46,6 +46,7 @@ Dla pustego napisu wszystkie poniższe metody zwracają `False`. Żadna z nich n
   * __.replace(old, new, count=-1)__ -> zamienia wystąpienia `old` na `new`; `count` ogranicza liczbę zamian (domyślnie wszystkie)
   * __.strip(chars=None)__ -> usuwa z początku i końca białe znaki lub znaki podane w argumencie (`chars` to zbiór znaków, a nie podciąg)
   * __.lstrip(chars=None)__ / __.rstrip(chars=None)__ -> jak `.strip()`, ale tylko z lewej / z prawej strony
+  * __.translate(str.maketrans(skąd, dokąd))__ -> zamienia znaki według tabeli: i-ty znak `skąd` na i-ty znak `dokąd` (np. szyfry podstawieniowe). Trzeci argument `maketrans` to znaki do usunięcia
 
 <h5> Wyrównywanie </h5>
 
@@ -53,6 +54,8 @@ Dla pustego napisu wszystkie poniższe metody zwracają `False`. Żadna z nich n
   * __.ljust(width, fillchar=" ")__ -> wyrównuje do lewej (dopełnia z prawej)
   * __.rjust(width, fillchar=" ")__ -> wyrównuje do prawej (dopełnia z lewej), np. `"101".rjust(8, "0") == "00000101"`
   * __.zfill(width)__ -> dopełnia zerami z lewej do szerokości `width` (uwzględnia znak minus)
+
+Wycinki i odwracanie napisów (`s[2:5]`, `s[::-1]`) oraz formatowanie f-stringami (`f"{x:.2f}"`, `f"{n:08b}"`) opisane są w dziale [Funkcje wbudowane](funkcje_wbudowane.md).
 
 ```python
 # metody napisów
@@ -73,6 +76,8 @@ print("-".join(["2024", "05", "08"]), " ".join(map(str, [1, 2, 3])))
 #Output: 2024-05-08 1 2 3
 print("banan".replace("a", "o"), "banan".replace("a", "o", 1))
 #Output: bonon bonan
+print("abc cab".translate(str.maketrans("abc", "xyz")), "a-b-c".translate(str.maketrans("", "", "-")))
+#Output: xyz zxy abc
 print("xxhixx".strip("x"), "[" + "ok".center(6, "*") + "]")
 #Output: hi [**ok**]
 print("7".zfill(3), "101".rjust(8, "0"), "ab".ljust(4, ".") + "|")
@@ -131,6 +136,17 @@ b = a.copy()
 b[0][0] = 1
 print(a)
 #Output: [[1, 0], [0, 0]]
+# poprawnie: kopia każdego wiersza (albo copy.deepcopy)
+a = [[0, 0], [0, 0]]
+c = [wiersz[:] for wiersz in a]
+c[0][0] = 1
+print(a, c)
+#Output: [[0, 0], [0, 0]] [[1, 0], [0, 0]]
+# sortowanie listy krotek: malejąco po punktach, przy remisie rosnąco po imieniu
+wyniki = [("Ola", 87), ("Jan", 92), ("Ewa", 87)]
+wyniki.sort(key=lambda w: (-w[1], w[0]))
+print(wyniki)
+#Output: [('Jan', 92), ('Ewa', 87), ('Ola', 87)]
 ```
 
 ### SŁOWNIKI [⬆️](#)
@@ -227,4 +243,42 @@ print(sorted(x), len(set("abracadabra")))
 t = (1, 2, 2, 3)
 print(t.count(2), t.index(3))
 #Output: 2 3
+```
+
+### PLIKI [⬆️](#)
+Obiekt pliku zwraca funkcja `open()` (opisana w dziale [Funkcje wbudowane](funkcje_wbudowane.md)). Najwygodniej używać jej z `with` - plik zamknie się sam. Plik czytany jest od miejsca, w którym skończył poprzedni odczyt: po `.read()` kolejny odczyt zwraca pusty napis.
+
+  * __.read()__ -> zwraca całą (pozostałą) zawartość pliku jako jeden napis
+  * __.readline()__ -> zwraca kolejną linię razem ze znakiem `"\n"`; na końcu pliku zwraca pusty napis `""`. Przydaje się do pominięcia wiersza nagłówkowego
+  * __.readlines()__ -> zwraca listę wszystkich (pozostałych) linii, każda ze znakiem `"\n"` na końcu
+  * __for linia in plik:__ -> czytanie linia po linii - najprostsze i oszczędza pamięć
+  * __.write(napis)__ -> zapisuje napis (tylko typu `str`, liczby trzeba zamienić przez `str()` lub f-string) i __nie__ dodaje `"\n"`; zwraca liczbę zapisanych znaków
+  * __.writelines(lista_napisów)__ -> zapisuje kolejne napisy z listy, także bez dodawania `"\n"`
+  * __.close()__ -> zamyka plik (przy `with` niepotrzebne)
+  * Tryby `open()`: `"r"` - odczyt (domyślny), `"w"` - zapis od nowa (czyści plik), `"a"` - dopisywanie na końcu
+
+```python
+# metody plików
+with open("liczby.txt", "w") as f:
+    f.write("10\n20\n")
+    f.writelines(["30\n", "40\n"])
+
+with open("liczby.txt") as f:
+    print(repr(f.readline()), repr(f.readline()))
+    print(f.readlines())
+#Output: '10\n' '20\n'
+#Output: ['30\n', '40\n']
+
+with open("liczby.txt") as f:
+    tekst = f.read()
+    print(repr(tekst), repr(f.read()))
+#Output: '10\n20\n30\n40\n' ''
+print(tekst.split(), tekst.splitlines())
+#Output: ['10', '20', '30', '40'] ['10', '20', '30', '40']
+
+with open("liczby.txt", "a") as f:      # dopisywanie na końcu pliku
+    print(50, file=f)
+with open("liczby.txt") as f:
+    print([int(linia) for linia in f])  # int() ignoruje "\n" na końcu linii
+#Output: [10, 20, 30, 40, 50]
 ```

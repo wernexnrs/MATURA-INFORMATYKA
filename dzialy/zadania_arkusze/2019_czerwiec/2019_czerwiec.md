@@ -144,7 +144,7 @@ print(ile)
 
 ## 5.1
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -183,7 +183,7 @@ print("razem dolano:", sum(ile for d, ile in dolewki))
 
 ## 5.2
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -218,7 +218,7 @@ for temperatura, opady in dane:
 
 ## 5.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -258,7 +258,7 @@ for miesiac, litry in dolano.items():
 
 ## 5.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 chlodne = cieple_bez_deszczu = cieple_z_deszczem = 0
@@ -280,184 +280,3 @@ print(chlodne, cieple_bez_deszczu, cieple_z_deszczem)
 ```
 
 **Odpowiedź:** 88 dni (temperatura ≤ 15°C), 73 dni (temperatura > 15°C i opady ≤ 0,6), 22 dni (temperatura > 15°C i opady > 0,6)
-
-## 6 [[ACCESS] POBIERZ](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_czerwiec/6.accdb?raw=true)
-
-Uwaga: plik `oferty.txt` od CKE jest zapisany w kodowaniu UTF-16, dlatego otwieramy go z `encoding="utf-16"`.
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa, kodowanie="utf-8"):
-    with open(nazwa, encoding=kodowanie) as file:
-        file.readline()  # nagłówek
-        return [[pole.strip() for pole in line.split("\t")] for line in file if line.strip()]
-
-
-agenci = wczytaj("agenci.txt")
-oferty = wczytaj("oferty.txt", "utf-16")
-zainteresowanie = wczytaj("zainteresowanie.txt")
-
-ile_klientow = {}
-for id_oferty, id_klienta in zainteresowanie:
-    ile_klientow[id_oferty] = ile_klientow.get(id_oferty, 0) + 1
-
-najlepsza = max(ile_klientow, key=ile_klientow.get)
-
-for oferta in oferty:
-    if oferta[0] == najlepsza:
-        id_agenta = oferta[8]
-
-for agent in agenci:
-    if agent[0] == id_agenta:
-        print(najlepsza, agent[1], agent[2])
-```
-
-**Odpowiedź:** AB553DN, Karol Zakowicz
-
-#### Kwerenda o nazwie 6_1(wynik)
-```sql
-SELECT TOP 1 Agenci.Imie, Agenci.Nazwisko, Zainteresowanie.Id_oferty
-FROM Agenci INNER JOIN (Oferty INNER JOIN Zainteresowanie ON Oferty.Id_oferty = Zainteresowanie.Id_oferty) ON Agenci.Id_agenta = Oferty.Id_agenta
-GROUP BY Agenci.Imie, Agenci.Nazwisko, Zainteresowanie.Id_oferty, Oferty.Id_agenta
-ORDER BY Count(Zainteresowanie.Id_klienta) DESC;
-```
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-from decimal import Decimal, ROUND_HALF_UP
-
-
-def wczytaj(nazwa, kodowanie="utf-8"):
-    with open(nazwa, encoding=kodowanie) as file:
-        file.readline()
-        return [[pole.strip() for pole in line.split("\t")] for line in file if line.strip()]
-
-
-oferty = wczytaj("oferty.txt", "utf-16")
-
-suma = {}
-ile = {}
-for oferta in oferty:
-    woj, cena = oferta[1], int(oferta[6])
-    suma[woj] = suma.get(woj, 0) + cena
-    ile[woj] = ile.get(woj, 0) + 1
-
-for woj in sorted(suma):
-    # Decimal - zaokrąglenie "szkolne" (0,005 w górę), tak jak w Accessie/Excelu
-    srednia = Decimal(suma[woj]) / ile[woj]
-    print(woj, srednia.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
-```
-
-**Odpowiedź:** dolnoslaskie 345000,00; kujawsko-pomorskie 299000,00; lodzkie 304100,00; lubelskie 260879,33; lubuskie 227283,33; malopolskie 650000,00; mazowieckie 267082,83; opolskie 400000,00; podkarpackie 301312,50; podlaskie 271206,95; pomorskie 414150,00; swietokrzyskie 319207,63; warminsko-mazurskie 132450,00; wielkopolskie 298600,00; zachodniopomorskie 269025,20
-
-#### Kwerenda o nazwie 6_2(wynik)
-```sql
-SELECT Oferty.Woj, Avg(Oferty.Cena) AS ŚredniaOfCena
-FROM Oferty
-GROUP BY Oferty.Woj
-ORDER BY Oferty.Woj;
-```
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa, kodowanie="utf-8"):
-    with open(nazwa, encoding=kodowanie) as file:
-        file.readline()
-        return [[pole.strip() for pole in line.split("\t")] for line in file if line.strip()]
-
-
-agenci = wczytaj("agenci.txt")
-oferty = wczytaj("oferty.txt", "utf-16")
-
-agent = {}
-for id_agenta, imie, nazwisko in agenci:
-    agent[id_agenta] = imie + " " + nazwisko
-
-for id_oferty, woj, status, pow, pokoje, lazienki, cena, data, id_agenta in oferty:
-    # przedostatni znak M - mieszkanie, ostatni T - z basenem
-    if id_oferty.endswith("MT") and status == "A":
-        print(agent[id_agenta], id_oferty, woj, pow, cena)
-```
-
-**Odpowiedź:** Piotr Kopacz AB543MT podlaskie 85 325000; Adam Nowak AB557MT lubelskie 83 349000; Karol Zakowicz AB644MT mazowieckie 76 174500; Milena Karwik AB691MT lubuskie 39 170000; Adam Nowak AB695MT podkarpackie 162 420800; Rozalia Siedlecka AB696MT wielkopolskie 42 160000; Karol Szwarc AB699MT lodzkie 68 190500; Krzysztof Nowak AB700MT mazowieckie 85 265000; Adam Nowak AB702MT mazowieckie 49 186000 (klucz CKE pomija ofertę AB700MT, choć w danych spełnia ona warunki zadania)
-
-#### Kwerenda o nazwie 6_3(wynik)
-```sql
-SELECT Oferty.Id_oferty, Agenci.Imie, Agenci.Nazwisko, Oferty.Woj, Oferty.Pow, Oferty.Cena
-FROM Agenci INNER JOIN Oferty ON Agenci.Id_agenta = Oferty.Id_agenta
-WHERE (((Oferty.Id_oferty) Like "*MT") AND ((Oferty.Status) Like "A"));
-```
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa, kodowanie="utf-8"):
-    with open(nazwa, encoding=kodowanie) as file:
-        file.readline()
-        return [[pole.strip() for pole in line.split("\t")] for line in file if line.strip()]
-
-
-agenci = wczytaj("agenci.txt")
-oferty = wczytaj("oferty.txt", "utf-16")
-
-sprzedali_w_2017 = set()
-for id_oferty, woj, status, pow, pokoje, lazienki, cena, data, id_agenta in oferty:
-    if data.startswith("2017") and status == "S":
-        sprzedali_w_2017.add(id_agenta)
-
-for id_agenta, imie, nazwisko in agenci:
-    if id_agenta not in sprzedali_w_2017:
-        print(imie, nazwisko)
-```
-
-**Odpowiedź:** Jerzy Andrzejewski, Krzysztof Nowak, Milena Karwik
-
-#### Kwerenda o nazwie 6_4(wynik)
-```sql
-SELECT Agenci.imie, Agenci.nazwisko
-FROM Agenci
-WHERE (((Agenci.Id_agenta) Not In (SELECT id_agenta FROM oferty WHERE status="S" AND data_zglosz LIKE "2017*")));
-```
-
-## 6.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa, kodowanie="utf-8"):
-    with open(nazwa, encoding=kodowanie) as file:
-        file.readline()
-        return [[pole.strip() for pole in line.split("\t")] for line in file if line.strip()]
-
-
-agenci = wczytaj("agenci.txt")
-oferty = wczytaj("oferty.txt", "utf-16")
-
-agent = {}
-for id_agenta, imie, nazwisko in agenci:
-    agent[id_agenta] = imie + " " + nazwisko
-
-for id_oferty, woj, status, pow, pokoje, lazienki, cena, data, id_agenta in oferty:
-    if status == "A" and int(pow) > 180 and int(lazienki) >= 2:
-        print(id_oferty, pow, pokoje, lazienki, cena, agent[id_agenta])
-```
-
-**Odpowiedź:** 11 ofert: AB666DN 220 6 3 450000 Krzysztof Nowak; AB670DN 208 5 3 358400 Karol Zakowicz; AB672DT 212 6 2 575000 Sebastian Babij; AB680DT 220 6 2 520000 Adam Nowak; AB682DN 203 5 3 485000 Adam Nowak; … ; AB697DN 195 6 2 460000 Karol Szwarc
-
-#### Kwerenda o nazwie 6_5(wynik)
-```sql
-SELECT Oferty.Id_oferty, Oferty.Pow, Oferty.L_pokoi, Oferty.L_laz, Oferty.Cena, Agenci.Imie, Agenci.Nazwisko, Oferty.Status
-FROM Agenci INNER JOIN Oferty ON Agenci.Id_agenta = Oferty.Id_agenta
-WHERE (((Oferty.Pow)>180) AND ((Oferty.L_laz)>1) AND ((Oferty.Status) Like "A"));
-```

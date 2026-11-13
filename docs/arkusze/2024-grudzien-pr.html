@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matura próbna 2024 — grudzień (formuła 2023) | Matura z informatyki</title>
+<meta name="description" content="Matura próbna 2024 — grudzień (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 2.1 i 2.2, 3.1, 3.2 i 3.3, 4.1, 4.2 i 4.3, 6).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Matura próbna 2024 — grudzień (formuła 2023)">
+<meta property="og:description" content="Matura próbna 2024 — grudzień (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 2.1 i 2.2, 3.1, 3.2 i 3.3, 4.1, 4.2 i 4.3, 6).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Matura próbna 2024 — grudzień (formuła 2023)", "description": "Matura próbna 2024 — grudzień (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 2.1 i 2.2, 3.1, 3.2 i 3.3, 4.1, 4.2 i 4.3, 6).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#3-1-3-2-i-3-3">3.1, 3.2 i 3.3</a></li><li><a href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></li><li><a href="#6">6</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura próbna 2024 — grudzień (formuła 2023)</span></nav>
+<h1 class="page-title">Matura próbna 2024 — grudzień (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 1.2 - wypisuje kolejne elementy J(n) (tylko operacje na liczbach całkowitych)
+def J(n):
+    pozycja = 1
+    while n &gt; 0:
+        if n % 2 == 1:
+            print(pozycja, end=&quot; &quot;)
+        n = n // 2
+        pozycja = pozycja + 1
+    print()
+
+
+# 1.1
+for n in [19, 6, 42, 75]:
+    print(n, bin(n)[2:], end=&quot;: &quot;)
+    J(n)
+# brakująca liczba n dla J(n) = (1, 2, 4, 7): 2^0 + 2^1 + 2^3 + 2^6
+print(1 + 2 + 8 + 64)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: J(6) = (2, 3); 42 = 101010₂, J(42) = (2, 4, 6); J(n) = (1, 2, 4, 7) dla n = 75 = 1001011₂. 1.2: funkcja <code>J</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+
+
+def F(x, p):
+    global wywolania
+    wywolania += 1
+    if x == 0:
+        return 0
+    c = x % p
+    if c % 2 == 1:
+        return F(x // p, p) + c
+    return F(x // p, p) - c
+
+
+# 2.1
+for x, p in [(125, 2), (130, 3), (220, 4)]:
+    wywolania = 0
+    wynik = F(x, p)
+    print(x, p, wynik, wywolania)
+
+# 2.2 - największe x &lt; 100, dla którego F(x, p) = 0
+for p in [3, 4]:
+    x = 99
+    while F(x, p) != 0:
+        x -= 1
+    print(p, x)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: F(130, 3) = 2 (6 wywołań), F(220, 4) = 7 (5 wywołań). 2.2: p = 3 → x = 96, p = 4 → x = 97.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-i-3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-i-3-3">3.1, 3.2 i 3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;liczby.txt&quot;) as file:
+    liczby = [int(linia) for linia in file if linia.strip()]
+
+# 3.1
+kwadraty = []
+for x in liczby:
+    k = 1
+    while k * k &lt; x:
+        k += 1
+    if k * k == x:
+        kwadraty.append(x)
+print(&quot;3.1&quot;, len(kwadraty), kwadraty[0])
+
+
+# 3.2
+def rozne_dzielniki_pierwsze(n):
+    ile = 0
+    d = 2
+    while d * d &lt;= n:
+        if n % d == 0:
+            ile += 1
+            while n % d == 0:
+                n //= d
+        d += 1
+    if n &gt; 1:
+        ile += 1
+    return ile
+
+
+print(&quot;3.2&quot;)
+for x in liczby:
+    if rozne_dzielniki_pierwsze(x) &gt;= 5:
+        print(x)
+
+# 3.3
+mniejsze = 0
+wieksze = 0
+rowne = []
+for x in liczby:
+    cyfry = sorted(str(x))
+    najmniejsza = int(&quot;&quot;.join(cyfry))
+    najwieksza = int(&quot;&quot;.join(reversed(cyfry)))
+    roznica = najwieksza - najmniejsza
+    if roznica &lt; x:
+        mniejsze += 1
+    elif roznica &gt; x:
+        wieksze += 1
+    else:
+        rowne.append(x)
+print(&quot;3.3&quot;, mniejsze, wieksze, rowne)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 20 kwadratów, pierwszy to 4489. 3.2: 2730, 8190, 2310, 4620, 7770, 8610, 4830, 4290, 6930, 6630. 3.3: mniejszych 947, większych 1052, równa: 6174.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">prostokaty = []
+with open(&quot;prostokaty.txt&quot;) as file:
+    for linia in file:
+        if linia.strip():
+            h, s = map(int, linia.split())
+            prostokaty.append((h, s))
+
+# 4.1
+pola = [h * s for h, s in prostokaty]
+print(&quot;4.1&quot;, min(pola), max(pola))
+
+# 4.2
+najdluzszy = 1
+koniec = 0
+dlugosc = 1
+for i in range(1, len(prostokaty)):
+    h, s = prostokaty[i]
+    h_pop, s_pop = prostokaty[i - 1]
+    if s &lt;= s_pop and h &lt;= h_pop:
+        dlugosc += 1
+    else:
+        dlugosc = 1
+    if dlugosc &gt; najdluzszy:
+        najdluzszy = dlugosc
+        koniec = i
+print(&quot;4.2&quot;, najdluzszy, prostokaty[koniec][0], prostokaty[koniec][1])
+
+# 4.3 - dla każdej wysokości bierzemy k najszerszych prostokątów
+szerokosci = {}
+for h, s in prostokaty:
+    if h not in szerokosci:
+        szerokosci[h] = []
+    szerokosci[h].append(s)
+for k in [2, 3, 5]:
+    najlepsza = 0
+    for h in szerokosci:
+        lista = sorted(szerokosci[h], reverse=True)
+        if len(lista) &gt;= k:
+            najlepsza = max(najlepsza, sum(lista[:k]))
+    print(&quot;4.3&quot;, k, najlepsza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: najmniejsze pole 10425, największe 1545605418. 4.2: <code>10 1001 627</code>. 4.3: 2 prostokąty: 79506, 3 prostokąty: 118786, 5 prostokątów: 180895.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6">6</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_dziesietny(napis, podstawa):
+    liczba = 0
+    for c in napis:
+        liczba = liczba * podstawa + int(c)
+    return liczba
+
+
+def z_dziesietnego(liczba, podstawa):
+    wynik = &quot;&quot;
+    while liczba &gt; 0:
+        wynik = str(liczba % podstawa) + wynik
+        liczba = liczba // podstawa
+    return wynik
+
+
+a = na_dziesietny(&quot;2024&quot;, 5)
+b = na_dziesietny(&quot;1044&quot;, 5)
+print(z_dziesietnego(a + b, 5), z_dziesietnego(a - b, 5))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2024₅ + 1044₅ = 3123₅, 2024₅ − 1044₅ = 430₅.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dodaj coś od siebie</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

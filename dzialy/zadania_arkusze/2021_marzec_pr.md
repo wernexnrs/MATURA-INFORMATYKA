@@ -137,7 +137,7 @@ with open("wynik4_3.txt", "w") as wynik:
 
 ## 5.1
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 polaczenia = {}
@@ -156,7 +156,7 @@ for numer, ile in sorted(polaczenia.items(), key=lambda x: x[1], reverse=True)[:
 
 ## 5.2
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 stacjonarne = {}
@@ -183,7 +183,7 @@ for data in stacjonarne:  # dni są w pliku w kolejności chronologicznej
 
 ## 5.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -212,7 +212,7 @@ print(ile, math.ceil(czas / 60))
 
 ## 5.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -258,166 +258,3 @@ print("suma", ABONAMENT + stacjonarne_zl + komorkowe_zl + zagraniczne_zl)
 ```
 
 **Odpowiedź:** abonament 50 zł, stacjonarne 610 zł, komórkowe 240 zł, zagraniczne 967 zł, razem 1867 zł
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa, encoding="utf-8") as file:
-        file.readline()  # nagłówek
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-zawodnicy = {z[0]: z for z in wczytaj("zawodnicy.txt")}
-startujacy = {s[0]: s for s in wczytaj("startujacy.txt")}
-czasy = wczytaj("czasy.txt")
-
-
-def klucz(czas):
-    return [int(x) for x in czas.split(":")]
-
-
-id_startu, czas = min(czasy, key=lambda c: klucz(c[1]))
-zawodnik = zawodnicy[startujacy[id_startu][2]]
-print(zawodnik[1], zawodnik[2], czas)
-```
-
-**Odpowiedź:** Chris Froome – 83:56:40
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa, encoding="utf-8") as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-zawodnicy = {z[0]: z for z in wczytaj("zawodnicy.txt")}
-startujacy = wczytaj("startujacy.txt")
-
-starty = {}
-for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
-    if kraj == "Polska":
-        starty[id_zawodnika] = starty.get(id_zawodnika, 0) + 1
-
-najwiecej = max(starty, key=starty.get)
-print(zawodnicy[najwiecej][1], zawodnicy[najwiecej][2], starty[najwiecej])
-```
-
-**Odpowiedź:** Maciej Bodnar – 5 wyścigów
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa, encoding="utf-8") as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-zawodnicy = {z[0]: z for z in wczytaj("zawodnicy.txt")}
-startujacy = wczytaj("startujacy.txt")
-
-roczniki = {}  # rok wyścigu -> lista (rok urodzenia, id_zawodnika)
-for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
-    rok_urodzenia = int(zawodnicy[id_zawodnika][3][:4])
-    roczniki.setdefault(rok, []).append((rok_urodzenia, id_zawodnika))
-
-for rok in sorted(roczniki):
-    # najmłodsi w wieku rocznikowym = urodzeni w najpóźniejszym roku
-    najmlodszy_rocznik = max(r for r, z in roczniki[rok])
-    for rok_urodzenia, id_zawodnika in roczniki[rok]:
-        if rok_urodzenia == najmlodszy_rocznik:
-            print(rok, zawodnicy[id_zawodnika][1], zawodnicy[id_zawodnika][2])
-```
-
-**Odpowiedź:** 2008: Roman Kreuziger, Gerald Ciolek, John-Lee Augustyn; 2009: Rigoberto Uran; 2010: Fabio Felline; 2011: Anthony Delaplace; 2012: Peter Sagan, Thibaut Pinot; 2013: Danny van Poppel; 2014: Danny van Poppel; 2015: Merhawi Kudus; 2016: Alexis Gougeard, Sondre Holst Enger, Luka Pibernik, Timo Roosen, Dylan Groenewegen; 2017: Elie Gesbert
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa, encoding="utf-8") as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-startujacy = wczytaj("startujacy.txt")
-ukonczyli = set(c[0] for c in wczytaj("czasy.txt"))
-
-nie_ukonczyli = {}
-for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
-    if id_startu not in ukonczyli:
-        nie_ukonczyli[rok] = nie_ukonczyli.get(rok, 0) + 1
-
-rok = max(nie_ukonczyli, key=nie_ukonczyli.get)
-print(rok, nie_ukonczyli[rok])
-```
-
-**Odpowiedź:** 2012 – 46 zawodników
-
-## 6.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa, encoding="utf-8") as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-nazwa_grupy = {g[0]: g[1] for g in wczytaj("grupy.txt")}
-startujacy = wczytaj("startujacy.txt")
-
-kraje = {}  # (rok, grupa) -> zbiór krajów zawodników
-for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
-    kraje.setdefault((rok, kod_grupy), set()).add(kraj)
-
-jednolite = {}  # rok -> lista grup, w których wszyscy są z jednego kraju
-for (rok, kod_grupy), zbior in kraje.items():
-    if len(zbior) == 1:
-        jednolite.setdefault(rok, []).append(nazwa_grupy[kod_grupy])
-
-for rok in sorted(jednolite):
-    print(rok, len(jednolite[rok]))
-
-najwiecej = max(jednolite, key=lambda r: len(jednolite[r]))
-print(najwiecej, jednolite[najwiecej])
-```
-
-**Odpowiedź:** 2008 1, 2009 1, 2010 1, 2011 4, 2012 2, 2013 2, 2014 2, 2015 1, 2017 1; najwięcej w 2011: Direct Energie, Euskaltel-Euskadi, Team Katusha, Sojasun
-
-## 6.6
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa, encoding="utf-8") as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-zawodnicy = {z[0]: z for z in wczytaj("zawodnicy.txt")}
-startujacy = wczytaj("startujacy.txt")
-
-kraje = {}
-for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
-    kraje.setdefault(id_zawodnika, set()).add(kraj)
-
-for id_zawodnika, zbior in kraje.items():
-    if len(zbior) > 1:
-        print(zawodnicy[id_zawodnika][1], zawodnicy[id_zawodnika][2], sorted(zbior))
-```
-
-**Odpowiedź:** Chris Froome – Kenia, Wielka Brytania; Heinrich Haussler – Australia, Niemcy

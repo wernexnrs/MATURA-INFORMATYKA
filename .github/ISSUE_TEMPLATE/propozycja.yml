@@ -1,0 +1,25 @@
+name: ✨ Propozycja
+description: Nowy algorytm, arkusz, ściąga albo usprawnienie strony.
+title: "[Propozycja] "
+labels: ["propozycja"]
+body:
+  - type: dropdown
+    id: rodzaj
+    attributes:
+      label: Czego dotyczy?
+      options: [Nowy algorytm, Rozwiązania arkusza, Ściąga z Pythona, Wersja C++ / Java, Strona, Inne]
+    validations:
+      required: true
+  - type: textarea
+    id: opis
+    attributes:
+      label: Opis
+      description: Co chcesz dodać i dlaczego przyda się na maturze? Dla arkusza podaj rok, termin i link.
+    validations:
+      required: true
+  - type: checkboxes
+    id: pomoc
+    attributes:
+      label: Pomoc
+      options:
+        - label: Chcę to zrobić sam (pull request) — przeczytałem CONTRIBUTING.md

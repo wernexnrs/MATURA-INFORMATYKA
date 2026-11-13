@@ -1,0 +1,31 @@
+name: 🐛 Błąd w treści
+description: Zły wynik, błąd w kodzie, literówka albo problem ze stroną.
+title: "[Błąd] "
+labels: ["błąd"]
+body:
+  - type: input
+    id: gdzie
+    attributes:
+      label: Gdzie jest błąd?
+      description: Link do strony lub pliku, np. https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2019-maj.html#4-2
+    validations:
+      required: true
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co jest nie tak?
+      description: Co widzisz, a co powinno być? Jeśli to zły wynik — podaj poprawny (np. z klucza CKE).
+    validations:
+      required: true
+  - type: dropdown
+    id: jezyk
+    attributes:
+      label: Którego kodu dotyczy?
+      multiple: true
+      options: [Python, Pseudokod, C++, Java, Treść / opis, Strona (wygląd)]
+  - type: checkboxes
+    id: pomoc
+    attributes:
+      label: Pomoc
+      options:
+        - label: Mogę sam przygotować poprawkę (pull request)

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matura próbna 2022 — grudzień (formuła 2023) | Matura z informatyki</title>
+<meta name="description" content="Matura próbna 2022 — grudzień (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1, 2.2, 2.3 i 2.4, 3.1, 3.2, 3.3 i 3.4).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-grudzien-pr.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Matura próbna 2022 — grudzień (formuła 2023)">
+<meta property="og:description" content="Matura próbna 2022 — grudzień (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1, 2.2, 2.3 i 2.4, 3.1, 3.2, 3.3 i 3.4).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-grudzien-pr.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Matura próbna 2022 — grudzień (formuła 2023)", "description": "Matura próbna 2022 — grudzień (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1, 2.2, 2.3 i 2.4, 3.1, 3.2, 3.3 i 3.4).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-grudzien-pr.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></li><li><a href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura próbna 2022 — grudzień (formuła 2023)</span></nav>
+<h1 class="page-title">Matura próbna 2022 — grudzień (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;mecz.txt&quot;) as file:
+    mecz = file.readline().strip()
+
+# 1.1
+zmiany = 0
+for i in range(1, len(mecz)):
+    if mecz[i] != mecz[i - 1]:
+        zmiany += 1
+print(&quot;1.1&quot;, zmiany)
+
+# 1.2
+punkty_a = 0
+punkty_b = 0
+for znak in mecz:
+    if znak == &quot;A&quot;:
+        punkty_a += 1
+    else:
+        punkty_b += 1
+    if (punkty_a &gt;= 1000 or punkty_b &gt;= 1000) and abs(punkty_a - punkty_b) &gt;= 3:
+        break
+if punkty_a &gt; punkty_b:
+    print(&quot;1.2&quot;, &quot;A&quot;, str(punkty_a) + &quot;:&quot; + str(punkty_b))
+else:
+    print(&quot;1.2&quot;, &quot;B&quot;, str(punkty_a) + &quot;:&quot; + str(punkty_b))
+
+# 1.3 - dzielimy mecz na maksymalne bloki jednakowych znaków
+dobre_passy = 0
+najdluzsza = 0
+druzyna = &quot;&quot;
+dlugosc = 1
+for i in range(1, len(mecz) + 1):
+    if i &lt; len(mecz) and mecz[i] == mecz[i - 1]:
+        dlugosc += 1
+    else:
+        # koniec bloku mecz[i - dlugosc .. i - 1]
+        if dlugosc &gt;= 10:
+            dobre_passy += 1
+            if dlugosc &gt; najdluzsza:
+                najdluzsza = dlugosc
+                druzyna = mecz[i - 1]
+        dlugosc = 1
+print(&quot;1.3&quot;, dobre_passy, druzyna, najdluzsza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 5030; 1.2: B 1001:1004; 1.3: 6 B 15</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">strzalki = []
+
+
+def rysuj(x, N):
+    if 2 * x &lt;= N:
+        strzalki.append((x, 2 * x))
+        rysuj(2 * x, N)
+    if 2 * x + 1 &lt;= N:
+        strzalki.append((x, 2 * x + 1))
+        rysuj(2 * x + 1, N)
+
+
+# 2.1 - lista strzałek dla N = 10 (punkt x łączy się z 2x i 2x+1 - drzewo binarne)
+rysuj(1, 10)
+print(&quot;2.1&quot;, strzalki)
+
+# 2.2 - każdy punkt poza 1 ma dokładnie jedną strzałkę wchodzącą (od x // 2)
+strzalki = []
+rysuj(1, 20)
+print(&quot;2.2&quot;, len(strzalki), &quot;ogólnie N - 1&quot;)
+
+# 2.3 - idąc od N do 1 przechodzimy do N // 2
+N = 2047
+kroki = 0
+while N &gt; 1:
+    N //= 2
+    kroki += 1
+print(&quot;2.3&quot;, kroki)
+
+
+# 2.4 - z x da się dojść do y, gdy dzieląc y przez 2 (całkowicie) dojdziemy do x
+def osiagalny(x, y):
+    while y &gt; x:
+        y //= 2
+    return x == y
+
+
+print(&quot;2.4&quot;)
+with open(&quot;pary.txt&quot;) as file:
+    for line in file:
+        x, y = map(int, line.split())
+        if osiagalny(x, y):
+            print(x, y)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: strzałki 1→2, 1→3, 2→4, 2→5, 3→6, 3→7, 4→8, 4→9, 5→10; 2.2: a) 19, b) N − 1; 2.3: 10; 2.4: 47 3044, 7650 61204, 1 245, 7 63669, 9125 18250, 5 43246</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-3-3-i-3-4" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 3.1 - sito Eratostenesa (luki: N (wystarczy pierwiastek z N), PRAWDA, i * i, FAŁSZ, j + i)
+def sito(N):
+    SITO = [True] * (N + 1)
+    SITO[0] = False
+    SITO[1] = False
+    i = 2
+    while i * i &lt;= N:
+        if SITO[i]:
+            j = i * i
+            while j &lt;= N:
+                SITO[j] = False
+                j = j + i
+        i += 1
+    return SITO
+
+
+liczby = []
+with open(&quot;liczby.txt&quot;) as file:
+    for line in file:
+        liczby.append(int(line))
+
+SITO = sito(1000000)
+
+# 3.2
+ile = 0
+for x in liczby:
+    if SITO[x - 1]:
+        ile += 1
+print(&quot;3.2&quot;, ile)
+
+# 3.3 - rozkład x = p + (x - p), p &lt;= x - p
+najwiecej, liczba_max = -1, 0
+najmniej, liczba_min = 10 ** 9, 0
+for x in liczby:
+    rozklady = 0
+    for p in range(2, x // 2 + 1):
+        if SITO[p] and SITO[x - p]:
+            rozklady += 1
+    if rozklady &gt; najwiecej:
+        najwiecej, liczba_max = rozklady, x
+    if rozklady &lt; najmniej:
+        najmniej, liczba_min = rozklady, x
+print(&quot;3.3&quot;, liczba_max, najwiecej, liczba_min, najmniej)
+
+# 3.4
+cyfry = &quot;0123456789ABCDEF&quot;
+ile_cyfr = [0] * 16
+for x in liczby:
+    while x &gt; 0:
+        ile_cyfr[x % 16] += 1
+        x //= 16
+print(&quot;3.4&quot;)
+for i in range(16):
+    print(cyfry[i] + &quot;:&quot; + str(ile_cyfr[i]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: luki kolejno: N (wystarczy √N), PRAWDA, i * i, FAŁSZ, j + i; 3.2: 21; 3.3: 910620 9932 18676 195; 3.4: 0:32, 1:26, 2:37, 3:31, 4:43, 5:25, 6:28, 7:23, 8:38, 9:28, A:45, B:33, C:29, D:23, E:44, F:10</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2022_grudzien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dodaj coś od siebie</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

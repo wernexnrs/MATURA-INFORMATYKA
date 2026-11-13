@@ -471,3 +471,10 @@ th { background: var(--surface-2); }
 .sidebar li[style] a.active { border-left-color: var(--c); color: var(--text); }
 .powered-slogan { margin-left: 4px; padding-left: 10px; border-left: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); color: var(--text); font-weight: 800; }
 @media (max-width: 560px) { .powered { flex-wrap: wrap; justify-content: center; } .powered-slogan { border-left: 0; padding-left: 0; margin-left: 0; width: 100%; text-align: center; } }
+.lang-java { color: #c2410c; border-color: #f6cfb5; background: #fff4ec; }
+:root[data-theme="dark"] .lang-java { color: #fdba74; border-color: #7c2d12; background: #2a1408; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .lang-java { color: #fdba74; border-color: #7c2d12; background: #2a1408; } }
+.tab[data-lang="java"][aria-selected="true"] { border-bottom-color: #fb923c; }
+.chip-java { background: #fff1e6; color: #c2410c; }
+:root[data-theme="dark"] .chip-java { background: #2a1408; color: #fdba74; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip-java { background: #2a1408; color: #fdba74; } }

@@ -133,7 +133,7 @@ for luka in krotnosc:
 
 ## 5.1
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 chlodne = cieple_bez_deszczu = cieple_z_deszczem = 0
@@ -158,7 +158,7 @@ print(chlodne, cieple_bez_deszczu, cieple_z_deszczem)
 
 ## 5.2
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -197,7 +197,7 @@ print("razem dolano:", sum(ile for d, ile in dolewki))
 
 ## 5.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -232,7 +232,7 @@ for temperatura, opady in dane:
 
 ## 5.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -269,154 +269,3 @@ for miesiac, litry in dolano.items():
 ```
 
 **Odpowiedź:** kwiecień 0 zł, maj 164,36 zł, czerwiec 1056,60 zł, lipiec 2559,32 zł, sierpień 3651,14 zł, wrzesień 1326,62 zł
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa) as file:
-        file.readline()  # nagłówek
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-klienci = wczytaj("klienci.txt")
-zabiegi = wczytaj("zabiegi.txt")
-wizyty = wczytaj("wizytydane.txt")
-wizyty_zabiegi = wczytaj("wizytyzabiegi.txt")
-
-cena = {z[0]: int(z[3]) for z in zabiegi}
-
-for id_klienta, imie, nazwisko in klienci:
-    if imie == "Alicja" and nazwisko == "Kowalska":
-        szukany = id_klienta
-
-jej_wizyty = set(w[0] for w in wizyty if w[3] == szukany)
-
-suma = 0
-for id_wizyty, kod in wizyty_zabiegi:
-    if id_wizyty in jej_wizyty:
-        suma += cena[kod]
-
-print(suma)
-```
-
-**Odpowiedź:** 3841
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa) as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-klienci = wczytaj("klienci.txt")
-wizyty = wczytaj("wizytydane.txt")
-
-ile_wizyt = {}
-for id_wizyty, data, nr, id_klienta in wizyty:
-    ile_wizyt[id_klienta] = ile_wizyt.get(id_klienta, 0) + 1
-
-najczesciej = max(ile_wizyt, key=ile_wizyt.get)
-for id_klienta, imie, nazwisko in klienci:
-    if id_klienta == najczesciej:
-        print(imie, nazwisko, ile_wizyt[id_klienta])
-```
-
-**Odpowiedź:** Johan Bor, 20 wizyt
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa) as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-zabiegi = wczytaj("zabiegi.txt")
-wizyty = wczytaj("wizytydane.txt")
-wizyty_zabiegi = wczytaj("wizytyzabiegi.txt")
-
-for z in zabiegi:
-    if z[2] == "Magia Hawajow":
-        kod_hawaje = z[0]
-
-data_wizyty = {w[0]: w[1] for w in wizyty}
-
-daty = []
-for id_wizyty, kod in wizyty_zabiegi:
-    if kod == kod_hawaje:
-        daty.append(data_wizyty[id_wizyty])
-
-print(len(daty))
-for data in sorted(daty, reverse=True):
-    print(data)
-```
-
-**Odpowiedź:** 21 wizyt: 2018-01-25, 2018-01-20, 2018-01-18, 2018-01-12, 2018-01-10, 2018-01-04, 2018-01-04, 2018-01-03, 2017-12-22, … , 2017-11-13
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa) as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-zabiegi = wczytaj("zabiegi.txt")
-wizyty = wczytaj("wizytydane.txt")
-wizyty_zabiegi = wczytaj("wizytyzabiegi.txt")
-
-makijaze = {}  # kod zabiegu -> cena
-for z in zabiegi:
-    if z[1] == "MAKIJAZ":
-        makijaze[z[0]] = int(z[3])
-
-wizyta = {w[0]: (w[1], w[3]) for w in wizyty}  # id_wizyty -> (data, id_klienta)
-
-kobiety = set()
-suma = 0
-for id_wizyty, kod in wizyty_zabiegi:
-    data, klient = wizyta[id_wizyty]
-    if kod in makijaze and klient[0] == "X" and "2017-12-06" <= data <= "2018-01-15":
-        kobiety.add(klient)
-        suma += makijaze[kod] * 0.8
-
-print(len(kobiety), suma)
-```
-
-**Odpowiedź:** 7 kobiet, łącznie 400 zł
-
-## 6.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-def wczytaj(nazwa):
-    with open(nazwa) as file:
-        file.readline()
-        return [line.rstrip("\n").split("\t") for line in file if line.strip()]
-
-
-zabiegi = wczytaj("zabiegi.txt")
-wizyty_zabiegi = wczytaj("wizytyzabiegi.txt")
-
-wykonane = set(kod for id_wizyty, kod in wizyty_zabiegi)
-
-for z in zabiegi:
-    if z[1] == "FRYZJER MESKI" and z[0] not in wykonane:
-        print(z[2])
-```
-
-**Odpowiedź:** Odsiwianie, Kuracja L'Oreal, Rytual Kerastase (dyscyplinujacy), Maska Masquargil

@@ -199,7 +199,7 @@ print(wewnatrz, na_boku, na_zewnatrz)
 
 ## 5.1
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 def amortyzacja(rok, cena, przebieg):
@@ -231,7 +231,7 @@ print(*najtanszy)
 
 ## 5.2
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 liczba = {}
@@ -252,7 +252,7 @@ for marka in sorted(liczba):
 
 ## 5.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 zestawienie = {}  # (rok, marka) -> liczba samochodów
@@ -275,7 +275,7 @@ for rok in range(2006, 2016):
 
 ## 5.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 from datetime import date
@@ -295,154 +295,3 @@ for dni, model, nr in samochody[:4]:
     print(model, nr, dni)
 ```
 **Odpowiedź:** Mercedes Atego ERA 112 TR 722, Iveco Strails ERA 212 TR 708, Iveco Strails ERA 213 TR 708, Iveco Trakker Euro5 ERA 214 TR 708
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-programy = {}  # id -> (nazwa, rodzaj, cena)
-with open("programy.txt") as file:
-    next(file)
-    for line in file:
-        id_prog, nazwa, rodzaj, cena = line.strip().split("\t")
-        programy[id_prog] = (nazwa, rodzaj, int(cena))
-
-pakiety_programu = {}  # id programu -> zbiór pakietów, w których występuje
-with open("zestawy.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, id_prog = line.split()
-        if id_prog not in pakiety_programu:
-            pakiety_programu[id_prog] = set()
-        pakiety_programu[id_prog].add(id_pak)
-
-for id_prog in programy:
-    nazwa, rodzaj, cena = programy[id_prog]
-    ile = len(pakiety_programu.get(id_prog, set()))
-    if rodzaj == "edytor dokumentow tekstowych" and ile >= 2:
-        print(nazwa, cena, ile)
-```
-**Odpowiedź:** Foxit Redactor for Office 1621 zł - 2, Publisher 170 zł - 3, Word 120 zł - 4, Writer 0 zł - 3
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-zarzadzanie = set()  # id programów, w których rodzaju jest słowo "zarzadzanie"
-with open("programy.txt") as file:
-    next(file)
-    for line in file:
-        id_prog, nazwa, rodzaj, cena = line.strip().split("\t")
-        if "zarzadzanie" in rodzaj.split():
-            zarzadzanie.add(id_prog)
-
-nazwy_pakietow = {}
-with open("pakiety.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, nazwa, firma = line.strip().split("\t")
-        nazwy_pakietow[id_pak] = nazwa
-
-wynik = set()
-with open("zestawy.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, id_prog = line.split()
-        if id_prog in zarzadzanie:
-            wynik.add(nazwy_pakietow[id_pak])
-
-for nazwa in sorted(wynik):
-    print(nazwa)
-```
-**Odpowiedź:** Calligra Suite, DocuPDF, gDOC, GFI Security, IBM Data Software, OKAY, Sales Partner, SolarWinds Free System Management Tools, SolarWinds Systems Management, Subiekt
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-ceny = {}
-with open("programy.txt") as file:
-    next(file)
-    for line in file:
-        id_prog, nazwa, rodzaj, cena = line.strip().split("\t")
-        ceny[id_prog] = int(cena)
-
-pakiety = {}  # id -> (nazwa, firma)
-with open("pakiety.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, nazwa, firma = line.strip().split("\t")
-        pakiety[id_pak] = (nazwa, firma)
-
-wartosc = {}
-with open("zestawy.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, id_prog = line.split()
-        wartosc[id_pak] = wartosc.get(id_pak, 0) + ceny[id_prog]
-
-najdrozsze = sorted(wartosc, key=wartosc.get, reverse=True)
-for id_pak in najdrozsze[:3]:
-    print(*pakiety[id_pak], wartosc[id_pak])
-```
-**Odpowiedź:** SolarWinds Systems Management (SolarWinds) 57 520, MicroStation (Bentley) 35 736, GFI Security (GFI Software) 14 811
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-w_pakietach = set()
-with open("zestawy.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, id_prog = line.split()
-        w_pakietach.add(id_prog)
-
-with open("programy.txt") as file:
-    next(file)
-    for line in file:
-        id_prog, nazwa, rodzaj, cena = line.strip().split("\t")
-        if id_prog not in w_pakietach:
-            print(nazwa)
-```
-**Odpowiedź:** Adobe PageMaker, Audition, Lightroom, QuarkXPress, Scribus
-
-## 6.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-ceny = {}
-with open("programy.txt") as file:
-    next(file)
-    for line in file:
-        id_prog, nazwa, rodzaj, cena = line.strip().split("\t")
-        ceny[id_prog] = int(cena)
-
-nazwy_pakietow = {}
-with open("pakiety.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, nazwa, firma = line.strip().split("\t")
-        nazwy_pakietow[id_pak] = nazwa
-
-darmowe = {}
-komercyjne = {}
-with open("zestawy.txt") as file:
-    next(file)
-    for line in file:
-        id_pak, id_prog = line.split()
-        if ceny[id_prog] == 0:
-            darmowe[id_pak] = darmowe.get(id_pak, 0) + 1
-        else:
-            komercyjne[id_pak] = komercyjne.get(id_pak, 0) + 1
-
-for id_pak in nazwy_pakietow:
-    if id_pak in darmowe and id_pak in komercyjne:
-        print(nazwy_pakietow[id_pak], darmowe[id_pak], komercyjne[id_pak])
-```
-**Odpowiedź:** (darmowe, komercyjne) ApexSQL Developer 2 7, DaemonTools Lite 1 8, dbForge 1 5, Expression Studio 1 3, Foxit PDF Development Kits 1 2, IconCool Software 1 4, Logo-Gry 2 8, MicroStation 1 4, Sothink Suite 1 6

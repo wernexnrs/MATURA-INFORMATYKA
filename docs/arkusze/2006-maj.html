@@ -181,7 +181,7 @@ with open(&quot;dane.txt&quot;) as file:
         if czy_palindrom(linia.strip()):
             palindromy += 1
 
-print(palindromy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 20</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7a" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7a">7a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel/Access — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def oprocentowanie(kwota):
+print(palindromy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 20</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7a" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7a">7a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def oprocentowanie(kwota):
     if kwota &lt; 10000:
         return 6
     if kwota &lt; 20000:
@@ -208,7 +208,7 @@ with open(&quot;lokaty.txt&quot;) as file:
 
 print(&quot;%.2f&quot; % suma_poczatek)
 print(&quot;%.2f&quot; % suma_koniec)
-print(&quot;%.2f&quot; % najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> na początku roku 7 959 613,00 zł, na końcu roku 8 770 818,04 zł, największa lokata na końcu roku 88 728,96 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7b" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7b">7b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel/Access — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import datetime
+print(&quot;%.2f&quot; % najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> na początku roku 7 959 613,00 zł, na końcu roku 8 770 818,04 zł, największa lokata na końcu roku 88 728,96 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7b" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7b">7b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import datetime
 
 kursy = []
 with open(&quot;kursy.txt&quot;) as file:
@@ -246,7 +246,7 @@ for dzien in range(1, 365):
         w_euro = True
 if w_euro:
     kwota = round(kwota * kursy[364], 2)
-print(&quot;Sposób II:&quot;, &quot;%.2f&quot; % kwota)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> sposób I: 21 301,75 zł, sposób II: 21 335,51 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7c" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7c">7c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel/Access — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kursy = []
+print(&quot;Sposób II:&quot;, &quot;%.2f&quot; % kwota)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> sposób I: 21 301,75 zł, sposób II: 21 335,51 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7c" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7c">7c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kursy = []
 with open(&quot;kursy.txt&quot;) as file:
     for linia in file:
         kursy.append(float(linia.strip().replace(&quot;,&quot;, &quot;.&quot;)))
@@ -263,7 +263,7 @@ print(wzrosty)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 
   <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
   <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
-  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dodaj coś od siebie</a> · <a href="../linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>
   <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">

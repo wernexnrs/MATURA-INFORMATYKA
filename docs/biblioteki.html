@@ -34,10 +34,10 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#collections">collections</a></li><li><a href="#math">math</a></li><li><a href="#statistics">statistics</a></li><li><a href="#re">re</a></li><li><a href="#fractions">fractions</a></li><li><a href="#itertools">itertools</a></li><li><a href="#operator">operator</a></li><li><a href="#functools">functools</a></li><li><a href="#enum">enum</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#collections">collections</a></li><li><a href="#math">math</a></li><li><a href="#statistics">statistics</a></li><li><a href="#re">re</a></li><li><a href="#fractions">fractions</a></li><li><a href="#itertools">itertools</a></li><li><a href="#operator">operator</a></li><li><a href="#functools">functools</a></li><li><a href="#bisect">bisect</a></li><li><a href="#heapq">heapq</a></li><li><a href="#datetime">datetime</a></li><li><a href="#sys">sys</a></li><li><a href="#enum">enum</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="index.html">Start</a> / <span>Przydatne moduły Pythona</span></nav>
-<h1 class="page-title">Przydatne moduły Pythona</h1><p class="lead">Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.</p><p>Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które mogą się przydać. Moduły należą do biblioteki standardowej Pythona (nie trzeba nic instalować), ale każdy trzeba najpierw zaimportować, np. <code>import math</code> albo <code>from math import sqrt</code>.</p><ul><li><strong>collections</strong> - specjalne kontenery (słowniki, kolejki)<ul><li><a href="#counter">Counter()</a><ul><li>.elements()</li><li>.most_common()</li><li>.subtract()</li></ul></li><li><a href="#defaultdict">defaultdict()</a></li><li><a href="#order">OrderedDict()</a></li><li><a href="#deque">deque()</a></li></ul></li><li><strong>math</strong> - matematyka<ul><li><a href="#funkcje">funkcje</a></li></ul></li><li><strong>statistics</strong> - statystyka<ul><li><a href="#statfunc">funkcje</a></li></ul></li><li><strong>re</strong> - wyrażenia regularne (RegEx)<ul><li><a href="#refunc">funkcje</a></li><li><a href="#meta">Metaznaki</a></li><li><a href="#special">Specjalne sekwencje</a></li><li><a href="#sets">Zbiory</a></li><li><a href="#biale">Znaki specjalne w napisach</a></li></ul></li><li><strong>fractions</strong> - ułamki<ul><li><a href="#ulamki">Fraction</a></li></ul></li><li><strong>itertools</strong> - iteratory, kombinatoryka<ul><li><a href="#count">count</a></li><li><a href="#zip_longest">zip_longest</a></li><li><a href="#cycle">cycle</a></li><li><a href="#repeat">repeat</a></li><li><a href="#starmap">starmap</a></li><li><a href="#combinations">combinations</a></li><li><a href="#permutations">permutations</a></li><li><a href="#product">product</a></li><li><a href="#chain">chain</a></li><li><a href="#islice">islice</a></li><li><a href="#accumulate">accumulate</a></li><li><a href="#groupby">groupby</a></li></ul></li><li><strong>operator</strong> - operatory jako funkcje<ul><li><a href="#itemgetter">itemgetter i funkcje operatorów</a></li></ul></li><li><strong>functools</strong> - narzędzia dla funkcji<ul><li><a href="#reduce">reduce</a></li><li><a href="#cache">lru_cache / cache</a></li><li><a href="#cmp_to_key">cmp_to_key</a></li></ul></li><li><strong>enum</strong> - typy wyliczeniowe<ul><li><a href="#enum-klasa">Enum</a></li></ul></li></ul><section class="card tinted" id="collections" style="--c:var(--g1)"><span id="counter" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#collections">collections</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Counter()</h3><p>Słownik do zliczania: kluczami są elementy, a wartościami liczba ich wystąpień. Dla brakującego klucza zwraca 0 (bez błędu).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python · zliczanie elementów</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · działania na licznikach</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python"># zliczanie elementów
+<h1 class="page-title">Przydatne moduły Pythona</h1><p class="lead">Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.</p><p>Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które mogą się przydać. Moduły należą do biblioteki standardowej Pythona (nie trzeba nic instalować), ale każdy trzeba najpierw zaimportować, np. <code>import math</code> albo <code>from math import sqrt</code>.</p><ul><li><strong>collections</strong> - specjalne kontenery (słowniki, kolejki)<ul><li><a href="#counter">Counter()</a><ul><li>.elements()</li><li>.most_common()</li><li>.subtract()</li></ul></li><li><a href="#defaultdict">defaultdict()</a></li><li><a href="#order">OrderedDict()</a></li><li><a href="#deque">deque()</a></li></ul></li><li><strong>math</strong> - matematyka<ul><li><a href="#funkcje">funkcje</a></li></ul></li><li><strong>statistics</strong> - statystyka<ul><li><a href="#statfunc">funkcje</a></li></ul></li><li><strong>re</strong> - wyrażenia regularne (RegEx)<ul><li><a href="#refunc">funkcje</a></li><li><a href="#meta">Metaznaki</a></li><li><a href="#special">Specjalne sekwencje</a></li><li><a href="#sets">Zbiory</a></li><li><a href="#biale">Znaki specjalne w napisach</a></li></ul></li><li><strong>fractions</strong> - ułamki<ul><li><a href="#ulamki">Fraction</a></li></ul></li><li><strong>itertools</strong> - iteratory, kombinatoryka<ul><li><a href="#count">count</a></li><li><a href="#zip_longest">zip_longest</a></li><li><a href="#cycle">cycle</a></li><li><a href="#repeat">repeat</a></li><li><a href="#starmap">starmap</a></li><li><a href="#combinations">combinations</a></li><li><a href="#permutations">permutations</a></li><li><a href="#product">product</a></li><li><a href="#chain">chain</a></li><li><a href="#islice">islice</a></li><li><a href="#accumulate">accumulate</a></li><li><a href="#groupby">groupby</a></li><li><a href="#pairwise">pairwise</a></li></ul></li><li><strong>operator</strong> - operatory jako funkcje<ul><li><a href="#itemgetter">itemgetter i funkcje operatorów</a></li></ul></li><li><strong>functools</strong> - narzędzia dla funkcji<ul><li><a href="#reduce">reduce</a></li><li><a href="#cache">lru_cache / cache</a></li><li><a href="#cmp_to_key">cmp_to_key</a></li></ul></li><li><strong>bisect</strong> - wyszukiwanie binarne w posortowanej liście<ul><li><a href="#bisect">bisect_left / bisect_right / insort</a></li></ul></li><li><strong>heapq</strong> - kopiec (kolejka priorytetowa)<ul><li><a href="#heapq">heappush / heappop / nlargest</a></li></ul></li><li><strong>datetime</strong> - daty i czas<ul><li><a href="#datetime">date / datetime / timedelta</a></li><li><a href="#calendar">calendar</a></li></ul></li><li><strong>sys</strong> - ustawienia interpretera<ul><li><a href="#sys">setrecursionlimit</a></li></ul></li><li><strong>enum</strong> - typy wyliczeniowe<ul><li><a href="#enum-klasa">Enum</a></li></ul></li></ul><section class="card tinted" id="collections" style="--c:var(--g1)"><span id="counter" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#collections">collections</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Counter()</h3><p>Słownik do zliczania: kluczami są elementy, a wartościami liczba ich wystąpień. Dla brakującego klucza zwraca 0 (bez błędu).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python · zliczanie elementów</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · typowe zastosowania Counter</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · działania na licznikach</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python"># zliczanie elementów
 from collections import Counter
 
 c = Counter(&quot;abracadabra&quot;)
@@ -48,7 +48,19 @@ print(c[&quot;a&quot;], c[&quot;z&quot;])
 print(c.most_common(2))
 #Output: [(&#x27;a&#x27;, 5), (&#x27;b&#x27;, 2)]
 print(Counter([3, 1, 3, 3, 2]).most_common(1)[0][0])  # najczęstszy element
-#Output: 3</code></pre></div><div class="pane" hidden><pre><code class="language-python"># działania na licznikach
+#Output: 3</code></pre></div><div class="pane" hidden><pre><code class="language-python"># typowe zastosowania Counter
+from collections import Counter
+
+print(Counter(&quot;kajak&quot;) == Counter(&quot;jakak&quot;))     # czy słowa są anagramami
+#Output: True
+c = Counter(&quot;mississippi&quot;)
+print(sorted(c.items()))
+#Output: [(&#x27;i&#x27;, 4), (&#x27;m&#x27;, 1), (&#x27;p&#x27;, 2), (&#x27;s&#x27;, 4)]
+print(sum(1 for v in c.values() if v &gt; 1))     # ile różnych liter się powtarza
+#Output: 3
+najczestsza, ile = Counter([4, 1, 4, 2, 1, 4]).most_common(1)[0]
+print(najczestsza, ile)
+#Output: 4 3</code></pre></div><div class="pane" hidden><pre><code class="language-python"># działania na licznikach
 from collections import Counter
 
 c = Counter(a=3, b=1)
@@ -106,7 +118,36 @@ print(q.popleft(), q.pop())
 #Output: 0 4
 q.rotate(1)          # przesunięcie cykliczne w prawo
 print(q)
-#Output: deque([3, 1, 2])</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="math" style="--c:var(--g2)"><span id="funkcje" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#math">math</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Funkcje</h3><p>Funkcje trygonometryczne przyjmują kąt w <strong>radianach</strong>.</p><ul><li><strong>cos(x)</strong> -&gt; Zwraca cosinus argumentu x.</li><li><strong>sin(x)</strong> -&gt; Zwraca sinus argumentu x.</li><li><strong>tan(x)</strong> -&gt; Zwraca tangens argumentu x.</li><li><strong>radians(x)</strong> -&gt; Przekształca kąt x ze stopni na radiany.</li><li><strong>degrees(x)</strong> -&gt; Przekształca kąt x z radianów na stopnie.</li><li><strong>exp(x)</strong> -&gt; Zwraca wartość e**x.</li><li><strong>fabs(x)</strong> -&gt; Zwraca moduł (wartość bezwzględną) argumentu x, zawsze jako liczbę zmiennoprzecinkową.</li><li><strong>floor(x)</strong> -&gt; Zwraca podłogę argumentu x, czyli największą liczbę całkowitą nie większą od x (jako <code>int</code>), np. <code>floor(-2.5) == -3</code>.</li><li><strong>ceil(x)</strong> -&gt; Zwraca sufit argumentu x, czyli najmniejszą liczbę całkowitą nie mniejszą od x (jako <code>int</code>).</li><li><strong>trunc(x)</strong> -&gt; Obcina część ułamkową (zaokrągla w stronę zera), jak <code>int(x)</code>.</li><li><strong>hypot(x, y)</strong> -&gt; Zwraca wartość sqrt(x*x + y*y). Jest to długość przeciwprostokątnej w trójkącie prostokątnym o przyprostokątnych, których długości są równe x oraz y, lub odległość punktu (x, y) od środka układu współrzędnych.</li><li><strong>log(x, base)</strong> -&gt; Zwraca logarytm z x o podstawie <code>base</code>; bez drugiego argumentu - logarytm naturalny (o podstawie e).</li><li><strong>log10(x)</strong> -&gt; Zwraca logarytm z x o podstawie 10.</li><li><strong>log2(x)</strong> -&gt; Zwraca logarytm z x o podstawie 2.</li><li><strong>pow(x, y)</strong> -&gt; Zwraca wartość x**y (zawsze jako <code>float</code>).</li><li><strong>sqrt(x)</strong> -&gt; Zwraca pierwiastek kwadratowy z x (jako <code>float</code>).</li><li><strong>isqrt(n)</strong> -&gt; Zwraca całkowitą część pierwiastka z liczby całkowitej n (dokładnie, bez błędów zaokrągleń) - przydatne przy sprawdzaniu, czy liczba jest pierwsza.</li><li><strong>dist(p, q)</strong> -&gt; Zwraca odległość (euklidesową) między punktami p i q podanymi jako krotki/listy współrzędnych.</li><li><strong>factorial(n)</strong> -&gt; Zwraca silnię n!.</li><li><strong>comb(n, k)</strong> -&gt; Zwraca liczbę kombinacji (symbol Newtona).</li><li><strong>perm(n, k)</strong> -&gt; Zwraca liczbę wariacji bez powtórzeń (k-elementowych ustawień z n elementów).</li><li><strong>fsum(iterable)</strong> -&gt; Zwraca dokładną sumę liczb zmiennoprzecinkowych (bez błędów zaokrągleń, które pojawiają się przy dodawaniu w pętli).</li><li><strong>prod(iterable)</strong> -&gt; Zwraca iloczyn elementów.</li><li><strong>gcd(a, b)</strong> -&gt; Zwraca największy wspólny dzielnik (NWD).</li><li><strong>lcm(a, b)</strong> -&gt; Zwraca najmniejszą wspólną wielokrotność (NWW), od Pythona 3.9. We wcześniejszych wersjach: <code>a * b // gcd(a, b)</code>.</li><li><strong>e</strong> -&gt; Stała: liczba Eulera (2.7182...).</li><li><strong>pi</strong> -&gt; Stała: liczba pi (3.1415...).</li><li><strong>inf</strong> -&gt; Stała: nieskończoność (przydatna jako początkowe minimum).</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+#Output: deque([3, 1, 2])</code></pre></div><ul><li><strong>append(x)</strong> / <strong>appendleft(x)</strong> -&gt; dodaje element na koniec / na początek</li><li><strong>pop()</strong> / <strong>popleft()</strong> -&gt; usuwa i zwraca element z końca / z początku (kolejka FIFO: <code>append</code> + <code>popleft</code>)</li><li><strong>rotate(n)</strong> -&gt; przesuwa elementy cyklicznie o <code>n</code> w prawo (ujemne <code>n</code> - w lewo)</li><li><strong>deque(maxlen=k)</strong> -&gt; kolejka o ograniczonej długości: po dodaniu elementu ponad limit najstarszy z drugiego końca jest usuwany</li></ul><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python 2</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python"># BFS: najkrótsza droga w labiryncie (&quot;#&quot; - ściana), ruchy góra / dół / lewo / prawo
+from collections import deque
+
+plansza = [&quot;..#.&quot;,
+           &quot;.##.&quot;,
+           &quot;....&quot;]
+n, m = len(plansza), len(plansza[0])
+odl = [[-1] * m for _ in range(n)]
+odl[0][0] = 0
+kolejka = deque([(0, 0)])
+while kolejka:
+    w, k = kolejka.popleft()
+    for dw, dk in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+        nw, nk = w + dw, k + dk
+        if 0 &lt;= nw &lt; n and 0 &lt;= nk &lt; m and plansza[nw][nk] == &quot;.&quot; and odl[nw][nk] == -1:
+            odl[nw][nk] = odl[w][k] + 1
+            kolejka.append((nw, nk))
+print(odl[0][3])
+#Output: 7</code></pre></div><div class="pane" hidden><pre><code class="language-python"># deque z maxlen - pamięta tylko k ostatnich elementów (okno przesuwne)
+from collections import deque
+
+ostatnie = deque(maxlen=3)
+for x in [5, 1, 4, 2, 8]:
+    ostatnie.append(x)
+    print(list(ostatnie), sum(ostatnie))
+#Output: [5] 5
+#Output: [5, 1] 6
+#Output: [5, 1, 4] 10
+#Output: [1, 4, 2] 7
+#Output: [4, 2, 8] 14</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="math" style="--c:var(--g2)"><span id="funkcje" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#math">math</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Funkcje</h3><p>Funkcje trygonometryczne przyjmują kąt w <strong>radianach</strong>.</p><ul><li><strong>cos(x)</strong> -&gt; Zwraca cosinus argumentu x.</li><li><strong>sin(x)</strong> -&gt; Zwraca sinus argumentu x.</li><li><strong>tan(x)</strong> -&gt; Zwraca tangens argumentu x.</li><li><strong>radians(x)</strong> -&gt; Przekształca kąt x ze stopni na radiany.</li><li><strong>degrees(x)</strong> -&gt; Przekształca kąt x z radianów na stopnie.</li><li><strong>exp(x)</strong> -&gt; Zwraca wartość e**x.</li><li><strong>fabs(x)</strong> -&gt; Zwraca moduł (wartość bezwzględną) argumentu x, zawsze jako liczbę zmiennoprzecinkową.</li><li><strong>floor(x)</strong> -&gt; Zwraca podłogę argumentu x, czyli największą liczbę całkowitą nie większą od x (jako <code>int</code>), np. <code>floor(-2.5) == -3</code>.</li><li><strong>ceil(x)</strong> -&gt; Zwraca sufit argumentu x, czyli najmniejszą liczbę całkowitą nie mniejszą od x (jako <code>int</code>).</li><li><strong>trunc(x)</strong> -&gt; Obcina część ułamkową (zaokrągla w stronę zera), jak <code>int(x)</code>.</li><li><strong>hypot(x, y)</strong> -&gt; Zwraca wartość sqrt(x*x + y*y). Jest to długość przeciwprostokątnej w trójkącie prostokątnym o przyprostokątnych, których długości są równe x oraz y, lub odległość punktu (x, y) od środka układu współrzędnych.</li><li><strong>log(x, base)</strong> -&gt; Zwraca logarytm z x o podstawie <code>base</code>; bez drugiego argumentu - logarytm naturalny (o podstawie e).</li><li><strong>log10(x)</strong> -&gt; Zwraca logarytm z x o podstawie 10.</li><li><strong>log2(x)</strong> -&gt; Zwraca logarytm z x o podstawie 2.</li><li><strong>pow(x, y)</strong> -&gt; Zwraca wartość x**y (zawsze jako <code>float</code>).</li><li><strong>sqrt(x)</strong> -&gt; Zwraca pierwiastek kwadratowy z x (jako <code>float</code>).</li><li><strong>isqrt(n)</strong> -&gt; Zwraca całkowitą część pierwiastka z liczby całkowitej n (dokładnie, bez błędów zaokrągleń) - przydatne przy sprawdzaniu, czy liczba jest pierwsza.</li><li><strong>dist(p, q)</strong> -&gt; Zwraca odległość (euklidesową) między punktami p i q podanymi jako krotki/listy współrzędnych.</li><li><strong>factorial(n)</strong> -&gt; Zwraca silnię n!.</li><li><strong>comb(n, k)</strong> -&gt; Zwraca liczbę kombinacji (symbol Newtona).</li><li><strong>perm(n, k)</strong> -&gt; Zwraca liczbę wariacji bez powtórzeń (k-elementowych ustawień z n elementów).</li><li><strong>fsum(iterable)</strong> -&gt; Zwraca dokładną sumę liczb zmiennoprzecinkowych (bez błędów zaokrągleń, które pojawiają się przy dodawaniu w pętli).</li><li><strong>prod(iterable)</strong> -&gt; Zwraca iloczyn elementów.</li><li><strong>gcd(a, b)</strong> -&gt; Zwraca największy wspólny dzielnik (NWD).</li><li><strong>lcm(a, b)</strong> -&gt; Zwraca najmniejszą wspólną wielokrotność (NWW), od Pythona 3.9. We wcześniejszych wersjach: <code>a * b // gcd(a, b)</code>.</li><li><strong>e</strong> -&gt; Stała: liczba Eulera (2.7182...).</li><li><strong>pi</strong> -&gt; Stała: liczba pi (3.1415...).</li><li><strong>inf</strong> -&gt; Stała: nieskończoność (przydatna jako początkowe minimum).</li></ul><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · typowe zastosowania na maturze</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">import math
 
 print(math.floor(2.7), math.ceil(2.1), math.floor(-2.5), math.trunc(-2.5))
 #Output: 2 3 -3 -2
@@ -126,7 +167,34 @@ suma = 0
 for x in [0.1] * 10:
     suma += x
 print(suma, math.fsum([0.1] * 10))
-#Output: 0.9999999999999999 1.0</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="statistics" style="--c:var(--g3)"><span id="statfunc" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#statistics">statistics</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Funkcje</h3><ul><li><strong>mean()</strong> -&gt; Średnia arytmetyczna</li><li><strong>median()</strong> -&gt; Mediana (dla parzystej liczby elementów: średnia dwóch środkowych)</li><li><strong>median_low()</strong> -&gt; Dla parzystej liczby elementów zwraca mniejszą z dwóch wartości środkowych</li><li><strong>median_high()</strong> -&gt; Dla parzystej liczby elementów zwraca większą z dwóch wartości środkowych</li><li><strong>mode()</strong> -&gt; Moda (dominanta) - najczęstsza wartość; gdy jest kilka, zwraca pierwszą napotkaną</li><li><strong>multimode()</strong> -&gt; Lista wszystkich najczęstszych wartości</li><li><strong>pstdev()</strong> -&gt; Odchylenie standardowe całej populacji (dzielenie przez n)</li><li><strong>stdev()</strong> -&gt; Odchylenie standardowe z próby (dzielenie przez n - 1)</li><li><strong>pvariance()</strong> -&gt; Wariancja całej populacji (dzielenie przez n)</li><li><strong>variance()</strong> -&gt; Wariancja z próby (dzielenie przez n - 1)</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import statistics
+#Output: 0.9999999999999999 1.0</code></pre></div><div class="pane" hidden><pre><code class="language-python"># typowe zastosowania na maturze
+import math
+
+def czy_pierwsza(n):
+    if n &lt; 2:
+        return False
+    for d in range(2, math.isqrt(n) + 1):   # wystarczy sprawdzić dzielniki do pierwiastka
+        if n % d == 0:
+            return False
+    return True
+
+print([n for n in range(30) if czy_pierwsza(n)])
+#Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+n = (10**15 + 1) ** 2 - 1
+print(math.isqrt(n), int(math.sqrt(n)))       # isqrt jest dokładne, sqrt liczy na float
+#Output: 1000000000000000 1000000000000001
+print(math.isqrt(49) ** 2 == 49, math.isqrt(50) ** 2 == 50)  # czy liczba jest kwadratem
+#Output: True False
+print(math.gcd(12, 18, 24), math.lcm(4, 6, 10))  # wiele argumentów (Python 3.9+)
+#Output: 6 60
+a, b = 12, 18
+g = math.gcd(a, b)
+print(f&quot;{a // g}/{b // g}&quot;)                   # skracanie ułamka 12/18
+#Output: 2/3
+print([math.comb(4, k) for k in range(5)])    # wiersz trójkąta Pascala
+#Output: [1, 4, 6, 4, 1]
+print(math.perm(5), math.perm(5, 3), math.comb(49, 6))
+#Output: 120 60 13983816</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="statistics" style="--c:var(--g3)"><span id="statfunc" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#statistics">statistics</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Funkcje</h3><ul><li><strong>mean()</strong> -&gt; Średnia arytmetyczna</li><li><strong>median()</strong> -&gt; Mediana (dla parzystej liczby elementów: średnia dwóch środkowych)</li><li><strong>median_low()</strong> -&gt; Dla parzystej liczby elementów zwraca mniejszą z dwóch wartości środkowych</li><li><strong>median_high()</strong> -&gt; Dla parzystej liczby elementów zwraca większą z dwóch wartości środkowych</li><li><strong>mode()</strong> -&gt; Moda (dominanta) - najczęstsza wartość; gdy jest kilka, zwraca pierwszą napotkaną</li><li><strong>multimode()</strong> -&gt; Lista wszystkich najczęstszych wartości</li><li><strong>pstdev()</strong> -&gt; Odchylenie standardowe całej populacji (dzielenie przez n)</li><li><strong>stdev()</strong> -&gt; Odchylenie standardowe z próby (dzielenie przez n - 1)</li><li><strong>pvariance()</strong> -&gt; Wariancja całej populacji (dzielenie przez n)</li><li><strong>variance()</strong> -&gt; Wariancja z próby (dzielenie przez n - 1)</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import statistics
 
 dane = [2, 4, 4, 4, 5, 5, 7, 9]
 print(statistics.mean(dane), statistics.median(dane))
@@ -208,7 +276,10 @@ result = itertools.combinations(chars, 2)
 print(list(result))
 #Output: [(&#x27;a&#x27;, &#x27;b&#x27;), (&#x27;a&#x27;, &#x27;c&#x27;), (&#x27;a&#x27;, &#x27;d&#x27;), (&#x27;b&#x27;, &#x27;c&#x27;), (&#x27;b&#x27;, &#x27;d&#x27;), (&#x27;c&#x27;, &#x27;d&#x27;)]
 print(len(list(itertools.combinations(range(10), 3))))
-#Output: 120</code></pre></div><h3>permutations()</h3><span id="permutations" class="anchor"></span><p>Wszystkie możliwe ustawienia pewnej liczby elementów, gdzie kolejność MA znaczenie. Bez drugiego argumentu - permutacje wszystkich elementów.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
+#Output: 120
+liczby = [3, 7, 5, 5, 2, 8]
+print(sum(1 for x, y in itertools.combinations(liczby, 2) if x + y == 10))  # ile par daje sumę 10
+#Output: 3</code></pre></div><h3>permutations()</h3><span id="permutations" class="anchor"></span><p>Wszystkie możliwe ustawienia pewnej liczby elementów, gdzie kolejność MA znaczenie. Bez drugiego argumentu - permutacje wszystkich elementów.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
 chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
 result = itertools.permutations(chars, 2)
@@ -240,7 +311,7 @@ result = itertools.islice(range(10), 1, 5, 2)
 print(list(result))
 #Output: [1, 3]
 print(list(itertools.islice(itertools.count(10), 3)))
-#Output: [10, 11, 12]</code></pre></div><h3>accumulate()</h3><span id="accumulate" class="anchor"></span><p>Wyniki pośrednie kolejnych operacji (domyślnie sumy prefiksowe).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools, operator
+#Output: [10, 11, 12]</code></pre></div><h3>accumulate()</h3><span id="accumulate" class="anchor"></span><p>Wyniki pośrednie kolejnych operacji (domyślnie sumy prefiksowe).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · sumy prefiksowe: suma fragmentu a[i..j] w czasie O(1)</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">import itertools, operator
 
 numbers = [1, 5, 4, 3]
 
@@ -249,7 +320,16 @@ print(list(itertools.accumulate(numbers)))                # dodawanie
 print(list(itertools.accumulate(numbers, operator.mul)))  # mnożenie
 #Output: [1, 5, 20, 60]
 print(list(itertools.accumulate(numbers, max)))           # bieżące maksimum
-#Output: [1, 5, 5, 5]</code></pre></div><h3>groupby()</h3><span id="groupby" class="anchor"></span><p>Grupowanie <strong>kolejnych</strong> elementów o tym samym kluczu: <code>groupby(obiekt, key=None)</code>. Zwraca pary <code>(klucz, grupa)</code>. Jeżeli elementy o tym samym kluczu nie stoją obok siebie, utworzą kilka osobnych grup - żeby zgrupować wszystkie, trzeba najpierw posortować dane po tym samym kluczu.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
+#Output: [1, 5, 5, 5]</code></pre></div><div class="pane" hidden><pre><code class="language-python"># sumy prefiksowe: suma fragmentu a[i..j] w czasie O(1)
+from itertools import accumulate
+
+a = [2, 7, 1, 8, 2, 8]
+pref = list(accumulate(a, initial=0))  # initial - wartość na początku (Python 3.8+)
+print(pref)
+#Output: [0, 2, 9, 10, 18, 20, 28]
+i, j = 1, 3
+print(pref[j + 1] - pref[i], sum(a[i:j + 1]))
+#Output: 16 16</code></pre></div></div><h3>groupby()</h3><span id="groupby" class="anchor"></span><p>Grupowanie <strong>kolejnych</strong> elementów o tym samym kluczu: <code>groupby(obiekt, key=None)</code>. Zwraca pary <code>(klucz, grupa)</code>. Jeżeli elementy o tym samym kluczu nie stoją obok siebie, utworzą kilka osobnych grup - żeby zgrupować wszystkie, trzeba najpierw posortować dane po tym samym kluczu.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
 # długości serii takich samych znaków
 print([(k, len(list(g))) for k, g in itertools.groupby(&quot;aaabbcaa&quot;)])
@@ -261,7 +341,21 @@ for litera, grupa in itertools.groupby(slowa, key=lambda s: s[0]):
     print(litera, list(grupa))
 #Output: k [&#x27;kot&#x27;, &#x27;koza&#x27;]
 #Output: m [&#x27;mysz&#x27;]
-#Output: p [&#x27;pies&#x27;, &#x27;pyton&#x27;]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="operator" style="--c:var(--g7)"><span id="itemgetter" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#operator">operator</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Operatory Pythona w postaci funkcji - przydatne jako argument <code>key=</code> przy sortowaniu oraz w <code>map()</code>, <code>reduce()</code>, <code>accumulate()</code>.</p><ul><li><strong>itemgetter(i)</strong> -&gt; Tworzy funkcję zwracającą <code>x[i]</code>. <code>itemgetter(1, 0)</code> zwraca krotkę <code>(x[1], x[0])</code> - sortowanie po kilku kluczach.</li><li><strong>attrgetter("nazwa")</strong> -&gt; Tworzy funkcję zwracającą atrybut obiektu <code>x.nazwa</code>.</li><li><strong>add, sub, mul, truediv, floordiv, mod, pow</strong> -&gt; Odpowiedniki <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>.</li><li><strong>eq, ne, lt, le, gt, ge</strong> -&gt; Odpowiedniki <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>.</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from operator import itemgetter, mul
+#Output: p [&#x27;pies&#x27;, &#x27;pyton&#x27;]</code></pre></div><h3>pairwise()</h3><span id="pairwise" class="anchor"></span><p>Kolejne pary sąsiednich elementów: <code>(a0, a1), (a1, a2), ...</code> (od Pythona 3.10). Działa jak <code>zip(a, a[1:])</code>, ale dla dowolnego obiektu iterowalnego, także pliku.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from itertools import pairwise
+
+print(list(pairwise([1, 4, 9, 16])))
+#Output: [(1, 4), (4, 9), (9, 16)]
+print(list(pairwise(&quot;abc&quot;)))
+#Output: [(&#x27;a&#x27;, &#x27;b&#x27;), (&#x27;b&#x27;, &#x27;c&#x27;)]
+a = [3, 5, 8, 6, 7, 9, 10, 2]
+print(all(x &lt; y for x, y in pairwise(a)))  # czy ciąg jest rosnący
+#Output: False
+najdl = dl = 1                             # najdłuższy spójny fragment rosnący
+for x, y in pairwise(a):
+    dl = dl + 1 if y &gt; x else 1
+    najdl = max(najdl, dl)
+print(najdl)
+#Output: 4</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="operator" style="--c:var(--g7)"><span id="itemgetter" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#operator">operator</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Operatory Pythona w postaci funkcji - przydatne jako argument <code>key=</code> przy sortowaniu oraz w <code>map()</code>, <code>reduce()</code>, <code>accumulate()</code>.</p><ul><li><strong>itemgetter(i)</strong> -&gt; Tworzy funkcję zwracającą <code>x[i]</code>. <code>itemgetter(1, 0)</code> zwraca krotkę <code>(x[1], x[0])</code> - sortowanie po kilku kluczach.</li><li><strong>attrgetter("nazwa")</strong> -&gt; Tworzy funkcję zwracającą atrybut obiektu <code>x.nazwa</code>.</li><li><strong>add, sub, mul, truediv, floordiv, mod, pow</strong> -&gt; Odpowiedniki <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>.</li><li><strong>eq, ne, lt, le, gt, ge</strong> -&gt; Odpowiedniki <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>.</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from operator import itemgetter, mul
 
 uczniowie = [(&quot;Ola&quot;, 5), (&quot;Jan&quot;, 3), (&quot;Ewa&quot;, 5), (&quot;Adam&quot;, 4)]
 print(sorted(uczniowie, key=itemgetter(1)))
@@ -286,7 +380,7 @@ print(reduce(lambda a, b: a * 10 + b, [1, 2, 3]))  # cyfry -&gt; liczba
 print(reduce(math.gcd, [12, 18, 24]))              # NWD wielu liczb
 #Output: 6
 print(reduce(operator.add, [], 0))                 # wartość początkowa dla pustej listy
-#Output: 0</code></pre></div><h3>lru_cache / cache</h3><span id="cache" class="anchor"></span><p>Dekorator zapamiętujący wyniki funkcji (memoizacja). Gdy funkcja zostanie wywołana ponownie z tymi samymi argumentami, wynik jest brany z pamięci, a nie liczony od nowa. Dzięki temu rekurencja (np. ciąg Fibonacciego) działa błyskawicznie zamiast w czasie wykładniczym. <code>@cache</code> (od Pythona 3.9) to to samo co <code>@lru_cache(maxsize=None)</code>. Argumenty funkcji muszą być niemodyfikowalne (liczby, napisy, krotki - nie listy).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from functools import lru_cache
+#Output: 0</code></pre></div><h3>lru_cache / cache</h3><span id="cache" class="anchor"></span><p>Dekorator zapamiętujący wyniki funkcji (memoizacja). Gdy funkcja zostanie wywołana ponownie z tymi samymi argumentami, wynik jest brany z pamięci, a nie liczony od nowa. Dzięki temu rekurencja (np. ciąg Fibonacciego) działa błyskawicznie zamiast w czasie wykładniczym. <code>@cache</code> (od Pythona 3.9) to to samo co <code>@lru_cache(maxsize=None)</code>. Argumenty funkcji muszą być niemodyfikowalne (liczby, napisy, krotki - nie listy).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python 2</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">from functools import lru_cache
 
 @lru_cache(maxsize=None)
 def fib(n):
@@ -295,7 +389,17 @@ def fib(n):
     return fib(n - 1) + fib(n - 2)
 
 print(fib(10), fib(100))
-#Output: 55 354224848179261915075</code></pre></div><p>Przy bardzo głębokiej rekurencji (np. <code>fib(5000)</code> od razu) Python zgłosi <code>RecursionError</code> - wtedy pomaga <code>sys.setrecursionlimit(10000)</code> albo wersja iteracyjna.</p><h3>cmp_to_key()</h3><span id="cmp_to_key" class="anchor"></span><p>Pozwala sortować według własnej funkcji porównującej <code>porownaj(a, b)</code>, która zwraca liczbę ujemną (a przed b), 0 (równe) lub dodatnią (b przed a).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from functools import cmp_to_key
+#Output: 55 354224848179261915075</code></pre></div><div class="pane" hidden><pre><code class="language-python"># @cache: liczba dróg w siatce (ruchy tylko w prawo i w dół)
+from functools import cache
+
+@cache
+def drogi(w, k):
+    if w == 0 or k == 0:
+        return 1
+    return drogi(w - 1, k) + drogi(w, k - 1)
+
+print(drogi(2, 2), drogi(16, 16))
+#Output: 6 601080390</code></pre></div></div><p>Przy bardzo głębokiej rekurencji (np. <code>fib(5000)</code> od razu) Python zgłosi <code>RecursionError</code> - wtedy pomaga <code>sys.setrecursionlimit(10000)</code> albo wersja iteracyjna.</p><h3>cmp_to_key()</h3><span id="cmp_to_key" class="anchor"></span><p>Pozwala sortować według własnej funkcji porównującej <code>porownaj(a, b)</code>, która zwraca liczbę ujemną (a przed b), 0 (równe) lub dodatnią (b przed a).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from functools import cmp_to_key
 
 def porownaj(a, b):
     if a + b &gt; b + a:
@@ -307,7 +411,106 @@ def porownaj(a, b):
 # największa liczba ułożona z podanych liczb
 liczby = [3, 30, 34, 5, 9]
 print(&quot;&quot;.join(sorted(map(str, liczby), key=cmp_to_key(porownaj))))
-#Output: 9534330</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="enum" style="--c:var(--g2)"><span id="enum-klasa" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#enum">enum</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Typ wyliczeniowy: zbiór nazwanych stałych. Zamiast „magicznych” liczb (np. 1, 2, 3) używamy czytelnych nazw. Na maturze rzadko potrzebny.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from enum import Enum
+#Output: 9534330</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="bisect" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#bisect">bisect</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Wyszukiwanie binarne w <strong>posortowanej</strong> liście - O(log n) zamiast O(n) przy przeglądaniu po kolei.</p><ul><li><strong>bisect_left(a, x)</strong> -&gt; Indeks pierwszego elementu <code>&gt;= x</code> (miejsce wstawienia <code>x</code> przed równymi). Tyle elementów listy jest mniejszych od <code>x</code>.</li><li><strong>bisect_right(a, x)</strong> (to samo co <strong>bisect(a, x)</strong>) -&gt; Indeks pierwszego elementu <code>&gt; x</code>. Tyle elementów jest <code>&lt;= x</code>.</li><li><strong>insort(a, x)</strong> -&gt; Wstawia <code>x</code> tak, żeby lista pozostała posortowana (szukanie jest szybkie, ale samo wstawienie to O(n)).</li><li>Od Pythona 3.10 funkcje przyjmują <code>key=</code>, jak <code>sorted()</code>.</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from bisect import bisect_left, bisect_right, insort
+
+a = [1, 3, 3, 3, 7, 9]
+print(bisect_left(a, 3), bisect_right(a, 3), bisect_left(a, 4))
+#Output: 1 4 4
+print(bisect_right(a, 3) - bisect_left(a, 3))  # ile razy występuje 3
+#Output: 3
+print(bisect_right(a, 7) - bisect_left(a, 2))  # ile elementów z przedziału [2, 7]
+#Output: 4
+i = bisect_left(a, 7)
+print(i &lt; len(a) and a[i] == 7)                # czy 7 jest w liście
+#Output: True
+insort(a, 5)
+print(a)
+#Output: [1, 3, 3, 3, 5, 7, 9]
+progi = [30, 50, 75, 90]                       # numer przedziału, do którego należy wynik
+oceny = &quot;FDCBA&quot;
+print([oceny[bisect_right(progi, p)] for p in [12, 30, 74, 90, 100]])
+#Output: [&#x27;F&#x27;, &#x27;D&#x27;, &#x27;C&#x27;, &#x27;A&#x27;, &#x27;A&#x27;]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="heapq" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#heapq">heapq</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Kopiec (kolejka priorytetowa) na zwykłej liście: <code>kopiec[0]</code> to zawsze <strong>najmniejszy</strong> element, a dodanie i zdjęcie elementu kosztuje O(log n). Python ma tylko kopiec minimalny - kopiec maksymalny uzyskamy, wstawiając liczby ze znakiem minus.</p><ul><li><strong>heappush(kopiec, x)</strong> -&gt; Dodaje element.</li><li><strong>heappop(kopiec)</strong> -&gt; Usuwa i zwraca najmniejszy element.</li><li><strong>heapify(lista)</strong> -&gt; Zamienia listę w kopiec w miejscu (O(n)).</li><li><strong>nlargest(k, iterable, key=None)</strong> / <strong>nsmallest(k, iterable, key=None)</strong> -&gt; Lista <code>k</code> największych / najmniejszych elementów.</li><li>Elementami mogą być krotki <code>(priorytet, dane)</code> - porównywane są najpierw po priorytecie.</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import heapq
+
+kopiec = []
+for x in [5, 1, 8, 3, 2]:
+    heapq.heappush(kopiec, x)
+print(kopiec[0], [heapq.heappop(kopiec) for _ in range(3)])
+#Output: 1 [1, 2, 3]
+a = [9, 4, 7, 1]
+heapq.heapify(a)
+print(heapq.heappop(a), a[0])
+#Output: 1 4
+print(heapq.nlargest(3, [5, 1, 8, 3, 9, 2]), heapq.nsmallest(2, [5, 1, 8, 3, 9, 2]))
+#Output: [9, 8, 5] [1, 2]
+print(heapq.nlargest(2, [&quot;kot&quot;, &quot;hipopotam&quot;, &quot;pies&quot;], key=len))
+#Output: [&#x27;hipopotam&#x27;, &#x27;pies&#x27;]
+maks = []                                      # kopiec maksymalny - liczby z minusem
+for x in [5, 1, 8]:
+    heapq.heappush(maks, -x)
+print(-heapq.heappop(maks))
+#Output: 8
+zadania = [(3, &quot;pranie&quot;), (1, &quot;matura&quot;), (2, &quot;zakupy&quot;)]
+heapq.heapify(zadania)
+while zadania:
+    priorytet, nazwa = heapq.heappop(zadania)
+    print(priorytet, nazwa)
+#Output: 1 matura
+#Output: 2 zakupy
+#Output: 3 pranie</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="datetime" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#datetime">datetime</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Daty w zadaniach maturalnych: ile dni minęło między pomiarami, jaki to dzień tygodnia, dane z kolejnych dni.</p><ul><li><strong>date(rok, miesiąc, dzień)</strong> -&gt; Data.</li><li><strong>date.fromisoformat("2024-05-08")</strong> -&gt; Data z napisu w formacie <code>RRRR-MM-DD</code> (taki format ma wiele plików CKE).</li><li><strong>datetime.strptime(napis, format)</strong> -&gt; Data i czas z napisu w dowolnym formacie, np. <code>&quot;%d.%m.%Y&quot;</code> (<code>%d</code> dzień, <code>%m</code> miesiąc, <code>%Y</code> rok, <code>%H:%M</code> godzina); <code>.date()</code> zostawia samą datę.</li><li><strong>d2 - d1</strong> -&gt; Różnica dat (<code>timedelta</code>); liczba dni to <code>(d2 - d1).days</code>.</li><li><strong>d + timedelta(days=n)</strong> -&gt; Data przesunięta o <code>n</code> dni (są też <code>weeks=</code>, <code>hours=</code>, <code>minutes=</code>).</li><li><strong>.weekday()</strong> -&gt; Dzień tygodnia: 0 = poniedziałek, ..., 6 = niedziela. <strong>.isoweekday()</strong> -&gt; 1 = poniedziałek, ..., 7 = niedziela.</li><li><strong>.year</strong>, <strong>.month</strong>, <strong>.day</strong> -&gt; Części daty.</li><li><strong>.strftime(format)</strong> -&gt; Data jako napis, np. <code>d.strftime(&quot;%d.%m.%Y&quot;)</code>. Nazwy dni i miesięcy (<code>%A</code>, <code>%B</code>) zależą od ustawień systemu, więc polskie nazwy lepiej trzymać we własnej liście.</li><li>Daty można porównywać (<code>&lt;</code>, <code>==</code>), sortować i używać jako kluczy słownika. Napisy <code>RRRR-MM-DD</code> sortują się poprawnie nawet jako zwykły tekst.</li></ul><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · odstępy (w dniach) między kolejnymi datami z pliku</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">from datetime import date, datetime, timedelta
+
+d1 = date(2024, 2, 27)
+d2 = date.fromisoformat(&quot;2024-03-02&quot;)
+print(d2 - d1, (d2 - d1).days)                 # 2024 jest rokiem przestępnym
+#Output: 4 days, 0:00:00 4
+print(d1 + timedelta(days=3), d1 - timedelta(weeks=1))
+#Output: 2024-03-01 2024-02-20
+dni = [&quot;poniedziałek&quot;, &quot;wtorek&quot;, &quot;środa&quot;, &quot;czwartek&quot;, &quot;piątek&quot;, &quot;sobota&quot;, &quot;niedziela&quot;]
+print(d2.weekday(), d2.isoweekday(), dni[d2.weekday()])
+#Output: 5 6 sobota
+print(d2.year, d2.month, d2.day, d2.strftime(&quot;%d.%m.%Y&quot;))
+#Output: 2024 3 2 02.03.2024
+d3 = datetime.strptime(&quot;08.05.2023&quot;, &quot;%d.%m.%Y&quot;).date()
+print(d3, d3 &gt; d2, min(d1, d2, d3))
+#Output: 2023-05-08 False 2023-05-08
+maj = [date(2023, 5, 1) + timedelta(days=i) for i in range(31)]
+print(sum(1 for d in maj if d.weekday() == 6))  # ile niedziel było w maju 2023
+#Output: 4
+t1 = datetime(2024, 5, 8, 9, 0)
+t2 = datetime(2024, 5, 8, 12, 30)
+print(t2 - t1, (t2 - t1).total_seconds() / 60)  # różnica w minutach
+#Output: 3:30:00 210.0</code></pre></div><div class="pane" hidden><pre><code class="language-python"># odstępy (w dniach) między kolejnymi datami z pliku
+from datetime import date
+
+with open(&quot;pomiary.txt&quot;, &quot;w&quot;) as f:
+    f.write(&quot;2023-12-30\n2024-01-02\n2024-01-03\n2024-03-01\n&quot;)
+
+with open(&quot;pomiary.txt&quot;) as f:
+    daty = [date.fromisoformat(linia.strip()) for linia in f]
+print([(b - a).days for a, b in zip(daty, daty[1:])])
+#Output: [3, 1, 58]</code></pre></div></div><h3>calendar</h3><span id="calendar" class="anchor"></span><ul><li><strong>calendar.isleap(rok)</strong> -&gt; <code>True</code>, jeżeli rok jest przestępny (podzielny przez 4 i niepodzielny przez 100 albo podzielny przez 400).</li><li><strong>calendar.monthrange(rok, miesiąc)</strong> -&gt; Krotka (dzień tygodnia 1. dnia miesiąca, liczba dni w miesiącu); dni tygodnia numerowane jak w <code>weekday()</code> (od Pythona 3.12 jako stałe <code>calendar.MONDAY</code>... - <code>int()</code> zamienia je na liczbę).</li><li><strong>calendar.leapdays(r1, r2)</strong> -&gt; Liczba lat przestępnych w przedziale <code>[r1, r2)</code>.</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import calendar
+
+print(calendar.isleap(2024), calendar.isleap(1900), calendar.isleap(2000))
+#Output: True False True
+pierwszy, ile_dni = calendar.monthrange(2024, 2)   # luty 2024 zaczął się w czwartek (3)
+print(int(pierwszy), ile_dni, calendar.monthrange(2023, 2)[1])
+#Output: 3 29 28
+print(calendar.leapdays(2000, 2025))
+#Output: 7
+rok = 2100
+print(rok % 4 == 0 and (rok % 100 != 0 or rok % 400 == 0))  # to samo bez modułu
+#Output: False</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="sys" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#sys">sys</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>sys.setrecursionlimit(n)</strong> -&gt; Podnosi limit głębokości rekurencji (domyślnie ok. 1000 wywołań, potem <code>RecursionError</code>). Przy bardzo głębokiej rekurencji program może mimo to przepełnić stos - wtedy lepiej przepisać algorytm na pętlę.</li><li><strong>sys.getrecursionlimit()</strong> -&gt; Zwraca aktualny limit.</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import sys
+
+sys.setrecursionlimit(10000)
+print(sys.getrecursionlimit())
+#Output: 10000
+
+def dlugosc(lista, i=0):        # rekurencyjne liczenie długości listy
+    if i == len(lista):
+        return 0
+    return 1 + dlugosc(lista, i + 1)
+
+print(dlugosc([0] * 5000))      # przy domyślnym limicie: RecursionError
+#Output: 5000</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="enum" style="--c:var(--g6)"><span id="enum-klasa" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#enum">enum</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Typ wyliczeniowy: zbiór nazwanych stałych. Zamiast „magicznych” liczb (np. 1, 2, 3) używamy czytelnych nazw. Na maturze rzadko potrzebny.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from enum import Enum
 
 class Kolor(Enum):
     CZERWONY = 1
@@ -328,7 +531,7 @@ print(Kolor.CZERWONY == Kolor.CZERWONY, Kolor.CZERWONY == 1)
   <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
   <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
-  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="linki.html">Przydatne linki</a></p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dodaj coś od siebie</a> · <a href="linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>
   <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">

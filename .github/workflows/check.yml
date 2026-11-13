@@ -1,0 +1,30 @@
+name: Sprawdź zmiany
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+    paths:
+      - "dzialy/**"
+      - "tools/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+      - name: Kompilator C++ (GCC 14, C++23)
+        run: sudo apt-get update -q && sudo apt-get install -y -q g++-14
+      - name: Sprawdź Markdown i uruchom kod algorytmów
+        env:
+          CXX: g++-14
+        run: python tools/check.py --run
+      - name: Sprawdź, czy strona się buduje
+        run: python tools/build_site.py

@@ -75,7 +75,7 @@ print(rozne_znaki("AAAABBBCCCBBBAAACC"), rozne_znaki("HANIA"))
 
 ## 4.1 i 4.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -109,7 +109,7 @@ print("4.3", f"{dlugosc:.4f}")
 
 ## 4.2
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 import math
@@ -153,159 +153,3 @@ print("5.3", *max(serie))
 ```
 
 **Odpowiedź:** 5.1: 11; 5.2: najdłuższy 601 (176. wynik), najkrótszy 401 (17. wynik); 5.3: 6 dni, poprawa o 158 cm
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-# asortyment.txt jest zapisany w cp1250 (cena "859,00 zl")
-cena = {}
-with open("asortyment.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_as, nazwa, cena_jedn = line.strip().split("\t")
-        cena[id_as.strip('"')] = float(cena_jedn.split()[0].replace(",", "."))
-
-nazwisko = {}
-with open("dane_osobowe.txt") as file:
-    next(file)
-    for line in file:
-        dane = [x.strip('"') for x in line.strip().split("\t")]
-        nazwisko[dane[0]] = dane[2]
-
-wartosc = {}
-with open("transakcje.txt") as file:
-    next(file)
-    for line in file:
-        id_tr, id_klienta, id_as, ilosc, data = [x.strip('"') for x in line.strip().split("\t")]
-        nazw = nazwisko[id_klienta]
-        if data.split()[0] == "2013-1-4" and (nazw[0].lower() == "o" or nazw[-1].lower() == "o"):
-            wartosc[nazw] = wartosc.get(nazw, 0) + float(ilosc.replace(",", ".")) * cena[id_as]
-
-for nazw in sorted(wartosc):
-    print(nazw, round(wartosc[nazw], 2))
-print("razem", round(sum(wartosc.values()), 2))
-```
-
-**Odpowiedź:** Bogdzio 7 434,71 zł, Opyrchlo 5 872,41 zł, Ottenlinger 4 449,58 zł, Tananko 4 506,48 zł; razem 22 263,18 zł
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-cena = {}
-with open("asortyment.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_as, nazwa, cena_jedn = line.strip().split("\t")
-        cena[id_as.strip('"')] = float(cena_jedn.split()[0].replace(",", "."))
-
-sprzedaz = {}
-with open("transakcje.txt") as file:
-    next(file)
-    for line in file:
-        id_tr, id_klienta, id_as, ilosc, data = [x.strip('"') for x in line.strip().split("\t")]
-        rok, miesiac, dzien = map(int, data.split()[0].split("-"))
-        if id_as == "OO" and (2013, 8) <= (rok, miesiac) <= (2014, 1):
-            sprzedaz[(rok, miesiac)] = sprzedaz.get((rok, miesiac), 0) + float(ilosc.replace(",", ".")) * cena["OO"]
-
-for (rok, miesiac) in sorted(sprzedaz):
-    print(rok, miesiac, round(sprzedaz[(rok, miesiac)], 2))
-```
-
-**Odpowiedź:** 2013 8 1 329 996,80; 2013 9 1 266 883,20; 2013 10 1 351 785,60; 2013 11 1 207 324,80; 2013 12 1 200 320,00; 2014 1 1 559 324,80
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-klient = {}
-with open("dane_osobowe.txt") as file:
-    next(file)
-    for line in file:
-        dane = [x.strip('"') for x in line.strip().split("\t")]
-        klient[dane[0]] = dane[1] + " " + dane[2]
-
-koks = {}
-with open("transakcje.txt") as file:
-    next(file)
-    for line in file:
-        id_tr, id_klienta, id_as, ilosc, data = [x.strip('"') for x in line.strip().split("\t")]
-        if id_as == "K":
-            koks[id_klienta] = koks.get(id_klienta, 0) + float(ilosc.replace(",", "."))
-
-najwiecej = max(koks, key=koks.get)
-print(klient[najwiecej], round(koks[najwiecej], 2))
-```
-
-**Odpowiedź:** Abdiasz Eleryk (30,68 t)
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-kupujacy = set()
-with open("transakcje.txt") as file:
-    next(file)
-    for line in file:
-        dane = [x.strip('"') for x in line.strip().split("\t")]
-        kupujacy.add(dane[1])
-
-with open("dane_osobowe.txt") as file:
-    next(file)
-    for line in file:
-        dane = [x.strip('"') for x in line.strip().split("\t")]
-        if dane[5] == "podlaskie" and dane[0] not in kupujacy:
-            print(dane[1], dane[2])
-```
-
-**Odpowiedź:** Eulalia Dryzba, Luba Kierzek, Tycjan Parobi
-
-## 6.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-cena = {}
-with open("asortyment.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_as, nazwa, cena_jedn = line.strip().split("\t")
-        cena[id_as.strip('"')] = float(cena_jedn.split()[0].replace(",", "."))
-
-urzad = {}
-with open("us.txt") as file:
-    next(file)
-    for line in file:
-        id_us, nazwa_us = line.strip().split("\t")
-        urzad[id_us] = nazwa_us.strip('"')
-
-urzad_klienta = {}
-with open("dane_osobowe.txt") as file:
-    next(file)
-    for line in file:
-        dane = [x.strip('"') for x in line.strip().split("\t")]
-        urzad_klienta[dane[0]] = urzad[dane[3]]
-
-zestawienie = {}      # nazwa urzedu -> [koks, mial]
-with open("transakcje.txt") as file:
-    next(file)
-    for line in file:
-        id_tr, id_klienta, id_as, ilosc, data = [x.strip('"') for x in line.strip().split("\t")]
-        nazwa_us = urzad_klienta[id_klienta]
-        if id_as in ("K", "M") and "Warszawa" in nazwa_us:
-            if nazwa_us not in zestawienie:
-                zestawienie[nazwa_us] = [0, 0]
-            wartosc = float(ilosc.replace(",", ".")) * cena[id_as]
-            zestawienie[nazwa_us][0 if id_as == "K" else 1] += wartosc
-
-for nazwa_us in sorted(zestawienie):
-    koks, mial = zestawienie[nazwa_us]
-    print(nazwa_us, round(koks, 2), round(mial, 2))
-```
-
-**Odpowiedź:** (koks; miał) Pierwszy US Warszawa-Śródmieście 41 086,55; 14 105,51, Trzeci US Warszawa-Śródmieście 14 105,03; 16 808,26, US Warszawa-Bemowo 20 433,17; 33 149,94, Bielany 35 013,39; 11 954,69, Mokotów 27 271,27; 17 291,91, Praga 3 094,53; 16 552,21, Targówek 27 537,84; 8 523,62, Ursynów 8 889,53; 10 264,76, Wawer 22 612,09; 4 017,14, Wola 6 177,47; 28 478,45

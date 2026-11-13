@@ -42,7 +42,7 @@ MAIN_PAGES = [
 ]
 
 BADGES = {
-    "py": "Python", "c++": "C++", "java": "Java", "excel": "Excel", "access": "Access",
+    "py": "Python", "c++": "C++", "java": "Java", "excel": "Excel",
 }
 NEGATIVE_BADGES = {"nopy": "py", "notpy": "py"}
 
@@ -232,10 +232,13 @@ def code_block(lang, lines, ctx):
     first = code.split("\n", 1)[0].strip()
     note = ""
     comment = r"^#\s*\S" if lang in ("python", "py") else r"^//\s*\S"
-    if lang in ("python", "py", "cpp", "c++") and re.match(comment, first) and len(first) < 60:
+    if lang in ("python", "py", "cpp", "c++", "java") and re.match(comment, first) and len(first) < 60:
         note = re.sub(r"^(#|//)\s*", "", first).strip()
         note = NOTE_PL.get(note.lower(), note)
-    hl = {"python": "python", "py": "python", "cpp": "cpp", "c++": "cpp", "java": "java", "sql": "sql"}.get(lang)
+        # "// C++23" / "// Java 25" -> zakładka "C++23" zamiast "C++ · C++23"
+        if re.fullmatch(r"(C\+\+\d\d|Java \d+)", note):
+            label, note = note, ""
+    hl ={"python": "python", "py": "python", "cpp": "cpp", "c++": "cpp", "java": "java", "sql": "sql"}.get(lang)
     cls = "language-%s" % hl if hl else "nohighlight"
     return {"label": label, "note": note, "html": '<pre><code class="%s">%s</code></pre>' % (cls, html.escape(code))}
 
@@ -248,15 +251,14 @@ def render_code_group(blocks):
         return ('<div class="code%s"><div class="code-bar"><span>%s</span>'
                 '<button class="copy" type="button">Kopiuj</button></div>%s</div>' % (pseudo, title, b["html"]))
     tabs, panes = [], []
-    titles = [b["label"] + (" · " + html.escape(b["note"]) if b["note"] else "") for b in blocks]
-    for i, t in enumerate(titles):
-        if titles.count(t) > 1:
-            titles[i] = "%s %d" % (t, titles[:i + 1].count(t))
+    base = [b["label"] + (" · " + html.escape(b["note"]) if b["note"] else "") for b in blocks]
+    titles = ["%s %d" % (t, base[:i + 1].count(t)) if base.count(t) > 1 else t for i, t in enumerate(base)]
     for i, b in enumerate(blocks):
         title = titles[i]
         sel = "true" if i == 0 else "false"
+        lang = "c" if b["label"].startswith("C++") else ("java" if b["label"].startswith("Java") else slugify(b["label"]))
         tabs.append('<button type="button" role="tab" aria-selected="%s" class="tab" data-lang="%s">%s</button>'
-                    % (sel, slugify(b["label"]), title))
+                    % (sel, lang, title))
         panes.append('<div class="pane%s"%s>%s</div>' % (" pseudo" if b["label"] == "Pseudokod" else "",
                                                          "" if i == 0 else " hidden", b["html"]))
     return ('<div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist">%s</div>'
@@ -625,7 +627,9 @@ def build_page(src, out, kind, page_map):
         group = '<p class="eyebrow">%s</p>' % html.escape(s["group"]) if s.get("group") else ""
         idx = '<span class="idx">%s</span>' % s["idx"] if s.get("idx") else ""
         sub = '<p class="sub">%s</p>' % html.escape(s["subtitle"]) if s.get("subtitle") else ""
-        langs = "".join('<span class="lang lang-%s">%s</span>' % (slugify(l), html.escape(l)) for l in s["langs"])
+        langs = "".join('<span class="lang lang-%s">%s</span>'
+                        % ("c" if l.startswith("C++") else "java" if l.startswith("Java") else slugify(l), html.escape(l))
+                        for l in s["langs"])
         langs = '<div class="langs">%s</div>' % langs if langs else ""
         style = ' style="--c:var(--g%d)"' % s["color"] if s.get("color") else ""
         body.append('<section class="card%s" id="%s"%s>%s<header class="card-head">%s<div class="head-text">%s'
@@ -735,7 +739,7 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
   <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="{repo}/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
   <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
-  <p><a href="{repo}" target="_blank" rel="noopener">GitHub</a> · <a href="{repo}/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="{root}linki.html">Przydatne linki</a></p>
+  <p><a href="{repo}" target="_blank" rel="noopener">GitHub</a> · <a href="{repo}/issues/new/choose" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="{repo}/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dodaj coś od siebie</a> · <a href="{root}linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>
   <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
@@ -869,7 +873,8 @@ def main():
     print("Zbudowano %d stron w %s" % (len(built) + 1, DOCS))
 
 
-EXAM_GROUP_COLORS = {"zbiór": 4, "matura próbna": 3, "matura podstawowa": 2, "matura": 1}
+EXAM_GROUP_COLORS = {"zbiór": 4, "matura próbna": 3, "matura podstawowa": 2, "matura (formuła 2023)": 1,
+                     "matura (formuła 2015)": 5, "matura (stara formuła": 6, "matura": 1}
 
 
 def exam_index_html(src, out, page_map, exam_info):
@@ -905,8 +910,8 @@ def exam_index_html(src, out, page_map, exam_info):
             close_group()
             group_title, cards, intro = m.group(1).strip(), [], []
             continue
-        if group_title is None or not s:
-            continue
+        if group_title is None or not s or re.match(r"^\[[^\]]+\]:\s", s):
+            continue  # pomijamy też definicje znaczków [py]: https://...
         m = re.match(r"^[-*]\s+(.*?)\[([^\]]+)\]\(([^)]+\.md)\)(.*)$", s)
         if m:
             badges, label, path, rest = m.groups()
@@ -962,7 +967,7 @@ def home_page(stats, exams, exam_titles, page_map):
 <section class="hero">
   <p class="eyebrow">Matura z informatyki · Python · CKE</p>
   <h1>Wiedza nie powinna mieć&nbsp;ceny.</h1>
-  <p class="lead">Wszystkie algorytmy z wymagań CKE z kodem w Pythonie i pseudokodem, dodatkowe algorytmy oraz rozwiązania arkuszy maturalnych z odpowiedziami. Inni chowają to za paywallem — tu masz wszystko za darmo.</p>
+  <p class="lead">Wszystkie algorytmy z wymagań CKE w Pythonie, C++ i Javie z pseudokodem, dodatkowe algorytmy oraz rozwiązania arkuszy maturalnych z odpowiedziami. Inni chowają to za paywallem — tu masz wszystko za darmo.</p>
   <ul class="manifest" aria-label="Zasady">
     <li><b>0 zł</b><span>bez opłat i abonamentów</span></li>
     <li><b>0 reklam</b><span>nic nie rozprasza</span></li>
@@ -975,7 +980,7 @@ def home_page(stats, exams, exam_titles, page_map):
 <section class="tiles">
   <a class="tile" style="--c:var(--g1)" href="algorytmy.html"><span class="tile-icon" aria-hidden="true">⇅</span><span class="num">{n_algo}</span><h2>Algorytmy z wymagań CKE</h2><p>Liczby, sortowania, wyszukiwanie, numeryczne, teksty, szyfry, geometria.</p></a>
   <a class="tile" style="--c:var(--g5)" href="dodatkowe.html"><span class="tile-icon" aria-hidden="true">+</span><span class="num">{n_extra}</span><h2>Dodatkowe algorytmy</h2><p>Średnie, mediana, moda, KMP, Boyer-Moore, Manacher, geometria analityczna.</p></a>
-  <a class="tile" style="--c:var(--g3)" href="arkusze.html"><span class="tile-icon" aria-hidden="true">✎</span><span class="num">{n_exam}</span><h2>Rozwiązane arkusze</h2><p>Matury 2005–2021: rozszerzona, podstawowa, próbne + {n_zb} zadań ze zbioru CKE.</p></a>
+  <a class="tile" style="--c:var(--g3)" href="arkusze.html"><span class="tile-icon" aria-hidden="true">✎</span><span class="num">{n_exam}</span><h2>Rozwiązane arkusze</h2><p>Matury 2005–2026: formuła 2023, 2015, stara, próbne + {n_zb} zadań ze zbioru CKE.</p></a>
   <a class="tile" style="--c:var(--g2)" href="funkcje.html"><span class="tile-icon" aria-hidden="true">Py</span><span class="num">3</span><h2>Ściągi z Pythona</h2><p>Funkcje wbudowane, metody i przydatne moduły.</p></a>
 </section>
 <h2 class="section-title">Szybki dostęp: wymagania CKE</h2>
@@ -991,7 +996,7 @@ def home_page(stats, exams, exam_titles, page_map):
 </section>
 """.format(n_algo=n_algo, n_extra=n_extra, n_exam=n_exam, n_zb=n_zb, quick="".join(quick))
     desc = ("Darmowe materiały do matury z informatyki: wszystkie algorytmy z wymagań CKE w Pythonie z pseudokodem, "
-            "dodatkowe algorytmy i rozwiązania arkuszy maturalnych 2005-2021 z odpowiedziami.")
+            "dodatkowe algorytmy i rozwiązania arkuszy maturalnych 2005-2026 z odpowiedziami.")
     return layout("index.html", "Matura z informatyki - algorytmy i arkusze w Pythonie", desc, content)
 
 

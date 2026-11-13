@@ -159,7 +159,7 @@ print(bin(maks)[2:], maks)
 
 ## 5.1, 5.2 i 5.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 from datetime import date, timedelta
@@ -213,7 +213,7 @@ print("5.4", masa)
 
 ## 5.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 from datetime import date, timedelta
@@ -235,112 +235,3 @@ with open("wykres_5_3.txt", "w") as wynik:
 ```
 
 **Odpowiedź:** wykres liniowy (oś X — data, oś Y — masa drewna wieczorem) tworzymy z pliku `wykres_5_3.txt`
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-osoby = {}
-with open("osoby.txt") as file:
-    next(file)
-    for line in file:
-        id_osoby, imie, nazwisko = line.strip().split("\t")
-        osoby[id_osoby] = (nazwisko, imie)
-
-rezerwacje = {}
-with open("rezerwacje.txt") as file:
-    next(file)
-    for line in file:
-        id_rezerwacji, id_osoby, id_wycieczki, dorosli, dzieci = line.strip().split("\t")
-        rezerwacje[id_osoby] = rezerwacje.get(id_osoby, 0) + 1
-
-lista = [osoby[id_osoby] for id_osoby in rezerwacje if rezerwacje[id_osoby] > 3]
-for nazwisko, imie in sorted(lista):
-    print(imie, nazwisko)
-```
-
-**Odpowiedź:** Sylwia Adamska, Marcin Ciesielski, Pawel Dziminski, Klaudia Kapuscinska, Ewelina Lagun, Michal Majewski, Katarzyna Michalak, Kamila Olobry, Piotr Otorowski, Danuta Pawezowska, Tomasz Stefanczyk, Pawel Straciuk, Monika Wer
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-osoby = {}
-with open("osoby.txt") as file:
-    next(file)
-    for line in file:
-        id_osoby, imie, nazwisko = line.strip().split("\t")
-        osoby[id_osoby] = imie + " " + nazwisko
-
-cena = {}
-with open("wycieczki.txt") as file:
-    next(file)
-    for line in file:
-        dane = line.strip().split("\t")
-        cena[dane[0]] = int(dane[6])
-
-zaplacone = {}
-with open("rezerwacje.txt") as file:
-    next(file)
-    for line in file:
-        id_rezerwacji, id_osoby, id_wycieczki, dorosli, dzieci = line.strip().split("\t")
-        koszt = cena[id_wycieczki] * (int(dorosli) + 0.5 * int(dzieci))
-        zaplacone[id_osoby] = zaplacone.get(id_osoby, 0) + koszt
-
-najwiecej = max(zaplacone, key=zaplacone.get)
-print(osoby[najwiecej], zaplacone[najwiecej])
-```
-
-**Odpowiedź:** Marcin Ciesielski, 34 017,50 zł
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-miesiac_wyjazdu = {}
-with open("wycieczki.txt") as file:
-    next(file)
-    for line in file:
-        dane = line.strip().split("\t")
-        miesiac_wyjazdu[dane[0]] = int(dane[4][5:7])
-
-nazwy = {6: "czerwiec", 7: "lipiec", 8: "sierpien", 9: "wrzesien"}
-liczba = {}
-with open("rezerwacje.txt") as file:
-    next(file)
-    for line in file:
-        id_rezerwacji, id_osoby, id_wycieczki, dorosli, dzieci = line.strip().split("\t")
-        miesiac = miesiac_wyjazdu[id_wycieczki]
-        liczba[miesiac] = liczba.get(miesiac, 0) + 1
-
-for miesiac in sorted(liczba):
-    print(nazwy[miesiac], liczba[miesiac])
-```
-
-**Odpowiedź:** czerwiec 76, lipiec 505, sierpień 291, wrzesień 28
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-zestawienie = {}
-lotniska = set()
-with open("wycieczki.txt") as file:
-    next(file)
-    for line in file:
-        id_wycieczki, kraj, miejsce, wylot, data_od, data_do, cena = line.strip().split("\t")
-        lotniska.add(wylot)
-        zestawienie[(kraj, wylot)] = zestawienie.get((kraj, wylot), 0) + 1
-
-lotniska = sorted(lotniska)
-kraje = sorted(set(kraj for kraj, wylot in zestawienie))
-print("kraj", *lotniska)
-for kraj in kraje:
-    print(kraj, *[zestawienie.get((kraj, wylot), 0) for wylot in lotniska])
-```
-
-**Odpowiedź:** (Gdansk, Katowice, Krakow, Lodz, Poznan, Warszawa, Wroclaw) Bulgaria 26 19 17 22 24 20 25; Egipt 20 49 14 3 21 26 22; Grecja 27 26 25 33 17 29 19; Hiszpania 19 31 12 19 17 25 26; Maroko 21 22 26 26 23 21 28; Tunezja 23 26 13 32 20 25 25; Turcja 17 23 22 30 23 24 18

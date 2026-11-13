@@ -165,7 +165,7 @@ with open("dane1.txt") as dane1, open("dane2.txt") as dane2, open("wynik4_4.txt"
 
 ## 5.1
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 suma = 0
@@ -186,7 +186,7 @@ print(f"{suma / ile:.2f}")
 
 ## 5.2
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 wystapienia = [{} for _ in range(10)]  # dla każdego czujnika: kelwiny -> liczba wystąpień
@@ -212,7 +212,7 @@ for c in range(10):
 
 ## 5.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 suma = {}
@@ -233,7 +233,7 @@ for miesiac in sorted(suma):
 
 ## 5.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 przedzial1 = 0  # (-10, 15]
@@ -259,7 +259,7 @@ else:
 
 ## 5.5
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 def na_setne(tekst):
@@ -310,155 +310,3 @@ for data in ["2017-05-05", "2017-07-07"]:
     print("  wnioski I, II i III:", *[napis(t) for t in abc])
 ```
 **Odpowiedź:** 2017-05-05 07:05: I i II - czujnik1 9,46, czujnik2 9,39, czujnik8 14,52, czujnik9 10,45; I, II i III - 10,36, 10,29, 15,42, 11,35. 2017-07-07 00:04: 23,42, 19,39, 26,67, 20,70 (w obu wariantach)
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-from datetime import date
-
-ceny = {}
-with open("ceny_za_dobe.txt") as file:
-    next(file)
-    for line in file:
-        klasa, cena = line.strip().split(";")
-        ceny[klasa] = int(cena)
-
-samochody = {}  # nr ewidencyjny -> (klasa, nr rejestracyjny)
-with open("samochody.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_firmowy, miejscowosc, nr_rej = line.strip().split(";")
-        samochody[nr_ew] = (nr_firmowy[0], nr_rej)
-
-klienci = {}  # nr klienta -> (imię, nazwisko)
-with open("klienci.txt") as file:
-    next(file)
-    for line in file:
-        nr_klienta, imie, nazwisko = line.strip().split(";")
-        klienci[nr_klienta] = (imie, nazwisko)
-
-
-def na_date(tekst):
-    r, m, d = map(int, tekst.split("-"))
-    return date(r, m, d)
-
-
-zestawienie = []
-with open("wypozyczenia.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(";")
-        imie, nazwisko = klienci[nr_klienta]
-        klasa, nr_rej = samochody[nr_ew]
-        doby = (na_date(zwrot) - na_date(wypozyczenie)).days
-        zestawienie.append((nazwisko, imie, nr_rej, doby, doby * ceny[klasa]))
-
-zestawienie.sort()
-print(*zestawienie[0])
-print(*zestawienie[-1])
-```
-**Odpowiedź:** pierwszy: Aabacka Nela WI1150 2 160,00 zł; ostatni: Zgbacka Aaricia WI1126 11 880,00 zł
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-klasa = {}  # nr ewidencyjny -> klasa samochodu
-with open("samochody.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_firmowy, miejscowosc, nr_rej = line.strip().split(";")
-        klasa[nr_ew] = nr_firmowy[0]
-
-wypozyczenia = {}
-with open("wypozyczenia.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(";")
-        k = klasa[nr_ew]
-        wypozyczenia[k] = wypozyczenia.get(k, 0) + 1
-
-for k in sorted(wypozyczenia):
-    print(k, wypozyczenia[k])
-```
-**Odpowiedź:** B 100, C 48, D 53
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-klienci = {}
-with open("klienci.txt") as file:
-    next(file)
-    for line in file:
-        nr_klienta, imie, nazwisko = line.strip().split(";")
-        klienci[nr_klienta] = (imie, nazwisko)
-
-ile = {}
-with open("wypozyczenia.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(";")
-        ile[nr_klienta] = ile.get(nr_klienta, 0) + 1
-
-najwiecej = max(ile.values())
-for nr_klienta in ile:
-    if ile[nr_klienta] == najwiecej:
-        print(*klienci[nr_klienta], najwiecej)
-```
-**Odpowiedź:** Ramzes Hcbacki, 5 wypożyczeń
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wypozyczane = set()
-with open("wypozyczenia.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(";")
-        wypozyczane.add(nr_ew)
-
-zestawienie = {}  # (miejscowość, klasa) -> liczba niewypożyczanych samochodów
-with open("samochody.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_firmowy, miejscowosc, nr_rej = line.strip().split(";")
-        if nr_ew not in wypozyczane:
-            klucz = (miejscowosc, nr_firmowy[0])
-            zestawienie[klucz] = zestawienie.get(klucz, 0) + 1
-
-for miejscowosc, klasa in sorted(zestawienie):
-    print(miejscowosc, klasa, zestawienie[(miejscowosc, klasa)])
-print("razem:", sum(zestawienie.values()))
-```
-**Odpowiedź:** (B, C, D) Aniolkowo 12 8 7, Manipulatowo 31 14 11, Nieszczerzyn 17 9 4 (tyle podaje klucz CKE), program wypisuje też Piarowa 16 18 8, Wielka Wola 25 11 7
-
-## 6.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wypozyczajacy = set()
-with open("wypozyczenia.txt") as file:
-    next(file)
-    for line in file:
-        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(";")
-        wypozyczajacy.add(nr_klienta)
-
-licznik = 0
-with open("klienci.txt") as file:
-    next(file)
-    for line in file:
-        nr_klienta, imie, nazwisko = line.strip().split(";")
-        if nr_klienta not in wypozyczajacy:
-            licznik += 1
-
-print(licznik)
-```
-**Odpowiedź:** 72

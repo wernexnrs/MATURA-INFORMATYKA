@@ -61,7 +61,7 @@ print(suma_przekatnej(1), suma_przekatnej(6), suma_przekatnej(8))
 
 ## 4.1, 4.2 i 4.4
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 def doswiadczenie(porcja):
@@ -103,7 +103,7 @@ print("4.4", setne / 100)
 
 ## 4.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 # dane do wykresu liniowego: minuta, woda, substancja X
@@ -174,135 +174,3 @@ for p in range(2, 101):
 ```
 
 **Odpowiedź:** 5.1: 4; 5.2: 8; 5.3: w 51. pokoleniu, 8 żywych komórek
-
-## 6.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-malarze = {}
-with open("malarze.txt") as file:
-    next(file)
-    for line in file:
-        id_malarza, nazwisko, imie = line.strip().split("\t")
-        malarze[id_malarza] = imie + " " + nazwisko
-
-wystawione = {}
-with open("obrazy.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_obrazu, tytul, id_malarza, id_oddzialu, stan = line.strip().split("\t")
-        if stan in ("ekspozycja stala", "ekspozycja czasowa"):
-            wystawione[id_malarza] = wystawione.get(id_malarza, 0) + 1
-
-ranking = sorted(wystawione.items(), key=lambda x: x[1], reverse=True)
-for id_malarza, ile in ranking[:2]:
-    print(malarze[id_malarza], ile)
-```
-
-**Odpowiedź:** Jacek Malczewski 25, Jan Matejko 11
-
-## 6.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-malarze = {}
-with open("malarze.txt") as file:
-    next(file)
-    for line in file:
-        id_malarza, nazwisko, imie = line.strip().split("\t")
-        malarze[id_malarza] = imie + " " + nazwisko
-
-with open("obrazy.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_obrazu, tytul, id_malarza, id_oddzialu, stan = line.strip().split("\t")
-        if "polowanie" in tytul or "Polowanie" in tytul:
-            print(tytul, "-", malarze[id_malarza])
-```
-
-**Odpowiedź:** Zjazd na polowanie — Józef Chełmoński; Polowanie na kaczki — Julian Fałat; Wyjazd na polowanie, Polowanie w lesie — Maksymilian Gierymski; Polowanie w Poturzycy, Polowanie na lisa — Juliusz Kossak
-
-## 6.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-# plik oddzialy.txt jest zapisany w UTF-16
-miejscowosc = {}
-with open("oddzialy.txt", encoding="utf-16") as file:
-    next(file)
-    for line in file:
-        id_oddzialu, nazwa = line.strip().split("\t")
-        miejscowosc[id_oddzialu] = nazwa
-
-stany = ["ekspozycja czasowa", "ekspozycja stala", "w magazynie", "wypozyczony"]
-zestawienie = {}
-with open("obrazy.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_obrazu, tytul, id_malarza, id_oddzialu, stan = line.strip().split("\t")
-        nazwa = miejscowosc[id_oddzialu]
-        if nazwa not in zestawienie:
-            zestawienie[nazwa] = {s: 0 for s in stany}
-        zestawienie[nazwa][stan] += 1
-
-print("miejscowosc", *stany, sep=";")
-for nazwa in sorted(zestawienie):
-    print(nazwa, *[zestawienie[nazwa][s] for s in stany], sep=";")
-```
-
-**Odpowiedź:** (ekspozycja czasowa; stała; w magazynie; wypożyczony) Gdansk 1 15 2 1, Krakow 7 20 9 8, Nieborow 4 10 2 2, Warszawa 68 65 47 52, Wroclaw 4 15 6 1
-
-## 6.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-with open("oddzialy.txt", encoding="utf-16") as file:
-    next(file)
-    for line in file:
-        id_oddzialu, nazwa = line.strip().split("\t")
-        if nazwa == "Warszawa":
-            id_warszawy = id_oddzialu
-
-litery = {}
-with open("obrazy.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_obrazu, tytul, id_malarza, id_oddzialu, stan = line.strip().split("\t")
-        if id_oddzialu == id_warszawy:
-            litera = tytul[0].upper()
-            litery[litera] = litery.get(litera, 0) + 1
-
-print(max(litery, key=litery.get))
-```
-
-**Odpowiedź:** P
-
-## 6.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-malarze = {}
-with open("malarze.txt") as file:
-    next(file)
-    for line in file:
-        id_malarza, nazwisko, imie = line.strip().split("\t")
-        malarze[id_malarza] = imie + " " + nazwisko
-
-wypozyczone = {}
-with open("obrazy.txt", encoding="cp1250") as file:
-    next(file)
-    for line in file:
-        id_obrazu, tytul, id_malarza, id_oddzialu, stan = line.strip().split("\t")
-        if stan == "wypozyczony":
-            wypozyczone[id_malarza] = wypozyczone.get(id_malarza, 0) + 1
-
-najlepszy = max(wypozyczone, key=wypozyczone.get)
-print(malarze[najlepszy], wypozyczone[najlepszy])
-```
-
-**Odpowiedź:** Jacek Malczewski

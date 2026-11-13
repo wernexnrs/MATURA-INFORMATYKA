@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matura 2024 — maj, poziom rozszerzony (formuła 2023) | Matura z informatyki</title>
+<meta name="description" content="Matura 2024 — maj, poziom rozszerzony (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1 i 2.2, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3 i 4.4).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Matura 2024 — maj, poziom rozszerzony (formuła 2023)">
+<meta property="og:description" content="Matura 2024 — maj, poziom rozszerzony (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1 i 2.2, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3 i 4.4).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Matura 2024 — maj, poziom rozszerzony (formuła 2023)", "description": "Matura 2024 — maj, poziom rozszerzony (formuła 2023) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1 i 2.2, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3 i 4.4).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#3-1">3.1</a></li><li><a href="#3-2">3.2</a></li><li><a href="#3-3">3.3</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2024 — maj, poziom rozszerzony (formuła 2023)</span></nav>
+<h1 class="page-title">Matura 2024 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(A):
+    n = len(A)
+    m = len(A[0])
+    P = [[False] * m for _ in range(n)]
+    P[0][0] = True
+    for i in range(n):
+        for j in range(m):
+            if A[i][j] == 0:
+                P[i][j] = False
+            elif i == 0 and j != 0:
+                P[i][j] = P[i][j - 1]
+            elif i != 0 and j == 0:
+                P[i][j] = P[i - 1][j]
+            elif i != 0 and j != 0:
+                P[i][j] = P[i][j - 1] or P[i - 1][j]
+    return P[n - 1][m - 1]
+
+
+# 1.1 (1 - pole białe, 0 - pole czarne)
+a = [[1, 1, 1],
+     [0, 1, 0],
+     [1, 1, 1]]
+b = [[1, 1, 1],
+     [0, 0, 1],
+     [1, 1, 1],
+     [1, 0, 0],
+     [1, 1, 1]]
+c = [[1, 0, 0, 0, 0],
+     [1, 1, 0, 0, 1],
+     [0, 1, 0, 0, 1],
+     [0, 1, 1, 1, 0],
+     [0, 1, 0, 1, 1]]
+for plansza in [a, b, c]:
+    print(algorytm(plansza))
+
+# 1.2 - sprawdzenie przykładowych plansz
+a2 = [[1, 1, 1, 1, 1],
+      [1, 1, 1, 1, 1],
+      [1, 1, 1, 1, 1],
+      [1, 1, 1, 1, 0],
+      [1, 1, 1, 0, 1]]
+b2 = [[1, 0, 0, 0],
+      [1, 0, 0, 0],
+      [1, 0, 0, 0],
+      [1, 1, 1, 1]]
+print(algorytm(a2), algorytm(b2))
+
+# 1.3 - sprawdzenie wzoru (n-1)^2 dla małych plansz (przegląd wszystkich plansz)
+for n in range(2, 5):
+    najwiecej = 0
+    for maska in range(2 ** (n * n)):
+        A = [[0 if maska &gt;&gt; (i * n + j) &amp; 1 else 1 for j in range(n)] for i in range(n)]
+        if A[0][0] == 1 and A[n - 1][n - 1] == 1 and algorytm(A):
+            czarne = sum(row.count(0) for row in A)
+            najwiecej = max(najwiecej, czarne)
+    print(n, najwiecej, (n - 1) ** 2)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: a) PRAWDA, b) FAŁSZ, c) PRAWDA. 1.2: algorytm zwraca PRAWDA wtedy i tylko wtedy, gdy istnieje ścieżka po białych polach z lewego górnego do prawego dolnego rogu, poruszając się tylko w prawo lub w dół; a) np. plansza 5 × 5 z czarnymi polami (4, 5) i (5, 4) — FAŁSZ; b) np. plansza 4 × 4, w której białe są tylko pierwsza kolumna i ostatni wiersz (9 pól czarnych) — PRAWDA. 1.3: (n − 1)² (ścieżka z rogu do rogu ma zawsze 2n − 1 białych pól, więc czarnych może być n² − (2n − 1)).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+    b = 1
+    c = 0
+    wykonania = 0
+    while n &gt; 0:
+        a = n % 10
+        n = n // 10
+        if a % 2 == 0:
+            c = c + b * (a // 2)
+        else:
+            c = c + b
+            wykonania += 1
+        b = b * 10
+    return c, wykonania
+
+
+# 2.1
+for n in [33658, 542102, 87654321012345678]:
+    print(n, *algorytm(n))
+
+# 2.2
+n = int(&quot;3&quot; * 6 + &quot;6&quot; * 6 + &quot;9&quot; * 6)
+print(algorytm(n)[0])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 33658 → 11314, 3 wykonania; 542102 → 121101, 2 wykonania; 87654321012345678 → 41312111011121314, 8 wykonań. 2.2: c = 111111333333111111.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1">3.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrot(n):
+    m = 0
+    p = 1
+    while n &gt; 0:
+        cyfra = n % 10
+        if cyfra % 2 != 0:
+            m = m + cyfra * p
+            p = p * 10
+        n = n // 10
+    return m
+
+
+for n in [294762, 39101]:
+    print(n, skrot(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> funkcja <code>skrot</code> (np. skrot(294762) = 97, skrot(39101) = 3911).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-2">3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrot(n):
+    m = 0
+    p = 1
+    while n &gt; 0:
+        cyfra = n % 10
+        if cyfra % 2 != 0:
+            m = m + cyfra * p
+            p = p * 10
+        n = n // 10
+    return m
+
+
+with open(&quot;skrot.txt&quot;) as file:
+    liczby = [int(wiersz) for wiersz in file]
+
+bez_skrotu = [n for n in liczby if skrot(n) == 0]
+print(len(bez_skrotu))
+print(max(bez_skrotu))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 18 liczb, największa z nich: 28422.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-3">3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import gcd
+
+
+def skrot(n):
+    m = 0
+    p = 1
+    while n &gt; 0:
+        cyfra = n % 10
+        if cyfra % 2 != 0:
+            m = m + cyfra * p
+            p = p * 10
+        n = n // 10
+    return m
+
+
+with open(&quot;skrot2.txt&quot;) as file:
+    for wiersz in file:
+        n = int(wiersz)
+        if gcd(n, skrot(n)) == 7:
+            print(n)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 784, 14196, 2247, 24087, 3871, 10192.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;liczby.txt&quot;) as file:
+    pierwsze = [int(x) for x in file.readline().split()]
+    liczby = [int(x) for x in file.readline().split()]
+
+# 4.1
+ile = 0
+for p in pierwsze:
+    for x in liczby:
+        if x % p == 0:
+            ile += 1
+            break
+print(&quot;4.1&quot;, ile)
+
+# 4.2
+posortowane = sorted(pierwsze, reverse=True)
+print(&quot;4.2&quot;, posortowane[100])
+
+# 4.3
+wystapienia = {}
+for p in pierwsze:
+    wystapienia[p] = wystapienia.get(p, 0) + 1
+
+wynik = []
+for x in liczby:
+    reszta = x
+    dobra = True
+    for p in wystapienia:
+        ile_razy = 0
+        while reszta % p == 0:
+            reszta //= p
+            ile_razy += 1
+        if ile_razy &gt; wystapienia[p]:
+            dobra = False
+    if dobra and reszta == 1:
+        wynik.append(x)
+print(&quot;4.3&quot;, *wynik)
+
+# 4.4
+n = len(pierwsze)
+prefiks = [0] * (n + 1)
+for i in range(n):
+    prefiks[i + 1] = prefiks[i] + pierwsze[i]
+
+najl_suma, najl_dl, najl_start = 0, 1, -1
+for start in range(n):
+    for koniec in range(start + 50, n + 1):
+        suma = prefiks[koniec] - prefiks[start]
+        dl = koniec - start
+        # suma / dl &gt; najl_suma / najl_dl, bez ułamków
+        if najl_start == -1 or suma * najl_dl &gt; najl_suma * dl:
+            najl_suma, najl_dl, najl_start = suma, dl, start
+print(&quot;4.4&quot;, najl_suma / najl_dl, najl_dl, pierwsze[najl_start])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 212. 4.2: 1933. 4.3: 547839600, 2954285, 573219169, 573549984, 212444924. 4.4: średnia 1200,704918… (≈ 1200,70), 61 elementów, pierwszy element 1847.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dodaj coś od siebie</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

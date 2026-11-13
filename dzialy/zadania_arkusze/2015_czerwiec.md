@@ -91,7 +91,7 @@ print(ile_triad([5, 15, 2, 3, 6, 9, 10, 11, 13, 14, 17, 19, 20, 23, 24]))
 
 ## 4.1
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 from datetime import date, timedelta
@@ -118,7 +118,7 @@ for (rok, miesiac), tony in miesiace.items():
 
 ## 4.3
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 ceny = [685, 620, 380]  # kostka, orzech, miał [zł/t]
@@ -136,7 +136,7 @@ print(koszt)
 
 ## 4.4, 4.5 i 4.6
 
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+*Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.*
 
 ```py
 from datetime import date, timedelta
@@ -178,195 +178,6 @@ print("4.5", pierwszy_mial)
 print("4.6", podtrzymanie)
 ```
 **Odpowiedź:** 4.4: kostka 87, orzech 64, miał 29 dni; 4.5: 2014-10-18; 4.6: 3 dni
-
-## 5.1
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wykroczenia = {}  # kod -> (nazwa, mandat, punkty)
-mandaty = []      # (pesel, data, kod)
-kierowcy = {}     # pesel -> (data prawa jazdy, miasto)
-
-with open("wykroczenia.txt") as file:
-    next(file)
-    for line in file:
-        kod, nazwa, mandat, punkty = line.strip().split("\t")
-        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
-
-with open("mandaty.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data, kod = line.strip().split("\t")
-        mandaty.append((pesel, data, kod))
-
-with open("kierowcy.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data_pj, miasto = line.strip().split("\t")
-        kierowcy[pesel] = (data_pj, miasto)
-
-ile = {}
-for pesel, data, kod in mandaty:
-    ile[kod] = ile.get(kod, 0) + 1
-
-kod = max(ile, key=ile.get)
-print(wykroczenia[kod][0], ile[kod])
-```
-**Odpowiedź:** Przekroczenie dopuszczalnej prędkości o 21 - 30 km/h, 77 razy
-
-## 5.2
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wykroczenia = {}  # kod -> (nazwa, mandat, punkty)
-mandaty = []      # (pesel, data, kod)
-kierowcy = {}     # pesel -> (data prawa jazdy, miasto)
-
-with open("wykroczenia.txt") as file:
-    next(file)
-    for line in file:
-        kod, nazwa, mandat, punkty = line.strip().split("\t")
-        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
-
-with open("mandaty.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data, kod = line.strip().split("\t")
-        mandaty.append((pesel, data, kod))
-
-with open("kierowcy.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data_pj, miasto = line.strip().split("\t")
-        kierowcy[pesel] = (data_pj, miasto)
-
-punkty = {}
-for pesel, data, kod in mandaty:
-    if kierowcy[pesel][0][:4] == "2013":
-        punkty[pesel] = punkty.get(pesel, 0) + wykroczenia[kod][2]
-
-for pesel in punkty:
-    if punkty[pesel] > 20:
-        print(pesel, punkty[pesel])
-```
-**Odpowiedź:** 81011159031 32, 80062465997 27, 81011807736 26
-
-## 5.3
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wykroczenia = {}  # kod -> (nazwa, mandat, punkty)
-mandaty = []      # (pesel, data, kod)
-kierowcy = {}     # pesel -> (data prawa jazdy, miasto)
-
-with open("wykroczenia.txt") as file:
-    next(file)
-    for line in file:
-        kod, nazwa, mandat, punkty = line.strip().split("\t")
-        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
-
-with open("mandaty.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data, kod = line.strip().split("\t")
-        mandaty.append((pesel, data, kod))
-
-with open("kierowcy.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data_pj, miasto = line.strip().split("\t")
-        kierowcy[pesel] = (data_pj, miasto)
-
-for kod in wykroczenia:
-    if "naruszenie zakazu" in wykroczenia[kod][0].lower():
-        print(wykroczenia[kod][0])
-```
-**Odpowiedź:** 9 wykroczeń, np. Naruszenie zakazu postoju przed lub za przejazdem kolejowym, Naruszenie zakazu wyprzedzania na skrzyżowaniach, …
-
-## 5.4
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wykroczenia = {}  # kod -> (nazwa, mandat, punkty)
-mandaty = []      # (pesel, data, kod)
-kierowcy = {}     # pesel -> (data prawa jazdy, miasto)
-
-with open("wykroczenia.txt") as file:
-    next(file)
-    for line in file:
-        kod, nazwa, mandat, punkty = line.strip().split("\t")
-        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
-
-with open("mandaty.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data, kod = line.strip().split("\t")
-        mandaty.append((pesel, data, kod))
-
-with open("kierowcy.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data_pj, miasto = line.strip().split("\t")
-        kierowcy[pesel] = (data_pj, miasto)
-
-liczba = {}
-kwota = {}
-for pesel, data, kod in mandaty:
-    miesiac = int(data[5:7])
-    liczba[miesiac] = liczba.get(miesiac, 0) + 1
-    kwota[miesiac] = kwota.get(miesiac, 0) + wykroczenia[kod][1]
-
-miesiac = min(liczba, key=liczba.get)
-print(miesiac, liczba[miesiac], kwota[miesiac])
-```
-**Odpowiedź:** luty (2): 63 mandaty na łączną kwotę 12 750 zł
-
-## 5.5
-
-*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
-
-```py
-wykroczenia = {}  # kod -> (nazwa, mandat, punkty)
-mandaty = []      # (pesel, data, kod)
-kierowcy = {}     # pesel -> (data prawa jazdy, miasto)
-
-with open("wykroczenia.txt") as file:
-    next(file)
-    for line in file:
-        kod, nazwa, mandat, punkty = line.strip().split("\t")
-        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
-
-with open("mandaty.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data, kod = line.strip().split("\t")
-        mandaty.append((pesel, data, kod))
-
-with open("kierowcy.txt") as file:
-    next(file)
-    for line in file:
-        pesel, data_pj, miasto = line.strip().split("\t")
-        kierowcy[pesel] = (data_pj, miasto)
-
-ukarani = set()
-for pesel, data, kod in mandaty:
-    ukarani.add(pesel)
-
-miasta = {}
-bez_mandatu = 0
-for pesel in kierowcy:
-    if pesel not in ukarani:
-        bez_mandatu += 1
-        miasto = kierowcy[pesel][1]
-        miasta[miasto] = miasta.get(miasto, 0) + 1
-
-print(bez_mandatu, max(miasta, key=miasta.get))
-```
-**Odpowiedź:** 190 kierowców, najwięcej z miasta Warszawa
 
 ## 6.1
 
