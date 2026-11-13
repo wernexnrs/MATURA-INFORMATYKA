@@ -13,7 +13,6 @@ import os
 import posixpath
 import re
 import shutil
-from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
@@ -788,7 +787,8 @@ def main():
         page_map[src] = out
     exams = []
     for folder in ("dzialy/zadania_arkusze", "dzialy/zadania_zbior"):
-        for dirpath, _, files in os.walk(os.path.join(ROOT, folder)):
+        for dirpath, dirnames, files in os.walk(os.path.join(ROOT, folder)):
+            dirnames.sort()
             for f in sorted(files):
                 if f.endswith(".md"):
                     src = posixpath.relpath(os.path.join(dirpath, f).replace(os.sep, "/"), ROOT.replace(os.sep, "/"))
@@ -858,8 +858,7 @@ def main():
     write("assets/search-index.js", "window.SEARCH_INDEX=" + json.dumps(index_entries, ensure_ascii=False) + ";\n")
 
     # SEO
-    today = date.today().isoformat()
-    urls = "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>" % (SITE_URL + ("" if u == "index.html" else u), today) for u in built)
+    urls = "".join("<url><loc>%s</loc></url>" % (SITE_URL + ("" if u == "index.html" else u)) for u in sorted(built))
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>\n' % urls)
     write("robots.txt", "User-agent: *\nAllow: /\nSitemap: %ssitemap.xml\n" % SITE_URL)
