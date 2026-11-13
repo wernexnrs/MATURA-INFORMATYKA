@@ -1,11 +1,12 @@
-lista = []
+pary = []
 
-with open("Dane_PR2\pary.txt") as file:
+with open("pary.txt") as file:
     for line in file:
-        line, slowo = line.strip().split()
-        line = int(line)
+        liczba, slowo = line.split()
+        liczba = int(liczba)
+        if liczba == len(slowo):
+            pary.append((liczba, slowo))
 
-        if line == len(slowo):
-            lista.append((line, slowo))
-
-print(sorted(lista)[0])
+# krotki porównują się najpierw po liczbie, a przy równości - po słowie
+liczba, slowo = min(pary)
+print(liczba, slowo)

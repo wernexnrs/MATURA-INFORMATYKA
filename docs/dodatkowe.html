@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dodatkowe algorytmy | Matura z informatyki</title>
+<meta name="description" content="Dodatkowe algorytmy przydatne na maturze z informatyki: średnie, mediana, moda, silnia, symbol Newtona, algorytmy tekstowe (KMP, Boyer-Moore, Karp-Rabin, Manacher) i geometria w Pythonie.">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/dodatkowe.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Dodatkowe algorytmy">
+<meta property="og:description" content="Dodatkowe algorytmy przydatne na maturze z informatyki: średnie, mediana, moda, silnia, symbol Newtona, algorytmy tekstowe (KMP, Boyer-Moore, Karp-Rabin, Manacher) i geometria w Pythonie.">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/dodatkowe.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Dodatkowe algorytmy", "description": "Dodatkowe algorytmy przydatne na maturze z informatyki: średnie, mediana, moda, silnia, symbol Newtona, algorytmy tekstowe (KMP, Boyer-Moore, Karp-Rabin, Manacher) i geometria w Pythonie.", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/dodatkowe.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="index.html">Start</a><a href="algorytmy.html">Algorytmy CKE</a><a href="dodatkowe.html" aria-current="page">Dodatkowe</a><a href="arkusze.html">Arkusze</a><a href="funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title">Algorytmy numeryczne</p><ul><li><a href="#suma-liczb-od-a-do-b">Suma liczb od a do b</a></li><li><a href="#iloczyn-liczb-od-a-do-b">Iloczyn liczb od a do b</a></li><li><a href="#czy-liczba-jest-parzysta">Czy liczba jest parzysta</a></li><li><a href="#czy-liczba-jest-podzielna-przez-n-bez-reszty">Czy liczba jest podzielna przez n bez reszty</a></li><li><a href="#czy-liczba-jest-wielokrotnoscia-n">Czy liczba jest wielokrotnością n</a></li><li><a href="#najwiekszy-i-najmniejszy-element-w-zbiorze">Największy i najmniejszy element w zbiorze</a></li><li><a href="#moc-liczby-potegowanie">Moc liczby (potęgowanie)</a></li></ul><p class="side-title">Algorytmy arytmetyczne</p><ul><li><a href="#silnia-n">Silnia (n)</a></li><li><a href="#pierwiastek-kwadratowy">Pierwiastek kwadratowy</a></li><li><a href="#pierwiastek-n-tego-stopnia">Pierwiastek n-tego stopnia</a></li><li><a href="#moda-dominanta">Moda/dominanta</a></li><li><a href="#mediana">Mediana</a></li><li><a href="#srednia-arytmetyczna">Średnia arytmetyczna</a></li><li><a href="#srednia-wazona">Średnia ważona</a></li><li><a href="#srednia-geometryczna">Średnia geometryczna</a></li><li><a href="#wariancja-i-odchylenie-standardowe">Wariancja i odchylenie standardowe</a></li><li><a href="#symbol-newtona">Symbol Newtona</a></li></ul><p class="side-title">Algorytmy na łańcuchach</p><ul><li><a href="#zliczanie-znakow-w-ciagu">Zliczanie znaków w ciągu</a></li><li><a href="#zliczanie-slow-w-lancuchu">Zliczanie słów w łańcuchu</a></li><li><a href="#wyszukiwanie-najdluzszego-slowa-w-lancuchu">Wyszukiwanie najdłuższego słowa w łańcuchu</a></li><li><a href="#wyszukiwanie-najdluzszego-wspolnego-podlancucha">Wyszukiwanie najdłuższego wspólnego podłańcucha</a></li><li><a href="#wyszukiwanie-najdluzszego-wspolnego-podciagu">Wyszukiwanie najdłuższego wspólnego podciągu</a></li><li><a href="#krotnosc-znakow-w-lancuchu">Krotność znaków w łańcuchu</a></li><li><a href="#naprzemiennosc-duzych-i-malych-liter-w-tekscie">Naprzemienność dużych i małych liter w tekście</a></li><li><a href="#algorytm-manachera">Algorytm Manachera</a></li><li><a href="#algorytm-n-naiwny">Algorytm N (naiwny)</a></li><li><a href="#algorytm-knutha-morrisa-pratta">Algorytm Knutha-Morrisa-Pratta</a></li><li><a href="#algorytm-boyer-moore-a">Algorytm Boyer-Moore&#x27;a</a></li><li><a href="#algorytm-galila-seiferasa">Algorytm Galila-Seiferasa</a></li><li><a href="#algorytm-karpa-rabina">Algorytm Karpa-Rabina</a></li></ul><p class="side-title">Kombinatoryka</p><ul><li><a href="#porzadek-leksykograficzny">Porządek leksykograficzny</a></li><li><a href="#wyszukiwanie-liczby-palindromow-w-tekscie">Wyszukiwanie liczby palindromów w tekście</a></li></ul><p class="side-title">Geometria</p><ul><li><a href="#wyznaczenie-punktow-przeciecia-okregu-z-prosta">Wyznaczenie punktów przecięcia okręgu z prostą</a></li><li><a href="#wyznaczanie-punktu-przeciecia-dwoch-prostych">Wyznaczanie punktu przecięcia dwóch prostych</a></li><li><a href="#przynaleznosc-punktu-do-odcinka">Przynależność punktu do odcinka</a></li><li><a href="#przynaleznosc-punktu-do-wielokata">Przynależność punktu do wielokąta</a></li><li><a href="#srodek-odcinka">Środek odcinka</a></li><li><a href="#dlugosc-odcinka">Długość odcinka</a></li><li><a href="#znajdowanie-punktu-tworzacego-figure">Znajdowanie punktu tworzącego figurę</a></li><li><a href="#sprawdzanie-czy-proste-sa-prostopadle-rownolegle">Sprawdzanie czy proste są prostopadłe / równoległe</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="index.html">Start</a> / <span>Dodatkowe algorytmy</span></nav>
+<h1 class="page-title">Dodatkowe algorytmy</h1><p class="lead">Dodatkowe algorytmy przydatne na maturze z informatyki: średnie, mediana, moda, silnia, symbol Newtona, algorytmy tekstowe (KMP, Boyer-Moore, Karp-Rabin, Manacher) i geometria w Pythonie.</p><div class="toc-grid"><div class="toc-card"><h2>Algorytmy numeryczne</h2><ul><li><a href="#suma-liczb-od-a-do-b">Suma liczb od a do b</a></li><li><a href="#iloczyn-liczb-od-a-do-b">Iloczyn liczb od a do b</a></li><li><a href="#czy-liczba-jest-parzysta">Czy liczba jest parzysta</a></li><li><a href="#czy-liczba-jest-podzielna-przez-n-bez-reszty">Czy liczba jest podzielna przez n bez reszty</a></li><li><a href="#czy-liczba-jest-wielokrotnoscia-n">Czy liczba jest wielokrotnością n</a></li><li><a href="#najwiekszy-i-najmniejszy-element-w-zbiorze">Największy i najmniejszy element w zbiorze</a></li><li><a href="#moc-liczby-potegowanie">Moc liczby (potęgowanie)</a></li></ul></div><div class="toc-card"><h2>Algorytmy arytmetyczne</h2><ul><li><a href="#silnia-n">Silnia (n)</a></li><li><a href="#pierwiastek-kwadratowy">Pierwiastek kwadratowy</a></li><li><a href="#pierwiastek-n-tego-stopnia">Pierwiastek n-tego stopnia</a></li><li><a href="#moda-dominanta">Moda/dominanta</a></li><li><a href="#mediana">Mediana</a></li><li><a href="#srednia-arytmetyczna">Średnia arytmetyczna</a></li><li><a href="#srednia-wazona">Średnia ważona</a></li><li><a href="#srednia-geometryczna">Średnia geometryczna</a></li><li><a href="#wariancja-i-odchylenie-standardowe">Wariancja i odchylenie standardowe</a></li><li><a href="#symbol-newtona">Symbol Newtona</a></li></ul></div><div class="toc-card"><h2>Algorytmy na łańcuchach</h2><ul><li><a href="#zliczanie-znakow-w-ciagu">Zliczanie znaków w ciągu</a></li><li><a href="#zliczanie-slow-w-lancuchu">Zliczanie słów w łańcuchu</a></li><li><a href="#wyszukiwanie-najdluzszego-slowa-w-lancuchu">Wyszukiwanie najdłuższego słowa w łańcuchu</a></li><li><a href="#wyszukiwanie-najdluzszego-wspolnego-podlancucha">Wyszukiwanie najdłuższego wspólnego podłańcucha</a></li><li><a href="#wyszukiwanie-najdluzszego-wspolnego-podciagu">Wyszukiwanie najdłuższego wspólnego podciągu</a></li><li><a href="#krotnosc-znakow-w-lancuchu">Krotność znaków w łańcuchu</a></li><li><a href="#naprzemiennosc-duzych-i-malych-liter-w-tekscie">Naprzemienność dużych i małych liter w tekście</a></li><li><a href="#algorytm-manachera">Algorytm Manachera</a></li><li><a href="#algorytm-n-naiwny">Algorytm N (naiwny)</a></li><li><a href="#algorytm-knutha-morrisa-pratta">Algorytm Knutha-Morrisa-Pratta</a></li><li><a href="#algorytm-boyer-moore-a">Algorytm Boyer-Moore&#x27;a</a></li><li><a href="#algorytm-galila-seiferasa">Algorytm Galila-Seiferasa</a></li><li><a href="#algorytm-karpa-rabina">Algorytm Karpa-Rabina</a></li></ul></div><div class="toc-card"><h2>Kombinatoryka</h2><ul><li><a href="#porzadek-leksykograficzny">Porządek leksykograficzny</a></li><li><a href="#wyszukiwanie-liczby-palindromow-w-tekscie">Wyszukiwanie liczby palindromów w tekście</a></li></ul></div><div class="toc-card"><h2>Geometria</h2><ul><li><a href="#wyznaczenie-punktow-przeciecia-okregu-z-prosta">Wyznaczenie punktów przecięcia okręgu z prostą</a></li><li><a href="#wyznaczanie-punktu-przeciecia-dwoch-prostych">Wyznaczanie punktu przecięcia dwóch prostych</a></li><li><a href="#przynaleznosc-punktu-do-odcinka">Przynależność punktu do odcinka</a></li><li><a href="#przynaleznosc-punktu-do-wielokata">Przynależność punktu do wielokąta</a></li><li><a href="#srodek-odcinka">Środek odcinka</a></li><li><a href="#dlugosc-odcinka">Długość odcinka</a></li><li><a href="#znajdowanie-punktu-tworzacego-figure">Znajdowanie punktu tworzącego figurę</a></li><li><a href="#sprawdzanie-czy-proste-sa-prostopadle-rownolegle">Sprawdzanie czy proste są prostopadłe / równoległe</a></li></ul></div></div><section class="card" id="suma-liczb-od-a-do-b"><span id="suma" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#suma-liczb-od-a-do-b">Suma liczb od a do b</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def suma(a, b):
+    return sum(range(a, b + 1))</code></pre></div><div class="pane" hidden><pre><code class="language-python">def suma(a, b):
+    wynik = 0
+    for i in range(a, b + 1):
+        wynik += i
+    return wynik</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="iloczyn-liczb-od-a-do-b"><span id="iloczyn" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#iloczyn-liczb-od-a-do-b">Iloczyn liczb od a do b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def iloczyn(a, b):
+    wynik = 1
+    for i in range(a, b + 1):
+        wynik *= i
+    return wynik</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="czy-liczba-jest-parzysta"><span id="even" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#czy-liczba-jest-parzysta">Czy liczba jest parzysta</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def is_even(x):
+    if x % 2 == 0:
+        return True
+    return False</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="czy-liczba-jest-podzielna-przez-n-bez-reszty"><span id="n" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#czy-liczba-jest-podzielna-przez-n-bez-reszty">Czy liczba jest podzielna przez n bez reszty</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def divisible(x, n):
+    if n == 0:  # przez zero nie dzielimy
+        return False
+    if x % n == 0:
+        return True
+    return False</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="czy-liczba-jest-wielokrotnoscia-n"><span id="multiple" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#czy-liczba-jest-wielokrotnoscia-n">Czy liczba jest wielokrotnością n</a></h2><p>Liczba x jest wielokrotnością n, gdy x = k * n dla pewnej liczby całkowitej k, czyli gdy x % n == 0. Jedyną wielokrotnością zera jest samo zero.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def is_multiple(x, n):
+    if n == 0:
+        return x == 0
+    if x % n == 0:
+        return True
+    return False
+
+
+print(is_multiple(333, 3))  # True, bo 333 = 111 * 3
+print(is_multiple(3, 333))  # False</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="najwiekszy-i-najmniejszy-element-w-zbiorze"><span id="minmax" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#najwiekszy-i-najmniejszy-element-w-zbiorze">Największy i najmniejszy element w zbiorze</a></h2><p>Przechodzimy raz po wszystkich elementach i zapamiętujemy największy oraz najmniejszy element widziany do tej pory. Dla pustej listy zwracamy None.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def min_max(lista):
+    if len(lista) == 0:
+        return None, None
+    najmniejszy = lista[0]
+    najwiekszy = lista[0]
+    for x in lista:
+        if x &lt; najmniejszy:
+            najmniejszy = x
+        if x &gt; najwiekszy:
+            najwiekszy = x
+    return najmniejszy, najwiekszy
+
+
+print(min_max([4, -2, 7, 7, 0]))  # (-2, 7)</code></pre></div><div class="pane" hidden><pre><code class="language-python">lista = [4, -2, 7, 7, 0]
+
+print(min(lista), max(lista))  # -2 7</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="moc-liczby-potegowanie"><span id="potega" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#moc-liczby-potegowanie">Moc liczby (potęgowanie)</a></h2><p>Obliczamy a<sup>n</sup> dla całkowitego n &gt;= 0, mnożąc a przez siebie n razy (a<sup>0</sup> = 1). Szybsze potęgowanie (w czasie log n) jest w pliku <a href="algorytmy.html#fast_power">algorytmy_wymagania.md</a>.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Python · rekurencyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+def potega(a, n):
+    wynik = 1
+    for i in range(n):
+        wynik *= a
+    return wynik
+
+
+print(potega(2, 10))  # 1024</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Recursive version
+
+def potega(a, n):
+    if n == 0:
+        return 1
+    return a * potega(a, n - 1)
+
+
+print(potega(3, 4))  # 81</code></pre></div><div class="pane" hidden><pre><code class="language-python">from math import pow
+
+print(2 ** 10)      # 1024
+print(pow(2, 10))   # 1024.0 (math.pow zawsze zwraca float)
+print(2 ** -2)      # 0.25 (operator ** działa też dla ujemnych wykładników)</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="silnia-n"><span id="factorial" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#silnia-n">Silnia (n)</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Python · rekurencyjnie</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">from math import factorial
+
+print(factorial(5))</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Iterated version
+
+def fact(n):
+    factorial = 1
+    if n &gt;= 1:
+        for i in range(1, n + 1):
+            factorial = factorial * i
+    return factorial</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Recursive version
+
+def fact(n):
+    if n &lt; 0:
+        return None  # silnia liczby ujemnej nie istnieje
+    if n == 0:
+        return 1  # 0! = 1
+    return n * fact(n - 1)</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="pierwiastek-kwadratowy"><span id="sqrt" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#pierwiastek-kwadratowy">Pierwiastek kwadratowy</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">from math import sqrt
+
+print(sqrt(4))</code></pre></div><div class="pane" hidden><pre><code class="language-python"># sqrt1(liczba) - pierwiastek kwadratowy jako potęga 1/2, dla liczba &gt;= 0
+
+def sqrt1(x):
+    return x ** (1 / 2)
+
+
+print(sqrt1(4))  # 2.0</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="pierwiastek-n-tego-stopnia"><span id="sqrt2" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#pierwiastek-n-tego-stopnia">Pierwiastek n-tego stopnia</a></h2><p>Pierwiastek stopnia p to potęga 1/p. Dla liczb ujemnych i nieparzystego p liczymy pierwiastek z -x i zmieniamy znak (samo <code>x ** (1/p)</code> dałoby liczbę zespoloną). Wynik jest przybliżony, np. <code>27 ** (1/3)</code> to 3.0000000000000004.</p><div class="code"><div class="code-bar"><span>Python · sqrt1(liczba, stopien)</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># sqrt1(liczba, stopien)
+
+def sqrt1(x, p):
+    if x &lt; 0 and p % 2 == 1:
+        return -((-x) ** (1 / p))
+    return x ** (1 / p)
+
+
+print(sqrt1(16, 4))  # 2.0
+print(sqrt1(-8, 3))  # -2.0</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="moda-dominanta"><span id="moda" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#moda-dominanta">Moda/dominanta</a></h2><p>Moda to wartość występująca w liście najczęściej. Jeżeli kilka wartości występuje tyle samo razy, wszystkie wersje poniżej zwracają tę, która pojawia się w liście najwcześniej (gdy wszystkie elementy są różne, będzie to pierwszy element). Dla pustej listy zwracamy None.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Python · Na teorię</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">from collections import Counter
+
+lista = [1, 2, 3, 2, 5]
+
+
+def moda(lista):
+    if len(lista) == 0:
+        return None
+    return Counter(lista).most_common(1)[0][0]
+
+
+print(moda(lista))  # 2</code></pre></div><div class="pane" hidden><pre><code class="language-python">def moda(lista):
+    if len(lista) == 0:
+        return None
+    return max(lista, key=lista.count)</code></pre></div><div class="pane" hidden><pre><code class="language-python"># Na teorię
+def moda2(T):
+    maxi = 0
+    moda = None
+    n = len(T)
+    for i in range(n):
+        count = 0
+        for j in range(n):
+            if T[i] == T[j]:
+                count += 1
+        if count &gt; maxi:
+            maxi = count
+            moda = T[i]
+    return moda</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="mediana"><span id="med" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#mediana">Mediana</a></h2><p>Sortujemy kopię listy (żeby nie zmieniać listy podanej do funkcji) i bierzemy środkowy element, a przy parzystej liczbie elementów średnią dwóch środkowych.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def mediana(lista):
+    lista = lista[:]  # kopia - oryginalna lista zostaje bez zmian
+    for i in range(len(lista)):
+        for j in range(len(lista) - i - 1):
+            if lista[j] &gt; lista[j + 1]:
+                lista[j + 1], lista[j] = lista[j], lista[j + 1]
+
+    n = len(lista)
+    if n == 0:
+        return None
+    if n % 2 == 0:
+        mediana = (lista[n // 2 - 1] + lista[n // 2]) / 2
+    else:
+        mediana = lista[n // 2]
+    return mediana
+
+
+print(mediana([5, 1, 4, 2]))  # 3.0</code></pre></div><h3>Ze wzoru:</h3><p><img src="assets/img/mediana.png" alt="equation" loading="lazy"></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="srednia-arytmetyczna"><span id="ary" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#srednia-arytmetyczna">Średnia arytmetyczna</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def srednia(x):
+    return sum(x) / len(x)</code></pre></div><div class="pane" hidden><pre><code class="language-python">def srednia(x):
+    count = 0
+    licznik = 0
+    for i in range(len(x)):
+        count += 1
+        licznik += x[i]
+    return licznik / count</code></pre></div></div><h3>Ze wzoru:</h3><p><img src="assets/img/srednia.png" alt="equation" loading="lazy"></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="srednia-wazona"><span id="waz" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#srednia-wazona">Średnia ważona</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def srednia(lista, wagi):
+    wynik = sum(i * j for i, j in zip(lista, wagi)) / sum(wagi)
+    return wynik</code></pre></div><div class="pane" hidden><pre><code class="language-python">def srednia(lista, wagi):
+    wynik_wagi = 0
+    wynik = 0
+    for i in range(len(wagi)):
+        wynik_wagi += wagi[i]
+        wynik += lista[i] * wagi[i]
+    return wynik / wynik_wagi</code></pre></div></div><h3>Ze wzoru:</h3><p><img src="assets/img/srednia_wazona.png" alt="equation" loading="lazy"></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="srednia-geometryczna"><span id="geo" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#srednia-geometryczna">Średnia geometryczna</a></h2><p>Średnią geometryczną liczymy dla liczb dodatnich.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def srednia(lista):
+    if len(lista) == 0:
+        return None
+    wynik = 1
+    for i in lista:
+        wynik *= i
+    wynik = wynik ** (1 / len(lista))
+    return wynik
+
+
+print(srednia([2, 8]))  # 4.0</code></pre></div><h3>Ze wzoru:</h3><p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d97e78adc3acddf0b54ed5624ab2ceff2057bf40" alt="equation" loading="lazy"></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wariancja-i-odchylenie-standardowe"><span id="odchylenie" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#wariancja-i-odchylenie-standardowe">Wariancja i odchylenie standardowe</a></h2><p>Wariancja to średnia z kwadratów minus kwadrat średniej (wariancja populacji, dzielimy przez n). Odchylenie standardowe to pierwiastek z wariancji.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def wariancja(lista):
+    return sum(i ** 2 for i in lista) / len(lista) - (sum(lista) / len(lista)) ** 2</code></pre></div><div class="pane" hidden><pre><code class="language-python">def srednia(x):
+    count = 0
+    licznik = 0
+    for i in range(len(x)):
+        count += 1
+        licznik += x[i]
+    return licznik / count
+
+
+def wariancja2(lista):
+    n = 0
+    suma = 0
+    for i in range(len(lista)):
+        n += 1
+        suma += lista[i] ** 2
+    return suma / n - srednia(lista) ** 2</code></pre></div><div class="pane" hidden><pre><code class="language-python"># Z definicji: średnia kwadratów odchyleń od średniej (dokładniejsze dla liczb zmiennoprzecinkowych)
+from math import sqrt
+
+
+def wariancja3(lista):
+    sr = sum(lista) / len(lista)
+    suma = 0
+    for x in lista:
+        suma += (x - sr) ** 2
+    return suma / len(lista)
+
+
+def odchylenie(lista):
+    return sqrt(wariancja3(lista))
+
+
+print(wariancja3([2, 4, 4, 4, 5, 5, 7, 9]))  # 4.0
+print(odchylenie([2, 4, 4, 4, 5, 5, 7, 9]))  # 2.0</code></pre></div></div><h3>Ze wzoru:</h3><p><img src="assets/img/wariancja.png" alt="equation" loading="lazy"></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="symbol-newtona"><span id="newton" class="anchor"></span><p class="eyebrow">Algorytmy arytmetyczne</p><h2><a class="self" href="#symbol-newtona">Symbol Newtona</a></h2><p>Symbol Newtona (n po k) to liczba sposobów wybrania k elementów z n elementów: n! / (k! * (n - k)!). Wersja iteracyjna nie liczy silni, tylko mnoży i dzieli na zmianę: po i-tym kroku wynik to (n-k+i po i), więc dzielenie <code>//</code> jest zawsze dokładne.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Python · Recursive version (trójkąt Pascala) - wolna dla dużych n</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+def newton(n, k):
+    if k &lt; 0 or k &gt; n:
+        return 0
+    if k &gt; n - k:
+        k = n - k  # (n po k) = (n po n-k), mniej mnożeń
+    wynik = 1
+    for i in range(1, k + 1):
+        wynik = wynik * (n - k + i) // i
+    return wynik
+
+
+print(newton(5, 2))  # 10</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Recursive version (trójkąt Pascala) - wolna dla dużych n
+
+def newton(n, k):
+    if k &lt; 0 or k &gt; n:
+        return 0
+    if k == 0 or k == n:
+        return 1
+    return newton(n - 1, k - 1) + newton(n - 1, k)
+
+
+print(newton(5, 2))  # 10</code></pre></div><div class="pane" hidden><pre><code class="language-python">from math import comb
+
+print(comb(5, 2))  # 10</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="zliczanie-znakow-w-ciagu"><span id="znaki" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#zliczanie-znakow-w-ciagu">Zliczanie znaków w ciągu</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">tekst = &quot;Ala ma 2 koty&quot;
+
+print(len(tekst))        # 13 - wszystkie znaki (razem ze spacjami)
+print(tekst.count(&quot;a&quot;))  # 2 - ile razy występuje mała litera &quot;a&quot;</code></pre></div><div class="pane" hidden><pre><code class="language-python">def ile_znakow(tekst, znak):
+    licznik = 0
+    for z in tekst:
+        if z == znak:
+            licznik += 1
+    return licznik
+
+
+def rodzaje_znakow(tekst):
+    litery = 0
+    cyfry = 0
+    spacje = 0
+    for z in tekst:
+        if z.isalpha():
+            litery += 1
+        elif z.isdigit():
+            cyfry += 1
+        elif z == &quot; &quot;:
+            spacje += 1
+    return litery, cyfry, spacje
+
+
+print(ile_znakow(&quot;Ala ma 2 koty&quot;, &quot;a&quot;))  # 2
+print(rodzaje_znakow(&quot;Ala ma 2 koty&quot;))   # (9, 1, 3)</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="zliczanie-slow-w-lancuchu"><span id="iloscslow" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#zliczanie-slow-w-lancuchu">Zliczanie słów w łańcuchu</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">slowo = &quot;Ala ma kota&quot;
+i = len(slowo.split())
+
+print(i)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyszukiwanie-najdluzszego-slowa-w-lancuchu"><span id="najdluzsze" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#wyszukiwanie-najdluzszego-slowa-w-lancuchu">Wyszukiwanie najdłuższego słowa w łańcuchu</a></h2><p>Dzielimy tekst na słowa i zapamiętujemy najdłuższe. Przy kilku słowach tej samej długości zwracamy pierwsze z nich.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def najdluzsze_slowo(tekst):
+    najdluzsze = &quot;&quot;
+    for slowo in tekst.split():
+        if len(slowo) &gt; len(najdluzsze):
+            najdluzsze = slowo
+    return najdluzsze
+
+
+print(najdluzsze_slowo(&quot;Ala ma bardzo ładnego kota&quot;))  # ładnego</code></pre></div><div class="pane" hidden><pre><code class="language-python">tekst = &quot;Ala ma bardzo ładnego kota&quot;
+
+print(max(tekst.split(), key=len))  # ładnego</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyszukiwanie-najdluzszego-wspolnego-podlancucha"><span id="podlancuch" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#wyszukiwanie-najdluzszego-wspolnego-podlancucha">Wyszukiwanie najdłuższego wspólnego podłańcucha</a></h2><p>Podłańcuch to spójny fragment tekstu. W tablicy <code>dp[i][j]</code> zapisujemy długość najdłuższego wspólnego fragmentu kończącego się na znaku a[i-1] i na znaku b[j-1]. Czas O(n * m).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdluzszy_wspolny_podlancuch(a, b):
+    n = len(a)
+    m = len(b)
+    dp = [[0] * (m + 1) for i in range(n + 1)]
+    najdluzszy = 0
+    koniec = 0  # indeks w a tuż za końcem najlepszego fragmentu
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            if a[i - 1] == b[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+                if dp[i][j] &gt; najdluzszy:
+                    najdluzszy = dp[i][j]
+                    koniec = i
+    return a[koniec - najdluzszy:koniec]
+
+
+print(najdluzszy_wspolny_podlancuch(&quot;informatyka&quot;, &quot;matematyka&quot;))  # matyka</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyszukiwanie-najdluzszego-wspolnego-podciagu"><span id="podciag" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#wyszukiwanie-najdluzszego-wspolnego-podciagu">Wyszukiwanie najdłuższego wspólnego podciągu</a></h2><p>Podciąg (LCS) nie musi być spójny - powstaje przez usunięcie niektórych znaków. <code>dp[i][j]</code> to długość LCS dla a[:i] i b[:j]. Sam podciąg odczytujemy, cofając się po tablicy od <code>dp[n][m]</code>.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdluzszy_wspolny_podciag(a, b):
+    n = len(a)
+    m = len(b)
+    dp = [[0] * (m + 1) for i in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            if a[i - 1] == b[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+
+    # odtwarzanie podciągu od końca
+    wynik = &quot;&quot;
+    i = n
+    j = m
+    while i &gt; 0 and j &gt; 0:
+        if a[i - 1] == b[j - 1]:
+            wynik = a[i - 1] + wynik
+            i -= 1
+            j -= 1
+        elif dp[i - 1][j] &gt;= dp[i][j - 1]:
+            i -= 1
+        else:
+            j -= 1
+    return wynik
+
+
+print(najdluzszy_wspolny_podciag(&quot;ABCBDAB&quot;, &quot;BDCABA&quot;))  # BCBA (długość 4)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="krotnosc-znakow-w-lancuchu"><span id="kro" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#krotnosc-znakow-w-lancuchu">Krotność znaków w łańcuchu</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">from collections import Counter
+
+tekst = &quot;nie zdam matury&quot;
+print(Counter(tekst))  # ile razy występuje każdy znak
+
+lista_slow = [&quot;nie&quot;, &quot;zdam&quot;, &quot;nie&quot;, &quot;matury&quot;]
+print(Counter(lista_slow))  # ile razy występuje każde słowo</code></pre></div><div class="pane" hidden><pre><code class="language-python">def krotnosc(tekst):
+    slownik = {}
+    for znak in tekst:
+        if znak in slownik:
+            slownik[znak] += 1
+        else:
+            slownik[znak] = 1
+    return slownik
+
+
+print(krotnosc(&quot;slowo&quot;))  # {&#x27;s&#x27;: 1, &#x27;l&#x27;: 1, &#x27;o&#x27;: 2, &#x27;w&#x27;: 1}</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="naprzemiennosc-duzych-i-malych-liter-w-tekscie"><span id="naprzemiennosc" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#naprzemiennosc-duzych-i-malych-liter-w-tekscie">Naprzemienność dużych i małych liter w tekście</a></h2><p>Sprawdzamy, czy kolejne litery (pomijając spacje, cyfry i inne znaki) są na zmianę wielkie i małe. Druga funkcja zamienia tekst na taki zapis.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_naprzemienne(tekst):
+    poprzednia_wielka = None  # jeszcze nie było żadnej litery
+    for znak in tekst:
+        if znak.isalpha():
+            wielka = znak.isupper()
+            if wielka == poprzednia_wielka:
+                return False
+            poprzednia_wielka = wielka
+    return True
+
+
+def na_naprzemienne(tekst, od_wielkiej=False):
+    wynik = &quot;&quot;
+    wielka = od_wielkiej
+    for znak in tekst:
+        if znak.isalpha():
+            if wielka:
+                wynik += znak.upper()
+            else:
+                wynik += znak.lower()
+            wielka = not wielka
+        else:
+            wynik += znak
+    return wynik
+
+
+print(czy_naprzemienne(&quot;AlA mA kOtA&quot;))   # True
+print(czy_naprzemienne(&quot;Ala ma kota&quot;))   # False
+print(na_naprzemienne(&quot;nie zdam matury&quot;))  # nIe ZdAm MaTuRy</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="algorytm-manachera"><span id="manacher" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#algorytm-manachera">Algorytm Manachera</a></h2><p>Znajduje najdłuższy podłańcuch będący palindromem w czasie O(n). Między litery wstawiamy znak <code>#</code>, dzięki czemu palindromy parzystej i nieparzystej długości liczymy tak samo. <code>promien[i]</code> to długość palindromu (w oryginalnym tekście) o środku w i; wykorzystujemy symetrię względem środka najdalej sięgającego palindromu, żeby nie porównywać znaków od nowa.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def manacher(tekst):
+    if tekst == &quot;&quot;:
+        return &quot;&quot;
+    t = &quot;#&quot; + &quot;#&quot;.join(tekst) + &quot;#&quot;
+    n = len(t)
+    promien = [0] * n
+    srodek = 0
+    prawy = 0  # prawy koniec najdalej sięgającego palindromu
+    for i in range(n):
+        if i &lt; prawy:
+            promien[i] = min(prawy - i, promien[2 * srodek - i])
+        while (i - promien[i] - 1 &gt;= 0 and i + promien[i] + 1 &lt; n
+               and t[i - promien[i] - 1] == t[i + promien[i] + 1]):
+            promien[i] += 1
+        if i + promien[i] &gt; prawy:
+            srodek = i
+            prawy = i + promien[i]
+
+    najlepszy = 0
+    for i in range(n):
+        if promien[i] &gt; promien[najlepszy]:
+            najlepszy = i
+    poczatek = (najlepszy - promien[najlepszy]) // 2
+    return tekst[poczatek:poczatek + promien[najlepszy]]
+
+
+print(manacher(&quot;abacdfgdcabba&quot;))  # abba
+print(manacher(&quot;babcbabcbaccba&quot;))  # abcbabcba</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="algorytm-n-naiwny"><span id="naiwny" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#algorytm-n-naiwny">Algorytm N (naiwny)</a></h2><p>Przykładamy wzorzec do każdej pozycji tekstu i porównujemy znak po znaku. Zwracamy listę wszystkich pozycji (także nachodzących na siebie). Czas O(n * m).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def naiwny(tekst, wzorzec):
+    wyniki = []
+    n = len(tekst)
+    m = len(wzorzec)
+    if m == 0:
+        return wyniki
+    for i in range(n - m + 1):
+        j = 0
+        while j &lt; m and tekst[i + j] == wzorzec[j]:
+            j += 1
+        if j == m:
+            wyniki.append(i)
+    return wyniki
+
+
+print(naiwny(&quot;abababa&quot;, &quot;aba&quot;))  # [0, 2, 4]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="algorytm-knutha-morrisa-pratta"><span id="kmp" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#algorytm-knutha-morrisa-pratta">Algorytm Knutha-Morrisa-Pratta</a></h2><p>Najpierw liczymy funkcję prefiksową: <code>pi[i]</code> to długość najdłuższego właściwego prefiksu wzorca, który jest też sufiksem <code>wzorzec[:i+1]</code>. Przy niezgodności nie cofamy się w tekście, tylko skracamy dopasowanie do <code>pi[k-1]</code>. Czas O(n + m).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def funkcja_prefiksowa(wzorzec):
+    m = len(wzorzec)
+    pi = [0] * m
+    k = 0
+    for i in range(1, m):
+        while k &gt; 0 and wzorzec[i] != wzorzec[k]:
+            k = pi[k - 1]
+        if wzorzec[i] == wzorzec[k]:
+            k += 1
+        pi[i] = k
+    return pi
+
+
+def kmp(tekst, wzorzec):
+    wyniki = []
+    m = len(wzorzec)
+    if m == 0:
+        return wyniki
+    pi = funkcja_prefiksowa(wzorzec)
+    k = 0  # ile znaków wzorca jest aktualnie dopasowanych
+    for i in range(len(tekst)):
+        while k &gt; 0 and tekst[i] != wzorzec[k]:
+            k = pi[k - 1]
+        if tekst[i] == wzorzec[k]:
+            k += 1
+        if k == m:
+            wyniki.append(i - m + 1)
+            k = pi[k - 1]
+    return wyniki
+
+
+print(funkcja_prefiksowa(&quot;ababaca&quot;))  # [0, 0, 1, 2, 3, 0, 1]
+print(kmp(&quot;abababa&quot;, &quot;aba&quot;))          # [0, 2, 4]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="algorytm-boyer-moore-a"><span id="bm" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#algorytm-boyer-moore-a">Algorytm Boyer-Moore&#x27;a</a></h2><p>Wzorzec porównujemy od prawej do lewej. Po niezgodności przesuwamy wzorzec o większą z dwóch wartości:</p><ul><li>reguła złego znaku - ustawiamy pod niezgodnym znakiem tekstu jego ostatnie wystąpienie we wzorcu,</li><li>reguła dobrego sufiksu - dopasowany już koniec wzorca ustawiamy pod jego kolejnym wystąpieniem we wzorcu (albo pod pasującym prefiksem).</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def zly_znak(wzorzec):
+    ostatnie = {}  # ostatnia pozycja każdego znaku we wzorcu
+    for i in range(len(wzorzec)):
+        ostatnie[wzorzec[i]] = i
+    return ostatnie
+
+
+def dobry_sufiks(wzorzec):
+    m = len(wzorzec)
+    przesuniecie = [0] * (m + 1)
+    granica = [0] * (m + 1)
+    i = m
+    j = m + 1
+    granica[i] = j
+    while i &gt; 0:
+        while j &lt;= m and wzorzec[i - 1] != wzorzec[j - 1]:
+            if przesuniecie[j] == 0:
+                przesuniecie[j] = j - i
+            j = granica[j]
+        i -= 1
+        j -= 1
+        granica[i] = j
+    j = granica[0]
+    for i in range(m + 1):
+        if przesuniecie[i] == 0:
+            przesuniecie[i] = j
+        if i == j:
+            j = granica[j]
+    return przesuniecie
+
+
+def boyer_moore(tekst, wzorzec):
+    wyniki = []
+    n = len(tekst)
+    m = len(wzorzec)
+    if m == 0:
+        return wyniki
+    ostatnie = zly_znak(wzorzec)
+    przesuniecie = dobry_sufiks(wzorzec)
+    s = 0  # pozycja wzorca w tekście
+    while s &lt;= n - m:
+        j = m - 1
+        while j &gt;= 0 and wzorzec[j] == tekst[s + j]:
+            j -= 1
+        if j &lt; 0:
+            wyniki.append(s)
+            s += przesuniecie[0]
+        else:
+            o_zly_znak = j - ostatnie.get(tekst[s + j], -1)
+            s += max(przesuniecie[j + 1], o_zly_znak)
+    return wyniki
+
+
+print(boyer_moore(&quot;abababa&quot;, &quot;aba&quot;))          # [0, 2, 4]
+print(boyer_moore(&quot;nie zdam matury&quot;, &quot;matury&quot;))  # [9]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="algorytm-galila-seiferasa"><span id="gs" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#algorytm-galila-seiferasa">Algorytm Galila-Seiferasa</a></h2><p>Algorytm działa w czasie O(n + m) i potrzebuje tylko kilku zmiennych dodatkowej pamięci. Wzorzec jest dzielony na krótki początek u (długości s) i resztę v, w której nie ma długich powtórzeń; najpierw szukamy v, a dopiero potem sprawdzamy u. Kod jest przeniesieniem implementacji w C z książki C. Charras, T. Lecroq "Exact String Matching Algorithms" (stała k = 4). Tam funkcje newP1, newP2, parse i search wywołują się nawzajem - tutaj zamiast tego zmienna <code>krok</code> mówi, która część ma się wykonać. Na maturze raczej się nie pojawi.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def galil_seiferas(tekst, wzorzec):
+    wyniki = []
+    n = len(tekst)
+    m = len(wzorzec)
+    if m == 0 or m &gt; n:
+        return wyniki
+    x = list(wzorzec) + [None]  # strażnik na końcu (w C: znak &#x27;\0&#x27;)
+    y = tekst
+    k = 4
+    p = q = s = q1 = p2 = q2 = 0
+    p1 = 1
+    krok = &quot;newP1&quot;
+    while True:
+        if krok == &quot;newP1&quot;:
+            while x[s + q1] == x[s + p1 + q1]:
+                q1 += 1
+            if p1 + q1 &gt;= k * p1:
+                p2 = q1
+                q2 = 0
+                krok = &quot;newP2&quot;
+            elif s + p1 + q1 == m:
+                krok = &quot;search&quot;
+            else:
+                p1 += q1 // k + 1
+                q1 = 0
+
+        elif krok == &quot;newP2&quot;:
+            while x[s + q2] == x[s + p2 + q2] and p2 + q2 &lt; k * p2:
+                q2 += 1
+            if p2 + q2 == k * p2:
+                krok = &quot;parse&quot;
+            elif s + p2 + q2 == m:
+                krok = &quot;search&quot;
+            elif q2 == p1 + q1:
+                p2 += p1
+                q2 -= p1
+            else:
+                p2 += q2 // k + 1
+                q2 = 0
+
+        elif krok == &quot;parse&quot;:
+            while True:
+                while x[s + q1] == x[s + p1 + q1]:
+                    q1 += 1
+                while p1 + q1 &gt;= k * p1:
+                    s += p1
+                    q1 -= p1
+                p1 += q1 // k + 1
+                q1 = 0
+                if p1 &gt;= p2:
+                    break
+            krok = &quot;newP1&quot;
+
+        else:  # krok == &quot;search&quot; - właściwe wyszukiwanie w tekście
+            while p &lt;= n - m:
+                while p + s + q &lt; n and x[s + q] == y[p + s + q]:
+                    q += 1
+                if q == m - s and y[p:p + s + 1] == wzorzec[:s + 1]:
+                    wyniki.append(p)
+                if q == p1 + q1:
+                    p += p1
+                    q -= p1
+                else:
+                    p += q // k + 1
+                    q = 0
+            return wyniki
+
+
+print(galil_seiferas(&quot;abababa&quot;, &quot;aba&quot;))  # [0, 2, 4]
+print(galil_seiferas(&quot;aaaaa&quot;, &quot;aa&quot;))     # [0, 1, 2, 3]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="algorytm-karpa-rabina"><span id="kr" class="anchor"></span><p class="eyebrow">Algorytmy na łańcuchach</p><h2><a class="self" href="#algorytm-karpa-rabina">Algorytm Karpa-Rabina</a></h2><p>Zamiast porównywać napisy, porównujemy ich hasze (liczby). Hasz okna tekstu przesuniętego o jeden znak liczymy z poprzedniego w czasie O(1) (hasz "toczący się"): odejmujemy pierwszy znak i dopisujemy nowy. Gdy hasze są równe, sprawdzamy jeszcze napis, bo różne napisy mogą mieć ten sam hasz.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def karp_rabin(tekst, wzorzec):
+    wyniki = []
+    n = len(tekst)
+    m = len(wzorzec)
+    if m == 0 or m &gt; n:
+        return wyniki
+    B = 256            # podstawa
+    P = 1000000007     # duża liczba pierwsza (modulo)
+    hasz_wzorca = 0
+    hasz_okna = 0
+    for i in range(m):
+        hasz_wzorca = (hasz_wzorca * B + ord(wzorzec[i])) % P
+        hasz_okna = (hasz_okna * B + ord(tekst[i])) % P
+    najwyzsza = pow(B, m - 1, P)  # B^(m-1) % P
+
+    for i in range(n - m + 1):
+        if hasz_okna == hasz_wzorca and tekst[i:i + m] == wzorzec:
+            wyniki.append(i)
+        if i &lt; n - m:  # przesuwamy okno o jeden znak w prawo
+            hasz_okna = (hasz_okna - ord(tekst[i]) * najwyzsza) % P
+            hasz_okna = (hasz_okna * B + ord(tekst[i + m])) % P
+    return wyniki
+
+
+print(karp_rabin(&quot;abababa&quot;, &quot;aba&quot;))  # [0, 2, 4]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="porzadek-leksykograficzny"><span id="leksykograficzny" class="anchor"></span><p class="eyebrow">Kombinatoryka</p><h2><a class="self" href="#porzadek-leksykograficzny">Porządek leksykograficzny</a></h2><p>Porządek leksykograficzny to kolejność "słownikowa": porównujemy pierwsze różniące się elementy, a jeśli jeden ciąg jest początkiem drugiego, krótszy jest wcześniej. Python porównuje znaki według kodów, więc polskie litery (ą, ć, ...) są po "z".</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def porownaj(a, b):  # -1 gdy a &lt; b, 0 gdy a == b, 1 gdy a &gt; b
+    for i in range(min(len(a), len(b))):
+        if a[i] &lt; b[i]:
+            return -1
+        if a[i] &gt; b[i]:
+            return 1
+    if len(a) &lt; len(b):
+        return -1
+    if len(a) &gt; len(b):
+        return 1
+    return 0
+
+
+print(porownaj(&quot;kot&quot;, &quot;kotek&quot;))  # -1
+print(porownaj(&quot;kura&quot;, &quot;kot&quot;))   # 1
+print(&quot;kot&quot; &lt; &quot;kotek&quot;)           # True - Python porównuje tak samo</code></pre></div><p>Kolejna permutacja w porządku leksykograficznym: od końca szukamy pierwszego i, dla którego t[i] &lt; t[i+1], zamieniamy t[i] z najmniejszym większym od niego elementem z prawej strony, a końcówkę odwracamy. Zaczynając od ciągu posortowanego, dostajemy wszystkie permutacje po kolei (przy powtórzeniach - każdą tylko raz).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def nastepna_permutacja(t):
+    t = list(t)
+    i = len(t) - 2
+    while i &gt;= 0 and t[i] &gt;= t[i + 1]:
+        i -= 1
+    if i &lt; 0:
+        return None  # to była ostatnia permutacja
+    j = len(t) - 1
+    while t[j] &lt;= t[i]:
+        j -= 1
+    t[i], t[j] = t[j], t[i]
+    t[i + 1:] = t[i + 1:][::-1]
+    return t
+
+
+def wszystkie_permutacje(elementy):
+    wynik = []
+    t = sorted(elementy)
+    while t is not None:
+        wynik.append(&quot;&quot;.join(t))
+        t = nastepna_permutacja(t)
+    return wynik
+
+
+print(wszystkie_permutacje(&quot;abc&quot;))  # [&#x27;abc&#x27;, &#x27;acb&#x27;, &#x27;bac&#x27;, &#x27;bca&#x27;, &#x27;cab&#x27;, &#x27;cba&#x27;]</code></pre></div><div class="pane" hidden><pre><code class="language-python">from itertools import permutations
+
+for p in permutations(sorted(&quot;abc&quot;)):  # dla posortowanych danych kolejność jest leksykograficzna
+    print(&quot;&quot;.join(p))</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyszukiwanie-liczby-palindromow-w-tekscie"><span id="palindromy" class="anchor"></span><p class="eyebrow">Kombinatoryka</p><h2><a class="self" href="#wyszukiwanie-liczby-palindromow-w-tekscie">Wyszukiwanie liczby palindromów w tekście</a></h2><p>Liczymy wszystkie podłańcuchy będące palindromami (każde wystąpienie osobno, również pojedyncze litery), np. "aaa" ma 6 palindromów: a, a, a, aa, aa, aaa.</p><div class="code"><div class="code-bar"><span>Python · Na teorię - sprawdzamy każdy podłańcuch, O(n^3)</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># Na teorię - sprawdzamy każdy podłańcuch, O(n^3)
+def liczba_palindromow(tekst):
+    licznik = 0
+    n = len(tekst)
+    for i in range(n):
+        for j in range(i + 1, n + 1):
+            fragment = tekst[i:j]
+            if fragment == fragment[::-1]:
+                licznik += 1
+    return licznik
+
+
+print(liczba_palindromow(&quot;aaa&quot;))  # 6</code></pre></div><p>Szybciej (O(n^2)): każdy palindrom ma środek - literę albo miejsce między dwiema literami. Dla każdego z 2n - 1 środków rozszerzamy palindrom w obie strony, dopóki znaki są równe.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def liczba_palindromow(tekst):
+    licznik = 0
+    n = len(tekst)
+    for srodek in range(2 * n - 1):
+        lewy = srodek // 2
+        prawy = lewy + srodek % 2
+        while lewy &gt;= 0 and prawy &lt; n and tekst[lewy] == tekst[prawy]:
+            licznik += 1
+            lewy -= 1
+            prawy += 1
+    return licznik
+
+
+print(liczba_palindromow(&quot;abba&quot;))  # 6: a, b, b, a, bb, abba</code></pre></div><div class="pane" hidden><pre><code class="language-python"># Ile słów w zdaniu jest palindromami (bez rozróżniania wielkości liter)
+def palindromy_w_zdaniu(zdanie):
+    licznik = 0
+    for slowo in zdanie.split():
+        slowo = slowo.lower()
+        if slowo == slowo[::-1]:
+            licznik += 1
+    return licznik
+
+
+print(palindromy_w_zdaniu(&quot;Kajak i radar to palindromy&quot;))  # 3 (kajak, i, radar)</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyznaczenie-punktow-przeciecia-okregu-z-prosta"><span id="okrag_prosta" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#wyznaczenie-punktow-przeciecia-okregu-z-prosta">Wyznaczenie punktów przecięcia okręgu z prostą</a></h2><p>Okrąg o środku (p, q) i promieniu r: (x - p)² + (y - q)² = r². Po wstawieniu y = ax + b dostajemy równanie kwadratowe (1 + a²)x² + 2(a(b - q) - p)x + p² + (b - q)² - r² = 0. Liczba rozwiązań (0, 1 albo 2) zależy od delty. Prostej pionowej x = c nie da się zapisać jako y = ax + b, więc ma osobną funkcję.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import sqrt
+
+EPS = 1e-9  # tolerancja dla liczb zmiennoprzecinkowych
+
+
+def przeciecie_okregu_z_prosta(a, b, p, q, r):
+    # prosta y = ax + b, okrąg o środku (p, q) i promieniu r
+    A = 1 + a * a
+    B = 2 * (a * (b - q) - p)
+    C = p * p + (b - q) ** 2 - r * r
+    delta = B * B - 4 * A * C
+    if delta &lt; -EPS:
+        return []  # brak punktów wspólnych
+    if abs(delta) &lt;= EPS:
+        x = -B / (2 * A)
+        return [(x, a * x + b)]  # prosta styczna
+    x1 = (-B - sqrt(delta)) / (2 * A)
+    x2 = (-B + sqrt(delta)) / (2 * A)
+    return [(x1, a * x1 + b), (x2, a * x2 + b)]
+
+
+def przeciecie_okregu_z_pionowa(c, p, q, r):
+    # prosta pionowa x = c
+    d = r * r - (c - p) ** 2
+    if d &lt; -EPS:
+        return []
+    if abs(d) &lt;= EPS:
+        return [(c, q)]
+    return [(c, q - sqrt(d)), (c, q + sqrt(d))]
+
+
+print(przeciecie_okregu_z_prosta(0, 0, 0, 0, 5))  # [(-5.0, 0.0), (5.0, 0.0)]
+print(przeciecie_okregu_z_prosta(0, 5, 0, 0, 5))  # [(0.0, 5.0)]
+print(przeciecie_okregu_z_pionowa(3, 0, 0, 5))    # [(3, -4.0), (3, 4.0)]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyznaczanie-punktu-przeciecia-dwoch-prostych"><span id="przeciecie" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#wyznaczanie-punktu-przeciecia-dwoch-prostych">Wyznaczanie punktu przecięcia dwóch prostych</a></h2><p>Proste w postaci ogólnej A1x + B1y = C1 i A2x + B2y = C2 rozwiązujemy wzorami Cramera. Gdy wyznacznik W = 0, proste są równoległe (brak punktu) albo się pokrywają (nieskończenie wiele punktów).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Python · Proste w postaci y = a1*x + b1 i y = a2*x + b2</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def przeciecie_prostych(A1, B1, C1, A2, B2, C2):
+    W = A1 * B2 - A2 * B1
+    Wx = C1 * B2 - C2 * B1
+    Wy = A1 * C2 - A2 * C1
+    if W == 0:
+        if Wx == 0 and Wy == 0:
+            return &quot;proste się pokrywają&quot;
+        return &quot;proste są równoległe&quot;
+    return (Wx / W, Wy / W)
+
+
+print(przeciecie_prostych(1, 1, 2, 1, -1, 0))  # (1.0, 1.0)
+print(przeciecie_prostych(1, 0, 3, 0, 1, -2))  # (3.0, -2.0) - prosta pionowa x = 3 i pozioma y = -2
+print(przeciecie_prostych(1, 1, 2, 2, 2, 7))   # proste są równoległe</code></pre></div><div class="pane" hidden><pre><code class="language-python"># Proste w postaci y = a1*x + b1 i y = a2*x + b2
+def przeciecie_prostych(a1, b1, a2, b2):
+    if a1 == a2:
+        if b1 == b2:
+            return &quot;proste się pokrywają&quot;
+        return &quot;proste są równoległe&quot;
+    x = (b2 - b1) / (a1 - a2)
+    return (x, a1 * x + b1)
+
+
+print(przeciecie_prostych(1, 0, -1, 2))  # (1.0, 1.0)</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="przynaleznosc-punktu-do-odcinka"><span id="punkt_odcinek" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#przynaleznosc-punktu-do-odcinka">Przynależność punktu do odcinka</a></h2><p>Punkt P leży na odcinku AB, gdy iloczyn wektorowy AB × AP jest równy 0 (P leży na prostej AB) i P mieści się w prostokącie wyznaczonym przez A i B. Dla współrzędnych całkowitych wynik jest dokładny.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_odcinku(A, B, P):
+    x1, y1 = A
+    x2, y2 = B
+    px, py = P
+    iloczyn = (x2 - x1) * (py - y1) - (y2 - y1) * (px - x1)
+    if iloczyn != 0:
+        return False
+    return min(x1, x2) &lt;= px &lt;= max(x1, x2) and min(y1, y2) &lt;= py &lt;= max(y1, y2)
+
+
+print(na_odcinku((0, 0), (4, 4), (2, 2)))  # True
+print(na_odcinku((0, 0), (4, 4), (5, 5)))  # False - na prostej, ale poza odcinkiem
+print(na_odcinku((0, 0), (4, 4), (2, 3)))  # False</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="przynaleznosc-punktu-do-wielokata"><span id="punkt_wielokat" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#przynaleznosc-punktu-do-wielokata">Przynależność punktu do wielokąta</a></h2><p>Metoda promienia: z punktu P prowadzimy półprostą w prawo i liczymy, ile boków wielokąta przecina. Nieparzysta liczba przecięć oznacza, że P jest w środku. Punkt leżący na boku traktujemy jako należący do wielokąta. Wierzchołki podajemy po kolei (wielokąt nie musi być wypukły).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_odcinku(A, B, P):
+    x1, y1 = A
+    x2, y2 = B
+    px, py = P
+    iloczyn = (x2 - x1) * (py - y1) - (y2 - y1) * (px - x1)
+    if iloczyn != 0:
+        return False
+    return min(x1, x2) &lt;= px &lt;= max(x1, x2) and min(y1, y2) &lt;= py &lt;= max(y1, y2)
+
+
+def w_wielokacie(P, wielokat):
+    px, py = P
+    n = len(wielokat)
+    wewnatrz = False
+    for i in range(n):
+        A = wielokat[i]
+        B = wielokat[(i + 1) % n]
+        if na_odcinku(A, B, P):
+            return True  # punkt na brzegu
+        x1, y1 = A
+        x2, y2 = B
+        if (y1 &gt; py) != (y2 &gt; py):  # bok przecina poziomą prostą y = py
+            x_przeciecia = x1 + (py - y1) * (x2 - x1) / (y2 - y1)
+            if px &lt; x_przeciecia:
+                wewnatrz = not wewnatrz
+    return wewnatrz
+
+
+kwadrat = [(0, 0), (4, 0), (4, 4), (0, 4)]
+print(w_wielokacie((2, 2), kwadrat))  # True
+print(w_wielokacie((4, 1), kwadrat))  # True - na brzegu
+print(w_wielokacie((5, 2), kwadrat))  # False</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="srodek-odcinka"><span id="srodek" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#srodek-odcinka">Środek odcinka</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def srodek_odcinka(A, B):
+    return ((A[0] + B[0]) / 2, (A[1] + B[1]) / 2)
+
+
+print(srodek_odcinka((0, 0), (4, 6)))  # (2.0, 3.0)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="dlugosc-odcinka"><span id="dlugosc" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#dlugosc-odcinka">Długość odcinka</a></h2><p>Z twierdzenia Pitagorasa: |AB| = √((x2 - x1)² + (y2 - y1)²).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">from math import sqrt
+
+
+def dlugosc_odcinka(A, B):
+    return sqrt((B[0] - A[0]) ** 2 + (B[1] - A[1]) ** 2)
+
+
+print(dlugosc_odcinka((0, 0), (3, 4)))  # 5.0</code></pre></div><div class="pane" hidden><pre><code class="language-python">from math import dist
+
+print(dist((0, 0), (3, 4)))  # 5.0</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="znajdowanie-punktu-tworzacego-figure"><span id="figura" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#znajdowanie-punktu-tworzacego-figure">Znajdowanie punktu tworzącego figurę</a></h2><p>Mając trzy wierzchołki A, B, C równoległoboku, czwarty wierzchołek D wyznaczamy z tego, że przekątne dzielą się na pół. Są trzy możliwości, zależnie od tego, który z punktów leży naprzeciw D: D = A + C - B, D = A + B - C albo D = B + C - A.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czwarty_wierzcholek(A, B, C):
+    D1 = (A[0] + C[0] - B[0], A[1] + C[1] - B[1])  # równoległobok ABCD
+    D2 = (A[0] + B[0] - C[0], A[1] + B[1] - C[1])  # równoległobok ACBD
+    D3 = (B[0] + C[0] - A[0], B[1] + C[1] - A[1])  # równoległobok BACD
+    return [D1, D2, D3]
+
+
+print(czwarty_wierzcholek((0, 0), (2, 0), (3, 2)))  # [(1, 2), (-1, -2), (5, 2)]</code></pre></div><p>Mając dwa sąsiednie wierzchołki kwadratu A i B, obracamy wektor AB = (dx, dy) o 90° - dostajemy (-dy, dx) - i dodajemy go do A i B. Obrót w drugą stronę daje drugi kwadrat.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def kwadrat(A, B):
+    dx = B[0] - A[0]
+    dy = B[1] - A[1]
+    C1 = (B[0] - dy, B[1] + dx)
+    D1 = (A[0] - dy, A[1] + dx)
+    C2 = (B[0] + dy, B[1] - dx)
+    D2 = (A[0] + dy, A[1] - dx)
+    return [(C1, D1), (C2, D2)]  # dwa możliwe kwadraty ABCD
+
+
+print(kwadrat((0, 0), (2, 0)))  # [((2, 2), (0, 2)), ((2, -2), (0, -2))]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sprawdzanie-czy-proste-sa-prostopadle-rownolegle"><span id="proste" class="anchor"></span><p class="eyebrow">Geometria</p><h2><a class="self" href="#sprawdzanie-czy-proste-sa-prostopadle-rownolegle">Sprawdzanie czy proste są prostopadłe / równoległe</a></h2><p>Dla prostych y = a1x + b1 i y = a2x + b2: równoległe, gdy a1 = a2, prostopadłe, gdy a1 * a2 = -1. Dla postaci ogólnej Ax + By + C = 0 (obejmuje też proste pionowe): równoległe, gdy A1 * B2 - A2 * B1 = 0, prostopadłe, gdy A1 * A2 + B1 * B2 = 0.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Python · Postać ogólna A*x + B*y + C = 0</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">EPS = 1e-9  # współczynniki mogą być ułamkami, np. 1/3
+
+
+def rownolegle(a1, a2):
+    return abs(a1 - a2) &lt; EPS
+
+
+def prostopadle(a1, a2):
+    return abs(a1 * a2 + 1) &lt; EPS
+
+
+print(rownolegle(2, 2))      # True
+print(prostopadle(2, -0.5))  # True
+print(prostopadle(3, -1 / 3))  # True</code></pre></div><div class="pane" hidden><pre><code class="language-python"># Postać ogólna A*x + B*y + C = 0
+def rownolegle(A1, B1, A2, B2):
+    return A1 * B2 - A2 * B1 == 0
+
+
+def prostopadle(A1, B1, A2, B2):
+    return A1 * A2 + B1 * B2 == 0
+
+
+print(rownolegle(1, 0, 2, 0))   # True - dwie proste pionowe x = ...
+print(prostopadle(1, 0, 0, 1))  # True - pionowa i pozioma
+print(prostopadle(2, -1, 1, 2)) # True - y = 2x i y = -x/2</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="";</script>
+<script src="assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
-with open("Dane_PR/sygnaly.txt") as file:
-    lista = file.read().splitlines()
+with open("sygnaly.txt") as file:
+    slowa = file.read().split()
 
-for word in lista:
-    if all(abs(ord(x) - ord(word[char-1])) < 10 for char in range(1, len(word)) for x in word):
-        print(word)
+for slowo in slowa:
+    # każde dwie litery są oddalone co najwyżej o 10 <=> największa i najmniejsza litera są oddalone co najwyżej o 10
+    if ord(max(slowo)) - ord(min(slowo)) <= 10:
+        print(slowo)

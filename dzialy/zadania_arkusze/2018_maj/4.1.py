@@ -1,9 +1,9 @@
-res = ""
+przeslanie = ""
 
-with open("Dane_PR/przyklad.txt") as file:
-    lista = file.read().splitlines()
+with open("sygnaly.txt") as file:
+    slowa = file.read().split()
 
-for i in range(39, len(lista) + 1, 40):
-    res += lista[i][9]
+for i in range(39, len(slowa), 40):
+    przeslanie += slowa[i][9]
 
-print(res)
+print(przeslanie)

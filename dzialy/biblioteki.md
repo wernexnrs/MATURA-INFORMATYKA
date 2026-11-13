@@ -64,30 +64,24 @@ Właściwości:
 
 Zwraca podsłownik, którym można zarządzać np.:
 ```python
+import collections
+
 d = collections.OrderedDict()
 d['a'] = 'A'
 d['b'] = 'B'
 d['c'] = 'C'
-d['d'] = 'D'
-d['e'] = 'E'
 
 for k, v in d.items():
-    print k, v
-'''
-Regular dictionary:
-a A
-c C
-b B
-e E
-d D
+    print(k, v)
 
-OrderedDict:
-a A
-b B
-c C
-d D
-e E
-'''
+# Output:
+# a A
+# b B
+# c C
+# Od Pythona 3.7 zwykły dict też pamięta kolejność dodawania.
+# OrderedDict przydaje się np. do move_to_end():
+d.move_to_end('a')
+print(list(d))  # ['b', 'c', 'a']
 ```
 
 ## math
@@ -214,13 +208,13 @@ class fractions.Fraction(numerator=0, denominator=1)
 from fractions import Fraction
 Fraction(16, -10)
 #Fraction(-8, 5)
->>> Fraction(123)
+Fraction(123)
 #Fraction(123, 1)
->>> Fraction()
+Fraction()
 #Fraction(0, 1)
->>> Fraction('3/7')
+Fraction('3/7')
 #Fraction(3, 7)
->>> Fraction(' -3/7 ')
+Fraction(' -3/7 ')
 #Fraction(-3, 7)
 ```
 
@@ -281,12 +275,12 @@ for _ in range(6):
 ```python
 data = itertools.repeat(2, times=3)
 
-for _ in range(6):
+for _ in range(3):
     print(next(data))
 
-#Output:  2 2 2 StopIteration
+#Output:  2 2 2   (czwarte next(data) zgłosiłoby StopIteration)
 
-print(list(map(pow, range(5), itertools.repeat(2)))
+print(list(map(pow, range(5), itertools.repeat(2))))
 
 # Output: [0, 1, 4, 9, 16]
 ```

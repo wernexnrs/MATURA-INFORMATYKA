@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2005 Maj | Matura z informatyki</title>
+<meta name="description" content="2005 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1b, 2a, 2b, 2d, 4a, 4b, 5a, 5b, 5c, 6b, 6c).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2005-maj.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2005 Maj">
+<meta property="og:description" content="2005 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1b, 2a, 2b, 2d, 4a, 4b, 5a, 5b, 5c, 6b, 6c).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2005-maj.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2005 Maj", "description": "2005 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1b, 2a, 2b, 2d, 4a, 4b, 5a, 5b, 5c, 6b, 6c).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2005-maj.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title">Arkusz I</p><ul><li><a href="#1a">1a</a></li><li><a href="#1b">1b</a></li><li><a href="#2a">2a</a></li><li><a href="#2b">2b</a></li><li><a href="#2d">2d</a></li></ul><p class="side-title">Arkusz II</p><ul><li><a href="#4a">4a</a></li><li><a href="#4b">4b</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#5c">5c</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2005 Maj</span></nav>
+<h1 class="page-title">2005 Maj</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2005-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2005-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2005-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2005-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI I</a><a href="https://arkusze.pl/maturalne/informatyka-2005-maj-matura-rozszerzona-odpowiedzi-2.pdf" target="_blank" rel="noopener">ODPOWIEDZI II</a></p><section class="card" id="1a"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from fractions import Fraction
+
+# l0 = 2/3,  l(n) = l(n-1) + 2/3 * 1/((2n+1) * 9^n)
+# r(1) = 2/81, r(n) = r(n-1) * (2n-1) / ((2n+1) * 9)
+l = Fraction(2, 3)
+print(0, l, float(l))
+
+for n in range(1, 4):
+    l = l + Fraction(2, 3) * Fraction(1, (2 * n + 1) * 9 ** n)
+    print(n, l, round(float(l), 6))</code></pre></div><p><strong>Odpowiedź:</strong> l0 = 2/3, l1 = 56/81 ≈ 0,6913, l2 = 842/1215 ≈ 0,693004, l3 = 53056/76545 ≈ 0,693135; l(n) = l(n-1) + 2/3 · 1/((2n+1)·9^n); r1 = 2/81, r(n) = r(n-1) · (2n-1)/((2n+1)·9)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="1b"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b">1b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+
+
+def ln2(eps):
+    # Dane: eps &gt; 0, Wynik: przybliżona wartość ln 2
+    n = 1
+    r = 2 / 81           # różnica l1 - l0
+    l = 2 / 3 + r        # l1
+    while r &gt;= eps:
+        n += 1
+        r = r * (2 * n - 1) / ((2 * n + 1) * 9)
+        l = l + r
+    return l
+
+
+for eps in [0.1, 0.001, 0.000001, 0.000000001]:
+    print(eps, ln2(eps), math.log(2))</code></pre></div><p><strong>Odpowiedź:</strong> algorytm sumuje kolejne wyrazy r(n), dopóki różnica dwóch ostatnich przybliżeń (czyli r(n)) nie jest mniejsza niż ε; wynik to ostatnie przybliżenie l(n).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2a"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a">2a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">reguly = [(&quot;A&quot;, &quot;BC&quot;), (&quot;A&quot;, &quot;CD&quot;), (&quot;B&quot;, &quot;AD&quot;), (&quot;C&quot;, &quot;BA&quot;), (&quot;D&quot;, &quot;AA&quot;), (&quot;D&quot;, &quot;BB&quot;)]
+
+
+def nastepne_pokolenie(organizm):
+    wyniki = [&quot;&quot;]
+    for litera in organizm:
+        nowe = []
+        for poczatek in wyniki:
+            for lewa, prawa in reguly:
+                if lewa == litera:
+                    nowe.append(poczatek + prawa)
+        wyniki = nowe
+    return sorted(set(wyniki))
+
+
+for organizm in nastepne_pokolenie(&quot;ADBA&quot;):
+    print(organizm)</code></pre></div><p><strong>Odpowiedź:</strong> BCAAADBC, CDAAADBC, BCBBADBC, CDBBADBC, BCAAADCD, CDAAADCD, BCBBADCD, CDBBADCD</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2b"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2b">2b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wiek(n):
+    # organizm o długości n istnieje tylko, gdy n jest potęgą dwójki; wiek = log2(n)
+    lata = 0
+    while n % 2 == 0:
+        n //= 2
+        lata += 1
+    if n == 1:
+        return lata
+    return -1  # nie ma takiego organizmu
+
+
+def ile_wielkosci(n, m):
+    # liczba potęg dwójki w przedziale (n, m]
+    ile = 0
+    potega = 1
+    while potega &lt;= m:
+        if potega &gt; n:
+            ile += 1
+        potega *= 2
+    return ile
+
+
+print(wiek(1), wiek(8), wiek(12), wiek(1024))
+print(ile_wielkosci(3, 100))</code></pre></div><p><strong>Odpowiedź:</strong> organizm o długości n istnieje wtedy i tylko wtedy, gdy n = 2^k, a jego wiek to k = log2 n; w przedziale (n, m] jest ⌊log2 m⌋ − ⌊log2 n⌋ poprawnych wielkości.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2d"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2d">2d</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">reguly = [(&quot;A&quot;, &quot;BC&quot;), (&quot;A&quot;, &quot;CD&quot;), (&quot;B&quot;, &quot;AD&quot;), (&quot;C&quot;, &quot;BA&quot;), (&quot;D&quot;, &quot;AA&quot;), (&quot;D&quot;, &quot;BB&quot;)]
+
+
+def potega_dwojki(n):
+    while n % 2 == 0:
+        n //= 2
+    return n == 1
+
+
+def sprawdz(napis, start):
+    # Dane: napis - ciąg n liter, start - litera nowo powstałego organizmu
+    # Wynik: czy napis to organizm, który można uzyskać z organizmu start
+    print(&quot;sprawdz(&quot;, napis, &quot;,&quot;, start, &quot;)&quot;)
+    if not potega_dwojki(len(napis)):
+        return False
+    if napis == start:
+        return True
+    if len(napis) == 1:
+        return False
+    polowa = len(napis) // 2
+    napis1 = napis[:polowa]
+    napis2 = napis[polowa:]
+    for lewa, prawa in reguly:
+        if lewa == start:
+            wynik1 = sprawdz(napis1, prawa[0])
+            wynik2 = sprawdz(napis2, prawa[1])
+            if wynik1 and wynik2:
+                return True
+    return False
+
+
+print(sprawdz(&quot;BCAAADCD&quot;, &quot;A&quot;))</code></pre></div><p><strong>Odpowiedź:</strong> wywołania: (BCAAADCD, A), (BCAA, B), (BC, A), (B, B), (C, C), (AA, D), (A, A), (A, A), (ADCD, C), (AD, B), (A, A), (D, D), (CD, A), (C, B), (D, C), (C, C), (D, D); wynik: TAK</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4a">4a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+
+
+def f(N):
+    m = 0.0001 * N
+    return 10 * m ** 3 + 7 * m ** 2 + 0.1 * m + 0.1
+
+
+def koszt_d1(N):
+    return 0.01 * N + f(N)
+
+
+def koszt_d2(N):
+    return 0.5 * math.sqrt(N) + 5 * f(N)
+
+
+# sprawdzamy wszystkie N z [1, 7000] z krokiem 0,01
+poprzednia = None
+for k in range(100, 700001):
+    N = k / 100
+    firma = &quot;D1&quot; if koszt_d1(N) &lt;= koszt_d2(N) else &quot;D2&quot;
+    if firma != poprzednia:
+        print(&quot;od N =&quot;, N, &quot;wybieramy&quot;, firma)
+        poprzednia = firma
+
+print()
+print(&quot;N&quot;, &quot;D1&quot;, &quot;D2&quot;)
+for N in [100, 1000, 5000]:
+    print(N, round(koszt_d1(N), 2), round(koszt_d2(N), 2))</code></pre></div><p><strong>Odpowiedź:</strong> D1 dla N ∈ [1; 3617,62], D2 dla N ∈ [3617,63; 7000]</p><div class="table-wrap"><table><tr><th>N</th><th>D1</th><th>D2</th></tr><tr><td>100</td><td>1,10</td><td>5,51</td></tr><tr><td>1000</td><td>10,19</td><td>16,76</td></tr><tr><td>5000</td><td>53,15</td><td>51,11</td></tr></table></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4b">4b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+
+
+def f(N):
+    m = 0.0001 * N
+    return 10 * m ** 3 + 7 * m ** 2 + 0.1 * m + 0.1
+
+
+print(&quot;N;licencja D2;obliczenia D2&quot;)
+for N in range(6000, 9001, 100):
+    licencja = 0.5 * math.sqrt(N)
+    obliczenia = 5 * f(N)
+    print(N, &quot;%.2f&quot; % licencja, &quot;%.2f&quot; % obliczenia, sep=&quot;;&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 6000: licencja 38,73, obliczenia 24,20; 6100: 39,05, 25,18; 6200: 39,37, 26,18; … 9000: 47,43, 65,75 (koszt obliczeń przewyższa licencję od N = 7700).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najlepsza_suma(ciag):
+    najlepsza = ciag[0]
+    biezaca = 0
+    for x in ciag:
+        biezaca = max(biezaca + x, x)
+        najlepsza = max(najlepsza, biezaca)
+    return najlepsza
+
+
+print(najlepsza_suma([1, -2, 6, -5, 7, -3]))
+print(najlepsza_suma([1, -2, 2, 2, 2, -5, 3, 3, 1, -3]))</code></pre></div><p><strong>Odpowiedź:</strong> 8; drugi ciąg ma tę samą najlepszą sumę (8), bo powstał z pierwszego przez zastąpienie liczb dodatnich ciągami liczb dodatnich o tej samej sumie (6 = 2+2+2, 7 = 3+3+1).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najlepsza_suma(ciag):
+    # algorytm Kadane, czas O(n)
+    najlepsza = ciag[0]
+    biezaca = 0
+    for x in ciag:
+        biezaca = max(biezaca + x, x)
+        najlepsza = max(najlepsza, biezaca)
+    return najlepsza
+
+
+for nazwa in [&quot;dane5-1.txt&quot;, &quot;dane5-2.txt&quot;, &quot;dane5-3.txt&quot;]:
+    with open(nazwa) as file:
+        ciag = [int(linia) for linia in file if linia.strip()]
+    print(nazwa, najlepsza_suma(ciag))</code></pre></div><p><strong>Odpowiedź:</strong> dane5-1.txt: 106, dane5-2.txt: 139, dane5-3.txt: 1342</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najpopularniejszy(ciag):
+    # sortowanie O(n log n), potem jedno przejście po posortowanym ciągu O(n)
+    ciag = sorted(ciag)
+    najlepszy, najwiecej = ciag[0], 0
+    licznik = 0
+    for i in range(len(ciag)):
+        if i &gt; 0 and ciag[i] == ciag[i - 1]:
+            licznik += 1
+        else:
+            licznik = 1
+        if licznik &gt; najwiecej:
+            najwiecej = licznik
+            najlepszy = ciag[i]
+    return najlepszy, najwiecej
+
+
+for nazwa in [&quot;dane5-1.txt&quot;, &quot;dane5-2.txt&quot;, &quot;dane5-3.txt&quot;]:
+    with open(nazwa) as file:
+        ciag = [int(linia) for linia in file if linia.strip()]
+    print(nazwa, *najpopularniejszy(ciag))</code></pre></div><p><strong>Odpowiedź:</strong> dane5-1.txt: -22 (lub -15, 6, 19, 24), dane5-2.txt: -18 (lub 18), dane5-3.txt: 22; czas O(n log n)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def miejsca_punktowane(nazwa_pliku):
+    # zwraca numery zawodników z miejsc 1-30 (pliki zawierają 30 zawodników)
+    wyniki = []
+    with open(nazwa_pliku) as file:
+        for linia in file:
+            dane = linia.split()
+            wyniki.append((float(dane[4].replace(&quot;,&quot;, &quot;.&quot;)), dane[0]))
+    wyniki.sort(key=lambda w: -w[0])
+    return [numer for nota, numer in wyniki[:30]]
+
+
+panstwo_zawodnika = {}
+with open(&quot;Zawodnicy.txt&quot;) as file:
+    for linia in file:
+        numer, nazwisko, skrot, punkty = [pole.strip() for pole in linia.split(&quot;;&quot;)]
+        panstwo_zawodnika[numer] = skrot
+
+skroty = []
+with open(&quot;Panstwa.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    for linia in file:
+        skroty.append(linia.strip().split(&quot;;&quot;)[1])
+
+zawody = [&quot;Zakopane17.txt&quot;, &quot;Kuusamo28.txt&quot;, &quot;Trondheim06.txt&quot;]
+licznik = {skrot: [0, 0, 0] for skrot in skroty}
+for i in range(len(zawody)):
+    for numer in miejsca_punktowane(zawody[i]):
+        licznik[panstwo_zawodnika[numer]][i] += 1
+
+print(&quot;Państwo Zakopane Kuusamo Trondheim&quot;)
+for skrot in skroty:
+    print(skrot, *licznik[skrot])</code></pre></div><p><strong>Odpowiedź:</strong></p><div class="table-wrap"><table><tr><th></th><th>Zakopane</th><th>Kuusamo</th><th>Trondheim</th></tr><tr><td>POL</td><td>4</td><td>1</td><td>1</td></tr><tr><td>FIN</td><td>4</td><td>7</td><td>5</td></tr><tr><td>NOR</td><td>6</td><td>4</td><td>7</td></tr><tr><td>GER</td><td>6</td><td>3</td><td>6</td></tr><tr><td>SUI</td><td>0</td><td>1</td><td>1</td></tr><tr><td>AUT</td><td>7</td><td>5</td><td>3</td></tr><tr><td>CZE</td><td>0</td><td>2</td><td>0</td></tr><tr><td>JPN</td><td>0</td><td>3</td><td>2</td></tr><tr><td>USA</td><td>0</td><td>1</td><td>0</td></tr><tr><td>SLO</td><td>3</td><td>3</td><td>4</td></tr><tr><td>FRA</td><td>0</td><td>0</td><td>1</td></tr><tr><td>SWE, RUS, EST, SVK, KAZ, KOR</td><td>0</td><td>0</td><td>0</td></tr></table></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zawodnicy = {}
+with open(&quot;Zawodnicy.txt&quot;) as file:
+    for linia in file:
+        numer, nazwisko, skrot, punkty = [pole.strip() for pole in linia.split(&quot;;&quot;)]
+        zawodnicy[numer] = (nazwisko, skrot)
+
+
+def zestawienie(nazwa_pliku, nazwa_wyniku):
+    wyniki = []
+    with open(nazwa_pliku) as file:
+        for linia in file:
+            numer, skok1, nota1, skok2, nota = linia.split()
+            wyniki.append((numer, skok1, skok2, float(nota.replace(&quot;,&quot;, &quot;.&quot;))))
+    wyniki.sort(key=lambda w: -w[3])
+
+    with open(nazwa_wyniku, &quot;w&quot;) as wyjscie:
+        for miejsce in range(1, 31):
+            numer, skok1, skok2, nota = wyniki[miejsce - 1]
+            nazwisko, skrot = zawodnicy[numer]
+            wiersz = &quot;;&quot;.join([str(miejsce), nazwisko, skrot, skok1, skok2, str(nota).replace(&quot;.&quot;, &quot;,&quot;)])
+            wyjscie.write(wiersz + &quot;\n&quot;)
+            print(wiersz)
+
+
+zestawienie(&quot;Zakopane17.txt&quot;, &quot;punkt6a-z.txt&quot;)
+print()
+zestawienie(&quot;Kuusamo28.txt&quot;, &quot;punkt6a-k.txt&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> Zakopane: <code>1;Michael Uhrmann;GER;134;126,5;270,9</code>, <code>2;Adam Malysz;POL;132;127;267,2</code>, … <code>30;Sven Hannawald;GER;121;105;195,8</code>; Kuusamo: <code>1;Matti Hautamaeki;FIN;139;133,5;291,5</code>, <code>2;Adam Malysz;POL;132;134;277,3</code>, … <code>30;Andreas Widhoelzl;AUT;108;62;90,9</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6d"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6d">6d</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numer_malysza = None
+with open(&quot;Zawodnicy.txt&quot;) as file:
+    for linia in file:
+        numer, nazwisko, skrot, punkty = [pole.strip() for pole in linia.split(&quot;;&quot;)]
+        if nazwisko == &quot;Adam Malysz&quot;:
+            numer_malysza = numer
+
+zawody = [(&quot;Zakopane&quot;, &quot;Zakopane17.txt&quot;), (&quot;Kuusamo&quot;, &quot;Kuusamo28.txt&quot;), (&quot;Trondheim&quot;, &quot;Trondheim06.txt&quot;)]
+print(&quot;Miasto Seria1 Seria2 Nota Miejsce&quot;)
+for miasto, nazwa_pliku in zawody:
+    wyniki = []
+    with open(nazwa_pliku) as file:
+        for linia in file:
+            numer, skok1, nota1, skok2, nota = linia.split()
+            wyniki.append((float(nota.replace(&quot;,&quot;, &quot;.&quot;)), numer, skok1, skok2))
+    wyniki.sort(reverse=True)
+    for miejsce in range(len(wyniki)):
+        nota, numer, skok1, skok2 = wyniki[miejsce]
+        if numer == numer_malysza:
+            print(miasto, skok1, skok2, nota, miejsce + 1)</code></pre></div><p><strong>Odpowiedź:</strong></p><div class="table-wrap"><table><tr><th>Miasto</th><th>I seria</th><th>II seria</th><th>Nota</th><th>Miejsce</th></tr><tr><td>Zakopane</td><td>132</td><td>127</td><td>267,2</td><td>2</td></tr><tr><td>Kuusamo</td><td>132</td><td>134</td><td>277,3</td><td>2</td></tr><tr><td>Trondheim</td><td>123</td><td>119</td><td>232,1</td><td>9</td></tr></table></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2005_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

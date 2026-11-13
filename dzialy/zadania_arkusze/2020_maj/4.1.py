@@ -1,18 +1,20 @@
-def is_prime(x):
-    if x > 1:
-        for i in range(2, x):
-            if x % i == 0:
-                return False
-        return True
-    return False
+def czy_pierwsza(x):
+    if x < 2:
+        return False
+    i = 2
+    while i * i <= x:
+        if x % i == 0:
+            return False
+        i += 1
+    return True
 
 
-with open('Dane_PR2\pary.txt') as file:
+with open("pary.txt") as file:
     for line in file:
-        num, word = line.strip().split()
-        num = int(num)
-        if num > 4 and num % 2 == 0:
-            for j in range(3, num + 1):
-                if is_prime(j) and is_prime(num - j):
-                    print(num, j, num - j)
+        liczba = int(line.split()[0])
+        if liczba > 4 and liczba % 2 == 0:
+            # najmniejszy pierwszy składnik daje największą różnicę składników
+            for p in range(3, liczba // 2 + 1, 2):
+                if czy_pierwsza(p) and czy_pierwsza(liczba - p):
+                    print(liczba, p, liczba - p)
                     break

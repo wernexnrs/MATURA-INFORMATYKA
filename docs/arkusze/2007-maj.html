@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2007 Maj | Matura z informatyki</title>
+<meta name="description" content="2007 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a, 2b, 2c, 3.1 - 3.3, 3.6, 4a, 4b, 4c, 4d, 4e, 5a, 5b).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2007 Maj">
+<meta property="og:description" content="2007 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a, 2b, 2c, 3.1 - 3.3, 3.6, 4a, 4b, 4c, 4d, 4e, 5a, 5b).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2007 Maj", "description": "2007 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a, 2b, 2c, 3.1 - 3.3, 3.6, 4a, 4b, 4c, 4d, 4e, 5a, 5b).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title">Część I</p><ul><li><a href="#2a">2a</a></li><li><a href="#2b">2b</a></li><li><a href="#2c">2c</a></li><li><a href="#3-1-3-3">3.1 - 3.3</a></li><li><a href="#3-6">3.6</a></li></ul><p class="side-title">Część II</p><ul><li><a href="#4a">4a</a></li><li><a href="#4b">4b</a></li><li><a href="#4c">4c</a></li><li><a href="#4d">4d</a></li><li><a href="#4e">4e</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li><li><a href="#6e">6e</a></li><li><a href="#6f">6f</a></li><li><a href="#6g">6g</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2007 Maj</span></nav>
+<h1 class="page-title">2007 Maj</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI I</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-odpowiedzi-2.pdf" target="_blank" rel="noopener">ODPOWIEDZI II</a></p><p>Przykładowe wyniki CKE do części II znajdują się w folderze <code>Wyniki</code> w paczce z danymi. Pliki <code>dane_k.txt</code>, <code>zain_wyk.txt</code> i <code>wojew.txt</code> są zapisane w kodowaniu UTF-16 i mają wiersz nagłówka.</p><section class="card" id="2a"><p class="eyebrow">Część I</p><h2><a class="self" href="#2a">2a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
+    # wiersz i kolumna: 2*(n-1) pól, do tego cztery kierunki po przekątnych
+    return (2 * (n - 1) + min(x - 1, y - 1) + min(x - 1, n - y)
+            + min(n - x, y - 1) + min(n - x, n - y))
+
+
+n = 5
+for y in range(n, 0, -1):
+    print(y, *[atakowane(n, x, y) for x in range(1, n + 1)])</code></pre></div><p><strong>Odpowiedź:</strong> brzeg planszy: 12, pola (2..4, 2..4) bez środka: 14, środek (3,3): 16</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2b"><p class="eyebrow">Część I</p><h2><a class="self" href="#2b">2b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
+    return (2 * (n - 1) + min(x - 1, y - 1) + min(x - 1, n - y)
+            + min(n - x, y - 1) + min(n - x, n - y))
+
+
+for x, y in [(2, 2), (5, 4), (20, 18), (25, 30)]:
+    print((x, y), atakowane(32, x, y))</code></pre></div><p><strong>Odpowiedź:</strong> (2,2): 95, (5,4): 99, (20,18): 117, (25,30): 97</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2c"><p class="eyebrow">Część I</p><h2><a class="self" href="#2c">2c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
+    # Dane: n &lt;= 50 - rozmiar szachownicy, x, y - położenie hetmana (1 &lt;= x, y &lt;= n)
+    # Wynik: liczba pól atakowanych przez hetmana
+    wynik = 0
+    kierunki = [(1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+    for dx, dy in kierunki:
+        i = x + dx
+        j = y + dy
+        while 1 &lt;= i &lt;= n and 1 &lt;= j &lt;= n:
+            wynik += 1
+            i += dx
+            j += dy
+    return wynik
+
+
+print(atakowane(8, 2, 6), atakowane(5, 1, 1), atakowane(32, 20, 18))</code></pre></div><p><strong>Odpowiedź:</strong> wynik = 2(n−1) + min(x−1, y−1) + min(x−1, n−y) + min(n−x, y−1) + min(n−x, n−y)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="3-1-3-3"><p class="eyebrow">Część I</p><h2><a class="self" href="#3-1-3-3">3.1 - 3.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+    p1 = 1
+    suma = 0
+    for k in range(1, n + 1):
+        p1 = p1 * n
+        p2 = 1
+        for i in range(1, n + 1):
+            p2 = p2 * k
+        suma = suma + p1 + p2
+    return p1, p2, suma
+
+
+print(algorytm(3))</code></pre></div><p><strong>Odpowiedź:</strong> p1 = 27, p2 = 27, suma = 75; 3.4: suma = Σ(n^k + k^n) (odp. d); 3.5: n² + 3n (odp. b)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="3-6"><p class="eyebrow">Część I</p><h2><a class="self" href="#3-6">3.6</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+    p1 = 1
+    suma = 0
+    for k in range(1, n + 1):
+        p1 = p1 * n
+        p2 = 1
+        for i in range(1, k + 1):   # wiersz 6: dla i = 1..k
+            p2 = p2 * i             # wiersz 7: p2 = p2 * i
+        suma = suma + p1 + p2
+    return suma
+
+
+print(algorytm(3))  # (3 + 1!) + (9 + 2!) + (27 + 3!) = 48</code></pre></div><p><strong>Odpowiedź:</strong> 6: dla i ← 1..k wykonuj, 7: p2 ← p2 * i</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4a"><p class="eyebrow">Część II</p><h2><a class="self" href="#4a">4a</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kobiety = 0
+mezczyzni = 0
+with open(&quot;dane_k.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()  # nagłówek
+    for linia in file:
+        dane = linia.strip().split(&quot;\t&quot;)
+        if dane[2].strip().endswith(&quot;a&quot;):
+            kobiety += 1
+        else:
+            mezczyzni += 1
+
+print(&quot;kobiety:&quot;, kobiety)
+print(&quot;mężczyźni:&quot;, mezczyzni)</code></pre></div><p><strong>Odpowiedź:</strong> 161 kobiet, 119 mężczyzn</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4b"><p class="eyebrow">Część II</p><h2><a class="self" href="#4b">4b</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">sieci = {}
+with open(&quot;dane_k.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        dane = linia.strip().split(&quot;\t&quot;)
+        siec = dane[4].strip()
+        sieci[siec] = sieci.get(siec, 0) + 1
+
+for siec in sorted(sieci):
+    print(siec, sieci[siec])</code></pre></div><p><strong>Odpowiedź:</strong> Citrone 54, Erka 66, Hejka 70, Multi 90</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4c"><p class="eyebrow">Część II</p><h2><a class="self" href="#4c">4c</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wojewodztwa = {}
+kolejnosc = []
+with open(&quot;wojew.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        nazwa, symbol = linia.strip().split(&quot;\t&quot;)
+        wojewodztwa[symbol.strip()] = nazwa.strip()
+        kolejnosc.append(symbol.strip())
+
+ile = {}
+with open(&quot;dane_k.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        symbol = linia.strip().split(&quot;\t&quot;)[6].strip()
+        ile[symbol] = ile.get(symbol, 0) + 1
+
+for symbol in kolejnosc:
+    if symbol in ile:
+        print(wojewodztwa[symbol], ile[symbol])
+
+print()
+print(&quot;Więcej niż 20 kandydatów:&quot;)
+for symbol in kolejnosc:
+    if ile.get(symbol, 0) &gt; 20:
+        print(wojewodztwa[symbol], ile[symbol])</code></pre></div><p><strong>Odpowiedź:</strong> Dolnośląskie 30, Kujawsko - Pomorskie 16, Lubelskie 13, Lubuskie 18, Łódzkie 12, Małopolskie 16, Mazowieckie 43, Opolskie 10, Podkarpackie 14, Pomorskie 17, Śląskie 23, Świętokrzyskie 13, Warmińsko - Mazurskie 8, Wielkopolskie 30, Zachodniopomorskie 17; więcej niż 20: Dolnośląskie, Mazowieckie, Śląskie, Wielkopolskie</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4d"><p class="eyebrow">Część II</p><h2><a class="self" href="#4d">4d</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wojewodztwa = {}
+with open(&quot;wojew.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        nazwa, symbol = linia.strip().split(&quot;\t&quot;)
+        wojewodztwa[symbol.strip()] = nazwa.strip()
+
+zainteresowania = {}
+with open(&quot;zain_wyk.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        id_k, zain, wyksztalcenie = linia.strip().split(&quot;\t&quot;)
+        zainteresowania[id_k.strip()] = (zain.strip(), wyksztalcenie.strip())
+
+wyzsze = 0
+srednie = 0
+with open(&quot;dane_k.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        id_k, nazwisko, imie, wzrost, siec, wiek, symbol = [p.strip() for p in linia.split(&quot;\t&quot;)]
+        zain, wyksztalcenie = zainteresowania[id_k]
+        if zain == &quot;gry komputerowe&quot; and int(wiek) &lt;= 50 and wyksztalcenie in [&quot;średnie&quot;, &quot;wyższe&quot;]:
+            print(imie, nazwisko, wojewodztwa[symbol])
+            if wyksztalcenie == &quot;wyższe&quot;:
+                wyzsze += 1
+            else:
+                srednie += 1
+
+print(&quot;wyższe:&quot;, wyzsze, &quot;średnie:&quot;, srednie)</code></pre></div><p><strong>Odpowiedź:</strong> 16 osób (Urszula Adamczyk Śląskie, Urszula Kaczor Mazowieckie, Bartosz Karolko Wielkopolskie, …); 8 osób z wykształceniem wyższym i 8 ze średnim</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4e"><p class="eyebrow">Część II</p><h2><a class="self" href="#4e">4e</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zainteresowania = {}
+with open(&quot;zain_wyk.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        id_k, zain, wyksztalcenie = linia.strip().split(&quot;\t&quot;)
+        zainteresowania[id_k.strip()] = zain.strip()
+
+kobiety = 0
+mezczyzni = 0
+with open(&quot;dane_k.txt&quot;, encoding=&quot;utf-16&quot;) as file:
+    file.readline()
+    for linia in file:
+        id_k, nazwisko, imie, wzrost, siec, wiek, symbol = [p.strip() for p in linia.split(&quot;\t&quot;)]
+        if zainteresowania[id_k] in [&quot;polityka&quot;, &quot;sport&quot;]:
+            if imie.endswith(&quot;a&quot;) and int(wzrost) &gt;= 168:
+                kobiety += 1
+            elif not imie.endswith(&quot;a&quot;) and int(wzrost) &gt;= 175:
+                mezczyzni += 1
+
+print(&quot;kobiety:&quot;, kobiety)
+print(&quot;mężczyźni:&quot;, mezczyzni)</code></pre></div><p><strong>Odpowiedź:</strong> 14 kobiet, 7 mężczyzn</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5a"><p class="eyebrow">Część II</p><h2><a class="self" href="#5a">5a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
+    if n &lt; 2:
+        return False
+    i = 2
+    while i * i &lt;= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+
+
+def suma_cyfr(n):
+    suma = 0
+    while n &gt; 0:
+        suma += n % 10
+        n //= 10
+    return suma
+
+
+def super_b_pierwsza(n):
+    return czy_pierwsza(n) and czy_pierwsza(suma_cyfr(n)) and czy_pierwsza(bin(n).count(&quot;1&quot;))
+
+
+przedzialy = [(2, 1000), (100, 10000), (1000, 100000)]
+for nr in range(len(przedzialy)):
+    a, b = przedzialy[nr]
+    liczby = [n for n in range(a, b + 1) if super_b_pierwsza(n)]
+    with open(str(nr + 1) + &quot;.txt&quot;, &quot;w&quot;) as wyjscie:
+        for n in liczby:
+            wyjscie.write(str(n) + &quot;\n&quot;)
+    print(nr + 1, len(liczby))</code></pre></div><p><strong>Odpowiedź:</strong> &lt;2,1000&gt;: 50, &lt;100,10000&gt;: 249, &lt;1000,100000&gt;: 1262</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5b"><p class="eyebrow">Część II</p><h2><a class="self" href="#5b">5b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
+    if n &lt; 2:
+        return False
+    i = 2
+    while i * i &lt;= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+
+
+def suma_cyfr(n):
+    suma = 0
+    while n &gt; 0:
+        suma += n % 10
+        n //= 10
+    return suma
+
+
+ile = 0
+suma_super = 0
+for n in range(100, 10001):
+    if czy_pierwsza(suma_cyfr(n)):
+        ile += 1
+        if czy_pierwsza(n) and czy_pierwsza(bin(n).count(&quot;1&quot;)):
+            suma_super += n
+
+print(ile)
+print(suma_super, &quot;TAK&quot; if czy_pierwsza(suma_super) else &quot;NIE&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 2973; NIE</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6a"><p class="eyebrow">Część II</p><h2><a class="self" href="#6a">6a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = 0
+with open(&quot;telefony.txt&quot;) as file:
+    for linia in file:
+        if linia.strip() == &quot;504669045&quot;:
+            ile += 1
+
+print(ile)</code></pre></div><p><strong>Odpowiedź:</strong> 30 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6b"><p class="eyebrow">Część II</p><h2><a class="self" href="#6b">6b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
+with open(&quot;telefony.txt&quot;) as file:
+    for linia in file:
+        numer = linia.strip()
+        polaczenia[numer] = polaczenia.get(numer, 0) + 1
+
+najczestszy = max(polaczenia, key=polaczenia.get)
+print(najczestszy, polaczenia[najczestszy])</code></pre></div><p><strong>Odpowiedź:</strong> 770 309 737 — 49 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6c"><p class="eyebrow">Część II</p><h2><a class="self" href="#6c">6c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+with open(&quot;telefony.txt&quot;) as file:
+    for linia in file:
+        numer = linia.strip()
+        if numer.startswith(&quot;511&quot;):
+            numery.add(numer)
+
+print(len(numery))</code></pre></div><p><strong>Odpowiedź:</strong> 51 numerów</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6d"><p class="eyebrow">Część II</p><h2><a class="self" href="#6d">6d</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+with open(&quot;telefony.txt&quot;) as file:
+    for linia in file:
+        numery.add(linia.strip())
+
+ile = 0
+for numer in numery:
+    suma = 0
+    for cyfra in numer:
+        if int(cyfra) % 2 == 0:
+            suma += int(cyfra)
+    if suma &gt; 42:
+        ile += 1
+
+print(ile)</code></pre></div><p><strong>Odpowiedź:</strong> 3 osoby</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6e"><p class="eyebrow">Część II</p><h2><a class="self" href="#6e">6e</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+with open(&quot;telefony.txt&quot;) as file:
+    for linia in file:
+        numery.add(linia.strip())
+
+ile = 0
+for numer in numery:
+    if numer.count(&quot;1&quot;) &gt;= 4:
+        ile += 1
+
+print(ile)</code></pre></div><p><strong>Odpowiedź:</strong> 8 osób</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6f"><p class="eyebrow">Część II</p><h2><a class="self" href="#6f">6f</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+with open(&quot;telefony.txt&quot;) as file:
+    for linia in file:
+        numery.add(linia.strip())
+
+ile = 0
+for numer in numery:
+    cyfry = sorted(int(c) for c in numer)
+    mediana = cyfry[len(cyfry) // 2]  # numer ma 9 cyfr, więc mediana to środkowa cyfra
+    if numer[-1] == &quot;2&quot; and mediana % 3 == 0:
+        ile += 1
+
+print(ile)</code></pre></div><p><strong>Odpowiedź:</strong> 15 osób</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6g"><p class="eyebrow">Część II</p><h2><a class="self" href="#6g">6g</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
+with open(&quot;telefony.txt&quot;) as file:
+    for linia in file:
+        numer = linia.strip()
+        polaczenia[numer] = polaczenia.get(numer, 0) + 1
+
+for numer in sorted(polaczenia, key=polaczenia.get, reverse=True):
+    if polaczenia[numer] &gt;= 2:
+        print(numer, polaczenia[numer], sep=&quot;\t&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 770309737 49, 728257806 45, 527231153 39, 623337579 31, 504669045 30, 696946597 20</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

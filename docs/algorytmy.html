@@ -1,0 +1,1933 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algorytmy z wymagań CKE | Matura z informatyki</title>
+<meta name="description" content="Wszystkie algorytmy z wymagań egzaminacyjnych CKE z informatyki w Pythonie, z pseudokodem: systemy liczbowe, liczby pierwsze, NWD, sortowania, wyszukiwanie binarne, Horner, szyfry i geometria.">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/algorytmy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Algorytmy z wymagań CKE">
+<meta property="og:description" content="Wszystkie algorytmy z wymagań egzaminacyjnych CKE z informatyki w Pythonie, z pseudokodem: systemy liczbowe, liczby pierwsze, NWD, sortowania, wyszukiwanie binarne, Horner, szyfry i geometria.">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/algorytmy.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Algorytmy z wymagań CKE", "description": "Wszystkie algorytmy z wymagań egzaminacyjnych CKE z informatyki w Pythonie, z pseudokodem: systemy liczbowe, liczby pierwsze, NWD, sortowania, wyszukiwanie binarne, Horner, szyfry i geometria.", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/algorytmy.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="index.html">Start</a><a href="algorytmy.html" aria-current="page">Algorytmy CKE</a><a href="dodatkowe.html">Dodatkowe</a><a href="arkusze.html">Arkusze</a><a href="funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title">Algorytmy na liczbach całkowitych</p><ul><li><a href="#reprezentacja-liczb-w-dowolnym-systemie-pozycyjnym-w-tym-w-dwojkowym-i-szesnastkowym">Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym</a></li><li><a href="#sprawdzanie-czy-liczba-jest-liczba-pierwsza">Sprawdzanie, czy liczba jest liczbą pierwszą</a></li><li><a href="#sito-eratostenesa">Sito Eratostenesa</a></li><li><a href="#sprawdzanie-czy-liczba-jest-liczba-doskonala">Sprawdzanie, czy liczba jest liczbą doskonałą</a></li><li><a href="#rozkladanie-liczby-na-czynniki-pierwsze">Rozkładanie liczby na czynniki pierwsze</a></li><li><a href="#iteracyjna-i-rekurencyjna-realizacja-algorytmu-euklidesa-nww">Iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW</a></li><li><a href="#iteracyjne-i-rekurencyjne-obliczanie-wartosci-liczb-fibonacciego">Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego</a></li><li><a href="#wydawanie-reszty-metoda-zachlanna">Wydawanie reszty metodą zachłanną</a></li></ul><p class="side-title">Algorytmy wyszukiwania i porządkowania (sortowania)</p><ul><li><a href="#wyszukiwanie-liniowe">Wyszukiwanie liniowe</a></li><li><a href="#wyszukiwanie-binarne">Wyszukiwanie binarne</a></li><li><a href="#jednoczesne-wyszukiwanie-minimum-i-maksimum">Jednoczesne wyszukiwanie minimum i maksimum</a></li><li><a href="#sortowanie-babelkowe">Sortowanie bąbelkowe</a></li><li><a href="#sortowanie-przez-wybor">Sortowanie przez wybór</a></li><li><a href="#sortowanie-przez-wstawianie-liniowe-lub-binarne">Sortowanie przez wstawianie liniowe lub binarne</a></li><li><a href="#sortowanie-przez-scalanie">Sortowanie przez scalanie</a></li><li><a href="#sortowanie-szybkie">Sortowanie szybkie</a></li><li><a href="#sortowanie-kubelkowe">Sortowanie kubełkowe</a></li></ul><p class="side-title">Algorytmy numeryczne</p><ul><li><a href="#szybkie-podnoszenie-do-potegi">Szybkie podnoszenie do potęgi</a></li><li><a href="#wyznaczanie-miejsc-zerowych-funkcji-metoda-polowienia-bisekcja">Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja</a></li><li><a href="#obliczanie-pierwiastka-kwadratowego-metoda-herona-newtona">Obliczanie pierwiastka kwadratowego metodą Herona (Newtona)</a></li><li><a href="#obliczanie-wartosci-wielomianu-za-pomoca-schematu-hornera">Obliczanie wartości wielomianu za pomocą schematu Hornera</a></li><li><a href="#obliczanie-pola-obszarow-zamknietych">Obliczanie pola obszarów zamkniętych</a></li></ul><p class="side-title">Algorytmy na tekstach</p><ul><li><a href="#sprawdzanie-czy-dany-ciag-znakow-tworzy-palindrom">Sprawdzanie, czy dany ciąg znaków tworzy palindrom</a></li><li><a href="#sprawdzanie-czy-dany-ciag-znakow-tworzy-anagram">Sprawdzanie, czy dany ciąg znaków tworzy anagram</a></li><li><a href="#porzadkowanie-alfabetyczne">Porządkowanie alfabetyczne</a></li><li><a href="#wyszukiwanie-wzorca-w-tekscie">Wyszukiwanie wzorca w tekście</a></li><li><a href="#obliczanie-wartosci-wyrazenia-w-odwrotnej-notacji-polskiej-onp">Obliczanie wartości wyrażenia w odwrotnej notacji polskiej (ONP)</a></li></ul><p class="side-title">Algorytmy kompresji i szyfrowania</p><ul><li><a href="#kompresja-danych">Kompresja danych</a></li><li><a href="#kod-huffmana">Kod Huffmana</a></li><li><a href="#alfabet-morse-a">Alfabet Morse’a</a></li><li><a href="#transpozycyjny">Transpozycyjny</a></li><li><a href="#szyfr-atbash">Szyfr AtBash</a></li><li><a href="#szyfr-cezara">Szyfr Cezara</a></li><li><a href="#szyfr-vigen-re-a">Szyfr Vigenère’a</a></li><li><a href="#rsa-rozszerzony-algorytm-euklidesa">RSA + rozszerzony algorytm Euklidesa</a></li></ul><p class="side-title">Algorytmy geometryczne</p><ul><li><a href="#sprawdzanie-warunku-trojkata">Sprawdzanie warunku trójkąta</a></li><li><a href="#badanie-polozenia-punktow-wzgledem-prostej">Badanie położenia punktów względem prostej</a></li><li><a href="#badanie-przynaleznosci-punktu-do-odcinka">Badanie przynależności punktu do odcinka</a></li><li><a href="#przecinanie-sie-odcinkow">Przecinanie się odcinków</a></li><li><a href="#przynaleznosc-punktu-do-obszaru-wielokata">Przynależność punktu do obszaru (wielokąta)</a></li><li><a href="#krzywa-kocha">Krzywa Kocha</a></li><li><a href="#drzewo-pitagorasa">Drzewo Pitagorasa</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="index.html">Start</a> / <span>Algorytmy z wymagań CKE</span></nav>
+<h1 class="page-title">Algorytmy z wymagań CKE</h1><p class="lead">Wszystkie algorytmy z wymagań egzaminacyjnych CKE z informatyki w Pythonie, z pseudokodem: systemy liczbowe, liczby pierwsze, NWD, sortowania, wyszukiwanie binarne, Horner, szyfry i geometria.</p><div class="toc-grid"><div class="toc-card"><h2>Algorytmy na liczbach całkowitych</h2><ul><li><a href="#reprezentacja-liczb-w-dowolnym-systemie-pozycyjnym-w-tym-w-dwojkowym-i-szesnastkowym">Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym</a></li><li><a href="#sprawdzanie-czy-liczba-jest-liczba-pierwsza">Sprawdzanie, czy liczba jest liczbą pierwszą</a></li><li><a href="#sito-eratostenesa">Sito Eratostenesa</a></li><li><a href="#sprawdzanie-czy-liczba-jest-liczba-doskonala">Sprawdzanie, czy liczba jest liczbą doskonałą</a></li><li><a href="#rozkladanie-liczby-na-czynniki-pierwsze">Rozkładanie liczby na czynniki pierwsze</a></li><li><a href="#iteracyjna-i-rekurencyjna-realizacja-algorytmu-euklidesa-nww">Iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW</a></li><li><a href="#iteracyjne-i-rekurencyjne-obliczanie-wartosci-liczb-fibonacciego">Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego</a></li><li><a href="#wydawanie-reszty-metoda-zachlanna">Wydawanie reszty metodą zachłanną</a></li></ul></div><div class="toc-card"><h2>Algorytmy wyszukiwania i porządkowania (sortowania)</h2><ul><li><a href="#wyszukiwanie-liniowe">Wyszukiwanie liniowe</a></li><li><a href="#wyszukiwanie-binarne">Wyszukiwanie binarne</a></li><li><a href="#jednoczesne-wyszukiwanie-minimum-i-maksimum">Jednoczesne wyszukiwanie minimum i maksimum</a></li><li><a href="#sortowanie-babelkowe">Sortowanie bąbelkowe</a></li><li><a href="#sortowanie-przez-wybor">Sortowanie przez wybór</a></li><li><a href="#sortowanie-przez-wstawianie-liniowe-lub-binarne">Sortowanie przez wstawianie liniowe lub binarne</a></li><li><a href="#sortowanie-przez-scalanie">Sortowanie przez scalanie</a></li><li><a href="#sortowanie-szybkie">Sortowanie szybkie</a></li><li><a href="#sortowanie-kubelkowe">Sortowanie kubełkowe</a></li></ul></div><div class="toc-card"><h2>Algorytmy numeryczne</h2><ul><li><a href="#szybkie-podnoszenie-do-potegi">Szybkie podnoszenie do potęgi</a></li><li><a href="#wyznaczanie-miejsc-zerowych-funkcji-metoda-polowienia-bisekcja">Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja</a></li><li><a href="#obliczanie-pierwiastka-kwadratowego-metoda-herona-newtona">Obliczanie pierwiastka kwadratowego metodą Herona (Newtona)</a></li><li><a href="#obliczanie-wartosci-wielomianu-za-pomoca-schematu-hornera">Obliczanie wartości wielomianu za pomocą schematu Hornera</a></li><li><a href="#obliczanie-pola-obszarow-zamknietych">Obliczanie pola obszarów zamkniętych</a></li></ul></div><div class="toc-card"><h2>Algorytmy na tekstach</h2><ul><li><a href="#sprawdzanie-czy-dany-ciag-znakow-tworzy-palindrom">Sprawdzanie, czy dany ciąg znaków tworzy palindrom</a></li><li><a href="#sprawdzanie-czy-dany-ciag-znakow-tworzy-anagram">Sprawdzanie, czy dany ciąg znaków tworzy anagram</a></li><li><a href="#porzadkowanie-alfabetyczne">Porządkowanie alfabetyczne</a></li><li><a href="#wyszukiwanie-wzorca-w-tekscie">Wyszukiwanie wzorca w tekście</a></li><li><a href="#obliczanie-wartosci-wyrazenia-w-odwrotnej-notacji-polskiej-onp">Obliczanie wartości wyrażenia w odwrotnej notacji polskiej (ONP)</a></li></ul></div><div class="toc-card"><h2>Algorytmy kompresji i szyfrowania</h2><ul><li><a href="#kompresja-danych">Kompresja danych</a></li><li><a href="#kod-huffmana">Kod Huffmana</a></li><li><a href="#alfabet-morse-a">Alfabet Morse’a</a></li><li><a href="#transpozycyjny">Transpozycyjny</a></li><li><a href="#szyfr-atbash">Szyfr AtBash</a></li><li><a href="#szyfr-cezara">Szyfr Cezara</a></li><li><a href="#szyfr-vigen-re-a">Szyfr Vigenère’a</a></li><li><a href="#rsa-rozszerzony-algorytm-euklidesa">RSA + rozszerzony algorytm Euklidesa</a></li></ul></div><div class="toc-card"><h2>Algorytmy geometryczne</h2><ul><li><a href="#sprawdzanie-warunku-trojkata">Sprawdzanie warunku trójkąta</a></li><li><a href="#badanie-polozenia-punktow-wzgledem-prostej">Badanie położenia punktów względem prostej</a></li><li><a href="#badanie-przynaleznosci-punktu-do-odcinka">Badanie przynależności punktu do odcinka</a></li><li><a href="#przecinanie-sie-odcinkow">Przecinanie się odcinków</a></li><li><a href="#przynaleznosc-punktu-do-obszaru-wielokata">Przynależność punktu do obszaru (wielokąta)</a></li><li><a href="#krzywa-kocha">Krzywa Kocha</a></li><li><a href="#drzewo-pitagorasa">Drzewo Pitagorasa</a></li></ul></div></div><section class="card" id="reprezentacja-liczb-w-dowolnym-systemie-pozycyjnym-w-tym-w-dwojkowym-i-szesnastkowym"><span id="konwersja" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#reprezentacja-liczb-w-dowolnym-systemie-pozycyjnym-w-tym-w-dwojkowym-i-szesnastkowym">Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · int(&quot;number_string&quot;,base) ANY --&gt; DEC</button><button type="button" role="tab" aria-selected="false" class="tab">Python · recursive one-liner version DEC --&gt; ANY</button><button type="button" role="tab" aria-selected="false" class="tab">Python · recursive version DEC --&gt; ANY</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python · iterated version with slices DEC --&gt; ANY</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python · manual version ANY --&gt; DEC (schemat Hornera)</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#int(&quot;number_string&quot;,base) ANY --&gt; DEC
+
+dec_numbers = [15, 12, 2, 4, 7, 8]
+
+dec_TO_bin = [bin(i)[2:] for i in dec_numbers]
+dec_TO_oct = [oct(i)[2:] for i in dec_numbers]
+dec_TO_hex = [hex(i)[2:] for i in dec_numbers]
+
+bin_TO_dec = [int(i, 2) for i in dec_TO_bin]
+oct_TO_dec = [int(i, 8) for i in dec_TO_oct]
+hex_TO_dec = [int(i, 16) for i in dec_TO_hex]</code></pre></div><div class="pane" hidden><pre><code class="language-python">#recursive one-liner version DEC --&gt; ANY
+
+BS = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+
+
+def to_base(n, b):  # to_base(number,base), n &gt;= 0, 2 &lt;= b &lt;= 36
+    return BS[n] if n &lt; b else to_base(n // b, b) + BS[n % b]</code></pre></div><div class="pane" hidden><pre><code class="language-python">#recursive version DEC --&gt; ANY
+
+BS = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+
+def to_base(n, b):  # to_base(number,base), n &gt;= 0, 2 &lt;= b &lt;= 36
+    if n &lt; b:
+        return BS[n]
+    return to_base(n // b, b) + BS[n % b]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">BS &lt;- &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+n - liczba dziesiętna (n &gt;= 0)
+b - podstawa systemu (2 &lt;= b &lt;= 36)
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def to_base(n, b):
+    Jeżeli n &lt; b:
+        Zwróć BS[n]
+    W innym wypadku:
+        Zwróć to_base(n div b, b) + BS[n mod b]</code></pre></div><div class="pane" hidden><pre><code class="language-python">#iterated version with slices DEC --&gt; ANY
+
+BS = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+
+
+def to_base(n, b):  # to_base(number,base), n &gt;= 0, 2 &lt;= b &lt;= 36
+    if n == 0:
+        return &quot;0&quot;
+    res = &quot;&quot;
+    while n &gt; 0:
+        res += BS[n % b]
+        n //= b
+    return res[::-1]  # cyfry powstają od końca, więc odwracamy napis</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">BS &lt;- &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+n - liczba dziesiętna (n &gt;= 0)
+b - podstawa systemu (2 &lt;= b &lt;= 36)
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def to_base(n, b):
+    Jeżeli n == 0
+        Zwróć &quot;0&quot;
+    res &lt;- &quot;&quot;
+    Dopóki n &gt; 0
+        res &lt;- BS[n mod b] + res
+        n &lt;- n div b
+    Zwróć res</code></pre></div><div class="pane" hidden><pre><code class="language-python">#manual version ANY --&gt; DEC (schemat Hornera)
+
+BS = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+
+
+def to_dec(liczba, b):  # to_dec(&quot;number_string&quot;, base), np. to_dec(&quot;1F&quot;, 16) == 31
+    wynik = 0
+    for znak in liczba.upper():
+        wynik = wynik * b + BS.index(znak)  # BS.index(znak) - wartość cyfry
+    return wynik</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">liczba[1..n] - napis z cyframi liczby w systemie o podstawie b
+wartosc(c) - wartość cyfry c (0..9, A = 10, B = 11, ...)
+
+def to_dec(liczba, b):
+    wynik &lt;- 0
+    Dla i = 1, 2, ... n
+        wynik &lt;- wynik * b + wartosc(liczba[i])
+    Zwróć wynik</code></pre></div></div><span id="is_prime" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sprawdzanie-czy-liczba-jest-liczba-pierwsza"><span id="is_prime" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#sprawdzanie-czy-liczba-jest-liczba-pierwsza">Sprawdzanie, czy liczba jest liczbą pierwszą</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def is_prime(x):
+    if x &lt;= 1:
+        return False
+    for i in range(2, int(x**0.5) + 1):
+        if x % i == 0:
+            return False
+    return True</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">x - sprawdzana liczba całkowita
+mod - reszta z dzielenia
+
+def is_prime(x):
+    Jeżeli x &lt;= 1
+        Zwróć Fałsz
+    Dla i = 2, 3, ... część całkowita z pierwiastka z x
+        Jeżeli x mod i == 0
+            Zwróć Fałsz
+    Zwróć Prawdę</code></pre></div></div><span id="sito" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sito-eratostenesa"><span id="sito" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#sito-eratostenesa">Sito Eratostenesa</a></h2><p>Wyznacza wszystkie liczby pierwsze z przedziału [2, n]. Zaczynamy od tablicy, w której każda liczba jest "kandydatem" na liczbę pierwszą, a następnie dla kolejnych liczb pierwszych i wykreślamy ich wielokrotności (zaczynając od i * i, bo mniejsze wielokrotności zostały już wykreślone).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def sito(n):  # zwraca listę liczb pierwszych &lt;= n
+    if n &lt; 2:
+        return []
+    pierwsza = [True] * (n + 1)
+    pierwsza[0] = pierwsza[1] = False
+    i = 2
+    while i * i &lt;= n:
+        if pierwsza[i]:
+            for j in range(i * i, n + 1, i):
+                pierwsza[j] = False
+        i += 1
+
+    wynik = []
+    for i in range(2, n + 1):
+        if pierwsza[i]:
+            wynik.append(i)
+    return wynik
+
+
+print(sito(30))  # [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - górna granica przedziału
+pierwsza[2..n] - tablica wartości logicznych
+
+def sito(n):
+    Dla i = 2, 3, ... n
+        pierwsza[i] &lt;- Prawda
+    i &lt;- 2
+    Dopóki i * i &lt;= n
+        Jeżeli pierwsza[i]
+            j &lt;- i * i
+            Dopóki j &lt;= n
+                pierwsza[j] &lt;- Fałsz
+                j &lt;- j + i
+        i &lt;- i + 1
+    Zwróć wszystkie i, dla których pierwsza[i] == Prawda</code></pre></div></div><span id="is_perfect" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sprawdzanie-czy-liczba-jest-liczba-doskonala"><span id="is_perfect" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#sprawdzanie-czy-liczba-jest-liczba-doskonala">Sprawdzanie, czy liczba jest liczbą doskonałą</a></h2><p>Liczba doskonała to liczba naturalna równa sumie swoich dzielników mniejszych od niej samej, np. 6 = 1 + 2 + 3, 28 = 1 + 2 + 4 + 7 + 14.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · O(n) version</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#O(n) version
+
+def is_perfect(n):
+    s = 1
+    for i in range(2, n):
+        if n % i == 0:
+            s += i
+    if n == s and n != 1:
+        return True
+    return False</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - sprawdzana liczba naturalna
+mod - reszta z dzielenia
+
+def is_perfect(n):
+    s &lt;- 1
+    Dla i = 2, 3, ... n - 1
+        Jeżeli n mod i == 0
+            s &lt;- s + i
+    Jeżeli n == s oraz n != 1
+        Zwróć Prawdę
+    W innym wypadku
+        Zwróć Fałsz</code></pre></div><div class="pane" hidden><pre><code class="language-python">#O(sqrt(n)) version - dzielniki występują w parach (i, n // i)
+
+def is_perfect(n):
+    if n &lt; 2:
+        return False
+    s = 1
+    i = 2
+    while i * i &lt;= n:
+        if n % i == 0:
+            s += i
+            if i != n // i:  # drugi dzielnik z pary (nie dodajemy dwa razy pierwiastka)
+                s += n // i
+        i += 1
+    return s == n</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - sprawdzana liczba naturalna
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def is_perfect(n):
+    Jeżeli n &lt; 2
+        Zwróć Fałsz
+    s &lt;- 1
+    i &lt;- 2
+    Dopóki i * i &lt;= n
+        Jeżeli n mod i == 0
+            s &lt;- s + i
+            Jeżeli i != n div i
+                s &lt;- s + n div i
+        i &lt;- i + 1
+    Zwróć s == n</code></pre></div></div><span id="prime_factors" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="rozkladanie-liczby-na-czynniki-pierwsze"><span id="prime_factors" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#rozkladanie-liczby-na-czynniki-pierwsze">Rozkładanie liczby na czynniki pierwsze</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def prime_factors(n):  # dla n &lt;= 1 zwraca pustą listę
+    czynniki = []
+    k = 2
+    while n &gt; 1:
+        while n % k == 0:
+            n //= k
+            czynniki.append(k)  # albo print(k)
+        k += 1
+    return czynniki
+
+
+print(prime_factors(360))  # [2, 2, 2, 3, 3, 5]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - liczba całkowita
+div - dzielenie całkowite
+mod - reszta z dzielenia
+
+def prime_factors(n):
+    czynniki &lt;- []
+    k &lt;- 2
+    Dopóki n &gt; 1
+        Dopóki n mod k == 0
+            n &lt;- n div k
+            Dodaj k na koniec czynniki
+        k &lt;- k + 1
+    Zwróć czynniki</code></pre></div></div><span id="nwd" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="iteracyjna-i-rekurencyjna-realizacja-algorytmu-euklidesa-nww"><span id="nwd" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#iteracyjna-i-rekurencyjna-realizacja-algorytmu-euklidesa-nww">Iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · rekurencyjnie, 1 linia</button><button type="button" role="tab" aria-selected="false" class="tab">Python · rekurencyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#recursive one-liner version
+
+def nwd(a, b): return nwd(b, a % b) if b else a</code></pre></div><div class="pane" hidden><pre><code class="language-python">#recursive version
+
+def nwd(a, b):
+    if b &gt; 0:
+        return nwd(b, a % b)
+    return a</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">a - liczba całkowita
+b - liczba całkowita
+mod - reszta z dzielenia
+
+def nwd(a, b):
+    Jeżeli b &gt; 0:
+        Zwróć nwd(b, a mod b)
+    W innym wypadku
+        Zwróć a</code></pre></div><div class="pane" hidden><pre><code class="language-python">#iterated version
+
+def nwd(a, b):
+    while b:
+        a, b = b, a % b
+    return a</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">a - liczba całkowita
+b - liczba całkowita
+mod - reszta z dzielenia
+
+def nwd(a, b):
+    Dopóki b != 0
+        t &lt;- a
+        a &lt;- b
+        b &lt;- t mod b
+    Zwróć a</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Najmniejsza wspólna wielokrotność (korzysta z funkcji nwd powyżej)
+
+def nww(a, b): return a * b // nwd(a, b)</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">a - liczba całkowita
+b - liczba całkowita
+div - dzielenie całkowite
+
+def nww(a, b):
+    Zwróć a * b div nwd(a,b)</code></pre></div></div><span id="fib" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="iteracyjne-i-rekurencyjne-obliczanie-wartosci-liczb-fibonacciego"><span id="fib" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#iteracyjne-i-rekurencyjne-obliczanie-wartosci-liczb-fibonacciego">Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python · rekurencyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+def f(n):
+    a, b = 0, 1
+    for i in range(0, n):
+        a, b = b, a + b
+    return a</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - numer wyrazu ciągu (f(0) = 0, f(1) = 1)
+
+def f(n):
+    a &lt;- 0
+    b &lt;- 1
+    Dla i = 1, 2, ... n
+        t &lt;- a
+        a &lt;- b
+        b &lt;- t + b
+    Zwróć a</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Recursive version
+
+def f(n):
+    if n &lt;= 1:
+        return n
+    return f(n - 1) + f(n - 2)</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">def f(n)
+    Jeżeli n &lt;= 1
+        Zwróć n
+    W innym wypadku
+        Zwróć f(n-1) + f(n-2)</code></pre></div></div><span id="zachlanna" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wydawanie-reszty-metoda-zachlanna"><span id="zachlanna" class="anchor"></span><p class="eyebrow">Algorytmy na liczbach całkowitych</p><h2><a class="self" href="#wydawanie-reszty-metoda-zachlanna">Wydawanie reszty metodą zachłanną</a></h2><p>W każdym kroku wybieramy największą monetę, która nie jest większa od kwoty pozostałej do wydania. Dla nominałów takich jak w Polsce (1, 2, 5, 10, ...) daje to najmniejszą liczbę monet, ale dla dowolnych nominałów nie zawsze (np. kwota 6 i monety [1, 3, 4] -&gt; 4 + 1 + 1 zamiast 3 + 3).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">do_wydania = 6
+monety = [1, 2, 5]
+
+def wydawanie(do_wydania, monety):
+    count = 0
+    historia = []
+
+    while do_wydania &gt; 0:
+        nominal = 0
+        for i in range(len(monety)):
+            if do_wydania &gt;= monety[i] &gt; nominal:
+                nominal = monety[i]
+        if nominal == 0:  # żadna moneta nie mieści się w kwocie - reszty nie da się wydać
+            return None
+        do_wydania -= nominal
+
+        historia.append(nominal)
+        count += 1
+
+    return count, historia
+
+
+wynik = wydawanie(do_wydania, monety)
+if wynik is None:
+    print(&quot;Nie da się wydać reszty tymi monetami&quot;)
+else:
+    print(f&#x27;Resztę wydasz w {wynik[0]} monetach, te monety to {wynik[1]}&#x27;)</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">do_wydania - kwota do wydania
+monety[1..n] - dostępne nominały (każdy w dowolnej ilości)
+
+def wydawanie(do_wydania, monety):
+    count &lt;- 0
+    historia &lt;- []
+    Dopóki do_wydania &gt; 0
+        nominal &lt;- 0
+        Dla i = 1, 2, ... n
+            Jeżeli do_wydania &gt;= monety[i] oraz monety[i] &gt; nominal
+                nominal &lt;- monety[i]
+        Jeżeli nominal == 0
+            Zwróć &quot;nie da się wydać reszty&quot;
+        do_wydania &lt;- do_wydania - nominal
+        Dodaj nominal na koniec historia
+        count &lt;- count + 1
+    Zwróć count, historia</code></pre></div></div><span id="liniowe" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyszukiwanie-liniowe"><span id="liniowe" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#wyszukiwanie-liniowe">Wyszukiwanie liniowe</a></h2><p>Sprawdzamy po kolei wszystkie elementy tablicy (tablica nie musi być posortowana). Złożoność O(n).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def linear_search(tab, x):  # indeks pierwszego wystąpienia x albo -1
+    for i in range(len(tab)):
+        if tab[i] == x:
+            return i
+    return -1</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tab[1..n] - przeszukiwana tablica
+x - szukana wartość
+
+def linear_search(tab, x):
+    Dla i = 1, 2, ... n
+        Jeżeli tab[i] == x
+            Zwróć i
+    Zwróć -1</code></pre></div></div><span id="binarne" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyszukiwanie-binarne"><span id="binarne" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#wyszukiwanie-binarne">Wyszukiwanie binarne</a></h2><p>Działa tylko dla tablicy posortowanej rosnąco. W każdym kroku porównujemy szukaną wartość ze środkowym elementem i odrzucamy połowę przedziału. Złożoność O(log n).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+def binary_search(tab, x):  # indeks elementu równego x albo -1
+    lewy, prawy = 0, len(tab) - 1
+    while lewy &lt;= prawy:
+        srodek = (lewy + prawy) // 2
+        if tab[srodek] == x:
+            return srodek
+        elif tab[srodek] &lt; x:
+            lewy = srodek + 1
+        else:
+            prawy = srodek - 1
+    return -1</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tab[1..n] - tablica posortowana rosnąco
+x - szukana wartość
+div - dzielenie całkowite
+
+def binary_search(tab, x):
+    lewy &lt;- 1
+    prawy &lt;- n
+    Dopóki lewy &lt;= prawy
+        srodek &lt;- (lewy + prawy) div 2
+        Jeżeli tab[srodek] == x
+            Zwróć srodek
+        Jeżeli tab[srodek] &lt; x
+            lewy &lt;- srodek + 1
+        W innym wypadku
+            prawy &lt;- srodek - 1
+    Zwróć -1</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Recursive version - wywołanie: binary_search_rek(tab, x, 0, len(tab) - 1)
+
+def binary_search_rek(tab, x, lewy, prawy):
+    if lewy &gt; prawy:
+        return -1
+    srodek = (lewy + prawy) // 2
+    if tab[srodek] == x:
+        return srodek
+    if tab[srodek] &lt; x:
+        return binary_search_rek(tab, x, srodek + 1, prawy)
+    return binary_search_rek(tab, x, lewy, srodek - 1)</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tab[1..n] - tablica posortowana rosnąco
+div - dzielenie całkowite
+wywołanie: binary_search_rek(tab, x, 1, n)
+
+def binary_search_rek(tab, x, lewy, prawy):
+    Jeżeli lewy &gt; prawy
+        Zwróć -1
+    srodek &lt;- (lewy + prawy) div 2
+    Jeżeli tab[srodek] == x
+        Zwróć srodek
+    Jeżeli tab[srodek] &lt; x
+        Zwróć binary_search_rek(tab, x, srodek + 1, prawy)
+    W innym wypadku
+        Zwróć binary_search_rek(tab, x, lewy, srodek - 1)</code></pre></div></div><span id="minmax" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="jednoczesne-wyszukiwanie-minimum-i-maksimum"><span id="minmax" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#jednoczesne-wyszukiwanie-minimum-i-maksimum">Jednoczesne wyszukiwanie minimum i maksimum</a></h2><p>Wersja naiwna porównuje każdy element osobno z minimum i z maksimum, czyli wykonuje ok. 2n porównań. Metoda "parami" bierze po dwa elementy, najpierw porównuje je ze sobą, a potem mniejszy z minimum, a większy z maksimum - 3 porównania na 2 elementy, czyli ok. 3n/2 porównań.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · Wersja naiwna (ok. 2n porównań)</button><button type="button" role="tab" aria-selected="false" class="tab">Python · Metoda &quot;parami&quot; (ok. 3n/2 porównań)</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Wersja naiwna (ok. 2n porównań)
+
+def min_max_naiwnie(tab):
+    if len(tab) == 0:
+        return None
+    mini = maks = tab[0]
+    for i in range(1, len(tab)):
+        if tab[i] &lt; mini:
+            mini = tab[i]
+        if tab[i] &gt; maks:
+            maks = tab[i]
+    return mini, maks</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Metoda &quot;parami&quot; (ok. 3n/2 porównań)
+
+def min_max(tab):  # zwraca (minimum, maksimum) albo None dla pustej tablicy
+    n = len(tab)
+    if n == 0:
+        return None
+    if n % 2 == 1:  # nieparzysta liczba elementów - pierwszy element jest i min, i max
+        mini = maks = tab[0]
+        start = 1
+    else:  # parzysta - pierwszą parę porównujemy ze sobą
+        if tab[0] &lt; tab[1]:
+            mini, maks = tab[0], tab[1]
+        else:
+            mini, maks = tab[1], tab[0]
+        start = 2
+
+    for i in range(start, n - 1, 2):
+        if tab[i] &lt; tab[i + 1]:
+            mniejszy, wiekszy = tab[i], tab[i + 1]
+        else:
+            mniejszy, wiekszy = tab[i + 1], tab[i]
+        if mniejszy &lt; mini:
+            mini = mniejszy
+        if wiekszy &gt; maks:
+            maks = wiekszy
+    return mini, maks</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tab[1..n] - tablica liczb (n &gt;= 1)
+mod - reszta z dzielenia
+
+def min_max(tab):
+    Jeżeli n mod 2 == 1
+        mini &lt;- tab[1]
+        maks &lt;- tab[1]
+        i &lt;- 2
+    W innym wypadku
+        Jeżeli tab[1] &lt; tab[2]
+            mini &lt;- tab[1]
+            maks &lt;- tab[2]
+        W innym wypadku
+            mini &lt;- tab[2]
+            maks &lt;- tab[1]
+        i &lt;- 3
+    Dopóki i &lt; n
+        Jeżeli tab[i] &lt; tab[i + 1]
+            mniejszy &lt;- tab[i]
+            wiekszy &lt;- tab[i + 1]
+        W innym wypadku
+            mniejszy &lt;- tab[i + 1]
+            wiekszy &lt;- tab[i]
+        Jeżeli mniejszy &lt; mini
+            mini &lt;- mniejszy
+        Jeżeli wiekszy &gt; maks
+            maks &lt;- wiekszy
+        i &lt;- i + 2
+    Zwróć mini, maks</code></pre></div></div><span id="bob" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sortowanie-babelkowe"><span id="bob" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#sortowanie-babelkowe">Sortowanie bąbelkowe</a></h2><p>Sortuje rosnąco (zamiana, gdy tab[j] &gt; tab[j + 1]), tak samo jak wersja w Pythonie.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">C++ · include &lt;iostream&gt;</button><button type="button" role="tab" aria-selected="false" class="tab">Python · w miejscu</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+void babelkowe(int* tab, int rozmiar) {
+    int k { 0 };
+
+    for (int i = 0; i &lt; rozmiar; i++) {
+        for (int j = 0; j &lt; rozmiar - i - 1; j++) {
+            if (tab[j] &gt; tab[j + 1]) {
+                k = tab[j + 1];
+                tab[j + 1] = tab[j];
+                tab[j] = k;
+            }
+        }
+    }
+
+    for (int i = 0; i &lt; rozmiar; i++) cout &lt;&lt; tab[i] &lt;&lt; &quot; &quot;;
+}</code></pre></div><div class="pane" hidden><pre><code class="language-python">#In place
+
+def bubble_sort(tab):
+    for i in range(len(tab)):
+        for j in range(len(tab) - i - 1):
+            if tab[j] &gt; tab[j + 1]:
+                tab[j + 1], tab[j] = tab[j], tab[j + 1]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">A[1..n] - sortowana tablica
+
+Dla i = 1, 2, ... n
+    Dla j = 1, 2, ... n – i
+        Jeżeli A[j] &gt; A[j + 1]
+            t &lt;- A[j + 1]
+            A[j + 1] &lt;- A[j]
+            A[j] &lt;- t</code></pre></div><div class="pane" hidden><pre><code class="language-python"># Wersja zoptymalizowana - kończy pracę, gdy w całym przebiegu nie było żadnej zamiany
+arr = [1,1,1,1,1,1,2]
+
+
+def swap(arr,x,y): #to albo swap jak wyżej
+    temp = arr[x]
+    arr[x] = arr[y]
+    arr[y] = temp
+
+def bubblesort(arr):
+
+    for i in range(len(arr)):
+        issorted = True
+        for j in range(1,len(arr)-i):
+            if arr[j] &lt; arr[j-1]:
+                swap(arr,j ,j-1)
+                issorted = False
+        if issorted:
+            break
+
+bubblesort(arr)
+print(arr)</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">A[1..n] - sortowana tablica
+
+Dla i = 1, 2, ... n
+    posortowana &lt;- Prawda
+    Dla j = 2, 3, ... n – i + 1
+        Jeżeli A[j] &lt; A[j - 1]
+            Zamień A[j] z A[j - 1]
+            posortowana &lt;- Fałsz
+    Jeżeli posortowana
+        Zakończ sortowanie</code></pre></div></div><span id="wybor" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sortowanie-przez-wybor"><span id="wybor" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#sortowanie-przez-wybor">Sortowanie przez wybór</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · w miejscu</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#In place
+
+def selection_sort(tab):
+    for i in range(len(tab)):
+        mini = i
+        for j in range(i+1, len(tab)):
+            if tab[mini] &gt; tab[j]:
+                mini = j
+        tab[i], tab[mini] = tab[mini], tab[i]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">A[1..n] - sortowana tablica
+n - ilość liczb
+
+Dla i = 1, 2, ... n
+    mini &lt;- i
+    Dla j = i + 1, ... n
+        Jeżeli A[mini] &gt; A[j]
+            mini &lt;- j
+    t &lt;- A[i]
+    A[i] &lt;- A[mini]
+    A[mini] &lt;- t</code></pre></div></div><span id="lin" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sortowanie-przez-wstawianie-liniowe-lub-binarne"><span id="lin" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#sortowanie-przez-wstawianie-liniowe-lub-binarne">Sortowanie przez wstawianie liniowe lub binarne</a></h2><h3>Wstawianie liniowe</h3><p>Kolejny element wstawiamy do posortowanej już części tablicy, przesuwając większe elementy o jedno miejsce w prawo.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · w miejscu</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#In place
+
+def insertion_sort(A):
+    for i in range(1, len(A)):
+        liczba = A[i]
+        j = i
+        while j &gt; 0 and A[j - 1] &gt; liczba:
+            A[j] = A[j - 1]
+            j -= 1
+        A[j] = liczba</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - długość tablicy
+A[1..n] - sortowana tablica
+
+Dla i = 2, 3, ... n
+    liczba &lt;- A[i]
+    j &lt;- i
+    Dopóki j &gt; 1 oraz A[j - 1] &gt; liczba
+        A[j] &lt;- A[j - 1]
+        j &lt;- j - 1
+    A[j] &lt;- liczba</code></pre></div></div><h3>Wstawianie binarne</h3><p>Miejsce dla kolejnego elementu w posortowanej części tablicy szukamy wyszukiwaniem binarnym (mniej porównań), a potem przesuwamy elementy w prawo i wstawiamy go.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · w miejscu</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#In place
+
+def binary_insertion_sort(A):
+    for i in range(1, len(A)):
+        liczba = A[i]
+        # szukamy binarnie pierwszej pozycji w A[0..i-1], na której stoi element &gt; liczba
+        lewy, prawy = 0, i
+        while lewy &lt; prawy:
+            srodek = (lewy + prawy) // 2
+            if A[srodek] &lt;= liczba:
+                lewy = srodek + 1
+            else:
+                prawy = srodek
+        # przesuwamy A[lewy..i-1] o jedno miejsce w prawo
+        for j in range(i, lewy, -1):
+            A[j] = A[j - 1]
+        A[lewy] = liczba</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - długość tablicy
+A[1..n] - sortowana tablica
+div - dzielenie całkowite
+
+Dla i = 2, 3, ... n
+    liczba &lt;- A[i]
+    lewy &lt;- 1
+    prawy &lt;- i
+    Dopóki lewy &lt; prawy
+        srodek &lt;- (lewy + prawy) div 2
+        Jeżeli A[srodek] &lt;= liczba
+            lewy &lt;- srodek + 1
+        W innym wypadku
+            prawy &lt;- srodek
+    Dla j = i, i - 1, ... lewy + 1
+        A[j] &lt;- A[j - 1]
+    A[lewy] &lt;- liczba</code></pre></div></div><span id="scalanie" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sortowanie-przez-scalanie"><span id="scalanie" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#sortowanie-przez-scalanie">Sortowanie przez scalanie</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · In place (sortuje przekazaną tablicę, dodatkowo ją zwraca)</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#In place (sortuje przekazaną tablicę, dodatkowo ją zwraca)
+
+def merge_sort(tab):
+    if len(tab) &lt; 2:
+        return tab
+
+    i = j = k = 0
+    mid = len(tab) // 2
+    L, R = tab[:mid], tab[mid:]
+    merge_sort(L)
+    merge_sort(R)
+
+    while i &lt; len(L) and j &lt; len(R):
+        if L[i] &lt;= R[j]:
+            tab[k] = L[i]
+            i += 1
+        else:
+            tab[k] = R[j]
+            j += 1
+        k += 1
+
+    while i &lt; len(L):
+        tab[k] = L[i]
+        i += 1
+        k += 1
+
+    while j &lt; len(R):
+        tab[k] = R[j]
+        j += 1
+        k += 1
+
+    return tab</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tab[1..n] - sortowana tablica
+n - długość tablicy
+dł() - długość tablicy
+div - dzielenie całkowite
+
+def merge_sort(tab):
+    Jeżeli n &lt; 2
+        Zwróć tab
+    mid &lt;- n div 2
+    L &lt;- tab[1..mid]
+    R &lt;- tab[mid + 1..n]
+    merge_sort(L)
+    merge_sort(R)
+
+    i &lt;- 1
+    j &lt;- 1
+    k &lt;- 1
+    Dopóki i &lt;= dł(L) oraz j &lt;= dł(R)
+        Jeżeli L[i] &lt;= R[j]
+            tab[k] &lt;- L[i]
+            i &lt;- i + 1
+        W innym wypadku
+            tab[k] &lt;- R[j]
+            j &lt;- j + 1
+        k &lt;- k + 1
+
+    Dopóki i &lt;= dł(L)
+        tab[k] &lt;- L[i]
+        i &lt;- i + 1
+        k &lt;- k + 1
+
+    Dopóki j &lt;= dł(R)
+        tab[k] &lt;- R[j]
+        j &lt;- j + 1
+        k &lt;- k + 1
+    Zwróć tab</code></pre></div></div><span id="fast" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sortowanie-szybkie"><span id="fast" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#sortowanie-szybkie">Sortowanie szybkie</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def quicksort(t):
+    # jeżeli tablica jest pusta lub ma jeden element, to nie trzeba nic robić, można ją zwrócić.
+    if len(t) &lt;= 1:
+        return t
+
+    # wybierasz pivot (tutaj na końcu)
+    pivot = t[-1]
+    smaller = []
+    greater = []
+
+    # wszystkie mniejsze lub równe wartości od pivota idą do listy smaller a większe do greater.
+    # len(t) - 1, bo pracujemy na elementach bez ostatniego, którym jest pivot.
+    for i in range(0, len(t) - 1):
+        if t[i] &lt;= pivot:
+            smaller.append(t[i])
+        else:
+            greater.append(t[i])
+
+    # zwracasz tablicę, gdzie wszystkie mniejsze wartości są po lewej, a większe po prawej od pivota,
+    # a pivot trafia na miejsce końcowe w tablicy wyjściowej.
+    return quicksort(smaller) + [pivot] + quicksort(greater)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    arr = [60, 20, 11, 122, 214, 345, 1324, 1, 2, 3, 6, 74, 3, 9]
+    print(quicksort(arr))</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tab[1..n] - tablica wejściowa
+dł() - funkcja zwracająca rozmiar tablicy
+
+def quicksort(tab)
+    Jeżeli dł(tab) &lt;= 1:
+        Zwróć tab
+
+    pivot &lt;- tab[dł(tab)]
+    smaller &lt;- []
+    greater &lt;- []
+
+    Dla i = 1,2,3, ... , dł(tab) - 1
+        Jeżeli tab[i] &lt;= pivot
+            Dodaj element tab[i] na koniec smaller
+        W innym wypadku
+            Dodaj element tab[i] na koniec greater
+
+    Zwróć quicksort(smaller) + [pivot] + quicksort(greater)</code></pre></div></div><span id="box" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sortowanie-kubelkowe"><span id="box" class="anchor"></span><p class="eyebrow">Algorytmy wyszukiwania i porządkowania (sortowania)</p><h2><a class="self" href="#sortowanie-kubelkowe">Sortowanie kubełkowe</a></h2><p>Założenia: sortujemy liczby (całkowite lub rzeczywiste), najlepiej nieujemne i w miarę równomiernie rozłożone w przedziale [min, max]. Przedział [min, max] dzielimy na n równych części (kubełków), każdą liczbę wrzucamy do odpowiedniego kubełka, sortujemy kubełki (np. przez wstawianie) i sklejamy je po kolei. Dzięki odejmowaniu minimum kod działa także dla liczb ujemnych.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · Not in place - zwraca nową, posortowaną listę</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python"># Not in place - zwraca nową, posortowaną listę
+
+def insertion_sort(A):
+    for i in range(1, len(A)):
+        liczba = A[i]
+        j = i
+        while j &gt; 0 and A[j - 1] &gt; liczba:
+            A[j] = A[j - 1]
+            j -= 1
+        A[j] = liczba
+
+
+def bucket_sort(arr):
+    n = len(arr)
+    if n &lt;= 1:
+        return arr[:]
+    mini, maks = min(arr), max(arr)  # liczone raz, przed pętlą
+    if mini == maks:  # wszystkie elementy są równe
+        return arr[:]
+
+    buckets = [[] for _ in range(n)]
+    szerokosc = (maks - mini) / n  # zakres wartości jednego kubełka
+
+    for i in range(n):
+        j = int((arr[i] - mini) / szerokosc)
+        if j &gt;= n:  # maksimum trafia do ostatniego kubełka
+            j = n - 1
+        buckets[j].append(arr[i])
+
+    output = []
+    for z in range(n):
+        insertion_sort(buckets[z])
+        output += buckets[z]
+    return output</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">arr[1..n] - tablica liczb
+n - długość tablicy
+min(), max() - najmniejszy i największy element tablicy
+int() - część całkowita liczby
+
+def bucket_sort(arr):
+    Jeżeli n &lt;= 1
+        Zwróć arr
+    mini &lt;- min(arr)
+    maks &lt;- max(arr)
+    Jeżeli mini == maks
+        Zwróć arr
+    kubelki[1..n] &lt;- n pustych list
+    szerokosc &lt;- (maks - mini) / n
+    Dla i = 1, 2, ... n
+        j &lt;- int((arr[i] - mini) / szerokosc) + 1
+        Jeżeli j &gt; n
+            j &lt;- n
+        Dodaj arr[i] na koniec kubelki[j]
+    wynik &lt;- []
+    Dla j = 1, 2, ... n
+        Posortuj kubelki[j] (np. przez wstawianie)
+        Dopisz kubelki[j] na koniec wynik
+    Zwróć wynik</code></pre></div></div><span id="fast_power" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="szybkie-podnoszenie-do-potegi"><span id="fast_power" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#szybkie-podnoszenie-do-potegi">Szybkie podnoszenie do potęgi</a></h2><p>Zamiast mnożyć a przez siebie n razy (n mnożeń), korzystamy z tego, że a^n = (a^(n div 2))^2 dla parzystego n oraz a^n = a * a^(n - 1) dla nieparzystego n. Wystarczy wtedy ok. 2 * log2(n) mnożeń.</p><h3>Szybkie potęgowanie a^n (iteracyjnie, na bitach wykładnika)</h3><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+def fast_power(a, n):  # a^n, n &gt;= 0
+    wynik = 1
+    while n &gt; 0:
+        if n % 2 == 1:  # ostatni bit wykładnika to 1
+            wynik *= a
+        a *= a  # a, a^2, a^4, a^8, ...
+        n //= 2
+    return wynik</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">a - podstawa
+n - wykładnik (n &gt;= 0)
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def fast_power(a, n):
+    wynik &lt;- 1
+    Dopóki n &gt; 0
+        Jeżeli n mod 2 == 1
+            wynik &lt;- wynik * a
+        a &lt;- a * a
+        n &lt;- n div 2
+    Zwróć wynik</code></pre></div></div><h3>Szybkie potęgowanie modularne (szybko znajduje wartość base ^ power mod m, domyślnie m = 1000000007)</h3><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+def fast_power_mod(base, power, m=1000000007):
+    result = 1 % m
+    base %= m
+    while power &gt; 0:
+        if power % 2 == 1:
+            result = (result * base) % m
+        power //= 2
+        base = (base * base) % m
+    return result</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">base - podstawa
+power - wykładnik (power &gt;= 0)
+m - moduł
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def fast_power_mod(base, power, m):
+    result &lt;- 1
+    base &lt;- base mod m
+    Dopóki power &gt; 0
+        Jeżeli power mod 2 == 1
+            result &lt;- (result * base) mod m
+        power &lt;- power div 2
+        base &lt;- (base * base) mod m
+    Zwróć result mod m</code></pre></div></div><h3>Szybkie potęgowanie a^n - wersja rekurencyjna (bez modulo, działa dla dowolnie dużych wyników).</h3><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · rekurencyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Recursive version
+
+def fast_pow(a, n):  # a^n, n &gt;= 0 (przyjmujemy 0^0 = 1, tak jak pow w Pythonie)
+    if n == 0:
+        return 1
+    # jeżeli wykładnik jest nieparzysty, to zmniejsz o jeden, by stał się parzysty,
+    # a następnie oblicz potęgę a do parzystego wykładnika i pomnóż to przez a,
+    # aby dostać a * a^parzysty_wykładnik.
+    # na przykład: a^5 = a^4 * a
+    if n % 2 == 1:
+        return fast_pow(a, n - 1) * a
+    # dla parzystego wykładnika szukamy potęgę z wykładnikiem o połowę mniejszym.
+    # robiąc to, można dojść do a^2, co potem się składa na a^4 itd...
+    # np. a^4 = a^2 * a^2.
+    # kiedy n == 2, to funkcja szuka a^1, bo 2 div 2 == 1.
+    # kiedy n == 1, to funkcja szuka a^0 * a, bo 1 jest liczbą nieparzystą, więc trafia do drugiego warunku.
+    p = fast_pow(a, n // 2)
+    return p * p</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">a - podstawa
+n - wykładnik (n &gt;= 0)
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def fast_pow(a, n):
+    Jeżeli n == 0
+        Zwróć 1
+    Jeżeli n mod 2 == 1
+        Zwróć fast_pow(a, n - 1) * a
+    p &lt;- fast_pow(a, n div 2)
+    Zwróć p * p</code></pre></div></div><span id="bisekcja" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyznaczanie-miejsc-zerowych-funkcji-metoda-polowienia-bisekcja"><span id="bisekcja" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#wyznaczanie-miejsc-zerowych-funkcji-metoda-polowienia-bisekcja">Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja</a></h2><p>Funkcja f musi być ciągła w przedziale [a, b] i przyjmować na jego końcach wartości o przeciwnych znakach (f(a) * f(b) &lt; 0). Wtedy w przedziale jest miejsce zerowe, a my w każdym kroku zostawiamy tę połowę przedziału, na której końcach znaki wciąż są przeciwne.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def f(x):
+    return -4 * x + 2
+
+
+# bisection(od,do)
+def bisection(a, b, precyzja=0.0001):
+    if f(a) * f(b) &gt;= 0:  # brak gwarancji miejsca zerowego w [a, b]
+        return None
+    c = a
+    while b - a &gt;= precyzja:
+        c = (a + b) / 2
+        if f(c) == 0.0:
+            return c
+        if f(c) * f(a) &lt; 0:
+            b = c
+        else:
+            a = c
+    return c</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">f(x) - badana funkcja, ciągła w przedziale [a, b]
+precyzja - dokładność wyniku
+
+def f(x):
+    Zwróć -4 * x + 2
+
+def bisection(a, b, precyzja):
+    Jeżeli f(a) * f(b) &gt;= 0
+        Zwróć &quot;brak gwarancji miejsca zerowego&quot;
+    c &lt;- a
+    Dopóki b - a &gt;= precyzja
+        c &lt;- (a + b) / 2
+        Jeżeli f(c) == 0
+            Zwróć c
+        Jeżeli f(c) * f(a) &lt; 0
+            b &lt;- c
+        W innym wypadku
+            a &lt;- c
+    Zwróć c</code></pre></div></div><span id="heron" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="obliczanie-pierwiastka-kwadratowego-metoda-herona-newtona"><span id="heron" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#obliczanie-pierwiastka-kwadratowego-metoda-herona-newtona">Obliczanie pierwiastka kwadratowego metodą Herona (Newtona)</a></h2><p>Szukamy kwadratu o polu x. Zaczynamy od prostokąta o bokach a = x i b = 1 (pole x). W każdym kroku nowy bok a to średnia arytmetyczna boków, a drugi bok b = x / a (pole się nie zmienia). Prostokąt coraz bardziej przypomina kwadrat, a jego bok zbliża się do pierwiastka z x.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def heron(x, precyzja=0.000001):  # pierwiastek kwadratowy z x &gt;= 0
+    if x == 0:
+        return 0
+    a = x
+    b = 1
+    while abs(a - b) &gt; precyzja:
+        a = (a + b) / 2
+        b = x / a
+    return a
+
+
+print(heron(2))  # 1.41421356...</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">x - liczba, z której liczymy pierwiastek (x &gt; 0)
+precyzja - dokładność wyniku
+|a - b| - wartość bezwzględna różnicy
+
+def heron(x, precyzja):
+    a &lt;- x
+    b &lt;- 1
+    Dopóki |a - b| &gt; precyzja
+        a &lt;- (a + b) / 2
+        b &lt;- x / a
+    Zwróć a</code></pre></div></div><span id="horner" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="obliczanie-wartosci-wielomianu-za-pomoca-schematu-hornera"><span id="horner" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#obliczanie-wartosci-wielomianu-za-pomoca-schematu-hornera">Obliczanie wartości wielomianu za pomocą schematu Hornera</a></h2><p>Wielomian w(x) = a_n * x^n + ... + a_1 * x + a_0 zapisujemy jako w(x) = (...((a_n * x + a_(n-1)) * x + a_(n-2)) * x + ...) * x + a_0. Wystarczy wtedy n mnożeń i n dodawań (bez liczenia potęg). Współczynniki podajemy od najwyższej potęgi, np. 2x^3 - 6x^2 + 2x - 1 -&gt; [2, -6, 2, -1].</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+def horner(wsp, x):  # wsp = [a_n, a_(n-1), ..., a_1, a_0]
+    wynik = 0
+    for i in range(len(wsp)):
+        wynik = wynik * x + wsp[i]
+    return wynik
+
+
+print(horner([2, -6, 2, -1], 3))  # 2*27 - 6*9 + 2*3 - 1 = 5</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">wsp[0..n] - współczynniki wielomianu, od najwyższej potęgi
+x - argument
+
+def horner(wsp, x):
+    wynik &lt;- 0
+    Dla i = 0, 1, ... n
+        wynik &lt;- wynik * x + wsp[i]
+    Zwróć wynik</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Recursive version - wywołanie: horner_rek(wsp, x, len(wsp) - 1)
+
+def horner_rek(wsp, x, n):  # wartość wielomianu zbudowanego ze współczynników wsp[0..n]
+    if n == 0:
+        return wsp[0]
+    return horner_rek(wsp, x, n - 1) * x + wsp[n]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">wsp[0..n] - współczynniki wielomianu, od najwyższej potęgi
+x - argument
+
+def horner_rek(wsp, x, n):
+    Jeżeli n == 0
+        Zwróć wsp[0]
+    W innym wypadku
+        Zwróć horner_rek(wsp, x, n - 1) * x + wsp[n]</code></pre></div></div><h3>Zastosowanie: zamiana liczby z systemu o podstawie b na dziesiętny</h3><p>Cyfry liczby to współczynniki wielomianu, a podstawa b to argument, np. 1011 (2) = 1 * 2^3 + 0 * 2^2 + 1 * 2 + 1 = ((1 * 2 + 0) * 2 + 1) * 2 + 1 = 11.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def na_dziesietny(liczba, b):  # liczba jako napis, np. na_dziesietny(&quot;1F&quot;, 16) == 31
+    wynik = 0
+    for znak in liczba:
+        if &quot;0&quot; &lt;= znak &lt;= &quot;9&quot;:
+            cyfra = ord(znak) - ord(&quot;0&quot;)
+        else:
+            cyfra = ord(znak.upper()) - ord(&quot;A&quot;) + 10  # A = 10, B = 11, ...
+        wynik = wynik * b + cyfra
+    return wynik</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">liczba[1..n] - napis z cyframi liczby w systemie o podstawie b
+wartosc(c) - wartość cyfry c (0..9, A = 10, B = 11, ...)
+
+def na_dziesietny(liczba, b):
+    wynik &lt;- 0
+    Dla i = 1, 2, ... n
+        wynik &lt;- wynik * b + wartosc(liczba[i])
+    Zwróć wynik</code></pre></div></div><span id="pole" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="obliczanie-pola-obszarow-zamknietych"><span id="pole" class="anchor"></span><p class="eyebrow">Algorytmy numeryczne</p><h2><a class="self" href="#obliczanie-pola-obszarow-zamknietych">Obliczanie pola obszarów zamkniętych</a></h2><p>Liczymy przybliżone pole obszaru ograniczonego wykresem funkcji f (f(x) &gt;= 0), osią OX i prostymi x = a, x = b. Przedział [a, b] dzielimy na n części o szerokości h = (b - a) / n i sumujemy pola prostokątów (wysokość f w lewym końcu części) albo trapezów (podstawy f w obu końcach części). Przykład: f(x) = x^2 na [0, 1], dokładne pole to 1/3.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def f(x):
+    return x * x
+
+
+def prostokaty(a, b, n):  # n - liczba prostokątów
+    h = (b - a) / n
+    pole = 0
+    for i in range(n):
+        pole += f(a + i * h) * h
+    return pole
+
+
+def trapezy(a, b, n):  # n - liczba trapezów
+    h = (b - a) / n
+    pole = 0
+    for i in range(n):
+        x1 = a + i * h
+        x2 = a + (i + 1) * h
+        pole += (f(x1) + f(x2)) / 2 * h
+    return pole
+
+
+print(prostokaty(0, 1, 1000))  # ok. 0.33283
+print(trapezy(0, 1, 1000))     # ok. 0.3333335</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">f(x) - funkcja nieujemna w przedziale [a, b]
+n - liczba części, na które dzielimy przedział
+
+def prostokaty(a, b, n):
+    h &lt;- (b - a) / n
+    pole &lt;- 0
+    Dla i = 0, 1, ... n - 1
+        pole &lt;- pole + f(a + i * h) * h
+    Zwróć pole
+
+def trapezy(a, b, n):
+    h &lt;- (b - a) / n
+    pole &lt;- 0
+    Dla i = 0, 1, ... n - 1
+        x1 &lt;- a + i * h
+        x2 &lt;- a + (i + 1) * h
+        pole &lt;- pole + (f(x1) + f(x2)) / 2 * h
+    Zwróć pole</code></pre></div></div><span id="palindrom" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sprawdzanie-czy-dany-ciag-znakow-tworzy-palindrom"><span id="palindrom" class="anchor"></span><p class="eyebrow">Algorytmy na tekstach</p><h2><a class="self" href="#sprawdzanie-czy-dany-ciag-znakow-tworzy-palindrom">Sprawdzanie, czy dany ciąg znaków tworzy palindrom</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · lista i wycinki</button><button type="button" role="tab" aria-selected="false" class="tab">Python · dwa napisy</button><button type="button" role="tab" aria-selected="false" class="tab">Python · rekurencyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python · Iterated version (dwa wskaźniki: od początku i od końca)</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#With list and slices
+
+def is_palindrom(string):
+    lista = list(string)
+    if lista == lista[::-1]:
+        return True
+    return False</code></pre></div><div class="pane" hidden><pre><code class="language-python">#With 2 strings
+
+def is_palindrom(string):
+    wynik = &quot;&quot;
+    for i in string[::-1]:
+        wynik += i
+    if wynik == string:
+        return True
+    return False</code></pre></div><div class="pane" hidden><pre><code class="language-python"># Recursive version
+
+def isPalindrom(string):
+    if len(string) &lt;= 1:  # pusty napis i napis jednoznakowy są palindromami
+        return True
+    if len(string) == 2:
+        if string[0] == string[1]:
+            return True
+        return False
+    return isPalindrom(string[1:-1]) if string[0] == string[-1] else False
+
+# This code is contributed by Pixel</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - długość napisu
+string[2..n-1] - napis bez pierwszego i ostatniego znaku
+
+def isPalindrom(string):
+    Jeżeli n &lt;= 1
+        Zwróć Prawdę
+    Jeżeli string[1] != string[n]
+        Zwróć Fałsz
+    W innym wypadku
+        Zwróć isPalindrom(string[2..n-1])</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Iterated version (dwa wskaźniki: od początku i od końca)
+
+def is_palindrom(string):
+    i = 0
+    j = len(string) - 1
+    while i &lt; j:
+        if string[i] != string[j]:
+            return False
+        i += 1
+        j -= 1
+    return True</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - długość napisu
+string[1..n] - sprawdzany napis
+
+def is_palindrom(string):
+    i &lt;- 1
+    j &lt;- n
+    Dopóki i &lt; j
+        Jeżeli string[i] != string[j]
+            Zwróć Fałsz
+        i &lt;- i + 1
+        j &lt;- j - 1
+    Zwróć Prawdę</code></pre></div></div><span id="anagram" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sprawdzanie-czy-dany-ciag-znakow-tworzy-anagram"><span id="anagram" class="anchor"></span><p class="eyebrow">Algorytmy na tekstach</p><h2><a class="self" href="#sprawdzanie-czy-dany-ciag-znakow-tworzy-anagram">Sprawdzanie, czy dany ciąg znaków tworzy anagram</a></h2><p>Dwa napisy są anagramami, jeżeli składają się z tych samych znaków, występujących tyle samo razy (np. "kebab" i "babek").</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · z sortowaniem</button><button type="button" role="tab" aria-selected="false" class="tab">Python · With own sorting</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python · Counting version (zliczanie wystąpień znaków w słowniku)</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#With sorting
+
+def is_anagram(string,string2):
+    if sorted(string) == sorted(string2):
+        return True
+    return False</code></pre></div><div class="pane" hidden><pre><code class="language-python">#With own sorting
+
+def sort_1(string):
+    string = list(string)
+    for i in range(len(string)):
+        for j in range(len(string) - i - 1):
+            if string[j] &gt; string[j + 1]:
+                string[j], string[j + 1] = string[j + 1], string[j]
+    return &quot;&quot;.join(string)
+
+
+def is_anagram(string, pattern):
+    if len(string) != len(pattern):
+        return False
+
+    string = sort_1(string)
+    pattern = sort_1(pattern)
+    for i in range(len(string)):
+        if string[i] != pattern[i]:
+            return False
+    return True</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - długość napisów
+dł() - długość napisu
+sort_1() - sortuje znaki napisu (np. bąbelkowo)
+
+def is_anagram(string, pattern):
+    Jeżeli dł(string) != dł(pattern)
+        Zwróć Fałsz
+    string &lt;- sort_1(string)
+    pattern &lt;- sort_1(pattern)
+    Dla i = 1, 2, ... n
+        Jeżeli string[i] != pattern[i]
+            Zwróć Fałsz
+    Zwróć Prawdę</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Counting version (zliczanie wystąpień znaków w słowniku)
+
+def is_anagram(string, pattern):
+    if len(string) != len(pattern):
+        return False
+
+    licznik = {}
+    for znak in string:
+        licznik[znak] = licznik.get(znak, 0) + 1
+
+    for znak in pattern:
+        if licznik.get(znak, 0) == 0:  # znaku brak albo występuje za dużo razy
+            return False
+        licznik[znak] -= 1
+    return True</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">n - długość napisów
+dł() - długość napisu
+licznik[z] - ile razy znak z wystąpił (na początku 0 dla każdego znaku)
+
+def is_anagram(string, pattern):
+    Jeżeli dł(string) != dł(pattern)
+        Zwróć Fałsz
+    Dla i = 1, 2, ... n
+        licznik[string[i]] &lt;- licznik[string[i]] + 1
+    Dla i = 1, 2, ... n
+        Jeżeli licznik[pattern[i]] == 0
+            Zwróć Fałsz
+        licznik[pattern[i]] &lt;- licznik[pattern[i]] - 1
+    Zwróć Prawdę</code></pre></div></div><span id="alfa" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="porzadkowanie-alfabetyczne"><span id="alfa" class="anchor"></span><p class="eyebrow">Algorytmy na tekstach</p><h2><a class="self" href="#porzadkowanie-alfabetyczne">Porządkowanie alfabetyczne</a></h2><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · Sortowanie liter bąbelkowo</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod 1</button><button type="button" role="tab" aria-selected="false" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Sortowanie liter bąbelkowo
+
+slowo = &quot;niezdammatury&quot;
+
+
+def bubble_sort(tab):
+    tab = list(tab)
+    for i in range(len(tab)):
+        for j in range(len(tab) - i - 1):
+            if tab[j] &gt; tab[j + 1]:
+                tab[j + 1], tab[j] = tab[j], tab[j + 1]
+    return &quot;&quot;.join(tab)
+
+
+print(bubble_sort(slowo))</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tab[1..n] - litery napisu
+litery porównujemy według ich kodów (kolejność w alfabecie)
+
+Dla i = 1, 2, ... n
+    Dla j = 1, 2, ... n – i
+        Jeżeli tab[j] &gt; tab[j + 1]
+            Zamień tab[j] z tab[j + 1]</code></pre></div><div class="pane" hidden><pre><code class="language-python">#Porządek leksykograficzny słów (porównywanie napisów znak po znaku)
+
+def mniejsze(s1, s2):  # czy s1 jest w słowniku przed s2
+    i = 0
+    while i &lt; len(s1) and i &lt; len(s2):
+        if s1[i] != s2[i]:
+            return s1[i] &lt; s2[i]  # decyduje pierwszy różniący się znak
+        i += 1
+    return len(s1) &lt; len(s2)  # jedno słowo jest początkiem drugiego, np. &quot;kot&quot; &lt; &quot;kotek&quot;
+
+
+def sortuj_slowa(slowa):  # sortowanie bąbelkowe listy słów
+    slowa = slowa[:]
+    for i in range(len(slowa)):
+        for j in range(len(slowa) - i - 1):
+            if mniejsze(slowa[j + 1], slowa[j]):
+                slowa[j], slowa[j + 1] = slowa[j + 1], slowa[j]
+    return slowa
+
+
+print(sortuj_slowa([&quot;kotek&quot;, &quot;ala&quot;, &quot;kot&quot;, &quot;ma&quot;]))  # [&#x27;ala&#x27;, &#x27;kot&#x27;, &#x27;kotek&#x27;, &#x27;ma&#x27;]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">dł() - długość napisu
+
+def mniejsze(s1, s2):
+    i &lt;- 1
+    Dopóki i &lt;= dł(s1) oraz i &lt;= dł(s2)
+        Jeżeli s1[i] != s2[i]
+            Zwróć s1[i] &lt; s2[i]
+        i &lt;- i + 1
+    Zwróć dł(s1) &lt; dł(s2)</code></pre></div></div><span id="pattern" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="wyszukiwanie-wzorca-w-tekscie"><span id="pattern" class="anchor"></span><p class="eyebrow">Algorytmy na tekstach</p><h2><a class="self" href="#wyszukiwanie-wzorca-w-tekscie">Wyszukiwanie wzorca w tekście</a></h2><p>Algorytm naiwny: przykładamy wzorzec do każdej pozycji tekstu, od której jeszcze się mieści (i = 0 .. len(tekst) - len(pattern)), i porównujemy znak po znaku.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def find_pattern(tekst, pattern):  # indeks pierwszego wystąpienia wzorca albo -1
+    for i in range(len(tekst) - len(pattern) + 1):
+        j = 0
+        while j &lt; len(pattern) and tekst[i + j] == pattern[j]:
+            j += 1
+        if j == len(pattern):
+            return i
+    return -1
+
+
+def is_pattern(tekst, pattern):
+    return find_pattern(tekst, pattern) != -1
+
+
+def find_all(tekst, pattern):  # lista wszystkich pozycji wystąpień (także nachodzących na siebie)
+    pozycje = []
+    for i in range(len(tekst) - len(pattern) + 1):
+        j = 0
+        while j &lt; len(pattern) and tekst[i + j] == pattern[j]:
+            j += 1
+        if j == len(pattern):
+            pozycje.append(i)
+    return pozycje
+
+
+print(find_pattern(&quot;abrakadabra&quot;, &quot;abra&quot;))  # 0
+print(find_all(&quot;abrakadabra&quot;, &quot;abra&quot;))      # [0, 7]</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tekst[1..n] - przeszukiwany tekst
+pattern[1..m] - szukany wzorzec
+
+def find_pattern(tekst, pattern):
+    Dla i = 1, 2, ... n - m + 1
+        j &lt;- 1
+        Dopóki j &lt;= m oraz tekst[i + j - 1] == pattern[j]
+            j &lt;- j + 1
+        Jeżeli j == m + 1
+            Zwróć i
+    Zwróć -1</code></pre></div></div><span id="onp" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="obliczanie-wartosci-wyrazenia-w-odwrotnej-notacji-polskiej-onp"><span id="onp" class="anchor"></span><p class="eyebrow">Algorytmy na tekstach</p><h2><a class="self" href="#obliczanie-wartosci-wyrazenia-w-odwrotnej-notacji-polskiej-onp">Obliczanie wartości wyrażenia w odwrotnej notacji polskiej (ONP)</a></h2><p>W ONP operator stoi za argumentami, np. (3 + 4) * 2 zapisujemy jako 3 4 + 2 *. Nawiasy nie są potrzebne. Wyrażenie czytamy od lewej: liczbę wkładamy na stos, a operator zdejmuje ze stosu dwie liczby, wykonuje działanie i wkłada wynik na stos. Na końcu na stosie zostaje wynik.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def onp(wyrazenie):  # elementy oddzielone spacjami, np. &quot;3 4 + 2 *&quot;
+    stos = []
+    for element in wyrazenie.split():
+        if element in [&quot;+&quot;, &quot;-&quot;, &quot;*&quot;, &quot;/&quot;]:
+            b = stos.pop()  # najpierw zdejmujemy PRAWY argument
+            a = stos.pop()
+            if element == &quot;+&quot;:
+                stos.append(a + b)
+            elif element == &quot;-&quot;:
+                stos.append(a - b)
+            elif element == &quot;*&quot;:
+                stos.append(a * b)
+            else:
+                stos.append(a / b)
+        else:
+            stos.append(float(element))
+    return stos.pop()
+
+
+print(onp(&quot;3 4 + 2 *&quot;))          # 14.0
+print(onp(&quot;5 1 2 + 4 * + 3 -&quot;))  # 14.0</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">wyrazenie[1..n] - kolejne elementy wyrażenia (liczby i operatory)
+stos - na początku pusty
+
+def onp(wyrazenie):
+    Dla i = 1, 2, ... n
+        Jeżeli wyrazenie[i] jest operatorem
+            b &lt;- zdejmij ze stosu
+            a &lt;- zdejmij ze stosu
+            Połóż na stos wynik działania a wyrazenie[i] b
+        W innym wypadku
+            Połóż na stos liczbę wyrazenie[i]
+    Zwróć zdejmij ze stosu</code></pre></div></div><span id="len" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="kompresja-danych"><span id="len" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#kompresja-danych">Kompresja danych</a></h2><h3>Kod prefiksowy (prefix free)</h3><p>Kody znaków o zmiennej długości są w wymaganiach (przykłady: kod prefiksowy poniżej, kod Huffmana, alfabet Morse’a). Częste znaki dostają krótkie kody, a rzadkie - dłuższe.</p><p>Kod jest nazywany "prefix (free) code", jeżeli w systemie nie ma kodu słowa, który byłby prefixem (początkiem) innego kodu słowa. Dzięki temu ciąg bitów da się odkodować jednoznacznie, bez żadnych separatorów.</p><p>Załóżmy, że mamy plik z 100,000 znakami, jedyne znaki jakie występują w pliku to: a,b,c,d,e,f i chcemy zmniejszyć rozmiar tego pliku kompresją, gdzie każdy kod znaku ma różną długość.</p><div class="table-wrap"><table><tr><th style="text-align:right"></th><th style="text-align:center">a</th><th style="text-align:center">b</th><th style="text-align:center">c</th><th style="text-align:center">d</th><th style="text-align:center">e</th><th style="text-align:center">f</th></tr><tr><td style="text-align:right">Częstość (w tysiącach)</td><td style="text-align:center">45</td><td style="text-align:center">13</td><td style="text-align:center">12</td><td style="text-align:center">16</td><td style="text-align:center">9</td><td style="text-align:center">5</td></tr><tr><td style="text-align:right">Kod o stałej długości</td><td style="text-align:center">000</td><td style="text-align:center">001</td><td style="text-align:center">010</td><td style="text-align:center">011</td><td style="text-align:center">100</td><td style="text-align:center">101</td></tr><tr><td style="text-align:right">Kod o zmiennej długości</td><td style="text-align:center">0</td><td style="text-align:center">101</td><td style="text-align:center">100</td><td style="text-align:center">111</td><td style="text-align:center">1101</td><td style="text-align:center">1100</td></tr></table></div><p>Przy kodzie o stałej długości plik zajmie 100,000 * 3 = 300,000 bitów, a przy kodzie o zmiennej długości (45 * 1 + 13 * 3 + 12 * 3 + 16 * 3 + 9 * 4 + 5 * 4) * 1000 = 224,000 bitów.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · iteracyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Iterated version
+
+# kod prefiksowy: żaden kod nie jest początkiem innego
+cipher = {&#x27;00&#x27;: &#x27; &#x27;, &#x27;010&#x27;: &#x27;a&#x27;, &#x27;011&#x27;: &#x27;m&#x27;, &#x27;100&#x27;: &#x27;n&#x27;, &#x27;101&#x27;: &#x27;i&#x27;, &#x27;110&#x27;: &#x27;e&#x27;, &#x27;1110&#x27;: &#x27;z&#x27;, &#x27;1111&#x27;: &#x27;d&#x27;}
+
+text = &quot;1001011100011101111010011&quot;
+
+
+def decrypt(cipher, text):  # zwraca None, jeżeli text jest niepoprawny
+    res = &quot;&quot;
+    bufor = &quot;&quot;
+    for bit in text:
+        bufor += bit
+        if bufor in cipher:  # bufor jest pełnym kodem znaku
+            res += cipher[bufor]
+            bufor = &quot;&quot;
+    if bufor != &quot;&quot;:  # zostały bity, które nie tworzą żadnego kodu
+        return None
+    return res
+
+
+to_code = &quot;zdam&quot;
+
+
+def encrypt(cipher, text):  # zwraca None, jeżeli w text jest znak spoza słownika
+    res = &quot;&quot;
+    for char in text:
+        if char in cipher.values():
+            for k, v in cipher.items():
+                if v == char:
+                    res += k
+        else:
+            return None
+    return res
+
+
+print(decrypt(cipher, text))     # nie zdam
+print(encrypt(cipher, to_code))  # 11101111010011</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">cipher - słownik: kod -&gt; znak (kod prefiksowy)
+text[1..n] - ciąg bitów
+
+def decrypt(cipher, text):
+    res &lt;- &quot;&quot;
+    bufor &lt;- &quot;&quot;
+    Dla i = 1, 2, ... n
+        bufor &lt;- bufor + text[i]
+        Jeżeli bufor jest kluczem w cipher
+            res &lt;- res + cipher[bufor]
+            bufor &lt;- &quot;&quot;
+    Jeżeli bufor != &quot;&quot;
+        Zwróć &quot;błędny ciąg bitów&quot;
+    Zwróć res
+
+def encrypt(cipher, text):
+    res &lt;- &quot;&quot;
+    Dla i = 1, 2, ... dł(text)
+        Znajdź kod k, dla którego cipher[k] == text[i]
+        res &lt;- res + k
+    Zwróć res</code></pre></div></div><span id="huffman" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="kod-huffmana"><span id="huffman" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#kod-huffmana">Kod Huffmana</a></h2><p>Kod Huffmana to optymalny kod prefiksowy: daje najkrótszy zakodowany tekst spośród kodów, w których każdy znak ma stały ciąg bitów. Budowa drzewa: każdy znak to liść o wadze równej liczbie jego wystąpień. Dopóki mamy więcej niż jedno drzewo, łączymy dwa drzewa o najmniejszych wagach w jedno (waga = suma wag). Kod znaku to ścieżka od korzenia do liścia: krok w lewo = 0, w prawo = 1. Do wybierania najlżejszych drzew używamy kolejki priorytetowej (moduł heapq).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">import heapq
+
+
+def huffman(tekst):  # zwraca słownik: znak -&gt; kod
+    if tekst == &quot;&quot;:
+        return {}
+    czestosc = {}
+    for znak in tekst:
+        czestosc[znak] = czestosc.get(znak, 0) + 1
+
+    # element kolejki: (waga, numer, drzewo); numer rozstrzyga remisy wag
+    # drzewo to znak (liść) albo para (lewe poddrzewo, prawe poddrzewo)
+    kolejka = []
+    numer = 0
+    for znak in czestosc:
+        heapq.heappush(kolejka, (czestosc[znak], numer, znak))
+        numer += 1
+
+    if len(kolejka) == 1:  # tylko jeden rodzaj znaku
+        return {kolejka[0][2]: &quot;0&quot;}
+
+    while len(kolejka) &gt; 1:
+        waga1, _, lewe = heapq.heappop(kolejka)   # dwa najlżejsze drzewa
+        waga2, _, prawe = heapq.heappop(kolejka)
+        heapq.heappush(kolejka, (waga1 + waga2, numer, (lewe, prawe)))
+        numer += 1
+
+    kody = {}
+    przypisz_kody(kolejka[0][2], &quot;&quot;, kody)
+    return kody
+
+
+def przypisz_kody(wezel, kod, kody):
+    if isinstance(wezel, str):  # liść - znak
+        kody[wezel] = kod
+    else:
+        przypisz_kody(wezel[0], kod + &quot;0&quot;, kody)
+        przypisz_kody(wezel[1], kod + &quot;1&quot;, kody)
+
+
+def koduj(tekst, kody):
+    wynik = &quot;&quot;
+    for znak in tekst:
+        wynik += kody[znak]
+    return wynik
+
+
+def dekoduj(bity, kody):
+    odwrotne = {}
+    for znak in kody:
+        odwrotne[kody[znak]] = znak
+    wynik = &quot;&quot;
+    bufor = &quot;&quot;
+    for bit in bity:
+        bufor += bit
+        if bufor in odwrotne:
+            wynik += odwrotne[bufor]
+            bufor = &quot;&quot;
+    return wynik
+
+
+tekst = &quot;abrakadabra&quot;
+kody = huffman(tekst)
+zakodowany = koduj(tekst, kody)
+print(kody)
+print(zakodowany, len(zakodowany), &quot;bitów zamiast&quot;, 8 * len(tekst))
+print(dekoduj(zakodowany, kody))</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">Q - kolejka priorytetowa drzew (na początku drzewo o najmniejszej wadze)
+czestosc[z] - liczba wystąpień znaku z w tekście
+
+def huffman(tekst):
+    Dla każdego znaku z w tekście
+        czestosc[z] &lt;- czestosc[z] + 1
+    Dla każdego różnego znaku z
+        Wstaw do Q liść z o wadze czestosc[z]
+    Dopóki w Q jest więcej niż jedno drzewo
+        x &lt;- usuń z Q drzewo o najmniejszej wadze
+        y &lt;- usuń z Q drzewo o najmniejszej wadze
+        Wstaw do Q nowy węzeł o dzieciach x, y i wadze waga(x) + waga(y)
+    korzen &lt;- jedyne drzewo w Q
+    przypisz_kody(korzen, &quot;&quot;)
+
+def przypisz_kody(wezel, kod):
+    Jeżeli wezel jest liściem ze znakiem z
+        kody[z] &lt;- kod
+    W innym wypadku
+        przypisz_kody(lewe dziecko wezel, kod + &quot;0&quot;)
+        przypisz_kody(prawe dziecko wezel, kod + &quot;1&quot;)</code></pre></div></div><span id="morse" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="alfabet-morse-a"><span id="morse" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#alfabet-morse-a">Alfabet Morse’a</a></h2><p>W zakodowanym tekście litery oddzielamy jedną spacją, a wyrazy znakiem " / ".</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · słownik kodujący: znak -&gt; kod Morse&#x27;a</button><button type="button" role="tab" aria-selected="false" class="tab">C++ · include &lt;iostream&gt;</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python"># słownik kodujący: znak -&gt; kod Morse&#x27;a
+morseEncode = {
+    &#x27;a&#x27;: &#x27;.-&#x27;, &#x27;b&#x27;: &#x27;-...&#x27;, &#x27;c&#x27;: &#x27;-.-.&#x27;, &#x27;d&#x27;: &#x27;-..&#x27;,
+    &#x27;e&#x27;: &#x27;.&#x27;, &#x27;f&#x27;: &#x27;..-.&#x27;, &#x27;g&#x27;: &#x27;--.&#x27;, &#x27;h&#x27;: &#x27;....&#x27;,
+    &#x27;i&#x27;: &#x27;..&#x27;, &#x27;j&#x27;: &#x27;.---&#x27;, &#x27;k&#x27;: &#x27;-.-&#x27;, &#x27;l&#x27;: &#x27;.-..&#x27;,
+    &#x27;m&#x27;: &#x27;--&#x27;, &#x27;n&#x27;: &#x27;-.&#x27;, &#x27;o&#x27;: &#x27;---&#x27;, &#x27;p&#x27;: &#x27;.--.&#x27;,
+    &#x27;q&#x27;: &#x27;--.-&#x27;, &#x27;r&#x27;: &#x27;.-.&#x27;, &#x27;s&#x27;: &#x27;...&#x27;, &#x27;t&#x27;: &#x27;-&#x27;,
+    &#x27;u&#x27;: &#x27;..-&#x27;, &#x27;v&#x27;: &#x27;...-&#x27;, &#x27;w&#x27;: &#x27;.--&#x27;, &#x27;x&#x27;: &#x27;-..-&#x27;,
+    &#x27;y&#x27;: &#x27;-.--&#x27;, &#x27;z&#x27;: &#x27;--..&#x27;, &#x27;1&#x27;: &#x27;.----&#x27;, &#x27;2&#x27;: &#x27;..---&#x27;,
+    &#x27;3&#x27;: &#x27;...--&#x27;, &#x27;4&#x27;: &#x27;....-&#x27;, &#x27;5&#x27;: &#x27;.....&#x27;, &#x27;6&#x27;: &#x27;-....&#x27;,
+    &#x27;7&#x27;: &#x27;--...&#x27;, &#x27;8&#x27;: &#x27;---..&#x27;, &#x27;9&#x27;: &#x27;----.&#x27;, &#x27;0&#x27;: &#x27;-----&#x27;,
+}
+# słownik dekodujący: kod Morse&#x27;a -&gt; znak (odwrócony słownik kodujący)
+morseDecode = {val: key for key, val in morseEncode.items()}
+
+SEP = &#x27; / &#x27;  # separator wyrazów
+
+
+def morseCode(string, decode=False):
+    if not decode:  # kodowanie
+        wyrazy = []
+        for wyraz in string.lower().split():
+            litery = []
+            for char in wyraz:
+                litery.append(morseEncode.get(char, &#x27;*&#x27;))  # &#x27;*&#x27; dla nieznanych znaków
+            wyrazy.append(&#x27; &#x27;.join(litery))
+        return SEP.join(wyrazy)
+    else:  # dekodowanie
+        wyrazy = []
+        for wyraz in string.split(SEP):
+            litery = &#x27;&#x27;
+            for kod in wyraz.split():
+                litery += morseDecode.get(kod, &#x27;*&#x27;)  # &#x27;*&#x27; dla nieznanych kodów
+            wyrazy.append(litery)
+        return &#x27; &#x27;.join(wyrazy)
+
+
+# test
+string = &quot;Keep learning&quot;
+coded = morseCode(string)
+print(&quot;Coded:&quot;, coded)
+decoded = morseCode(coded, decode=True)
+print(&quot;Decoded:&quot;, decoded)</code></pre></div><div class="pane" hidden><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;cctype&gt;
+
+using namespace std;
+
+// litery oddzielamy jedną spacją, a wyrazy znakiem &quot;/&quot; (otoczonym spacjami)
+map&lt;char, string&gt; kodTab{
+    {&#x27;a&#x27;, &quot;.-&quot;}, {&#x27;b&#x27;, &quot;-...&quot;}, {&#x27;c&#x27;, &quot;-.-.&quot;}, {&#x27;d&#x27;, &quot;-..&quot;},
+    {&#x27;e&#x27;, &quot;.&quot;}, {&#x27;f&#x27;, &quot;..-.&quot;}, {&#x27;g&#x27;, &quot;--.&quot;}, {&#x27;h&#x27;, &quot;....&quot;},
+    {&#x27;i&#x27;, &quot;..&quot;}, {&#x27;j&#x27;, &quot;.---&quot;}, {&#x27;k&#x27;, &quot;-.-&quot;}, {&#x27;l&#x27;, &quot;.-..&quot;},
+    {&#x27;m&#x27;, &quot;--&quot;}, {&#x27;n&#x27;, &quot;-.&quot;}, {&#x27;o&#x27;, &quot;---&quot;}, {&#x27;p&#x27;, &quot;.--.&quot;},
+    {&#x27;q&#x27;, &quot;--.-&quot;}, {&#x27;r&#x27;, &quot;.-.&quot;}, {&#x27;s&#x27;, &quot;...&quot;}, {&#x27;t&#x27;, &quot;-&quot;},
+    {&#x27;u&#x27;, &quot;..-&quot;}, {&#x27;v&#x27;, &quot;...-&quot;}, {&#x27;w&#x27;, &quot;.--&quot;}, {&#x27;x&#x27;, &quot;-..-&quot;},
+    {&#x27;y&#x27;, &quot;-.--&quot;}, {&#x27;z&#x27;, &quot;--..&quot;}, {&#x27;1&#x27;, &quot;.----&quot;}, {&#x27;2&#x27;, &quot;..---&quot;},
+    {&#x27;3&#x27;, &quot;...--&quot;}, {&#x27;4&#x27;, &quot;....-&quot;}, {&#x27;5&#x27;, &quot;.....&quot;}, {&#x27;6&#x27;, &quot;-....&quot;},
+    {&#x27;7&#x27;, &quot;--...&quot;}, {&#x27;8&#x27;, &quot;---..&quot;}, {&#x27;9&#x27;, &quot;----.&quot;}, {&#x27;0&#x27;, &quot;-----&quot;}
+};
+
+string koduj(const string&amp; tekst) {
+    stringstream ss(tekst);
+    string wyraz, wynik = &quot;&quot;;
+    while (ss &gt;&gt; wyraz) {                // kolejne wyrazy (bez spacji)
+        if (wynik != &quot;&quot;) wynik += &quot; / &quot;;
+        for (int i = 0; i &lt; (int)wyraz.length(); i++) {
+            char c = (char)tolower((unsigned char)wyraz[i]);
+            if (i &gt; 0) wynik += &quot; &quot;;
+            if (kodTab.count(c)) wynik += kodTab[c];
+            else wynik += &quot;*&quot;;           // nieznany znak
+        }
+    }
+    return wynik;
+}
+
+string dekoduj(const string&amp; kod) {
+    map&lt;string, char&gt; dekTab;            // odwrócona tablica: kod -&gt; znak
+    for (const auto&amp; para : kodTab) dekTab[para.second] = para.first;
+
+    stringstream ss(kod);
+    string token, wynik = &quot;&quot;;
+    while (ss &gt;&gt; token) {                // kolejne kody liter albo &quot;/&quot;
+        if (token == &quot;/&quot;) wynik += &#x27; &#x27;;
+        else if (dekTab.count(token)) wynik += dekTab[token];
+        else wynik += &#x27;*&#x27;;               // nieznany kod
+    }
+    return wynik;
+}
+
+int main() {
+    string zakodowane = koduj(&quot;Keep learning&quot;);
+    cout &lt;&lt; &quot;encoded: &quot; &lt;&lt; zakodowane &lt;&lt; endl;
+    cout &lt;&lt; &quot;decoded: &quot; &lt;&lt; dekoduj(zakodowane) &lt;&lt; endl;
+    return 0;
+}</code></pre></div></div><span id="przes" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="transpozycyjny"><span id="przes" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#transpozycyjny">Transpozycyjny</a></h2><p>Szyfry przestawieniowe dokonują przestawienia znaków w tekście. Tekst zaszyfrowany jest permutacją tekstu jawnego, tzn. zawiera wszystkie znaki tekstu jawnego, jednak ustawione w innej kolejności. Operacja taka nosi nazwę transpozycji.</p><h3>Zamiana sąsiednich znaków</h3><p>Zamieniamy miejscami znaki na pozycjach i oraz i + 1 dla i = 0, jump, 2 * jump, ... Dla jump &gt;= 2 pary się nie nakładają, więc ta sama funkcja (z tym samym jump) służy do szyfrowania i odszyfrowania.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">tekst = &quot;aMtruaz  nifromtayik ot inct rdungeo&quot;  # jump = 3 to decrypt
+
+
+def przes(tekst, jump):  # jump &gt;= 2
+    tekst = list(tekst)
+    for i in range(0, len(tekst) - 1, jump):
+        tekst[i], tekst[i + 1] = tekst[i + 1], tekst[i]
+    return &quot;&quot;.join(tekst)
+
+
+print(przes(tekst, 3))  # Matura z informatyki to nic trudnego</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tekst[0..n-1] - szyfrowany tekst
+jump - odstęp między początkami zamienianych par (jump &gt;= 2)
+
+def przes(tekst, jump):
+    i &lt;- 0
+    Dopóki i &lt; n - 1
+        t &lt;- tekst[i]
+        tekst[i] &lt;- tekst[i + 1]
+        tekst[i + 1] &lt;- t
+        i &lt;- i + jump
+    Zwróć tekst</code></pre></div></div><h3>Szyfr kolumnowy</h3><p>Tekst wpisujemy wierszami do tabeli o k kolumnach, a odczytujemy kolumnami, np. dla k = 3 "ALA MA KOTA" -&gt; "A  TLMKAAAO".</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def szyfruj_kolumnowo(tekst, k):  # k - liczba kolumn
+    wynik = &quot;&quot;
+    for kolumna in range(k):
+        for i in range(kolumna, len(tekst), k):  # znaki z jednej kolumny
+            wynik += tekst[i]
+    return wynik
+
+
+def deszyfruj_kolumnowo(szyfr, k):
+    tekst = [&quot;&quot;] * len(szyfr)
+    pozycja = 0
+    for kolumna in range(k):  # wpisujemy znaki z powrotem w tej samej kolejności
+        for i in range(kolumna, len(szyfr), k):
+            tekst[i] = szyfr[pozycja]
+            pozycja += 1
+    return &quot;&quot;.join(tekst)
+
+
+print(szyfruj_kolumnowo(&quot;ALA MA KOTA&quot;, 3))    # A  TLMKAAAO
+print(deszyfruj_kolumnowo(&quot;A  TLMKAAAO&quot;, 3))  # ALA MA KOTA</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tekst[0..n-1] - szyfrowany tekst
+k - liczba kolumn
+
+def szyfruj_kolumnowo(tekst, k):
+    wynik &lt;- &quot;&quot;
+    Dla kolumna = 0, 1, ... k - 1
+        i &lt;- kolumna
+        Dopóki i &lt; n
+            wynik &lt;- wynik + tekst[i]
+            i &lt;- i + k
+    Zwróć wynik
+
+def deszyfruj_kolumnowo(szyfr, k):
+    pozycja &lt;- 0
+    Dla kolumna = 0, 1, ... k - 1
+        i &lt;- kolumna
+        Dopóki i &lt; n
+            tekst[i] &lt;- szyfr[pozycja]
+            pozycja &lt;- pozycja + 1
+            i &lt;- i + k
+    Zwróć tekst</code></pre></div></div><span id="atbash" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="szyfr-atbash"><span id="atbash" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#szyfr-atbash">Szyfr AtBash</a></h2><p>Jest to monoalfabetyczny szyfr podstawieniowy, ograniczony. Zasada jego działania polega na podstawieniu zamiast danej litery, litery leżącej po drugiej stronie alfabetu w takiej samej odległości. Np. zamiast litery A powinniśmy podstawić literę Z, za literę C wstawiamy literę X. Ta sama funkcja szyfruje i odszyfrowuje.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">txt = &quot;Nie zdam maturki elo&quot;
+
+
+def atbash(txt):
+    txt = list(txt)
+    for i in range(len(txt)):
+        if &quot;A&quot; &lt;= txt[i] &lt;= &quot;Z&quot;:  # wielkie litery
+            txt[i] = chr(ord(&quot;Z&quot;) - (ord(txt[i]) - ord(&quot;A&quot;)))
+        elif &quot;a&quot; &lt;= txt[i] &lt;= &quot;z&quot;:  # małe litery
+            txt[i] = chr(ord(&quot;z&quot;) - (ord(txt[i]) - ord(&quot;a&quot;)))
+        # pozostałe znaki (spacje, cyfry, polskie litery) zostają bez zmian
+
+    return &quot;&quot;.join(txt)
+
+
+print(atbash(txt))  # Mrv awzn nzgfipr vol</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">txt[1..n] - szyfrowany tekst
+ord() - kod znaku
+chr() - znak o podanym kodzie
+
+def atbash(txt):
+    Dla i = 1, 2, ... n
+        Jeżeli &quot;A&quot; &lt;= txt[i] &lt;= &quot;Z&quot;
+            txt[i] &lt;- chr(ord(&quot;Z&quot;) - (ord(txt[i]) - ord(&quot;A&quot;)))
+        W innym wypadku Jeżeli &quot;a&quot; &lt;= txt[i] &lt;= &quot;z&quot;
+            txt[i] &lt;- chr(ord(&quot;z&quot;) - (ord(txt[i]) - ord(&quot;a&quot;)))
+    Zwróć txt</code></pre></div></div><span id="cezar" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="szyfr-cezara"><span id="cezar" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#szyfr-cezara">Szyfr Cezara</a></h2><p>Jest to rodzaj szyfru podstawieniowego, w którym każda litera tekstu jawnego (niezaszyfrowanego) zastępowana jest inną, oddaloną od niej o stałą liczbę pozycji w alfabecie. <br></p><p>Jeżeli przesunięcie będzie równe 13, uzyskamy szyfr ROT13.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button><button type="button" role="tab" aria-selected="false" class="tab">C++ · include &lt;iostream&gt;</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def koduj(wiadomosc, klucz):
+    wynik = &quot;&quot;
+    wiadomosc = wiadomosc.upper().strip().replace(&quot; &quot;, &quot;&quot;)
+    for i in wiadomosc:
+        if &quot;A&quot; &lt;= i &lt;= &quot;Z&quot;:
+            wynik += chr((ord(i) + klucz - 65) % 26 + 65)  # 65 = ord(&quot;A&quot;)
+        else:
+            wynik += i  # znaki inne niż litery A-Z zostają bez zmian
+    return wynik
+
+
+def dekoduj(wiadomosc, klucz):
+    klucz *= -1
+    return koduj(wiadomosc, klucz)
+
+
+print(koduj(&quot;Ala ma kota&quot;, 3))  # DODPDNRWD
+print(dekoduj(&quot;DODPDNRWD&quot;, 3))   # ALAMAKOTA</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">wiadomosc[1..n] - ciąg wielkich liter alfabetu angielskiego, bez spacji i znaków specjalnych
+ord() - pokazuje kod znaku w unicode
+chr() - pokazuje znak kodu unicode
+mod - reszta z dzielenia (zawsze nieujemna)
+n - długość ciągu znaków
+klucz - liczba całkowita (przy deszyfrowaniu używamy -klucz)
+
+koduj(wiadomosc, klucz):
+    wynik &lt;- &quot;&quot;
+    Dla i = 1, 2, 3 ... n
+        wynik &lt;- wynik + chr((ord(wiadomosc[i]) + klucz - 65) mod 26 + 65)
+    Zwróć wynik</code></pre></div><div class="pane" hidden><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+// klucz może być ujemny (deszyfrowanie), znaki inne niż litery zostają bez zmian
+string cezar(string wiadomosc, int klucz) {
+    string wynik = &quot;&quot;;
+
+    for (char i : wiadomosc) {
+        if (i &gt;= &#x27;A&#x27; &amp;&amp; i &lt;= &#x27;Z&#x27;) wynik += (char)(((i - &#x27;A&#x27; + klucz) % 26 + 26) % 26 + &#x27;A&#x27;);
+        else if (i &gt;= &#x27;a&#x27; &amp;&amp; i &lt;= &#x27;z&#x27;) wynik += (char)(((i - &#x27;a&#x27; + klucz) % 26 + 26) % 26 + &#x27;a&#x27;);
+        else wynik += i;
+    }
+
+    return wynik;
+}
+
+int main() {
+    string szyfr = cezar(&quot;Ala ma kota&quot;, 3);
+    cout &lt;&lt; szyfr &lt;&lt; endl;              // Dod pd nrwd
+    cout &lt;&lt; cezar(szyfr, -3) &lt;&lt; endl;   // Ala ma kota
+    return 0;
+}</code></pre></div></div><span id="vigenere" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="szyfr-vigen-re-a"><span id="vigenere" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#szyfr-vigen-re-a">Szyfr Vigenère’a</a></h2><p>Szyfr podstawieniowy wieloalfabetowy - to szyfr Cezara, w którym przesunięcie zmienia się co literę. Kolejne litery klucza (powtarzanego w kółko) mówią, o ile przesunąć kolejne litery tekstu: A = 0, B = 1, ..., Z = 25. Przy odszyfrowaniu przesuwamy w drugą stronę.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def vigenere(tekst, klucz, deszyfruj=False):  # tekst i klucz: wielkie litery A-Z
+    wynik = &quot;&quot;
+    j = 0  # pozycja w kluczu
+    for znak in tekst:
+        if &quot;A&quot; &lt;= znak &lt;= &quot;Z&quot;:
+            przesuniecie = ord(klucz[j % len(klucz)]) - ord(&quot;A&quot;)
+            if deszyfruj:
+                przesuniecie = -przesuniecie
+            wynik += chr((ord(znak) - ord(&quot;A&quot;) + przesuniecie) % 26 + ord(&quot;A&quot;))
+            j += 1
+        else:
+            wynik += znak  # inne znaki bez zmian (nie zużywają litery klucza)
+    return wynik
+
+
+szyfr = vigenere(&quot;ATTACKATDAWN&quot;, &quot;LEMON&quot;)
+print(szyfr)                                    # LXFOPVEFRNHR
+print(vigenere(szyfr, &quot;LEMON&quot;, deszyfruj=True))  # ATTACKATDAWN</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">tekst[1..n] - wielkie litery A-Z
+klucz[1..k] - wielkie litery A-Z
+ord() - kod znaku
+chr() - znak o podanym kodzie
+mod - reszta z dzielenia (zawsze nieujemna)
+
+def vigenere(tekst, klucz, deszyfruj):
+    wynik &lt;- &quot;&quot;
+    Dla i = 1, 2, ... n
+        przesuniecie &lt;- ord(klucz[(i - 1) mod k + 1]) - ord(&quot;A&quot;)
+        Jeżeli deszyfruj
+            przesuniecie &lt;- -przesuniecie
+        wynik &lt;- wynik + chr((ord(tekst[i]) - ord(&quot;A&quot;) + przesuniecie) mod 26 + ord(&quot;A&quot;))
+    Zwróć wynik</code></pre></div></div><span id="rsa" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="rsa-rozszerzony-algorytm-euklidesa"><span id="rsa" class="anchor"></span><p class="eyebrow">Algorytmy kompresji i szyfrowania</p><h2><a class="self" href="#rsa-rozszerzony-algorytm-euklidesa">RSA + rozszerzony algorytm Euklidesa</a></h2><h3>Rozszerzony algorytm Euklidesa</h3><p>Oprócz d = nwd(a, b) znajduje liczby całkowite x, y, takie że a * x + b * y = d. Gdy nwd(e, m) = 1, to x mod m jest odwrotnością e modulo m, czyli (e * x) mod m = 1 - tego potrzebujemy w RSA.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · rekurencyjnie</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#Recursive version
+
+def rozszerzony_nwd(a, b):  # zwraca (d, x, y), gdzie d = nwd(a, b) = a * x + b * y
+    if b == 0:
+        return a, 1, 0
+    d, x1, y1 = rozszerzony_nwd(b, a % b)
+    return d, y1, x1 - (a // b) * y1
+
+
+def odwrotnosc_mod(e, m):  # liczba d taka, że (e * d) mod m == 1, albo None
+    d, x, y = rozszerzony_nwd(e, m)
+    if d != 1:
+        return None  # odwrotność istnieje tylko, gdy nwd(e, m) == 1
+    return x % m
+
+
+print(rozszerzony_nwd(240, 46))  # (2, -9, 47), bo 240 * (-9) + 46 * 47 = 2
+print(odwrotnosc_mod(17, 3120))  # 2753</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">a, b - liczby całkowite nieujemne
+mod - reszta z dzielenia
+div - dzielenie całkowite
+
+def rozszerzony_nwd(a, b):
+    Jeżeli b == 0
+        Zwróć (a, 1, 0)
+    (d, x1, y1) &lt;- rozszerzony_nwd(b, a mod b)
+    Zwróć (d, y1, x1 - (a div b) * y1)
+
+def odwrotnosc_mod(e, m):
+    (d, x, y) &lt;- rozszerzony_nwd(e, m)
+    Jeżeli d != 1
+        Zwróć &quot;brak odwrotności&quot;
+    Zwróć x mod m</code></pre></div></div><h3>RSA</h3><p>Szyfr z kluczem jawnym (asymetryczny): klucz publiczny (e, n) służy do szyfrowania, a klucz prywatny (d, n) do odszyfrowania.</p><ol><li>Wybieramy dwie różne liczby pierwsze p i q, liczymy n = p * q oraz phi = (p - 1) * (q - 1).</li><li>Wybieramy e względnie pierwsze z phi (nwd(e, phi) = 1).</li><li>Liczymy d - odwrotność e modulo phi, czyli (e * d) mod phi = 1.</li><li>Szyfrowanie liczby m (0 &lt;= m &lt; n): c = m^e mod n. Odszyfrowanie: m = c^d mod n.</li></ol><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def nwd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def rozszerzony_nwd(a, b):  # zwraca (d, x, y), gdzie d = nwd(a, b) = a * x + b * y
+    if b == 0:
+        return a, 1, 0
+    d, x1, y1 = rozszerzony_nwd(b, a % b)
+    return d, y1, x1 - (a // b) * y1
+
+
+def generuj_klucze(p, q, e=None):  # p, q - różne liczby pierwsze
+    n = p * q
+    phi = (p - 1) * (q - 1)
+    if e is None:  # najmniejsze e &gt;= 3 względnie pierwsze z phi
+        e = 3
+        while nwd(e, phi) != 1:
+            e += 2
+    d = rozszerzony_nwd(e, phi)[1] % phi  # albo: d = pow(e, -1, phi) (Python 3.8+)
+    return (e, n), (d, n)  # (klucz publiczny, klucz prywatny)
+
+
+def szyfruj(m, klucz_publiczny):  # m - liczba, 0 &lt;= m &lt; n
+    e, n = klucz_publiczny
+    return pow(m, e, n)  # szybkie potęgowanie modularne
+
+
+def deszyfruj(c, klucz_prywatny):
+    d, n = klucz_prywatny
+    return pow(c, d, n)
+
+
+publiczny, prywatny = generuj_klucze(61, 53, 17)
+print(publiczny, prywatny)  # (17, 3233) (2753, 3233)
+c = szyfruj(65, publiczny)
+print(c, deszyfruj(c, prywatny))  # 2790 65
+
+# szyfrowanie tekstu - każdy znak osobno jako liczba (kod znaku &lt; n)
+zaszyfrowane = [szyfruj(ord(znak), publiczny) for znak in &quot;MATURA&quot;]
+print(&quot;&quot;.join(chr(deszyfruj(c, prywatny)) for c in zaszyfrowane))  # MATURA</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">p, q - różne liczby pierwsze
+nwd() - największy wspólny dzielnik
+odwrotnosc_mod() - odwrotność modulo (rozszerzony algorytm Euklidesa)
+mod - reszta z dzielenia
+
+def generuj_klucze(p, q):
+    n &lt;- p * q
+    phi &lt;- (p - 1) * (q - 1)
+    e &lt;- 3
+    Dopóki nwd(e, phi) != 1
+        e &lt;- e + 2
+    d &lt;- odwrotnosc_mod(e, phi)
+    Zwróć (e, n), (d, n)
+
+def szyfruj(m, e, n):
+    Zwróć m^e mod n          (szybkie potęgowanie modularne)
+
+def deszyfruj(c, d, n):
+    Zwróć c^d mod n</code></pre></div></div><span id="trojkat" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="sprawdzanie-warunku-trojkata"><span id="trojkat" class="anchor"></span><p class="eyebrow">Algorytmy geometryczne</p><h2><a class="self" href="#sprawdzanie-warunku-trojkata">Sprawdzanie warunku trójkąta</a></h2><p>Z odcinków o długościach a, b, c da się zbudować trójkąt wtedy i tylko wtedy, gdy wszystkie długości są dodatnie, a suma każdych dwóch jest większa od trzeciej.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def czy_trojkat(a, b, c):
+    if a &lt;= 0 or b &lt;= 0 or c &lt;= 0:
+        return False
+    return a + b &gt; c and a + c &gt; b and b + c &gt; a</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">a, b, c - długości odcinków
+
+def czy_trojkat(a, b, c):
+    Jeżeli a &lt;= 0 lub b &lt;= 0 lub c &lt;= 0
+        Zwróć Fałsz
+    Jeżeli a + b &gt; c oraz a + c &gt; b oraz b + c &gt; a
+        Zwróć Prawdę
+    W innym wypadku
+        Zwróć Fałsz</code></pre></div></div><span id="punkt_prosta" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="badanie-polozenia-punktow-wzgledem-prostej"><span id="punkt_prosta" class="anchor"></span><p class="eyebrow">Algorytmy geometryczne</p><h2><a class="self" href="#badanie-polozenia-punktow-wzgledem-prostej">Badanie położenia punktów względem prostej</a></h2><p>Punkty zapisujemy jako pary (x, y). Położenie punktu C względem prostej przechodzącej przez A i B mówi znak wyznacznika (iloczynu wektorowego wektorów AB i AC):</p><p>det(A, B, C) = (xB - xA) * (yC - yA) - (yB - yA) * (xC - xA)</p><p>det &gt; 0 - C leży po lewej stronie prostej (patrząc z A w stronę B), det &lt; 0 - po prawej, det = 0 - C leży na prostej AB. Dwa punkty C i D leżą po tej samej stronie prostej AB, gdy det(A, B, C) i det(A, B, D) mają ten sam znak.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def wyznacznik(A, B, C):  # iloczyn wektorowy AB x AC
+    return (B[0] - A[0]) * (C[1] - A[1]) - (B[1] - A[1]) * (C[0] - A[0])
+
+
+def polozenie(A, B, C):  # położenie punktu C względem prostej AB
+    w = wyznacznik(A, B, C)
+    if w &gt; 0:
+        return &quot;po lewej&quot;
+    if w &lt; 0:
+        return &quot;po prawej&quot;
+    return &quot;na prostej&quot;
+
+
+def ta_sama_strona(A, B, C, D):  # czy C i D leżą po tej samej stronie prostej AB
+    return wyznacznik(A, B, C) * wyznacznik(A, B, D) &gt; 0
+
+
+print(polozenie((0, 0), (2, 2), (0, 5)))  # po lewej</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">A = (xA, yA), B = (xB, yB) - punkty wyznaczające prostą
+C = (xC, yC) - badany punkt
+
+def wyznacznik(A, B, C):
+    Zwróć (xB - xA) * (yC - yA) - (yB - yA) * (xC - xA)
+
+def polozenie(A, B, C):
+    w &lt;- wyznacznik(A, B, C)
+    Jeżeli w &gt; 0
+        Zwróć &quot;po lewej&quot;
+    Jeżeli w &lt; 0
+        Zwróć &quot;po prawej&quot;
+    Zwróć &quot;na prostej&quot;</code></pre></div></div><span id="punkt_odcinek" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="badanie-przynaleznosci-punktu-do-odcinka"><span id="punkt_odcinek" class="anchor"></span><p class="eyebrow">Algorytmy geometryczne</p><h2><a class="self" href="#badanie-przynaleznosci-punktu-do-odcinka">Badanie przynależności punktu do odcinka</a></h2><p>Punkt C należy do odcinka AB, gdy leży na prostej AB (wyznacznik równy 0) i jego współrzędne mieszczą się między współrzędnymi końców odcinka.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def wyznacznik(A, B, C):  # iloczyn wektorowy AB x AC
+    return (B[0] - A[0]) * (C[1] - A[1]) - (B[1] - A[1]) * (C[0] - A[0])
+
+
+def na_odcinku(A, B, C):  # czy punkt C należy do odcinka AB
+    if wyznacznik(A, B, C) != 0:
+        return False
+    return (min(A[0], B[0]) &lt;= C[0] &lt;= max(A[0], B[0])
+            and min(A[1], B[1]) &lt;= C[1] &lt;= max(A[1], B[1]))
+
+
+print(na_odcinku((0, 0), (4, 4), (2, 2)))  # True
+print(na_odcinku((0, 0), (4, 4), (5, 5)))  # False</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">A = (xA, yA), B = (xB, yB) - końce odcinka
+C = (xC, yC) - badany punkt
+
+def na_odcinku(A, B, C):
+    Jeżeli wyznacznik(A, B, C) != 0
+        Zwróć Fałsz
+    Jeżeli min(xA, xB) &lt;= xC &lt;= max(xA, xB) oraz min(yA, yB) &lt;= yC &lt;= max(yA, yB)
+        Zwróć Prawdę
+    W innym wypadku
+        Zwróć Fałsz</code></pre></div></div><span id="odcinki" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="przecinanie-sie-odcinkow"><span id="odcinki" class="anchor"></span><p class="eyebrow">Algorytmy geometryczne</p><h2><a class="self" href="#przecinanie-sie-odcinkow">Przecinanie się odcinków</a></h2><p>Odcinki AB i CD przecinają się, gdy końce C i D leżą po przeciwnych stronach prostej AB, a jednocześnie końce A i B leżą po przeciwnych stronach prostej CD. Osobno sprawdzamy przypadki szczególne, gdy koniec jednego odcinka leży na drugim odcinku.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def wyznacznik(A, B, C):  # iloczyn wektorowy AB x AC
+    return (B[0] - A[0]) * (C[1] - A[1]) - (B[1] - A[1]) * (C[0] - A[0])
+
+
+def na_odcinku(A, B, C):  # czy punkt C należy do odcinka AB
+    if wyznacznik(A, B, C) != 0:
+        return False
+    return (min(A[0], B[0]) &lt;= C[0] &lt;= max(A[0], B[0])
+            and min(A[1], B[1]) &lt;= C[1] &lt;= max(A[1], B[1]))
+
+
+def przecinaja_sie(A, B, C, D):  # czy odcinki AB i CD mają punkt wspólny
+    w1 = wyznacznik(A, B, C)
+    w2 = wyznacznik(A, B, D)
+    w3 = wyznacznik(C, D, A)
+    w4 = wyznacznik(C, D, B)
+    if w1 * w2 &lt; 0 and w3 * w4 &lt; 0:  # przypadek ogólny
+        return True
+    # przypadki szczególne: koniec jednego odcinka leży na drugim
+    if na_odcinku(A, B, C) or na_odcinku(A, B, D) or na_odcinku(C, D, A) or na_odcinku(C, D, B):
+        return True
+    return False
+
+
+print(przecinaja_sie((0, 0), (4, 4), (0, 4), (4, 0)))  # True
+print(przecinaja_sie((0, 0), (1, 1), (2, 2), (3, 3)))  # False</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">A, B - końce pierwszego odcinka
+C, D - końce drugiego odcinka
+
+def przecinaja_sie(A, B, C, D):
+    w1 &lt;- wyznacznik(A, B, C)
+    w2 &lt;- wyznacznik(A, B, D)
+    w3 &lt;- wyznacznik(C, D, A)
+    w4 &lt;- wyznacznik(C, D, B)
+    Jeżeli w1 * w2 &lt; 0 oraz w3 * w4 &lt; 0
+        Zwróć Prawdę
+    Jeżeli na_odcinku(A, B, C) lub na_odcinku(A, B, D) lub na_odcinku(C, D, A) lub na_odcinku(C, D, B)
+        Zwróć Prawdę
+    Zwróć Fałsz</code></pre></div></div><span id="punkt_wielokat" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="przynaleznosc-punktu-do-obszaru-wielokata"><span id="punkt_wielokat" class="anchor"></span><p class="eyebrow">Algorytmy geometryczne</p><h2><a class="self" href="#przynaleznosc-punktu-do-obszaru-wielokata">Przynależność punktu do obszaru (wielokąta)</a></h2><p>Metoda półprostej (ray casting): z punktu P prowadzimy poziomą półprostą w prawo i liczymy, ile boków wielokąta przecina. Nieparzysta liczba przecięć - punkt leży wewnątrz, parzysta - na zewnątrz. Działa także dla wielokątów wklęsłych. Punkt leżący na brzegu traktujemy jako należący do obszaru.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">def wyznacznik(A, B, C):  # iloczyn wektorowy AB x AC
+    return (B[0] - A[0]) * (C[1] - A[1]) - (B[1] - A[1]) * (C[0] - A[0])
+
+
+def na_odcinku(A, B, C):  # czy punkt C należy do odcinka AB
+    if wyznacznik(A, B, C) != 0:
+        return False
+    return (min(A[0], B[0]) &lt;= C[0] &lt;= max(A[0], B[0])
+            and min(A[1], B[1]) &lt;= C[1] &lt;= max(A[1], B[1]))
+
+
+def w_wielokacie(P, wielokat):  # wielokat - lista kolejnych wierzchołków
+    x, y = P
+    n = len(wielokat)
+    wewnatrz = False
+    for i in range(n):
+        A = wielokat[i]
+        B = wielokat[(i + 1) % n]  # ostatni wierzchołek łączy się z pierwszym
+        if na_odcinku(A, B, P):
+            return True  # punkt na brzegu
+        if (A[1] &gt; y) != (B[1] &gt; y):  # bok przecina poziomą prostą y = P.y
+            x_przeciecia = A[0] + (y - A[1]) * (B[0] - A[0]) / (B[1] - A[1])
+            if x_przeciecia &gt; x:  # przecięcie leży na prawo od P
+                wewnatrz = not wewnatrz
+    return wewnatrz
+
+
+kwadrat = [(0, 0), (4, 0), (4, 4), (0, 4)]
+print(w_wielokacie((2, 2), kwadrat))  # True
+print(w_wielokacie((5, 2), kwadrat))  # False</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">P = (x, y) - badany punkt
+W[0..n-1] - kolejne wierzchołki wielokąta
+
+def w_wielokacie(P, W):
+    wewnatrz &lt;- Fałsz
+    Dla i = 0, 1, ... n - 1
+        A &lt;- W[i]
+        B &lt;- W[(i + 1) mod n]
+        Jeżeli na_odcinku(A, B, P)
+            Zwróć Prawdę
+        Jeżeli (yA &gt; y) != (yB &gt; y)
+            x_przeciecia &lt;- xA + (y - yA) * (xB - xA) / (yB - yA)
+            Jeżeli x_przeciecia &gt; x
+                wewnatrz &lt;- nie wewnatrz
+    Zwróć wewnatrz</code></pre></div></div><span id="koch" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="krzywa-kocha"><span id="koch" class="anchor"></span><p class="eyebrow">Algorytmy geometryczne</p><h2><a class="self" href="#krzywa-kocha">Krzywa Kocha</a></h2><p>Krzywa Kocha stopnia 0 to odcinek. Krzywą stopnia k otrzymujemy, dzieląc odcinek na 3 równe części i zastępując środkową częścią dwoma bokami trójkąta równobocznego - każdy z 4 nowych odcinków rysujemy jako krzywą stopnia k - 1. Trzy krzywe Kocha narysowane na bokach trójkąta równobocznego tworzą płatek Kocha.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">import turtle
+
+
+def koch(dlugosc, stopien):
+    if stopien == 0:
+        turtle.forward(dlugosc)
+        return
+    dlugosc /= 3
+    koch(dlugosc, stopien - 1)
+    turtle.left(60)
+    koch(dlugosc, stopien - 1)
+    turtle.right(120)
+    koch(dlugosc, stopien - 1)
+    turtle.left(60)
+    koch(dlugosc, stopien - 1)
+
+
+turtle.speed(0)
+turtle.penup()
+turtle.goto(-200, 0)
+turtle.pendown()
+koch(400, 3)
+# płatek Kocha: for _ in range(3): koch(400, 3); turtle.right(120)
+turtle.done()</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">dlugosc - długość odcinka
+stopien - stopień krzywej
+
+def koch(dlugosc, stopien):
+    Jeżeli stopien == 0
+        Narysuj odcinek o długości dlugosc
+        Zakończ
+    koch(dlugosc / 3, stopien - 1)
+    Obróć w lewo o 60 stopni
+    koch(dlugosc / 3, stopien - 1)
+    Obróć w prawo o 120 stopni
+    koch(dlugosc / 3, stopien - 1)
+    Obróć w lewo o 60 stopni
+    koch(dlugosc / 3, stopien - 1)</code></pre></div></div><span id="pitagoras" class="anchor"></span><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="drzewo-pitagorasa"><span id="pitagoras" class="anchor"></span><p class="eyebrow">Algorytmy geometryczne</p><h2><a class="self" href="#drzewo-pitagorasa">Drzewo Pitagorasa</a></h2><p>Rysujemy kwadrat, a na jego górnym boku trójkąt prostokątny równoramienny. Na przyprostokątnych tego trójkąta budujemy (rekurencyjnie) dwa mniejsze drzewa, każde z kwadratem o boku bok * √2 / 2. Funkcja zaczyna i kończy rysowanie w tym samym miejscu (lewy dolny róg kwadratu) i z tym samym kierunkiem żółwia - dzięki temu wywołania rekurencyjne nie psują sobie położenia.</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python</button><button type="button" role="tab" aria-selected="false" class="tab">Pseudokod</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">import turtle
+
+
+def drzewo(bok, stopien):  # żółw stoi w lewym dolnym rogu kwadratu i patrzy &quot;w górę&quot; kwadratu
+    if stopien == 0:
+        return
+    for _ in range(4):  # kwadrat rysowany w prawo od żółwia
+        turtle.forward(bok)
+        turtle.right(90)
+    nowy_bok = bok * 2 ** 0.5 / 2
+    turtle.forward(bok)              # lewy górny róg kwadratu
+    turtle.left(45)
+    drzewo(nowy_bok, stopien - 1)    # lewa gałąź
+    turtle.right(90)
+    turtle.forward(nowy_bok)         # wierzchołek trójkąta
+    drzewo(nowy_bok, stopien - 1)    # prawa gałąź
+    turtle.back(nowy_bok)            # powrót do punktu startu
+    turtle.left(45)
+    turtle.back(bok)
+
+
+turtle.speed(0)
+turtle.penup()
+turtle.goto(-50, -250)
+turtle.pendown()
+turtle.left(90)  # żółw patrzy w górę
+drzewo(100, 8)
+turtle.done()</code></pre></div><div class="pane" hidden><pre><code class="nohighlight">bok - długość boku kwadratu
+stopien - liczba poziomów drzewa
+
+def drzewo(bok, stopien):
+    Jeżeli stopien == 0
+        Zakończ
+    Narysuj kwadrat o boku bok
+    nowy_bok &lt;- bok * pierwiastek(2) / 2
+    Idź naprzód o bok
+    Obróć w lewo o 45 stopni
+    drzewo(nowy_bok, stopien - 1)
+    Obróć w prawo o 90 stopni
+    Idź naprzód o nowy_bok
+    drzewo(nowy_bok, stopien - 1)
+    Cofnij się o nowy_bok
+    Obróć w lewo o 45 stopni
+    Cofnij się o bok</code></pre></div></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="";</script>
+<script src="assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

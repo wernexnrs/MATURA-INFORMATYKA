@@ -1,19 +1,17 @@
-def waga(n=''):
-    wynik = 0
-    while len(str(n)) > 1:
-        for char in n:
-            char = int(char)
-            wynik += char
-        n = str(wynik)
-        wynik = 0
-    return n
+def waga(liczba):
+    while liczba >= 10:
+        suma = 0
+        for cyfra in str(liczba):
+            suma += int(cyfra)
+        liczba = suma
+    return liczba
 
 
-count = 0
+ile = 0
 
-with open("MIN-R2A1P-193_dane/pierwsze_przyklad.txt") as file:
+with open("pierwsze.txt") as file:
     for line in file:
-        line = line.strip()
-        if waga(line) == '1':
-            count += 1
-print(count)
+        if waga(int(line)) == 1:
+            ile += 1
+
+print(ile)

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2015 czerwiec | Matura z informatyki</title>
+<meta name="description" content="2015 czerwiec - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2, 2.1, 2.2, 4.1, 4.3, 4.4, 4.5 i 4.6, 5.1, 5.2, 5.3, 5.4, 5.5).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-czerwiec.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2015 czerwiec">
+<meta property="og:description" content="2015 czerwiec - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2, 2.1, 2.2, 4.1, 4.3, 4.4, 4.5 i 4.6, 5.1, 5.2, 5.3, 5.4, 5.5).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-czerwiec.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2015 czerwiec", "description": "2015 czerwiec - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2, 2.1, 2.2, 4.1, 4.3, 4.4, 4.5 i 4.6, 5.1, 5.2, 5.3, 5.4, 5.5).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-czerwiec.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#1-1">1.1</a></li><li><a href="#1-2">1.2</a></li><li><a href="#2-1">2.1</a></li><li><a href="#2-2">2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-3">4.3</a></li><li><a href="#4-4-4-5-i-4-6">4.4, 4.5 i 4.6</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li><li><a href="#5-5">5.5</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2015 czerwiec</span></nav>
+<h1 class="page-title">2015 czerwiec</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1-1"><h2><a class="self" href="#1-1">1.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_u2(liczba, n=8):
+    # dla liczby ujemnej zapisujemy 2^n + liczba (bit znaku ma wagę -2^(n-1))
+    if liczba &lt; 0:
+        liczba += 2 ** n
+    return bin(liczba)[2:].zfill(n)
+
+
+def z_u2(zapis):
+    n = len(zapis)
+    return -int(zapis[0]) * 2 ** (n - 1) + int(zapis[1:], 2)
+
+
+print(na_u2(93), na_u2(-42))
+print(na_u2(z_u2(&quot;00101011&quot;) + z_u2(&quot;10011011&quot;)))</code></pre></div><p><strong>Odpowiedź:</strong> 93 = (01011101)U2, -42 = (11010110)U2, suma = (11000110)U2</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="1-2"><h2><a class="self" href="#1-2">1.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def przeciwna(a):
+    # a - napis an-1 ... a1 a0, indeks i liczony od prawej (a0 to ostatni znak)
+    n = len(a)
+    b = [&quot;0&quot;] * n
+    i = 0
+    while a[n - 1 - i] == &quot;0&quot;:       # krok 2
+        b[n - 1 - i] = &quot;0&quot;
+        i += 1
+    b[n - 1 - i] = a[n - 1 - i]      # krok 3
+    i += 1                           # krok 4
+    while i &lt; n:                     # krok 5
+        if a[n - 1 - i] == &quot;0&quot;:
+            b[n - 1 - i] = &quot;1&quot;
+        else:
+            b[n - 1 - i] = &quot;0&quot;
+        i += 1
+    return &quot;&quot;.join(b)
+
+
+print(przeciwna(&quot;1111001001110000&quot;))
+# pętla z kroku 2 nie wykona się, gdy a0 = 1, np.:
+print(przeciwna(&quot;0000000000000001&quot;))
+# 7 negacji w kroku 5: ostatnia jedynka na pozycji 8, czyli xxxxxxx100000000, np.:
+print(przeciwna(&quot;0000000100000000&quot;))</code></pre></div><p><strong>Odpowiedź:</strong> 0000110110010000; brak obrotów pętli z kroku 2: dowolna liczba postaci xxxxxxxxxxxxxxx1; 7 negacji: xxxxxxx100000000</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2-1"><h2><a class="self" href="#2-1">2.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">a, b = 5, 15
+C = [2, 3, 5, 6, 9, 10, 11, 13, 14, 15, 17, 19, 20, 23, 24]
+
+# dla a &lt;= b: a, b, c tworzą triadę &lt;=&gt; b - a &lt; c &lt; b + a
+triady = []
+for c in C:
+    if b - a &lt; c &lt; b + a:
+        triady.append(c)
+
+print(triady)
+print(len(triady))</code></pre></div><p><strong>Odpowiedź:</strong> b - a &lt; c, b + a &gt; c; 6 wartości: 11, 13, 14, 15, 17, 19</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2-2"><h2><a class="self" href="#2-2">2.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def ile_triad(c):
+    # c[0] &lt; c[1]; c1, c2, ck tworzą triadę &lt;=&gt; c2 - c1 &lt; ck &lt; c2 + c1
+    minimum = c[1] - c[0]
+    maksimum = c[1] + c[0]
+    licznik = 0
+    for ck in c:
+        if minimum &lt; ck &lt; maksimum:
+            licznik += 1
+    return licznik
+
+
+print(ile_triad([5, 15, 2, 3, 6, 9, 10, 11, 13, 14, 17, 19, 20, 23, 24]))</code></pre></div><p><strong>Odpowiedź:</strong> liczba elementów ck spełniających c2 - c1 &lt; ck &lt; c2 + c1 (dla przykładu z 2.1: 6)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-1"><h2><a class="self" href="#4-1">4.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
+
+miesiace = {}  # (rok, miesiąc) -&gt; [kostka, orzech, miał]
+dzien = date(2014, 10, 15)
+
+with open(&quot;piastek.txt&quot;) as file:
+    for line in file:
+        if not line.strip():
+            continue
+        dostawa = list(map(int, line.split()))
+        klucz = (dzien.year, dzien.month)
+        if klucz not in miesiace:
+            miesiace[klucz] = [0, 0, 0]
+        for i in range(3):
+            miesiace[klucz][i] += dostawa[i]
+        dzien += timedelta(days=1)
+
+for (rok, miesiac), tony in miesiace.items():
+    print(rok, miesiac, *tony)</code></pre></div><p><strong>Odpowiedź:</strong> (kostka, orzech, miał) 10: 1742 1658 915, 11: 2756 2884 1750, 12: 2696 2749 1586, 1: 2990 2870 1646, 2: 2579 2651 1252, 3: 3332 3026 1360, 4: 1365 966 706</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-3"><h2><a class="self" href="#4-3">4.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ceny = [685, 620, 380]  # kostka, orzech, miał [zł/t]
+koszt = 0
+
+with open(&quot;piastek.txt&quot;) as file:
+    for line in file:
+        dostawa = list(map(int, line.split()))
+        for i in range(len(dostawa)):
+            koszt += dostawa[i] * ceny[i]
+
+print(koszt)</code></pre></div><p><strong>Odpowiedź:</strong> 25 880 280 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-4-4-5-i-4-6"><h2><a class="self" href="#4-4-4-5-i-4-6">4.4, 4.5 i 4.6</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
+
+dostawy = []
+with open(&quot;piastek.txt&quot;) as file:
+    for line in file:
+        if line.strip():
+            dostawy.append(list(map(int, line.split())))
+
+spalanie = [200, 260, 320]      # dzienne zużycie: 200, 1,3 * 200, 1,6 * 200
+
+magazyn = [80, 80, 80]
+dni_palenia = [0, 0, 0]
+podtrzymanie = 0
+pierwszy_mial = None
+dzien = date(2014, 10, 15)
+
+for dostawa in dostawy:
+    for i in range(3):
+        magazyn[i] += dostawa[i]
+
+    spalono = False
+    for i in range(3):          # najpierw kostka, potem orzech, na końcu miał
+        if magazyn[i] &gt;= spalanie[i]:
+            magazyn[i] -= spalanie[i]
+            dni_palenia[i] += 1
+            if i == 2 and pierwszy_mial is None:
+                pierwszy_mial = dzien
+            spalono = True
+            break
+    if not spalono:
+        podtrzymanie += 1
+
+    dzien += timedelta(days=1)
+
+print(&quot;4.4&quot;, *dni_palenia)
+print(&quot;4.5&quot;, pierwszy_mial)
+print(&quot;4.6&quot;, podtrzymanie)</code></pre></div><p><strong>Odpowiedź:</strong> 4.4: kostka 87, orzech 64, miał 29 dni; 4.5: 2014-10-18; 4.6: 3 dni</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-1"><h2><a class="self" href="#5-1">5.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wykroczenia = {}  # kod -&gt; (nazwa, mandat, punkty)
+mandaty = []      # (pesel, data, kod)
+kierowcy = {}     # pesel -&gt; (data prawa jazdy, miasto)
+
+with open(&quot;wykroczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        kod, nazwa, mandat, punkty = line.strip().split(&quot;\t&quot;)
+        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
+
+with open(&quot;mandaty.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data, kod = line.strip().split(&quot;\t&quot;)
+        mandaty.append((pesel, data, kod))
+
+with open(&quot;kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data_pj, miasto = line.strip().split(&quot;\t&quot;)
+        kierowcy[pesel] = (data_pj, miasto)
+
+ile = {}
+for pesel, data, kod in mandaty:
+    ile[kod] = ile.get(kod, 0) + 1
+
+kod = max(ile, key=ile.get)
+print(wykroczenia[kod][0], ile[kod])</code></pre></div><p><strong>Odpowiedź:</strong> Przekroczenie dopuszczalnej prędkości o 21 - 30 km/h, 77 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-2"><h2><a class="self" href="#5-2">5.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wykroczenia = {}  # kod -&gt; (nazwa, mandat, punkty)
+mandaty = []      # (pesel, data, kod)
+kierowcy = {}     # pesel -&gt; (data prawa jazdy, miasto)
+
+with open(&quot;wykroczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        kod, nazwa, mandat, punkty = line.strip().split(&quot;\t&quot;)
+        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
+
+with open(&quot;mandaty.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data, kod = line.strip().split(&quot;\t&quot;)
+        mandaty.append((pesel, data, kod))
+
+with open(&quot;kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data_pj, miasto = line.strip().split(&quot;\t&quot;)
+        kierowcy[pesel] = (data_pj, miasto)
+
+punkty = {}
+for pesel, data, kod in mandaty:
+    if kierowcy[pesel][0][:4] == &quot;2013&quot;:
+        punkty[pesel] = punkty.get(pesel, 0) + wykroczenia[kod][2]
+
+for pesel in punkty:
+    if punkty[pesel] &gt; 20:
+        print(pesel, punkty[pesel])</code></pre></div><p><strong>Odpowiedź:</strong> 81011159031 32, 80062465997 27, 81011807736 26</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-3"><h2><a class="self" href="#5-3">5.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wykroczenia = {}  # kod -&gt; (nazwa, mandat, punkty)
+mandaty = []      # (pesel, data, kod)
+kierowcy = {}     # pesel -&gt; (data prawa jazdy, miasto)
+
+with open(&quot;wykroczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        kod, nazwa, mandat, punkty = line.strip().split(&quot;\t&quot;)
+        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
+
+with open(&quot;mandaty.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data, kod = line.strip().split(&quot;\t&quot;)
+        mandaty.append((pesel, data, kod))
+
+with open(&quot;kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data_pj, miasto = line.strip().split(&quot;\t&quot;)
+        kierowcy[pesel] = (data_pj, miasto)
+
+for kod in wykroczenia:
+    if &quot;naruszenie zakazu&quot; in wykroczenia[kod][0].lower():
+        print(wykroczenia[kod][0])</code></pre></div><p><strong>Odpowiedź:</strong> 9 wykroczeń, np. Naruszenie zakazu postoju przed lub za przejazdem kolejowym, Naruszenie zakazu wyprzedzania na skrzyżowaniach, …</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-4"><h2><a class="self" href="#5-4">5.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wykroczenia = {}  # kod -&gt; (nazwa, mandat, punkty)
+mandaty = []      # (pesel, data, kod)
+kierowcy = {}     # pesel -&gt; (data prawa jazdy, miasto)
+
+with open(&quot;wykroczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        kod, nazwa, mandat, punkty = line.strip().split(&quot;\t&quot;)
+        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
+
+with open(&quot;mandaty.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data, kod = line.strip().split(&quot;\t&quot;)
+        mandaty.append((pesel, data, kod))
+
+with open(&quot;kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data_pj, miasto = line.strip().split(&quot;\t&quot;)
+        kierowcy[pesel] = (data_pj, miasto)
+
+liczba = {}
+kwota = {}
+for pesel, data, kod in mandaty:
+    miesiac = int(data[5:7])
+    liczba[miesiac] = liczba.get(miesiac, 0) + 1
+    kwota[miesiac] = kwota.get(miesiac, 0) + wykroczenia[kod][1]
+
+miesiac = min(liczba, key=liczba.get)
+print(miesiac, liczba[miesiac], kwota[miesiac])</code></pre></div><p><strong>Odpowiedź:</strong> luty (2): 63 mandaty na łączną kwotę 12 750 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-5"><h2><a class="self" href="#5-5">5.5</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wykroczenia = {}  # kod -&gt; (nazwa, mandat, punkty)
+mandaty = []      # (pesel, data, kod)
+kierowcy = {}     # pesel -&gt; (data prawa jazdy, miasto)
+
+with open(&quot;wykroczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        kod, nazwa, mandat, punkty = line.strip().split(&quot;\t&quot;)
+        wykroczenia[kod] = (nazwa, int(mandat), int(punkty))
+
+with open(&quot;mandaty.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data, kod = line.strip().split(&quot;\t&quot;)
+        mandaty.append((pesel, data, kod))
+
+with open(&quot;kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        pesel, data_pj, miasto = line.strip().split(&quot;\t&quot;)
+        kierowcy[pesel] = (data_pj, miasto)
+
+ukarani = set()
+for pesel, data, kod in mandaty:
+    ukarani.add(pesel)
+
+miasta = {}
+bez_mandatu = 0
+for pesel in kierowcy:
+    if pesel not in ukarani:
+        bez_mandatu += 1
+        miasto = kierowcy[pesel][1]
+        miasta[miasto] = miasta.get(miasto, 0) + 1
+
+print(bez_mandatu, max(miasta, key=miasta.get))</code></pre></div><p><strong>Odpowiedź:</strong> 190 kierowców, najwięcej z miasta Warszawa</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-1"><h2><a class="self" href="#6-1">6.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def sumy(liczba):
+    # pozycje liczymy od prawej: cyfra jednostek ma pozycję 0
+    parzyste = nieparzyste = 0
+    for pozycja, cyfra in enumerate(reversed(liczba)):
+        if pozycja % 2 == 0:
+            parzyste += int(cyfra)
+        else:
+            nieparzyste += int(cyfra)
+    return parzyste, nieparzyste
+
+
+with open(&quot;kody.txt&quot;) as file, open(&quot;kody1.txt&quot;, &quot;w&quot;) as wynik:
+    for line in file:
+        parzyste, nieparzyste = sumy(line.strip())
+        wynik.write(f&quot;{parzyste} {nieparzyste}\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> plik kody1.txt (pierwsze wiersze: 10 13, 11 17, 17 16, …)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-2"><h2><a class="self" href="#6-2">6.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kody = {}
+with open(&quot;cyfra_kodkreskowy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        cyfra, kod = line.split()
+        kody[cyfra] = kod
+
+
+def sumy(liczba):
+    # pozycje liczymy od prawej: cyfra jednostek ma pozycję 0
+    parzyste = nieparzyste = 0
+    for pozycja, cyfra in enumerate(reversed(liczba)):
+        if pozycja % 2 == 0:
+            parzyste += int(cyfra)
+        else:
+            nieparzyste += int(cyfra)
+    return parzyste, nieparzyste
+
+
+def cyfra_kontrolna(liczba):
+    parzyste, nieparzyste = sumy(liczba)
+    return str((10 - (3 * parzyste + nieparzyste) % 10) % 10)
+
+
+with open(&quot;kody.txt&quot;) as file, open(&quot;kody2.txt&quot;, &quot;w&quot;) as wynik:
+    for line in file:
+        k = cyfra_kontrolna(line.strip())
+        wynik.write(f&quot;{k} {kody[k]}\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> plik kody2.txt (pierwsze wiersze: 7 10101011101110, 0 10101110111010, 3 11101110101010, …)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-3"><h2><a class="self" href="#6-3">6.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kody = {}
+with open(&quot;cyfra_kodkreskowy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        cyfra, kod = line.split()
+        kody[cyfra] = kod
+
+
+def sumy(liczba):
+    # pozycje liczymy od prawej: cyfra jednostek ma pozycję 0
+    parzyste = nieparzyste = 0
+    for pozycja, cyfra in enumerate(reversed(liczba)):
+        if pozycja % 2 == 0:
+            parzyste += int(cyfra)
+        else:
+            nieparzyste += int(cyfra)
+    return parzyste, nieparzyste
+
+
+def cyfra_kontrolna(liczba):
+    parzyste, nieparzyste = sumy(liczba)
+    return str((10 - (3 * parzyste + nieparzyste) % 10) % 10)
+
+
+with open(&quot;kody.txt&quot;) as file, open(&quot;kody3.txt&quot;, &quot;w&quot;) as wynik:
+    for line in file:
+        liczba = line.strip()
+        kod = &quot;11011010&quot;                                   # START
+        for cyfra in liczba:
+            kod += kody[cyfra]
+        kod += kody[cyfra_kontrolna(liczba)] + &quot;11010110&quot;  # cyfra kontrolna i STOP
+        wynik.write(kod + &quot;\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> plik kody3.txt (pierwszy wiersz to kod liczby 764321, taki jak w przykładzie z treści zadania)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

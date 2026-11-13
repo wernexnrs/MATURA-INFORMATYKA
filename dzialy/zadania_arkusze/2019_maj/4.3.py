@@ -1,49 +1,20 @@
-# BRUTE FORCE METHOD
-def return_divisors(int_number):
-    divisors = list(filter(lambda i: (int_number % i == 0), list(range(2, int_number))))
-    return divisors
+from math import gcd
 
-with open("liczby.txt", "r") as file:
-    # PREPARE DATA
-    numbers = file.read().splitlines()
-    numbers = list(map(int, numbers))
+with open("liczby.txt") as file:
+    liczby = [int(line) for line in file]
 
-    # SET "GLOBAL" CONTAINERS
-    max_length_of_numeric_string = 0
-    start_number = None
-    max_divisor = None
+najdluzszy = 0
 
-    # FIND ALL DIVISORS
-    all_divisors = list()
-    for number in numbers:
-        number = int(number)
-        all_divisors.extend(return_divisors(number))
+for i in range(len(liczby)):
+    nwd = liczby[i]
+    j = i
+    # rozszerzamy ciąg zaczynający się od i, dopóki NWD wszystkich liczb jest większy od 1
+    while j + 1 < len(liczby) and gcd(nwd, liczby[j + 1]) > 1:
+        j += 1
+        nwd = gcd(nwd, liczby[j])
+    if j - i + 1 > najdluzszy:
+        najdluzszy = j - i + 1
+        pierwsza = liczby[i]
+        dzielnik = nwd
 
-    # DELETE ALL REPETITIONS AND REVERSE
-    all_divisors = list(set(all_divisors))
-    all_divisors.reverse()
-
-    # TRY TO DEVISE EVERY NUMBER BY ALL POSIBLE DIVISORS
-    for divisor in all_divisors:
-        local_length_of_numeric_string = 1
-        local_start_number = None
-        for i in range(len(numbers)):
-            if numbers[i] % divisor == 0:
-                local_length_of_numeric_string += 1
-            else:
-                # FIND STRING START NUMBER
-                try:
-                    local_start_number = numbers[i - local_length_of_numeric_string]
-                except IndexError:
-                    local_start_number = numbers[i - local_length_of_numeric_string - 1]
-
-                # CHECK IF THIS NUMBER STRING IS LONGER THAT PREVIOUS
-                if local_length_of_numeric_string > max_length_of_numeric_string:
-                    start_number = local_start_number
-                    max_length_of_numeric_string = local_length_of_numeric_string
-                    max_divisor = divisor
-
-                # RESET VARIABLE STORING NUMBER STRING LENGTHH
-                local_length_of_numeric_string = 1
-
-    print(start_number, max_length_of_numeric_string, max_divisor)
+print(pierwsza, najdluzszy, dzielnik)

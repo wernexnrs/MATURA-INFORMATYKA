@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zadanie 64. Obrazki | Matura z informatyki</title>
+<meta name="description" content="Zadanie 64. Obrazki - rozwiązania zadań w Pythonie z odpowiedziami (zadania 64.1, 64.2, 64.3, 64.4).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-64.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Zadanie 64. Obrazki">
+<meta property="og:description" content="Zadanie 64. Obrazki - rozwiązania zadań w Pythonie z odpowiedziami (zadania 64.1, 64.2, 64.3, 64.4).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-64.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Zadanie 64. Obrazki", "description": "Zadanie 64. Obrazki - rozwiązania zadań w Pythonie z odpowiedziami (zadania 64.1, 64.2, 64.3, 64.4).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-64.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#64-1">64.1</a></li><li><a href="#64-2">64.2</a></li><li><a href="#64-3">64.3</a></li><li><a href="#64-4">64.4</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 64. Obrazki</span></nav>
+<h1 class="page-title">Zadanie 64. Obrazki</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><p>Każdy obrazek w pliku to 21 wierszy: 20 wierszy po 20 pikseli + bit parzystości wiersza oraz ostatni wiersz z 20 bitami parzystości kolumn. Obrazki oddzielone są pustym wierszem.</p><section class="card" id="64-1"><h2><a class="self" href="#64-1">64.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+
+with open(&quot;dane_obrazki.txt&quot;) as file:
+    wiersze = file.read().split()  # puste wiersze znikają
+for i in range(0, len(wiersze), 21):
+    obrazki.append(wiersze[i:i + 21])
+
+rewersy = 0
+najwiecej_czarnych = 0
+for obrazek in obrazki:
+    czarne = 0
+    for wiersz in obrazek[:20]:
+        czarne += wiersz[:20].count(&quot;1&quot;)
+    if czarne &gt; 400 - czarne:
+        rewersy += 1
+    najwiecej_czarnych = max(najwiecej_czarnych, czarne)
+
+print(rewersy, najwiecej_czarnych)</code></pre></div><p><strong>Odpowiedź:</strong> 13 rewersów, największa liczba pikseli czarnych: 381</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="64-2"><h2><a class="self" href="#64-2">64.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+
+with open(&quot;dane_obrazki.txt&quot;) as file:
+    wiersze = file.read().split()
+for i in range(0, len(wiersze), 21):
+    obrazek = []
+    for wiersz in wiersze[i:i + 20]:
+        obrazek.append(wiersz[:20])  # bez bitów parzystości
+    obrazki.append(obrazek)
+
+
+def czy_rekurencyjny(obrazek):
+    for w in range(10):
+        for k in range(10):
+            piksel = obrazek[w][k]
+            if obrazek[w][k + 10] != piksel or obrazek[w + 10][k] != piksel or obrazek[w + 10][k + 10] != piksel:
+                return False
+    return True
+
+
+rekurencyjne = []
+for obrazek in obrazki:
+    if czy_rekurencyjny(obrazek):
+        rekurencyjne.append(obrazek)
+
+print(len(rekurencyjne))
+for wiersz in rekurencyjne[0]:
+    print(wiersz)</code></pre></div><p><strong>Odpowiedź:</strong> 60 obrazków rekurencyjnych; pierwszy z nich to naprzemiennie wiersze <code>11111111111111111111</code> i <code>00000000000000000000</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="64-3"><h2><a class="self" href="#64-3">64.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+
+with open(&quot;dane_obrazki.txt&quot;) as file:
+    wiersze = file.read().split()
+for i in range(0, len(wiersze), 21):
+    obrazki.append(wiersze[i:i + 21])
+
+
+def bledne_bity(obrazek):
+    bledne_wiersze = []
+    bledne_kolumny = []
+    for w in range(20):
+        if obrazek[w][:20].count(&quot;1&quot;) % 2 != int(obrazek[w][20]):
+            bledne_wiersze.append(w)
+    for k in range(20):
+        jedynki = 0
+        for w in range(20):
+            jedynki += int(obrazek[w][k])
+        if jedynki % 2 != int(obrazek[20][k]):
+            bledne_kolumny.append(k)
+    return bledne_wiersze, bledne_kolumny
+
+
+poprawne = 0
+naprawialne = 0
+nienaprawialne = 0
+najwiecej_bledow = 0
+
+for obrazek in obrazki:
+    bledne_wiersze, bledne_kolumny = bledne_bity(obrazek)
+    bledy = len(bledne_wiersze) + len(bledne_kolumny)
+    najwiecej_bledow = max(najwiecej_bledow, bledy)
+    if bledy == 0:
+        poprawne += 1
+    elif len(bledne_wiersze) &lt;= 1 and len(bledne_kolumny) &lt;= 1:
+        naprawialne += 1
+    else:
+        nienaprawialne += 1
+
+print(poprawne, naprawialne, nienaprawialne, najwiecej_bledow)</code></pre></div><p><strong>Odpowiedź:</strong> poprawne: 171, naprawialne: 14, nienaprawialne: 15, największa liczba błędnych bitów parzystości: 7</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="64-4"><h2><a class="self" href="#64-4">64.4</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+
+with open(&quot;dane_obrazki.txt&quot;) as file:
+    wiersze = file.read().split()
+for i in range(0, len(wiersze), 21):
+    obrazki.append(wiersze[i:i + 21])
+
+
+def bledne_bity(obrazek):
+    bledne_wiersze = []
+    bledne_kolumny = []
+    for w in range(20):
+        if obrazek[w][:20].count(&quot;1&quot;) % 2 != int(obrazek[w][20]):
+            bledne_wiersze.append(w)
+    for k in range(20):
+        jedynki = 0
+        for w in range(20):
+            jedynki += int(obrazek[w][k])
+        if jedynki % 2 != int(obrazek[20][k]):
+            bledne_kolumny.append(k)
+    return bledne_wiersze, bledne_kolumny
+
+
+for numer in range(len(obrazki)):
+    bledne_wiersze, bledne_kolumny = bledne_bity(obrazki[numer])
+    if len(bledne_wiersze) + len(bledne_kolumny) == 0:
+        continue
+    if len(bledne_wiersze) &gt; 1 or len(bledne_kolumny) &gt; 1:
+        continue
+    # wiersz/kolumna 21 oznacza bit parzystości
+    wiersz = bledne_wiersze[0] + 1 if bledne_wiersze else 21
+    kolumna = bledne_kolumny[0] + 1 if bledne_kolumny else 21
+    print(numer + 1, wiersz, kolumna)</code></pre></div><p><strong>Odpowiedź:</strong> (numer obrazka, wiersz, kolumna) (14, 1, 15), (19, 4, 20), (26, 21, 13), (29, 2, 8), (33, 15, 21), (115, 21, 14), (116, 21, 13), (129, 21, 14), (131, 10, 7), (143, 7, 15), (154, 7, 7), (161, 21, 17), (162, 21, 16), (187, 21, 18)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/64.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2009 Maj | Matura z informatyki</title>
+<meta name="description" content="2009 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a i 2b, 3a, 3b, 4, 5a, 5b, 5c, 5d, 6a, 6b, 6c, 6d).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2009 Maj">
+<meta property="og:description" content="2009 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a i 2b, 3a, 3b, 4, 5a, 5b, 5c, 5d, 6a, 6b, 6c, 6d).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2009 Maj", "description": "2009 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 2a i 2b, 3a, 3b, 4, 5a, 5b, 5c, 5d, 6a, 6b, 6c, 6d).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title">Arkusz I</p><ul><li><a href="#2a-i-2b">2a i 2b</a></li><li><a href="#3a">3a</a></li><li><a href="#3b">3b</a></li></ul><p class="side-title">Arkusz II</p><ul><li><a href="#4">4</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#5c">5c</a></li><li><a href="#5d">5d</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2009 Maj</span></nav>
+<h1 class="page-title">2009 Maj</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="2a-i-2b"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import floor
+
+
+def punkty_kratowe(R):
+    # liczba punktów (x, y) o współrzędnych całkowitych, dla których x^2 + y^2 &lt;= R^2
+    r = floor(R)
+    N = 0
+    for x in range(-r, r + 1):
+        for y in range(-r, r + 1):
+            if x * x + y * y &lt;= R * R:
+                N += 1
+    return N
+
+
+print(punkty_kratowe(0), punkty_kratowe(1), punkty_kratowe(1.5))  # przykłady z treści: 1 5 9
+print(punkty_kratowe(2.01))
+print(punkty_kratowe(4.50))</code></pre></div><p><strong>Odpowiedź:</strong> N(2,01) = 13, N(4,50) = 69</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="3a"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#3a">3a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+
+
+def nwd(a, b):
+    global wywolania
+    wywolania += 1
+    if b == 0:
+        return a
+    return nwd(b, a % b)
+
+
+for a, b in [(56, 72), (72, 56)]:
+    wywolania = 0
+    nwd(a, b)
+    print(a, b, wywolania)</code></pre></div><p><strong>Odpowiedź:</strong> dla a = 56, b = 72 – 5 wywołań; dla a = 72, b = 56 – 4 wywołania</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="3b"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#3b">3b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># Dane: liczby naturalne a i b, z których co najmniej jedna jest większa od 0
+# Wynik: największy wspólny dzielnik liczb a i b
+def nwd(a, b):
+    while b &gt; 0:
+        reszta = a % b
+        a = b
+        b = reszta
+    return a
+
+
+print(nwd(16, 12), nwd(56, 72))</code></pre></div><p><strong>Odpowiedź:</strong> dopóki b &gt; 0: reszta := a mod b, a := b, b := reszta; wynikiem jest a (np. nwd(16, 12) = 4)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4">4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em> Podpunkty korzystają z tych samych wylosowanych punktów, dlatego są w jednym programie. Wykres (b) zapisywany jest jako <code>smok.svg</code> bez dodatkowych bibliotek.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from random import randint
+
+x, y = 1, 1
+punkty = []
+
+# a) 5000 iteracji, za każdym razem losowy układ równań
+for i in range(5000):
+    if randint(0, 1) == 0:
+        x, y = -0.4 * x - 1, -0.4 * y + 0.1
+    else:
+        x, y = 0.76 * x - 0.4 * y, 0.4 * x + 0.76 * y
+    punkty.append((x, y))
+
+smok = punkty[100:]  # pomijamy 100 pierwszych iteracji
+xs = [p[0] for p in smok]
+ys = [p[1] for p in smok]
+
+with open(&quot;zad_4.txt&quot;, &quot;w&quot;) as wynik:
+    wynik.write(&quot;a)\n&quot;)
+    for x, y in punkty:
+        wynik.write(f&quot;{x} {y}\n&quot;)
+    # c) środek masy
+    wynik.write(f&quot;c) {round(sum(xs) / len(xs), 1)} {round(sum(ys) / len(ys), 1)}\n&quot;)
+    # d) rozmiary smoka
+    wynik.write(f&quot;d) xmin={round(min(xs), 1)} xmax={round(max(xs), 1)} &quot;
+                f&quot;ymin={round(min(ys), 1)} ymax={round(max(ys), 1)}\n&quot;)
+
+print(&quot;c)&quot;, round(sum(xs) / len(xs), 1), round(sum(ys) / len(ys), 1))
+print(&quot;d)&quot;, round(min(xs), 1), round(max(xs), 1), round(min(ys), 1), round(max(ys), 1))
+
+# b) obraz smoka jako plik SVG
+skala = 300
+with open(&quot;smok.svg&quot;, &quot;w&quot;) as obraz:
+    obraz.write(&#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;600&quot; height=&quot;400&quot; &#x27;
+                &#x27;style=&quot;background:white&quot;&gt;\n&#x27;)
+    for x, y in smok:
+        px = (x + 1.2) * skala
+        py = 400 - (y + 0.5) * skala
+        obraz.write(f&#x27;&lt;circle cx=&quot;{px:.1f}&quot; cy=&quot;{py:.1f}&quot; r=&quot;0.8&quot; fill=&quot;green&quot;/&gt;\n&#x27;)
+    obraz.write(&quot;&lt;/svg&gt;\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> wyniki są losowe, klucz nie podaje wartości; przykładowo: c) środek masy ≈ (−0,6; −0,1), d) x od −1,2 do 0,4, y od −0,7 do 0,4</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">palindromy = 0
+
+with open(&quot;dane.txt&quot;) as file:
+    for line in file:
+        for slowo in line.split():
+            if slowo == slowo[::-1]:
+                palindromy += 1
+
+print(palindromy)</code></pre></div><p><strong>Odpowiedź:</strong> 46</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+
+with open(&quot;dane.txt&quot;) as file:
+    for line in file:
+        a, b = line.split()
+        if b in a:
+            licznik += 1
+
+print(licznik)</code></pre></div><p><strong>Odpowiedź:</strong> 35</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nakladka(a, b):
+    # długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
+    for k in range(min(len(a), len(b)), 0, -1):
+        if a[-k:] == b[:k]:
+            return k
+    return 0
+
+
+licznik = 0
+
+with open(&quot;dane.txt&quot;) as file:
+    for line in file:
+        a, b = line.split()
+        if b not in a and nakladka(a, b) == 0 and nakladka(b, a) == 0:
+            licznik += 1
+
+print(licznik)</code></pre></div><p><strong>Odpowiedź:</strong> 13</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5d"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5d">5d</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nakladka(a, b):
+    # długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
+    for k in range(min(len(a), len(b)), 0, -1):
+        if a[-k:] == b[:k]:
+            return k
+    return 0
+
+
+def slowo_c(a, b):
+    if b in a:
+        return a
+    k1 = nakladka(a, b)  # najpierw A, potem B
+    k2 = nakladka(b, a)  # najpierw B, potem A
+    if k1 &gt;= k2:
+        return a + b[k1:]
+    return b + a[k2:]
+
+
+with open(&quot;dane.txt&quot;) as file, open(&quot;slowa.txt&quot;, &quot;w&quot;) as wynik:
+    for line in file:
+        a, b = line.split()
+        wynik.write(slowo_c(a, b) + &quot;\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> plik slowa.txt: 0001100111101010111, 1100001101, 11000100, …</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6a">6a</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lekarze = {}
+with open(&quot;lekarze.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    file.readline()  # nagłówek
+    for line in file:
+        id_l, nazwisko, imie, specjalnosc, data, nip, pesel = line.strip().split(&quot;\t&quot;)
+        lekarze[id_l] = (nazwisko, imie)
+
+wizyty = {}
+with open(&quot;wizyty.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_l, id_p, data = line.strip().split(&quot;\t&quot;)
+        wizyty[id_l] = wizyty.get(id_l, 0) + 1
+
+for id_l in sorted(wizyty, key=lambda k: -wizyty[k]):
+    print(lekarze[id_l][0], lekarze[id_l][1], wizyty[id_l])</code></pre></div><p><strong>Odpowiedź:</strong> Damian Iwona 17, Kadaj Monika 11, Reks Paweł 10, Czapiewski Jakub 10, Jaworska Karolina 10, Witkowski Karol 10, … , Kowalik Szymon 3</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">pacjenci = {}
+with open(&quot;pacjenci.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_p, nazwisko, imie, pesel, data = line.strip().split(&quot;\t&quot;)
+        rok, miesiac, dzien = map(int, data.split(&quot;-&quot;))  # daty bez zer wiodących, np. 2001-1-13
+        pacjenci[id_p] = (nazwisko, imie, (rok, miesiac, dzien))
+
+wizyty = {}
+with open(&quot;wizyty.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_l, id_p, data = line.strip().split(&quot;\t&quot;)
+        if pacjenci[id_p][2] &lt; (1973, 7, 1):
+            wizyty[id_p] = wizyty.get(id_p, 0) + 1
+
+for id_p in sorted(wizyty, key=lambda k: wizyty[k]):
+    print(pacjenci[id_p][0], pacjenci[id_p][1], wizyty[id_p])</code></pre></div><p><strong>Odpowiedź:</strong> 8 pacjentów z 2 wizytami (Imbierowicz Hanna, Nowakowska Joanna, Gumowska Dorota, …) i 9 pacjentów z 3 wizytami (Kaznowska Agnieszka, Ciecharowska Ilona, …, Biernacka Izabela)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lekarze = []
+with open(&quot;lekarze.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    file.readline()
+    for line in file:
+        id_l, nazwisko, imie, specjalnosc, data, nip, pesel = line.strip().split(&quot;\t&quot;)
+        if nip[0] == &quot;8&quot;:
+            lekarze.append((specjalnosc, nazwisko, imie))
+
+for specjalnosc, nazwisko, imie in sorted(lekarze, key=lambda l: l[0]):
+    print(nazwisko, imie, specjalnosc)</code></pre></div><p><strong>Odpowiedź:</strong> Jackowska Agnieszka chirurg, Mruk Agata endokrynolog, Kadaj Monika / Tucholska Katarzyna / Gawroński Piotr laryngolog, Siłakowska Magdalena / Nowak Anna nefrolog, Olejnik Jacek pediatra, Marciniak Krzysztof reumatolog</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6d"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6d">6d</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">pacjenci = {}
+with open(&quot;pacjenci.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_p, nazwisko, imie, pesel, data = line.strip().split(&quot;\t&quot;)
+        pacjenci[id_p] = (nazwisko, imie)
+
+lekarze_pacjenta = {}
+with open(&quot;wizyty.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_l, id_p, data = line.strip().split(&quot;\t&quot;)
+        if id_p not in lekarze_pacjenta:
+            lekarze_pacjenta[id_p] = set()
+        lekarze_pacjenta[id_p].add(id_l)
+
+for id_p in sorted(lekarze_pacjenta, key=lambda k: pacjenci[k][0].lower()):
+    print(pacjenci[id_p][0], pacjenci[id_p][1], len(lekarze_pacjenta[id_p]))</code></pre></div><p><strong>Odpowiedź:</strong> Andracki Bartosz 2, Barski Karol 2, Bartkowiak Bartłomiej 1, Becmer Wojciech 2, … , Zielinski Tomasz 2, Zygarska Joanna 2</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

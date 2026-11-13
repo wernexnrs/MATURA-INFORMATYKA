@@ -1,55 +1,83 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        
-		<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
-        <link rel="stylesheet" href="css/style.css">	
-    </head>
-    <base target="_blank">
-    <body>
-        <div id="container"> 
-            <div id="menu">
-                <ul id="menu_ul">
-                    <a href="#"><li>Strona główna</li></a>
-                    <a href="#"><li>Działy</li></a>
-                    <a href="#"><li>Faq</li></a>
-                </ul>
-            </div>
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matura z informatyki - algorytmy i arkusze w Pythonie</title>
+<meta name="description" content="Darmowe materiały do matury z informatyki: wszystkie algorytmy z wymagań CKE w Pythonie z pseudokodem, dodatkowe algorytmy i rozwiązania arkuszy maturalnych 2005-2021 z odpowiedziami.">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Matura z informatyki - algorytmy i arkusze w Pythonie">
+<meta property="og:description" content="Darmowe materiały do matury z informatyki: wszystkie algorytmy z wymagań CKE w Pythonie z pseudokodem, dodatkowe algorytmy i rozwiązania arkuszy maturalnych 2005-2021 z odpowiedziami.">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Matura z informatyki - algorytmy i arkusze w Pythonie", "description": "Darmowe materiały do matury z informatyki: wszystkie algorytmy z wymagań CKE w Pythonie z pseudokodem, dodatkowe algorytmy i rozwiązania arkuszy maturalnych 2005-2021 z odpowiedziami.", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="index.html" aria-current="page">Start</a><a href="algorytmy.html">Algorytmy CKE</a><a href="dodatkowe.html">Dodatkowe</a><a href="arkusze.html">Arkusze</a><a href="funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell no-side">
+
+<main id="tresc" tabindex="-1">
 
 
-            <zero-md id ="main" src="https://raw.githubusercontent.com/wernexnrs/MATURA-INFORMATYKA/master/docs/README.md">
-                 <template>
-                    <link rel="stylesheet" href="css/main_style.css">
-                </template>
-            </zero-md>
+<section class="hero">
+  <p class="eyebrow">Matura rozszerzona z informatyki · Python</p>
+  <h1>Algorytmy i rozwiązania arkuszy w&nbsp;jednym miejscu</h1>
+  <p class="lead">Każdy algorytm z wymagań CKE z kodem w Pythonie i pseudokodem, dodatkowe algorytmy oraz rozwiązania zadań z arkuszy maturalnych z odpowiedziami. Za darmo, bez reklam.</p>
+  <button class="hero-search" type="button" data-open-search><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj: sito, NWD, bisekcja, 2019 maj…</span><kbd>/</kbd></button>
+</section>
+<section class="tiles">
+  <a class="tile" href="algorytmy.html"><span class="num">42</span><h2>Algorytmy z wymagań CKE</h2><p>Liczby, sortowania, wyszukiwanie, numeryczne, teksty, szyfry, geometria.</p></a>
+  <a class="tile" href="dodatkowe.html"><span class="num">40</span><h2>Dodatkowe algorytmy</h2><p>Średnie, mediana, moda, KMP, Boyer-Moore, Manacher, geometria analityczna.</p></a>
+  <a class="tile" href="arkusze.html"><span class="num">37</span><h2>Rozwiązane arkusze</h2><p>Matury 2005-2021: rozszerzona, podstawowa, próbne + 7 zadań ze zbioru CKE.</p></a>
+  <a class="tile" href="funkcje.html"><span class="num">Py</span><h2>Ściąga z Pythona</h2><p><a href="funkcje.html">Funkcje wbudowane</a>, <a href="metody.html">metody</a> i <a href="biblioteki.html">przydatne moduły</a>.</p></a>
+</section>
+<h2 class="section-title">Szybki dostęp: wymagania CKE</h2>
+<div class="toc-grid"><div class="toc-card"><h3>Algorytmy na liczbach całkowitych</h3><ul><li><a href="algorytmy.html#reprezentacja-liczb-w-dowolnym-systemie-pozycyjnym-w-tym-w-dwojkowym-i-szesnastkowym">Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym</a></li><li><a href="algorytmy.html#sprawdzanie-czy-liczba-jest-liczba-pierwsza">Sprawdzanie, czy liczba jest liczbą pierwszą</a></li><li><a href="algorytmy.html#sito-eratostenesa">Sito Eratostenesa</a></li><li><a href="algorytmy.html#sprawdzanie-czy-liczba-jest-liczba-doskonala">Sprawdzanie, czy liczba jest liczbą doskonałą</a></li><li><a href="algorytmy.html#rozkladanie-liczby-na-czynniki-pierwsze">Rozkładanie liczby na czynniki pierwsze</a></li><li><a href="algorytmy.html#iteracyjna-i-rekurencyjna-realizacja-algorytmu-euklidesa-nww">Iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW</a></li><li><a href="algorytmy.html#iteracyjne-i-rekurencyjne-obliczanie-wartosci-liczb-fibonacciego">Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego</a></li><li><a href="algorytmy.html#wydawanie-reszty-metoda-zachlanna">Wydawanie reszty metodą zachłanną</a></li></ul></div><div class="toc-card"><h3>Algorytmy wyszukiwania i porządkowania (sortowania)</h3><ul><li><a href="algorytmy.html#wyszukiwanie-liniowe">Wyszukiwanie liniowe</a></li><li><a href="algorytmy.html#wyszukiwanie-binarne">Wyszukiwanie binarne</a></li><li><a href="algorytmy.html#jednoczesne-wyszukiwanie-minimum-i-maksimum">Jednoczesne wyszukiwanie minimum i maksimum</a></li><li><a href="algorytmy.html#sortowanie-babelkowe">Sortowanie bąbelkowe</a></li><li><a href="algorytmy.html#sortowanie-przez-wybor">Sortowanie przez wybór</a></li><li><a href="algorytmy.html#sortowanie-przez-wstawianie-liniowe-lub-binarne">Sortowanie przez wstawianie liniowe lub binarne</a></li><li><a href="algorytmy.html#sortowanie-przez-scalanie">Sortowanie przez scalanie</a></li><li><a href="algorytmy.html#sortowanie-szybkie">Sortowanie szybkie</a></li><li><a href="algorytmy.html#sortowanie-kubelkowe">Sortowanie kubełkowe</a></li></ul></div><div class="toc-card"><h3>Algorytmy numeryczne</h3><ul><li><a href="algorytmy.html#szybkie-podnoszenie-do-potegi">Szybkie podnoszenie do potęgi</a></li><li><a href="algorytmy.html#wyznaczanie-miejsc-zerowych-funkcji-metoda-polowienia-bisekcja">Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja</a></li><li><a href="algorytmy.html#obliczanie-pierwiastka-kwadratowego-metoda-herona-newtona">Obliczanie pierwiastka kwadratowego metodą Herona (Newtona)</a></li><li><a href="algorytmy.html#obliczanie-wartosci-wielomianu-za-pomoca-schematu-hornera">Obliczanie wartości wielomianu za pomocą schematu Hornera</a></li><li><a href="algorytmy.html#obliczanie-pola-obszarow-zamknietych">Obliczanie pola obszarów zamkniętych</a></li></ul></div><div class="toc-card"><h3>Algorytmy na tekstach</h3><ul><li><a href="algorytmy.html#sprawdzanie-czy-dany-ciag-znakow-tworzy-palindrom">Sprawdzanie, czy dany ciąg znaków tworzy palindrom</a></li><li><a href="algorytmy.html#sprawdzanie-czy-dany-ciag-znakow-tworzy-anagram">Sprawdzanie, czy dany ciąg znaków tworzy anagram</a></li><li><a href="algorytmy.html#porzadkowanie-alfabetyczne">Porządkowanie alfabetyczne</a></li><li><a href="algorytmy.html#wyszukiwanie-wzorca-w-tekscie">Wyszukiwanie wzorca w tekście</a></li><li><a href="algorytmy.html#obliczanie-wartosci-wyrazenia-w-odwrotnej-notacji-polskiej-onp">Obliczanie wartości wyrażenia w odwrotnej notacji polskiej (ONP)</a></li></ul></div><div class="toc-card"><h3>Algorytmy kompresji i szyfrowania</h3><ul><li><a href="algorytmy.html#kompresja-danych">Kompresja danych</a></li><li><a href="algorytmy.html#kod-huffmana">Kod Huffmana</a></li><li><a href="algorytmy.html#alfabet-morse-a">Alfabet Morse’a</a></li><li><a href="algorytmy.html#transpozycyjny">Transpozycyjny</a></li><li><a href="algorytmy.html#szyfr-atbash">Szyfr AtBash</a></li><li><a href="algorytmy.html#szyfr-cezara">Szyfr Cezara</a></li><li><a href="algorytmy.html#szyfr-vigen-re-a">Szyfr Vigenère’a</a></li><li><a href="algorytmy.html#rsa-rozszerzony-algorytm-euklidesa">RSA + rozszerzony algorytm Euklidesa</a></li></ul></div><div class="toc-card"><h3>Algorytmy geometryczne</h3><ul><li><a href="algorytmy.html#sprawdzanie-warunku-trojkata">Sprawdzanie warunku trójkąta</a></li><li><a href="algorytmy.html#badanie-polozenia-punktow-wzgledem-prostej">Badanie położenia punktów względem prostej</a></li><li><a href="algorytmy.html#badanie-przynaleznosci-punktu-do-odcinka">Badanie przynależności punktu do odcinka</a></li><li><a href="algorytmy.html#przecinanie-sie-odcinkow">Przecinanie się odcinków</a></li><li><a href="algorytmy.html#przynaleznosc-punktu-do-obszaru-wielokata">Przynależność punktu do obszaru (wielokąta)</a></li><li><a href="algorytmy.html#krzywa-kocha">Krzywa Kocha</a></li><li><a href="algorytmy.html#drzewo-pitagorasa">Drzewo Pitagorasa</a></li></ul></div></div>
+<section class="howto">
+  <h2 class="section-title">Jak się uczyć z tej strony</h2>
+  <ol>
+    <li>Zacznij od <a href="algorytmy.html">algorytmów z wymagań</a> - przy każdym jest kod w Pythonie i pseudokod (przełączasz zakładkami).</li>
+    <li>Przepisz algorytm samodzielnie, a dopiero potem porównaj z kodem. Przycisk <b>Kopiuj</b> przyda się do testów.</li>
+    <li>Rozwiązuj <a href="arkusze.html">arkusze</a> na danych z CKE i sprawdzaj wynik z odpowiedzią pod kodem.</li>
+    <li>Wyszukiwarka (<kbd>/</kbd> lub <kbd>Ctrl</kbd>+<kbd>K</kbd>) znajdzie każdy algorytm i arkusz.</li>
+  </ol>
+</section>
 
-
-        <footer>
-            <a href=""><img src="images/discord_icon.svg"></a>
-            <a href=""><img src="images/github_icon.svg"></a>
-        </footer>
-    </body>
-
-    <script>
-        const nav = document.querySelector('#menu');
-        const content = document.querySelector('#main');
-		const menu = document.querySelector('#menu_ul');
-        let navTop = nav.offsetTop;
-
-        function fixedNav() {
-        if (window.scrollY-0.01 >= navTop) {    
-            nav.classList.add('fixed');
-            content.classList.add('fix_content');
-			menu.classList.add('fix_menu');
-        } else {
-            nav.classList.remove('fixed');    
-            content.classList.remove('fix_content');  
-			menu.classList.remove('fix_menu');  
-        }
-        }
-
-        window.addEventListener('scroll', fixedNav);
-    </script>
-    
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="";</script>
+<script src="assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
 </html>

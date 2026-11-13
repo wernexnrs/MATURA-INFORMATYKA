@@ -1,11 +1,10 @@
-import math
+from math import factorial
 
-with open("Dane_PR/liczby.txt") as file:
+with open("liczby.txt") as file:
     for line in file:
-        line = line.strip()
+        liczba = line.strip()
         suma = 0
-        for num in line:
-            num = int(num)
-            suma += math.factorial(num)
-        if int(line) == suma:
-            print(line)
+        for cyfra in liczba:
+            suma += factorial(int(cyfra))
+        if suma == int(liczba):
+            print(liczba)

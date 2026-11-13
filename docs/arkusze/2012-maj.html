@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2012 Maj | Matura z informatyki</title>
+<meta name="description" content="2012 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1c i 1d, 2a i 2c, 4a, 4b, 5a, 5b, 5c, 5d, 6a, 6b, 6c, 6d).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2012 Maj">
+<meta property="og:description" content="2012 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1c i 1d, 2a i 2c, 4a, 4b, 5a, 5b, 5c, 5d, 6a, 6b, 6c, 6d).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2012 Maj", "description": "2012 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1c i 1d, 2a i 2c, 4a, 4b, 5a, 5b, 5c, 5d, 6a, 6b, 6c, 6d).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title">Arkusz I</p><ul><li><a href="#1a-1c-i-1d">1a, 1c i 1d</a></li><li><a href="#2a-i-2c">2a i 2c</a></li></ul><p class="side-title">Arkusz II</p><ul><li><a href="#4a">4a</a></li><li><a href="#4b">4b</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#5c">5c</a></li><li><a href="#5d">5d</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li><li><a href="#6e">6e</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2012 Maj</span></nav>
+<h1 class="page-title">2012 Maj</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1a-1c-i-1d"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a-1c-i-1d">1a, 1c i 1d</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import sys
+
+sys.setrecursionlimit(5000)
+
+porownania = 0
+
+
+def F(i):
+    # a[1..n], a[0] nieużywane - indeksy jak w zadaniu
+    global porownania
+    if i == n:
+        return n
+    j = F(i + 1)
+    porownania += 1
+    if a[i] &lt; a[j]:
+        return i
+    return j
+
+
+# d) wersja iteracyjna
+def F_iteracyjnie(i):
+    ind_min = n
+    for k in range(n - 1, i - 1, -1):
+        if a[k] &lt; a[ind_min]:
+            ind_min = k
+    return ind_min
+
+
+# a)
+a = [None, 5, 1, 8, 9, 7, 2, 3, 11, 20, 15]
+n = 10
+for i in [9, 7, 5]:
+    print(i, F(i), F_iteracyjnie(i))
+
+# c)
+n = 2012
+a = [None] + list(range(1, n + 1))  # dowolne różne liczby
+porownania = 0
+F(512)
+print(porownania)</code></pre></div><p><strong>Odpowiedź:</strong> a) F(9) = 10, F(7) = 7, F(5) = 6; b) a[w] to najmniejsza liczba spośród elementów o indeksach od i do n; c) 1500</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2a-i-2c"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a-i-2c">2a i 2c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_cyfr(k):
+    s = 0
+    while k &gt; 0:
+        s += k % 10
+        k //= 10
+    return s
+
+
+def osiagalna(n):
+    # z podpunktu b): dla n czterocyfrowego s(k) &lt;= 36, więc sprawdzamy k = n-1, ..., n-36
+    for i in range(1, 37):
+        k = n - i
+        if k &gt; 0 and k + suma_cyfr(k) == n:
+            return k
+    return &quot;NIE&quot;
+
+
+# a)
+for n in [505, 20, 28, 31]:
+    k = osiagalna(n)
+    if k == &quot;NIE&quot;:
+        print(n, &quot;-&quot;, &quot;-&quot;, &quot;NIE&quot;)
+    else:
+        print(n, k, suma_cyfr(k), &quot;TAK&quot;)
+
+# c)
+print(osiagalna(2012), osiagalna(1000))</code></pre></div><p><strong>Odpowiedź:</strong> a) n = 28: k = 23, s(k) = 5, TAK; n = 31: NIE; b) suma cyfr liczby co najwyżej czterocyfrowej nie przekracza 4·9 = 36</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4a">4a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfruj(tekst, klucz):
+    wynik = &quot;&quot;
+    for i in range(len(tekst)):
+        numer = ord(klucz[i % len(klucz)]) - 64  # numer litery klucza (A = 1)
+        kod = ord(tekst[i]) + numer
+        if kod &gt; 90:
+            kod -= 26
+        wynik += chr(kod)
+    return wynik
+
+
+print(szyfruj(&quot;LATO&quot;, &quot;WODA&quot;), szyfruj(&quot;MARTA&quot;, &quot;TOR&quot;))  # IPXP GPJNP
+
+with open(&quot;tj.txt&quot;) as file:
+    teksty = file.read().split()
+with open(&quot;klucze1.txt&quot;) as file:
+    klucze = file.read().split()
+
+with open(&quot;wynik4a.txt&quot;, &quot;w&quot;) as wynik:
+    for i in range(len(teksty)):
+        wynik.write(szyfruj(teksty[i], klucze[i]) + &quot;\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> CNA, UUU, WNS, TRX, WCCG, YOYG, XEUUAU, … , MDO (120 słów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4b">4b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def deszyfruj(szyfr, klucz):
+    wynik = &quot;&quot;
+    for i in range(len(szyfr)):
+        numer = ord(klucz[i % len(klucz)]) - 64
+        kod = ord(szyfr[i]) - numer
+        if kod &lt; 65:
+            kod += 26
+        wynik += chr(kod)
+    return wynik
+
+
+with open(&quot;sz.txt&quot;) as file:
+    szyfry = file.read().split()
+with open(&quot;klucze2.txt&quot;) as file:
+    klucze = file.read().split()
+
+with open(&quot;wynik4b.txt&quot;, &quot;w&quot;) as wynik:
+    for i in range(len(szyfry)):
+        wynik.write(deszyfruj(szyfry[i], klucze[i]) + &quot;\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> KOT, PIES, COS, NIC, NUTA, BUT, LUPA, ZUPA, KWIAT, CEL, … , KROWA, OWCA (120 słów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">trojkat = [[1]]
+for w in range(1, 30):
+    poprzedni = trojkat[-1]
+    wiersz = [1]
+    for j in range(1, w):
+        wiersz.append(poprzedni[j - 1] + poprzedni[j])
+    wiersz.append(1)
+    trojkat.append(wiersz)
+
+print(max(trojkat[9]), max(trojkat[19]), max(trojkat[29]))  # wiersze 10, 20, 30</code></pre></div><p><strong>Odpowiedź:</strong> wiersz 10: 126, wiersz 20: 92378, wiersz 30: 77558760</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">trojkat = [[1]]
+for w in range(1, 30):
+    poprzedni = trojkat[-1]
+    wiersz = [1]
+    for j in range(1, w):
+        wiersz.append(poprzedni[j - 1] + poprzedni[j])
+    wiersz.append(1)
+    trojkat.append(wiersz)
+
+for numer in range(1, 31):
+    cyfry = 0
+    for liczba in trojkat[numer - 1]:
+        cyfry += len(str(liczba))
+    print(numer, cyfry)</code></pre></div><p><strong>Odpowiedź:</strong> 1 1, 2 2, 3 3, 4 4, 5 5, 6 8, 7 10, 8 12, 9 14, 10 18, … , 29 166, 30 178</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">trojkat = [[1]]
+for w in range(1, 30):
+    poprzedni = trojkat[-1]
+    wiersz = [1]
+    for j in range(1, w):
+        wiersz.append(poprzedni[j - 1] + poprzedni[j])
+    wiersz.append(1)
+    trojkat.append(wiersz)
+
+for numer in range(1, 31):
+    if all(liczba % 5 != 0 for liczba in trojkat[numer - 1]):
+        print(numer, end=&quot; &quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 1, 2, 3, 4, 5, 10, 15, 20, 25</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5d"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5d">5d</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">trojkat = [[1]]
+for w in range(1, 30):
+    poprzedni = trojkat[-1]
+    wiersz = [1]
+    for j in range(1, w):
+        wiersz.append(poprzedni[j - 1] + poprzedni[j])
+    wiersz.append(1)
+    trojkat.append(wiersz)
+
+# X - liczba podzielna przez 3, spacja - pozostałe (trójkąt prostokątny)
+with open(&quot;wynik5d.txt&quot;, &quot;w&quot;) as wynik:
+    for wiersz in trojkat:
+        linia = &quot;&quot;
+        for liczba in wiersz:
+            if liczba % 3 == 0:
+                linia += &quot;X&quot;
+            else:
+                linia += &quot; &quot;
+        wynik.write(linia + &quot;\n&quot;)
+        print(linia)</code></pre></div><p><strong>Odpowiedź:</strong> obraz w pliku wynik5d.txt – pierwsze X w wierszu 4 („ XX ”), wzór podobny do trójkąta Sierpińskiego</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6a">6a</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynajem, leasing = 0, 0
+
+with open(&quot;uslugi.txt&quot;) as file:
+    file.readline()  # nagłówek
+    for line in file:
+        nip, ozn, nr, rodzaj, rata = line.strip().split(&quot;\t&quot;)
+        if rodzaj == &quot;W&quot;:
+            wynajem += int(rata)
+        else:
+            leasing += int(rata)
+
+print(&quot;wynajem:&quot;, wynajem, &quot;leasing:&quot;, leasing)</code></pre></div><p><strong>Odpowiedź:</strong> wynajem: 400 713, leasing: 391 790</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">firmy = {}
+with open(&quot;nip_firm.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        nip, firma = line.strip().split(&quot;\t&quot;)
+        firmy[nip] = firma
+
+tablice = []
+with open(&quot;uslugi.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        nip, ozn, nr, rodzaj, rata = line.strip().split(&quot;\t&quot;)
+        if firmy[nip] == &quot;BARTEX&quot;:
+            tablice.append((nr, ozn))
+
+for nr, ozn in sorted(tablice, reverse=True):  # nr to tekst - sortujemy jak tekst
+    print(ozn, nr)</code></pre></div><p><strong>Odpowiedź:</strong> PN 3661T, PN 3651R, PN 3641B, PN 3631H, PN 3621I, PN 16838, PN 16836, … , PN 16822</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">firmy = {}
+with open(&quot;nip_firm.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        nip, firma = line.strip().split(&quot;\t&quot;)
+        firmy[nip] = firma
+
+leasingi = {}
+with open(&quot;uslugi.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        nip, ozn, nr, rodzaj, rata = line.strip().split(&quot;\t&quot;)
+        if rodzaj == &quot;L&quot;:
+            leasingi[nip] = leasingi.get(nip, 0) + 1
+
+najwiecej = max(leasingi, key=leasingi.get)
+print(firmy[najwiecej], leasingi[najwiecej])</code></pre></div><p><strong>Odpowiedź:</strong> WROCBUD2, 13 pojazdów</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6d"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6d">6d</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">powiaty = {}
+with open(&quot;tablice.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        ozn, powiat, siedziba, typ = line.strip().split(&quot;\t&quot;)
+        powiaty[ozn] = (powiat, typ)
+
+ziemskie = set()
+with open(&quot;uslugi.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        nip, ozn, nr, rodzaj, rata = line.strip().split(&quot;\t&quot;)
+        if powiaty[ozn][1] == &quot;z&quot;:
+            ziemskie.add(powiaty[ozn][0])
+
+for powiat in sorted(ziemskie):
+    print(powiat)</code></pre></div><p><strong>Odpowiedź:</strong> bedzinski, bialostocki, braniewski, buski, elcki, gorowski, jeleniogorski, kluczborski, koscianski, leczynski, lubelski, nyski, olsztynski, opolski, pilski, siemiatycki, tarnobrzeski, tarnogorski, tarnowski, turecki, zamojski (program wypisuje dodatkowo elblaski i olawski – w danych CKE są pojazdy z oznaczeniami NEB i DOA, ale klucz ich nie wymienia)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6e"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6e">6e</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from decimal import Decimal, ROUND_HALF_UP
+
+powiaty = {}
+with open(&quot;tablice.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        ozn, powiat, siedziba, typ = line.strip().split(&quot;\t&quot;)
+        powiaty[ozn] = powiat
+
+firmy = {}
+with open(&quot;nip_firm.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        nip, firma = line.strip().split(&quot;\t&quot;)
+        firmy[nip] = firma
+
+uslugi = []
+with open(&quot;uslugi.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        nip, ozn, nr, rodzaj, rata = line.strip().split(&quot;\t&quot;)
+        uslugi.append((nip, ozn, int(rata)))
+
+konin = set()
+for nip, ozn, rata in uslugi:
+    if powiaty[ozn] == &quot;Konin&quot;:
+        konin.add(nip)
+
+srednie = []
+for nip in konin:
+    raty = [rata for n, ozn, rata in uslugi if n == nip]
+    srednia = Decimal(sum(raty)) / len(raty)
+    # zaokrąglenie do grosza &quot;od połowy w górę&quot;, jak w arkuszu (2590,125 -&gt; 2590,13)
+    srednie.append((srednia.quantize(Decimal(&quot;0.01&quot;), ROUND_HALF_UP), firmy[nip]))
+
+for srednia, firma in sorted(srednie):
+    print(firma, srednia)</code></pre></div><p><strong>Odpowiedź:</strong> BARTEX 2325,64 zł; WIET-IND 2556,43 zł; REFAMUR 2590,13 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2012_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

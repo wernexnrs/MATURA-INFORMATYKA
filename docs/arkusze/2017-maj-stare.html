@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2017 maj (stara formuła) | Matura z informatyki</title>
+<meta name="description" content="2017 maj (stara formuła) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 1.3, 2.1 i 2.2, 2.3, 4.1, 4.2, 4.3, 5.1, 5.2 i 5.4, 5.3, 6.1, 6.2, 6.3).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-stare.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2017 maj (stara formuła)">
+<meta property="og:description" content="2017 maj (stara formuła) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 1.3, 2.1 i 2.2, 2.3, 4.1, 4.2, 4.3, 5.1, 5.2 i 5.4, 5.3, 6.1, 6.2, 6.3).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-stare.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2017 maj (stara formuła)", "description": "2017 maj (stara formuła) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 1.3, 2.1 i 2.2, 2.3, 4.1, 4.2, 4.3, 5.1, 5.2 i 5.4, 5.3, 6.1, 6.2, 6.3).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-stare.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#1-3">1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#2-3">2.3</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1-5-2-i-5-4">5.1, 5.2 i 5.4</a></li><li><a href="#5-3">5.3</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li><li><a href="#6-4">6.4</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2017 maj (stara formuła)</span></nav>
+<h1 class="page-title">2017 maj (stara formuła)</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_do_2014/informatyka/MIN-R1_1P-172.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_do_2014/informatyka/MIN-R2_1P-172.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_do_2014/informatyka/Dane_PR2.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_do_2014/zasady_oceniania/MIN-R1-S.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1-1-i-1-2"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def sortowanie(T, k):
+    liczba_wystapien = [0] * (k + 1)       # indeksy 1..k
+    for x in T:
+        liczba_wystapien[x] += 1
+    W = []
+    for j in range(1, k + 1):
+        for i in range(liczba_wystapien[j]):
+            W.append(j)
+    return liczba_wystapien[1:], W
+
+
+def ranga(T, k, i):
+    # i - numer elementu liczony od 1, jak w tresci zadania
+    liczba_wystapien = [0] + sortowanie(T, k)[0]
+    r = 0
+    for j in range(1, T[i - 1]):           # j = 1 .. T[i]-1
+        r += liczba_wystapien[j]
+    return r
+
+
+dane = [(5, [1, 2, 3, 4, 5, 1, 2, 3, 4, 4]), (10, [1, 3, 3, 5, 10]), (5, [5, 5, 5, 5, 5]), (4, [1, 2, 3, 1, 2, 3, 1, 1, 2, 3])]
+for k, T in dane:
+    print(sortowanie(T, k)[0])
+
+T = [1, 2, 3, 4, 5, 1, 4, 3, 2, 5]
+print(ranga(T, 5, 8), ranga(T, 5, 10), ranga(T, 5, 6))</code></pre></div><p><strong>Odpowiedź:</strong> 1.1: [2, 2, 2, 3, 1], [1, 0, 2, 0, 1, 0, 0, 0, 0, 1], [0, 0, 0, 0, 5], [4, 3, 3, 0]; 1.2: <code>dla j = 1..T[i] - 1</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="1-3"><h2><a class="self" href="#1-3">1.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczniki_mod(T, k):
+    liczba_wystapien = [0] * (k + 1)
+    for x in T:
+        m = 1 + x % k
+        liczba_wystapien[m] += 1
+    w = liczba_wystapien[1]                # liczba elementow podzielnych przez k
+    return liczba_wystapien[1:], w
+
+
+T = [1, 2, 3, 4, 5, 1, 2, 3, 4, 4]
+for k in [2, 3, 4, 5]:
+    print(k, *liczniki_mod(T, k))</code></pre></div><p><strong>Odpowiedź:</strong> k=3: [2, 5, 3], k=4: [3, 3, 2, 2], k=5: [1, 2, 2, 2, 3]; w — liczba elementów ciągu T[1..n] podzielnych przez k</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2-1-i-2-2"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pentanacci(n):
+    tab = [0, 1, 1, 2, 4]
+    i = 5
+    while i &lt;= n:
+        temp = tab[0] + tab[1] + tab[2] + tab[3] + tab[4]
+        tab[i % 5] = temp
+        i += 1
+    return tab[n % 5]
+
+
+for n in [5, 7, 9]:
+    print(n, pentanacci(n))</code></pre></div><p><strong>Odpowiedź:</strong> p7 = 31, p9 = 120; luki: <code>i ≤ n</code>, <code>tab[i mod 5]</code>, <code>w ← tab[n mod 5]</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2-3"><h2><a class="self" href="#2-3">2.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def parzystosc(n):
+    k = n % 6
+    if k == 1 or k == 2:
+        return 1
+    return 0
+
+
+# sprawdzenie z algorytmem z 2.2 (funkcja pentanacci)
+def pentanacci(n):
+    tab = [0, 1, 1, 2, 4]
+    for i in range(5, n + 1):
+        tab[i % 5] = sum(tab)
+    return tab[n % 5]
+
+
+print(all(parzystosc(n) == pentanacci(n) % 2 for n in range(100)))</code></pre></div><p><strong>Odpowiedź:</strong> k ← n mod 6; jeżeli k = 1 lub k = 2, to w ← 1, w przeciwnym razie w ← 0</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-1"><h2><a class="self" href="#4-1">4.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+najdluzszy = &quot;&quot;
+
+with open(&quot;binarne.txt&quot;) as file:
+    for line in file:
+        napis = line.strip()
+        polowa = len(napis) // 2
+        if napis[:polowa] == napis[polowa:]:
+            licznik += 1
+            if len(napis) &gt; len(najdluzszy):
+                najdluzszy = napis
+
+print(licznik, najdluzszy, len(najdluzszy))</code></pre></div><p><strong>Odpowiedź:</strong> 18; 00100101100011100010010110001110; 32</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-2"><h2><a class="self" href="#4-2">4.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+najkrotszy = None
+
+with open(&quot;binarne.txt&quot;) as file:
+    for line in file:
+        napis = line.strip()
+        poprawny = True
+        for i in range(0, len(napis), 4):
+            if int(napis[i:i + 4], 2) &gt; 9:
+                poprawny = False
+        if not poprawny:
+            licznik += 1
+            if najkrotszy is None or len(napis) &lt; najkrotszy:
+                najkrotszy = len(napis)
+
+print(licznik, najkrotszy)</code></pre></div><p><strong>Odpowiedź:</strong> 359; 4</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-3"><h2><a class="self" href="#4-3">4.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">maks = 0
+
+with open(&quot;binarne.txt&quot;) as file:
+    for line in file:
+        liczba = int(line.strip(), 2)
+        if liczba &lt;= 65535 and liczba &gt; maks:
+            maks = liczba
+
+print(bin(maks)[2:], maks)</code></pre></div><p><strong>Odpowiedź:</strong> 1101011001100101, 54885</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-1-5-2-i-5-4"><h2><a class="self" href="#5-1-5-2-i-5-4">5.1, 5.2 i 5.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
+
+
+def sezon(dostawa):
+    dzien = date(2015, 9, 15)
+    drewno = 550
+    pierwszy_raz = None
+    dostawy = 0
+    wieczory_drewno = 0
+    wieczory_gaz = 0
+    ogrzewania_gazem_zamiast_drewnem = 0
+    while dzien &lt;= date(2016, 3, 31):
+        dzien_tygodnia = dzien.weekday()    # 0 - poniedzialek, 4 - piatek, 5 i 6 - weekend
+        if dzien_tygodnia == 4 and drewno &lt; 100:
+            drewno += dostawa
+            dostawy += 1
+        # rano - w weekend drewno (jesli jest), w dni robocze gaz
+        if dzien_tygodnia &gt;= 5:
+            if drewno &gt;= 26:
+                drewno -= 26
+            else:
+                ogrzewania_gazem_zamiast_drewnem += 1
+            if drewno &lt; 100 and pierwszy_raz is None:
+                pierwszy_raz = (dzien, &quot;rano&quot;)
+        # wieczor - zawsze drewno (jesli jest)
+        if drewno &gt;= 26:
+            drewno -= 26
+            wieczory_drewno += 1
+        else:
+            wieczory_gaz += 1
+            ogrzewania_gazem_zamiast_drewnem += 1
+        if drewno &lt; 100 and pierwszy_raz is None:
+            pierwszy_raz = (dzien, &quot;wieczor&quot;)
+        dzien += timedelta(days=1)
+    return pierwszy_raz, dostawy, wieczory_drewno, wieczory_gaz, ogrzewania_gazem_zamiast_drewnem
+
+
+pierwszy_raz, dostawy, wieczory_drewno, wieczory_gaz, _ = sezon(300)
+print(&quot;5.1&quot;, pierwszy_raz[0], pierwszy_raz[1])
+print(&quot;5.2&quot;, dostawy, wieczory_drewno, wieczory_gaz)
+
+masa = 300
+while sezon(masa)[4] &gt; 0:
+    masa += 1
+print(&quot;5.4&quot;, masa)</code></pre></div><p><strong>Odpowiedź:</strong> 5.1: 2015-09-28, wieczorem; 5.2: 18 dostaw, 167 wieczorów drewnem, 32 wieczory gazem; 5.4: 468 kg</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-3"><h2><a class="self" href="#5-3">5.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
+
+# dane do wykresu liniowego: data, masa drewna po wieczornym ogrzewaniu
+dzien = date(2015, 9, 15)
+drewno = 550
+
+with open(&quot;wykres_5_3.txt&quot;, &quot;w&quot;) as wynik:
+    while dzien &lt;= date(2016, 3, 31):
+        if dzien.weekday() == 4 and drewno &lt; 100:
+            drewno += 300
+        if dzien.weekday() &gt;= 5 and drewno &gt;= 26:
+            drewno -= 26
+        if drewno &gt;= 26:
+            drewno -= 26
+        wynik.write(f&quot;{dzien};{drewno}\n&quot;)
+        dzien += timedelta(days=1)</code></pre></div><p><strong>Odpowiedź:</strong> wykres liniowy (oś X — data, oś Y — masa drewna wieczorem) tworzymy z pliku <code>wykres_5_3.txt</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-1"><h2><a class="self" href="#6-1">6.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">osoby = {}
+with open(&quot;osoby.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_osoby, imie, nazwisko = line.strip().split(&quot;\t&quot;)
+        osoby[id_osoby] = (nazwisko, imie)
+
+rezerwacje = {}
+with open(&quot;rezerwacje.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_rezerwacji, id_osoby, id_wycieczki, dorosli, dzieci = line.strip().split(&quot;\t&quot;)
+        rezerwacje[id_osoby] = rezerwacje.get(id_osoby, 0) + 1
+
+lista = [osoby[id_osoby] for id_osoby in rezerwacje if rezerwacje[id_osoby] &gt; 3]
+for nazwisko, imie in sorted(lista):
+    print(imie, nazwisko)</code></pre></div><p><strong>Odpowiedź:</strong> Sylwia Adamska, Marcin Ciesielski, Pawel Dziminski, Klaudia Kapuscinska, Ewelina Lagun, Michal Majewski, Katarzyna Michalak, Kamila Olobry, Piotr Otorowski, Danuta Pawezowska, Tomasz Stefanczyk, Pawel Straciuk, Monika Wer</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-2"><h2><a class="self" href="#6-2">6.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">osoby = {}
+with open(&quot;osoby.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_osoby, imie, nazwisko = line.strip().split(&quot;\t&quot;)
+        osoby[id_osoby] = imie + &quot; &quot; + nazwisko
+
+cena = {}
+with open(&quot;wycieczki.txt&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.strip().split(&quot;\t&quot;)
+        cena[dane[0]] = int(dane[6])
+
+zaplacone = {}
+with open(&quot;rezerwacje.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_rezerwacji, id_osoby, id_wycieczki, dorosli, dzieci = line.strip().split(&quot;\t&quot;)
+        koszt = cena[id_wycieczki] * (int(dorosli) + 0.5 * int(dzieci))
+        zaplacone[id_osoby] = zaplacone.get(id_osoby, 0) + koszt
+
+najwiecej = max(zaplacone, key=zaplacone.get)
+print(osoby[najwiecej], zaplacone[najwiecej])</code></pre></div><p><strong>Odpowiedź:</strong> Marcin Ciesielski, 34 017,50 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-3"><h2><a class="self" href="#6-3">6.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiac_wyjazdu = {}
+with open(&quot;wycieczki.txt&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.strip().split(&quot;\t&quot;)
+        miesiac_wyjazdu[dane[0]] = int(dane[4][5:7])
+
+nazwy = {6: &quot;czerwiec&quot;, 7: &quot;lipiec&quot;, 8: &quot;sierpien&quot;, 9: &quot;wrzesien&quot;}
+liczba = {}
+with open(&quot;rezerwacje.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_rezerwacji, id_osoby, id_wycieczki, dorosli, dzieci = line.strip().split(&quot;\t&quot;)
+        miesiac = miesiac_wyjazdu[id_wycieczki]
+        liczba[miesiac] = liczba.get(miesiac, 0) + 1
+
+for miesiac in sorted(liczba):
+    print(nazwy[miesiac], liczba[miesiac])</code></pre></div><p><strong>Odpowiedź:</strong> czerwiec 76, lipiec 505, sierpień 291, wrzesień 28</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-4"><h2><a class="self" href="#6-4">6.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zestawienie = {}
+lotniska = set()
+with open(&quot;wycieczki.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_wycieczki, kraj, miejsce, wylot, data_od, data_do, cena = line.strip().split(&quot;\t&quot;)
+        lotniska.add(wylot)
+        zestawienie[(kraj, wylot)] = zestawienie.get((kraj, wylot), 0) + 1
+
+lotniska = sorted(lotniska)
+kraje = sorted(set(kraj for kraj, wylot in zestawienie))
+print(&quot;kraj&quot;, *lotniska)
+for kraj in kraje:
+    print(kraj, *[zestawienie.get((kraj, wylot), 0) for wylot in lotniska])</code></pre></div><p><strong>Odpowiedź:</strong> (Gdansk, Katowice, Krakow, Lodz, Poznan, Warszawa, Wroclaw) Bulgaria 26 19 17 22 24 20 25; Egipt 20 49 14 3 21 26 22; Grecja 27 26 25 33 17 29 19; Hiszpania 19 31 12 19 17 25 26; Maroko 21 22 26 26 23 21 28; Tunezja 23 26 13 32 20 25 25; Turcja 17 23 22 30 23 24 18</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

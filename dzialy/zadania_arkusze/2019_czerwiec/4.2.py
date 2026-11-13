@@ -1,15 +1,16 @@
-def is_prime(x):
-    if x > 1:
-        for i in range(2, x):
-            if x % i == 0:
-                return False
-        return True
-    return False
+def czy_pierwsza(x):
+    if x < 2:
+        return False
+    i = 2
+    while i * i <= x:
+        if x % i == 0:
+            return False
+        i += 1
+    return True
 
 
-with open("MIN-R2A1P-193_dane/pierwsze.txt") as file:
+with open("pierwsze.txt") as file:
     for line in file:
-        line = line.strip()
-        liczba = int(line[::-1])
-        if is_prime(liczba):
-            print(line)
+        liczba = line.strip()
+        if czy_pierwsza(int(liczba[::-1])):
+            print(liczba)

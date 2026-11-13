@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2010 Maj | Matura z informatyki</title>
+<meta name="description" content="2010 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1b i 1c, 2a i 2b, 4a, 4b, 5a, 5b, 5c, 5d, 5e, 6a, 6b).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2010 Maj">
+<meta property="og:description" content="2010 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1b i 1c, 2a i 2b, 4a, 4b, 5a, 5b, 5c, 5d, 5e, 6a, 6b).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2010 Maj", "description": "2010 Maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a, 1b i 1c, 2a i 2b, 4a, 4b, 5a, 5b, 5c, 5d, 5e, 6a, 6b).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title">Arkusz I</p><ul><li><a href="#1a">1a</a></li><li><a href="#1b-i-1c">1b i 1c</a></li><li><a href="#2a-i-2b">2a i 2b</a></li></ul><p class="side-title">Arkusz II</p><ul><li><a href="#4a">4a</a></li><li><a href="#4b">4b</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#5c">5c</a></li><li><a href="#5d">5d</a></li><li><a href="#5e">5e</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li><li><a href="#6e">6e</a></li><li><a href="#6f">6f</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2010 Maj</span></nav>
+<h1 class="page-title">2010 Maj</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1a"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import ceil, sqrt
+
+
+def wymiar(d):
+    # najmniejsze n, dla którego n * n &gt;= d, czyli n = sufit(pierwiastek(d))
+    n = ceil(sqrt(d))
+    while n * n &lt; d:  # zabezpieczenie przed błędem zaokrąglenia
+        n += 1
+    return n
+
+
+print(wymiar(24), wymiar(25), wymiar(26))</code></pre></div><p><strong>Odpowiedź:</strong> n = ⌈√d⌉ – najmniejsza liczba naturalna większa lub równa √d</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="1b-i-1c"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b-i-1c">1b i 1c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import ceil, sqrt
+
+
+def szyfruj(tekst):
+    d = len(tekst)
+    n = ceil(sqrt(d))
+    while n * n &lt; d:
+        n += 1
+    s = n * n
+    tekst = tekst + &quot;_&quot; * (s - d)  # puste pola uzupełniamy znakami odstępu
+    szyfr = &quot;&quot;
+    for kolumna in range(n):  # odczyt kolumnami
+        for wiersz in range(n):
+            szyfr += tekst[wiersz * n + kolumna]
+    return szyfr
+
+
+# c) przykład z treści
+print(szyfruj(&quot;ALGORYTM_PRZESTAWIENIOWY&quot;))
+
+# b) szyfr ma 64 znaki (kwadrat 8 x 8), a zamiana wierszy z kolumnami
+#    wykonana drugi raz przywraca tekst - wystarczy &quot;zaszyfrować&quot; szyfr
+szyfr = &quot;BTLLTU_ĘL_EOYPM_ĄPJZLCYNDREOKYLI_ZMFO_ĄGJY_Ó_N_DEWFWGISYSII_ŁEI_&quot;
+print(szyfruj(szyfr))</code></pre></div><p><strong>Odpowiedź:</strong> b) BŁĄD JEST PRZYWILEJEM FILOZOFÓW, TYLKO GŁUPCY NIE MYLĄ SIĘ NIGDY; c) przykład: AYRAILTZWOGMEIWO_SEYRPTN_</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2a-i-2b"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_zer(a):
+    # a[1..1023], a[0] nieużywane - indeksy jak w zadaniu
+    przypisania_s = 0
+    zera = 0
+    l, p = 1, len(a) - 1
+    while l &lt;= p:
+        s = (l + p) // 2
+        przypisania_s += 1
+        if a[s] == 1:
+            p = s - 1
+        else:
+            zera = zera + (s - l + 1)  # zera na pozycjach l..s
+            l = s + 1
+    return zera, przypisania_s
+
+
+# sprawdzenie dla wszystkich możliwych tablic (k zer, potem jedynki)
+liczby_przypisan = set()
+for k in range(1024):
+    a = [None] + [0] * k + [1] * (1023 - k)
+    zera, przypisania_s = liczba_zer(a)
+    if zera != k:
+        print(&quot;błąd dla&quot;, k)
+    liczby_przypisan.add(przypisania_s)
+print(liczby_przypisan)</code></pre></div><p><strong>Odpowiedź:</strong> a) liczba_zer + (s − l + 1), l ← s + 1; b) zawsze 10 = log₂1024 – w każdym przebiegu pętli przedział do sprawdzenia zmniejsza się o połowę</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4a">4a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;anagram.txt&quot;) as file, open(&quot;odp_4a.txt&quot;, &quot;w&quot;) as wynik:
+    for line in file:
+        slowa = line.split()
+        if all(len(slowo) == len(slowa[0]) for slowo in slowa):
+            wynik.write(&quot; &quot;.join(slowa) + &quot;\n&quot;)
+            print(&quot; &quot;.join(slowa))</code></pre></div><p><strong>Odpowiedź:</strong> wrona rossa slowo gwert rezas, grant hello zakon lloeh hello, kabaret kabanos kabaret gertyfu kabaret, … , burza orkan lukde pudeh lerfy (25 wierszy z klucza; program wypisuje też pierwszy wiersz pliku – przykład z treści „abcd cdba dbac cbad dcba”, którego klucz nie wymienia)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4b">4b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_anagram(a, b):
+    return sorted(a) == sorted(b)
+
+
+with open(&quot;anagram.txt&quot;) as file, open(&quot;odp_4b.txt&quot;, &quot;w&quot;) as wynik:
+    for line in file:
+        slowa = line.split()
+        if all(czy_anagram(slowa[0], slowo) for slowo in slowa[1:]):
+            wynik.write(&quot; &quot;.join(slowa) + &quot;\n&quot;)
+            print(&quot; &quot;.join(slowa))</code></pre></div><p><strong>Odpowiedź:</strong> foto foto tofo tofo foto, glob lobg bogl glbo gblo, triada dariat aadrit iatdar adatri, kotek tekok teokk kokte otekk, rower werro werro owerr erwor, foto tofo foot ftoo ootf, spiker kerspi erspik erspki kiersp (oraz pierwszy wiersz pliku „abcd cdba dbac cbad dcba”, pominięty w kluczu)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">grudzien = 0
+
+with open(&quot;pesel.txt&quot;) as file:
+    for line in file:
+        pesel = line.strip()
+        if pesel[2:4] == &quot;12&quot;:
+            grudzien += 1
+
+print(grudzien)</code></pre></div><p><strong>Odpowiedź:</strong> 20</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kobiety = 0
+
+with open(&quot;pesel.txt&quot;) as file:
+    for line in file:
+        pesel = line.strip()
+        if int(pesel[9]) % 2 == 0:
+            kobiety += 1
+
+print(kobiety)</code></pre></div><p><strong>Odpowiedź:</strong> 74</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lata = {}
+
+with open(&quot;pesel.txt&quot;) as file:
+    for line in file:
+        rok = &quot;19&quot; + line.strip()[:2]
+        lata[rok] = lata.get(rok, 0) + 1
+
+print(max(lata, key=lata.get))</code></pre></div><p><strong>Odpowiedź:</strong> 1989</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5d"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5d">5d</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wagi = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3]
+bledne = []
+
+with open(&quot;pesel.txt&quot;) as file:
+    for line in file:
+        pesel = line.strip()
+        suma = 0
+        for i in range(10):
+            suma += int(pesel[i]) * wagi[i]
+        kontrolna = (10 - suma % 10) % 10
+        if kontrolna != int(pesel[10]):
+            bledne.append(pesel)
+
+for pesel in sorted(bledne):
+    print(pesel)</code></pre></div><p><strong>Odpowiedź:</strong> 54043010088, 60061144469, 77072919805, 77120835871, 83041812338, 89081421445, 91032272651, 92022716243</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5e"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5e">5e</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dekady = {&quot;50&quot;: 0, &quot;60&quot;: 0, &quot;70&quot;: 0, &quot;80&quot;: 0, &quot;90&quot;: 0}
+
+with open(&quot;pesel.txt&quot;) as file:
+    for line in file:
+        dekady[line[0] + &quot;0&quot;] += 1
+
+wszyscy = sum(dekady.values())
+for dekada in dekady:
+    procent = dekady[dekada] / wszyscy * 100
+    print(f&quot;{dekada}-te {dekady[dekada]} {procent:.1f}%&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 50-te 22, 60-te 28, 70-te 36, 80-te 58, 90-te 6 (wykres kołowy z procentami: ok. 15%, 19%, 24%, 39%, 4%)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6a"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6a">6a</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">poza_rejonem = 0
+
+with open(&quot;uczniowie.txt&quot;) as file:
+    file.readline()  # nagłówek
+    for line in file:
+        id_u, nazwisko, imie, ulica, dom, klasa = line.strip().split(&quot;;&quot;)
+        if ulica == &quot;Worcella&quot; or ulica == &quot;Sportowa&quot;:
+            poza_rejonem += 1
+
+print(poza_rejonem)</code></pre></div><p><strong>Odpowiedź:</strong> 15</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6b"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">uczniowie = {}
+with open(&quot;uczniowie.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, nazwisko, imie, ulica, dom, klasa = line.strip().split(&quot;;&quot;)
+        uczniowie[id_u] = (nazwisko, imie)
+
+przedmioty = {}
+with open(&quot;przedmioty.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        przedmioty[dane[0]] = dane[1]
+
+with open(&quot;oceny.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, ocena, data, id_p = line.strip().split(&quot;;&quot;)
+        if uczniowie[id_u] == (&quot;Augustyniak&quot;, &quot;Jan&quot;) and przedmioty[id_p] == &quot;polski&quot;:
+            print(ocena)</code></pre></div><p><strong>Odpowiedź:</strong> 3, 1, 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6c"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">klasy = {}
+
+with open(&quot;uczniowie.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, nazwisko, imie, ulica, dom, klasa = line.strip().split(&quot;;&quot;)
+        if klasa not in klasy:
+            klasy[klasa] = [0, 0]  # [dziewczęta, chłopcy]
+        if imie[-1] == &quot;a&quot;:
+            klasy[klasa][0] += 1
+        else:
+            klasy[klasa][1] += 1
+
+for klasa in sorted(klasy):
+    print(klasa, klasy[klasa][0], klasy[klasa][1])</code></pre></div><p><strong>Odpowiedź:</strong> 1a 26 4, 1b 26 3, 1c 28 2, 1d 26 1, 1e 30 2, 2a 30 1, 2b 25 4, 2c 27 1, 2d 31 2, 2e 19 2, 3a 24 1, 3b 24 1, 3c 23 2, 3d 19 6, 3e 22 2</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6d"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6d">6d</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">uczniowie = {}
+with open(&quot;uczniowie.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, nazwisko, imie, ulica, dom, klasa = line.strip().split(&quot;;&quot;)
+        uczniowie[id_u] = klasa
+
+przedmioty = {}
+with open(&quot;przedmioty.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        przedmioty[dane[0]] = dane[1]
+
+sumy = {}
+with open(&quot;oceny.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, ocena, data, id_p = line.strip().split(&quot;;&quot;)
+        if uczniowie[id_u] == &quot;2a&quot;:
+            if id_p not in sumy:
+                sumy[id_p] = [0, 0]
+            sumy[id_p][0] += int(ocena)
+            sumy[id_p][1] += 1
+
+srednie = []
+for id_p in sumy:
+    srednie.append((sumy[id_p][0] / sumy[id_p][1], przedmioty[id_p]))
+
+for srednia, przedmiot in sorted(srednie, reverse=True):
+    print(przedmiot, f&quot;{srednia:.2f}&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> geografia 3,25; wf 3,14; niemiecki 3,12; angielski 3,11; chemia 3,03; historia 3,02; wos 3,01; fizyka 3,01; matematyka 2,93; informatyka 2,72 (program wypisuje też polski 2,95 – w kluczu CKE tego wiersza brak)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6e"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6e">6e</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">uczniowie = {}
+with open(&quot;uczniowie.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, nazwisko, imie, ulica, dom, klasa = line.strip().split(&quot;;&quot;)
+        uczniowie[id_u] = (nazwisko, imie, klasa)
+
+przedmioty = {}
+with open(&quot;przedmioty.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        przedmioty[dane[0]] = dane[1]
+
+lista = []
+with open(&quot;oceny.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, ocena, data, id_p = line.strip().split(&quot;;&quot;)
+        nazwisko, imie, klasa = uczniowie[id_u]
+        if klasa == &quot;2c&quot; and ocena == &quot;1&quot; and data[:7] == &quot;2009-04&quot;:
+            lista.append((nazwisko, imie, przedmioty[id_p]))
+
+for nazwisko, imie, przedmiot in sorted(lista):
+    print(imie, nazwisko, przedmiot)</code></pre></div><p><strong>Odpowiedź:</strong> Urszula Bednarczyk wos, Krystyna Lysek fizyka, Barbara Mikolajczyk wos, Grazyna Witczak angielski, Dorota Wojcik wos, Beata Zabielana angielski, Beata Zabielana niemiecki</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6f"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6f">6f</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">uczniowie = {}
+with open(&quot;uczniowie.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, nazwisko, imie, ulica, dom, klasa = line.strip().split(&quot;;&quot;)
+        uczniowie[id_u] = (nazwisko, imie, klasa)
+
+sumy = {}
+with open(&quot;oceny.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        id_u, ocena, data, id_p = line.strip().split(&quot;;&quot;)
+        if id_u not in sumy:
+            sumy[id_u] = [0, 0]
+        sumy[id_u][0] += int(ocena)
+        sumy[id_u][1] += 1
+
+najlepszy = max(sumy, key=lambda k: sumy[k][0] / sumy[k][1])
+nazwisko, imie, klasa = uczniowie[najlepszy]
+print(nazwisko, imie, klasa, round(sumy[najlepszy][0] / sumy[najlepszy][1], 2))</code></pre></div><p><strong>Odpowiedź:</strong> Barbara Ogoszewska, 2d, 3,6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

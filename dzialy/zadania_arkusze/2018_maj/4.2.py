@@ -1,10 +1,13 @@
-with open("Dane_PR/przyklad.txt") as file:
-    lista = file.read().splitlines()
+with open("sygnaly.txt") as file:
+    slowa = file.read().split()
 
-maxi = 0
+maks = 0
+najlepsze = ""
 
-for i in range(len(lista)):
-    if len(set(lista[i])) > maxi:
-        maxi = len(set(lista[i]))
-        index = i
-print(lista[index], maxi)
+for slowo in slowa:
+    rozne = len(set(slowo))
+    if rozne > maks:
+        maks = rozne
+        najlepsze = slowo
+
+print(najlepsze, maks)

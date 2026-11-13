@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2009 Maj — poziom podstawowy | Matura z informatyki</title>
+<meta name="description" content="2009 Maj — poziom podstawowy - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a i 1b, 1c, 2a i 2b, 4a i 4b, 4c, 4d, 5, 6a, 6b, 6c, 6d).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2009 Maj — poziom podstawowy">
+<meta property="og:description" content="2009 Maj — poziom podstawowy - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a i 1b, 1c, 2a i 2b, 4a i 4b, 4c, 4d, 5, 6a, 6b, 6c, 6d).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2009 Maj — poziom podstawowy", "description": "2009 Maj — poziom podstawowy - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1a i 1b, 1c, 2a i 2b, 4a i 4b, 4c, 4d, 5, 6a, 6b, 6c, 6d).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#1a-i-1b">1a i 1b</a></li><li><a href="#1c">1c</a></li><li><a href="#2a-i-2b">2a i 2b</a></li><li><a href="#4a-i-4b">4a i 4b</a></li><li><a href="#4c">4c</a></li><li><a href="#4d">4d</a></li><li><a href="#5">5</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2009 Maj — poziom podstawowy</span></nav>
+<h1 class="page-title">2009 Maj — poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1a-i-1b"><h2><a class="self" href="#1a-i-1b">1a i 1b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(ciag):
+    ile_razy = 0  # ile razy wykonano krok 3.
+    aktualna = ciag[0]
+    i = 1
+    while i &lt; len(ciag):
+        nastepna = ciag[i]
+        ile_razy += 1
+        i += 1
+        if nastepna &gt; aktualna:
+            aktualna = nastepna
+        else:
+            return &quot;NIE&quot;, ile_razy
+    return &quot;TAK&quot;, ile_razy
+
+
+A = [60.51, 61.34, 61.85, 61.97, 62.79, 63.00, 63.81, 63.88]
+B = [60.41, 60.44, 60.85, 62.71, 61.79, 60.00]
+C = [61.45, 60.89, 60.20, 60.01, 59.22, 58.99, 58.75]
+
+for ciag in [A, B, C]:
+    print(*algorytm(ciag))</code></pre></div><p><strong>Odpowiedź:</strong> a) TAK, gdy ciąg jest rosnący, w przeciwnym przypadku NIE; b) A: 7, B: 4, C: 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="1c"><h2><a class="self" href="#1c">1c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najwiekszy(ciag):
+    maks = ciag[0]
+    for liczba in ciag[1:]:
+        if liczba &gt; maks:
+            maks = liczba
+    return maks
+
+
+print(najwiekszy([60.41, 60.44, 60.85, 62.71, 61.79, 60.00]))</code></pre></div><p><strong>Odpowiedź:</strong> algorytm wyznaczania maksimum (dla zawodnika B: 62.71)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2a-i-2b"><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dwojkowy_na_dziesietny(s):
+    calkowita, ulamkowa = s.split(&quot;,&quot;)
+    w = 0
+    for cyfra in calkowita:
+        w = w * 2 + int(cyfra)
+    w = w + int(ulamkowa[0]) * 0.5 + int(ulamkowa[1]) * 0.25
+    return w
+
+
+def dziesietny_na_dwojkowy(x):
+    calkowita = int(x)
+    ulamkowa = x - calkowita
+    napis = bin(calkowita)[2:] + &quot;,&quot;
+    for _ in range(2):
+        ulamkowa *= 2
+        napis += str(int(ulamkowa))
+        ulamkowa -= int(ulamkowa)
+    return napis
+
+
+print(&quot;kakao&quot;, dwojkowy_na_dziesietny(&quot;111,11&quot;))
+print(&quot;herbata czarna&quot;, dwojkowy_na_dziesietny(&quot;100,01&quot;))
+print(&quot;herbata owocowa&quot;, dziesietny_na_dwojkowy(4.50))
+print(&quot;capuccino&quot;, dwojkowy_na_dziesietny(&quot;101,00&quot;))
+print(&quot;kawa espresso&quot;, dziesietny_na_dwojkowy(6.00))</code></pre></div><p><strong>Odpowiedź:</strong> herbata czarna 4,25; herbata owocowa 100,10; capuccino 5,00; kawa espresso 110,00</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4a-i-4b"><h2><a class="self" href="#4a-i-4b">4a i 4b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">srednie = []
+
+with open(&quot;temp.txt&quot;) as file:
+    for line in file:
+        dane = line.strip().replace(&quot;,&quot;, &quot;.&quot;).split()
+        rok = int(dane[0])
+        temperatury = list(map(float, dane[1:]))
+        srednie.append((sum(temperatury) / 12, rok))
+
+najnizsza = min(srednie)
+najwyzsza = max(srednie)
+print(&quot;a)&quot;, round(najnizsza[0], 2), najnizsza[1])
+print(&quot;b)&quot;, round(najwyzsza[0], 2), najwyzsza[1])</code></pre></div><p><strong>Odpowiedź:</strong> a) 4,74 — rok 1829; b) 9,82 — rok 1989</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4c"><h2><a class="self" href="#4c">4c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiace = [[] for _ in range(12)]
+
+with open(&quot;temp.txt&quot;) as file:
+    for line in file:
+        dane = line.strip().replace(&quot;,&quot;, &quot;.&quot;).split()
+        for i in range(12):
+            miesiace[i].append(float(dane[i + 1]))
+
+for i in range(12):
+    print(i + 1, min(miesiace[i]), max(miesiace[i]))</code></pre></div><p><strong>Odpowiedź:</strong> (miesiąc, min, max) 1: -13,5 3,5; 2: -13,7 5,1; 3: -6,9 7,4; 4: 2,4 13,2; 5: 7,9 18,2; 6: 13,0 22,4; 7: 14,6 23,5; 8: 14,0 23,8; 9: 9,1 16,8; 10: 1,8 12,6; 11: -3,4 7,6; 12: -14,8 3,9 (wykres punktowy wykonuje się w arkuszu kalkulacyjnym)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4d"><h2><a class="self" href="#4d">4d</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lata = []
+sierpien = []
+
+with open(&quot;temp.txt&quot;) as file:
+    for line in file:
+        dane = line.strip().replace(&quot;,&quot;, &quot;.&quot;).split()
+        lata.append(int(dane[0]))
+        sierpien.append(float(dane[8]))
+
+dlugosc = 1
+najdluzszy = 1
+koniec = 0
+
+for i in range(1, len(sierpien)):
+    if sierpien[i] &lt; sierpien[i - 1]:
+        dlugosc += 1
+    else:
+        dlugosc = 1
+    if dlugosc &gt; najdluzszy:
+        najdluzszy = dlugosc
+        koniec = i
+
+print(lata[koniec - najdluzszy + 1], lata[koniec], najdluzszy)</code></pre></div><p><strong>Odpowiedź:</strong> od 1982 do 1987, długość 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5"><h2><a class="self" href="#5">5</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+    if x &lt; 2:
+        return False
+    i = 2
+    while i * i &lt;= x:
+        if x % i == 0:
+            return False
+        i += 1
+    return True
+
+
+with open(&quot;liczby.txt&quot;) as file:
+    with open(&quot;zad_5.txt&quot;, &quot;w&quot;) as wynik:
+        for line in file:
+            liczba = int(line.strip())
+            pierwiastek = int(liczba ** 0.5)
+            while pierwiastek * pierwiastek &gt; liczba:
+                pierwiastek -= 1
+            while (pierwiastek + 1) * (pierwiastek + 1) &lt;= liczba:
+                pierwiastek += 1
+            if pierwiastek * pierwiastek == liczba and czy_pierwsza(pierwiastek):
+                print(liczba)
+                wynik.write(str(liczba) + &quot;\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 5041, 1369, 32041, 844561, 4, 96721, 9, 942841, 49, 1849, 528529, 121, 961, 169</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6a"><h2><a class="self" href="#6a">6a</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile_mieszkan = {}
+
+with open(&quot;osoby.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    next(file)  # pomijamy nagłówek
+    for line in file:
+        id_mieszkania, nazwisko, imie, liczba_osob = line.split()
+        wlasciciel = nazwisko + &quot; &quot; + imie
+        ile_mieszkan[wlasciciel] = ile_mieszkan.get(wlasciciel, 0) + 1
+
+count = 0
+for wlasciciel in ile_mieszkan:
+    if ile_mieszkan[wlasciciel] &gt; 1:
+        count += 1
+
+print(count)</code></pre></div><p><strong>Odpowiedź:</strong> 23</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6b"><h2><a class="self" href="#6b">6b</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">metraz = {}
+
+with open(&quot;adres.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.split()
+        metraz[dane[0]] = float(dane[-1].replace(&quot;,&quot;, &quot;.&quot;))
+
+with open(&quot;osoby.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    next(file)
+    for line in file:
+        id_mieszkania, nazwisko, imie, liczba_osob = line.split()
+        if metraz[id_mieszkania] / int(liczba_osob) &lt; 6:
+            print(id_mieszkania)</code></pre></div><p><strong>Odpowiedź:</strong> 8/2009, 9/2009, 32/2009, 69/2009</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6c"><h2><a class="self" href="#6c">6c</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">metraz = {}
+
+with open(&quot;adres.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.split()
+        metraz[dane[0]] = float(dane[-1].replace(&quot;,&quot;, &quot;.&quot;))
+
+with open(&quot;osoby.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    next(file)
+    for line in file:
+        id_mieszkania, nazwisko, imie, liczba_osob = line.split()
+        if metraz[id_mieszkania] &gt; 90 and int(liczba_osob) == 1:
+            print(nazwisko, imie)</code></pre></div><p><strong>Odpowiedź:</strong> Nazimek Tadeusz, Cependa Joanna</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6d"><h2><a class="self" href="#6d">6d</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wlasciciele = set()
+
+with open(&quot;osoby.txt&quot;, encoding=&quot;cp1250&quot;) as file:
+    next(file)
+    for line in file:
+        id_mieszkania, nazwisko, imie, liczba_osob = line.split()
+        wlasciciele.add((nazwisko, imie))
+
+kobiety = 0
+mezczyzni = 0
+for nazwisko, imie in wlasciciele:
+    if imie[-1] == &quot;a&quot;:
+        kobiety += 1
+    else:
+        mezczyzni += 1
+
+print(&quot;kobiety:&quot;, kobiety, &quot;mężczyźni:&quot;, mezczyzni)</code></pre></div><p><strong>Odpowiedź:</strong> kobiety: 184, mężczyźni: 92</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

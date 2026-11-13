@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2018 Czerwiec | Matura z informatyki</title>
+<meta name="description" content="2018 Czerwiec - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1 i 2.3, 4.1, 4.2, 4.3, 4.4, 5.1, 5.2, 5.3, 5.4, 5.5, 6.1).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-czerwiec.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2018 Czerwiec">
+<meta property="og:description" content="2018 Czerwiec - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1 i 2.3, 4.1, 4.2, 4.3, 4.4, 5.1, 5.2, 5.3, 5.4, 5.5, 6.1).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-czerwiec.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2018 Czerwiec", "description": "2018 Czerwiec - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1, 1.2 i 1.3, 2.1 i 2.3, 4.1, 4.2, 4.3, 4.4, 5.1, 5.2, 5.3, 5.4, 5.5, 6.1).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-czerwiec.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-3">2.1 i 2.3</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#4-4">4.4</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li><li><a href="#5-5">5.5</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li><li><a href="#6-4">6.4</a></li><li><a href="#6-5">6.5</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2018 Czerwiec</span></nav>
+<h1 class="page-title">2018 Czerwiec</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2018-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2018-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2018-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2018-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1-1-1-2-i-1-3"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def F(T, x):
+    # wyszukiwanie binarne; T indeksowana od 1 jak w treści (T[0] nieużywane)
+    n = len(T) - 1
+    p, k = 1, n
+    zmiany_p = zmiany_k = 0
+    wartosci_s = []
+    sprawdzenia = 0  # ile razy warunek p &lt;= k był spełniony
+    while p &lt;= k:
+        sprawdzenia += 1
+        s = (p + k) // 2
+        wartosci_s.append(s)
+        if T[s] == x:
+            return True, zmiany_p, zmiany_k, wartosci_s, sprawdzenia
+        if T[s] &lt; x:
+            p = s + 1
+            zmiany_p += 1
+        else:
+            k = s - 1
+            zmiany_k += 1
+    return False, zmiany_p, zmiany_k, wartosci_s, sprawdzenia
+
+
+T = [None, 3, 5, 7, 8, 9, 13, 33, 37, 40, 43]
+
+# 1.1 A, B, C
+wynik, zp, zk, s, ile = F(T, 7)
+print(&quot;x = 7:&quot;, wynik, &quot;p:&quot;, zp, &quot;k:&quot;, zk, &quot;s:&quot;, s)
+wynik, zp, zk, s, ile = F(T, 43)
+print(&quot;x = 43:&quot;, &quot;p:&quot;, zp, &quot;k:&quot;, zk)
+
+# 1.2 - n = 100, x większe od wszystkich elementów
+T100 = [None] + list(range(1, 101))
+print(F(T100, 1000)[4])
+
+# 1.3
+T_nieuporzadkowana = [None, 3, 5, 7, 8, 90, 13, 33, 37, 40, 43]
+print(F(T_nieuporzadkowana, 43)[0])</code></pre></div><p><strong>Odpowiedź:</strong> 1.1: A. prawda; B. x = 7: p - 1, k - 1; x = 43: p - 3, k - 0; C. 5, 2, 3. 1.2: 7 razy. 1.3: fałsz.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2-1-i-2-3"><h2><a class="self" href="#2-1-i-2-3">2.1 i 2.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def fib_iteracyjnie(n):
+    # 2.1 - bez tablic, tylko dwie ostatnie wartości
+    f1 = f2 = 1
+    for i in range(3, n + 1):
+        f1, f2 = f2, f1 + f2
+    return f2
+
+
+def fib_szybko(n):
+    # 2.3 - F(2k) = F(k+1)^2 - F(k-1)^2, F(2k-1) = F(k)^2 + F(k-1)^2
+    if n == 1 or n == 2:
+        return 1
+    if n % 2 == 0:
+        k = n // 2
+        return fib_szybko(k + 1) ** 2 - fib_szybko(k - 1) ** 2
+    k = (n + 1) // 2
+    return fib_szybko(k) ** 2 + fib_szybko(k - 1) ** 2
+
+
+print(fib_iteracyjnie(45), fib_szybko(45))
+for n in range(1, 30):
+    assert fib_iteracyjnie(n) == fib_szybko(n)</code></pre></div><p><strong>Odpowiedź:</strong> F45 = 1134903170 (obie funkcje)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-1"><h2><a class="self" href="#4-1">4.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+
+with open(&quot;dane1.txt&quot;) as dane1, open(&quot;dane2.txt&quot;) as dane2:
+    for wiersz1, wiersz2 in zip(dane1, dane2):
+        a = list(map(int, wiersz1.split()))
+        b = list(map(int, wiersz2.split()))
+        if a[-1] == b[-1]:
+            licznik += 1
+
+print(licznik)</code></pre></div><p><strong>Odpowiedź:</strong> 32</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-2"><h2><a class="self" href="#4-2">4.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def parzystych(ciag):
+    ile = 0
+    for liczba in ciag:
+        if liczba % 2 == 0:
+            ile += 1
+    return ile
+
+
+licznik = 0
+
+with open(&quot;dane1.txt&quot;) as dane1, open(&quot;dane2.txt&quot;) as dane2:
+    for wiersz1, wiersz2 in zip(dane1, dane2):
+        a = list(map(int, wiersz1.split()))
+        b = list(map(int, wiersz2.split()))
+        # 10 liczb, z czego 5 parzystych =&gt; 5 nieparzystych
+        if parzystych(a) == 5 and parzystych(b) == 5:
+            licznik += 1
+
+print(licznik)</code></pre></div><p><strong>Odpowiedź:</strong> 50</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-3"><h2><a class="self" href="#4-3">4.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wiersze = []
+
+with open(&quot;dane1.txt&quot;) as dane1, open(&quot;dane2.txt&quot;) as dane2:
+    nr = 1
+    for wiersz1, wiersz2 in zip(dane1, dane2):
+        a = set(map(int, wiersz1.split()))
+        b = set(map(int, wiersz2.split()))
+        # porównujemy zbiory (a nie listy utworzone ze zbiorów - ich kolejność nie jest gwarantowana)
+        if a == b:
+            wiersze.append(nr)
+        nr += 1
+
+print(len(wiersze))
+print(*wiersze, sep=&quot;, &quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 1 para ciągów, wiersz 999</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-4"><h2><a class="self" href="#4-4">4.4</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def scal(a, b):
+    wynik = []
+    i = j = 0
+    while i &lt; len(a) and j &lt; len(b):
+        if a[i] &lt;= b[j]:
+            wynik.append(a[i])
+            i += 1
+        else:
+            wynik.append(b[j])
+            j += 1
+    # jeden z ciągów się wyczerpał - przepisujemy resztę drugiego
+    wynik += a[i:]
+    wynik += b[j:]
+    return wynik
+
+
+with open(&quot;dane1.txt&quot;) as dane1, open(&quot;dane2.txt&quot;) as dane2, open(&quot;wynik4_4.txt&quot;, &quot;w&quot;) as plik:
+    for wiersz1, wiersz2 in zip(dane1, dane2):
+        a = list(map(int, wiersz1.split()))
+        b = list(map(int, wiersz2.split()))
+        plik.write(&quot; &quot;.join(map(str, scal(a, b))) + &quot;\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> plik wynik4_4.txt (pierwsze wiersze: 1 5 6 6 8 13 13 14 15 15 24 24 33 33 34 35 36 41 44 45, 4 8 8 14 16 17 19 22 28 28 33 38 42 43 45 45 46 46 49 49, …)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-1"><h2><a class="self" href="#5-1">5.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma = 0
+ile = 0
+
+with open(&quot;pomiary.txt&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        godzina = dane[1]
+        if &quot;05:00&quot; &lt;= godzina &lt;= &quot;12:00&quot;:  # format GG:MM - można porównywać jak napisy
+            suma += float(dane[2 + 4].replace(&quot;,&quot;, &quot;.&quot;))  # czujnik5
+            ile += 1
+
+print(f&quot;{suma / ile:.2f}&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> 12,50</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-2"><h2><a class="self" href="#5-2">5.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wystapienia = [{} for _ in range(10)]  # dla każdego czujnika: kelwiny -&gt; liczba wystąpień
+
+with open(&quot;pomiary.txt&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        for c in range(10):
+            # temperatura w setnych częściach stopnia, żeby uniknąć błędów float
+            setne = int(dane[2 + c].replace(&quot;,&quot;, &quot;&quot;).replace(&quot;-&quot;, &quot;&quot;))
+            if dane[2 + c].startswith(&quot;-&quot;):
+                setne = -setne
+            kelwiny = (27315 + setne) // 100  # zaokrąglenie w dół
+            wystapienia[c][kelwiny] = wystapienia[c].get(kelwiny, 0) + 1
+
+for c in range(10):
+    najczesciej = max(wystapienia[c].values())
+    wartosci = [k for k in wystapienia[c] if wystapienia[c][k] == najczesciej]
+    print(f&quot;czujnik{c + 1}&quot;, *sorted(wartosci))</code></pre></div><p><strong>Odpowiedź:</strong> 287, 288 (lub 286), 283, 284, 284, 287 (lub 296), 286, 288, 285, 286</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-3"><h2><a class="self" href="#5-3">5.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma = {}
+ile = {}
+
+with open(&quot;pomiary.txt&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        miesiac = int(dane[0][5:7])
+        suma[miesiac] = suma.get(miesiac, 0) + float(dane[11].replace(&quot;,&quot;, &quot;.&quot;))  # czujnik10
+        ile[miesiac] = ile.get(miesiac, 0) + 1
+
+for miesiac in sorted(suma):
+    print(miesiac, f&quot;{suma[miesiac] / ile[miesiac]:.2f}&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> sty 0,91; lut 0,16; mar 2,30; kwi 12,84; maj 13,56; cze 14,54; lip 22,22; sie 22,23; wrz 16,03; paź 15,03; lis 15,54; gru 0,65 (+ wykres słupkowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-4"><h2><a class="self" href="#5-4">5.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przedzial1 = 0  # (-10, 15]
+przedzial2 = 0  # (15, 20]
+
+with open(&quot;pomiary.txt&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        for t in dane[2:]:
+            t = float(t.replace(&quot;,&quot;, &quot;.&quot;))
+            if -10 &lt; t &lt;= 15:
+                przedzial1 += 1
+            elif 15 &lt; t &lt;= 20:
+                przedzial2 += 1
+
+if przedzial1 &gt; przedzial2:
+    print(&quot;(-10, 15]&quot;, przedzial1)
+else:
+    print(&quot;(15, 20]&quot;, przedzial2)</code></pre></div><p><strong>Odpowiedź:</strong> (-10, 15], 1150 pomiarów</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-5"><h2><a class="self" href="#5-5">5.5</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_setne(tekst):
+    # &quot;-4,98&quot; -&gt; -498 (liczymy w setnych częściach stopnia)
+    setne = int(tekst.replace(&quot;,&quot;, &quot;&quot;).replace(&quot;-&quot;, &quot;&quot;))
+    if tekst.startswith(&quot;-&quot;):
+        return -setne
+    return setne
+
+
+def napis(setne):
+    znak = &quot;-&quot; if setne &lt; 0 else &quot;&quot;
+    setne = abs(setne)
+    return f&quot;{znak}{setne // 100},{setne % 100:02d}&quot;
+
+
+czujniki = [1, 2, 8, 9]
+pierwsze = {}  # data 2017 -&gt; (godzina, wartości wg wniosków I i II, wartości wg wniosków I, II i III)
+
+with open(&quot;pomiary.txt&quot;) as file:
+    next(file)
+    for line in file:
+        dane = line.strip().split(&quot;;&quot;)
+        data = &quot;2017&quot; + dane[0][4:]
+        miesiac = int(data[5:7])
+        dzien = int(data[8:10])
+
+        wynik_ab = []
+        wynik_abc = []
+        for c in czujniki:
+            t = na_setne(dane[1 + c])
+            if 5 &lt;= dzien &lt;= 10 and c in [1, 2, 9]:      # wniosek I
+                t -= 120
+            if miesiac in [7, 8] and c == 8:              # wniosek II (w dół do 2 miejsc)
+                t = t * 107 // 100
+            wynik_ab.append(t)
+            if miesiac == 5:                              # wniosek III
+                t += 90
+            wynik_abc.append(t)
+
+        if data not in pierwsze:  # pierwszy pomiar danego dnia (dane są uporządkowane)
+            pierwsze[data] = (dane[1], wynik_ab, wynik_abc)
+
+for data in [&quot;2017-05-05&quot;, &quot;2017-07-07&quot;]:
+    godzina, ab, abc = pierwsze[data]
+    print(data, godzina, &quot;czujniki 1, 2, 8, 9&quot;)
+    print(&quot;  wnioski I i II:     &quot;, *[napis(t) for t in ab])
+    print(&quot;  wnioski I, II i III:&quot;, *[napis(t) for t in abc])</code></pre></div><p><strong>Odpowiedź:</strong> 2017-05-05 07:05: I i II - czujnik1 9,46, czujnik2 9,39, czujnik8 14,52, czujnik9 10,45; I, II i III - 10,36, 10,29, 15,42, 11,35. 2017-07-07 00:04: 23,42, 19,39, 26,67, 20,70 (w obu wariantach)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-1"><h2><a class="self" href="#6-1">6.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
+
+ceny = {}
+with open(&quot;ceny_za_dobe.txt&quot;) as file:
+    next(file)
+    for line in file:
+        klasa, cena = line.strip().split(&quot;;&quot;)
+        ceny[klasa] = int(cena)
+
+samochody = {}  # nr ewidencyjny -&gt; (klasa, nr rejestracyjny)
+with open(&quot;samochody.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_firmowy, miejscowosc, nr_rej = line.strip().split(&quot;;&quot;)
+        samochody[nr_ew] = (nr_firmowy[0], nr_rej)
+
+klienci = {}  # nr klienta -&gt; (imię, nazwisko)
+with open(&quot;klienci.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_klienta, imie, nazwisko = line.strip().split(&quot;;&quot;)
+        klienci[nr_klienta] = (imie, nazwisko)
+
+
+def na_date(tekst):
+    r, m, d = map(int, tekst.split(&quot;-&quot;))
+    return date(r, m, d)
+
+
+zestawienie = []
+with open(&quot;wypozyczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(&quot;;&quot;)
+        imie, nazwisko = klienci[nr_klienta]
+        klasa, nr_rej = samochody[nr_ew]
+        doby = (na_date(zwrot) - na_date(wypozyczenie)).days
+        zestawienie.append((nazwisko, imie, nr_rej, doby, doby * ceny[klasa]))
+
+zestawienie.sort()
+print(*zestawienie[0])
+print(*zestawienie[-1])</code></pre></div><p><strong>Odpowiedź:</strong> pierwszy: Aabacka Nela WI1150 2 160,00 zł; ostatni: Zgbacka Aaricia WI1126 11 880,00 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-2"><h2><a class="self" href="#6-2">6.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">klasa = {}  # nr ewidencyjny -&gt; klasa samochodu
+with open(&quot;samochody.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_firmowy, miejscowosc, nr_rej = line.strip().split(&quot;;&quot;)
+        klasa[nr_ew] = nr_firmowy[0]
+
+wypozyczenia = {}
+with open(&quot;wypozyczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(&quot;;&quot;)
+        k = klasa[nr_ew]
+        wypozyczenia[k] = wypozyczenia.get(k, 0) + 1
+
+for k in sorted(wypozyczenia):
+    print(k, wypozyczenia[k])</code></pre></div><p><strong>Odpowiedź:</strong> B 100, C 48, D 53</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-3"><h2><a class="self" href="#6-3">6.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">klienci = {}
+with open(&quot;klienci.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_klienta, imie, nazwisko = line.strip().split(&quot;;&quot;)
+        klienci[nr_klienta] = (imie, nazwisko)
+
+ile = {}
+with open(&quot;wypozyczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(&quot;;&quot;)
+        ile[nr_klienta] = ile.get(nr_klienta, 0) + 1
+
+najwiecej = max(ile.values())
+for nr_klienta in ile:
+    if ile[nr_klienta] == najwiecej:
+        print(*klienci[nr_klienta], najwiecej)</code></pre></div><p><strong>Odpowiedź:</strong> Ramzes Hcbacki, 5 wypożyczeń</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-4"><h2><a class="self" href="#6-4">6.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wypozyczane = set()
+with open(&quot;wypozyczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(&quot;;&quot;)
+        wypozyczane.add(nr_ew)
+
+zestawienie = {}  # (miejscowość, klasa) -&gt; liczba niewypożyczanych samochodów
+with open(&quot;samochody.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_firmowy, miejscowosc, nr_rej = line.strip().split(&quot;;&quot;)
+        if nr_ew not in wypozyczane:
+            klucz = (miejscowosc, nr_firmowy[0])
+            zestawienie[klucz] = zestawienie.get(klucz, 0) + 1
+
+for miejscowosc, klasa in sorted(zestawienie):
+    print(miejscowosc, klasa, zestawienie[(miejscowosc, klasa)])
+print(&quot;razem:&quot;, sum(zestawienie.values()))</code></pre></div><p><strong>Odpowiedź:</strong> (B, C, D) Aniolkowo 12 8 7, Manipulatowo 31 14 11, Nieszczerzyn 17 9 4 (tyle podaje klucz CKE), program wypisuje też Piarowa 16 18 8, Wielka Wola 25 11 7</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-5"><h2><a class="self" href="#6-5">6.5</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wypozyczajacy = set()
+with open(&quot;wypozyczenia.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_ew, nr_klienta, wypozyczenie, zwrot = line.strip().split(&quot;;&quot;)
+        wypozyczajacy.add(nr_klienta)
+
+licznik = 0
+with open(&quot;klienci.txt&quot;) as file:
+    next(file)
+    for line in file:
+        nr_klienta, imie, nazwisko = line.strip().split(&quot;;&quot;)
+        if nr_klienta not in wypozyczajacy:
+            licznik += 1
+
+print(licznik)</code></pre></div><p><strong>Odpowiedź:</strong> 72</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

@@ -1,17 +1,14 @@
-lista = []
-liczba = 0
-i = 0
+potegi_trojki = []
+potega = 1
+while potega <= 100000:
+    potegi_trojki.append(potega)
+    potega *= 3
 
-while liczba <= 100000:
-    liczba = 3 ** i
-    lista.append(liczba)
-    i += 1
+ile = 0
 
-count = 0
-
-with open("Dane_PR/liczby.txt") as file:
+with open("liczby.txt") as file:
     for line in file:
-        line = int(line.strip())
-        if line in lista:
-            count += 1
-print(count)
+        if int(line) in potegi_trojki:
+            ile += 1
+
+print(ile)

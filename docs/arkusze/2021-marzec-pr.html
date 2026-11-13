@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2021 Marzec (próbna) | Matura z informatyki</title>
+<meta name="description" content="2021 Marzec (próbna) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 2.1 i 2.2, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 5.4, 6.1, 6.2, 6.3).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2021 Marzec (próbna)">
+<meta property="og:description" content="2021 Marzec (próbna) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 2.1 i 2.2, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 5.4, 6.1, 6.2, 6.3).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2021 Marzec (próbna)", "description": "2021 Marzec (próbna) - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 2.1 i 2.2, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 5.4, 6.1, 6.2, 6.3).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li><li><a href="#6-4">6.4</a></li><li><a href="#6-5">6.5</a></li><li><a href="#6-6">6.6</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2021 Marzec (próbna)</span></nav>
+<h1 class="page-title">2021 Marzec (próbna)</h1><p>Test diagnostyczny CKE – marzec 2021.</p><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1-1-i-1-2"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def runda(k, x, y):
+    # drużyny spotkają się w rundzie r, gdy ich numery różnią się tylko na r ostatnich bitach,
+    # więc dzielimy oba numery przez 2 (usuwamy ostatni bit), aż staną się równe
+    r = 0
+    while x != y:
+        r += 1
+        x //= 2
+        y //= 2
+    return r
+
+
+for k, x, y in [(3, 2, 6), (4, 0, 3), (4, 3, 7), (5, 16, 30)]:
+    print(k, x, y, runda(k, x, y))</code></pre></div><p><strong>Odpowiedź:</strong> 1.1: (3, 2, 6) → 3, (4, 0, 3) → 2, (4, 3, 7) → 3, (5, 16, 30) → 4; 1.2: algorytm w kodzie</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="2-1-i-2-2"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def Algo(n):
+    ile_s = 0  # liczba wykonań instrukcji s &lt;- (p + k) div 2
+    if n &lt;= 2:
+        return 1, ile_s
+    p = 1
+    k = n
+    while k - p &gt; 1:
+        s = (p + k) // 2
+        ile_s += 1
+        if s * s &lt;= n:
+            p = s
+        else:
+            k = s
+    return p, ile_s
+
+
+# 2.1
+for n in [5, 35, 1025]:
+    print(n, Algo(n)[0])
+# 2.2
+for n in [5, 2, 63, 1024]:
+    print(n, Algo(n)[1])</code></pre></div><p><strong>Odpowiedź:</strong> 2.1: Algo(5) = 2, Algo(35) = 5, Algo(1025) = 32; 2.2: 5 → 2, 2 → 0, 63 → 6, 1024 → 10</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-1"><h2><a class="self" href="#4-1">4.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miasta = {}  # kod kraju -&gt; liczba miast
+
+with open(&quot;galerie.txt&quot;) as file:
+    for line in file:
+        kod_kraju = line.split()[0]
+        miasta[kod_kraju] = miasta.get(kod_kraju, 0) + 1
+
+with open(&quot;wynik4_1.txt&quot;, &quot;w&quot;) as wynik:
+    for kod_kraju, ile in miasta.items():
+        print(kod_kraju, ile)
+        wynik.write(f&quot;{kod_kraju} {ile}\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> GB 5, D 15, E 6, I 6, F 2, RO 1, A 1, H 1, BG 1, CZ 1, B 1, S 1, HR 1, NL 2, LV 1, GR 1, LT 1, FIN 1, DK 1, IRL 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-2"><h2><a class="self" href="#4-2">4.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">galerie = []  # (miasto, powierzchnia, liczba lokali)
+
+with open(&quot;galerie.txt&quot;) as file:
+    for line in file:
+        dane = line.split()
+        miasto = dane[1]
+        liczby = [int(x) for x in dane[2:]]
+        powierzchnia = 0
+        lokale = 0
+        for i in range(0, len(liczby), 2):
+            if liczby[i] != 0:  # zera uzupełniają wiersz do 70 par
+                powierzchnia += liczby[i] * liczby[i + 1]
+                lokale += 1
+        galerie.append((miasto, powierzchnia, lokale))
+
+# a)
+with open(&quot;wynik4_2a.txt&quot;, &quot;w&quot;) as wynik:
+    for miasto, powierzchnia, lokale in galerie:
+        print(miasto, powierzchnia, lokale)
+        wynik.write(f&quot;{miasto} {powierzchnia} {lokale}\n&quot;)
+
+# b)
+najwieksza = max(galerie, key=lambda g: g[1])
+najmniejsza = min(galerie, key=lambda g: g[1])
+with open(&quot;wynik4_2b.txt&quot;, &quot;w&quot;) as wynik:
+    for miasto, powierzchnia, lokale in [najwieksza, najmniejsza]:
+        print(miasto, powierzchnia)
+        wynik.write(f&quot;{miasto} {powierzchnia}\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> a) Londyn 3628 58, Berlin 3777 59, Madryt 2217 34, Rzym 3678 51, … , Duisburg 3948 61; b) Essen 4760, Wilno 1620</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-3"><h2><a class="self" href="#4-3">4.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">rodzaje = []  # (miasto, liczba różnych rodzajów lokali)
+
+with open(&quot;galerie.txt&quot;) as file:
+    for line in file:
+        dane = line.split()
+        miasto = dane[1]
+        liczby = [int(x) for x in dane[2:]]
+        powierzchnie = set()
+        for i in range(0, len(liczby), 2):
+            if liczby[i] != 0:
+                powierzchnie.add(liczby[i] * liczby[i + 1])
+        rodzaje.append((miasto, len(powierzchnie)))
+
+najwiecej = max(rodzaje, key=lambda r: r[1])
+najmniej = min(rodzaje, key=lambda r: r[1])
+
+with open(&quot;wynik4_3.txt&quot;, &quot;w&quot;) as wynik:
+    for miasto, ile in [najwiecej, najmniej]:
+        print(miasto, ile)
+        wynik.write(f&quot;{miasto} {ile}\n&quot;)</code></pre></div><p><strong>Odpowiedź:</strong> Berlin 35, Kolonia 18</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-1"><h2><a class="self" href="#5-1">5.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
+
+with open(&quot;telefony.txt&quot;) as file:
+    file.readline()  # nagłówek
+    for line in file:
+        numer = line.split()[0]
+        polaczenia[numer] = polaczenia.get(numer, 0) + 1
+
+for numer, ile in sorted(polaczenia.items(), key=lambda x: x[1], reverse=True)[:3]:
+    print(numer, ile)</code></pre></div><p><strong>Odpowiedź:</strong> 4546455 – 8, 3505978 – 7, 4657345 – 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-2"><h2><a class="self" href="#5-2">5.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">stacjonarne = {}
+komorkowe = {}
+
+with open(&quot;telefony.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        numer, data, poczatek, koniec = line.split()
+        if data not in stacjonarne:
+            stacjonarne[data] = 0
+            komorkowe[data] = 0
+        if len(numer) == 7:
+            stacjonarne[data] += 1
+        elif len(numer) == 8:
+            komorkowe[data] += 1
+
+for data in stacjonarne:  # dni są w pliku w kolejności chronologicznej
+    print(data, komorkowe[data], stacjonarne[data])
+# na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy</code></pre></div><p><strong>Odpowiedź:</strong> 3-07-2017: komórkowe 27, stacjonarne 67; 4-07-2017: 23, 68; 5-07-2017: 24, 79; … ; 31-07-2017: 23, 82 (łącznie 512 i 1524) (+ wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-3"><h2><a class="self" href="#5-3">5.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+
+
+def sekundy(czas):
+    g, m, s = czas.split(&quot;:&quot;)
+    return int(g) * 3600 + int(m) * 60 + int(s)
+
+
+ile = 0
+czas = 0
+
+with open(&quot;telefony.txt&quot;) as file:
+    file.readline()
+    for line in file:
+        numer, data, poczatek, koniec = line.split()
+        if len(numer) == 7 and numer.startswith(&quot;12&quot;):
+            ile += 1
+            czas += sekundy(koniec) - sekundy(poczatek)
+
+print(ile, math.ceil(czas / 60))</code></pre></div><p><strong>Odpowiedź:</strong> 21 połączeń, 192 minuty</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-4"><h2><a class="self" href="#5-4">5.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+
+
+def sekundy(czas):
+    g, m, s = czas.split(&quot;:&quot;)
+    return int(g) * 3600 + int(m) * 60 + int(s)
+
+
+ABONAMENT = 50
+LIMIT = 800 * 60  # w sekundach
+
+wykorzystane = 0      # sekundy rozmów krajowych wliczone w abonament
+stacjonarne = 0       # sekundy rozmów ponad limit
+komorkowe = 0
+zagraniczne_zl = 0
+
+with open(&quot;telefony.txt&quot;) as file:
+    file.readline()
+    for line in file:  # połączenia są zapisane chronologicznie
+        numer, data, poczatek, koniec = line.split()
+        czas = sekundy(koniec) - sekundy(poczatek)
+        if len(numer) &gt;= 10:
+            zagraniczne_zl += math.ceil(czas / 60)  # 1 zł za każdą rozpoczętą minutę
+            continue
+        z_abonamentu = min(czas, LIMIT - wykorzystane)
+        wykorzystane += z_abonamentu
+        if len(numer) == 7:
+            stacjonarne += czas - z_abonamentu
+        else:
+            komorkowe += czas - z_abonamentu
+
+# każdy rozpoczęty pakiet 100 minut
+stacjonarne_zl = math.ceil(stacjonarne / 6000) * 5
+komorkowe_zl = math.ceil(komorkowe / 6000) * 6
+
+print(&quot;abonament&quot;, ABONAMENT)
+print(&quot;stacjonarne&quot;, stacjonarne_zl)
+print(&quot;komórkowe&quot;, komorkowe_zl)
+print(&quot;zagraniczne&quot;, zagraniczne_zl)
+print(&quot;suma&quot;, ABONAMENT + stacjonarne_zl + komorkowe_zl + zagraniczne_zl)</code></pre></div><p><strong>Odpowiedź:</strong> abonament 50 zł, stacjonarne 610 zł, komórkowe 240 zł, zagraniczne 967 zł, razem 1867 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-1"><h2><a class="self" href="#6-1">6.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa):
+    with open(nazwa, encoding=&quot;utf-8&quot;) as file:
+        file.readline()  # nagłówek
+        return [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file if line.strip()]
+
+
+zawodnicy = {z[0]: z for z in wczytaj(&quot;zawodnicy.txt&quot;)}
+startujacy = {s[0]: s for s in wczytaj(&quot;startujacy.txt&quot;)}
+czasy = wczytaj(&quot;czasy.txt&quot;)
+
+
+def klucz(czas):
+    return [int(x) for x in czas.split(&quot;:&quot;)]
+
+
+id_startu, czas = min(czasy, key=lambda c: klucz(c[1]))
+zawodnik = zawodnicy[startujacy[id_startu][2]]
+print(zawodnik[1], zawodnik[2], czas)</code></pre></div><p><strong>Odpowiedź:</strong> Chris Froome – 83:56:40</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-2"><h2><a class="self" href="#6-2">6.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa):
+    with open(nazwa, encoding=&quot;utf-8&quot;) as file:
+        file.readline()
+        return [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file if line.strip()]
+
+
+zawodnicy = {z[0]: z for z in wczytaj(&quot;zawodnicy.txt&quot;)}
+startujacy = wczytaj(&quot;startujacy.txt&quot;)
+
+starty = {}
+for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
+    if kraj == &quot;Polska&quot;:
+        starty[id_zawodnika] = starty.get(id_zawodnika, 0) + 1
+
+najwiecej = max(starty, key=starty.get)
+print(zawodnicy[najwiecej][1], zawodnicy[najwiecej][2], starty[najwiecej])</code></pre></div><p><strong>Odpowiedź:</strong> Maciej Bodnar – 5 wyścigów</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-3"><h2><a class="self" href="#6-3">6.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa):
+    with open(nazwa, encoding=&quot;utf-8&quot;) as file:
+        file.readline()
+        return [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file if line.strip()]
+
+
+zawodnicy = {z[0]: z for z in wczytaj(&quot;zawodnicy.txt&quot;)}
+startujacy = wczytaj(&quot;startujacy.txt&quot;)
+
+roczniki = {}  # rok wyścigu -&gt; lista (rok urodzenia, id_zawodnika)
+for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
+    rok_urodzenia = int(zawodnicy[id_zawodnika][3][:4])
+    roczniki.setdefault(rok, []).append((rok_urodzenia, id_zawodnika))
+
+for rok in sorted(roczniki):
+    # najmłodsi w wieku rocznikowym = urodzeni w najpóźniejszym roku
+    najmlodszy_rocznik = max(r for r, z in roczniki[rok])
+    for rok_urodzenia, id_zawodnika in roczniki[rok]:
+        if rok_urodzenia == najmlodszy_rocznik:
+            print(rok, zawodnicy[id_zawodnika][1], zawodnicy[id_zawodnika][2])</code></pre></div><p><strong>Odpowiedź:</strong> 2008: Roman Kreuziger, Gerald Ciolek, John-Lee Augustyn; 2009: Rigoberto Uran; 2010: Fabio Felline; 2011: Anthony Delaplace; 2012: Peter Sagan, Thibaut Pinot; 2013: Danny van Poppel; 2014: Danny van Poppel; 2015: Merhawi Kudus; 2016: Alexis Gougeard, Sondre Holst Enger, Luka Pibernik, Timo Roosen, Dylan Groenewegen; 2017: Elie Gesbert</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-4"><h2><a class="self" href="#6-4">6.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa):
+    with open(nazwa, encoding=&quot;utf-8&quot;) as file:
+        file.readline()
+        return [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file if line.strip()]
+
+
+startujacy = wczytaj(&quot;startujacy.txt&quot;)
+ukonczyli = set(c[0] for c in wczytaj(&quot;czasy.txt&quot;))
+
+nie_ukonczyli = {}
+for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
+    if id_startu not in ukonczyli:
+        nie_ukonczyli[rok] = nie_ukonczyli.get(rok, 0) + 1
+
+rok = max(nie_ukonczyli, key=nie_ukonczyli.get)
+print(rok, nie_ukonczyli[rok])</code></pre></div><p><strong>Odpowiedź:</strong> 2012 – 46 zawodników</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-5"><h2><a class="self" href="#6-5">6.5</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa):
+    with open(nazwa, encoding=&quot;utf-8&quot;) as file:
+        file.readline()
+        return [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file if line.strip()]
+
+
+nazwa_grupy = {g[0]: g[1] for g in wczytaj(&quot;grupy.txt&quot;)}
+startujacy = wczytaj(&quot;startujacy.txt&quot;)
+
+kraje = {}  # (rok, grupa) -&gt; zbiór krajów zawodników
+for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
+    kraje.setdefault((rok, kod_grupy), set()).add(kraj)
+
+jednolite = {}  # rok -&gt; lista grup, w których wszyscy są z jednego kraju
+for (rok, kod_grupy), zbior in kraje.items():
+    if len(zbior) == 1:
+        jednolite.setdefault(rok, []).append(nazwa_grupy[kod_grupy])
+
+for rok in sorted(jednolite):
+    print(rok, len(jednolite[rok]))
+
+najwiecej = max(jednolite, key=lambda r: len(jednolite[r]))
+print(najwiecej, jednolite[najwiecej])</code></pre></div><p><strong>Odpowiedź:</strong> 2008 1, 2009 1, 2010 1, 2011 4, 2012 2, 2013 2, 2014 2, 2015 1, 2017 1; najwięcej w 2011: Direct Energie, Euskaltel-Euskadi, Team Katusha, Sojasun</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-6"><h2><a class="self" href="#6-6">6.6</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa):
+    with open(nazwa, encoding=&quot;utf-8&quot;) as file:
+        file.readline()
+        return [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file if line.strip()]
+
+
+zawodnicy = {z[0]: z for z in wczytaj(&quot;zawodnicy.txt&quot;)}
+startujacy = wczytaj(&quot;startujacy.txt&quot;)
+
+kraje = {}
+for id_startu, rok, id_zawodnika, kod_grupy, kraj in startujacy:
+    kraje.setdefault(id_zawodnika, set()).add(kraj)
+
+for id_zawodnika, zbior in kraje.items():
+    if len(zbior) &gt; 1:
+        print(zawodnicy[id_zawodnika][1], zawodnicy[id_zawodnika][2], sorted(zbior))</code></pre></div><p><strong>Odpowiedź:</strong> Chris Froome – Kenia, Wielka Brytania; Heinrich Haussler – Australia, Niemcy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

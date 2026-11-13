@@ -1,0 +1,32 @@
+name: Zbuduj stronę
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "dzialy/**"
+      - "tools/build_site.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generuj docs/
+        run: python tools/build_site.py
+      - name: Zapisz zmiany strony
+        run: |
+          if [ -n "$(git status --porcelain docs)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
+            git add docs
+            git commit -m "Przebuduj stronę"
+            git push
+          fi

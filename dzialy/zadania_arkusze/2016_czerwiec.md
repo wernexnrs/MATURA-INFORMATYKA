@@ -1,72 +1,419 @@
-<h1 align="center">2016 Czerwiec</h1>
+<h1 align="center">2016 czerwiec</h1>
  
-[SPIS ARKUSZY](https://github.com/wernexnrs123/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+[SPIS ARKUSZY](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
+
+[ARKUSZ CZ. I](https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona.pdf) --- [ARKUSZ CZ. II](https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-2.pdf) --- [DANE](https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-zalaczniki.zip) --- [ODPOWIEDZI](https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-odpowiedzi.pdf)
+
+## 1.1, 1.2 i 1.3
+
+```py
+wywolania = []
+
+
+def F(n):
+    wywolania.append(f"F({n})")
+    if n == 1 or n == 2:
+        s = n
+    else:
+        s = n * F(n - 2)
+    s = s * (n + 1)
+    return s
+
+
+# 1.1
+for n in range(1, 7):
+    print(n, F(n))
+
+# 1.2
+wywolania = []
+F(11)
+print(", ".join(wywolania))
+
+# 1.3 - porównanie z (n+1)!
+silnia = 1
+for n in range(1, 11):
+    silnia *= n + 1
+    print(n, F(n), silnia)
+```
+**Odpowiedź:** 1.1: F(1..6) = 2, 6, 24, 120, 720, 5040; 1.2: F(11), F(9), F(7), F(5), F(3), F(1); 1.3: (n+1)!
+
+## 2.1, 2.2 i 2.3
+
+```py
+def mniejsza(a, b):
+    # czy a << b na planecie X
+    if a % 2 == 0 and b % 2 == 1:
+        return True
+    if a % 2 == 1 and b % 2 == 0:
+        return False
+    if a % 2 == 0:  # obie parzyste - zwykły porządek
+        return a < b
+    return a > b    # obie nieparzyste - odwrotny porządek
+
+
+def klucz(a):
+    # klucz sortowania: najpierw parzyste rosnąco, potem nieparzyste malejąco
+    if a % 2 == 0:
+        return (0, a)
+    return (1, -a)
+
+
+def najwiekszy(A):
+    # 2.3
+    maks = A[0]
+    for x in A[1:]:
+        if mniejsza(maks, x):
+            maks = x
+    return maks
+
+
+# 2.1
+print(sorted([3, 6, 8, 11, 15, 20, 35, 70, 100, 1000], key=klucz))
+
+# 2.2 - najmniejszym elementem ma być 10, np. dopisujemy 10 i 1
+print(min([10, 1, 27, 16, 7, 32], key=klucz))
+
+# 2.3
+print(najwiekszy([3, 6, 8, 11, 15, 20, 35, 70, 100, 1000]))
+print(najwiekszy([2, 4, 6, 8]))
+```
+**Odpowiedź:** 2.1: 6, 8, 20, 70, 100, 1000, 35, 15, 11, 3; 2.2: 10 i np. 1 (dowolna nieparzysta oprócz 7 i 27 albo parzysta większa od 10)
+
+## 4.1
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+miesiace = [0] * 13
+
+with open("ubezpieczenia.txt") as file:
+    next(file)
+    for line in file:
+        nazwisko, imie, data, miejsce = line.strip().split(";")
+        miesiace[int(data[5:7])] += 1
+
+for miesiac in range(1, 13):
+    print(miesiac, miesiace[miesiac])
+```
+**Odpowiedź:** 1: 26, 2: 22, 3: 30, 4: 27, 5: 25, 6: 31, 7: 33, 8: 19, 9: 29, 10: 32, 11: 28, 12: 29
+
+## 4.2
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+kobiety = {}
+
+with open("ubezpieczenia.txt") as file:
+    next(file)
+    for line in file:
+        nazwisko, imie, data, miejsce = line.strip().split(";")
+        if imie[-1] == "a":
+            kobiety[miejsce] = kobiety.get(miejsce, 0) + 1
+
+for miejsce in kobiety:
+    print(miejsce, kobiety[miejsce])
+```
+**Odpowiedź:** wieś 24, małe miasto 20, średnie miasto 59, duże miasto 97
+
+## 4.3
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+suma_kobiety = 0
+suma_mezczyzni = 0
+
+with open("ubezpieczenia.txt") as file:
+    next(file)
+    for line in file:
+        nazwisko, imie, data, miejsce = line.strip().split(";")
+        wiek = 2016 - int(data[:4])  # liczymy rocznikami
+
+        # składka w tysięcznych częściach procenta (0,1% = 100, 0,15% = 150, 0,12% = 120),
+        # żeby uniknąć błędów zaokrągleń float
+        if wiek <= 30:
+            procent = 100
+        elif wiek <= 45:
+            procent = 150
+        else:
+            procent = 120
+
+        if imie[-1] == "a":
+            kwota = 25000
+        else:
+            kwota = 30000
+
+        skladka = kwota * procent / 100000
+        if wiek > 60:
+            skladka += 49
+
+        if imie[-1] == "a":
+            suma_kobiety += skladka
+        else:
+            suma_mezczyzni += skladka
+
+print(f"{suma_kobiety:.2f}")
+print(f"{suma_mezczyzni:.2f}")
+```
+**Odpowiedź:** kobiety 8961,50 zł, mężczyźni 6261,00 zł
+
+## 4.4
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+przedzialy = {}  # początek przedziału (20, 30, ..., 70) -> liczba osób
+
+with open("ubezpieczenia.txt") as file:
+    next(file)
+    for line in file:
+        nazwisko, imie, data, miejsce = line.strip().split(";")
+        wiek = 2016 - int(data[:4])
+        poczatek = wiek // 10 * 10
+        przedzialy[poczatek] = przedzialy.get(poczatek, 0) + 1
+
+for poczatek in range(20, 80, 10):
+    print(f"{poczatek}-{poczatek + 9}", przedzialy.get(poczatek, 0))
+```
+**Odpowiedź:** 20-29: 62, 30-39: 56, 40-49: 64, 50-59: 56, 60-69: 71, 70-79: 22 (+ wykres kolumnowy)
+
+## 5.1
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+maturzysci = {}  # id -> (nazwisko, imie)
+with open("maturzysta.txt") as file:
+    next(file)
+    for line in file:
+        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
+        maturzysci[id_z] = (nazwisko, imie)
+
+informatyka = []
+with open("zdaje.txt") as file:
+    next(file)
+    for line in file:
+        id_z, id_p = line.strip().split(";")
+        if id_p == "15":  # 15 - informatyka (plik przedmioty.txt)
+            informatyka.append(maturzysci[id_z])
+
+for nazwisko, imie in sorted(informatyka):
+    print(nazwisko, imie)
+```
+**Odpowiedź:** Badowski Fryderyk, Barszcz Tomasz, Makowicz Magda, Nowak Paweł, Nowakowski Marek, Rybicka Maria, Wysocka Justyna
+
+## 5.2
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+dodatkowe = {}  # id przedmiotu dodatkowego -> nazwa
+with open("przedmioty.txt") as file:
+    next(file)
+    for line in file:
+        id_p, nazwa, data, godzina, typ = line.strip().split(";")
+        if typ == "dodatkowy":
+            dodatkowe[id_p] = nazwa
+
+ile = {}
+with open("zdaje.txt") as file:
+    next(file)
+    for line in file:
+        id_z, id_p = line.strip().split(";")
+        if id_p in dodatkowe:
+            ile[id_p] = ile.get(id_p, 0) + 1
+
+najczestszy = max(ile, key=ile.get)
+print(dodatkowe[najczestszy], ile[najczestszy])
+```
+**Odpowiedź:** wiedza o społeczeństwie, 8 osób
+
+## 5.3
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+maturzysci = {}  # id -> (nazwisko, imie)
+with open("maturzysta.txt") as file:
+    next(file)
+    for line in file:
+        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
+        maturzysci[id_z] = (nazwisko, imie)
+
+dodatkowe = set()
+with open("przedmioty.txt") as file:
+    next(file)
+    for line in file:
+        id_p, nazwa, data, godzina, typ = line.strip().split(";")
+        if typ == "dodatkowy":
+            dodatkowe.add(id_p)
+
+ile = {}  # id zdającego -> liczba przedmiotów dodatkowych
+with open("zdaje.txt") as file:
+    next(file)
+    for line in file:
+        id_z, id_p = line.strip().split(";")
+        if id_p in dodatkowe:
+            ile[id_z] = ile.get(id_z, 0) + 1
+
+najwiecej = max(ile.values())
+for id_z in ile:
+    if ile[id_z] == najwiecej:
+        print(*maturzysci[id_z], najwiecej)
+```
+**Odpowiedź:** Barańska Joanna, Zalicki Marcin, Bajda Maria - po 3 przedmioty
+
+## 5.4
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+wybrane = set()
+with open("zdaje.txt") as file:
+    next(file)
+    for line in file:
+        id_z, id_p = line.strip().split(";")
+        wybrane.add(id_p)
+
+with open("przedmioty.txt") as file:
+    next(file)
+    for line in file:
+        id_p, nazwa, data, godzina, typ = line.strip().split(";")
+        if typ == "dodatkowy" and id_p not in wybrane:
+            print(nazwa)
+```
+**Odpowiedź:** język łaciński i kultura antyczna
+
+## 5.5
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+przedmioty = {}  # id -> (nazwa, typ)
+with open("przedmioty.txt") as file:
+    next(file)
+    for line in file:
+        id_p, nazwa, data, godzina, typ = line.strip().split(";")
+        przedmioty[id_p] = (nazwa, typ)
+
+najmlodszy = None
+najpozniejsza_data = ""
+with open("maturzysta.txt") as file:
+    next(file)
+    for line in file:
+        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
+        if data > najpozniejsza_data:  # daty RRRR-MM-DD można porównywać jak napisy
+            najpozniejsza_data = data
+            najmlodszy = id_z
+            dane = (imie, nazwisko)
+
+print(*dane)
+with open("zdaje.txt") as file:
+    next(file)
+    for line in file:
+        id_z, id_p = line.strip().split(";")
+        if id_z == najmlodszy:
+            print(*przedmioty[id_p])
+```
+**Odpowiedź:** Marek Nowakowski: język polski, matematyka, język niemiecki, informatyka
+
+## 5.6
+
+*Zadanie na Excel/Access — rozwiązanie w Pythonie.*
+
+```py
+mezczyzni = 0
+
+with open("maturzysta.txt") as file:
+    next(file)
+    for line in file:
+        id_z, nazwisko, imie, pesel, data = line.strip().split(";")
+        if int(pesel[-2]) % 2 == 1:
+            mezczyzni += 1
+
+print(mezczyzni)
+```
+**Odpowiedź:** 180
 
 ## 6.1
 
 ```py
-count = 0
-with open("MIN-R2A1P-163_dane/liczby.txt") as file:
+licznik = 0
+
+with open("liczby.txt") as file:
     for line in file:
         if line.strip()[-1] == "8":
-            count += 1
-print(count)
+            licznik += 1
 
+print(licznik)
 ```
+**Odpowiedź:** 103
 
 ## 6.2
 
 ```py
-count = 0
-with open("MIN-R2A1P-163_dane/liczby.txt") as file:
-    for line in file:
-        line = line.strip()
-        print(line[:-1])
-        if line[-1] == "4" and "0" not in line[:-1]:
-            count += 1
-print(count)
+licznik = 0
 
+with open("liczby.txt") as file:
+    for line in file:
+        kod = line.strip()
+        if kod[-1] == "4" and "0" not in kod[:-1]:
+            licznik += 1
+
+print(licznik)
 ```
+**Odpowiedź:** 29
 
 ## 6.3
 
 ```py
-count = 0
-with open("MIN-R2A1P-163_dane/liczby.txt") as file:
-    for line in file:
-        line = line.strip()
-        if line[-1] == "2" and int(line[:-1], 2) % 2 == 0:
-            count += 1
-print(count)
+licznik = 0
 
+with open("liczby.txt") as file:
+    for line in file:
+        kod = line.strip()
+        # liczba dwójkowa jest parzysta, gdy jej ostatnia cyfra (przedostatni znak kodu) to 0
+        if kod[-1] == "2" and kod[-2] == "0":
+            licznik += 1
+
+print(licznik)
 ```
+**Odpowiedź:** 153
 
 ## 6.4
 
 ```py
-count = 0
-with open("MIN-R2A1P-163_dane/liczby.txt") as file:
-    for line in file:
-        line = line.strip()
-        if line[-1] == "8":
-            count += int(line[:-1], 8)
-print(count)
+suma = 0
 
+with open("liczby.txt") as file:
+    for line in file:
+        kod = line.strip()
+        if kod[-1] == "8":
+            suma += int(kod[:-1], 8)
+
+print(suma)
 ```
+**Odpowiedź:** 887918739
 
 ## 6.5
 
 ```py
-lista = []
-with open("MIN-R2A1P-163_dane/liczby.txt") as file:
+kod_min = kod_max = None
+wartosc_min = wartosc_max = None
+
+with open("liczby.txt") as file:
     for line in file:
-        line = line.strip()
-        base = int(line[-1])
-        lista.append((int(line), base, int(line[:-1], base)))
+        kod = line.strip()
+        wartosc = int(kod[:-1], int(kod[-1]))
+        if wartosc_min is None or wartosc < wartosc_min:
+            wartosc_min = wartosc
+            kod_min = kod
+        if wartosc_max is None or wartosc > wartosc_max:
+            wartosc_max = wartosc
+            kod_max = kod
 
-sort_end = sorted(lista, key=lambda x: x[2], reverse=True)
-
-print(sort_end[0])
-print(sort_end[-1])
-
+print(kod_max, wartosc_max)
+print(kod_min, wartosc_min)
 ```
+**Odpowiedź:** największa: 8066218209 (347931225), najmniejsza: 100002 (16)

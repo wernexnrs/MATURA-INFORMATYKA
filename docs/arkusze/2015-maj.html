@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2015 maj | Matura z informatyki</title>
+<meta name="description" content="2015 maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 3.1 i 3.2, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1, 6.2, 6.3, 6.4).">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="2015 maj">
+<meta property="og:description" content="2015 maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 3.1 i 3.2, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1, 6.2, 6.3, 6.4).">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "2015 maj", "description": "2015 maj - rozwiązania zadań w Pythonie z odpowiedziami (zadania 1.1 i 1.2, 3.1 i 3.2, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1, 6.2, 6.3, 6.4).", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="../index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="../index.html">Start</a><a href="../algorytmy.html">Algorytmy CKE</a><a href="../dodatkowe.html">Dodatkowe</a><a href="../arkusze.html" aria-current="page">Arkusze</a><a href="../funkcje.html">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#3-1-i-3-2">3.1 i 3.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li><li><a href="#6-4">6.4</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>2015 maj</span></nav>
+<h1 class="page-title">2015 maj</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card" id="1-1-i-1-2"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def minuty(godzina):
+    h, m = godzina.split(&quot;:&quot;)
+    return int(h) * 60 + int(m)
+
+
+strategie = {
+    &quot;A&quot;: lambda f: (-(f[2] - f[1]), f[2]),  # najdłuższy, potem najwcześniej się kończy
+    &quot;B&quot;: lambda f: (f[2] - f[1], f[2]),     # najkrótszy, potem najwcześniej się kończy
+    &quot;C&quot;: lambda f: (f[1], f[2]),            # najwcześniej się zaczyna, potem najwcześniej się kończy
+    &quot;D&quot;: lambda f: (f[2], -f[1]),           # najwcześniej się kończy, potem najpóźniej się zaczyna
+}
+
+
+def telewidz(program, strategia):
+    T = [(nazwa, minuty(od), minuty(do)) for nazwa, od, do in program]
+    P = []
+    while T:
+        x = min(T, key=strategie[strategia])
+        T.remove(x)
+        P.append(x[0])
+        # usuwamy filmy kolidujące z x (koniec jednego = początek drugiego to nie kolizja)
+        T = [f for f in T if f[2] &lt;= x[1] or f[1] &gt;= x[2]]
+    return P
+
+
+# 1.1 - program z treści zadania
+program = [
+    (&quot;film 1&quot;, &quot;9:00&quot;, &quot;12:00&quot;),
+    (&quot;film 2&quot;, &quot;15:00&quot;, &quot;17:00&quot;),
+    (&quot;film 3&quot;, &quot;11:00&quot;, &quot;16:00&quot;),
+    (&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;),
+    (&quot;film 5&quot;, &quot;11:30&quot;, &quot;12:30&quot;),
+]
+for s in &quot;ABCD&quot;:
+    print(s, telewidz(program, s))
+
+# 1.2 - kontrprzykłady (strategia D jest optymalna, więc służy jako wzorzec)
+kontrprzyklady = {
+    &quot;A&quot;: [(&quot;film 1&quot;, &quot;10:00&quot;, &quot;12:00&quot;), (&quot;film 2&quot;, &quot;12:00&quot;, &quot;14:00&quot;),
+          (&quot;film 3&quot;, &quot;10:00&quot;, &quot;11:00&quot;), (&quot;film 4&quot;, &quot;11:00&quot;, &quot;12:00&quot;)],
+    &quot;B&quot;: [(&quot;film 1&quot;, &quot;11:30&quot;, &quot;12:30&quot;), (&quot;film 2&quot;, &quot;15:00&quot;, &quot;16:00&quot;),
+          (&quot;film 3&quot;, &quot;10:00&quot;, &quot;12:00&quot;), (&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;)],
+    &quot;C&quot;: [(&quot;film 1&quot;, &quot;9:00&quot;, &quot;14:00&quot;), (&quot;film 2&quot;, &quot;15:00&quot;, &quot;16:00&quot;),
+          (&quot;film 3&quot;, &quot;10:00&quot;, &quot;12:00&quot;), (&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;)],
+}
+for s in kontrprzyklady:
+    print(s, telewidz(kontrprzyklady[s], s), &quot;optymalnie:&quot;, telewidz(kontrprzyklady[s], &quot;D&quot;))</code></pre></div><p><strong>Odpowiedź:</strong> 1.1: B: {film 5, film 2}, C: {film 1, film 4, film 2}, D: {film 1, film 4, film 2}. 1.2: np. A: {film 1, film 2} zamiast {film 3, film 4, film 2} (programy jak w kodzie).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="3-1-i-3-2"><h2><a class="self" href="#3-1-i-3-2">3.1 i 3.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozszerzony_euklides(a, b, poziom=1):
+    if b == 0:
+        print(poziom, a, b, 1, 0)
+        return 1, 0
+    r = a % b
+    x, y = rozszerzony_euklides(b, r, poziom + 1)  # krok 3: (b, r)
+    x, y = y, x - (a // b) * y                     # krok 4: (y&#x27;, x&#x27; - (a div b) * y&#x27;)
+    print(poziom, a, b, x, y)
+    return x, y
+
+
+# 3.1 - tabela dla a = 188, b = 12 (wiersze wypisywane przy powrocie z rekurencji)
+x, y = rozszerzony_euklides(188, 12)
+print(&quot;NWD =&quot;, 188 * x + 12 * y)</code></pre></div><p><strong>Odpowiedź:</strong> 3.1: (188, 12, -1, 16), (12, 8, 1, -1), (8, 4, 0, 1), (4, 0, 1, 0). 3.2: krok 3: (b, r), krok 4: (y', x' - (a div b) · y').</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-1"><h2><a class="self" href="#4-1">4.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynik = 0
+
+with open(&quot;liczby.txt&quot;) as file:
+    for line in file:
+        liczba = line.strip()
+        if liczba.count(&quot;0&quot;) &gt; liczba.count(&quot;1&quot;):
+            wynik += 1
+
+print(wynik)</code></pre></div><p><strong>Odpowiedź:</strong> 422</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-2"><h2><a class="self" href="#4-2">4.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przez_dwa = przez_osiem = 0
+
+with open(&quot;liczby.txt&quot;) as file:
+    for line in file:
+        liczba = line.strip()
+        # liczba binarna jest podzielna przez 2, gdy kończy się na 0, a przez 8 - gdy kończy się na 000
+        if liczba[-1] == &quot;0&quot;:
+            przez_dwa += 1
+        if liczba[-3:] == &quot;000&quot;:
+            przez_osiem += 1
+
+print(przez_dwa, przez_osiem)</code></pre></div><p><strong>Odpowiedź:</strong> 500 liczb podzielnych przez 2, 123 liczby podzielne przez 8</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="4-3"><h2><a class="self" href="#4-3">4.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lista = []
+
+with open(&quot;liczby.txt&quot;) as file:
+    for line in file:
+        lista.append(int(line.strip(), 2))
+
+# numer wiersza najmniejszej i największej liczby
+print(lista.index(min(lista)) + 1, lista.index(max(lista)) + 1)</code></pre></div><p><strong>Odpowiedź:</strong> 859 (najmniejsza), 925 (największa)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-1"><h2><a class="self" href="#5-1">5.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ludnosc = {&quot;A&quot;: 0, &quot;B&quot;: 0, &quot;C&quot;: 0, &quot;D&quot;: 0}
+
+with open(&quot;kraina.txt&quot;) as file:
+    for line in file:
+        nazwa, k13, m13, k14, m14 = line.strip().split(&quot;;&quot;)
+        region = nazwa[-1]
+        ludnosc[region] += int(k13) + int(m13)
+
+for region in ludnosc:
+    print(region, ludnosc[region])</code></pre></div><p><strong>Odpowiedź:</strong> A: 33 929 579, B: 41 736 619, C: 57 649 017, D: 36 530 387 (+ wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-2"><h2><a class="self" href="#5-2">5.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">regiony = {&quot;A&quot;: 0, &quot;B&quot;: 0, &quot;C&quot;: 0, &quot;D&quot;: 0}
+
+with open(&quot;kraina.txt&quot;) as file:
+    for line in file:
+        nazwa, k13, m13, k14, m14 = line.strip().split(&quot;;&quot;)
+        if int(k14) &gt; int(k13) and int(m14) &gt; int(m13):
+            regiony[nazwa[-1]] += 1
+
+print(sum(regiony.values()))
+for region in regiony:
+    print(region, regiony[region])</code></pre></div><p><strong>Odpowiedź:</strong> 19 województw, w tym A: 3, B: 4, C: 8, D: 4</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="5-3"><h2><a class="self" href="#5-3">5.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma_2025 = 0
+najwiecej = 0
+najwieksze = &quot;&quot;
+przeludnione = 0
+
+with open(&quot;kraina.txt&quot;) as file:
+    for line in file:
+        nazwa, k13, m13, k14, m14 = line.strip().split(&quot;;&quot;)
+        l2013 = int(k13) + int(m13)
+        l2014 = int(k14) + int(m14)
+        # tempo zaokrąglone w dół do 4 miejsc - liczymy w dziesięciotysięcznych, żeby uniknąć błędów float
+        tempo = l2014 * 10000 // l2013
+
+        ludnosc = l2014
+        przeludnienie = ludnosc &gt; 2 * l2013
+        for rok in range(2015, 2026):
+            if not przeludnienie:
+                ludnosc = ludnosc * tempo // 10000
+                if ludnosc &gt; 2 * l2013:
+                    przeludnienie = True
+
+        if przeludnienie:
+            przeludnione += 1
+        suma_2025 += ludnosc
+        if ludnosc &gt; najwiecej:
+            najwiecej = ludnosc
+            najwieksze = nazwa
+
+print(suma_2025)
+print(najwieksze)
+print(przeludnione)</code></pre></div><p><strong>Odpowiedź:</strong> 125 930 205 mieszkańców w 2025 roku, najwięcej: w12C, przeludnienie w 18 województwach</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-1"><h2><a class="self" href="#6-1">6.1</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kierowcy = {}  # id -&gt; (nazwisko, imie, kraj)
+wyscigi = {}   # id -&gt; (rok, grand prix)
+wyniki = []    # (id kierowcy, punkty, id wyscigu)
+
+with open(&quot;Kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, nazwisko, imie, kraj = line.strip().split(&quot;;&quot;)
+        kierowcy[id_k] = (nazwisko, imie, kraj)
+
+with open(&quot;Wyscigi.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_w, rok, gp = line.strip().split(&quot;;&quot;)
+        wyscigi[id_w] = (rok, gp)
+
+with open(&quot;Wyniki.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, punkty, id_w = line.strip().split(&quot;;&quot;)
+        wyniki.append((id_k, float(punkty.replace(&quot;,&quot;, &quot;.&quot;)), id_w))
+
+# 6.1
+najwiecej = 0
+for id_k, punkty, id_w in wyniki:
+    if kierowcy[id_k][:2] == (&quot;Kubica&quot;, &quot;Robert&quot;) and punkty &gt; najwiecej:
+        najwiecej = punkty
+        najlepszy = id_w
+
+print(wyscigi[najlepszy][0], wyscigi[najlepszy][1], najwiecej)</code></pre></div><p><strong>Odpowiedź:</strong> 2010 Australia</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-2"><h2><a class="self" href="#6-2">6.2</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kierowcy = {}  # id -&gt; (nazwisko, imie, kraj)
+wyscigi = {}   # id -&gt; (rok, grand prix)
+wyniki = []    # (id kierowcy, punkty, id wyscigu)
+
+with open(&quot;Kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, nazwisko, imie, kraj = line.strip().split(&quot;;&quot;)
+        kierowcy[id_k] = (nazwisko, imie, kraj)
+
+with open(&quot;Wyscigi.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_w, rok, gp = line.strip().split(&quot;;&quot;)
+        wyscigi[id_w] = (rok, gp)
+
+with open(&quot;Wyniki.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, punkty, id_w = line.strip().split(&quot;;&quot;)
+        wyniki.append((id_k, float(punkty.replace(&quot;,&quot;, &quot;.&quot;)), id_w))
+
+# 6.2
+ile = {}
+for rok, gp in wyscigi.values():
+    ile[gp] = ile.get(gp, 0) + 1
+
+najmniej = min(ile.values())
+for gp in ile:
+    if ile[gp] == najmniej:
+        print(gp, ile[gp])</code></pre></div><p><strong>Odpowiedź:</strong> Indie</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-3"><h2><a class="self" href="#6-3">6.3</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kierowcy = {}  # id -&gt; (nazwisko, imie, kraj)
+wyscigi = {}   # id -&gt; (rok, grand prix)
+wyniki = []    # (id kierowcy, punkty, id wyscigu)
+
+with open(&quot;Kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, nazwisko, imie, kraj = line.strip().split(&quot;;&quot;)
+        kierowcy[id_k] = (nazwisko, imie, kraj)
+
+with open(&quot;Wyscigi.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_w, rok, gp = line.strip().split(&quot;;&quot;)
+        wyscigi[id_w] = (rok, gp)
+
+with open(&quot;Wyniki.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, punkty, id_w = line.strip().split(&quot;;&quot;)
+        wyniki.append((id_k, float(punkty.replace(&quot;,&quot;, &quot;.&quot;)), id_w))
+
+# 6.3
+for sezon in [&quot;2000&quot;, &quot;2006&quot;, &quot;2012&quot;]:
+    suma = {}
+    for id_k, punkty, id_w in wyniki:
+        if wyscigi[id_w][0] == sezon:
+            suma[id_k] = suma.get(id_k, 0) + punkty
+    zwyciezca = max(suma, key=suma.get)
+    nazwisko, imie, kraj = kierowcy[zwyciezca]
+    print(sezon, imie, nazwisko, suma[zwyciezca])</code></pre></div><p><strong>Odpowiedź:</strong> 2000: Michael Schumacher 108, 2006: Fernando Alonso 134, 2012: Sebastian Vettel 281</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="6-4"><h2><a class="self" href="#6-4">6.4</a></h2><p><em>Zadanie na Excel/Access — rozwiązanie w Pythonie.</em></p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kierowcy = {}  # id -&gt; (nazwisko, imie, kraj)
+wyscigi = {}   # id -&gt; (rok, grand prix)
+wyniki = []    # (id kierowcy, punkty, id wyscigu)
+
+with open(&quot;Kierowcy.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, nazwisko, imie, kraj = line.strip().split(&quot;;&quot;)
+        kierowcy[id_k] = (nazwisko, imie, kraj)
+
+with open(&quot;Wyscigi.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_w, rok, gp = line.strip().split(&quot;;&quot;)
+        wyscigi[id_w] = (rok, gp)
+
+with open(&quot;Wyniki.txt&quot;) as file:
+    next(file)
+    for line in file:
+        id_k, punkty, id_w = line.strip().split(&quot;;&quot;)
+        wyniki.append((id_k, float(punkty.replace(&quot;,&quot;, &quot;.&quot;)), id_w))
+
+# 6.4 - liczymy RÓŻNYCH kierowców danego kraju, którzy zdobyli punkty w 2012
+punktujacy = set()
+for id_k, punkty, id_w in wyniki:
+    if wyscigi[id_w][0] == &quot;2012&quot;:
+        punktujacy.add(id_k)
+
+kraje = {}
+for id_k in punktujacy:
+    kraj = kierowcy[id_k][2]
+    kraje[kraj] = kraje.get(kraj, 0) + 1
+
+for kraj in sorted(kraje):
+    print(kraj, kraje[kraj])</code></pre></div><p><strong>Odpowiedź:</strong> Australia 2, Brazylia 2, Finlandia 1, Francja 2, Hiszpania 1, Japonia 1, Meksyk 1, Niemcy 4, Wenezuela 1, Wielka Brytania 3</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="../";</script>
+<script src="../assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

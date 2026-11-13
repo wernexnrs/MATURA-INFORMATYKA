@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Przydatne moduły Pythona | Matura z informatyki</title>
+<meta name="description" content="Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.">
+<link rel="canonical" href="https://wernexnrs.github.io/MATURA-INFORMATYKA/biblioteki.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Matura z informatyki">
+<meta property="og:title" content="Przydatne moduły Pythona">
+<meta property="og:description" content="Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.">
+<meta property="og:url" content="https://wernexnrs.github.io/MATURA-INFORMATYKA/biblioteki.html">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Przydatne moduły Pythona", "description": "Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.", "inLanguage": "pl", "url": "https://wernexnrs.github.io/MATURA-INFORMATYKA/biblioteki.html", "educationalLevel": "Szkoła średnia - matura", "isAccessibleForFree": true, "license": "https://opensource.org/licenses/MIT", "learningResourceType": "Materiały do nauki"}</script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="topbar" id="top">
+  <a class="brand" href="index.html"><span class="logo">&lt;/&gt;</span><span>Matura <b>informatyka</b></span></a>
+  <nav class="mainnav" aria-label="Główne"><a href="index.html">Start</a><a href="algorytmy.html">Algorytmy CKE</a><a href="dodatkowe.html">Dodatkowe</a><a href="arkusze.html">Arkusze</a><a href="funkcje.html" aria-current="page">Python</a></nav>
+  <div class="tools">
+    <button class="search-btn" type="button" data-open-search aria-label="Szukaj"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj</span><kbd>/</kbd></button>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Zmień motyw"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg></button>
+    <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  </div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#wszystkie-opisane-tu-zagadnienia-nie-sa-wyczerpaniem-tematu-sa-to-jedynie-rzeczy-ktore-moga-sie-przydac">Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać.</a></li><li><a href="#collections">collections</a></li><li><a href="#math">math</a></li><li><a href="#statistics">statistics</a></li><li><a href="#re">re</a></li><li><a href="#fractions">fractions</a></li><li><a href="#itertools">itertools</a></li></ul></div></aside>
+<main id="tresc" tabindex="-1">
+<nav class="crumbs" aria-label="Okruszki"><a href="index.html">Start</a> / <span>Przydatne moduły Pythona</span></nav>
+<h1 class="page-title">Przydatne moduły Pythona</h1><p class="lead">Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.</p><section class="card" id="wszystkie-opisane-tu-zagadnienia-nie-sa-wyczerpaniem-tematu-sa-to-jedynie-rzeczy-ktore-moga-sie-przydac"><h2><a class="self" href="#wszystkie-opisane-tu-zagadnienia-nie-sa-wyczerpaniem-tematu-sa-to-jedynie-rzeczy-ktore-moga-sie-przydac">Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać.</a></h2><ul><li><strong>collections</strong> - słowniki<ul><li><a href="#counter">Counter()</a><ul><li>.elements()</li><li>.most_common()</li><li>.subtract()</li></ul></li><li><a href="#order">OrderedDict()</a></li></ul></li><li><strong>math</strong> - matematyka<ul><li><a href="#funkcje">funkcje</a></li></ul></li><li><strong>statistics</strong> - statystyka<ul><li><a href="#statfunc">funkcje</a></li></ul></li><li><strong>re</strong> - RegEX<ul><li><a href="#refunc">funkcje</a></li><li><a href="#meta">Metacharacters</a></li><li><a href="#special">Specjalne sekwencje</a></li><li><a href="#sets">Zbiory</a></li><li><a href="#biale">Białe znaki</a></li></ul></li><li><strong>fractions</strong> - ułamki<ul><li><a href="#ulamki">Fraction</a></li></ul></li><li><strong>itertools</strong><ul><li><a href="#count">count</a></li><li><a href="#zip_longest">zip_longest</a></li><li><a href="#cycle">cycle</a></li><li><a href="#repeat">repeat</a></li><li><a href="#starmap">starmap</a></li><li><a href="#combinations">combinations</a></li><li><a href="#permutations">permutations</a></li><li><a href="#product">product</a></li><li><a href="#chain">chain</a></li><li><a href="#islice">islice</a></li><li><a href="#accumulate">accumulate</a></li><li><a href="#groupby">groupby</a></li></ul></li><li><strong>operator</strong></li><li><strong>functools</strong></li><li><strong>enum</strong></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="collections"><span id="counter" class="anchor"></span><h2><a class="self" href="#collections">collections</a></h2><h3>Counter()</h3><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">c = Counter(a=3, b=1)
+d = Counter(a=1, b=2)
+c + d                       # dodawanie
+#Output: Counter({&#x27;a&#x27;: 4, &#x27;b&#x27;: 3})
+c - d                       # odejmowanie, zachowanie tylko dodatnich liczb
+#Output:Counter({&#x27;a&#x27;: 2})
+c &amp; d                       # min każdego klucza
+#Output:Counter({&#x27;a&#x27;: 1, &#x27;b&#x27;: 1})
+c | d                       # max każdego klucza
+#Output:Counter({&#x27;a&#x27;: 3, &#x27;b&#x27;: 2})</code></pre></div><h5>Metody</h5><ul><li><strong>.elements()</strong> -&gt; zwraca iteracje kluczy: 'klucz'*vaule</li><li><strong>.most_common()</strong> -&gt; zwraca liste krotek malejąca według wartości kluczy</li><li><strong>.subtract()</strong> -&gt; zwraca counter jako wynik odejmowania z zachowaniem ujemnych wartości</li></ul><h3>OrderedDict()</h3><p>Właściwości:</p><span id="order" class="anchor"></span><ul><li>Gdy porównamy 2 słowniki klasy dict, które zawierają te same elementy, niezależnie od ich kolejności dostaniemy True. Słowniki klasy OrderedDict do zwrócenia prawdy muszą mieć tą samą kolejność elementów.</li></ul><p>Zwraca podsłownik, którym można zarządzać np.:</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import collections
+
+d = collections.OrderedDict()
+d[&#x27;a&#x27;] = &#x27;A&#x27;
+d[&#x27;b&#x27;] = &#x27;B&#x27;
+d[&#x27;c&#x27;] = &#x27;C&#x27;
+
+for k, v in d.items():
+    print(k, v)
+
+# Output:
+# a A
+# b B
+# c C
+# Od Pythona 3.7 zwykły dict też pamięta kolejność dodawania.
+# OrderedDict przydaje się np. do move_to_end():
+d.move_to_end(&#x27;a&#x27;)
+print(list(d))  # [&#x27;b&#x27;, &#x27;c&#x27;, &#x27;a&#x27;]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="math"><span id="funkcje" class="anchor"></span><h2><a class="self" href="#math">math</a></h2><h3>Funkcje</h3><ul><li><strong>cos(x)</strong> -&gt; Zwraca cosinus argumentu x.</li><li><strong>sin(x)</strong> -&gt;  Zwraca sinus argumentu x.</li><li><strong>tan(x)</strong> -&gt; Zwraca tangens argumentu x.</li><li><strong>radians(x)</strong> -&gt; Przekształca kąt x ze stopni na radiany.</li><li><strong>degrees(x)</strong> -&gt; Przekształca kąt x z radianów na stopnie.</li><li><strong>exp(x)</strong> -&gt; Zwraca wartość e**x.</li><li><strong>fabs(x)</strong> -&gt; Zwraca moduł (wartość bezwzględną) argumentu x.</li><li><strong>floor(x)</strong> -&gt; Zwraca quotpodłogę (największą liczbę całkowitą nie większą od) argumentu x w postaci liczby zmiennoprzecinkowej.</li><li><strong>ceil(x)</strong> -&gt; Zwraca najmniejszą liczbę całkowitą nie mniejszą od argumentu x w postaci liczby zmiennoprzecinkowej.</li><li><strong>hypot(x, y)</strong> -&gt; Zwraca wartość sqrt(x*x + y*y). Jest to długość przeciwprostokątnej w trójkącie prostokątnym o przyprostokątnych, których długości są równe x oraz y, lub odległość punktu (x, y) od środka układu współrzędnych.</li><li><strong>log(x,y)</strong> -&gt; Zwraca logarytm o podstawie y argumentu x.</li><li><strong>log10(x)</strong> -&gt; Zwraca logarytm o podstawie 10 argumentu x.</li><li><strong>log2(x)</strong> -&gt; Zwraca logarytm o podstawie 2 argumentu x.</li><li><strong>pow(x, y)</strong> -&gt; Zwraca wartość x**y.</li><li><strong>sqrt(x)</strong> -&gt; Zwraca pierwiastek kwadratowy argumentu x.</li><li><strong>dist()</strong> -&gt; Zwraca dystans między dwoma punktami</li><li><strong>factorial()</strong>  -&gt; zwraca silnie</li><li><strong>fsum()</strong> -&gt; zwraca sume elementów obiektu</li><li><strong>prod()</strong> -&gt; zwraca iloczyn elementów obiektu</li><li><strong>gcd()</strong> -&gt; zwraca największy wspólny dzielnik</li><li><strong>e</strong> -&gt; zwraca wartość liczby Eulera (2.7182...)</li><li><strong>pi</strong> -&gt; zwraca wartość PI (3.1415...)</li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="statistics"><span id="statfunc" class="anchor"></span><h2><a class="self" href="#statistics">statistics</a></h2><h3>Funkcje</h3><ul><li><strong>mean()</strong> -&gt; Średnia arytmetyczna</li><li><strong>median()</strong> -&gt; Mediana</li><li><strong>median_high()</strong> -&gt; w zbiorze parzystym zwraca większa wartość środkową</li><li><strong>median_low()</strong> -&gt; w zbiorze parzystym zwraca mniejsza wartość środkową</li><li><strong>mode()</strong> -&gt; moda/dominanta</li><li><strong>pstdev()</strong> -&gt; Calculates the standard deviation from an entire population</li><li><strong>stdev()</strong> -&gt; Calculates the standard deviation from a sample of data</li><li><strong>pvariance()</strong> -&gt; Calculates the variance of an entire population</li><li><strong>variance()</strong> -&gt; Calculates the variance from a sample of data</li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="re"><span id="refunc" class="anchor"></span><h2><a class="self" href="#re">re</a></h2><p>RegEx w pythonie.</p><h3>Funkcje</h3><ul><li><strong>findall()</strong> -&gt; Returns a list containing all matches</li><li><strong>search()</strong> -&gt; Returns a Match object if there is a match anywhere in the string</li><li><strong>split()</strong> -&gt; Returns a list where the string has been split at each match</li><li><strong>sub()</strong> -&gt; Replaces one or many matches with a string</li></ul><h3>Metacharacters</h3><span id="meta" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th><th style="text-align:center">przykład</th></tr><tr><td style="text-align:center">[]</td><td style="text-align:center">Zbiór znaków</td><td style="text-align:center">"[a-m]"</td></tr><tr><td style="text-align:center">\</td><td style="text-align:center">Sygnał specjalnej sekwencji</td><td style="text-align:center">"\d"</td></tr><tr><td style="text-align:center">.</td><td style="text-align:center">każdy znak oprócz końca linii</td><td style="text-align:center">"he..o"</td></tr><tr><td style="text-align:center">^</td><td style="text-align:center">Zaczyna się od</td><td style="text-align:center">"^hello"</td></tr><tr><td style="text-align:center">$</td><td style="text-align:center">Kończy się na</td><td style="text-align:center">"world$"</td></tr><tr><td style="text-align:center">*</td><td style="text-align:center">Zero or more occurrences</td><td style="text-align:center">"aix*"</td></tr><tr><td style="text-align:center">+</td><td style="text-align:center">One or more occurrences</td><td style="text-align:center">"aix+"</td></tr><tr><td style="text-align:center">{}</td><td style="text-align:center">Wystąpnienia danego znaku</td><td style="text-align:center">"al{2}"</td></tr><tr><td style="text-align:center">"</td><td style="text-align:center">"</td><td style="text-align:center">to albo to</td><td>"falls</td><td>stays"</td></tr></table></div><h3>Specjalne sekwencje</h3><span id="special" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th><th style="text-align:center">przykład</th></tr><tr><td style="text-align:center">\A</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest na początku stringa</td><td style="text-align:center">"\AThe"</td></tr><tr><td style="text-align:center">\b</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest na początku lub na końcu stringa (r - raw string)</td><td style="text-align:center">r"\bain" r"ain\b"</td></tr><tr><td style="text-align:center">\B</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest w stringu lecz nie na końcu ani początku. (r - raw string)</td><td style="text-align:center">r"\Bain" r"ain\B"</td></tr><tr><td style="text-align:center">\d</td><td style="text-align:center">Zwraca dopasowanie liczb w ciągu</td><td style="text-align:center">"\d"</td></tr><tr><td style="text-align:center">\D</td><td style="text-align:center">Zwraca dopasowanie, gdzie nie ma liczb</td><td style="text-align:center">"\D"</td></tr><tr><td style="text-align:center">\s</td><td style="text-align:center">Zwraca dopasowanie białych znaków</td><td style="text-align:center">"\s"</td></tr><tr><td style="text-align:center">\S</td><td style="text-align:center">Zwraca dopasowanie, gdzie nie ma białych znaków</td><td style="text-align:center">"\S"</td></tr><tr><td style="text-align:center">\w</td><td style="text-align:center">Zwraca dopasowanie, gdzie ciąg znaków zawiera litery alfabetu angielskiegu, liczby i podłogę</td><td style="text-align:center">"\w"</td></tr><tr><td style="text-align:center">\W</td><td style="text-align:center">Zwraca    dopasowanie gdzie nie ma tego co up</td><td style="text-align:center">"\W"</td></tr><tr><td style="text-align:center">\Z</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest na końcu stringa</td><td style="text-align:center">"Spain\Z"</td></tr></table></div><h3>Zbiory</h3><span id="sets" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">zbiór</th><th style="text-align:center">opis</th></tr><tr><td style="text-align:center">[arn]</td><td style="text-align:center">Zwraca dopasowanie gdzie jakis z elementów znajduje się w stringu</td></tr><tr><td style="text-align:center">[a-n]</td><td style="text-align:center">Zwraca dopasowanie wszystkiego co ma małe litery od a do n</td></tr><tr><td style="text-align:center">[^arn]</td><td style="text-align:center">Wszystko bez wymienionych</td></tr><tr><td style="text-align:center">[0123]</td><td style="text-align:center">Zwraca dopasowanie wymienionych liczb</td></tr><tr><td style="text-align:center">[0-9]</td><td style="text-align:center">Zwraca dopasowanie liczb od 0 do 9</td></tr><tr><td style="text-align:center">[0-5][0-9]</td><td style="text-align:center">zwraca wszystko od 00 do 59</td></tr><tr><td style="text-align:center">[a-zA-Z]</td><td style="text-align:center">Zwraca wszsytko co w alfabecie czy duże czy małe</td></tr><tr><td style="text-align:center">[+]</td><td style="text-align:center">Zwraca szukane znaki tutaj +</td></tr></table></div><h3>Białe znaki</h3><span id="biale" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th></tr><tr><td style="text-align:center">\'</td><td style="text-align:center">Pojedyńczy cytat</td></tr><tr><td style="text-align:center">\\</td><td style="text-align:center">Backslash</td></tr><tr><td style="text-align:center">\n</td><td style="text-align:center">enter</td></tr><tr><td style="text-align:center">\r</td><td style="text-align:center">Carriage Return</td></tr><tr><td style="text-align:center">\t</td><td style="text-align:center">tabulator</td></tr><tr><td style="text-align:center">\b</td><td style="text-align:center">Backspace</td></tr><tr><td style="text-align:center">\f</td><td style="text-align:center">Form Feed</td></tr><tr><td style="text-align:center">\ooo</td><td style="text-align:center">liczba ósemkowa</td></tr><tr><td style="text-align:center">\xhh</td><td style="text-align:center">liczba szesnastkowa</td></tr></table></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="fractions"><span id="ulamki" class="anchor"></span><h2><a class="self" href="#fractions">fractions</a></h2><p>class fractions.Fraction(numerator=0, denominator=1)</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from fractions import Fraction
+Fraction(16, -10)
+#Fraction(-8, 5)
+Fraction(123)
+#Fraction(123, 1)
+Fraction()
+#Fraction(0, 1)
+Fraction(&#x27;3/7&#x27;)
+#Fraction(3, 7)
+Fraction(&#x27; -3/7 &#x27;)
+#Fraction(-3, 7)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="itertools"><span id="count" class="anchor"></span><h2><a class="self" href="#itertools">itertools</a></h2><h3>count()</h3><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">data = [100,200,300,400]
+
+data2 = list(zip(itertools.count(start = 0, step = 1), data))
+
+#Output:  [(0, 100), (1, 200), (2, 300), (3,400)]</code></pre></div><h3>zip_longest()</h3><span id="zip_longest" class="anchor"></span><p>zip -&gt; iteruje tyle razy ile wynosi długość krótszego obiektu</p><p>zip_longest -&gt; iteruje tyle razy ile wynosi długość dłuższego obiektu</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · normal zip</button><button type="button" role="tab" aria-selected="false" class="tab">Python · itertools zip</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#normal zip
+
+data = [100,200,300,400]
+
+data2 = list(zip(range(10), data))
+
+#Output:  [(0, 100), (1, 200), (2, 300), (3,400)]</code></pre></div><div class="pane" hidden><pre><code class="language-python">#itertools zip
+
+data = [100,200,300,400]
+
+data2 = list(itertools.zip_longest(range(10), data))
+
+#Output:  [(0, 100), (1, 200), (2, 300), (3, 400), (4, None), (5, None), (6, None), (7, None), (8, None), (9, None)]</code></pre></div></div><h3>cycle()</h3><span id="cycle" class="anchor"></span><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">data = itertools.cycle([0,1])
+
+for _ in range(6):
+    print(next(data))
+
+#Output:  0 1 0 1 0 1</code></pre></div><h3>repeat()</h3><span id="repeat" class="anchor"></span><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">data = itertools.repeat(2, times=3)
+
+for _ in range(3):
+    print(next(data))
+
+#Output:  2 2 2   (czwarte next(data) zgłosiłoby StopIteration)
+
+print(list(map(pow, range(5), itertools.repeat(2))))
+
+# Output: [0, 1, 4, 9, 16]</code></pre></div><h3>starmap()</h3><span id="starmap" class="anchor"></span><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">
+print(list(itertools.starmap(pow, [(0,2), (1,2), (2,2)] )))
+
+# Output: [0, 1, 4]</code></pre></div><h3>combinations()</h3><span id="combinations" class="anchor"></span><p>Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność nie ma znaczenia.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
+
+result = itertools.combinations(chars, 2)
+
+for i in result:
+    print(i)
+&#x27;&#x27;&#x27;
+(&#x27;a&#x27;, &#x27;b&#x27;) nie ma powtórzeń np (&#x27;b&#x27;, &#x27;a&#x27;) bo to to samo
+(&#x27;a&#x27;, &#x27;c&#x27;)
+(&#x27;a&#x27;, &#x27;d&#x27;)
+(&#x27;b&#x27;, &#x27;c&#x27;)
+(&#x27;b&#x27;, &#x27;d&#x27;)
+(&#x27;c&#x27;, &#x27;d&#x27;)
+&#x27;&#x27;&#x27;</code></pre></div><h3>permutations()</h3><span id="permutations" class="anchor"></span><p>Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność MA znaczenie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
+
+result = itertools.permutations(chars, 2)
+
+for i in result:
+    print(i)
+&#x27;&#x27;&#x27;
+(&#x27;a&#x27;, &#x27;b&#x27;)
+(&#x27;a&#x27;, &#x27;c&#x27;)
+(&#x27;a&#x27;, &#x27;d&#x27;)
+(&#x27;b&#x27;, &#x27;a&#x27;)
+(&#x27;b&#x27;, &#x27;c&#x27;)
+(&#x27;b&#x27;, &#x27;d&#x27;)
+(&#x27;c&#x27;, &#x27;a&#x27;)
+(&#x27;c&#x27;, &#x27;b&#x27;)
+(&#x27;c&#x27;, &#x27;d&#x27;)
+(&#x27;d&#x27;, &#x27;a&#x27;)
+(&#x27;d&#x27;, &#x27;b&#x27;)
+(&#x27;d&#x27;, &#x27;c&#x27;)
+&#x27;&#x27;&#x27;</code></pre></div><h3>product()</h3><span id="product" class="anchor"></span><p>Wszystkie możliwe sposoby na zgrupowanie pewnej ilości liczb, gdzie kolejność MA znaczenie wraz z powtórzeniami tych znaków.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numbers = [0, 1, 2, 3]
+
+result = itertools.product(numbers, repeat=2)
+
+for i in result:
+    print(i)
+&#x27;&#x27;&#x27;
+(0, 0)
+(0, 1)
+(1, 0)
+(1, 1)
+&#x27;&#x27;&#x27;</code></pre></div><h3>chain()</h3><span id="chain" class="anchor"></span><p>Iteracja po kilku obiektach na raz</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numbers = [0, 1, 2, 3]
+chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
+es = [&#x27;first&#x27;, &#x27;second&#x27;, &#x27;third&#x27;, &#x27;fourth&#x27;]
+
+result = itertools.chain(numbers, chars, es)
+
+for i in result:
+    print(i)
+&#x27;&#x27;&#x27;
+0
+1
+2
+3
+a
+b
+c
+d
+first
+second
+third
+fourth
+&#x27;&#x27;&#x27;</code></pre></div><h3>islice()</h3><span id="islice" class="anchor"></span><p>Slice obiektu bez wykorzystywania kopii jak np podczas krojenia list.</p><div class="code"><div class="code-bar"><span>Python · islice(object,start,stop,step)</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># islice(object,start,stop,step)
+result = itertools.islice(range(10), 1, 5, 2)
+
+for i in result:
+    print(i)
+&#x27;&#x27;&#x27;
+1
+3
+&#x27;&#x27;&#x27;</code></pre></div><h3>accumulate()</h3><span id="accumulate" class="anchor"></span><p>Operacje podczas iteracji</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools, operator
+
+numbers = [1, 5, 4, 3]
+
+print(list(itertools.accumulate(numbers))) # [1, 6, 10, 13], dodawanie
+print( list(itertools.accumulate(numbers, operator.mul))) # [1, 5, 20, 60], mnożenie</code></pre></div><h3>groupby()</h3><span id="groupby" class="anchor"></span><p>Grupowanie obiektów.</p><p>Obiekt musi być posortowany po grupowanej wartości inaczej dane te zostaną pominiete.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">itertools.groupby(object,key) # moze kiedys</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section>
+</main>
+</div>
+<footer class="footer">
+  <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="linki.html">Przydatne linki</a></p>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Wyszukiwarka">
+    <input id="search-input" type="search" placeholder="Szukaj algorytmu, arkusza, zadania…" autocomplete="off" spellcheck="false">
+    <ul id="search-results" role="listbox"></ul>
+    <p class="search-hint"><kbd>↑</kbd><kbd>↓</kbd> wybór · <kbd>Enter</kbd> otwórz · <kbd>Esc</kbd> zamknij</p>
+  </div>
+</div>
+<script>window.ROOT="";</script>
+<script src="assets/search-index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
