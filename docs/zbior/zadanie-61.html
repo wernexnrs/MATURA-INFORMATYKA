@@ -34,10 +34,10 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#61-1">61.1</a></li><li><a href="#61-2">61.2</a></li><li><a href="#61-3">61.3</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#61-1">61.1</a></li><li><a href="#61-2">61.2</a></li><li><a href="#61-3">61.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 61. Ciągi arytmetyczne</span></nav>
-<h1 class="page-title">Zadanie 61. Ciągi arytmetyczne</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card" id="61-1"><h2><a class="self" href="#61-1">61.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ciagi = []
+<h1 class="page-title">Zadanie 61. Ciągi arytmetyczne</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="61-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#61-1">61.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ciagi = []
 
 with open(&quot;ciagi.txt&quot;) as file:
     wiersze = file.read().split(&quot;\n&quot;)
@@ -58,7 +58,7 @@ for ciag in ciagi:
         najwieksza_roznica = max(najwieksza_roznica, r)
 
 print(count)
-print(najwieksza_roznica)</code></pre></div><p><strong>Odpowiedź:</strong> 44 ciągi arytmetyczne, największa różnica: 246849</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="61-2"><h2><a class="self" href="#61-2">61.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_szescian(x):
+print(najwieksza_roznica)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 44 ciągi arytmetyczne, największa różnica: 246849</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="61-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#61-2">61.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_szescian(x):
     a = round(x ** (1 / 3))
     return a ** 3 == x
 
@@ -76,7 +76,7 @@ for ciag in ciagi:
         if czy_szescian(liczba) and liczba &gt; najwiekszy:
             najwiekszy = liczba
     if najwiekszy &gt; 0:
-        print(najwiekszy)</code></pre></div><p><strong>Odpowiedź:</strong> 1, 27, 551368, 1000000, 250047, 1000, 35937, 531441</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="61-3"><h2><a class="self" href="#61-3">61.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ciagi = []
+        print(najwiekszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1, 27, 551368, 1000000, 250047, 1000, 35937, 531441</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="61-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#61-3">61.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ciagi = []
 
 with open(&quot;bledne.txt&quot;) as file:
     wiersze = file.read().split(&quot;\n&quot;)
@@ -100,11 +100,13 @@ for ciag in ciagi:
 
     for j in range(len(ciag)):
         if ciag[j] != a1 + j * r:
-            print(ciag[j])</code></pre></div><p><strong>Odpowiedź:</strong> 6, 36, 421503, 362326, 303276, 534127, 40828, 949, 90367, 177326, 390126, 842436, 37889, 11106, 149243, 80882, 529815, 988401, 29559, 953023</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/61.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+            print(ciag[j])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 6, 36, 421503, 362326, 303276, 534127, 40828, 949, 90367, 177326, 390126, 842436, 37889, 11106, 149243, 80882, 529815, 988401, 29559, 953023</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/61.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

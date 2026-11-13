@@ -1,4 +1,4 @@
-<h1 align="center">2017 maj (stara formuła)</h1>
+<h1 align="center">Matura 2017 — maj, poziom rozszerzony (stara formuła)</h1>
  
 [SPIS ARKUSZY](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
 

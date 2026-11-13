@@ -1,4 +1,4 @@
-<h1 align="center">2015 czerwiec</h1>
+<h1 align="center">Matura 2015 — czerwiec (termin dodatkowy), poziom rozszerzony</h1>
  
 [SPIS ARKUSZY](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
 

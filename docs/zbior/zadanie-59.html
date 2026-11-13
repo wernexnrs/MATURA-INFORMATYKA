@@ -34,10 +34,10 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#59-1">59.1</a></li><li><a href="#59-2">59.2</a></li><li><a href="#59-3">59.3</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#59-1">59.1</a></li><li><a href="#59-2">59.2</a></li><li><a href="#59-3">59.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 59. Ciekawe liczby</span></nav>
-<h1 class="page-title">Zadanie 59. Ciekawe liczby</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card" id="59-1"><h2><a class="self" href="#59-1">59.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozne_czynniki(n):
+<h1 class="page-title">Zadanie 59. Ciekawe liczby</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="59-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#59-1">59.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozne_czynniki(n):
     czynniki = set()
     i = 2
     while i * i &lt;= n:
@@ -58,7 +58,7 @@ with open(&quot;liczby.txt&quot;) as file:
         if len(czynniki) == 3 and 2 not in czynniki:
             count += 1
 
-print(count)</code></pre></div><p><strong>Odpowiedź:</strong> 114</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="59-2"><h2><a class="self" href="#59-2">59.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
+print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 114</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="59-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#59-2">59.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -67,7 +67,7 @@ with open(&quot;liczby.txt&quot;) as file:
         if suma == suma[::-1]:
             count += 1
 
-print(count)</code></pre></div><p><strong>Odpowiedź:</strong> 181</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="59-3"><h2><a class="self" href="#59-3">59.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def iloczyn_cyfr(x):
+print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 181</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="59-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#59-3">59.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def iloczyn_cyfr(x):
     wynik = 1
     for cyfra in str(x):
         wynik *= int(cyfra)
@@ -95,11 +95,13 @@ with open(&quot;liczby.txt&quot;) as file:
 
 for m in range(1, 9):
     print(m, ile[m])
-print(&quot;min:&quot;, min(moc_1), &quot;max:&quot;, max(moc_1))</code></pre></div><p><strong>Odpowiedź:</strong> 1: 381, 2: 344, 3: 171, 4: 76, 5: 22, 6: 4, 7: 0, 8: 2; min: 11, max: 999342708</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/59.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;min:&quot;, min(moc_1), &quot;max:&quot;, max(moc_1))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1: 381, 2: 344, 3: 171, 4: 76, 5: 22, 6: 4, 7: 0, 8: 2; min: 11, max: 999342708</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/59.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

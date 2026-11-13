@@ -34,22 +34,22 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#63-1">63.1</a></li><li><a href="#63-2">63.2</a></li><li><a href="#63-3">63.3</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#63-1">63.1</a></li><li><a href="#63-2">63.2</a></li><li><a href="#63-3">63.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 63. Ciągi zerojedynkowe</span></nav>
-<h1 class="page-title">Zadanie 63. Ciągi zerojedynkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card" id="63-1"><h2><a class="self" href="#63-1">63.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;ciagi.txt&quot;) as file:
+<h1 class="page-title">Zadanie 63. Ciągi zerojedynkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="63-1" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-1">63.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;ciagi.txt&quot;) as file:
     for line in file:
         ciag = line.strip()
         polowa = len(ciag) // 2
         if len(ciag) % 2 == 0 and ciag[:polowa] == ciag[polowa:]:
-            print(ciag)</code></pre></div><p><strong>Odpowiedź:</strong> 11, 101000101000, 10110001011000, 1010, 110110110110, 100100, 11001100, 111111, 10111011, 101101, … (18 ciągów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="63-2"><h2><a class="self" href="#63-2">63.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
+            print(ciag)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 11, 101000101000, 10110001011000, 1010, 110110110110, 100100, 11001100, 111111, 10111011, 101101, … (18 ciągów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="63-2" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-2">63.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
 
 with open(&quot;ciagi.txt&quot;) as file:
     for line in file:
         if &quot;11&quot; not in line:
             count += 1
 
-print(count)</code></pre></div><p><strong>Odpowiedź:</strong> 93</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="63-3"><h2><a class="self" href="#63-3">63.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_czynnikow(n):  # liczba czynników pierwszych (z powtórzeniami)
+print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 93</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="63-3" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-3">63.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_czynnikow(n):  # liczba czynników pierwszych (z powtórzeniami)
     ile = 0
     i = 2
     while i * i &lt;= n:
@@ -71,11 +71,13 @@ with open(&quot;ciagi.txt&quot;) as file:
             polpierwsze.append(liczba)
 
 print(len(polpierwsze))
-print(&quot;min:&quot;, min(polpierwsze), &quot;max:&quot;, max(polpierwsze))</code></pre></div><p><strong>Odpowiedź:</strong> 259 liczb półpierwszych, min = 6, max = 248667</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;min:&quot;, min(polpierwsze), &quot;max:&quot;, max(polpierwsze))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 259 liczb półpierwszych, min = 6, max = 248667</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

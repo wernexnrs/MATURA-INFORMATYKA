@@ -34,160 +34,300 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#wszystkie-opisane-tu-zagadnienia-nie-sa-wyczerpaniem-tematu-sa-to-jedynie-rzeczy-ktore-moga-sie-przydac">Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać.</a></li><li><a href="#collections">collections</a></li><li><a href="#math">math</a></li><li><a href="#statistics">statistics</a></li><li><a href="#re">re</a></li><li><a href="#fractions">fractions</a></li><li><a href="#itertools">itertools</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#collections">collections</a></li><li><a href="#math">math</a></li><li><a href="#statistics">statistics</a></li><li><a href="#re">re</a></li><li><a href="#fractions">fractions</a></li><li><a href="#itertools">itertools</a></li><li><a href="#operator">operator</a></li><li><a href="#functools">functools</a></li><li><a href="#enum">enum</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="index.html">Start</a> / <span>Przydatne moduły Pythona</span></nav>
-<h1 class="page-title">Przydatne moduły Pythona</h1><p class="lead">Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.</p><section class="card" id="wszystkie-opisane-tu-zagadnienia-nie-sa-wyczerpaniem-tematu-sa-to-jedynie-rzeczy-ktore-moga-sie-przydac"><h2><a class="self" href="#wszystkie-opisane-tu-zagadnienia-nie-sa-wyczerpaniem-tematu-sa-to-jedynie-rzeczy-ktore-moga-sie-przydac">Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które moga się przydać.</a></h2><ul><li><strong>collections</strong> - słowniki<ul><li><a href="#counter">Counter()</a><ul><li>.elements()</li><li>.most_common()</li><li>.subtract()</li></ul></li><li><a href="#order">OrderedDict()</a></li></ul></li><li><strong>math</strong> - matematyka<ul><li><a href="#funkcje">funkcje</a></li></ul></li><li><strong>statistics</strong> - statystyka<ul><li><a href="#statfunc">funkcje</a></li></ul></li><li><strong>re</strong> - RegEX<ul><li><a href="#refunc">funkcje</a></li><li><a href="#meta">Metacharacters</a></li><li><a href="#special">Specjalne sekwencje</a></li><li><a href="#sets">Zbiory</a></li><li><a href="#biale">Białe znaki</a></li></ul></li><li><strong>fractions</strong> - ułamki<ul><li><a href="#ulamki">Fraction</a></li></ul></li><li><strong>itertools</strong><ul><li><a href="#count">count</a></li><li><a href="#zip_longest">zip_longest</a></li><li><a href="#cycle">cycle</a></li><li><a href="#repeat">repeat</a></li><li><a href="#starmap">starmap</a></li><li><a href="#combinations">combinations</a></li><li><a href="#permutations">permutations</a></li><li><a href="#product">product</a></li><li><a href="#chain">chain</a></li><li><a href="#islice">islice</a></li><li><a href="#accumulate">accumulate</a></li><li><a href="#groupby">groupby</a></li></ul></li><li><strong>operator</strong></li><li><strong>functools</strong></li><li><strong>enum</strong></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="collections"><span id="counter" class="anchor"></span><h2><a class="self" href="#collections">collections</a></h2><h3>Counter()</h3><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">c = Counter(a=3, b=1)
-d = Counter(a=1, b=2)
-c + d                       # dodawanie
-#Output: Counter({&#x27;a&#x27;: 4, &#x27;b&#x27;: 3})
-c - d                       # odejmowanie, zachowanie tylko dodatnich liczb
-#Output:Counter({&#x27;a&#x27;: 2})
-c &amp; d                       # min każdego klucza
-#Output:Counter({&#x27;a&#x27;: 1, &#x27;b&#x27;: 1})
-c | d                       # max każdego klucza
-#Output:Counter({&#x27;a&#x27;: 3, &#x27;b&#x27;: 2})</code></pre></div><h5>Metody</h5><ul><li><strong>.elements()</strong> -&gt; zwraca iteracje kluczy: 'klucz'*vaule</li><li><strong>.most_common()</strong> -&gt; zwraca liste krotek malejąca według wartości kluczy</li><li><strong>.subtract()</strong> -&gt; zwraca counter jako wynik odejmowania z zachowaniem ujemnych wartości</li></ul><h3>OrderedDict()</h3><p>Właściwości:</p><span id="order" class="anchor"></span><ul><li>Gdy porównamy 2 słowniki klasy dict, które zawierają te same elementy, niezależnie od ich kolejności dostaniemy True. Słowniki klasy OrderedDict do zwrócenia prawdy muszą mieć tą samą kolejność elementów.</li></ul><p>Zwraca podsłownik, którym można zarządzać np.:</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import collections
+<h1 class="page-title">Przydatne moduły Pythona</h1><p class="lead">Przydatne moduły Pythona na maturę: collections, math, statistics, re, fractions, itertools.</p><p>Wszystkie opisane tu zagadnienia nie są wyczerpaniem tematu. Są to jedynie rzeczy, które mogą się przydać. Moduły należą do biblioteki standardowej Pythona (nie trzeba nic instalować), ale każdy trzeba najpierw zaimportować, np. <code>import math</code> albo <code>from math import sqrt</code>.</p><ul><li><strong>collections</strong> - specjalne kontenery (słowniki, kolejki)<ul><li><a href="#counter">Counter()</a><ul><li>.elements()</li><li>.most_common()</li><li>.subtract()</li></ul></li><li><a href="#defaultdict">defaultdict()</a></li><li><a href="#order">OrderedDict()</a></li><li><a href="#deque">deque()</a></li></ul></li><li><strong>math</strong> - matematyka<ul><li><a href="#funkcje">funkcje</a></li></ul></li><li><strong>statistics</strong> - statystyka<ul><li><a href="#statfunc">funkcje</a></li></ul></li><li><strong>re</strong> - wyrażenia regularne (RegEx)<ul><li><a href="#refunc">funkcje</a></li><li><a href="#meta">Metaznaki</a></li><li><a href="#special">Specjalne sekwencje</a></li><li><a href="#sets">Zbiory</a></li><li><a href="#biale">Znaki specjalne w napisach</a></li></ul></li><li><strong>fractions</strong> - ułamki<ul><li><a href="#ulamki">Fraction</a></li></ul></li><li><strong>itertools</strong> - iteratory, kombinatoryka<ul><li><a href="#count">count</a></li><li><a href="#zip_longest">zip_longest</a></li><li><a href="#cycle">cycle</a></li><li><a href="#repeat">repeat</a></li><li><a href="#starmap">starmap</a></li><li><a href="#combinations">combinations</a></li><li><a href="#permutations">permutations</a></li><li><a href="#product">product</a></li><li><a href="#chain">chain</a></li><li><a href="#islice">islice</a></li><li><a href="#accumulate">accumulate</a></li><li><a href="#groupby">groupby</a></li></ul></li><li><strong>operator</strong> - operatory jako funkcje<ul><li><a href="#itemgetter">itemgetter i funkcje operatorów</a></li></ul></li><li><strong>functools</strong> - narzędzia dla funkcji<ul><li><a href="#reduce">reduce</a></li><li><a href="#cache">lru_cache / cache</a></li><li><a href="#cmp_to_key">cmp_to_key</a></li></ul></li><li><strong>enum</strong> - typy wyliczeniowe<ul><li><a href="#enum-klasa">Enum</a></li></ul></li></ul><section class="card tinted" id="collections" style="--c:var(--g1)"><span id="counter" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#collections">collections</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Counter()</h3><p>Słownik do zliczania: kluczami są elementy, a wartościami liczba ich wystąpień. Dla brakującego klucza zwraca 0 (bez błędu).</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python · zliczanie elementów</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · działania na licznikach</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python"># zliczanie elementów
+from collections import Counter
 
-d = collections.OrderedDict()
+c = Counter(&quot;abracadabra&quot;)
+print(c)
+#Output: Counter({&#x27;a&#x27;: 5, &#x27;b&#x27;: 2, &#x27;r&#x27;: 2, &#x27;c&#x27;: 1, &#x27;d&#x27;: 1})
+print(c[&quot;a&quot;], c[&quot;z&quot;])
+#Output: 5 0
+print(c.most_common(2))
+#Output: [(&#x27;a&#x27;, 5), (&#x27;b&#x27;, 2)]
+print(Counter([3, 1, 3, 3, 2]).most_common(1)[0][0])  # najczęstszy element
+#Output: 3</code></pre></div><div class="pane" hidden><pre><code class="language-python"># działania na licznikach
+from collections import Counter
+
+c = Counter(a=3, b=1)
+d = Counter(a=1, b=2)
+print(c + d)                # dodawanie
+#Output: Counter({&#x27;a&#x27;: 4, &#x27;b&#x27;: 3})
+print(c - d)                # odejmowanie, zostają tylko dodatnie liczności
+#Output: Counter({&#x27;a&#x27;: 2})
+print(c &amp; d)                # minimum dla każdego klucza
+#Output: Counter({&#x27;a&#x27;: 1, &#x27;b&#x27;: 1})
+print(c | d)                # maksimum dla każdego klucza
+#Output: Counter({&#x27;a&#x27;: 3, &#x27;b&#x27;: 2})
+print(list(c.elements()))
+#Output: [&#x27;a&#x27;, &#x27;a&#x27;, &#x27;a&#x27;, &#x27;b&#x27;]
+c.subtract(d)               # zmienia c w miejscu, zostawia zera i liczby ujemne
+print(c)
+#Output: Counter({&#x27;a&#x27;: 2, &#x27;b&#x27;: -1})</code></pre></div></div><h5>Metody</h5><ul><li><strong>.elements()</strong> -&gt; zwraca iterator po elementach, w którym każdy element powtarza się tyle razy, ile wynosi jego liczność (elementy z licznością 0 lub ujemną są pomijane)</li><li><strong>.most_common(n)</strong> -&gt; zwraca listę <code>n</code> par <code>(element, liczność)</code> posortowaną malejąco według liczności; bez argumentu - wszystkie pary</li><li><strong>.subtract(inny)</strong> -&gt; odejmuje liczności <strong>w miejscu</strong> (zwraca <code>None</code>), zachowując zera i wartości ujemne</li><li><strong>.update(iterable)</strong> -&gt; dodaje liczności w miejscu, np. <code>c.update(&quot;aab&quot;)</code></li></ul><h3>defaultdict()</h3><span id="defaultdict" class="anchor"></span><p>Słownik, który dla brakującego klucza sam tworzy wartość domyślną (zamiast zgłaszać <code>KeyError</code>). W nawiasie podajemy funkcję tworzącą tę wartość: <code>int</code> (0), <code>list</code> (pusta lista), <code>set</code> (pusty zbiór).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from collections import defaultdict
+
+licznik = defaultdict(int)
+for znak in &quot;kajak&quot;:
+    licznik[znak] += 1
+print(dict(licznik))
+#Output: {&#x27;k&#x27;: 2, &#x27;a&#x27;: 2, &#x27;j&#x27;: 1}
+
+grupy = defaultdict(list)
+for slowo in [&quot;kot&quot;, &quot;pies&quot;, &quot;koza&quot;, &quot;papuga&quot;]:
+    grupy[slowo[0]].append(slowo)
+print(dict(grupy))
+#Output: {&#x27;k&#x27;: [&#x27;kot&#x27;, &#x27;koza&#x27;], &#x27;p&#x27;: [&#x27;pies&#x27;, &#x27;papuga&#x27;]}</code></pre></div><h3>OrderedDict()</h3><span id="order" class="anchor"></span><p>Słownik pamiętający kolejność dodawania elementów. Od Pythona 3.7 zwykły <code>dict</code> też ją pamięta, więc <code>OrderedDict</code> przydaje się głównie dzięki dodatkowym metodom i innemu porównywaniu:</p><ul><li>Gdy porównamy 2 słowniki klasy <code>dict</code>, które zawierają te same elementy, niezależnie od ich kolejności dostaniemy <code>True</code>. Słowniki klasy <code>OrderedDict</code> są równe tylko wtedy, gdy mają też tę samą kolejność elementów.</li><li><strong>.move_to_end(klucz, last=True)</strong> przenosi element na koniec (lub na początek, gdy <code>last=False</code>).</li><li><strong>.popitem(last=True)</strong> usuwa ostatni element (lub pierwszy, gdy <code>last=False</code>).</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from collections import OrderedDict
+
+d = OrderedDict()
 d[&#x27;a&#x27;] = &#x27;A&#x27;
 d[&#x27;b&#x27;] = &#x27;B&#x27;
 d[&#x27;c&#x27;] = &#x27;C&#x27;
+print(list(d.items()))
+#Output: [(&#x27;a&#x27;, &#x27;A&#x27;), (&#x27;b&#x27;, &#x27;B&#x27;), (&#x27;c&#x27;, &#x27;C&#x27;)]
 
-for k, v in d.items():
-    print(k, v)
-
-# Output:
-# a A
-# b B
-# c C
-# Od Pythona 3.7 zwykły dict też pamięta kolejność dodawania.
-# OrderedDict przydaje się np. do move_to_end():
 d.move_to_end(&#x27;a&#x27;)
-print(list(d))  # [&#x27;b&#x27;, &#x27;c&#x27;, &#x27;a&#x27;]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="math"><span id="funkcje" class="anchor"></span><h2><a class="self" href="#math">math</a></h2><h3>Funkcje</h3><ul><li><strong>cos(x)</strong> -&gt; Zwraca cosinus argumentu x.</li><li><strong>sin(x)</strong> -&gt;  Zwraca sinus argumentu x.</li><li><strong>tan(x)</strong> -&gt; Zwraca tangens argumentu x.</li><li><strong>radians(x)</strong> -&gt; Przekształca kąt x ze stopni na radiany.</li><li><strong>degrees(x)</strong> -&gt; Przekształca kąt x z radianów na stopnie.</li><li><strong>exp(x)</strong> -&gt; Zwraca wartość e**x.</li><li><strong>fabs(x)</strong> -&gt; Zwraca moduł (wartość bezwzględną) argumentu x.</li><li><strong>floor(x)</strong> -&gt; Zwraca quotpodłogę (największą liczbę całkowitą nie większą od) argumentu x w postaci liczby zmiennoprzecinkowej.</li><li><strong>ceil(x)</strong> -&gt; Zwraca najmniejszą liczbę całkowitą nie mniejszą od argumentu x w postaci liczby zmiennoprzecinkowej.</li><li><strong>hypot(x, y)</strong> -&gt; Zwraca wartość sqrt(x*x + y*y). Jest to długość przeciwprostokątnej w trójkącie prostokątnym o przyprostokątnych, których długości są równe x oraz y, lub odległość punktu (x, y) od środka układu współrzędnych.</li><li><strong>log(x,y)</strong> -&gt; Zwraca logarytm o podstawie y argumentu x.</li><li><strong>log10(x)</strong> -&gt; Zwraca logarytm o podstawie 10 argumentu x.</li><li><strong>log2(x)</strong> -&gt; Zwraca logarytm o podstawie 2 argumentu x.</li><li><strong>pow(x, y)</strong> -&gt; Zwraca wartość x**y.</li><li><strong>sqrt(x)</strong> -&gt; Zwraca pierwiastek kwadratowy argumentu x.</li><li><strong>dist()</strong> -&gt; Zwraca dystans między dwoma punktami</li><li><strong>factorial()</strong>  -&gt; zwraca silnie</li><li><strong>fsum()</strong> -&gt; zwraca sume elementów obiektu</li><li><strong>prod()</strong> -&gt; zwraca iloczyn elementów obiektu</li><li><strong>gcd()</strong> -&gt; zwraca największy wspólny dzielnik</li><li><strong>e</strong> -&gt; zwraca wartość liczby Eulera (2.7182...)</li><li><strong>pi</strong> -&gt; zwraca wartość PI (3.1415...)</li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="statistics"><span id="statfunc" class="anchor"></span><h2><a class="self" href="#statistics">statistics</a></h2><h3>Funkcje</h3><ul><li><strong>mean()</strong> -&gt; Średnia arytmetyczna</li><li><strong>median()</strong> -&gt; Mediana</li><li><strong>median_high()</strong> -&gt; w zbiorze parzystym zwraca większa wartość środkową</li><li><strong>median_low()</strong> -&gt; w zbiorze parzystym zwraca mniejsza wartość środkową</li><li><strong>mode()</strong> -&gt; moda/dominanta</li><li><strong>pstdev()</strong> -&gt; Calculates the standard deviation from an entire population</li><li><strong>stdev()</strong> -&gt; Calculates the standard deviation from a sample of data</li><li><strong>pvariance()</strong> -&gt; Calculates the variance of an entire population</li><li><strong>variance()</strong> -&gt; Calculates the variance from a sample of data</li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="re"><span id="refunc" class="anchor"></span><h2><a class="self" href="#re">re</a></h2><p>RegEx w pythonie.</p><h3>Funkcje</h3><ul><li><strong>findall()</strong> -&gt; Returns a list containing all matches</li><li><strong>search()</strong> -&gt; Returns a Match object if there is a match anywhere in the string</li><li><strong>split()</strong> -&gt; Returns a list where the string has been split at each match</li><li><strong>sub()</strong> -&gt; Replaces one or many matches with a string</li></ul><h3>Metacharacters</h3><span id="meta" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th><th style="text-align:center">przykład</th></tr><tr><td style="text-align:center">[]</td><td style="text-align:center">Zbiór znaków</td><td style="text-align:center">"[a-m]"</td></tr><tr><td style="text-align:center">\</td><td style="text-align:center">Sygnał specjalnej sekwencji</td><td style="text-align:center">"\d"</td></tr><tr><td style="text-align:center">.</td><td style="text-align:center">każdy znak oprócz końca linii</td><td style="text-align:center">"he..o"</td></tr><tr><td style="text-align:center">^</td><td style="text-align:center">Zaczyna się od</td><td style="text-align:center">"^hello"</td></tr><tr><td style="text-align:center">$</td><td style="text-align:center">Kończy się na</td><td style="text-align:center">"world$"</td></tr><tr><td style="text-align:center">*</td><td style="text-align:center">Zero or more occurrences</td><td style="text-align:center">"aix*"</td></tr><tr><td style="text-align:center">+</td><td style="text-align:center">One or more occurrences</td><td style="text-align:center">"aix+"</td></tr><tr><td style="text-align:center">{}</td><td style="text-align:center">Wystąpnienia danego znaku</td><td style="text-align:center">"al{2}"</td></tr><tr><td style="text-align:center">"</td><td style="text-align:center">"</td><td style="text-align:center">to albo to</td><td>"falls</td><td>stays"</td></tr></table></div><h3>Specjalne sekwencje</h3><span id="special" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th><th style="text-align:center">przykład</th></tr><tr><td style="text-align:center">\A</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest na początku stringa</td><td style="text-align:center">"\AThe"</td></tr><tr><td style="text-align:center">\b</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest na początku lub na końcu stringa (r - raw string)</td><td style="text-align:center">r"\bain" r"ain\b"</td></tr><tr><td style="text-align:center">\B</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest w stringu lecz nie na końcu ani początku. (r - raw string)</td><td style="text-align:center">r"\Bain" r"ain\B"</td></tr><tr><td style="text-align:center">\d</td><td style="text-align:center">Zwraca dopasowanie liczb w ciągu</td><td style="text-align:center">"\d"</td></tr><tr><td style="text-align:center">\D</td><td style="text-align:center">Zwraca dopasowanie, gdzie nie ma liczb</td><td style="text-align:center">"\D"</td></tr><tr><td style="text-align:center">\s</td><td style="text-align:center">Zwraca dopasowanie białych znaków</td><td style="text-align:center">"\s"</td></tr><tr><td style="text-align:center">\S</td><td style="text-align:center">Zwraca dopasowanie, gdzie nie ma białych znaków</td><td style="text-align:center">"\S"</td></tr><tr><td style="text-align:center">\w</td><td style="text-align:center">Zwraca dopasowanie, gdzie ciąg znaków zawiera litery alfabetu angielskiegu, liczby i podłogę</td><td style="text-align:center">"\w"</td></tr><tr><td style="text-align:center">\W</td><td style="text-align:center">Zwraca    dopasowanie gdzie nie ma tego co up</td><td style="text-align:center">"\W"</td></tr><tr><td style="text-align:center">\Z</td><td style="text-align:center">Zwraca dopasowanie, jeżeli ciąg jest na końcu stringa</td><td style="text-align:center">"Spain\Z"</td></tr></table></div><h3>Zbiory</h3><span id="sets" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">zbiór</th><th style="text-align:center">opis</th></tr><tr><td style="text-align:center">[arn]</td><td style="text-align:center">Zwraca dopasowanie gdzie jakis z elementów znajduje się w stringu</td></tr><tr><td style="text-align:center">[a-n]</td><td style="text-align:center">Zwraca dopasowanie wszystkiego co ma małe litery od a do n</td></tr><tr><td style="text-align:center">[^arn]</td><td style="text-align:center">Wszystko bez wymienionych</td></tr><tr><td style="text-align:center">[0123]</td><td style="text-align:center">Zwraca dopasowanie wymienionych liczb</td></tr><tr><td style="text-align:center">[0-9]</td><td style="text-align:center">Zwraca dopasowanie liczb od 0 do 9</td></tr><tr><td style="text-align:center">[0-5][0-9]</td><td style="text-align:center">zwraca wszystko od 00 do 59</td></tr><tr><td style="text-align:center">[a-zA-Z]</td><td style="text-align:center">Zwraca wszsytko co w alfabecie czy duże czy małe</td></tr><tr><td style="text-align:center">[+]</td><td style="text-align:center">Zwraca szukane znaki tutaj +</td></tr></table></div><h3>Białe znaki</h3><span id="biale" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th></tr><tr><td style="text-align:center">\'</td><td style="text-align:center">Pojedyńczy cytat</td></tr><tr><td style="text-align:center">\\</td><td style="text-align:center">Backslash</td></tr><tr><td style="text-align:center">\n</td><td style="text-align:center">enter</td></tr><tr><td style="text-align:center">\r</td><td style="text-align:center">Carriage Return</td></tr><tr><td style="text-align:center">\t</td><td style="text-align:center">tabulator</td></tr><tr><td style="text-align:center">\b</td><td style="text-align:center">Backspace</td></tr><tr><td style="text-align:center">\f</td><td style="text-align:center">Form Feed</td></tr><tr><td style="text-align:center">\ooo</td><td style="text-align:center">liczba ósemkowa</td></tr><tr><td style="text-align:center">\xhh</td><td style="text-align:center">liczba szesnastkowa</td></tr></table></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="fractions"><span id="ulamki" class="anchor"></span><h2><a class="self" href="#fractions">fractions</a></h2><p>class fractions.Fraction(numerator=0, denominator=1)</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from fractions import Fraction
-Fraction(16, -10)
-#Fraction(-8, 5)
-Fraction(123)
-#Fraction(123, 1)
-Fraction()
-#Fraction(0, 1)
-Fraction(&#x27;3/7&#x27;)
-#Fraction(3, 7)
-Fraction(&#x27; -3/7 &#x27;)
-#Fraction(-3, 7)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="itertools"><span id="count" class="anchor"></span><h2><a class="self" href="#itertools">itertools</a></h2><h3>count()</h3><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">data = [100,200,300,400]
+print(list(d))
+#Output: [&#x27;b&#x27;, &#x27;c&#x27;, &#x27;a&#x27;]
+print(d.popitem(last=False))
+#Output: (&#x27;b&#x27;, &#x27;B&#x27;)
 
-data2 = list(zip(itertools.count(start = 0, step = 1), data))
+print({1: 1, 2: 2} == {2: 2, 1: 1})
+#Output: True
+print(OrderedDict([(1, 1), (2, 2)]) == OrderedDict([(2, 2), (1, 1)]))
+#Output: False</code></pre></div><h3>deque()</h3><span id="deque" class="anchor"></span><p>Kolejka dwustronna: szybkie dodawanie i usuwanie elementów z obu końców (<code>list.pop(0)</code> jest wolne dla długich list). Przydaje się np. w przeszukiwaniu wszerz (BFS).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from collections import deque
 
-#Output:  [(0, 100), (1, 200), (2, 300), (3,400)]</code></pre></div><h3>zip_longest()</h3><span id="zip_longest" class="anchor"></span><p>zip -&gt; iteruje tyle razy ile wynosi długość krótszego obiektu</p><p>zip_longest -&gt; iteruje tyle razy ile wynosi długość dłuższego obiektu</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab">Python · normal zip</button><button type="button" role="tab" aria-selected="false" class="tab">Python · itertools zip</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python">#normal zip
+q = deque([1, 2, 3])
+q.append(4)          # na koniec
+q.appendleft(0)      # na początek
+print(q)
+#Output: deque([0, 1, 2, 3, 4])
+print(q.popleft(), q.pop())
+#Output: 0 4
+q.rotate(1)          # przesunięcie cykliczne w prawo
+print(q)
+#Output: deque([3, 1, 2])</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="math" style="--c:var(--g2)"><span id="funkcje" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#math">math</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Funkcje</h3><p>Funkcje trygonometryczne przyjmują kąt w <strong>radianach</strong>.</p><ul><li><strong>cos(x)</strong> -&gt; Zwraca cosinus argumentu x.</li><li><strong>sin(x)</strong> -&gt; Zwraca sinus argumentu x.</li><li><strong>tan(x)</strong> -&gt; Zwraca tangens argumentu x.</li><li><strong>radians(x)</strong> -&gt; Przekształca kąt x ze stopni na radiany.</li><li><strong>degrees(x)</strong> -&gt; Przekształca kąt x z radianów na stopnie.</li><li><strong>exp(x)</strong> -&gt; Zwraca wartość e**x.</li><li><strong>fabs(x)</strong> -&gt; Zwraca moduł (wartość bezwzględną) argumentu x, zawsze jako liczbę zmiennoprzecinkową.</li><li><strong>floor(x)</strong> -&gt; Zwraca podłogę argumentu x, czyli największą liczbę całkowitą nie większą od x (jako <code>int</code>), np. <code>floor(-2.5) == -3</code>.</li><li><strong>ceil(x)</strong> -&gt; Zwraca sufit argumentu x, czyli najmniejszą liczbę całkowitą nie mniejszą od x (jako <code>int</code>).</li><li><strong>trunc(x)</strong> -&gt; Obcina część ułamkową (zaokrągla w stronę zera), jak <code>int(x)</code>.</li><li><strong>hypot(x, y)</strong> -&gt; Zwraca wartość sqrt(x*x + y*y). Jest to długość przeciwprostokątnej w trójkącie prostokątnym o przyprostokątnych, których długości są równe x oraz y, lub odległość punktu (x, y) od środka układu współrzędnych.</li><li><strong>log(x, base)</strong> -&gt; Zwraca logarytm z x o podstawie <code>base</code>; bez drugiego argumentu - logarytm naturalny (o podstawie e).</li><li><strong>log10(x)</strong> -&gt; Zwraca logarytm z x o podstawie 10.</li><li><strong>log2(x)</strong> -&gt; Zwraca logarytm z x o podstawie 2.</li><li><strong>pow(x, y)</strong> -&gt; Zwraca wartość x**y (zawsze jako <code>float</code>).</li><li><strong>sqrt(x)</strong> -&gt; Zwraca pierwiastek kwadratowy z x (jako <code>float</code>).</li><li><strong>isqrt(n)</strong> -&gt; Zwraca całkowitą część pierwiastka z liczby całkowitej n (dokładnie, bez błędów zaokrągleń) - przydatne przy sprawdzaniu, czy liczba jest pierwsza.</li><li><strong>dist(p, q)</strong> -&gt; Zwraca odległość (euklidesową) między punktami p i q podanymi jako krotki/listy współrzędnych.</li><li><strong>factorial(n)</strong> -&gt; Zwraca silnię n!.</li><li><strong>comb(n, k)</strong> -&gt; Zwraca liczbę kombinacji (symbol Newtona).</li><li><strong>perm(n, k)</strong> -&gt; Zwraca liczbę wariacji bez powtórzeń (k-elementowych ustawień z n elementów).</li><li><strong>fsum(iterable)</strong> -&gt; Zwraca dokładną sumę liczb zmiennoprzecinkowych (bez błędów zaokrągleń, które pojawiają się przy dodawaniu w pętli).</li><li><strong>prod(iterable)</strong> -&gt; Zwraca iloczyn elementów.</li><li><strong>gcd(a, b)</strong> -&gt; Zwraca największy wspólny dzielnik (NWD).</li><li><strong>lcm(a, b)</strong> -&gt; Zwraca najmniejszą wspólną wielokrotność (NWW), od Pythona 3.9. We wcześniejszych wersjach: <code>a * b // gcd(a, b)</code>.</li><li><strong>e</strong> -&gt; Stała: liczba Eulera (2.7182...).</li><li><strong>pi</strong> -&gt; Stała: liczba pi (3.1415...).</li><li><strong>inf</strong> -&gt; Stała: nieskończoność (przydatna jako początkowe minimum).</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 
-data = [100,200,300,400]
+print(math.floor(2.7), math.ceil(2.1), math.floor(-2.5), math.trunc(-2.5))
+#Output: 2 3 -3 -2
+print(math.sqrt(16), math.isqrt(17), math.pow(2, 3))
+#Output: 4.0 4 8.0
+print(math.gcd(12, 18), math.lcm(4, 6), 12 * 18 // math.gcd(12, 18))
+#Output: 6 12 36
+print(math.factorial(5), math.comb(5, 2), math.perm(5, 2), math.prod([2, 3, 4]))
+#Output: 120 10 20 24
+print(math.log(8, 2), math.log10(1000), math.log2(1024))
+#Output: 3.0 3.0 10.0
+print(math.hypot(3, 4), math.dist((1, 1), (4, 5)))
+#Output: 5.0 5.0
+print(round(math.sin(math.radians(30)), 2), round(math.degrees(math.pi), 1))
+#Output: 0.5 180.0
+suma = 0
+for x in [0.1] * 10:
+    suma += x
+print(suma, math.fsum([0.1] * 10))
+#Output: 0.9999999999999999 1.0</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="statistics" style="--c:var(--g3)"><span id="statfunc" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#statistics">statistics</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>Funkcje</h3><ul><li><strong>mean()</strong> -&gt; Średnia arytmetyczna</li><li><strong>median()</strong> -&gt; Mediana (dla parzystej liczby elementów: średnia dwóch środkowych)</li><li><strong>median_low()</strong> -&gt; Dla parzystej liczby elementów zwraca mniejszą z dwóch wartości środkowych</li><li><strong>median_high()</strong> -&gt; Dla parzystej liczby elementów zwraca większą z dwóch wartości środkowych</li><li><strong>mode()</strong> -&gt; Moda (dominanta) - najczęstsza wartość; gdy jest kilka, zwraca pierwszą napotkaną</li><li><strong>multimode()</strong> -&gt; Lista wszystkich najczęstszych wartości</li><li><strong>pstdev()</strong> -&gt; Odchylenie standardowe całej populacji (dzielenie przez n)</li><li><strong>stdev()</strong> -&gt; Odchylenie standardowe z próby (dzielenie przez n - 1)</li><li><strong>pvariance()</strong> -&gt; Wariancja całej populacji (dzielenie przez n)</li><li><strong>variance()</strong> -&gt; Wariancja z próby (dzielenie przez n - 1)</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import statistics
 
+dane = [2, 4, 4, 4, 5, 5, 7, 9]
+print(statistics.mean(dane), statistics.median(dane))
+#Output: 5 4.5
+print(statistics.median_low(dane), statistics.median_high(dane))
+#Output: 4 5
+print(statistics.mode(dane), statistics.multimode([1, 1, 2, 2, 3]))
+#Output: 4 [1, 2]
+print(statistics.pstdev(dane), statistics.pvariance(dane))
+#Output: 2.0 4
+print(round(statistics.stdev(dane), 4), round(statistics.variance(dane), 4))
+#Output: 2.1381 4.5714</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="re" style="--c:var(--g4)"><span id="refunc" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#re">re</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Wyrażenia regularne (RegEx) w Pythonie. Wzorce warto zapisywać jako surowe napisy <code>r&quot;...&quot;</code> - wtedy <code>\</code> nie jest traktowany jako znak specjalny Pythona (np. <code>&quot;\b&quot;</code> to znak backspace, a <code>r&quot;\b&quot;</code> to granica słowa).</p><h3>Funkcje</h3><ul><li><strong>findall(wzorzec, tekst)</strong> -&gt; Zwraca listę wszystkich dopasowań (gdy wzorzec ma grupy w nawiasach - listę grup)</li><li><strong>search(wzorzec, tekst)</strong> -&gt; Zwraca obiekt <code>Match</code> dla pierwszego dopasowania w dowolnym miejscu tekstu albo <code>None</code></li><li><strong>match(wzorzec, tekst)</strong> -&gt; Jak <code>search()</code>, ale dopasowanie musi zaczynać się na początku tekstu</li><li><strong>fullmatch(wzorzec, tekst)</strong> -&gt; Dopasowanie musi obejmować cały tekst (np. sprawdzanie poprawności formatu)</li><li><strong>split(wzorzec, tekst)</strong> -&gt; Zwraca listę fragmentów tekstu podzielonego w miejscach dopasowań</li><li><strong>sub(wzorzec, zamiana, tekst)</strong> -&gt; Zamienia wszystkie dopasowania na podany napis</li><li>Obiekt <code>Match</code>: <code>.group()</code> - dopasowany tekst, <code>.group(1)</code> - pierwsza grupa, <code>.start()</code> / <code>.end()</code> - pozycje</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import re
+
+tekst = &quot;Ala ma 2 koty i 13 rybek, tel. 123-456-789&quot;
+print(re.findall(r&quot;\d+&quot;, tekst))
+#Output: [&#x27;2&#x27;, &#x27;13&#x27;, &#x27;123&#x27;, &#x27;456&#x27;, &#x27;789&#x27;]
+m = re.search(r&quot;\d{3}-\d{3}-\d{3}&quot;, tekst)
+print(m.group(), m.start())
+#Output: 123-456-789 31
+print(re.match(r&quot;\d+&quot;, tekst), re.match(r&quot;[A-Z]\w+&quot;, tekst).group())
+#Output: None Ala
+print(re.fullmatch(r&quot;[01]+&quot;, &quot;10110&quot;) is not None, re.fullmatch(r&quot;[01]+&quot;, &quot;1012&quot;) is not None)
+#Output: True False
+print(re.sub(r&quot;\d&quot;, &quot;#&quot;, &quot;a1b22&quot;), re.split(r&quot;[,;]\s*&quot;, &quot;a, b;c&quot;))
+#Output: a#b## [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+print(re.findall(r&quot;(\w+)@(\w+)\.pl&quot;, &quot;jan@wp.pl, ola@onet.pl&quot;))
+#Output: [(&#x27;jan&#x27;, &#x27;wp&#x27;), (&#x27;ola&#x27;, &#x27;onet&#x27;)]
+print(re.findall(r&quot;\bk\w*&quot;, &quot;kot i kajak oraz smok&quot;))
+#Output: [&#x27;kot&#x27;, &#x27;kajak&#x27;]</code></pre></div><h3>Metaznaki</h3><span id="meta" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th><th style="text-align:center">przykład</th></tr><tr><td style="text-align:center"><code>[]</code></td><td style="text-align:center">Zbiór znaków</td><td style="text-align:center"><code>&quot;[a-m]&quot;</code></td></tr><tr><td style="text-align:center"><code>\</code></td><td style="text-align:center">Początek specjalnej sekwencji (lub zwykły znak specjalny, np. <code>\.</code> to kropka)</td><td style="text-align:center"><code>&quot;\d&quot;</code></td></tr><tr><td style="text-align:center"><code>.</code></td><td style="text-align:center">Dowolny znak oprócz znaku nowej linii</td><td style="text-align:center"><code>&quot;he..o&quot;</code></td></tr><tr><td style="text-align:center"><code>^</code></td><td style="text-align:center">Początek tekstu</td><td style="text-align:center"><code>&quot;^hello&quot;</code></td></tr><tr><td style="text-align:center"><code>$</code></td><td style="text-align:center">Koniec tekstu</td><td style="text-align:center"><code>&quot;world$&quot;</code></td></tr><tr><td style="text-align:center"><code>*</code></td><td style="text-align:center">Zero lub więcej powtórzeń</td><td style="text-align:center"><code>&quot;aix*&quot;</code></td></tr><tr><td style="text-align:center"><code>+</code></td><td style="text-align:center">Jedno lub więcej powtórzeń</td><td style="text-align:center"><code>&quot;aix+&quot;</code></td></tr><tr><td style="text-align:center"><code>?</code></td><td style="text-align:center">Zero lub jedno powtórzenie</td><td style="text-align:center"><code>&quot;aix?&quot;</code></td></tr><tr><td style="text-align:center"><code>{}</code></td><td style="text-align:center">Dokładna liczba powtórzeń lub zakres <code>{min,max}</code></td><td style="text-align:center"><code>&quot;al{2}&quot;</code>, <code>&quot;\d{2,4}&quot;</code></td></tr><tr><td style="text-align:center">&#124;</td><td style="text-align:center">Alternatywa: to albo to</td><td style="text-align:center">"falls&#124;stays"</td></tr><tr><td style="text-align:center"><code>()</code></td><td style="text-align:center">Grupa (fragment, który można potem odczytać)</td><td style="text-align:center"><code>&quot;(\d+)-(\d+)&quot;</code></td></tr></table></div><h3>Specjalne sekwencje</h3><span id="special" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th><th style="text-align:center">przykład</th></tr><tr><td style="text-align:center"><code>\A</code></td><td style="text-align:center">Dopasowanie tylko na początku tekstu</td><td style="text-align:center"><code>&quot;\AThe&quot;</code></td></tr><tr><td style="text-align:center"><code>\b</code></td><td style="text-align:center">Granica słowa: dopasowanie na początku lub na końcu słowa (używaj <code>r&quot;...&quot;</code>)</td><td style="text-align:center"><code>r&quot;\bain&quot;</code> <code>r&quot;ain\b&quot;</code></td></tr><tr><td style="text-align:center"><code>\B</code></td><td style="text-align:center">Dopasowanie wewnątrz słowa, ale nie na jego początku lub końcu (używaj <code>r&quot;...&quot;</code>)</td><td style="text-align:center"><code>r&quot;\Bain&quot;</code> <code>r&quot;ain\B&quot;</code></td></tr><tr><td style="text-align:center"><code>\d</code></td><td style="text-align:center">Cyfra</td><td style="text-align:center"><code>&quot;\d&quot;</code></td></tr><tr><td style="text-align:center"><code>\D</code></td><td style="text-align:center">Znak, który nie jest cyfrą</td><td style="text-align:center"><code>&quot;\D&quot;</code></td></tr><tr><td style="text-align:center"><code>\s</code></td><td style="text-align:center">Biały znak (spacja, tabulator, nowa linia...)</td><td style="text-align:center"><code>&quot;\s&quot;</code></td></tr><tr><td style="text-align:center"><code>\S</code></td><td style="text-align:center">Znak, który nie jest białym znakiem</td><td style="text-align:center"><code>&quot;\S&quot;</code></td></tr><tr><td style="text-align:center"><code>\w</code></td><td style="text-align:center">Znak „słowa”: litera (także polska), cyfra lub podkreślnik <code>_</code></td><td style="text-align:center"><code>&quot;\w&quot;</code></td></tr><tr><td style="text-align:center"><code>\W</code></td><td style="text-align:center">Znak, który nie pasuje do <code>\w</code></td><td style="text-align:center"><code>&quot;\W&quot;</code></td></tr><tr><td style="text-align:center"><code>\Z</code></td><td style="text-align:center">Dopasowanie tylko na końcu tekstu</td><td style="text-align:center"><code>&quot;Spain\Z&quot;</code></td></tr></table></div><h3>Zbiory</h3><span id="sets" class="anchor"></span><div class="table-wrap"><table><tr><th style="text-align:center">zbiór</th><th style="text-align:center">opis</th></tr><tr><td style="text-align:center"><code>[arn]</code></td><td style="text-align:center">Jeden ze znaków: <code>a</code>, <code>r</code> lub <code>n</code></td></tr><tr><td style="text-align:center"><code>[a-n]</code></td><td style="text-align:center">Dowolna mała litera od <code>a</code> do <code>n</code></td></tr><tr><td style="text-align:center"><code>[^arn]</code></td><td style="text-align:center">Dowolny znak oprócz wymienionych</td></tr><tr><td style="text-align:center"><code>[0123]</code></td><td style="text-align:center">Jedna z wymienionych cyfr</td></tr><tr><td style="text-align:center"><code>[0-9]</code></td><td style="text-align:center">Dowolna cyfra od 0 do 9</td></tr><tr><td style="text-align:center"><code>[0-5][0-9]</code></td><td style="text-align:center">Liczba dwucyfrowa od 00 do 59</td></tr><tr><td style="text-align:center"><code>[a-zA-Z]</code></td><td style="text-align:center">Dowolna litera alfabetu angielskiego, mała lub wielka</td></tr><tr><td style="text-align:center"><code>[+]</code></td><td style="text-align:center">Wewnątrz zbioru znaki specjalne tracą znaczenie - tu dopasowuje zwykły znak <code>+</code></td></tr></table></div><h3>Znaki specjalne w napisach</h3><span id="biale" class="anchor"></span><p>Sekwencje zaczynające się od <code>\</code> w zwykłych napisach Pythona (w napisach surowych <code>r&quot;...&quot;</code> nie są zamieniane).</p><div class="table-wrap"><table><tr><th style="text-align:center">znak</th><th style="text-align:center">opis</th></tr><tr><td style="text-align:center"><code>\&#x27;</code></td><td style="text-align:center">Apostrof</td></tr><tr><td style="text-align:center"><code>\&quot;</code></td><td style="text-align:center">Cudzysłów</td></tr><tr><td style="text-align:center"><code>\\</code></td><td style="text-align:center">Ukośnik wsteczny (backslash)</td></tr><tr><td style="text-align:center"><code>\n</code></td><td style="text-align:center">Nowa linia (enter)</td></tr><tr><td style="text-align:center"><code>\r</code></td><td style="text-align:center">Powrót karetki (carriage return)</td></tr><tr><td style="text-align:center"><code>\t</code></td><td style="text-align:center">Tabulator</td></tr><tr><td style="text-align:center"><code>\b</code></td><td style="text-align:center">Backspace</td></tr><tr><td style="text-align:center"><code>\f</code></td><td style="text-align:center">Nowa strona (form feed)</td></tr><tr><td style="text-align:center"><code>\ooo</code></td><td style="text-align:center">Znak o kodzie zapisanym ósemkowo, np. <code>\101</code> to <code>A</code></td></tr><tr><td style="text-align:center"><code>\xhh</code></td><td style="text-align:center">Znak o kodzie zapisanym szesnastkowo, np. <code>\x41</code> to <code>A</code></td></tr></table></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="fractions" style="--c:var(--g5)"><span id="ulamki" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#fractions">fractions</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p><code>fractions.Fraction(numerator=0, denominator=1)</code> - ułamek zwykły liczony dokładnie (bez błędów zaokrągleń). Ułamek jest automatycznie skracany, a znak minus trafia do licznika.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from fractions import Fraction
+
+print(Fraction(16, -10), Fraction(123), Fraction())
+#Output: -8/5 123 0
+print(Fraction(&#x27;3/7&#x27;), Fraction(&#x27; -3/7 &#x27;), Fraction(&#x27;0.25&#x27;))
+#Output: 3/7 -3/7 1/4
+print(repr(Fraction(6, 4)))
+#Output: Fraction(3, 2)
+u = Fraction(1, 3) + Fraction(1, 6)
+print(u, u.numerator, u.denominator, float(u))
+#Output: 1/2 1 2 0.5
+print(Fraction(0.1) == Fraction(1, 10), Fraction(0.1).limit_denominator(100))
+#Output: False 1/10</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="itertools" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#itertools">itertools</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Funkcje z <code>itertools</code> zwracają iteratory - żeby zobaczyć wszystkie elementy naraz, trzeba je zamienić na listę (<code>list(...)</code>) albo przejść pętlą <code>for</code>.</p><h3>count()</h3><span id="count" class="anchor"></span><p>Nieskończony licznik: <code>count(start=0, step=1)</code>.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
+
+data = [100, 200, 300, 400]
+data2 = list(zip(itertools.count(start=0, step=1), data))
+print(data2)
+#Output: [(0, 100), (1, 200), (2, 300), (3, 400)]</code></pre></div><h3>zip_longest()</h3><span id="zip_longest" class="anchor"></span><p>zip -&gt; iteruje tyle razy, ile wynosi długość najkrótszego obiektu</p><p>zip_longest -&gt; iteruje tyle razy, ile wynosi długość najdłuższego obiektu; brakujące miejsca wypełnia <code>fillvalue</code> (domyślnie <code>None</code>)</p><div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist"><button type="button" role="tab" aria-selected="true" class="tab" data-lang="python">Python · zwykły zip</button><button type="button" role="tab" aria-selected="false" class="tab" data-lang="python">Python · itertools.zip_longest</button></div><button class="copy" type="button">Kopiuj</button></div><div class="pane"><pre><code class="language-python"># zwykły zip
+data = [100, 200, 300, 400]
 data2 = list(zip(range(10), data))
+print(data2)
+#Output: [(0, 100), (1, 200), (2, 300), (3, 400)]</code></pre></div><div class="pane" hidden><pre><code class="language-python"># itertools.zip_longest
+import itertools
 
-#Output:  [(0, 100), (1, 200), (2, 300), (3,400)]</code></pre></div><div class="pane" hidden><pre><code class="language-python">#itertools zip
+data = [100, 200, 300, 400]
+data2 = list(itertools.zip_longest(range(6), data))
+print(data2)
+#Output: [(0, 100), (1, 200), (2, 300), (3, 400), (4, None), (5, None)]
+print(list(itertools.zip_longest(&quot;abc&quot;, &quot;x&quot;, fillvalue=&quot;-&quot;)))
+#Output: [(&#x27;a&#x27;, &#x27;x&#x27;), (&#x27;b&#x27;, &#x27;-&#x27;), (&#x27;c&#x27;, &#x27;-&#x27;)]</code></pre></div></div><h3>cycle()</h3><span id="cycle" class="anchor"></span><p>Powtarza elementy obiektu w nieskończoność.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
-data = [100,200,300,400]
-
-data2 = list(itertools.zip_longest(range(10), data))
-
-#Output:  [(0, 100), (1, 200), (2, 300), (3, 400), (4, None), (5, None), (6, None), (7, None), (8, None), (9, None)]</code></pre></div></div><h3>cycle()</h3><span id="cycle" class="anchor"></span><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">data = itertools.cycle([0,1])
-
+data = itertools.cycle([0, 1])
 for _ in range(6):
-    print(next(data))
+    print(next(data), end=&quot; &quot;)
+print()
+#Output: 0 1 0 1 0 1</code></pre></div><h3>repeat()</h3><span id="repeat" class="anchor"></span><p>Powtarza jedną wartość <code>times</code> razy (bez <code>times</code> - w nieskończoność).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
-#Output:  0 1 0 1 0 1</code></pre></div><h3>repeat()</h3><span id="repeat" class="anchor"></span><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">data = itertools.repeat(2, times=3)
-
-for _ in range(3):
-    print(next(data))
-
-#Output:  2 2 2   (czwarte next(data) zgłosiłoby StopIteration)
+data = itertools.repeat(2, times=3)
+print(list(data))
+#Output: [2, 2, 2]
+# kolejne next(data) zgłosiłoby StopIteration
 
 print(list(map(pow, range(5), itertools.repeat(2))))
+#Output: [0, 1, 4, 9, 16]</code></pre></div><h3>starmap()</h3><span id="starmap" class="anchor"></span><p>Jak <code>map()</code>, ale każdy element (krotka) jest rozpakowywany na argumenty funkcji.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
-# Output: [0, 1, 4, 9, 16]</code></pre></div><h3>starmap()</h3><span id="starmap" class="anchor"></span><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">
-print(list(itertools.starmap(pow, [(0,2), (1,2), (2,2)] )))
+print(list(itertools.starmap(pow, [(0, 2), (1, 2), (2, 2)])))
+#Output: [0, 1, 4]</code></pre></div><h3>combinations()</h3><span id="combinations" class="anchor"></span><p>Wszystkie możliwe sposoby wybrania pewnej liczby elementów, gdzie kolejność nie ma znaczenia (kombinacje). Nie ma np. <code>(&#x27;b&#x27;, &#x27;a&#x27;)</code>, bo to to samo co <code>(&#x27;a&#x27;, &#x27;b&#x27;)</code>. Wersja z powtórzeniami elementów: <code>combinations_with_replacement()</code>.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
-# Output: [0, 1, 4]</code></pre></div><h3>combinations()</h3><span id="combinations" class="anchor"></span><p>Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność nie ma znaczenia.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
-
-result = itertools.combinations(chars, 2)
-
-for i in result:
-    print(i)
-&#x27;&#x27;&#x27;
-(&#x27;a&#x27;, &#x27;b&#x27;) nie ma powtórzeń np (&#x27;b&#x27;, &#x27;a&#x27;) bo to to samo
-(&#x27;a&#x27;, &#x27;c&#x27;)
-(&#x27;a&#x27;, &#x27;d&#x27;)
-(&#x27;b&#x27;, &#x27;c&#x27;)
-(&#x27;b&#x27;, &#x27;d&#x27;)
-(&#x27;c&#x27;, &#x27;d&#x27;)
-&#x27;&#x27;&#x27;</code></pre></div><h3>permutations()</h3><span id="permutations" class="anchor"></span><p>Wszystkie możliwe sposoby na zgrupowanie pewnej ilości znaków, gdzie kolejność MA znaczenie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
-
-result = itertools.permutations(chars, 2)
-
-for i in result:
-    print(i)
-&#x27;&#x27;&#x27;
-(&#x27;a&#x27;, &#x27;b&#x27;)
-(&#x27;a&#x27;, &#x27;c&#x27;)
-(&#x27;a&#x27;, &#x27;d&#x27;)
-(&#x27;b&#x27;, &#x27;a&#x27;)
-(&#x27;b&#x27;, &#x27;c&#x27;)
-(&#x27;b&#x27;, &#x27;d&#x27;)
-(&#x27;c&#x27;, &#x27;a&#x27;)
-(&#x27;c&#x27;, &#x27;b&#x27;)
-(&#x27;c&#x27;, &#x27;d&#x27;)
-(&#x27;d&#x27;, &#x27;a&#x27;)
-(&#x27;d&#x27;, &#x27;b&#x27;)
-(&#x27;d&#x27;, &#x27;c&#x27;)
-&#x27;&#x27;&#x27;</code></pre></div><h3>product()</h3><span id="product" class="anchor"></span><p>Wszystkie możliwe sposoby na zgrupowanie pewnej ilości liczb, gdzie kolejność MA znaczenie wraz z powtórzeniami tych znaków.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numbers = [0, 1, 2, 3]
-
-result = itertools.product(numbers, repeat=2)
-
-for i in result:
-    print(i)
-&#x27;&#x27;&#x27;
-(0, 0)
-(0, 1)
-(1, 0)
-(1, 1)
-&#x27;&#x27;&#x27;</code></pre></div><h3>chain()</h3><span id="chain" class="anchor"></span><p>Iteracja po kilku obiektach na raz</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numbers = [0, 1, 2, 3]
 chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
-es = [&#x27;first&#x27;, &#x27;second&#x27;, &#x27;third&#x27;, &#x27;fourth&#x27;]
+result = itertools.combinations(chars, 2)
+print(list(result))
+#Output: [(&#x27;a&#x27;, &#x27;b&#x27;), (&#x27;a&#x27;, &#x27;c&#x27;), (&#x27;a&#x27;, &#x27;d&#x27;), (&#x27;b&#x27;, &#x27;c&#x27;), (&#x27;b&#x27;, &#x27;d&#x27;), (&#x27;c&#x27;, &#x27;d&#x27;)]
+print(len(list(itertools.combinations(range(10), 3))))
+#Output: 120</code></pre></div><h3>permutations()</h3><span id="permutations" class="anchor"></span><p>Wszystkie możliwe ustawienia pewnej liczby elementów, gdzie kolejność MA znaczenie. Bez drugiego argumentu - permutacje wszystkich elementów.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
-result = itertools.chain(numbers, chars, es)
+chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
+result = itertools.permutations(chars, 2)
+print(list(result))
+#Output: [(&#x27;a&#x27;, &#x27;b&#x27;), (&#x27;a&#x27;, &#x27;c&#x27;), (&#x27;a&#x27;, &#x27;d&#x27;), (&#x27;b&#x27;, &#x27;a&#x27;), (&#x27;b&#x27;, &#x27;c&#x27;), (&#x27;b&#x27;, &#x27;d&#x27;), (&#x27;c&#x27;, &#x27;a&#x27;), (&#x27;c&#x27;, &#x27;b&#x27;), (&#x27;c&#x27;, &#x27;d&#x27;), (&#x27;d&#x27;, &#x27;a&#x27;), (&#x27;d&#x27;, &#x27;b&#x27;), (&#x27;d&#x27;, &#x27;c&#x27;)]
+print([&quot;&quot;.join(p) for p in itertools.permutations(&quot;abc&quot;)])
+#Output: [&#x27;abc&#x27;, &#x27;acb&#x27;, &#x27;bac&#x27;, &#x27;bca&#x27;, &#x27;cab&#x27;, &#x27;cba&#x27;]</code></pre></div><h3>product()</h3><span id="product" class="anchor"></span><p>Iloczyn kartezjański: wszystkie możliwe ciągi elementów, gdzie kolejność MA znaczenie, a elementy mogą się powtarzać (<code>repeat</code> - długość ciągu).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
 
-for i in result:
-    print(i)
-&#x27;&#x27;&#x27;
-0
-1
-2
-3
-a
-b
-c
-d
-first
-second
-third
-fourth
-&#x27;&#x27;&#x27;</code></pre></div><h3>islice()</h3><span id="islice" class="anchor"></span><p>Slice obiektu bez wykorzystywania kopii jak np podczas krojenia list.</p><div class="code"><div class="code-bar"><span>Python · islice(object,start,stop,step)</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># islice(object,start,stop,step)
+numbers = [0, 1]
+result = itertools.product(numbers, repeat=2)
+print(list(result))
+#Output: [(0, 0), (0, 1), (1, 0), (1, 1)]
+print(list(itertools.product(&quot;ab&quot;, [1, 2])))
+#Output: [(&#x27;a&#x27;, 1), (&#x27;a&#x27;, 2), (&#x27;b&#x27;, 1), (&#x27;b&#x27;, 2)]
+print(len(list(itertools.product(range(10), repeat=3))))  # wszystkie 3-cyfrowe kody
+#Output: 1000</code></pre></div><h3>chain()</h3><span id="chain" class="anchor"></span><p>Iteracja po kilku obiektach naraz, jeden po drugim. <code>chain.from_iterable()</code> spłaszcza listę list.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
+
+numbers = [0, 1, 2, 3]
+chars = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]
+es = [&#x27;first&#x27;, &#x27;second&#x27;]
+
+print(list(itertools.chain(numbers, chars, es)))
+#Output: [0, 1, 2, 3, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;first&#x27;, &#x27;second&#x27;]
+print(list(itertools.chain.from_iterable([[1, 2], [3], [4, 5]])))
+#Output: [1, 2, 3, 4, 5]</code></pre></div><h3>islice()</h3><span id="islice" class="anchor"></span><p>Wycinek (slice) dowolnego iteratora, także nieskończonego, bez tworzenia kopii jak przy wycinaniu list. Nie obsługuje ujemnych indeksów.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
+
+# islice(obiekt, start, stop, step)
 result = itertools.islice(range(10), 1, 5, 2)
-
-for i in result:
-    print(i)
-&#x27;&#x27;&#x27;
-1
-3
-&#x27;&#x27;&#x27;</code></pre></div><h3>accumulate()</h3><span id="accumulate" class="anchor"></span><p>Operacje podczas iteracji</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools, operator
+print(list(result))
+#Output: [1, 3]
+print(list(itertools.islice(itertools.count(10), 3)))
+#Output: [10, 11, 12]</code></pre></div><h3>accumulate()</h3><span id="accumulate" class="anchor"></span><p>Wyniki pośrednie kolejnych operacji (domyślnie sumy prefiksowe).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools, operator
 
 numbers = [1, 5, 4, 3]
 
-print(list(itertools.accumulate(numbers))) # [1, 6, 10, 13], dodawanie
-print( list(itertools.accumulate(numbers, operator.mul))) # [1, 5, 20, 60], mnożenie</code></pre></div><h3>groupby()</h3><span id="groupby" class="anchor"></span><p>Grupowanie obiektów.</p><p>Obiekt musi być posortowany po grupowanej wartości inaczej dane te zostaną pominiete.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">itertools.groupby(object,key) # moze kiedys</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section>
+print(list(itertools.accumulate(numbers)))                # dodawanie
+#Output: [1, 6, 10, 13]
+print(list(itertools.accumulate(numbers, operator.mul)))  # mnożenie
+#Output: [1, 5, 20, 60]
+print(list(itertools.accumulate(numbers, max)))           # bieżące maksimum
+#Output: [1, 5, 5, 5]</code></pre></div><h3>groupby()</h3><span id="groupby" class="anchor"></span><p>Grupowanie <strong>kolejnych</strong> elementów o tym samym kluczu: <code>groupby(obiekt, key=None)</code>. Zwraca pary <code>(klucz, grupa)</code>. Jeżeli elementy o tym samym kluczu nie stoją obok siebie, utworzą kilka osobnych grup - żeby zgrupować wszystkie, trzeba najpierw posortować dane po tym samym kluczu.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import itertools
+
+# długości serii takich samych znaków
+print([(k, len(list(g))) for k, g in itertools.groupby(&quot;aaabbcaa&quot;)])
+#Output: [(&#x27;a&#x27;, 3), (&#x27;b&#x27;, 2), (&#x27;c&#x27;, 1), (&#x27;a&#x27;, 2)]
+
+slowa = [&quot;kot&quot;, &quot;pies&quot;, &quot;koza&quot;, &quot;pyton&quot;, &quot;mysz&quot;]
+slowa.sort(key=lambda s: s[0])
+for litera, grupa in itertools.groupby(slowa, key=lambda s: s[0]):
+    print(litera, list(grupa))
+#Output: k [&#x27;kot&#x27;, &#x27;koza&#x27;]
+#Output: m [&#x27;mysz&#x27;]
+#Output: p [&#x27;pies&#x27;, &#x27;pyton&#x27;]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="operator" style="--c:var(--g7)"><span id="itemgetter" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#operator">operator</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Operatory Pythona w postaci funkcji - przydatne jako argument <code>key=</code> przy sortowaniu oraz w <code>map()</code>, <code>reduce()</code>, <code>accumulate()</code>.</p><ul><li><strong>itemgetter(i)</strong> -&gt; Tworzy funkcję zwracającą <code>x[i]</code>. <code>itemgetter(1, 0)</code> zwraca krotkę <code>(x[1], x[0])</code> - sortowanie po kilku kluczach.</li><li><strong>attrgetter("nazwa")</strong> -&gt; Tworzy funkcję zwracającą atrybut obiektu <code>x.nazwa</code>.</li><li><strong>add, sub, mul, truediv, floordiv, mod, pow</strong> -&gt; Odpowiedniki <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>.</li><li><strong>eq, ne, lt, le, gt, ge</strong> -&gt; Odpowiedniki <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>.</li></ul><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from operator import itemgetter, mul
+
+uczniowie = [(&quot;Ola&quot;, 5), (&quot;Jan&quot;, 3), (&quot;Ewa&quot;, 5), (&quot;Adam&quot;, 4)]
+print(sorted(uczniowie, key=itemgetter(1)))
+#Output: [(&#x27;Jan&#x27;, 3), (&#x27;Adam&#x27;, 4), (&#x27;Ola&#x27;, 5), (&#x27;Ewa&#x27;, 5)]
+print(sorted(uczniowie, key=itemgetter(1, 0)))
+#Output: [(&#x27;Jan&#x27;, 3), (&#x27;Adam&#x27;, 4), (&#x27;Ewa&#x27;, 5), (&#x27;Ola&#x27;, 5)]
+print(max(uczniowie, key=itemgetter(1)))
+#Output: (&#x27;Ola&#x27;, 5)
+
+oceny = {&quot;Ola&quot;: 5, &quot;Jan&quot;: 3, &quot;Adam&quot;: 4}
+print(sorted(oceny.items(), key=itemgetter(1), reverse=True))
+#Output: [(&#x27;Ola&#x27;, 5), (&#x27;Adam&#x27;, 4), (&#x27;Jan&#x27;, 3)]
+print(list(map(mul, [1, 2, 3], [4, 5, 6])))
+#Output: [4, 10, 18]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="functools" style="--c:var(--g1)"><span id="reduce" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#functools">functools</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><h3>reduce()</h3><p><code>reduce(funkcja, iterable, początek)</code> - „zwija” obiekt do jednej wartości, wykonując funkcję na wyniku i kolejnym elemencie: <code>f(f(f(a, b), c), d)</code>.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from functools import reduce
+import operator
+import math
+
+print(reduce(operator.mul, [1, 2, 3, 4, 5]))       # iloczyn
+#Output: 120
+print(reduce(lambda a, b: a * 10 + b, [1, 2, 3]))  # cyfry -&gt; liczba
+#Output: 123
+print(reduce(math.gcd, [12, 18, 24]))              # NWD wielu liczb
+#Output: 6
+print(reduce(operator.add, [], 0))                 # wartość początkowa dla pustej listy
+#Output: 0</code></pre></div><h3>lru_cache / cache</h3><span id="cache" class="anchor"></span><p>Dekorator zapamiętujący wyniki funkcji (memoizacja). Gdy funkcja zostanie wywołana ponownie z tymi samymi argumentami, wynik jest brany z pamięci, a nie liczony od nowa. Dzięki temu rekurencja (np. ciąg Fibonacciego) działa błyskawicznie zamiast w czasie wykładniczym. <code>@cache</code> (od Pythona 3.9) to to samo co <code>@lru_cache(maxsize=None)</code>. Argumenty funkcji muszą być niemodyfikowalne (liczby, napisy, krotki - nie listy).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fib(n):
+    if n &lt; 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+print(fib(10), fib(100))
+#Output: 55 354224848179261915075</code></pre></div><p>Przy bardzo głębokiej rekurencji (np. <code>fib(5000)</code> od razu) Python zgłosi <code>RecursionError</code> - wtedy pomaga <code>sys.setrecursionlimit(10000)</code> albo wersja iteracyjna.</p><h3>cmp_to_key()</h3><span id="cmp_to_key" class="anchor"></span><p>Pozwala sortować według własnej funkcji porównującej <code>porownaj(a, b)</code>, która zwraca liczbę ujemną (a przed b), 0 (równe) lub dodatnią (b przed a).</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from functools import cmp_to_key
+
+def porownaj(a, b):
+    if a + b &gt; b + a:
+        return -1
+    if a + b &lt; b + a:
+        return 1
+    return 0
+
+# największa liczba ułożona z podanych liczb
+liczby = [3, 30, 34, 5, 9]
+print(&quot;&quot;.join(sorted(map(str, liczby), key=cmp_to_key(porownaj))))
+#Output: 9534330</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="enum" style="--c:var(--g2)"><span id="enum-klasa" class="anchor"></span><header class="card-head"><div class="head-text"><h2><a class="self" href="#enum">enum</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>Typ wyliczeniowy: zbiór nazwanych stałych. Zamiast „magicznych” liczb (np. 1, 2, 3) używamy czytelnych nazw. Na maturze rzadko potrzebny.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from enum import Enum
+
+class Kolor(Enum):
+    CZERWONY = 1
+    ZIELONY = 2
+    NIEBIESKI = 3
+
+print(Kolor.ZIELONY, Kolor.ZIELONY.name, Kolor.ZIELONY.value)
+#Output: Kolor.ZIELONY ZIELONY 2
+print(Kolor(3), Kolor[&quot;CZERWONY&quot;])
+#Output: Kolor.NIEBIESKI Kolor.CZERWONY
+print([k.name for k in Kolor])
+#Output: [&#x27;CZERWONY&#x27;, &#x27;ZIELONY&#x27;, &#x27;NIEBIESKI&#x27;]
+print(Kolor.CZERWONY == Kolor.CZERWONY, Kolor.CZERWONY == 1)
+#Output: True False</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

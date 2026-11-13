@@ -1,5 +1,9 @@
 <h1 align="center">Matura z informatyki — algorytmy i arkusze w Pythonie</h1>
 
+<h3 align="center"><i>Wiedza nie powinna mieć ceny.</i></h3>
+
+<p align="center">0 zł · 0 reklam · 0 logowania · 100% otwarte</p>
+
 <p align="center">
   <a href="https://wernexnrs.github.io/MATURA-INFORMATYKA/"><b>🌐 Otwórz stronę z materiałami</b></a>
 </p>
@@ -11,7 +15,9 @@
   <img src="https://img.shields.io/github/last-commit/wernexnrs/MATURA-INFORMATYKA?style=flat-square&color=orange" alt="Ostatnia zmiana">
 </p>
 
-Darmowe materiały do **matury rozszerzonej z informatyki**: wszystkie algorytmy z wymagań egzaminacyjnych CKE napisane w **Pythonie** (z pseudokodem), dodatkowe algorytmy oraz **rozwiązania zadań z arkuszy maturalnych** z odpowiedziami. Bez reklam, bez logowania — wiedza dla każdego.
+Darmowe materiały do **matury rozszerzonej z informatyki**: wszystkie algorytmy z wymagań egzaminacyjnych CKE napisane w **Pythonie** (z pseudokodem), dodatkowe algorytmy oraz **rozwiązania zadań z arkuszy maturalnych** z odpowiedziami. Wiele stron każe płacić za dostęp do tych samych algorytmów — tutaj wszystko jest za darmo, bez reklam i bez logowania.
+
+<p align="center"><sub>✦ Powered by AI · Claude Opus 5.5 (High)</sub></p>
 
 ## Co tu znajdziesz
 

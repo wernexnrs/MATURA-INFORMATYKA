@@ -34,10 +34,10 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#58-1">58.1</a></li><li><a href="#58-2">58.2</a></li><li><a href="#58-3">58.3</a></li><li><a href="#58-4">58.4</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#58-1">58.1</a></li><li><a href="#58-2">58.2</a></li><li><a href="#58-3">58.3</a></li><li><a href="#58-4">58.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 58. Systemy liczbowe</span></nav>
-<h1 class="page-title">Zadanie 58. Systemy liczbowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card" id="58-1"><h2><a class="self" href="#58-1">58.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
+<h1 class="page-title">Zadanie 58. Systemy liczbowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="58-1" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-1">58.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
     zegary = []
     temperatury = []
     with open(nazwa) as file:
@@ -58,7 +58,7 @@ stacje = [(&quot;dane_systemy1.txt&quot;, 2), (&quot;dane_systemy2.txt&quot;, 4)
 
 for i in range(3):
     zegary, temperatury = wczytaj(stacje[i][0], stacje[i][1])
-    print(&quot;S&quot; + str(i + 1), na_dwojkowy(min(temperatury)))</code></pre></div><p><strong>Odpowiedź:</strong> S1: -1011, S2: -1001100, S3: -1001011</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="58-2"><h2><a class="self" href="#58-2">58.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
+    print(&quot;S&quot; + str(i + 1), na_dwojkowy(min(temperatury)))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> S1: -1011, S2: -1001100, S3: -1001011</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-2">58.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
     zegary = []
     temperatury = []
     with open(nazwa) as file:
@@ -79,7 +79,7 @@ for i in range(len(z1)):
     if z1[i] != stan and z2[i] != stan and z3[i] != stan:
         count += 1
 
-print(count)</code></pre></div><p><strong>Odpowiedź:</strong> 182</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="58-3"><h2><a class="self" href="#58-3">58.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
+print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 182</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-3">58.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
     zegary = []
     temperatury = []
     with open(nazwa) as file:
@@ -111,7 +111,7 @@ for i in range(1, len(t1)):
     if rekord:
         dni += 1
 
-print(dni)</code></pre></div><p><strong>Odpowiedź:</strong> 42</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="58-4"><h2><a class="self" href="#58-4">58.4</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">temperatury = []
+print(dni)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 42</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-4">58.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">temperatury = []
 
 with open(&quot;dane_systemy1.txt&quot;) as file:
     for line in file:
@@ -126,11 +126,13 @@ for i in range(len(temperatury)):
         if skok &gt; najwiekszy:
             najwiekszy = skok
 
-print(najwiekszy)</code></pre></div><p><strong>Odpowiedź:</strong> 25</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(najwiekszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 25</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

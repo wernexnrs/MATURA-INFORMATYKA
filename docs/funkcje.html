@@ -33,15 +33,120 @@
     <a class="gh" href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener" aria-label="Repozytorium na GitHubie"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
   </div>
 </header>
-<div class="shell no-side">
-
+<div class="shell">
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#konwersje-typow">Konwersje typów</a></li><li><a href="#liczby-i-systemy-liczbowe">Liczby i systemy liczbowe</a></li><li><a href="#kolekcje">Kolekcje</a></li><li><a href="#iteracja">Iteracja</a></li><li><a href="#tekst-i-znaki">Tekst i znaki</a></li><li><a href="#wejscie-i-wyjscie">Wejście i wyjście</a></li><li><a href="#inne">Inne</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="index.html">Start</a> / <span>Najważniejsze funkcje wbudowane Pythona</span></nav>
-<h1 class="page-title">Najważniejsze funkcje wbudowane Pythona</h1><p class="lead">Najważniejsze funkcje wbudowane Pythona przydatne na maturze z informatyki.</p><ul><li><strong>abs()</strong> -&gt; Zwraca wartość bezwględna liczby</li><li><strong>set()</strong> -&gt; Zwraca zbiór</li><li><strong>dict()</strong> -&gt; Zwraca słownik</li><li><strong>tuple()</strong> -&gt; Zwraca krotkę</li><li><strong>frozenset()</strong> -&gt; Zwraca zbiór niemożliwy do edycji</li><li><strong>list()</strong> -&gt; Zwraca listę</li><li><strong>str()</strong> -&gt; Zwraca string</li><li><strong>bool()</strong> -&gt; Zwraca prawdę/fałsz</li><li><strong>int()</strong> -&gt; Zwraca liczbę całkowitą</li><li><strong>float()</strong> -&gt; Zwraca liczbę zmiennoprzecinkową</li><li><strong>min()</strong> -&gt; Zwraca minimalna wartość z obiektu</li><li><strong>sum()</strong> -&gt; Zwraca sume liczb w obiekcie</li><li><strong>max()</strong> -&gt; Zwraca maksymalną liczbę z obiektu</li><li><strong>pow()</strong> -&gt; Zwraca potęgę</li><li><strong>hex()</strong> -&gt; Zwraca wartość heksadecymalną liczby dzisiętnej</li><li><strong>bin()</strong> -&gt; Zwraca wartość binarną liczby dzisiętnej</li><li><strong>oct()</strong> -&gt; Zwraca wartość oktalną liczby dzisiętnej</li><li><strong>complex()</strong> -&gt; Zwraca liczbę zespoloną</li><li><strong>id()</strong> -&gt; Zwraca adres komórki w pamięci zmiennej</li><li><strong>sorted()</strong> -&gt; Sortuje listę</li><li><strong>len()</strong> -&gt; Zwraca długość obiektu</li><li><strong>input()</strong> -&gt; Pobiera wartość na wejściu</li><li><strong>print()</strong> -&gt; Wyświetla wartość</li><li><strong>range()</strong> -&gt; Zwraca sekwencje liczb</li><li><strong>round()</strong> -&gt; Zaokrągla liczbę</li><li><strong>open()</strong> -&gt; Podpięcie pliku</li><li><strong>format()</strong> -&gt; Formaty stringa</li><li><strong>zip()</strong> -&gt; Łączenie obiektów</li><li><strong>map()</strong> -&gt; Rzutowanie obiektów</li><li><strong>any()</strong> -&gt; Zwraca True, jeżeli któryś element w obiekcie jest prawdą</li><li><strong>all()</strong> -&gt; Zwraca True, jeżeli każy element w obiekcie jest prawdą</li><li><strong>ord()</strong> -&gt; Zwraca numer reprezentujący znak w tablicy UNICODE</li><li><strong>chr()</strong> -&gt; Zwraca znak numeru z tablicy UNICODE</li><li><strong>help()</strong> -&gt; System pomocy</li><li><strong>type()</strong> -&gt; Zwraca klase zmiennej</li><li><strong>reversed()</strong> -&gt; Zwraca odwróconą listę</li><li><strong>eval()</strong> -&gt; Jeżeli string w zmiennej jest poprawnym kodem pythona wykonuje go</li><li><strong>iter()</strong> -&gt; Tworzy iterator</li><li><strong>next()</strong> -&gt; Zwraca kolejny element iteratora</li><li><strong>divmod()</strong> -&gt; Zwraca krotke dzielnia i reszte z tego dzielenia</li><li><strong>enumerate(iterable, start=0)</strong> -&gt; Zwraca krotke ponumerowanych elementów</li><li><strong>isinstance()</strong> -&gt; Zwraca prawde jeżeli dany obiekt jest danego typu</li><li><strong>filter()</strong> -&gt; Zwraca iterator funkcji, która zwraca true/false. Jeżeli true filtruje obiekt zgodnie z wartościami z funkcji.</li><li><strong>callable()</strong> -&gt; Zwraca prawde jeżeli obiekt jest gotowy do wywołania</li></ul>
+<h1 class="page-title">Najważniejsze funkcje wbudowane Pythona</h1><p class="lead">Najważniejsze funkcje wbudowane Pythona przydatne na maturze z informatyki.</p><p>Funkcje wbudowane są dostępne zawsze, bez żadnego <code>import</code>. Pełna lista: <code>help(&quot;builtins&quot;)</code> albo <a href="https://docs.python.org/3/library/functions.html" target="_blank" rel="noopener">dokumentacja Pythona</a>.</p><section class="card tinted" id="konwersje-typow" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#konwersje-typow">Konwersje typów</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>int(x)</strong> -&gt; Zamienia liczbę lub napis na liczbę całkowitą. Z liczby zmiennoprzecinkowej obcina część ułamkową (w stronę zera), np. <code>int(-3.7) == -3</code>. Białe znaki na początku i końcu napisu są ignorowane, więc <code>int(&quot;42\n&quot;) == 42</code></li><li><strong>int(napis, base)</strong> -&gt; Zamienia napis zapisany w systemie o podstawie <code>base</code> (2-36) na liczbę dziesiętną, np. <code>int(&quot;1011&quot;, 2) == 11</code>, <code>int(&quot;ff&quot;, 16) == 255</code></li><li><strong>float(x)</strong> -&gt; Zamienia liczbę lub napis na liczbę zmiennoprzecinkową</li><li><strong>str(x)</strong> -&gt; Zamienia obiekt na napis (string)</li><li><strong>bool(x)</strong> -&gt; Zwraca <code>True</code> albo <code>False</code>. Fałszem są: <code>0</code>, <code>0.0</code>, <code>&quot;&quot;</code>, <code>[]</code>, <code>()</code>, <code>{}</code>, <code>set()</code>, <code>None</code>; wszystko inne jest prawdą (także napis <code>&quot;0&quot;</code>)</li><li><strong>list(iterable)</strong> -&gt; Tworzy listę z dowolnego obiektu iterowalnego, np. <code>list(&quot;abc&quot;) == [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</code></li><li><strong>tuple(iterable)</strong> -&gt; Tworzy krotkę</li><li><strong>set(iterable)</strong> -&gt; Tworzy zbiór (usuwa powtórzenia, nie zachowuje kolejności)</li><li><strong>frozenset(iterable)</strong> -&gt; Tworzy zbiór niemodyfikowalny (może być kluczem słownika albo elementem innego zbioru)</li><li><strong>dict()</strong> -&gt; Tworzy słownik, np. <code>dict(a=1, b=2)</code> albo <code>dict(zip(klucze, wartosci))</code></li><li><strong>complex(re, im)</strong> -&gt; Tworzy liczbę zespoloną, np. <code>complex(1, 2) == (1+2j)</code></li></ul><div class="code"><div class="code-bar"><span>Python · konwersje typów</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># konwersje typów
+print(int(&quot;1011&quot;, 2), int(&quot;ff&quot;, 16), int(&quot;17&quot;, 8))
+#Output: 11 255 15
+print(int(3.99), int(-3.99), int(&quot; 42\n&quot;))
+#Output: 3 -3 42
+print(float(&quot;2.5&quot;) * 2)
+#Output: 5.0
+print(str(12) + str(34))
+#Output: 1234
+print(bool(0), bool(&quot;&quot;), bool(&quot;0&quot;), bool([0]))
+#Output: False False True True
+print(list(&quot;abc&quot;), set([3, 1, 3, 2]))
+#Output: [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;] {1, 2, 3}
+print(dict(zip([&quot;a&quot;, &quot;b&quot;], [1, 2])))
+#Output: {&#x27;a&#x27;: 1, &#x27;b&#x27;: 2}</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="liczby-i-systemy-liczbowe" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#liczby-i-systemy-liczbowe">Liczby i systemy liczbowe</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>abs(x)</strong> -&gt; Zwraca wartość bezwzględną liczby</li><li><strong>round(x)</strong> -&gt; Zaokrągla do liczby całkowitej (zwraca <code>int</code>). Uwaga: Python stosuje <strong>zaokrąglanie bankierskie</strong> - gdy liczba jest dokładnie w połowie, wybiera liczbę parzystą: <code>round(2.5) == 2</code>, <code>round(3.5) == 4</code></li><li><strong>round(x, n)</strong> -&gt; Zaokrągla do <code>n</code> miejsc po przecinku (zwraca <code>float</code>). Ze względu na zapis binarny liczb wynik bywa zaskakujący: <code>round(2.675, 2) == 2.67</code></li><li><strong>divmod(a, b)</strong> -&gt; Zwraca krotkę <code>(a // b, a % b)</code>, czyli iloraz całkowity i resztę z dzielenia</li><li><strong>pow(x, y)</strong> -&gt; Zwraca <code>x ** y</code></li><li><strong>pow(x, y, m)</strong> -&gt; Zwraca <code>(x ** y) % m</code>, ale liczy to dużo szybciej (szybkie potęgowanie modularne)</li><li><strong>bin(x)</strong> -&gt; Zwraca zapis binarny liczby całkowitej jako napis z przedrostkiem <code>0b</code></li><li><strong>oct(x)</strong> -&gt; Zwraca zapis ósemkowy (oktalny) liczby całkowitej jako napis z przedrostkiem <code>0o</code></li><li><strong>hex(x)</strong> -&gt; Zwraca zapis szesnastkowy (heksadecymalny) liczby całkowitej jako napis z przedrostkiem <code>0x</code></li><li><strong>format(x, "b")</strong> -&gt; Zapis binarny bez przedrostka (<code>&quot;o&quot;</code> - ósemkowy, <code>&quot;x&quot;</code> - szesnastkowy). <code>format(5, &quot;08b&quot;)</code> uzupełnia zerami do 8 znaków</li></ul><div class="code"><div class="code-bar"><span>Python · liczby</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># liczby
+print(abs(-7), abs(-2.5))
+#Output: 7 2.5
+print(round(2.5), round(3.5), round(-2.5), round(2.6))
+#Output: 2 4 -2 3
+print(round(3.14159, 2))
+#Output: 3.14
+print(divmod(17, 5), divmod(-7, 2))
+#Output: (3, 2) (-4, 1)
+print(pow(2, 10), pow(2, 10, 1000))
+#Output: 1024 24
+print(bin(10), oct(8), hex(255))
+#Output: 0b1010 0o10 0xff
+print(bin(10)[2:], format(10, &quot;b&quot;), format(5, &quot;08b&quot;))
+#Output: 1010 1010 00000101</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="kolekcje" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#kolekcje">Kolekcje</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>len(x)</strong> -&gt; Zwraca liczbę elementów (długość napisu, listy, słownika, zbioru...)</li><li><strong>min(iterable, key=None)</strong> -&gt; Zwraca najmniejszy element. Można też podać kilka argumentów: <code>min(3, 1, 2)</code>. Parametr <code>key</code> to funkcja, według której wyniku porównujemy elementy</li><li><strong>max(iterable, key=None)</strong> -&gt; Zwraca największy element; działa jak <code>min()</code>. Przy remisie zwraca pierwszy napotkany element</li><li><strong>sum(iterable, start=0)</strong> -&gt; Zwraca sumę elementów (do wyniku dodaje <code>start</code>)</li><li><strong>sorted(iterable, key=None, reverse=False)</strong> -&gt; Zwraca <strong>nową</strong> posortowaną listę utworzoną z dowolnego obiektu iterowalnego (listy, napisu, zbioru, kluczy słownika...). Oryginał się nie zmienia. Sortowanie jest stabilne (elementy równe zachowują kolejność)</li><li><strong>reversed(sekwencja)</strong> -&gt; Zwraca <strong>iterator</strong> przechodzący po elementach od końca (nie listę!). Listę dostaniemy przez <code>list(reversed(x))</code>, a odwrócony napis przez <code>&quot;&quot;.join(reversed(s))</code> lub <code>s[::-1]</code></li><li><strong>any(iterable)</strong> -&gt; Zwraca <code>True</code>, jeżeli choć jeden element jest prawdą (dla pustego obiektu <code>False</code>)</li><li><strong>all(iterable)</strong> -&gt; Zwraca <code>True</code>, jeżeli każdy element jest prawdą (dla pustego obiektu <code>True</code>)</li></ul><div class="code"><div class="code-bar"><span>Python · kolekcje</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># kolekcje
+liczby = [5, 3, 8, 1]
+slowa = [&quot;kot&quot;, &quot;zebra&quot;, &quot;pies&quot;, &quot;mysz&quot;]
+print(len(liczby), min(liczby), max(liczby), sum(liczby))
+#Output: 4 1 8 17
+print(max(slowa, key=len), min(slowa, key=len))
+#Output: zebra kot
+print(sorted(liczby), sorted(liczby, reverse=True), liczby)
+#Output: [1, 3, 5, 8] [8, 5, 3, 1] [5, 3, 8, 1]
+print(sorted(slowa, key=lambda s: (len(s), s)))
+#Output: [&#x27;kot&#x27;, &#x27;mysz&#x27;, &#x27;pies&#x27;, &#x27;zebra&#x27;]
+print(sorted(&quot;python&quot;))
+#Output: [&#x27;h&#x27;, &#x27;n&#x27;, &#x27;o&#x27;, &#x27;p&#x27;, &#x27;t&#x27;, &#x27;y&#x27;]
+print(reversed(liczby))
+#Output: &lt;list_reverseiterator object at 0x...&gt;
+print(list(reversed(liczby)), &quot;&quot;.join(reversed(&quot;abc&quot;)))
+#Output: [1, 8, 3, 5] cba
+print(any(x &gt; 7 for x in liczby), all(x &gt; 0 for x in liczby))
+#Output: True True</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="iteracja" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#iteracja">Iteracja</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>range(stop)</strong>, <strong>range(start, stop, step)</strong> -&gt; Zwraca ciąg liczb całkowitych od <code>start</code> (domyślnie 0) do <code>stop</code> <strong>bez</strong> <code>stop</code>, co <code>step</code> (domyślnie 1, może być ujemny)</li><li><strong>enumerate(iterable, start=0)</strong> -&gt; Zwraca iterator par <code>(numer, element)</code>, numerowanych od <code>start</code></li><li><strong>zip(*iterables)</strong> -&gt; Łączy kilka obiektów w pary (krotki) element po elemencie; kończy na najkrótszym obiekcie. <code>zip(*macierz)</code> transponuje macierz</li><li><strong>map(funkcja, iterable)</strong> -&gt; Zwraca iterator, który wywołuje funkcję na każdym elemencie, np. <code>list(map(int, &quot;1 2 3&quot;.split()))</code></li><li><strong>filter(funkcja, iterable)</strong> -&gt; Zwraca iterator z tymi elementami, dla których funkcja zwraca prawdę. <code>filter(None, x)</code> usuwa elementy będące fałszem</li><li><strong>iter(obiekt)</strong> -&gt; Tworzy iterator z obiektu iterowalnego</li><li><strong>next(iterator, domyślna)</strong> -&gt; Zwraca kolejny element iteratora; gdy elementów zabraknie, zwraca wartość domyślną albo zgłasza <code>StopIteration</code></li></ul><div class="code"><div class="code-bar"><span>Python · iteracja</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># iteracja
+print(list(range(5)), list(range(2, 10, 3)), list(range(5, 0, -1)))
+#Output: [0, 1, 2, 3, 4] [2, 5, 8] [5, 4, 3, 2, 1]
+for nr, litera in enumerate(&quot;abc&quot;, start=1):
+    print(nr, litera, end=&quot;; &quot;)
+print()
+#Output: 1 a; 2 b; 3 c;
+print(list(zip([1, 2, 3], &quot;ab&quot;)))
+#Output: [(1, &#x27;a&#x27;), (2, &#x27;b&#x27;)]
+macierz = [[1, 2, 3], [4, 5, 6]]
+print(list(zip(*macierz)))
+#Output: [(1, 4), (2, 5), (3, 6)]
+print(list(map(int, &quot;10 20 30&quot;.split())))
+#Output: [10, 20, 30]
+print(list(filter(lambda x: x % 2 == 0, range(10))))
+#Output: [0, 2, 4, 6, 8]
+it = iter([1, 2])
+print(next(it), next(it), next(it, &quot;koniec&quot;))
+#Output: 1 2 koniec</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="tekst-i-znaki" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#tekst-i-znaki">Tekst i znaki</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>ord(znak)</strong> -&gt; Zwraca kod znaku w standardzie Unicode (dla liter angielskich to samo co ASCII): <code>ord(&quot;A&quot;) == 65</code>, <code>ord(&quot;a&quot;) == 97</code>, <code>ord(&quot;0&quot;) == 48</code></li><li><strong>chr(kod)</strong> -&gt; Zwraca znak o podanym kodzie Unicode: <code>chr(97) == &quot;a&quot;</code></li><li><strong>format(wartość, specyfikacja)</strong> -&gt; Formatuje wartość według specyfikacji, np. <code>format(3.14159, &quot;.2f&quot;) == &quot;3.14&quot;</code>. To samo robią f-stringi: <code>f&quot;{x:.2f}&quot;</code></li><li>Metody napisów (<code>.split()</code>, <code>.strip()</code>, <code>.upper()</code>...) opisane są w dziale <a href="metody.html">Metody</a></li></ul><div class="code"><div class="code-bar"><span>Python · znaki i formatowanie</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># znaki i formatowanie
+print(ord(&quot;A&quot;), ord(&quot;a&quot;), chr(66), chr(ord(&quot;a&quot;) + 2))
+#Output: 65 97 B c
+# szyfr Cezara (przesunięcie o 3, małe litery)
+tekst = &quot;xyzabc&quot;
+szyfr = &quot;&quot;.join(chr((ord(c) - ord(&quot;a&quot;) + 3) % 26 + ord(&quot;a&quot;)) for c in tekst)
+print(szyfr)
+#Output: abcdef
+x = 2 / 3
+print(format(x, &quot;.3f&quot;), f&quot;{x:.2f}&quot;, f&quot;{7:03d}&quot;, f&quot;{&#x27;ab&#x27;:&gt;5}|&quot;)
+#Output: 0.667 0.67 007    ab|</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="wejscie-i-wyjscie" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#wejscie-i-wyjscie">Wejście i wyjście</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>input(tekst)</strong> -&gt; Wyświetla <code>tekst</code> i wczytuje linię z klawiatury. Zawsze zwraca <strong>napis</strong>, więc liczbę trzeba zamienić: <code>n = int(input())</code></li><li><strong>print(*obiekty, sep=" ", end="\n", file=None)</strong> -&gt; Wyświetla wartości oddzielone <code>sep</code> i zakończone <code>end</code>. Z argumentem <code>file=</code> zapisuje do pliku</li><li><strong>open(plik, tryb="r", encoding=None)</strong> -&gt; Otwiera plik. Tryby: <code>&quot;r&quot;</code> - odczyt, <code>&quot;w&quot;</code> - zapis (nadpisuje plik), <code>&quot;a&quot;</code> - dopisywanie na końcu. Najlepiej używać z <code>with</code>, wtedy plik zamknie się sam</li></ul><div class="code"><div class="code-bar"><span>Python · pliki</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># pliki
+with open(&quot;wyniki.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+    print(&quot;Zadanie 1:&quot;, 42, file=f)
+    f.write(&quot;Zadanie 2: 7\n&quot;)
+
+with open(&quot;wyniki.txt&quot;, encoding=&quot;utf-8&quot;) as f:
+    for linia in f:
+        print(linia.strip())
+#Output: Zadanie 1: 42
+#Output: Zadanie 2: 7
+
+print(1, 2, 3, sep=&quot;;&quot;, end=&quot;!\n&quot;)
+#Output: 1;2;3!
+
+# typowe wczytywanie danych z pliku maturalnego:
+# with open(&quot;liczby.txt&quot;) as f:
+#     liczby = [int(linia) for linia in f]</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="inne" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#inne">Inne</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><ul><li><strong>type(x)</strong> -&gt; Zwraca klasę (typ) obiektu, np. <code>type(5) == int</code></li><li><strong>isinstance(x, typ)</strong> -&gt; Zwraca <code>True</code>, jeżeli obiekt jest danego typu (lub jednego z typów w krotce). Uwaga: <code>isinstance(True, int)</code> też daje <code>True</code></li><li><strong>id(x)</strong> -&gt; Zwraca identyfikator obiektu - liczbę unikalną dla obiektu przez cały czas jego istnienia. Dwie zmienne wskazują na ten sam obiekt, gdy <code>id(a) == id(b)</code> (to samo sprawdza <code>a is b</code>)</li><li><strong>callable(x)</strong> -&gt; Zwraca <code>True</code>, jeżeli obiekt można wywołać (np. funkcja, klasa)</li><li><strong>help(x)</strong> -&gt; Wyświetla pomoc (dokumentację) dla obiektu, np. <code>help(str.split)</code></li><li><strong>dir(x)</strong> -&gt; Zwraca listę atrybutów i metod obiektu, np. <code>dir(str)</code></li><li><strong>eval(napis)</strong> -&gt; Oblicza wyrażenie Pythona zapisane w napisie i zwraca wynik. <strong>Uwaga:</strong> wykonuje dowolny kod, więc nie używaj go na danych z zewnątrz; do zamiany tekstu na liczbę służą <code>int()</code> i <code>float()</code></li></ul><div class="code"><div class="code-bar"><span>Python · typy i obiekty</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># typy i obiekty
+print(type(5), type(5.0), type(&quot;5&quot;))
+#Output: &lt;class &#x27;int&#x27;&gt; &lt;class &#x27;float&#x27;&gt; &lt;class &#x27;str&#x27;&gt;
+print(isinstance(5, int), isinstance(5, (int, float)), isinstance(True, int))
+#Output: True True True
+a = [1, 2]
+b = a          # ta sama lista
+c = a.copy()   # nowa lista
+print(id(a) == id(b), a is b, a is c, a == c)
+#Output: True True False True
+print(callable(len), callable(5))
+#Output: True False
+print(eval(&quot;2 + 3 * 4&quot;))
+#Output: 14</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

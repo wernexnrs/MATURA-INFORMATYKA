@@ -61,7 +61,7 @@
 	 * ![py] ![noc++] ![nojava] [Drzewo Pitagorasa](#pitagoras)
 
 <a name="konwersja"></a>
-## Reprezentacja liczb w dowolnym systemie pozycyjnym, w tym w dwójkowym i szesnastkowym [⬆️](#)
+## Systemy liczbowe [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -178,7 +178,7 @@ def to_dec(liczba, b):
 </details>
 
 <a name="is_prime"></a>
-## Sprawdzanie, czy liczba jest liczbą pierwszą [⬆️](#)
+## Liczba pierwsza [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -258,7 +258,7 @@ def sito(n):
 </details>
 
 <a name="is_perfect"></a>
-## Sprawdzanie, czy liczba jest liczbą doskonałą [⬆️](#)
+## Liczba doskonała [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Liczba doskonała to liczba naturalna równa sumie swoich dzielników mniejszych od niej samej, np. 6 = 1 + 2 + 3, 28 = 1 + 2 + 4 + 7 + 14.
@@ -333,7 +333,7 @@ def is_perfect(n):
 </details>
 
 <a name="prime_factors"></a>
-## Rozkładanie liczby na czynniki pierwsze [⬆️](#)
+## Rozkład na czynniki pierwsze [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -371,7 +371,7 @@ def prime_factors(n):
 </details>
 
 <a name="nwd"></a>
-## Iteracyjna i rekurencyjna realizacja algorytmu Euklidesa + NWW [⬆️](#)
+## NWD i NWW (algorytm Euklidesa) [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -446,7 +446,7 @@ def nww(a, b):
 </details>
 
 <a name="fib"></a>
-## Iteracyjne i rekurencyjne obliczanie wartości liczb Fibonacciego [⬆️](#)
+## Liczby Fibonacciego [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -495,7 +495,7 @@ def f(n)
 </details>
 
 <a name="zachlanna"></a>
-## Wydawanie reszty metodą zachłanną [⬆️](#)
+## Wydawanie reszty (algorytm zachłanny) [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 W każdym kroku wybieramy największą monetę, która nie jest większa od kwoty pozostałej do wydania. Dla nominałów takich jak w Polsce (1, 2, 5, 10, ...) daje to najmniejszą liczbę monet, ale dla dowolnych nominałów nie zawsze (np. kwota 6 i monety [1, 3, 4] -> 4 + 1 + 1 zamiast 3 + 3).
@@ -659,7 +659,7 @@ def binary_search_rek(tab, x, lewy, prawy):
 </details>
 
 <a name="minmax"></a>
-## Jednoczesne wyszukiwanie minimum i maksimum [⬆️](#)
+## Minimum i maksimum jednocześnie [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Wersja naiwna porównuje każdy element osobno z minimum i z maksimum, czyli wykonuje ok. 2n porównań. Metoda "parami" bierze po dwa elementy, najpierw porównuje je ze sobą, a potem mniejszy z minimum, a większy z maksimum - 3 porównania na 2 elementy, czyli ok. 3n/2 porównań.
@@ -873,7 +873,7 @@ Dla i = 1, 2, ... n
 </details>
 
 <a name="lin"></a>
-## Sortowanie przez wstawianie liniowe lub binarne [⬆️](#)
+## Sortowanie przez wstawianie [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ### Wstawianie liniowe
@@ -1166,7 +1166,7 @@ def bucket_sort(arr):
 </details>
 
 <a name="fast_power"></a>
-## Szybkie podnoszenie do potęgi [⬆️](#)
+## Szybkie potęgowanie [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Zamiast mnożyć a przez siebie n razy (n mnożeń), korzystamy z tego, że a^n = (a^(n div 2))^2 dla parzystego n oraz a^n = a * a^(n - 1) dla nieparzystego n. Wystarczy wtedy ok. 2 * log2(n) mnożeń.
@@ -1279,7 +1279,7 @@ def fast_pow(a, n):
 </details>
 
 <a name="bisekcja"></a>
-## Wyznaczanie miejsc zerowych funkcji metodą połowienia - bisekcja [⬆️](#)
+## Bisekcja (miejsce zerowe funkcji) [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Funkcja f musi być ciągła w przedziale [a, b] i przyjmować na jego końcach wartości o przeciwnych znakach (f(a) * f(b) < 0). Wtedy w przedziale jest miejsce zerowe, a my w każdym kroku zostawiamy tę połowę przedziału, na której końcach znaki wciąż są przeciwne.
@@ -1331,7 +1331,7 @@ def bisection(a, b, precyzja):
 </details>
 
 <a name="heron"></a>
-## Obliczanie pierwiastka kwadratowego metodą Herona (Newtona) [⬆️](#)
+## Pierwiastek metodą Herona [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Szukamy kwadratu o polu x. Zaczynamy od prostokąta o bokach a = x i b = 1 (pole x). W każdym kroku nowy bok a to średnia arytmetyczna boków, a drugi bok b = x / a (pole się nie zmienia). Prostokąt coraz bardziej przypomina kwadrat, a jego bok zbliża się do pierwiastka z x.
@@ -1369,7 +1369,7 @@ def heron(x, precyzja):
 </details>
 
 <a name="horner"></a>
-## Obliczanie wartości wielomianu za pomocą schematu Hornera [⬆️](#)
+## Schemat Hornera [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Wielomian w(x) = a_n * x^n + ... + a_1 * x + a_0 zapisujemy jako w(x) = (...((a_n * x + a_(n-1)) * x + a_(n-2)) * x + ...) * x + a_0. Wystarczy wtedy n mnożeń i n dodawań (bez liczenia potęg). Współczynniki podajemy od najwyższej potęgi, np. 2x^3 - 6x^2 + 2x - 1 -> [2, -6, 2, -1].
@@ -1452,7 +1452,7 @@ def na_dziesietny(liczba, b):
 </details>
 
 <a name="pole"></a>
-## Obliczanie pola obszarów zamkniętych [⬆️](#)
+## Pole pod wykresem funkcji [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Liczymy przybliżone pole obszaru ograniczonego wykresem funkcji f (f(x) >= 0), osią OX i prostymi x = a, x = b. Przedział [a, b] dzielimy na n części o szerokości h = (b - a) / n i sumujemy pola prostokątów (wysokość f w lewym końcu części) albo trapezów (podstawy f w obu końcach części). Przykład: f(x) = x^2 na [0, 1], dokładne pole to 1/3.
@@ -1509,7 +1509,7 @@ def trapezy(a, b, n):
 </details>
 
 <a name="palindrom"></a>
-## Sprawdzanie, czy dany ciąg znaków tworzy palindrom [⬆️](#)
+## Palindrom [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -1597,7 +1597,7 @@ def is_palindrom(string):
 </details>
 
 <a name="anagram"></a>
-## Sprawdzanie, czy dany ciąg znaków tworzy anagram [⬆️](#)
+## Anagram [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Dwa napisy są anagramami, jeżeli składają się z tych samych znaków, występujących tyle samo razy (np. "kebab" i "babek").
@@ -1692,7 +1692,7 @@ def is_anagram(string, pattern):
 </details>
 
 <a name="alfa"></a>
-## Porządkowanie alfabetyczne [⬆️](#)
+## Porządek alfabetyczny [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ```python
@@ -1820,7 +1820,7 @@ def find_pattern(tekst, pattern):
 </details>
 
 <a name="onp"></a>
-## Obliczanie wartości wyrażenia w odwrotnej notacji polskiej (ONP) [⬆️](#)
+## Odwrotna notacja polska (ONP) [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 W ONP operator stoi za argumentami, np. (3 + 4) * 2 zapisujemy jako 3 4 + 2 *. Nawiasy nie są potrzebne. Wyrażenie czytamy od lewej: liczbę wkładamy na stos, a operator zdejmuje ze stosu dwie liczby, wykonuje działanie i wkłada wynik na stos. Na końcu na stosie zostaje wynik.
@@ -1868,7 +1868,7 @@ def onp(wyrazenie):
 </details>
 
 <a name="len"></a>
-## Kompresja danych [⬆️](#)
+## Kod prefiksowy (kompresja) [⬆️](#)
 
 ### Kod prefiksowy (prefix free)
 <details><summary>Rozwiń</summary>
@@ -2176,7 +2176,7 @@ int main() {
 </details>
 
 <a name="przes"></a>
-## Transpozycyjny [⬆️](#)
+## Szyfr przestawieniowy [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Szyfry przestawieniowe dokonują przestawienia znaków w tekście. Tekst zaszyfrowany jest permutacją tekstu jawnego, tzn. zawiera wszystkie znaki tekstu jawnego, jednak ustawione w innej kolejności. Operacja taka nosi nazwę transpozycji.
@@ -2435,7 +2435,7 @@ def vigenere(tekst, klucz, deszyfruj):
 </details>
 
 <a name="rsa"></a>
-## RSA + rozszerzony algorytm Euklidesa [⬆️](#)
+## RSA i rozszerzony Euklides [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 ### Rozszerzony algorytm Euklidesa
@@ -2560,7 +2560,7 @@ def deszyfruj(c, d, n):
 </details>
 
 <a name="trojkat"></a>
-## Sprawdzanie warunku trójkąta [⬆️](#)
+## Warunek trójkąta [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Z odcinków o długościach a, b, c da się zbudować trójkąt wtedy i tylko wtedy, gdy wszystkie długości są dodatnie, a suma każdych dwóch jest większa od trzeciej.
@@ -2588,7 +2588,7 @@ def czy_trojkat(a, b, c):
 </details>
 
 <a name="punkt_prosta"></a>
-## Badanie położenia punktów względem prostej [⬆️](#)
+## Punkt względem prostej [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Punkty zapisujemy jako pary (x, y). Położenie punktu C względem prostej przechodzącej przez A i B mówi znak wyznacznika (iloczynu wektorowego wektorów AB i AC):
@@ -2638,7 +2638,7 @@ def polozenie(A, B, C):
 </details>
 
 <a name="punkt_odcinek"></a>
-## Badanie przynależności punktu do odcinka [⬆️](#)
+## Punkt na odcinku [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Punkt C należy do odcinka AB, gdy leży na prostej AB (wyznacznik równy 0) i jego współrzędne mieszczą się między współrzędnymi końców odcinka.
@@ -2730,7 +2730,7 @@ def przecinaja_sie(A, B, C, D):
 </details>
 
 <a name="punkt_wielokat"></a>
-## Przynależność punktu do obszaru (wielokąta) [⬆️](#)
+## Punkt w wielokącie [⬆️](#)
 <details><summary>Rozwiń</summary>
 
 Metoda półprostej (ray casting): z punktu P prowadzimy poziomą półprostą w prawo i liczymy, ile boków wielokąta przecina. Nieparzysta liczba przecięć - punkt leży wewnątrz, parzysta - na zewnątrz. Działa także dla wielokątów wklęsłych. Punkt leżący na brzegu traktujemy jako należący do obszaru.

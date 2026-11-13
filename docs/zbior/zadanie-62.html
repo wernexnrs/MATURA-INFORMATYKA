@@ -34,16 +34,16 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#62-1">62.1</a></li><li><a href="#62-2">62.2</a></li><li><a href="#62-3">62.3</a></li><li><a href="#62-4">62.4</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#62-1">62.1</a></li><li><a href="#62-2">62.2</a></li><li><a href="#62-3">62.3</a></li><li><a href="#62-4">62.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 62. Liczby ósemkowe</span></nav>
-<h1 class="page-title">Zadanie 62. Liczby ósemkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card" id="62-1"><h2><a class="self" href="#62-1">62.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
+<h1 class="page-title">Zadanie 62. Liczby ósemkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="62-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-1">62.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
 
 with open(&quot;liczby1.txt&quot;) as file:
     for line in file:
         liczby.append(int(line, 8))
 
-print(&quot;min:&quot;, oct(min(liczby))[2:], &quot;max:&quot;, oct(max(liczby))[2:])</code></pre></div><p><strong>Odpowiedź:</strong> najmniejsza: 1002, największa: 777044</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="62-2"><h2><a class="self" href="#62-2">62.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
+print(&quot;min:&quot;, oct(min(liczby))[2:], &quot;max:&quot;, oct(max(liczby))[2:])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> najmniejsza: 1002, największa: 777044</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-2">62.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
 
 with open(&quot;liczby2.txt&quot;) as file:
     for line in file:
@@ -64,7 +64,7 @@ for i in range(1, len(liczby)):
         najdluzszy = dlugosc
         najlepszy_poczatek = poczatek
 
-print(liczby[najlepszy_poczatek], najdluzszy)</code></pre></div><p><strong>Odpowiedź:</strong> pierwszy element: 639, liczba elementów: 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="62-3"><h2><a class="self" href="#62-3">62.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">rowne = 0
+print(liczby[najlepszy_poczatek], najdluzszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> pierwszy element: 639, liczba elementów: 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-3">62.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">rowne = 0
 wieksze = 0
 
 with open(&quot;liczby1.txt&quot;) as file1:
@@ -78,7 +78,7 @@ with open(&quot;liczby1.txt&quot;) as file1:
                 wieksze += 1
 
 print(&quot;a)&quot;, rowne)
-print(&quot;b)&quot;, wieksze)</code></pre></div><p><strong>Odpowiedź:</strong> a) 160, b) 357</p><blockquote>W pliku <code>wyniki.txt</code> z oficjalnych rozwiązań CKE w podpunkcie a) jest 639, ale algorytm wzorcowy CKE (<code>zadanie 3.cc</code>, taki sam jak powyżej) daje na tych danych 160 – liczba 639 to omyłkowo przepisany wynik zadania 62.2.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="62-4"><h2><a class="self" href="#62-4">62.4</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dziesietnie = 0
+print(&quot;b)&quot;, wieksze)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 160, b) 357</p><blockquote class="callout">W pliku <code>wyniki.txt</code> z oficjalnych rozwiązań CKE w podpunkcie a) jest 639, ale algorytm wzorcowy CKE (<code>zadanie 3.cc</code>, taki sam jak powyżej) daje na tych danych 160 – liczba 639 to omyłkowo przepisany wynik zadania 62.2.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-4">62.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dziesietnie = 0
 osemkowo = 0
 
 with open(&quot;liczby2.txt&quot;) as file:
@@ -88,11 +88,13 @@ with open(&quot;liczby2.txt&quot;) as file:
         osemkowo += oct(liczba)[2:].count(&quot;6&quot;)
 
 print(&quot;dziesiętnie:&quot;, dziesietnie)
-print(&quot;ósemkowo:&quot;, osemkowo)</code></pre></div><p><strong>Odpowiedź:</strong> w zapisie dziesiętnym: 411, w zapisie ósemkowym: 625</p><blockquote>W pliku <code>wyniki.txt</code> CKE wartości są zamienione miejscami (dziesiętnie 625, ósemkowo 411) – program wzorcowy CKE (<code>zadanie 4.cc</code>) wypisuje najpierw wynik ósemkowy, a potem dziesiętny.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;ósemkowo:&quot;, osemkowo)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> w zapisie dziesiętnym: 411, w zapisie ósemkowym: 625</p><blockquote class="callout">W pliku <code>wyniki.txt</code> CKE wartości są zamienione miejscami (dziesiętnie 625, ósemkowo 411) – program wzorcowy CKE (<code>zadanie 4.cc</code>) wypisuje najpierw wynik ósemkowy, a potem dziesiętny.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

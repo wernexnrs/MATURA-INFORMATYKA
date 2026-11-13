@@ -15,6 +15,15 @@
     });
   }
 
+  /* ---------- przewinięcie do #kotwicy po wczytaniu (czcionki i kod zmieniają wysokość) ---------- */
+  function goToHash() {
+    if (!location.hash) return;
+    var el = null;
+    try { el = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { /* zły hash */ }
+    if (el) el.scrollIntoView({ block: "start" });
+  }
+  window.addEventListener("load", function () { setTimeout(goToHash, 0); });
+
   /* ---------- podświetlanie składni ---------- */
   function highlight() {
     if (!window.hljs) return;

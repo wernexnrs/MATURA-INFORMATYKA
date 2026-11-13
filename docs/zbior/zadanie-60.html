@@ -34,10 +34,10 @@
   </div>
 </header>
 <div class="shell">
-<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul><li><a href="#60-1">60.1</a></li><li><a href="#60-2">60.2</a></li><li><a href="#60-3">60.3</a></li></ul></div></aside>
+<aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#60-1">60.1</a></li><li><a href="#60-2">60.2</a></li><li><a href="#60-3">60.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 60. Dzielniki</span></nav>
-<h1 class="page-title">Zadanie 60. Dzielniki</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card" id="60-1"><h2><a class="self" href="#60-1">60.1</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">male = []
+<h1 class="page-title">Zadanie 60. Dzielniki</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="60-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-1">60.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">male = []
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -46,7 +46,7 @@ with open(&quot;liczby.txt&quot;) as file:
             male.append(liczba)
 
 print(len(male))
-print(male[-2], male[-1])</code></pre></div><p><strong>Odpowiedź:</strong> 12; dwie ostatnie: 540 633</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="60-2"><h2><a class="self" href="#60-2">60.2</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dzielniki(n):
+print(male[-2], male[-1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 12; dwie ostatnie: 540 633</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="60-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-2">60.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dzielniki(n):
     male = []
     duze = []
     i = 1
@@ -65,7 +65,7 @@ with open(&quot;liczby.txt&quot;) as file:
         lista = dzielniki(liczba)
         if len(lista) == 18:
             print(liczba)
-            print(*lista)</code></pre></div><p><strong>Odpowiedź:</strong> 989532, 131072, 702027, 461817, 17298 (np. 17298: 1 2 3 6 9 18 31 62 93 186 279 558 961 1922 2883 5766 8649 17298)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card" id="60-3"><h2><a class="self" href="#60-3">60.3</a></h2><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nwd(a, b):
+            print(*lista)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 989532, 131072, 702027, 461817, 17298 (np. 17298: 1 2 3 6 9 18 31 62 93 186 279 558 961 1922 2883 5766 8649 17298)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="60-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-3">60.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nwd(a, b):
     while b &gt; 0:
         a, b = b, a % b
     return a
@@ -87,11 +87,13 @@ for i in range(len(liczby)):
     if wzglednie_pierwsza and liczby[i] &gt; najwieksza:
         najwieksza = liczby[i]
 
-print(najwieksza)</code></pre></div><p><strong>Odpowiedź:</strong> 988027</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 988027</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="../linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>

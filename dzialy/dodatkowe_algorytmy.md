@@ -99,7 +99,7 @@ def is_even(x):
 ```
 </details>
 
-## Czy liczba jest podzielna przez n bez reszty [⬆️](#main)
+## Podzielność przez n [⬆️](#main)
 <a name="n"></a>
 <details><summary>Rozwiń</summary>
 
@@ -113,7 +113,7 @@ def divisible(x, n):
 ```
 </details>
 
-## Czy liczba jest wielokrotnością n [⬆️](#main)
+## Wielokrotność n [⬆️](#main)
 <a name="multiple"></a>
 <details><summary>Rozwiń</summary>
 
@@ -133,7 +133,7 @@ print(is_multiple(3, 333))  # False
 ```
 </details>
 
-## Największy i najmniejszy element w zbiorze [⬆️](#main)
+## Minimum i maksimum [⬆️](#main)
 <a name="minmax"></a>
 <details><summary>Rozwiń</summary>
 
@@ -163,7 +163,7 @@ print(min(lista), max(lista))  # -2 7
 ```
 </details>
 
-## Moc liczby (potęgowanie) [⬆️](#main)
+## Potęgowanie [⬆️](#main)
 <a name="potega"></a>
 <details><summary>Rozwiń</summary>
 
@@ -203,7 +203,7 @@ print(2 ** -2)      # 0.25 (operator ** działa też dla ujemnych wykładników)
 ```
 </details>
 
-## Silnia (n) [⬆️](#main)
+## Silnia [⬆️](#main)
 <a name="factorial"></a>
 <details><summary>Rozwiń</summary>
 
@@ -277,7 +277,7 @@ print(sqrt1(-8, 3))  # -2.0
 ```
 </details>
 
-## Moda/dominanta [⬆️](#main)
+## Moda (dominanta) [⬆️](#main)
 <a name="moda"></a>
 <details><summary>Rozwiń</summary>
 
@@ -575,7 +575,7 @@ print(i)
 ```
 </details>
 
-## Wyszukiwanie najdłuższego słowa w łańcuchu [⬆️](#main)
+## Najdłuższe słowo [⬆️](#main)
 <a name="najdluzsze"></a>
 <details><summary>Rozwiń</summary>
 
@@ -600,7 +600,7 @@ print(max(tekst.split(), key=len))  # ładnego
 ```
 </details>
 
-## Wyszukiwanie najdłuższego wspólnego podłańcucha [⬆️](#main)
+## Najdłuższy wspólny podłańcuch [⬆️](#main)
 <a name="podlancuch"></a>
 <details><summary>Rozwiń</summary>
 
@@ -627,7 +627,7 @@ print(najdluzszy_wspolny_podlancuch("informatyka", "matematyka"))  # matyka
 ```
 </details>
 
-## Wyszukiwanie najdłuższego wspólnego podciągu [⬆️](#main)
+## Najdłuższy wspólny podciąg (LCS) [⬆️](#main)
 <a name="podciag"></a>
 <details><summary>Rozwiń</summary>
 
@@ -694,7 +694,7 @@ print(krotnosc("slowo"))  # {'s': 1, 'l': 1, 'o': 2, 'w': 1}
 ```
 </details>
 
-## Naprzemienność dużych i małych liter w tekście [⬆️](#main)
+## Naprzemienne wielkie i małe litery [⬆️](#main)
 <a name="naprzemiennosc"></a>
 <details><summary>Rozwiń</summary>
 
@@ -771,7 +771,7 @@ print(manacher("babcbabcbaccba"))  # abcbabcba
 ```
 </details>
 
-## Algorytm N (naiwny) [⬆️](#main)
+## Wyszukiwanie naiwne [⬆️](#main)
 <a name="naiwny"></a>
 <details><summary>Rozwiń</summary>
 
@@ -1085,7 +1085,7 @@ for p in permutations(sorted("abc")):  # dla posortowanych danych kolejność je
 ```
 </details>
 
-## Wyszukiwanie liczby palindromów w tekście [⬆️](#main)
+## Liczba palindromów w tekście [⬆️](#main)
 <a name="palindromy"></a>
 <details><summary>Rozwiń</summary>
 
@@ -1141,7 +1141,7 @@ print(palindromy_w_zdaniu("Kajak i radar to palindromy"))  # 3 (kajak, i, radar)
 ```
 </details>
 
-## Wyznaczenie punktów przecięcia okręgu z prostą [⬆️](#main)
+## Przecięcie okręgu z prostą [⬆️](#main)
 <a name="okrag_prosta"></a>
 <details><summary>Rozwiń</summary>
 
@@ -1185,7 +1185,7 @@ print(przeciecie_okregu_z_pionowa(3, 0, 0, 5))    # [(3, -4.0), (3, 4.0)]
 ```
 </details>
 
-## Wyznaczanie punktu przecięcia dwóch prostych [⬆️](#main)
+## Przecięcie dwóch prostych [⬆️](#main)
 <a name="przeciecie"></a>
 <details><summary>Rozwiń</summary>
 
@@ -1223,7 +1223,7 @@ print(przeciecie_prostych(1, 0, -1, 2))  # (1.0, 1.0)
 ```
 </details>
 
-## Przynależność punktu do odcinka [⬆️](#main)
+## Punkt na odcinku [⬆️](#main)
 <a name="punkt_odcinek"></a>
 <details><summary>Rozwiń</summary>
 
@@ -1246,7 +1246,7 @@ print(na_odcinku((0, 0), (4, 4), (2, 3)))  # False
 ```
 </details>
 
-## Przynależność punktu do wielokąta [⬆️](#main)
+## Punkt w wielokącie [⬆️](#main)
 <a name="punkt_wielokat"></a>
 <details><summary>Rozwiń</summary>
 
@@ -1325,7 +1325,7 @@ print(dist((0, 0), (3, 4)))  # 5.0
 ```
 </details>
 
-## Znajdowanie punktu tworzącego figurę [⬆️](#main)
+## Brakujący wierzchołek figury [⬆️](#main)
 <a name="figura"></a>
 <details><summary>Rozwiń</summary>
 
@@ -1359,7 +1359,7 @@ print(kwadrat((0, 0), (2, 0)))  # [((2, 2), (0, 2)), ((2, -2), (0, -2))]
 ```
 </details>
 
-## Sprawdzanie czy proste są prostopadłe / równoległe [⬆️](#main)
+## Proste prostopadłe i równoległe [⬆️](#main)
 <a name="proste"></a>
 <details><summary>Rozwiń</summary>
 

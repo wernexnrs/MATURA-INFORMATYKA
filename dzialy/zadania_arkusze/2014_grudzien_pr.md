@@ -1,4 +1,4 @@
-<h1 align="center">2014 grudzień (próbna matura CKE, formuła od 2015)</h1>
+<h1 align="center">Matura próbna 2014 — grudzień (formuła od 2015)</h1>
  
 [SPIS ARKUSZY](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
 

@@ -1,4 +1,4 @@
-<h1 align="center">2021 Kwiecień (próbna)</h1>
+<h1 align="center">Matura próbna 2021 — kwiecień</h1>
  
 [SPIS ARKUSZY](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
 

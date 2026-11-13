@@ -118,7 +118,7 @@ class Ctx:
 
 
 def resolve_link(url, ctx):
-    url = url.strip()
+    url = html.unescape(url.strip())
     if url.startswith("#") or url.startswith("mailto:"):
         return url
     frag = ""
@@ -164,6 +164,7 @@ def inline(text, ctx):
     text = re.sub(r"`([^`]+)`", lambda m: keep("<code>%s</code>" % html.escape(m.group(1))), text)
     # surowe tagi HTML zostawiamy, resztę escapujemy
     text = re.sub(r"</?[a-zA-Z][a-zA-Z0-9]*(\s[^<>]*)?/?>", lambda m: keep(m.group(0)), text)
+    text = re.sub(r"&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z]+);", lambda m: keep(m.group(0)), text)
     text = html.escape(text, quote=False)
 
     def image(m):
@@ -231,7 +232,8 @@ def code_block(lang, lines, ctx):
         label = "Kod"
     first = code.split("\n", 1)[0].strip()
     note = ""
-    if lang in ("python", "py", "cpp", "c++") and re.match(r"^(#|//)\s*\S", first) and len(first) < 60:
+    comment = r"^#\s*\S" if lang in ("python", "py") else r"^//\s*\S"
+    if lang in ("python", "py", "cpp", "c++") and re.match(comment, first) and len(first) < 60:
         note = re.sub(r"^(#|//)\s*", "", first).strip()
         note = NOTE_PL.get(note.lower(), note)
     hl = {"python": "python", "py": "python", "cpp": "cpp", "c++": "cpp", "java": "java", "sql": "sql"}.get(lang)
@@ -243,8 +245,9 @@ def render_code_group(blocks):
     if len(blocks) == 1:
         b = blocks[0]
         title = b["label"] + (" · " + html.escape(b["note"]) if b["note"] else "")
-        return ('<div class="code"><div class="code-bar"><span>%s</span>'
-                '<button class="copy" type="button">Kopiuj</button></div>%s</div>' % (title, b["html"]))
+        pseudo = " pseudo" if b["label"] == "Pseudokod" else ""
+        return ('<div class="code%s"><div class="code-bar"><span>%s</span>'
+                '<button class="copy" type="button">Kopiuj</button></div>%s</div>' % (pseudo, title, b["html"]))
     tabs, panes = [], []
     titles = [b["label"] + (" · " + html.escape(b["note"]) if b["note"] else "") for b in blocks]
     for i, t in enumerate(titles):
@@ -253,8 +256,10 @@ def render_code_group(blocks):
     for i, b in enumerate(blocks):
         title = titles[i]
         sel = "true" if i == 0 else "false"
-        tabs.append('<button type="button" role="tab" aria-selected="%s" class="tab">%s</button>' % (sel, title))
-        panes.append('<div class="pane"%s>%s</div>' % ("" if i == 0 else " hidden", b["html"]))
+        tabs.append('<button type="button" role="tab" aria-selected="%s" class="tab" data-lang="%s">%s</button>'
+                    % (sel, slugify(b["label"]), title))
+        panes.append('<div class="pane%s"%s>%s</div>' % (" pseudo" if b["label"] == "Pseudokod" else "",
+                                                         "" if i == 0 else " hidden", b["html"]))
     return ('<div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist">%s</div>'
             '<button class="copy" type="button">Kopiuj</button></div>%s</div>' % ("".join(tabs), "".join(panes)))
 
@@ -331,10 +336,16 @@ def markdown_blocks(text, ctx):
             rest = re.sub(r"<a [^>]*>.*?</a>", "", rendered)
             if links and not re.sub(r"[-–—|·\s]", "", rest):
                 # akapit z samych linków, np. "[ARKUSZ](..) --- [DANE](..)"
-                if ctx.kind == "exam" and len(links) == 1 and "SPIS ARKUSZY" in links[0]:
+                if ctx.kind == "exam":
+                    links = [l for l in links if "SPIS ARKUSZY" not in l]
+                if not links:
                     para.clear()
                     return
                 blocks.append(("html", '<p class="links">%s</p>' % "".join(links)))
+            elif rendered.startswith("<strong>Odpowiedź"):
+                blocks.append(("html", '<p class="answer">%s</p>' % rendered))
+            elif re.fullmatch(r"<em>.*</em>", rendered):
+                blocks.append(("html", '<p class="note">%s</p>' % rendered[4:-5]))
             else:
                 blocks.append(("html", "<p>%s</p>" % rendered))
             para.clear()
@@ -378,7 +389,19 @@ def markdown_blocks(text, ctx):
         if m:
             flush()
             title = re.sub(r"\[⬆️?\]\([^)]*\)", "", m.group(2)).strip()
+            # linki w nagłówku (np. "## 5 [[EXCEL] POBIERZ](plik.xlsx)") -> przyciski pod nagłówkiem
+            links = re.findall(r"\[((?:\[[^\]]*\])?[^\]]*)\]\(([^)\s]+)\)", title)
+            title = re.sub(r"\[((?:\[[^\]]*\])?[^\]]*)\]\(([^)\s]+)\)", "", title).strip(" -—")
+            title = strip_tags(inline(title, ctx)).strip()
             blocks.append(("h", len(m.group(1)), title, []))
+            if links:
+                btns = []
+                for label, url in links:
+                    kind_m = re.search(r"\[(\w+)\]", label)
+                    label = ("Pobierz plik " + kind_m.group(1).capitalize()) if kind_m else label.strip()
+                    btns.append('<a href="%s" target="_blank" rel="noopener">%s</a>'
+                                % (html.escape(resolve_link(url, ctx)), html.escape(label)))
+                blocks.append(("html", '<p class="links">%s</p>' % "".join(btns)))
             i += 1
             continue
         if re.match(r"^(-{3,}|\*{3,}|_{3,})$", s):
@@ -400,7 +423,7 @@ def markdown_blocks(text, ctx):
             while i < len(lines) and lines[i].strip().startswith(">"):
                 quote.append(lines[i].strip()[1:].strip())
                 i += 1
-            blocks.append(("html", '<blockquote>%s</blockquote>' % inline(" ".join(quote), ctx)))
+            blocks.append(("html", '<blockquote class="callout">%s</blockquote>' % inline(" ".join(quote), ctx)))
             continue
         if re.match(r"^\s*([-*+]|\d+\.)\s+", line):
             flush()
@@ -491,6 +514,12 @@ def build_page(src, out, kind, page_map):
             pending_anchors = []
             continue
         if b[0] == "h" and b[1] == sec_level:
+            if pending_anchors:
+                # kotwica tuż przed nagłówkiem należy do nowej sekcji, nie do poprzedniej
+                prev = cur["blocks"] if cur else intro
+                prev[:] = [x for x in prev if not (x[0] == "anchor" and x[1] in pending_anchors)]
+                if cur:
+                    cur["anchors"] = [a for a in cur["anchors"] if a not in pending_anchors]
             cur = {"title": b[2], "blocks": [], "anchors": list(pending_anchors)}
             if part:
                 cur["group"] = part
@@ -531,12 +560,16 @@ def build_page(src, out, kind, page_map):
                 group = {"title": gtitle[:1].upper() + gtitle[1:], "items": []}
                 groups.append(group)
                 continue
-            for anchor in re.findall(r"\]\(#([^)]+)\)", line):
+            for label, anchor in re.findall(r"\[([^\]]+)\]\(#([^)]+)\)", line):
                 if group is not None and anchor in anchor_to_sec:
                     sec = anchor_to_sec[anchor]
-                    if sec not in [x for x in group["items"]]:
+                    if sec not in group["items"]:
                         group["items"].append(sec)
                         sec["group"] = group["title"]
+                        sub = label.strip().rstrip(",").strip()
+                        sub = sub[:1].upper() + sub[1:]
+                        if slugify(sub) != slugify(sec["title"]):
+                            sec["subtitle"] = sub
         rest = [s for s in sections if "group" not in s]
         if rest:
             groups.append({"title": "Inne", "items": rest})
@@ -548,30 +581,82 @@ def build_page(src, out, kind, page_map):
                 groups.append({"title": g, "items": []})
             groups[-1]["items"].append(s)
 
+    # kolory, ikony i numeracja
+    for gi, g in enumerate([g for g in groups if g["items"]], 1):
+        g["color"] = (gi - 1) % 7 + 1
+        g["icon"] = group_icon(g["title"])
+        for ii, s in enumerate(g["items"], 1):
+            if kind == "algo":
+                s["idx"] = "%d.%d" % (gi, ii)
+                s["color"] = g["color"]
+    for s in sections:
+        s["langs"] = []
+        for b in s["blocks"]:
+            if b[0] == "code" and b[1]["label"] not in s["langs"]:
+                s["langs"].append(b[1]["label"])
+        if kind == "doc":
+            s["color"] = sections.index(s) % 7 + 1
+        if kind == "exam":
+            m = re.match(r"^\D*?(\d+)", s["title"])
+            s["color"] = (int(m.group(1)) - 1) % 7 + 1 if m else 1
+            s["idx"] = ""
+
     body = []
     if kind == "algo":
-        # na stronach z algorytmami spis z nagłówka zastępujemy siatką kafelków
-        body.append('<div class="toc-grid">')
+        body.append('<div class="groups">')
         for g in groups:
             if not g["items"]:
                 continue
-            body.append('<div class="toc-card"><h2>%s</h2><ul>' % html.escape(g["title"]))
+            n = len(g["items"])
+            body.append('<section class="group" style="--c:var(--g%d)"><header class="group-head">'
+                        '<span class="gicon" aria-hidden="true">%s</span><div><h2>%s</h2><p>%d %s</p></div></header><ol>'
+                        % (g["color"], g["icon"], html.escape(g["title"]), n, plural(n)))
             for s in g["items"]:
-                body.append('<li><a href="#%s">%s</a></li>' % (s["id"], html.escape(s["title"])))
-            body.append("</ul></div>")
+                sub = '<small>%s</small>' % html.escape(s["subtitle"]) if s.get("subtitle") else ""
+                body.append('<li><a href="#%s"><span class="idx">%s</span><span class="t"><b>%s</b>%s</span></a></li>'
+                            % (s["id"], s["idx"], html.escape(s["title"]), sub))
+            body.append("</ol></section>")
         body.append("</div>")
     else:
         body.append(blocks_to_html(intro))
 
     for s in sections:
-        extra = "".join('<span id="%s" class="anchor"></span>' % html.escape(a) for a in s["anchors"])
+        extra = "".join('<span id="%s" class="anchor"></span>' % html.escape(a) for a in s["anchors"] if a != s["id"])
         inner = blocks_to_html([b for b in s["blocks"] if not (b[0] == "anchor" and b[1] in s["anchors"])])
-        tag = "h2"
         group = '<p class="eyebrow">%s</p>' % html.escape(s["group"]) if s.get("group") else ""
-        body.append('<section class="card" id="%s">%s%s<%s><a class="self" href="#%s">%s</a></%s>%s'
+        idx = '<span class="idx">%s</span>' % s["idx"] if s.get("idx") else ""
+        sub = '<p class="sub">%s</p>' % html.escape(s["subtitle"]) if s.get("subtitle") else ""
+        langs = "".join('<span class="lang lang-%s">%s</span>' % (slugify(l), html.escape(l)) for l in s["langs"])
+        langs = '<div class="langs">%s</div>' % langs if langs else ""
+        style = ' style="--c:var(--g%d)"' % s["color"] if s.get("color") else ""
+        body.append('<section class="card%s" id="%s"%s>%s<header class="card-head">%s<div class="head-text">%s'
+                    '<h2><a class="self" href="#%s">%s</a></h2>%s</div>%s</header>%s'
                     '<a class="to-top" href="#top" aria-label="Do góry">↑</a></section>'
-                    % (s["id"], extra, group, tag, s["id"], html.escape(s["title"]), tag, inner))
+                    % (" tinted" if style else "", s["id"], style, extra, idx, group, s["id"],
+                       html.escape(s["title"]), sub, langs, inner))
     return {"title": title, "html": "".join(body), "sections": sections, "groups": groups}
+
+
+LOCK_SVG = ('<svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a5 5 0 0 1 5 5v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v3h6V7a3 3 0 0 0-3-3Zm0 9a2 2 0 0 0-1 3.73V19h2v-2.27A2 2 0 0 0 12 13Z"/></svg>')
+TRI_SVG = ('<svg viewBox="0 0 24 24" width="22" height="22"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M12 3 2.5 20h19L12 3Z"/><circle cx="12" cy="3.5" r="1.8" fill="currentColor"/><circle cx="2.8" cy="20" r="1.8" fill="currentColor"/><circle cx="21.2" cy="20" r="1.8" fill="currentColor"/></svg>')
+
+
+def group_icon(title):
+    t = title.lower()
+    for keys, icon in ((("całkow",), "17"), (("sort", "wyszuk"), "⇅"), (("numer",), "√x"), (("arytm",), "x̄"),
+                       (("tekst", "łańcuch"), "Aa"), (("kompres", "szyfr"), LOCK_SVG), (("kombinat",), "n!"),
+                       (("geometr",), TRI_SVG)):
+        if any(k in t for k in keys):
+            return icon
+    return "{ }"
+
+
+def plural(n, forms=("algorytm", "algorytmy", "algorytmów")):
+    if n == 1:
+        return forms[0]
+    if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
+        return forms[1]
+    return forms[2]
 
 
 NAV = [("index.html", "Start"), ("algorytmy.html", "Algorytmy CKE"), ("dodatkowe.html", "Dodatkowe"),
@@ -648,7 +733,9 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
 </main>
 </div>
 <footer class="footer">
+  <p class="slogan">Wiedza nie powinna mieć ceny.</p>
   <p>Darmowe materiały do matury z informatyki, tworzone przez społeczność. Kod i treść na licencji <a href="{repo}/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>.</p>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
   <p><a href="{repo}" target="_blank" rel="noopener">GitHub</a> · <a href="{repo}/issues" target="_blank" rel="noopener">Zgłoś błąd</a> · <a href="{root}linki.html">Przydatne linki</a></p>
 </footer>
 <div class="search" id="search" hidden>
@@ -675,11 +762,14 @@ def sidebar_html(page, out):
     for g in page["groups"]:
         if not g["items"]:
             continue
+        style = ' style="--c:var(--g%d)"' % g["color"] if g.get("color") else ""
         if g["title"]:
-            parts.append('<p class="side-title">%s</p>' % html.escape(g["title"]))
-        parts.append("<ul>")
+            parts.append('<p class="side-title"%s>%s</p>' % (style, html.escape(g["title"])))
+        parts.append('<ul%s>' % style)
         for s in g["items"]:
-            parts.append('<li><a href="#%s">%s</a></li>' % (s["id"], html.escape(s["title"])))
+            idx = '<span class="sidx">%s</span>' % s["idx"] if s.get("idx") else ""
+            li_style = ' style="--c:var(--g%d)"' % s["color"] if s.get("color") and not g.get("color") else ""
+            parts.append('<li%s><a href="#%s">%s%s</a></li>' % (li_style, s["id"], idx, html.escape(s["title"])))
         parts.append("</ul>")
     return "".join(parts)
 
@@ -708,21 +798,8 @@ def main():
     index_entries = []
     built = []
     stats = {}
-
-    for src, out, title, short, kind, desc in main_pages:
-        page = build_page(src, out, kind, page_map)
-        crumbs = [("index.html", "Start")]
-        content = '<h1 class="page-title">%s</h1><p class="lead">%s</p>%s' % (html.escape(title), html.escape(desc), page["html"])
-        side = sidebar_html(page, out) if kind != "index" else ""
-        write(out, layout(out, title, desc, content, side, crumbs))
-        built.append(out)
-        stats[out] = len(page["sections"])
-        if kind == "algo":
-            stats[out + ":groups"] = [(g["title"], [(s["title"], s["id"]) for s in g["items"]]) for g in page["groups"]]
-        for s in page["sections"]:
-            index_entries.append({"t": s["title"], "p": short, "u": out + "#" + s["id"], "x": s["text"][:120]})
-        if kind != "algo":
-            index_entries.append({"t": title, "p": "Strona", "u": out, "x": desc[:120]})
+    exam_info = {}
+    exam_entries = []
 
     exam_titles = {}
     for src in exams:
@@ -744,8 +821,29 @@ def main():
         side = sidebar_html(page, out) if len(page["sections"]) > 1 else ""
         write(out, layout(out, title, desc, content, side, [("index.html", "Start"), ("arkusze.html", "Arkusze")]))
         built.append(out)
-        index_entries.append({"t": title, "p": "Arkusz" if src.startswith("dzialy/zadania_arkusze") else "Zbiór CKE",
-                              "u": out, "x": ("Zadania: " + ", ".join(tasks)) if tasks else ""})
+        exam_info[src] = {"title": title, "out": out, "tasks": len(tasks)}
+        exam_entries.append({"t": title, "p": "Arkusz" if src.startswith("dzialy/zadania_arkusze") else "Zbiór CKE",
+                             "u": out, "x": ("Zadania: " + ", ".join(tasks)) if tasks else ""})
+
+    for src, out, title, short, kind, desc in main_pages:
+        crumbs = [("index.html", "Start")]
+        if kind == "index":
+            page = {"html": exam_index_html(src, out, page_map, exam_info), "sections": [], "groups": []}
+        else:
+            page = build_page(src, out, kind, page_map)
+        content = '<h1 class="page-title">%s</h1><p class="lead">%s</p>%s' % (html.escape(title), html.escape(desc), page["html"])
+        side = sidebar_html(page, out) if kind != "index" else ""
+        write(out, layout(out, title, desc, content, side, crumbs))
+        built.append(out)
+        stats[out] = len(page["sections"])
+        if kind == "algo":
+            stats[out + ":groups"] = [g for g in page["groups"] if g["items"]]
+        for s in page["sections"]:
+            index_entries.append({"t": s["title"], "p": short, "u": out + "#" + s["id"],
+                                  "x": (s.get("subtitle", "") + " " + s["text"]).strip()[:120]})
+        if kind != "algo":
+            index_entries.append({"t": title, "p": "Strona", "u": out, "x": desc[:120]})
+    index_entries += exam_entries
 
     # strona główna
     write("index.html", home_page(stats, exams, exam_titles, page_map))
@@ -772,6 +870,82 @@ def main():
     print("Zbudowano %d stron w %s" % (len(built) + 1, DOCS))
 
 
+EXAM_GROUP_COLORS = {"zbiór": 4, "matura próbna": 3, "matura podstawowa": 2, "matura": 1}
+
+
+def exam_index_html(src, out, page_map, exam_info):
+    """Spis arkuszy jako siatka kart pogrupowanych wg rodzaju matury."""
+    ctx = Ctx(src, out, "index")
+    ctx.page_map = page_map
+    text = read(src)
+    markdown_blocks(text, ctx)  # zbiera definicje odnośników (znaczki)
+    parts, cards, intro = [], [], []
+    group_title = None
+
+    def close_group():
+        if group_title is None:
+            return
+        color = 1
+        for key, c in EXAM_GROUP_COLORS.items():
+            if group_title.lower().startswith(key):
+                color = c
+                break
+        parts.append('<section class="exam-group" style="--c:var(--g%d)"><header class="group-head">'
+                     '<span class="gicon" aria-hidden="true">%s</span><div><h2 id="%s">%s</h2><p>%d %s</p></div></header>%s'
+                     '<div class="exam-grid">%s</div></section>'
+                     % (color, "Σ" if "zbi" in group_title.lower() else "✎", slugify(group_title),
+                        html.escape(group_title), len(cards),
+                        plural(len(cards), ("zadanie", "zadania", "zadań") if "zbi" in group_title.lower()
+                               else ("arkusz", "arkusze", "arkuszy")),
+                        "".join(intro), "".join(cards)))
+
+    for line in text.split("\n"):
+        s = line.strip()
+        m = re.match(r"^##\s+(.*)$", s)
+        if m:
+            close_group()
+            group_title, cards, intro = m.group(1).strip(), [], []
+            continue
+        if group_title is None or not s:
+            continue
+        m = re.match(r"^[-*]\s+(.*?)\[([^\]]+)\]\(([^)]+\.md)\)(.*)$", s)
+        if m:
+            badges, label, path, rest = m.groups()
+            path = posixpath.normpath(posixpath.join(posixpath.dirname(src), path))
+            info = exam_info.get(path, {})
+            href = rel(out, page_map[path]) if path in page_map else resolve_link(path, ctx)
+            chips = "".join(badge_html(b) for b in re.findall(r"!\[([^\]]+)\]", badges)
+                            if b.lower() in BADGES)
+            ext = re.search(r"\[[^\]]+\]\((https?://[^)]+)\)", rest)
+            year = re.search(r"(19|20)\d{2}", label)
+            if year:
+                big = year.group(0)
+                small = " ".join(label.replace(big, "").replace("Matura", "").split()) or "Matura"
+            else:
+                zm = re.match(r"Zadanie\s+(\d+)\.\s*(.*?)(\s*-\s*str\..*)?$", label)
+                big, small = (zm.group(1), zm.group(2)) if zm else (label, "")
+            n = info.get("tasks", 0)
+            meta = "%d %s" % (n, plural(n, ("zadanie", "zadania", "zadań"))) if n else ""
+            src_link = ('<a class="exam-src" href="%s" target="_blank" rel="noopener">Treść arkusza ↗</a>'
+                        % html.escape(ext.group(1))) if ext else ""
+            cards.append('<article class="exam-card"><a class="exam-main" href="%s"><span class="exam-year">%s</span>'
+                         '<span class="exam-name">%s</span><span class="exam-meta">%s</span></a>'
+                         '<div class="exam-foot"><span class="chips">%s</span>%s</div></article>'
+                         % (html.escape(href), html.escape(big), html.escape(small), meta, chips, src_link))
+            continue
+        if not s.startswith(("-", "*")):
+            rendered = inline(s, ctx)
+            links = re.findall(r"<a [^>]*>.*?</a>", rendered)
+            if links and not re.sub(r"[-–—|·\s]", "", re.sub(r"<a [^>]*>.*?</a>", "", rendered)):
+                links = [re.sub(r"<a ", '<a target="_blank" rel="noopener" ', l, count=1) if "target=" not in l else l
+                         for l in links]
+                intro.append('<p class="links">%s</p>' % "".join(links))
+            else:
+                intro.append('<p class="group-intro">%s</p>' % rendered)
+    close_group()
+    return "".join(parts)
+
+
 def home_page(stats, exams, exam_titles, page_map):
     groups = stats.get("algorytmy.html:groups", [])
     n_algo = stats.get("algorytmy.html", 0)
@@ -779,26 +953,34 @@ def home_page(stats, exams, exam_titles, page_map):
     n_exam = len([e for e in exams if e.startswith("dzialy/zadania_arkusze")])
     n_zb = len([e for e in exams if e.startswith("dzialy/zadania_zbior")])
     quick = []
-    for title, items in groups:
-        if not items:
-            continue
-        links = "".join('<li><a href="algorytmy.html#%s">%s</a></li>' % (sid, html.escape(t)) for t, sid in items)
-        quick.append('<div class="toc-card"><h3>%s</h3><ul>%s</ul></div>' % (html.escape(title), links))
+    for g in groups:
+        links = "".join('<li><a href="algorytmy.html#%s"><span class="idx">%s</span><span class="t"><b>%s</b></span></a></li>'
+                        % (s["id"], s.get("idx", ""), html.escape(s["title"])) for s in g["items"])
+        quick.append('<section class="group compact" style="--c:var(--g%d)"><header class="group-head">'
+                     '<span class="gicon" aria-hidden="true">%s</span><div><h3>%s</h3></div></header><ol>%s</ol></section>'
+                     % (g["color"], g["icon"], html.escape(g["title"]), links))
     content = """
 <section class="hero">
-  <p class="eyebrow">Matura rozszerzona z informatyki · Python</p>
-  <h1>Algorytmy i rozwiązania arkuszy w&nbsp;jednym miejscu</h1>
-  <p class="lead">Każdy algorytm z wymagań CKE z kodem w Pythonie i pseudokodem, dodatkowe algorytmy oraz rozwiązania zadań z arkuszy maturalnych z odpowiedziami. Za darmo, bez reklam.</p>
+  <p class="eyebrow">Matura z informatyki · Python · CKE</p>
+  <h1>Wiedza nie powinna mieć&nbsp;ceny.</h1>
+  <p class="lead">Wszystkie algorytmy z wymagań CKE z kodem w Pythonie i pseudokodem, dodatkowe algorytmy oraz rozwiązania arkuszy maturalnych z odpowiedziami. Inni chowają to za paywallem — tu masz wszystko za darmo.</p>
+  <ul class="manifest" aria-label="Zasady">
+    <li><b>0 zł</b><span>bez opłat i abonamentów</span></li>
+    <li><b>0 reklam</b><span>nic nie rozprasza</span></li>
+    <li><b>0 logowania</b><span>otwierasz i się uczysz</span></li>
+    <li><b>100% otwarte</b><span>licencja MIT</span></li>
+  </ul>
   <button class="hero-search" type="button" data-open-search><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj: sito, NWD, bisekcja, 2019 maj…</span><kbd>/</kbd></button>
+  <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)</p>
 </section>
 <section class="tiles">
-  <a class="tile" href="algorytmy.html"><span class="num">{n_algo}</span><h2>Algorytmy z wymagań CKE</h2><p>Liczby, sortowania, wyszukiwanie, numeryczne, teksty, szyfry, geometria.</p></a>
-  <a class="tile" href="dodatkowe.html"><span class="num">{n_extra}</span><h2>Dodatkowe algorytmy</h2><p>Średnie, mediana, moda, KMP, Boyer-Moore, Manacher, geometria analityczna.</p></a>
-  <a class="tile" href="arkusze.html"><span class="num">{n_exam}</span><h2>Rozwiązane arkusze</h2><p>Matury 2005-2021: rozszerzona, podstawowa, próbne + {n_zb} zadań ze zbioru CKE.</p></a>
-  <a class="tile" href="funkcje.html"><span class="num">Py</span><h2>Ściąga z Pythona</h2><p><a href="funkcje.html">Funkcje wbudowane</a>, <a href="metody.html">metody</a> i <a href="biblioteki.html">przydatne moduły</a>.</p></a>
+  <a class="tile" style="--c:var(--g1)" href="algorytmy.html"><span class="tile-icon" aria-hidden="true">⇅</span><span class="num">{n_algo}</span><h2>Algorytmy z wymagań CKE</h2><p>Liczby, sortowania, wyszukiwanie, numeryczne, teksty, szyfry, geometria.</p></a>
+  <a class="tile" style="--c:var(--g5)" href="dodatkowe.html"><span class="tile-icon" aria-hidden="true">+</span><span class="num">{n_extra}</span><h2>Dodatkowe algorytmy</h2><p>Średnie, mediana, moda, KMP, Boyer-Moore, Manacher, geometria analityczna.</p></a>
+  <a class="tile" style="--c:var(--g3)" href="arkusze.html"><span class="tile-icon" aria-hidden="true">✎</span><span class="num">{n_exam}</span><h2>Rozwiązane arkusze</h2><p>Matury 2005–2021: rozszerzona, podstawowa, próbne + {n_zb} zadań ze zbioru CKE.</p></a>
+  <a class="tile" style="--c:var(--g2)" href="funkcje.html"><span class="tile-icon" aria-hidden="true">Py</span><span class="num">3</span><h2>Ściągi z Pythona</h2><p>Funkcje wbudowane, metody i przydatne moduły.</p></a>
 </section>
 <h2 class="section-title">Szybki dostęp: wymagania CKE</h2>
-<div class="toc-grid">{quick}</div>
+<div class="groups">{quick}</div>
 <section class="howto">
   <h2 class="section-title">Jak się uczyć z tej strony</h2>
   <ol>

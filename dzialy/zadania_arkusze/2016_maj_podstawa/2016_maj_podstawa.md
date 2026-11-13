@@ -1,4 +1,4 @@
-<h1 align="center">2016 Maj — poziom podstawowy (stara matura)</h1>
+<h1 align="center">Matura 2016 — maj, poziom podstawowy</h1>
  
 [SPIS ARKUSZY](https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze.md)
 
