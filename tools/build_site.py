@@ -20,6 +20,8 @@ DOCS = os.path.join(ROOT, "docs")
 SITE_URL = "https://wernexnrs.github.io/MATURA-INFORMATYKA/"
 REPO_URL = "https://github.com/wernexnrs/MATURA-INFORMATYKA"
 SITE_NAME = "Matura z informatyki"
+# najbliższa matura z informatyki (termin główny, wg harmonogramu CKE) - do odliczania na stronie głównej
+MATURA_DATE = ("2027-05-17T09:00:00+02:00", "17 maja 2027, godz. 9:00")
 
 # Strony główne: plik źródłowy -> (plik wyjściowy, tytuł, krótka nazwa w menu, rodzaj, opis)
 MAIN_PAGES = [
@@ -1094,12 +1096,26 @@ def home_page(stats, exams, exam_titles, page_map):
   </ul>
   <button class="hero-search" type="button" data-open-search><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg><span>Szukaj: sito, NWD, bisekcja, 2019 maj…</span><kbd>/</kbd></button>
   <p class="powered"><span class="spark" aria-hidden="true">✦</span> Powered by AI · Claude Opus 5.5 (High)<span class="powered-slogan">Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.</span></p>
+  <div class="countdown" data-date="{md_iso}"><span class="cd-label">Do matury z informatyki ({md_txt})</span><span class="cd-value">zostało jeszcze trochę czasu</span></div>
 </section>
 <section class="tiles">
   <a class="tile" style="--c:var(--g1)" href="algorytmy.html"><span class="tile-icon" aria-hidden="true">⇅</span><span class="num">{n_algo}</span><h2>Algorytmy z wymagań CKE</h2><p>Liczby, sortowania, wyszukiwanie, numeryczne, teksty, szyfry, geometria.</p></a>
   <a class="tile" style="--c:var(--g5)" href="dodatkowe.html"><span class="tile-icon" aria-hidden="true">+</span><span class="num">{n_extra}</span><h2>Dodatkowe algorytmy</h2><p>Średnie, mediana, moda, KMP, Boyer-Moore, Manacher, geometria analityczna.</p></a>
   <a class="tile" style="--c:var(--g3)" href="arkusze.html"><span class="tile-icon" aria-hidden="true">✎</span><span class="num">{n_exam}</span><h2>Rozwiązane arkusze</h2><p>Matury 2005–2026: formuła 2023, 2015, stara, próbne + {n_zb} zadań ze zbioru CKE.</p></a>
   <a class="tile" style="--c:var(--g2)" href="funkcje.html"><span class="tile-icon" aria-hidden="true">Py</span><span class="num">3</span><h2>Ściągi z Pythona</h2><p>Funkcje wbudowane, metody i przydatne moduły.</p></a>
+</section>
+<section id="community" class="community" hidden>
+  <div class="community-text">
+    <h2 class="section-title">Tworzymy to razem</h2>
+    <p>Projekt rozwijają uczniowie, absolwenci i nauczyciele. Każdy może poprawić błąd albo dodać rozwiązanie — przyciskiem <b>✏️ Popraw lub dodaj</b> pod każdym zadaniem.</p>
+    <div class="community-stats"></div>
+    <div class="avatars"></div>
+    <p class="community-cta"><a class="btn" href="{repo}/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Dołącz do projektu</a> <a class="btn ghost" href="{repo}" target="_blank" rel="noopener">⭐ Daj gwiazdkę na GitHubie</a> <a class="btn ghost" href="statystyki.html">Zobacz statystyki</a></p>
+  </div>
+</section>
+<section id="popular" class="popular" hidden>
+  <h2 class="section-title">Popularne w tym tygodniu <span class="pop-note"></span></h2>
+  <ol></ol>
 </section>
 <h2 class="section-title">Szybki dostęp: wymagania CKE</h2>
 <div class="groups">{quick}</div>
@@ -1112,7 +1128,7 @@ def home_page(stats, exams, exam_titles, page_map):
     <li>Wyszukiwarka (<kbd>/</kbd> lub <kbd>Ctrl</kbd>+<kbd>K</kbd>) znajdzie każdy algorytm i arkusz.</li>
   </ol>
 </section>
-""".format(n_algo=n_algo, n_extra=n_extra, n_exam=n_exam, n_zb=n_zb, quick="".join(quick))
+""".format(repo=REPO_URL, md_iso=MATURA_DATE[0], md_txt=MATURA_DATE[1], n_algo=n_algo, n_extra=n_extra, n_exam=n_exam, n_zb=n_zb, quick="".join(quick))
     desc = ("Darmowe materiały do matury z informatyki: wszystkie algorytmy z wymagań CKE w Pythonie z pseudokodem, "
             "dodatkowe algorytmy i rozwiązania arkuszy maturalnych 2005-2026 z odpowiedziami.")
     return layout("index.html", "Matura z informatyki - algorytmy i arkusze w Pythonie", desc, content)

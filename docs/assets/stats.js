@@ -126,6 +126,73 @@
     } };
   }
 
+
+  /* ---------- kiedy i jak się uczycie ---------- */
+  function learning(d, daily) {
+    var html = "";
+    var DAYS = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
+    var wd = [0, 0, 0, 0, 0, 0, 0];
+    daily.forEach(function (x) { var g = new Date(x.day + "T12:00:00").getDay(); wd[(g + 6) % 7] += x.count; });
+    var hours = d.hourly || [];
+    var part = "";
+    if (wd.some(function (v) { return v > 0; })) {
+      part += bars("Dni tygodnia", DAYS.map(function (n, i) { return { name: n, count: wd[i] }; }).filter(function () { return true; }),
+        { limit: 7, share: true, note: "W które dni uczycie się najczęściej" });
+    }
+    if (hours.some(function (v) { return v > 0; })) part += hourChart(hours);
+    var ev = d.events || [];
+    var pick = function (prefix, names) {
+      return ev.filter(function (e) { return (e.path || "").indexOf(prefix) === 0; }).map(function (e) {
+        var k = e.path.slice(prefix.length);
+        return { name: (names && names[k]) || decodeURIComponent(k), count: e.count };
+      });
+    };
+    var LN = { python: "Python", pseudo: "Pseudokod", cpp: "C++", java: "Java", sql: "SQL" };
+    part += bars("Wybierany język", pick("jezyk/", LN), { share: true, note: "Który język przełączacie w kodzie" });
+    part += bars("Kopiowany kod", pick("kopiuj/", LN), { share: true, note: "Ile razy kopiowano kod w danym języku" });
+    part += bars("Czego szukacie", pick("szukaj/"), { limit: 12, note: "Najczęstsze frazy w wyszukiwarce strony" });
+    if (part) html += '<h2 class="section-title">Kiedy i jak się uczycie</h2><div class="charts">' + part + "</div>";
+    return html;
+  }
+
+  function hourChart(hours) {
+    var max = Math.max.apply(null, hours) || 1, W = 480, H = 170, B = 22, bw = W / 24;
+    var cols = hours.map(function (v, h) {
+      var hh = Math.max(v > 0 ? 3 : 0, (v / max) * (H - B - 8));
+      return '<g><title>' + h + ":00–" + (h + 1) + ":00 — " + fmt(v) + ' odwiedzin</title><rect x="' + (h * bw + 2) + '" y="' + (H - B - hh) +
+        '" width="' + (bw - 4) + '" height="' + hh + '" rx="3" class="hcol"/><rect x="' + h * bw + '" y="0" width="' + bw + '" height="' + H + '" fill="transparent"/></g>' +
+        (h % 3 === 0 ? '<text x="' + (h * bw + bw / 2) + '" y="' + (H - 6) + '" class="tick" text-anchor="middle">' + h + "</text>" : "");
+    }).join("");
+    var rows = hours.map(function (v, h) { return { name: h + ":00–" + (h + 1) + ":00", count: v }; });
+    return '<section class="chart-card"><h3>Godziny nauki</h3><p class="chart-note">O której najczęściej odwiedzacie stronę</p>' +
+      '<svg viewBox="0 0 ' + W + " " + H + '" class="line-svg hours" role="img" aria-label="Odwiedziny według godziny">' +
+      '<line x1="0" x2="' + W + '" y1="' + (H - B) + '" y2="' + (H - B) + '" class="gridline"/>' + cols + "</svg>" +
+      table(rows, ["Godzina", "Odwiedziny"]) + "</section>";
+  }
+
+  /* ---------- społeczność z GitHuba ---------- */
+  function community(g) {
+    if (!g) return "";
+    var people = (g.contributors || []).length;
+    var tiles = [["Gwiazdki na GitHubie", g.stars], ["Współtwórcy", people], ["Scalone poprawki (PR)", g.merged_prs],
+                 ["Rozwiązane zgłoszenia", g.closed_issues], ["Forki", g.forks], ["Obserwujący", g.watchers]];
+    var html = '<h2 class="section-title">Społeczność</h2><div class="stats-grid">' + tiles.map(function (t) {
+      return '<div class="stat"><span class="stat-num">' + fmt(t[1]) + '</span><span class="stat-label">' + t[0] + "</span></div>";
+    }).join("") + "</div>";
+    var contrib = (g.contributors || []).map(function (c) {
+      return '<li><a href="' + esc(c.url) + '" target="_blank" rel="noopener"><img src="' + esc(c.avatar) + '&s=80" alt="" width="36" height="36" loading="lazy">' +
+        '<span class="cname">' + esc(c.login) + '</span><span class="ccount">' + fmt(c.contributions) + " zmian</span></a></li>";
+    }).join("");
+    var commits = (g.commits || []).map(function (c) {
+      return '<li><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.message) + '</a><span class="cmeta">' + esc(c.author) + " · " +
+        new Date(c.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" }) + "</span></li>";
+    }).join("");
+    html += '<div class="charts"><section class="chart-card"><h3>Współtwórcy</h3><p class="chart-note">Dziękujemy! Każdy może dołączyć — zobacz <a href="' +
+      esc((g.url || "") + "/blob/master/CONTRIBUTING.md") + '" target="_blank" rel="noopener">jak pomóc</a>.</p><ul class="contrib-list">' + contrib + "</ul></section>" +
+      '<section class="chart-card"><h3>Ostatnie zmiany</h3><ul class="commit-list">' + commits + "</ul></section></div>";
+    return html;
+  }
+
   /* ---------- całość ---------- */
   function render(d) {
     var pages = (d.pages || []).filter(function (p) { return p.count > 0; });
@@ -133,12 +200,13 @@
     var total = d.total || pages.reduce(function (a, p) { return a + p.count; }, 0);
     if (!total && !daily.some(function (x) { return x.count > 0; })) {
       empty("Licznik działa od " + (d.since || "listopada 2026") + ". Pierwsze wykresy pojawią się, gdy zbierzemy pierwsze odwiedziny.");
+      box.insertAdjacentHTML("beforeend", community(d.github));
       return;
     }
     var last = function (k) { return daily.slice(-k).reduce(function (a, x) { return a + x.count; }, 0); };
     var best = daily.reduce(function (a, x) { return x.count > a.count ? x : a; }, { count: 0 });
     var arkusze = pages.filter(function (p) { return category(p.path) === "Arkusze maturalne" && !/arkusze\.html$/.test(p.path); });
-    var algos = pages.filter(function (p) { return /algorytmy|dodatkowe/.test(category(p.path)); });
+    var algos = pages.filter(function (p) { return /algorytm/i.test(category(p.path)); });
 
     var cats = {};
     pages.forEach(function (p) { var c = category(p.path); cats[c] = (cats[c] || 0) + p.count; });
@@ -174,6 +242,8 @@
       bars("Systemy operacyjne", toRows(d.systems), { limit: 8, share: true }) +
       bars("Języki przeglądarki", toRows(d.languages), { limit: 8, share: true }) +
       "</div>";
+    html += learning(d, daily);
+    html += community(d.github);
     if (d.generated_at) {
       html += '<p class="source">Ostatnia aktualizacja: ' + new Date(d.generated_at).toLocaleString("pl-PL", { dateStyle: "long", timeStyle: "short" }) + ".</p>";
     }

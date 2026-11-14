@@ -218,3 +218,148 @@
     }
   });
 })();
+
+/* ===================== statystyki: zdarzenia, liczniki, popularne, odliczanie ===================== */
+(function () {
+  "use strict";
+  var root = window.ROOT || "";
+
+  /* --- zdarzenia GoatCounter (bez danych osobowych): wybór języka, kopiowanie, wyszukiwanie --- */
+  function track(path, title) {
+    try {
+      if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: path, title: title, event: true });
+    } catch (e) { /* licznik zablokowany - trudno */ }
+  }
+  var NAMES = { python: "Python", pseudo: "Pseudokod", cpp: "C++", java: "Java", sql: "SQL" };
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".lang-btn");
+    if (btn) track("jezyk/" + btn.dataset.lang, "Wybór języka: " + (NAMES[btn.dataset.lang] || btn.dataset.lang));
+    var copy = e.target.closest(".variant .copy");
+    if (copy) {
+      var pane = copy.closest(".lang-pane");
+      var lang = pane ? pane.dataset.lang : (copy.closest(".code") && copy.closest(".code").dataset.langs) || "kod";
+      track("kopiuj/" + lang, "Kopiowanie kodu: " + (NAMES[lang] || lang));
+    }
+    var res = e.target.closest("#search-results a");
+    if (res) searched();
+  }, true);
+  var input = document.getElementById("search-input");
+  function searched() {
+    if (!input) return;
+    var q = input.value.trim().toLowerCase().replace(/\s+/g, " ").slice(0, 40);
+    if (q.length >= 2) track("szukaj/" + q, "Wyszukiwanie: " + q);
+  }
+  if (input) input.addEventListener("keydown", function (e) { if (e.key === "Enter") searched(); });
+
+  /* --- wspólne wczytanie statystyk (assets/stats.json, aktualizowane raz dziennie) --- */
+  var statsPromise = null;
+  function loadStats() {
+    if (!statsPromise) {
+      statsPromise = fetch(root + "assets/stats.json", { cache: "no-cache" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .catch(function () { return null; });
+    }
+    return statsPromise;
+  }
+  window.loadMaturaStats = loadStats;
+  var fmt = function (n) { return Number(n || 0).toLocaleString("pl-PL"); };
+  function norm(p) { return ((p || "").replace(/^\/MATURA-INFORMATYKA/, "").replace(/index\.html$/, "")) || "/"; }
+  function viewsMap(list) {
+    var m = {};
+    (list || []).forEach(function (h) { var k = norm(h.path); m[k] = (m[k] || 0) + (h.count || 0); });
+    return m;
+  }
+
+  /* --- licznik wyświetleń przy tytule strony i na kartach arkuszy --- */
+  var title = document.querySelector("main .page-title");
+  var cards = document.querySelectorAll(".exam-card .exam-main");
+  if ((title && !document.getElementById("stats-live")) || cards.length) {
+    loadStats().then(function (d) {
+      if (!d || !d.pages || !d.pages.length) return;
+      var m = viewsMap(d.pages);
+      if (title && !document.querySelector(".hero")) {
+        var n = m[norm(location.pathname)];
+        if (n) {
+          var b = document.createElement("p");
+          b.className = "views";
+          b.title = "Liczba wyświetleń tej strony";
+          b.innerHTML = '<span aria-hidden="true">👁</span> ' + fmt(n) + " wyświetleń";
+          title.insertAdjacentElement("afterend", b);
+        }
+      }
+      cards.forEach(function (a) {
+        var n = m[norm(new URL(a.getAttribute("href"), location.href).pathname)];
+        var meta = a.querySelector(".exam-meta");
+        if (n && meta) meta.insertAdjacentHTML("beforeend", ' · <span class="card-views" title="Wyświetlenia">👁 ' + fmt(n) + "</span>");
+      });
+    });
+  }
+
+  /* --- strona główna: popularne w tym tygodniu --- */
+  var popular = document.getElementById("popular");
+  if (popular) {
+    loadStats().then(function (d) {
+      var list = (d && (d.pages_week && d.pages_week.length ? d.pages_week : d.pages)) || [];
+      var skip = /(\/|index\.html|arkusze\.html|statystyki\.html|404\.html|linki\.html)$/;
+      var seen = {};
+      var items = list.filter(function (h) {
+        var k = norm(h.path);
+        if (skip.test(h.path) || seen[k] || !h.count) return false;
+        seen[k] = 1;
+        return true;
+      }).slice(0, 6);
+      if (!items.length) return;
+      var ol = popular.querySelector("ol");
+      ol.innerHTML = items.map(function (h, i) {
+        var t = (h.title || "").replace(/\s*\|\s*Matura z informatyki\s*$/, "") || h.path;
+        var href = (h.path || "").replace(/^\/MATURA-INFORMATYKA\//, "").replace(/^\//, "");
+        return '<li><a href="' + root + href + '"><span class="pop-rank">' + (i + 1) + '</span><span class="pop-title">' +
+          t.replace(/[<>&]/g, "") + '</span><span class="pop-views">👁 ' + fmt(h.count) + "</span></a></li>";
+      }).join("");
+      popular.querySelector(".pop-note").textContent = d.pages_week && d.pages_week.length ? "ostatnie 7 dni" : "od początku";
+      popular.hidden = false;
+    });
+  }
+
+  /* --- odliczanie do matury --- */
+  var cd = document.querySelector(".countdown[data-date]");
+  if (cd) {
+    var target = new Date(cd.dataset.date);
+    var out = cd.querySelector(".cd-value");
+    var tick = function () {
+      var ms = target - new Date();
+      if (isNaN(ms)) return;
+      if (ms <= 0) { cd.classList.add("done"); out.textContent = "Powodzenia na maturze!"; return; }
+      var d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, mi = Math.floor(ms / 6e4) % 60;
+      var dni = d === 1 ? "dzień" : "dni";
+      out.innerHTML = "<b>" + d + "</b> " + dni + " <b>" + h + "</b> godz. <b>" + mi + "</b> min";
+    };
+    tick();
+    setInterval(tick, 30000);
+  }
+})();
+
+/* ===================== strona główna: społeczność z GitHuba ===================== */
+(function () {
+  "use strict";
+  var box = document.getElementById("community");
+  if (!box || !window.loadMaturaStats) return;
+  var fmt = function (n) { return Number(n || 0).toLocaleString("pl-PL"); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  window.loadMaturaStats().then(function (d) {
+    var g = d && d.github;
+    if (!g) return;
+    var people = (g.contributors || []).length;
+    var stats = [["⭐", g.stars, "gwiazdek na GitHubie"], ["👥", people, people === 1 ? "współtwórca" : "współtwórców"],
+                 ["✅", g.merged_prs, "scalonych poprawek"], ["🍴", g.forks, "kopii projektu (forków)"]];
+    box.querySelector(".community-stats").innerHTML = stats.map(function (s) {
+      return '<div class="cstat"><span class="cstat-num"><span aria-hidden="true">' + s[0] + "</span> " + fmt(s[1]) +
+        '</span><span class="cstat-label">' + s[2] + "</span></div>";
+    }).join("");
+    box.querySelector(".avatars").innerHTML = (g.contributors || []).slice(0, 24).map(function (c) {
+      return '<a href="' + esc(c.url) + '" target="_blank" rel="noopener" title="' + esc(c.login) + " — " + fmt(c.contributions) +
+        ' zmian"><img src="' + esc(c.avatar) + '&s=96" alt="' + esc(c.login) + '" width="44" height="44" loading="lazy"></a>';
+    }).join("");
+    box.hidden = false;
+  });
+})();

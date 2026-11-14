@@ -23,6 +23,7 @@ jobs:
       - name: Pobierz statystyki z GoatCounter
         env:
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python tools/fetch_stats.py
       - name: Zapisz plik statystyk
         run: |

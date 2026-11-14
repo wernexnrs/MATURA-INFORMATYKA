@@ -49,10 +49,11 @@ if GPP and os.path.dirname(GPP):
 
 def run(cmd, cwd, timeout=60):
     try:
-        r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout, input="", env=ENV)
+        r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace",
+                           timeout=timeout, input="", env=ENV)
     except subprocess.TimeoutExpired:
         return False, "przekroczono czas %ds" % timeout
-    return r.returncode == 0, (r.stderr or r.stdout).strip()[-600:]
+    return r.returncode == 0, (r.stderr or r.stdout or "").strip()[-600:]
 
 
 def check_file(path, do_run):

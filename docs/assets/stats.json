@@ -397,5 +397,114 @@
    "count": 0
   }
  ],
- "toprefs": []
+ "toprefs": [],
+ "github": {
+  "stars": 208,
+  "forks": 16,
+  "watchers": 7,
+  "open_issues": 0,
+  "closed_issues": 5,
+  "merged_prs": 17,
+  "contributors": [
+   {
+    "login": "wernexnrs",
+    "avatar": "https://avatars.githubusercontent.com/u/75118593?v=4",
+    "url": "https://github.com/wernexnrs",
+    "contributions": 43
+   },
+   {
+    "login": "Pixel48",
+    "avatar": "https://avatars.githubusercontent.com/u/42846410?v=4",
+    "url": "https://github.com/Pixel48",
+    "contributions": 7
+   },
+   {
+    "login": "jegor377",
+    "avatar": "https://avatars.githubusercontent.com/u/13947002?v=4",
+    "url": "https://github.com/jegor377",
+    "contributions": 4
+   },
+   {
+    "login": "Packman700",
+    "avatar": "https://avatars.githubusercontent.com/u/53169727?v=4",
+    "url": "https://github.com/Packman700",
+    "contributions": 4
+   },
+   {
+    "login": "Aldmors",
+    "avatar": "https://avatars.githubusercontent.com/u/48130167?v=4",
+    "url": "https://github.com/Aldmors",
+    "contributions": 2
+   },
+   {
+    "login": "Kerowsky",
+    "avatar": "https://avatars.githubusercontent.com/u/20372513?v=4",
+    "url": "https://github.com/Kerowsky",
+    "contributions": 1
+   },
+   {
+    "login": "MaciejWiatr",
+    "avatar": "https://avatars.githubusercontent.com/u/44440856?v=4",
+    "url": "https://github.com/MaciejWiatr",
+    "contributions": 1
+   },
+   {
+    "login": "lewando54",
+    "avatar": "https://avatars.githubusercontent.com/u/29759567?v=4",
+    "url": "https://github.com/lewando54",
+    "contributions": 1
+   }
+  ],
+  "commits": [
+   {
+    "message": "Statystyki: liczenie od założenia licznika i zapasowa suma; testy C++ w GCC 15; adnotacje błędów",
+    "date": "2026-11-14T20:27:14Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/8dd59c0a2c5927ec1bf33ff13e09cb2f32574cc5"
+   },
+   {
+    "message": "Licznik odwiedzin GoatCounter i publiczna strona Statystyki z wykresami",
+    "date": "2026-11-14T20:17:20Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/b4fbab62d052860c05b9da1462e4aef6c910d14b"
+   },
+   {
+    "message": "Karty arkuszy pokazują faktyczne języki rozwiązań (Python, C++, Java)",
+    "date": "2026-11-14T20:10:43Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/a078aa118268e8f1991ccefa603009ca00fa93a7"
+   },
+   {
+    "message": "C++23 i Java 25 do wszystkich arkuszy, treść zadań, przełącznik języków, łatwe współtworzenie",
+    "date": "2026-11-14T19:49:47Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/b095da7eb86f402eca8f0021a3c27293d34cb181"
+   },
+   {
+    "message": "Nowe matury 2015-2026, C++23 i Java 25, bez Accessa, narzędzia dla społeczności",
+    "date": "2026-11-13T21:42:15Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/19d794446fc757d8a8510058e65f1802e5405ef0"
+   },
+   {
+    "message": "Scal przebudowę strony; generator deterministyczny (kolejność plików, sitemap bez daty)",
+    "date": "2026-11-13T20:55:27Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/a3c9d16c079f359e143aa6fefc67b38c2df0d8c1"
+   },
+   {
+    "message": "Hasło: Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.",
+    "date": "2026-11-13T20:55:05Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/7601ac54b80878dd86498710ee01bd1f983fd619"
+   },
+   {
+    "message": "Hasło obok informacji o AI: Inni kasują. My uczymy za darmo.",
+    "date": "2026-11-13T20:52:12Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/fdf2e2694e933a55c0e8f377a4985a853f68272a"
+   }
+  ],
+  "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA"
+ }
 }
