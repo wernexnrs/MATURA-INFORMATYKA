@@ -553,3 +553,6 @@ th { background: var(--surface-2); }
 .contrib { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; margin-top: 14px; padding-top: 10px; border-top: 1px dashed var(--border); }
 .contrib a { font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 8px; color: var(--muted); border: 1px solid transparent; }
 .contrib a:hover { color: var(--accent-text); border-color: var(--border); background: var(--surface-2); text-decoration: none; }
+.exam-foot { flex-wrap: wrap; row-gap: 6px; }
+.exam-foot .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.exam-foot .chips .chip { margin: 0; }

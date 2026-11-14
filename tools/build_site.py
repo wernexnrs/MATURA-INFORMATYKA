@@ -897,7 +897,9 @@ def main():
         side = sidebar_html(page, out) if len(page["sections"]) > 1 else ""
         write(out, layout(out, title, desc, content, side, [("index.html", "Start"), ("arkusze.html", "Arkusze")]))
         built.append(out)
-        exam_info[src] = {"title": title, "out": out, "tasks": len(tasks)}
+        langs = [name for name, pat in (("py", r"^```(py|python)\s*$"), ("c++", r"^```(cpp|c\+\+)\s*$"),
+                                        ("java", r"^```java\s*$")) if re.search(pat, text, re.M)]
+        exam_info[src] = {"title": title, "out": out, "tasks": len(tasks), "langs": langs}
         exam_entries.append({"t": title, "p": "Arkusz" if src.startswith("dzialy/zadania_arkusze") else "Zbiór CKE",
                              "u": out, "x": ("Zadania: " + ", ".join(tasks)) if tasks else ""})
 
@@ -990,8 +992,9 @@ def exam_index_html(src, out, page_map, exam_info):
             path = posixpath.normpath(posixpath.join(posixpath.dirname(src), path))
             info = exam_info.get(path, {})
             href = rel(out, page_map[path]) if path in page_map else resolve_link(path, ctx)
-            chips = "".join(badge_html(b) for b in re.findall(r"!\[([^\]]+)\]", badges)
-                            if b.lower() in BADGES)
+            # języki rozwiązań odczytane z samego pliku arkusza (a nie ze znaczków w spisie)
+            chips = "".join(badge_html(b) for b in info.get("langs") or
+                            [b for b in re.findall(r"!\[([^\]]+)\]", badges) if b.lower() in BADGES])
             ext = re.search(r"\[[^\]]+\]\((https?://[^)]+)\)", rest)
             year = re.search(r"(19|20)\d{2}", label)
             if year:
