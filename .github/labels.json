@@ -1,0 +1,12 @@
+[
+  {"name": "błąd", "color": "d73a4a", "description": "Zły wynik, błąd w kodzie lub treści"},
+  {"name": "strona", "color": "1d76db", "description": "Problem z wyświetlaniem strony"},
+  {"name": "arkusz", "color": "0e8a16", "description": "Brakujący arkusz, zadanie lub wersja C++/Java"},
+  {"name": "propozycja", "color": "a2eeef", "description": "Nowy algorytm, ściąga lub funkcja strony"},
+  {"name": "pytanie", "color": "d876e3", "description": "Pytanie o zadanie lub algorytm"},
+  {"name": "pomysł", "color": "fbca04", "description": "Pomysł na rozwój projektu"},
+  {"name": "rozwiązanie", "color": "5319e7", "description": "Alternatywne rozwiązanie od społeczności"},
+  {"name": "ogłoszenie", "color": "0052cc", "description": "Ogłoszenia projektu"},
+  {"name": "dobre na start", "color": "7057ff", "description": "Dobre pierwsze zadanie dla nowych osób"},
+  {"name": "pomoc mile widziana", "color": "008672", "description": "Szukamy chętnych do pomocy"}
+]

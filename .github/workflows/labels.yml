@@ -1,0 +1,43 @@
+name: Etykiety
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/labels.json"
+      - ".github/workflows/labels.yml"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Utwórz lub zaktualizuj etykiety z .github/labels.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse, urllib.error
+          repo = os.environ["GITHUB_REPOSITORY"]
+          headers = {"Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                     "Accept": "application/vnd.github+json", "User-Agent": "labels-sync"}
+          def call(method, path, data):
+              req = urllib.request.Request("https://api.github.com/repos/%s%s" % (repo, path), method=method,
+                                           headers=headers, data=json.dumps(data).encode())
+              try:
+                  with urllib.request.urlopen(req) as r:
+                      return r.status
+              except urllib.error.HTTPError as e:
+                  return e.code
+          for label in json.load(open(".github/labels.json", encoding="utf-8")):
+              status = call("POST", "/labels", label)
+              if status == 422:  # już istnieje - aktualizujemy kolor i opis
+                  status = call("PATCH", "/labels/" + urllib.parse.quote(label["name"]),
+                                {"color": label["color"], "description": label["description"]})
+              print(label["name"], status)
+              assert status in (200, 201), "Nie udało się ustawić etykiety %s" % label["name"]
+          PY
