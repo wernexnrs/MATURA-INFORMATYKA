@@ -1,376 +1,43 @@
 {
- "generated_at": "2026-11-14T21:00:00Z",
- "since": "2026-11-01",
- "errors": [
-  "total: HTTP Error 404: Not Found"
- ],
+ "generated_at": "2026-11-14T22:00:00Z",
+ "since": "2026-11-14",
+ "errors": [],
+ "total": 0,
  "daily": [
-  {
-   "day": "2026-08-16",
-   "count": 0
-  },
-  {
-   "day": "2026-08-17",
-   "count": 0
-  },
-  {
-   "day": "2026-08-18",
-   "count": 0
-  },
-  {
-   "day": "2026-08-19",
-   "count": 0
-  },
-  {
-   "day": "2026-08-20",
-   "count": 0
-  },
-  {
-   "day": "2026-08-21",
-   "count": 0
-  },
-  {
-   "day": "2026-08-22",
-   "count": 0
-  },
-  {
-   "day": "2026-08-23",
-   "count": 0
-  },
-  {
-   "day": "2026-08-24",
-   "count": 0
-  },
-  {
-   "day": "2026-08-25",
-   "count": 0
-  },
-  {
-   "day": "2026-08-26",
-   "count": 0
-  },
-  {
-   "day": "2026-08-27",
-   "count": 0
-  },
-  {
-   "day": "2026-08-28",
-   "count": 0
-  },
-  {
-   "day": "2026-08-29",
-   "count": 0
-  },
-  {
-   "day": "2026-08-30",
-   "count": 0
-  },
-  {
-   "day": "2026-08-31",
-   "count": 0
-  },
-  {
-   "day": "2026-09-01",
-   "count": 0
-  },
-  {
-   "day": "2026-09-02",
-   "count": 0
-  },
-  {
-   "day": "2026-09-03",
-   "count": 0
-  },
-  {
-   "day": "2026-09-04",
-   "count": 0
-  },
-  {
-   "day": "2026-09-05",
-   "count": 0
-  },
-  {
-   "day": "2026-09-06",
-   "count": 0
-  },
-  {
-   "day": "2026-09-07",
-   "count": 0
-  },
-  {
-   "day": "2026-09-08",
-   "count": 0
-  },
-  {
-   "day": "2026-09-09",
-   "count": 0
-  },
-  {
-   "day": "2026-09-10",
-   "count": 0
-  },
-  {
-   "day": "2026-09-11",
-   "count": 0
-  },
-  {
-   "day": "2026-09-12",
-   "count": 0
-  },
-  {
-   "day": "2026-09-13",
-   "count": 0
-  },
-  {
-   "day": "2026-09-14",
-   "count": 0
-  },
-  {
-   "day": "2026-09-15",
-   "count": 0
-  },
-  {
-   "day": "2026-09-16",
-   "count": 0
-  },
-  {
-   "day": "2026-09-17",
-   "count": 0
-  },
-  {
-   "day": "2026-09-18",
-   "count": 0
-  },
-  {
-   "day": "2026-09-19",
-   "count": 0
-  },
-  {
-   "day": "2026-09-20",
-   "count": 0
-  },
-  {
-   "day": "2026-09-21",
-   "count": 0
-  },
-  {
-   "day": "2026-09-22",
-   "count": 0
-  },
-  {
-   "day": "2026-09-23",
-   "count": 0
-  },
-  {
-   "day": "2026-09-24",
-   "count": 0
-  },
-  {
-   "day": "2026-09-25",
-   "count": 0
-  },
-  {
-   "day": "2026-09-26",
-   "count": 0
-  },
-  {
-   "day": "2026-09-27",
-   "count": 0
-  },
-  {
-   "day": "2026-09-28",
-   "count": 0
-  },
-  {
-   "day": "2026-09-29",
-   "count": 0
-  },
-  {
-   "day": "2026-09-30",
-   "count": 0
-  },
-  {
-   "day": "2026-10-01",
-   "count": 0
-  },
-  {
-   "day": "2026-10-02",
-   "count": 0
-  },
-  {
-   "day": "2026-10-03",
-   "count": 0
-  },
-  {
-   "day": "2026-10-04",
-   "count": 0
-  },
-  {
-   "day": "2026-10-05",
-   "count": 0
-  },
-  {
-   "day": "2026-10-06",
-   "count": 0
-  },
-  {
-   "day": "2026-10-07",
-   "count": 0
-  },
-  {
-   "day": "2026-10-08",
-   "count": 0
-  },
-  {
-   "day": "2026-10-09",
-   "count": 0
-  },
-  {
-   "day": "2026-10-10",
-   "count": 0
-  },
-  {
-   "day": "2026-10-11",
-   "count": 0
-  },
-  {
-   "day": "2026-10-12",
-   "count": 0
-  },
-  {
-   "day": "2026-10-13",
-   "count": 0
-  },
-  {
-   "day": "2026-10-14",
-   "count": 0
-  },
-  {
-   "day": "2026-10-15",
-   "count": 0
-  },
-  {
-   "day": "2026-10-16",
-   "count": 0
-  },
-  {
-   "day": "2026-10-17",
-   "count": 0
-  },
-  {
-   "day": "2026-10-18",
-   "count": 0
-  },
-  {
-   "day": "2026-10-19",
-   "count": 0
-  },
-  {
-   "day": "2026-10-20",
-   "count": 0
-  },
-  {
-   "day": "2026-10-21",
-   "count": 0
-  },
-  {
-   "day": "2026-10-22",
-   "count": 0
-  },
-  {
-   "day": "2026-10-23",
-   "count": 0
-  },
-  {
-   "day": "2026-10-24",
-   "count": 0
-  },
-  {
-   "day": "2026-10-25",
-   "count": 0
-  },
-  {
-   "day": "2026-10-26",
-   "count": 0
-  },
-  {
-   "day": "2026-10-27",
-   "count": 0
-  },
-  {
-   "day": "2026-10-28",
-   "count": 0
-  },
-  {
-   "day": "2026-10-29",
-   "count": 0
-  },
-  {
-   "day": "2026-10-30",
-   "count": 0
-  },
-  {
-   "day": "2026-10-31",
-   "count": 0
-  },
-  {
-   "day": "2026-11-01",
-   "count": 0
-  },
-  {
-   "day": "2026-11-02",
-   "count": 0
-  },
-  {
-   "day": "2026-11-03",
-   "count": 0
-  },
-  {
-   "day": "2026-11-04",
-   "count": 0
-  },
-  {
-   "day": "2026-11-05",
-   "count": 0
-  },
-  {
-   "day": "2026-11-06",
-   "count": 0
-  },
-  {
-   "day": "2026-11-07",
-   "count": 0
-  },
-  {
-   "day": "2026-11-08",
-   "count": 0
-  },
-  {
-   "day": "2026-11-09",
-   "count": 0
-  },
-  {
-   "day": "2026-11-10",
-   "count": 0
-  },
-  {
-   "day": "2026-11-11",
-   "count": 0
-  },
-  {
-   "day": "2026-11-12",
-   "count": 0
-  },
-  {
-   "day": "2026-11-13",
-   "count": 0
-  },
   {
    "day": "2026-11-14",
    "count": 0
   }
  ],
+ "hourly": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
  "pages": [],
+ "events": [],
+ "pages_week": [],
  "browsers": [],
  "systems": [],
  "locations": [],
@@ -401,7 +68,7 @@
  "github": {
   "stars": 208,
   "forks": 16,
-  "watchers": 7,
+  "watchers": 6,
   "open_issues": 0,
   "closed_issues": 5,
   "merged_prs": 17,
@@ -410,7 +77,7 @@
     "login": "wernexnrs",
     "avatar": "https://avatars.githubusercontent.com/u/75118593?v=4",
     "url": "https://github.com/wernexnrs",
-    "contributions": 43
+    "contributions": 50
    },
    {
     "login": "Pixel48",
@@ -457,6 +124,36 @@
   ],
   "commits": [
    {
+    "message": "Baner podglądu strony przy udostępnianiu linku (og:image)",
+    "date": "2026-11-14T21:08:53Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/1465d5e4c44e5eff8504d5e6269fc1978c862dce"
+   },
+   {
+    "message": "Etykiety zgłoszeń jako plik i workflow, który je tworzy",
+    "date": "2026-11-14T21:00:24Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/9840f24b088f79902bc4fe6357acc301980cf52f"
+   },
+   {
+    "message": "Polskie szablony zgłoszeń i dyskusji dopasowane do projektu",
+    "date": "2026-11-14T20:57:46Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/f1b09c1973ed142833c230d0d677c49c98c7c76c"
+   },
+   {
+    "message": "Update issue templates",
+    "date": "2026-11-14T20:49:15Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/f886232323865c68ac621508927183b4429feb45"
+   },
+   {
+    "message": "Odliczanie do matury, społeczność z GitHuba, popularne, liczniki wyświetleń, zdarzenia",
+    "date": "2026-11-14T20:33:04Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/799002aaf257c760e97c8d2fae9e475ec2add7ab"
+   },
+   {
     "message": "Statystyki: liczenie od założenia licznika i zapasowa suma; testy C++ w GCC 15; adnotacje błędów",
     "date": "2026-11-14T20:27:14Z",
     "author": "wernexnrs",
@@ -473,36 +170,6 @@
     "date": "2026-11-14T20:10:43Z",
     "author": "wernexnrs",
     "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/a078aa118268e8f1991ccefa603009ca00fa93a7"
-   },
-   {
-    "message": "C++23 i Java 25 do wszystkich arkuszy, treść zadań, przełącznik języków, łatwe współtworzenie",
-    "date": "2026-11-14T19:49:47Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/b095da7eb86f402eca8f0021a3c27293d34cb181"
-   },
-   {
-    "message": "Nowe matury 2015-2026, C++23 i Java 25, bez Accessa, narzędzia dla społeczności",
-    "date": "2026-11-13T21:42:15Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/19d794446fc757d8a8510058e65f1802e5405ef0"
-   },
-   {
-    "message": "Scal przebudowę strony; generator deterministyczny (kolejność plików, sitemap bez daty)",
-    "date": "2026-11-13T20:55:27Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/a3c9d16c079f359e143aa6fefc67b38c2df0d8c1"
-   },
-   {
-    "message": "Hasło: Inni kasują. My uczymy za darmo. Paywall to biznes, nie nauka.",
-    "date": "2026-11-13T20:55:05Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/7601ac54b80878dd86498710ee01bd1f983fd619"
-   },
-   {
-    "message": "Hasło obok informacji o AI: Inni kasują. My uczymy za darmo.",
-    "date": "2026-11-13T20:52:12Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/fdf2e2694e933a55c0e8f377a4985a853f68272a"
    }
   ],
   "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA"
