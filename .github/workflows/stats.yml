@@ -1,0 +1,36 @@
+name: Statystyki odwiedzin
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # codziennie ok. 5:17 czasu polskiego
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: docs-push
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pobierz statystyki z GoatCounter
+        env:
+          GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
+        run: python tools/fetch_stats.py
+      - name: Zapisz plik statystyk
+        run: |
+          if [ -n "$(git status --porcelain docs/assets/stats.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
+            git add docs/assets/stats.json
+            git commit -m "Aktualizacja statystyk odwiedzin"
+            git pull --rebase
+            git push
+          fi

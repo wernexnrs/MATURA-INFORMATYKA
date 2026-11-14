@@ -7,6 +7,7 @@ Użycie (z głównego folderu repozytorium):
     python tools/build_site.py
 """
 
+import glob
 import html
 import json
 import os
@@ -735,7 +736,7 @@ def plural(n, forms=("algorytm", "algorytmy", "algorytmów")):
 
 
 NAV = [("index.html", "Start"), ("algorytmy.html", "Algorytmy CKE"), ("dodatkowe.html", "Dodatkowe"),
-       ("arkusze.html", "Arkusze"), ("funkcje.html", "Python")]
+       ("arkusze.html", "Arkusze"), ("funkcje.html", "Python"), ("statystyki.html", "Statystyki")]
 
 
 def layout(out, title, description, content, sidebar="", crumbs=None, wide=False):
@@ -788,6 +789,7 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
 <link rel="stylesheet" href="{root}assets/style.css">
 <script>try{{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}}catch(e){{}}</script>
 <script type="application/ld+json">{ld}</script>
+<script data-goatcounter="https://wernexnrs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <a class="skip" href="#tresc">Przejdź do treści</a>
@@ -923,6 +925,12 @@ def main():
             index_entries.append({"t": title, "p": "Strona", "u": out, "x": desc[:120]})
     index_entries += exam_entries
 
+    # statystyki
+    write("statystyki.html", stats_page(stats, exam_info))
+    built.append("statystyki.html")
+    index_entries.append({"t": "Statystyki odwiedzin", "p": "Strona", "u": "statystyki.html",
+                          "x": "Ile osób uczy się z tej strony - odwiedziny, najpopularniejsze działy i arkusze"})
+
     # strona główna
     write("index.html", home_page(stats, exams, exam_titles, page_map))
     built.insert(0, "index.html")
@@ -1023,6 +1031,41 @@ def exam_index_html(src, out, page_map, exam_info):
                 intro.append('<p class="group-intro">%s</p>' % rendered)
     close_group()
     return "".join(parts)
+
+
+def stats_page(stats, exam_info):
+    """Publiczna strona ze statystykami: zawartość (liczona przy budowie) + odwiedziny (assets/stats.json)."""
+    counts = {"python": 0, "cpp": 0, "java": 0}
+    for path in glob.glob(os.path.join(ROOT, "dzialy", "**", "*.md"), recursive=True):
+        t = open(path, encoding="utf-8").read()
+        counts["python"] += len(re.findall(r"^```(py|python)\s*$", t, re.M))
+        counts["cpp"] += len(re.findall(r"^```(cpp|c\+\+)\s*$", t, re.M))
+        counts["java"] += len(re.findall(r"^```java\s*$", t, re.M))
+    n_algo = stats.get("algorytmy.html", 0) + stats.get("dodatkowe.html", 0)
+    n_exam = len([e for e in exam_info if e.startswith("dzialy/zadania_arkusze")])
+    n_tasks = sum(i["tasks"] for i in exam_info.values())
+    tiles = [("Algorytmów", n_algo, "z wymagań CKE i dodatkowych"), ("Arkuszy", n_exam, "matury 2005–2026"),
+             ("Rozwiązanych zadań", n_tasks, "z treścią i odpowiedzią"),
+             ("Programów", counts["python"] + counts["cpp"] + counts["java"],
+              "Python %d · C++ %d · Java %d" % (counts["python"], counts["cpp"], counts["java"]))]
+    content_tiles = "".join('<div class="stat"><span class="stat-num">%s</span><span class="stat-label">%s</span>'
+                            '<span class="stat-sub">%s</span></div>' % ("{:,}".format(v).replace(",", " "), l, sub)
+                            for l, v, sub in tiles)
+    content = """
+<h1 class="page-title">Statystyki</h1>
+<p class="lead">Jak popularna jest ta strona i co na niej jest. Odwiedziny liczymy bez ciasteczek i bez śledzenia (GoatCounter) — widzisz dokładnie te same liczby co my.</p>
+<h2 class="section-title">Na stronie</h2>
+<div class="stats-grid">{content_tiles}</div>
+<h2 class="section-title">Odwiedziny</h2>
+<div id="stats-live" class="stats-live" data-src="assets/stats.json">
+  <p class="stats-empty">Ładowanie statystyk…</p>
+</div>
+<noscript><p>Wykresy wymagają włączonego JavaScriptu.</p></noscript>
+<p class="source">Dane z <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>, aktualizowane automatycznie raz dziennie. Zbieramy tylko zbiorcze liczby — żadnych danych osobowych.</p>
+<script src="assets/stats.js" defer></script>
+""".format(content_tiles=content_tiles)
+    desc = "Statystyki strony Matura z informatyki: liczba odwiedzin, najpopularniejsze algorytmy i arkusze, urządzenia i kraje odwiedzających."
+    return layout("statystyki.html", "Statystyki", desc, content, crumbs=[("index.html", "Start")])
 
 
 def home_page(stats, exams, exam_titles, page_map):
