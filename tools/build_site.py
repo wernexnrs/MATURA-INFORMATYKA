@@ -708,7 +708,7 @@ def contribute_bar(src, out, page_title, s):
     from urllib.parse import quote
     page_url = SITE_URL + out + "#" + s["id"]
     edit = "%s/edit/master/%s" % (REPO_URL, src)
-    issue = "%s/issues/new?template=blad.yml&title=%s&gdzie=%s" % (
+    issue = "%s/issues/new?template=1-blad.yml&title=%s&gdzie=%s" % (
         REPO_URL, quote("[Błąd] %s — %s" % (page_title or "", s["title"])), quote(page_url))
     return ('<div class="contrib"><a href="%s" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — '
             'zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="%s" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div>'

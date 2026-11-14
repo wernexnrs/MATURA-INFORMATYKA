@@ -25,8 +25,8 @@ Dzięki, że chcesz pomóc! Ten projekt istnieje po to, żeby każdy mógł za d
 
 | Chcesz… | Zrób to |
 | --- | --- |
-| zgłosić błąd w kodzie lub odpowiedzi | [Nowe zgłoszenie → „Błąd w treści”](https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose) |
-| zaproponować algorytm lub arkusz | [Nowe zgłoszenie → „Propozycja”](https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose) |
+| zgłosić błąd w kodzie lub odpowiedzi | [Nowe zgłoszenie → „Błąd w rozwiązaniu lub treści”](https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose) |
+| zaproponować algorytm lub arkusz | [Nowe zgłoszenie → „Propozycja” lub „Brakujący arkusz”](https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose) |
 | poprawić literówkę | otwórz plik na GitHubie, kliknij ✏️ (Edit), popraw i zatwierdź — GitHub sam utworzy pull request |
 | dodać rozwiązanie lub algorytm | przeczytaj punkty 3–6 |
 | pomóc innym | odpowiadaj w [Dyskusjach](https://github.com/wernexnrs/MATURA-INFORMATYKA/discussions), przeglądaj pull requesty |

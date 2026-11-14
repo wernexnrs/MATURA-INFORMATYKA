@@ -1,0 +1,12 @@
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Rozmowy o maturze z informatyki, nauce i projekcie. Pytania o konkretne zadanie najlepiej zadać w kategorii **Q&A**, a błędy zgłaszać w [Issues](https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose).
+  - type: textarea
+    id: tresc
+    attributes:
+      label: Treść
+    validations:
+      required: true

@@ -1,0 +1,42 @@
+name: 🖥️ Problem ze stroną
+description: Coś źle się wyświetla, nie działa przycisk, wyszukiwarka, przełącznik języków albo wersja na telefon.
+title: "[Strona] "
+labels: ["strona"]
+body:
+  - type: input
+    id: gdzie
+    attributes:
+      label: Na której stronie?
+      placeholder: https://wernexnrs.github.io/MATURA-INFORMATYKA/algorytmy.html
+    validations:
+      required: true
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co się dzieje?
+      description: Co robisz krok po kroku, co widzisz i czego się spodziewałeś/aś?
+      placeholder: "1. Wchodzę na Arkusze  2. Klikam C++  3. Kod się nie pokazuje"
+    validations:
+      required: true
+  - type: dropdown
+    id: urzadzenie
+    attributes:
+      label: Urządzenie
+      options: [Komputer, Telefon, Tablet]
+    validations:
+      required: true
+  - type: input
+    id: przegladarka
+    attributes:
+      label: Przeglądarka i system
+      placeholder: Chrome na Windows 11 / Safari na iPhonie
+  - type: dropdown
+    id: motyw
+    attributes:
+      label: Motyw
+      options: [Ciemny, Jasny, Nie wiem]
+  - type: textarea
+    id: zrzut
+    attributes:
+      label: Zrzut ekranu (opcjonalnie)
+      description: Przeciągnij obrazek tutaj — bardzo pomaga.

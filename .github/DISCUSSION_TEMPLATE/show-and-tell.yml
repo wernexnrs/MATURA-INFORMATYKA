@@ -1,0 +1,33 @@
+title: "[Moje rozwiązanie] "
+labels: ["rozwiązanie"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pochwal się swoim rozwiązaniem — krótszym, szybszym albo w innym języku. Najlepsze trafią na stronę (z Twoim podpisem w historii zmian).
+  - type: input
+    id: zadanie
+    attributes:
+      label: Zadanie lub algorytm
+      placeholder: "Matura 2025 maj, zadanie 2.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: jezyk
+    attributes:
+      label: Język
+      options: [Python, C++, Java, Inny]
+    validations:
+      required: true
+  - type: textarea
+    id: kod
+    attributes:
+      label: Twój kod
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co jest w nim ciekawego?
+      description: Np. inne podejście, lepsza złożoność, prostszy zapis. Czy wynik zgadza się z kluczem CKE?

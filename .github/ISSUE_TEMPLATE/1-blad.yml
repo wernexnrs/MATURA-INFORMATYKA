@@ -1,0 +1,58 @@
+name: 🐛 Błąd w rozwiązaniu lub treści
+description: Zły wynik, błąd w kodzie (Python, C++, Java, pseudokod), błędna treść zadania albo literówka.
+title: "[Błąd] "
+labels: ["błąd"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dzięki, że pomagasz! 🙌 Najszybciej zgłosisz błąd przyciskiem **⚠ Zgłoś błąd** pod sekcją na [stronie](https://wernexnrs.github.io/MATURA-INFORMATYKA/) — link uzupełni się sam.
+        Wolisz od razu poprawić? Kliknij **✏️ Popraw lub dodaj** pod sekcją — zmiana trafi do sprawdzenia.
+  - type: input
+    id: gdzie
+    attributes:
+      label: Gdzie jest błąd?
+      description: Link do sekcji na stronie albo do pliku w repozytorium.
+      placeholder: https://wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2019-maj.html#4-2
+    validations:
+      required: true
+  - type: dropdown
+    id: rodzaj
+    attributes:
+      label: Czego dotyczy?
+      options:
+        - Algorytm z wymagań CKE
+        - Dodatkowy algorytm
+        - Rozwiązanie zadania z arkusza
+        - Treść zadania
+        - Odpowiedź (wynik)
+        - Ściąga z Pythona
+        - Inne
+    validations:
+      required: true
+  - type: dropdown
+    id: jezyk
+    attributes:
+      label: Którego kodu dotyczy?
+      multiple: true
+      options: [Python, Pseudokod, C++, Java, Żadnego (tekst)]
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co jest nie tak?
+      description: Co widzisz, a co powinno być? Przy złym wyniku podaj poprawny — najlepiej z klucza odpowiedzi CKE.
+      placeholder: "Program wypisuje 517, a według klucza CKE poprawna odpowiedź to 518, bo…"
+    validations:
+      required: true
+  - type: textarea
+    id: dowod
+    attributes:
+      label: Jak to sprawdzić? (opcjonalnie)
+      description: Dane, na których widać błąd, fragment klucza CKE albo poprawiony kod.
+      render: text
+  - type: checkboxes
+    id: pomoc
+    attributes:
+      label: Chcesz pomóc?
+      options:
+        - label: Mogę sam przygotować poprawkę (pull request) — przeczytałem/am CONTRIBUTING.md

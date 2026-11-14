@@ -1,0 +1,33 @@
+title: "[Pytanie] "
+labels: ["pytanie"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zadaj pytanie o zadanie, algorytm albo kod. Zaznacz najlepszą odpowiedź jako **Answer** — pomoże to kolejnym osobom. 💜
+        Sprawdź też [stronę](https://wernexnrs.github.io/MATURA-INFORMATYKA/) — wyszukiwarka (klawisz `/`) znajdzie każdy algorytm i arkusz.
+  - type: input
+    id: gdzie
+    attributes:
+      label: Którego zadania lub algorytmu dotyczy pytanie?
+      placeholder: "Matura 2024 maj, zadanie 3.2 / sortowanie przez scalanie"
+    validations:
+      required: true
+  - type: dropdown
+    id: jezyk
+    attributes:
+      label: Język
+      options: [Python, C++, Java, Pseudokod, Nie dotyczy]
+  - type: textarea
+    id: pytanie
+    attributes:
+      label: Twoje pytanie
+      description: Czego nie rozumiesz? Im konkretniej, tym szybciej ktoś pomoże.
+    validations:
+      required: true
+  - type: textarea
+    id: kod
+    attributes:
+      label: Co już próbowałeś/aś? (opcjonalnie)
+      description: Wklej swój kod albo opisz swój pomysł na rozwiązanie.
+      render: python

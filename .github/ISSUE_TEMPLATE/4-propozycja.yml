@@ -1,0 +1,29 @@
+name: ✨ Propozycja
+description: Nowy algorytm, ściąga, funkcja strony albo inne usprawnienie.
+title: "[Propozycja] "
+labels: ["propozycja"]
+body:
+  - type: dropdown
+    id: rodzaj
+    attributes:
+      label: Czego dotyczy?
+      options: [Nowy algorytm, Ściąga z Pythona, Funkcja strony, Wygląd strony, Statystyki, Inne]
+    validations:
+      required: true
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co proponujesz?
+      description: Opisz pomysł. Dla algorytmu napisz, czy jest w wymaganiach CKE i gdzie pojawił się na maturze.
+    validations:
+      required: true
+  - type: textarea
+    id: dlaczego
+    attributes:
+      label: Dlaczego to pomoże w nauce?
+  - type: checkboxes
+    id: pomoc
+    attributes:
+      label: Chcesz pomóc?
+      options:
+        - label: Chcę to zrobić sam (pull request) — przeczytałem/am CONTRIBUTING.md

@@ -1,8 +1,11 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: 💬 Pytanie lub pomysł
-    url: https://github.com/wernexnrs/MATURA-INFORMATYKA/discussions
-    about: Zapytaj o algorytm, zadanie albo zaproponuj zmianę na Dyskusjach.
+  - name: ❓ Pytanie o zadanie lub algorytm
+    url: https://github.com/wernexnrs/MATURA-INFORMATYKA/discussions/categories/q-a
+    about: Nie rozumiesz rozwiązania? Zapytaj w Dyskusjach — tam odpowiada społeczność.
+  - name: 📘 Jak dodać coś od siebie
+    url: https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/CONTRIBUTING.md
+    about: Instrukcja krok po kroku — także dla osób, które nigdy nie robiły pull requesta.
   - name: 🎮 Discord „Do matury”
     url: https://discord.gg/3hyj3kXQkt
     about: Wspólna nauka do matury.

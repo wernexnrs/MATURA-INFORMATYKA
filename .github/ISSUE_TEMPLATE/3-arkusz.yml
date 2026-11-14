@@ -1,0 +1,46 @@
+name: 📄 Brakujący arkusz lub zadanie
+description: Brakuje matury, zadania, wersji w C++/Javie albo treści zadania.
+title: "[Arkusz] "
+labels: ["arkusz"]
+body:
+  - type: markdown
+    attributes:
+      value: Arkusze i dane pobierzesz z [cke.gov.pl](https://cke.gov.pl) albo [arkusze.pl](https://arkusze.pl/informatyka-matura-poziom-rozszerzony/). **Nie dołączaj plików z danymi CKE** — wystarczy link.
+  - type: input
+    id: arkusz
+    attributes:
+      label: Który arkusz?
+      placeholder: Matura 2027 — maj
+    validations:
+      required: true
+  - type: dropdown
+    id: formula
+    attributes:
+      label: Formuła
+      options: [Formuła 2023, Formuła 2015, Stara formuła (do 2014), Próbna / przykładowa, Zbiór zadań CKE, Nie wiem]
+    validations:
+      required: true
+  - type: dropdown
+    id: brakuje
+    attributes:
+      label: Czego brakuje?
+      multiple: true
+      options: [Całego arkusza, Rozwiązania zadania, Wersji w C++, Wersji w Javie, Treści zadania, Odpowiedzi z klucza]
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link do arkusza lub danych
+      placeholder: https://arkusze.pl/matura-informatyka-2027-maj-poziom-rozszerzony/
+  - type: textarea
+    id: zadania
+    attributes:
+      label: Szczegóły (opcjonalnie)
+      description: Które zadania? Masz już rozwiązanie? Możesz wkleić kod.
+  - type: checkboxes
+    id: pomoc
+    attributes:
+      label: Chcesz pomóc?
+      options:
+        - label: Chcę sam dodać rozwiązania (pull request) — przeczytałem/am CONTRIBUTING.md

@@ -1,0 +1,10 @@
+title: "[Ogłoszenie] "
+labels: ["ogłoszenie"]
+body:
+  - type: textarea
+    id: tresc
+    attributes:
+      label: Treść ogłoszenia
+      description: Nowe arkusze, zmiany na stronie, wydarzenia społeczności.
+    validations:
+      required: true

@@ -1,0 +1,26 @@
+title: "[Pomysł] "
+labels: ["pomysł"]
+body:
+  - type: markdown
+    attributes:
+      value: Masz pomysł na rozwój projektu? Opisz go — inni mogą go poprzeć 👍 albo pomóc w realizacji.
+  - type: dropdown
+    id: rodzaj
+    attributes:
+      label: Czego dotyczy pomysł?
+      options: [Nowe algorytmy, Arkusze i zadania, Ściągi z Pythona, Strona i wygląd, Nauka i materiały, Społeczność, Inne]
+    validations:
+      required: true
+  - type: textarea
+    id: pomysl
+    attributes:
+      label: Opis pomysłu
+      description: Co chcesz dodać lub zmienić i jak pomoże to w nauce do matury?
+    validations:
+      required: true
+  - type: checkboxes
+    id: pomoc
+    attributes:
+      label: Pomoc
+      options:
+        - label: Chętnie pomogę to zrobić
