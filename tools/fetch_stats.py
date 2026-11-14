@@ -21,7 +21,7 @@ from datetime import datetime, timedelta, timezone
 
 SITE = os.environ.get("GOATCOUNTER_SITE", "https://wernexnrs.goatcounter.com")
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs", "assets", "stats.json")
-START_ALL = "2026-11-01T00:00:00Z"   # początek zbierania statystyk
+START_ALL = "2026-11-14T00:00:00Z"   # początek zbierania statystyk (założenie licznika)
 PAGES = ["browsers", "systems", "locations", "languages", "sizes", "toprefs"]
 
 
@@ -53,7 +53,7 @@ def main():
         print("Brak GOATCOUNTER_TOKEN - pomijam pobieranie statystyk.")
         return 0
     now = datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
-    start90 = now - timedelta(days=90)
+    start90 = max(now - timedelta(days=90), datetime(2026, 11, 14, tzinfo=timezone.utc))
     out = {"generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "since": START_ALL[:10], "errors": []}
 
     def safe(name, fn):
@@ -85,6 +85,9 @@ def main():
         if not res.get("more"):
             break
     out["pages"] = sorted(hits, key=lambda h: -h["count"])
+    if "total" not in out:
+        # zapas: suma z danych dziennych albo ze stron
+        out["total"] = max(sum(d["count"] for d in out.get("daily", [])), sum(h["count"] for h in hits))
 
     for page in PAGES:
         res = safe(page, lambda p=page: get(token, "stats/" + p, start=START_ALL, end=iso(now), limit=20))

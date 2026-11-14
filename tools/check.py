@@ -153,6 +153,13 @@ def main():
         print("\nZnalezione problemy (%d):" % len(all_errors))
         for e in all_errors:
             print("  - " + e)
+            if os.environ.get("GITHUB_ACTIONS"):
+                # adnotacja widoczna w zakładce Actions / w pull requeście
+                m = re.match(r"^(.+?\.md):(\d+): (.*)$", e)
+                if m:
+                    print("::error file=%s,line=%s::%s" % (m.group(1).replace(os.sep, "/"), m.group(2), m.group(3)[:300]))
+                else:
+                    print("::error::%s" % e[:300])
         sys.exit(1)
     print("Wszystko w porządku ✔")
 

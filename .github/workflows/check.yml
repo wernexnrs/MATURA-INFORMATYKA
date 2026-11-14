@@ -12,19 +12,27 @@ jobs:
   check:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "25"
-      - name: Kompilator C++ (GCC 14, C++23)
-        run: sudo apt-get update -q && sudo apt-get install -y -q g++-14
+      - name: Kompilator C++ (GCC 15 w Dockerze, C++23)
+        run: |
+          docker pull -q gcc:15
+          mkdir -p "$HOME/bin"
+          cat > "$HOME/bin/gpp15" <<'SH'
+          #!/bin/sh
+          # kompilacja w obrazie gcc:15, statycznie - program uruchamia się potem na zwykłym Ubuntu
+          exec docker run --rm -v /tmp:/tmp -v "$PWD":"$PWD" -w "$PWD" gcc:15 g++ "$@" -static
+          SH
+          chmod +x "$HOME/bin/gpp15"
       - name: Sprawdź Markdown i uruchom kod algorytmów
         env:
-          CXX: g++-14
+          CXX: /home/runner/bin/gpp15
         run: python tools/check.py --run
       - name: Sprawdź, czy strona się buduje
         run: python tools/build_site.py
