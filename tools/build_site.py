@@ -782,7 +782,12 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:locale" content="pl_PL">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{site_url}assets/og.jpg">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="989">
+<meta property="og:image:alt" content="Matura z informatyki — Wiedza nie powinna mieć ceny. Algorytmy CKE, arkusze 2005–2026, Python, C++, Java">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{site_url}assets/og.jpg">
 <meta name="theme-color" content="#0f172a">
 <link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -833,7 +838,7 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
 """.format(full_title=html.escape(full_title), desc=html.escape(description), canonical=canonical,
            site=SITE_NAME, title=html.escape(title), root=root, ld=json.dumps(ld, ensure_ascii=False),
            nav="".join(nav), repo=REPO_URL, side=side, crumbs=crumb_html, content=content,
-           wide=" no-side" if not sidebar else "")
+           wide=" no-side" if not sidebar else "", site_url=SITE_URL)
 
 
 def sidebar_html(page, out):
