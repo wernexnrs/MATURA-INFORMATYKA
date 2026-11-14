@@ -37,7 +37,14 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1">2.1</a></li><li><a href="#2-2">2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5">5</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2018 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2018 — maj, poziom rozszerzony</h1><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2018_maj" target="_blank" rel="noopener">PLIKI</a></p><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+<h1 class="page-title">Matura 2018 — maj, poziom rozszerzony</h1><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2018_maj" target="_blank" rel="noopener">PLIKI</a></p><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (analiza algorytmu). Dla liczby całkowitej dodatniej <code>n</code> algorytm wyznacza liczbę całkowitą dodatnią <code>p</code> (div oznacza dzielenie całkowite):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">p ← 1
+q ← n
+dopóki p &lt; q wykonuj
+    s ← (p + q) div 2
+    (*) jeżeli s*s*s &lt; n
+            p ← s + 1
+        w przeciwnym wypadku
+            q ← s</code></pre></div></div></div><ul><li>1.1 — podaj wynik <code>p</code> dla <code>n</code> = 28, 64 i 80.</li><li>1.2 — podaj najmniejszą i największą liczbę <code>n</code>, dla której wynikiem algorytmu jest <code>p = 10</code>.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
     p = 1
     q = n
     while p &lt; q:
@@ -55,7 +62,64 @@ for n in [28, 64, 80]:
 
 # 1.2 - najmniejsze i największe n, dla którego p = 10
 liczby = [n for n in range(1, 2000) if algorytm(n) == 10]
-print(min(liczby), max(liczby))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 28 → 4, 64 → 4, 80 → 5; 1.2: najmniejsza 730, największa 1000</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1">2.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrajnie_lewy(n, X, Y):
+print(min(liczby), max(liczby))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+long long algorytm(long long n) {
+    long long p = 1;
+    long long q = n;
+    while (p &lt; q) {
+        long long s = (p + q) / 2;
+        if (s * s * s &lt; n)
+            p = s + 1;
+        else
+            q = s;
+    }
+    return p;
+}
+
+int main() {
+    // 1.1
+    for (int n : {28, 64, 80})
+        std::println(&quot;{} {}&quot;, n, algorytm(n));
+
+    // 1.2 - najmniejsze i największe n, dla którego p = 10
+    std::vector&lt;int&gt; liczby;
+    for (int n = 1; n &lt; 2000; n++)
+        if (algorytm(n) == 10)
+            liczby.push_back(n);
+    std::println(&quot;{} {}&quot;, std::ranges::min(liczby), std::ranges::max(liczby));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.Collections;
+
+public class Zadanie {
+    static long algorytm(long n) {
+        long p = 1;
+        long q = n;
+        while (p &lt; q) {
+            long s = (p + q) / 2;
+            if (s * s * s &lt; n)
+                p = s + 1;
+            else
+                q = s;
+        }
+        return p;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        for (int n : new int[]{28, 64, 80})
+            System.out.println(n + &quot; &quot; + algorytm(n));
+
+        // 1.2 - najmniejsze i największe n, dla którego p = 10
+        var liczby = new ArrayList&lt;Integer&gt;();
+        for (int n = 1; n &lt; 2000; n++)
+            if (algorytm(n) == 10)
+                liczby.add(n);
+        System.out.println(Collections.min(liczby) + &quot; &quot; + Collections.max(liczby));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 28 → 4, 64 → 4, 80 → 5; 1.2: najmniejsza 730, największa 1000</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1">2.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (krajobraz). W paśmie górskim jest <code>n</code> szczytów — punktów o współrzędnych <code>(X[i], Y[i])</code> z tablic <code>X[1..n]</code> (liczby całkowite) i <code>Y[1..n]</code> (liczby całkowite dodatnie). Obserwator stoi w punkcie (0,0). Szczyt A jest widoczny na lewo od B, gdy <code>xA/yA &lt; xB/yB</code>; żadne dwa szczyty nie leżą w jednej linii z obserwatorem.</p><p>Napisz algorytm, który poda współrzędne <code>x, y</code> skrajnie lewego szczytu, czyli widocznego na lewo od wszystkich pozostałych.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrajnie_lewy(n, X, Y):
     k = 0
     for i in range(1, n):
         if X[i] / Y[i] &lt; X[k] / Y[k]:
@@ -65,7 +129,38 @@ print(min(liczby), max(liczby))</code></pre></div><p class="answer"><strong>Odpo
 
 X = [3, -2, 5, -4]
 Y = [4, 3, 2, 1]
-print(skrajnie_lewy(len(X), X, Y))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> przykładowy algorytm – szukamy szczytu o najmniejszym ilorazie X[i]/Y[i] (dla przykładu w kodzie: (-4, 1))</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-2">2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def sortuj_szczyty(n, X, Y):
+print(skrajnie_lewy(len(X), X, Y))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::pair&lt;int, int&gt; skrajnie_lewy(int n, const std::vector&lt;int&gt;&amp; X, const std::vector&lt;int&gt;&amp; Y) {
+    int k = 0;
+    for (int i = 1; i &lt; n; i++)
+        if ((double)X[i] / Y[i] &lt; (double)X[k] / Y[k])
+            k = i;
+    return {X[k], Y[k]};
+}
+
+int main() {
+    std::vector&lt;int&gt; X = {3, -2, 5, -4};
+    std::vector&lt;int&gt; Y = {4, 3, 2, 1};
+    std::println(&quot;{}&quot;, skrajnie_lewy(X.size(), X, Y));  // para wypisuje się jako (x, y)
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int[] skrajnieLewy(int n, int[] X, int[] Y) {
+        int k = 0;
+        for (int i = 1; i &lt; n; i++)
+            if ((double) X[i] / Y[i] &lt; (double) X[k] / Y[k])
+                k = i;
+        return new int[]{X[k], Y[k]};
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[] X = {3, -2, 5, -4};
+        int[] Y = {4, 3, 2, 1};
+        int[] szczyt = skrajnieLewy(X.length, X, Y);
+        System.out.println(&quot;(&quot; + szczyt[0] + &quot;, &quot; + szczyt[1] + &quot;)&quot;);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> przykładowy algorytm – szukamy szczytu o najmniejszym ilorazie X[i]/Y[i] (dla przykładu w kodzie: (-4, 1))</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%232-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-2">2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 2.1: tablice <code>X[1..n]</code>, <code>Y[1..n]</code> ze współrzędnymi szczytów (<code>Y[i] &gt; 0</code>), żadne dwa nie leżą w jednej linii z obserwatorem w (0,0).</p><p>Napisz algorytm, który przestawi elementy tablic <code>X</code> i <code>Y</code> tak, aby szczyty były uporządkowane w kolejności widzenia ich przez obserwatora od lewej do prawej (rosnąco względem <code>X[i]/Y[i]</code>). Złożoność co najwyżej kwadratowa; wolno używać tylko instrukcji sterujących, operatorów arytmetycznych i logicznych, porównań i przypisań — bez funkcji bibliotecznych (np. gotowego sortowania).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def sortuj_szczyty(n, X, Y):
     # sortowanie przez wybór - złożoność kwadratowa
     for i in range(n - 1):
         m = i
@@ -80,7 +175,51 @@ X = [3, -2, 5, -4]
 Y = [4, 3, 2, 1]
 sortuj_szczyty(len(X), X, Y)
 print(X)
-print(Y)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> przykładowy algorytm – sortowanie (np. przez wybór) względem X[i]/Y[i], zamieniając jednocześnie elementy X i Y</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przeslanie = &quot;&quot;
+print(Y)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+void sortuj_szczyty(int n, std::vector&lt;int&gt;&amp; X, std::vector&lt;int&gt;&amp; Y) {
+    // sortowanie przez wybór - złożoność kwadratowa
+    for (int i = 0; i &lt; n - 1; i++) {
+        int m = i;
+        for (int j = i + 1; j &lt; n; j++)
+            if ((double)X[j] / Y[j] &lt; (double)X[m] / Y[m])
+                m = j;
+        std::swap(X[i], X[m]);
+        std::swap(Y[i], Y[m]);
+    }
+}
+
+int main() {
+    std::vector&lt;int&gt; X = {3, -2, 5, -4};
+    std::vector&lt;int&gt; Y = {4, 3, 2, 1};
+    sortuj_szczyty(X.size(), X, Y);
+    std::println(&quot;{}&quot;, X);
+    std::println(&quot;{}&quot;, Y);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.Arrays;
+
+public class Zadanie {
+    static void sortujSzczyty(int n, int[] X, int[] Y) {
+        // sortowanie przez wybór - złożoność kwadratowa
+        for (int i = 0; i &lt; n - 1; i++) {
+            int m = i;
+            for (int j = i + 1; j &lt; n; j++)
+                if ((double) X[j] / Y[j] &lt; (double) X[m] / Y[m])
+                    m = j;
+            int t = X[i]; X[i] = X[m]; X[m] = t;
+            t = Y[i]; Y[i] = Y[m]; Y[m] = t;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[] X = {3, -2, 5, -4};
+        int[] Y = {4, 3, 2, 1};
+        sortujSzczyty(X.length, X, Y);
+        System.out.println(Arrays.toString(X));
+        System.out.println(Arrays.toString(Y));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> przykładowy algorytm – sortowanie (np. przez wybór) względem X[i]/Y[i], zamieniając jednocześnie elementy X i Y</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%232-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (sygnały). Plik <code>sygnaly.txt</code> zawiera 1000 wierszy, w każdym jedno niepuste słowo z wielkich liter alfabetu angielskiego o długości co najwyżej 100. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania (dane przykładowe: <code>przyklad.txt</code>).</p><p>Złącz dziesiąte litery co czterdziestego słowa, zaczynając od słowa 40. (każde takie słowo ma co najmniej 10 znaków), i wypisz otrzymane przesłanie.</p><p>Dla pliku przykładowego wynikiem jest <code>NIECHCIMATURAPROSTABEDZIE</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przeslanie = &quot;&quot;
 
 with open(&quot;sygnaly.txt&quot;) as file:
     slowa = file.read().split()
@@ -88,7 +227,37 @@ with open(&quot;sygnaly.txt&quot;) as file:
 for i in range(39, len(slowa), 40):
     przeslanie += slowa[i][9]
 
-print(przeslanie)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> ZAPISZODPOWIEDZIWPLIKUTXT</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;sygnaly.txt&quot;) as file:
+print(przeslanie)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;sygnaly.txt&quot;);
+    std::vector&lt;std::string&gt; slowa;
+    std::string slowo;
+    while (plik &gt;&gt; slowo)
+        slowa.push_back(slowo);
+
+    std::string przeslanie = &quot;&quot;;
+    for (size_t i = 39; i &lt; slowa.size(); i += 40)
+        przeslanie += slowa[i][9];
+
+    std::println(&quot;{}&quot;, przeslanie);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String[] slowa = Files.readString(Path.of(&quot;sygnaly.txt&quot;)).trim().split(&quot;\\s+&quot;);
+
+        var przeslanie = new StringBuilder();
+        for (int i = 39; i &lt; slowa.length; i += 40)
+            przeslanie.append(slowa[i].charAt(9));
+
+        System.out.println(przeslanie);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> ZAPISZODPOWIEDZIWPLIKUTXT</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>sygnaly.txt</code> (1000 słów z wielkich liter).</p><p>Znajdź słowo zawierające największą liczbę różnych liter i wypisz je wraz z tą liczbą. Jeśli takich słów jest kilka, wypisz pierwsze z nich w pliku.</p><p>Dla pliku przykładowego: <code>AKLMNOPRSTWZA 12</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;sygnaly.txt&quot;) as file:
     slowa = file.read().split()
 
 maks = 0
@@ -100,13 +269,90 @@ for slowo in slowa:
         maks = rozne
         najlepsze = slowo
 
-print(najlepsze, maks)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> SUOLDQWISCDRFLRWHZBNTMIAPHALMNCWHVGMXOZSQNXWXSFELZVTUTILXWKCTYBQYSUAKNYJKRXDJQYHXAQGWN 26</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;sygnaly.txt&quot;) as file:
+print(najlepsze, maks)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;sygnaly.txt&quot;);
+    size_t maks = 0;
+    std::string najlepsze = &quot;&quot;;
+    std::string slowo;
+
+    while (plik &gt;&gt; slowo) {
+        std::set&lt;char&gt; litery(slowo.begin(), slowo.end());
+        size_t rozne = litery.size();
+        if (rozne &gt; maks) {
+            maks = rozne;
+            najlepsze = slowo;
+        }
+    }
+
+    std::println(&quot;{} {}&quot;, najlepsze, maks);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.HashSet;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String[] slowa = Files.readString(Path.of(&quot;sygnaly.txt&quot;)).trim().split(&quot;\\s+&quot;);
+
+        int maks = 0;
+        String najlepsze = &quot;&quot;;
+
+        for (String slowo : slowa) {
+            var litery = new HashSet&lt;Character&gt;();
+            for (char c : slowo.toCharArray())
+                litery.add(c);
+            int rozne = litery.size();
+            if (rozne &gt; maks) {
+                maks = rozne;
+                najlepsze = slowo;
+            }
+        }
+
+        System.out.println(najlepsze + &quot; &quot; + maks);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> SUOLDQWISCDRFLRWHZBNTMIAPHALMNCWHVGMXOZSQNXWXSFELZVTUTILXWKCTYBQYSUAKNYJKRXDJQYHXAQGWN 26</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>sygnaly.txt</code> (1000 słów z wielkich liter).</p><p>Odległość liter to różnica ich pozycji w alfabecie (np. A–B: 1, A–E: 4, litera od siebie: 0). Wypisz, po jednym w wierszu i w kolejności z pliku, wszystkie słowa, w których każde dwie litery są od siebie oddalone co najwyżej o 10.</p><p>Przykład: <code>CGECF</code> spełnia warunek, a <code>ABEZA</code> nie (odległość A–Z wynosi 25).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;sygnaly.txt&quot;) as file:
     slowa = file.read().split()
 
 for slowo in slowa:
     # każde dwie litery są oddalone co najwyżej o 10 &lt;=&gt; największa i najmniejsza litera są oddalone co najwyżej o 10
     if ord(max(slowo)) - ord(min(slowo)) &lt;= 10:
-        print(slowo)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> QQMLKKQNOHPKKPJOLHIPJKLKQIIHQHPNKNQPHNKLKQNIMLQPNLPMHNNIPNJJONQOHKKQOIHOHHJMOJPMNIPIKION, PTPNTOLNOPOSKLQOQKNTQTPLPNLNRRSTNNSMRNNMLPNLKORTSMNKRTLLLLNRKKOLKTRQOQOQONKTKRSPTTORMKQTRNOKKQ, … (lista słów w kluczu odpowiedzi)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div></header><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2018_maj/zbiornik.xlsx?raw=true" target="_blank" rel="noopener">Pobierz plik Excel</a></p><ul><li><a href="https://www.youtube.com/watch?v=US9jXTPTytY&amp;ab_channel=KonradBuzak" target="_blank" rel="noopener">Wyjaśnienie 5.*</a></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma_rok = {}
+        print(slowo)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;sygnaly.txt&quot;);
+    std::string slowo;
+
+    while (plik &gt;&gt; slowo) {
+        // każde dwie litery są oddalone co najwyżej o 10 &lt;=&gt; największa i najmniejsza litera są oddalone co najwyżej o 10
+        if (std::ranges::max(slowo) - std::ranges::min(slowo) &lt;= 10)
+            std::println(&quot;{}&quot;, slowo);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String[] slowa = Files.readString(Path.of(&quot;sygnaly.txt&quot;)).trim().split(&quot;\\s+&quot;);
+
+        for (String slowo : slowa) {
+            // każde dwie litery są oddalone co najwyżej o 10 &lt;=&gt; największa i najmniejsza litera są oddalone co najwyżej o 10
+            char najmniejsza = slowo.charAt(0), najwieksza = slowo.charAt(0);
+            for (char c : slowo.toCharArray()) {
+                najmniejsza = (char) Math.min(najmniejsza, c);
+                najwieksza = (char) Math.max(najwieksza, c);
+            }
+            if (najwieksza - najmniejsza &lt;= 10)
+                System.out.println(slowo);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> QQMLKKQNOHPKKPJOLHIPJKLKQIIHQHPNKNQPHNKLKQNIMLQPNLPMHNNIPNJJONQOHKKQOIHOHHJMOJPMNIPIKION, PTPNTOLNOPOSKLQOQKNTQTPLPNLNRRSTNNSMRNNMLPNLKORTSMNKRTLLLLNRKKOLKTRQOQOQONKTKRSPTTORMKQTRNOKKQ, … (lista słów w kluczu odpowiedzi)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div></header><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2018_maj/zbiornik.xlsx?raw=true" target="_blank" rel="noopener">Pobierz plik Excel</a></p><ul><li><a href="https://www.youtube.com/watch?v=US9jXTPTytY&amp;ab_channel=KonradBuzak" target="_blank" rel="noopener">Wyjaśnienie 5.*</a></li></ul><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%235" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5 (zbiornik). Plik <code>woda.txt</code> zawiera 3653 wiersze z danymi o dobowym dopływie wody z rzeki Wirki do zbiornika retencyjnego w latach 2008–2017. W wierszu: data (<code>rrrr-mm-dd</code>) i liczba m³ wody, która dopłynęła w ciągu doby, oddzielone tabulatorem (np. <code>2008-01-01    2275</code>). Odpowiedzi zapisz w pliku <code>wyniki5.txt</code>, poprzedzając je numerem zadania.</p><p>Podaj rok, w którym do zbiornika dopłynęło łącznie najwięcej wody.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma_rok = {}
 
 with open(&quot;woda.txt&quot;) as file:
     for line in file:
@@ -115,7 +361,54 @@ with open(&quot;woda.txt&quot;) as file:
         suma_rok[rok] = suma_rok.get(rok, 0) + int(doplyw)
 
 najlepszy = max(suma_rok, key=suma_rok.get)
-print(najlepszy, suma_rok[najlepszy])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2015</p><ul><li><a href="https://www.youtube.com/watch?v=de44MtdIlw4&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;woda.txt&quot;) as file:
+print(najlepszy, suma_rok[najlepszy])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::map&lt;std::string, long long&gt; suma_rok;
+
+    std::ifstream plik(&quot;woda.txt&quot;);
+    std::string data;
+    long long doplyw;
+    while (plik &gt;&gt; data &gt;&gt; doplyw) {
+        std::string rok = data.substr(0, 4);
+        suma_rok[rok] += doplyw;
+    }
+
+    std::string najlepszy;
+    long long maks = -1;
+    for (const auto&amp; [rok, suma] : suma_rok)
+        if (suma &gt; maks) {
+            maks = suma;
+            najlepszy = rok;
+        }
+    std::println(&quot;{} {}&quot;, najlepszy, maks);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.TreeMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var sumaRok = new TreeMap&lt;String, Long&gt;();
+
+        for (String line : Files.readAllLines(Path.of(&quot;woda.txt&quot;))) {
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            String rok = czesci[0].substring(0, 4);
+            sumaRok.merge(rok, Long.parseLong(czesci[1]), Long::sum);
+        }
+
+        String najlepszy = &quot;&quot;;
+        long maks = -1;
+        for (var e : sumaRok.entrySet())
+            if (e.getValue() &gt; maks) {
+                maks = e.getValue();
+                najlepszy = e.getKey();
+            }
+        System.out.println(najlepszy + &quot; &quot; + maks);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2015</p><ul><li><a href="https://www.youtube.com/watch?v=de44MtdIlw4&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%235-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>woda.txt</code> (data i dobowy dopływ wody w m³, lata 2008–2017).</p><p>Znajdź najdłuższy okres (w dniach), w którym każdego dnia dopływało co najmniej 10 000 m³ wody (jest dokładnie jeden taki okres). Podaj jego datę początkową i końcową.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;woda.txt&quot;) as file:
     dane = [line.split() for line in file]
 
 najdluzszy = 0
@@ -135,7 +428,72 @@ for i in range(len(dane)):
     else:
         dlugosc = 0
 
-print(najdluzszy, poczatek, koniec)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> od 2015-03-17 do 2015-05-10</p><ul><li><a href="https://www.youtube.com/watch?v=MsDWcbx75rg&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiace = {}
+print(najdluzszy, poczatek, koniec)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;woda.txt&quot;);
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; dane;
+    std::string data;
+    int doplyw;
+    while (plik &gt;&gt; data &gt;&gt; doplyw)
+        dane.push_back({data, doplyw});
+
+    int najdluzszy = 0;
+    int dlugosc = 0;
+    std::string poczatek = &quot;&quot;, start, koniec;
+
+    for (const auto&amp; [data, doplyw] : dane) {
+        if (doplyw &gt;= 10000) {
+            if (dlugosc == 0)
+                start = data;
+            dlugosc++;
+            if (dlugosc &gt; najdluzszy) {
+                najdluzszy = dlugosc;
+                poczatek = start;
+                koniec = data;
+            }
+        } else {
+            dlugosc = 0;
+        }
+    }
+
+    std::println(&quot;{} {} {}&quot;, najdluzszy, poczatek, koniec);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var dane = Files.readAllLines(Path.of(&quot;woda.txt&quot;));
+
+        int najdluzszy = 0;
+        int dlugosc = 0;
+        String poczatek = &quot;&quot;, start = &quot;&quot;, koniec = &quot;&quot;;
+
+        for (String line : dane) {
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            String data = czesci[0];
+            int doplyw = Integer.parseInt(czesci[1]);
+            if (doplyw &gt;= 10000) {
+                if (dlugosc == 0)
+                    start = data;
+                dlugosc++;
+                if (dlugosc &gt; najdluzszy) {
+                    najdluzszy = dlugosc;
+                    poczatek = start;
+                    koniec = data;
+                }
+            } else {
+                dlugosc = 0;
+            }
+        }
+
+        System.out.println(najdluzszy + &quot; &quot; + poczatek + &quot; &quot; + koniec);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> od 2015-03-17 do 2015-05-10</p><ul><li><a href="https://www.youtube.com/watch?v=MsDWcbx75rg&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%235-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>woda.txt</code> (data i dobowy dopływ wody w m³, lata 2008–2017).</p><p>Zestaw łączne dopływy wody w poszczególnych miesiącach 2008 roku (od stycznia do grudnia) i na tej podstawie wykonaj wykres kolumnowy z tytułem i opisami osi.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiace = {}
 
 with open(&quot;woda.txt&quot;) as file:
     for line in file:
@@ -146,7 +504,49 @@ with open(&quot;woda.txt&quot;) as file:
 
 for miesiac in sorted(miesiace):
     print(miesiac, miesiace[miesiac])
-# na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2008-01 95433, 2008-02 94730, 2008-03 109439, 2008-04 632931, 2008-05 329203, 2008-06 85628, 2008-07 166597, 2008-08 139747, 2008-09 282342, 2008-10 170729, 2008-11 222440, 2008-12 172072 (+ wykres kolumnowy)</p><ul><li><a href="https://www.youtube.com/watch?v=x3yhpVcfOwE&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+# na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::map&lt;std::string, long long&gt; miesiace;  // std::map trzyma klucze posortowane
+
+    std::ifstream plik(&quot;woda.txt&quot;);
+    std::string data;
+    long long doplyw;
+    while (plik &gt;&gt; data &gt;&gt; doplyw) {
+        if (data.starts_with(&quot;2008&quot;)) {
+            std::string miesiac = data.substr(0, 7);
+            miesiace[miesiac] += doplyw;
+        }
+    }
+
+    for (const auto&amp; [miesiac, suma] : miesiace)
+        std::println(&quot;{} {}&quot;, miesiac, suma);
+    // na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.TreeMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var miesiace = new TreeMap&lt;String, Long&gt;();  // TreeMap trzyma klucze posortowane
+
+        for (String line : Files.readAllLines(Path.of(&quot;woda.txt&quot;))) {
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            String data = czesci[0];
+            if (data.startsWith(&quot;2008&quot;)) {
+                String miesiac = data.substring(0, 7);
+                miesiace.merge(miesiac, Long.parseLong(czesci[1]), Long::sum);
+            }
+        }
+
+        for (var e : miesiace.entrySet())
+            System.out.println(e.getKey() + &quot; &quot; + e.getValue());
+        // na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2008-01 95433, 2008-02 94730, 2008-03 109439, 2008-04 632931, 2008-05 329203, 2008-06 85628, 2008-07 166597, 2008-08 139747, 2008-09 282342, 2008-10 170729, 2008-11 222440, 2008-12 172072 (+ wykres kolumnowy)</p><ul><li><a href="https://www.youtube.com/watch?v=x3yhpVcfOwE&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%235-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>woda.txt</code> (data i dobowy dopływ wody w m³, lata 2008–2017). Cykl pracy zbiornika:</p><ol><li>Zaraz po północy mierzy się objętość wody w zbiorniku.</li><li>Jeśli pomiar przekracza 1 000 000 m³ (przepełnienie), od razu wypuszcza się cały nadmiar ponad 1 000 000 m³.</li><li>Codziennie o 8 rano wypuszcza się 2% objętości wykazanej przez nocny pomiar (zaokrąglone w górę do pełnych m³).</li><li>W ciągu doby do zbiornika dopływa woda z rzeki zgodnie z danymi.</li></ol><p>Pomiar 2008-01-01 wskazał 500 000 m³ (kontrolnie: pomiar 2008-02-01 wskazał 338 406 m³). Podaj:</p><ul><li>a) dzień, w którym pierwszy raz wypuszczono nadmiar wody po przepełnieniu,</li><li>b) w ilu dniach okresu 2008-01-01 – 2017-12-31 pomiar wykazał co najmniej 800 000 m³,</li><li>c) największą objętość wody w momencie pomiaru w tym okresie, gdyby zrezygnować z wypuszczania nadmiaru (zbiornik o nieograniczonej pojemności; 2% nadal wypuszczane).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 
 with open(&quot;woda.txt&quot;) as file:
     dane = [line.split() for line in file]
@@ -175,7 +575,94 @@ a, b, _ = symulacja(True)
 _, _, c = symulacja(False)
 print(&quot;a)&quot;, a)
 print(&quot;b)&quot;, b)
-print(&quot;c)&quot;, c)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 2015-04-19, b) 188 dni, c) 1 399 242 m3</p><ul><li><a href="https://www.youtube.com/watch?v=skn67wqwX-E&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;c)&quot;, c)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;tuple&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::pair&lt;std::string, long long&gt;&gt; dane;
+
+// zwraca: datę pierwszego przepełnienia (&quot;None&quot;, gdy go nie było), liczbę dni z &gt;= 800 000 m3 i maksimum
+std::tuple&lt;std::string, int, long long&gt; symulacja(bool z_wypuszczaniem) {
+    long long woda = 500000;
+    std::string pierwsze_przepelnienie = &quot;None&quot;;
+    int dni_800 = 0;
+    long long maks = 0;
+    for (const auto&amp; [data, doplyw] : dane) {
+        long long pomiar = woda;  // pomiar zaraz po północy
+        maks = std::max(maks, pomiar);
+        if (pomiar &gt;= 800000)
+            dni_800++;
+        if (z_wypuszczaniem &amp;&amp; woda &gt; 1000000) {
+            if (pierwsze_przepelnienie == &quot;None&quot;)
+                pierwsze_przepelnienie = data;
+            woda = 1000000;
+        }
+        woda -= (long long)std::ceil(pomiar * 2 / 100.0);  // o 8 rano wypuszczamy 2% wody z pomiaru
+        woda += doplyw;
+    }
+    return {pierwsze_przepelnienie, dni_800, maks};
+}
+
+int main() {
+    std::ifstream plik(&quot;woda.txt&quot;);
+    std::string data;
+    long long doplyw;
+    while (plik &gt;&gt; data &gt;&gt; doplyw)
+        dane.push_back({data, doplyw});
+
+    auto [a, b, _] = symulacja(true);
+    auto c = std::get&lt;2&gt;(symulacja(false));
+    std::println(&quot;a) {}&quot;, a);
+    std::println(&quot;b) {}&quot;, b);
+    std::println(&quot;c) {}&quot;, c);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static List&lt;String[]&gt; dane = new ArrayList&lt;&gt;();
+
+    // zwraca: datę pierwszego przepełnienia (&quot;None&quot;, gdy go nie było), liczbę dni z &gt;= 800 000 m3 i maksimum
+    static String[] symulacja(boolean zWypuszczaniem) {
+        long woda = 500000;
+        String pierwszePrzepelnienie = &quot;None&quot;;
+        int dni800 = 0;
+        long maks = 0;
+        for (String[] wiersz : dane) {
+            String data = wiersz[0];
+            long doplyw = Long.parseLong(wiersz[1]);
+            long pomiar = woda;  // pomiar zaraz po północy
+            maks = Math.max(maks, pomiar);
+            if (pomiar &gt;= 800000)
+                dni800++;
+            if (zWypuszczaniem &amp;&amp; woda &gt; 1000000) {
+                if (pierwszePrzepelnienie.equals(&quot;None&quot;))
+                    pierwszePrzepelnienie = data;
+                woda = 1000000;
+            }
+            woda -= (long) Math.ceil(pomiar * 2 / 100.0);  // o 8 rano wypuszczamy 2% wody z pomiaru
+            woda += doplyw;
+        }
+        return new String[]{pierwszePrzepelnienie, String.valueOf(dni800), String.valueOf(maks)};
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (String line : Files.readAllLines(Path.of(&quot;woda.txt&quot;)))
+            dane.add(line.trim().split(&quot;\\s+&quot;));
+
+        String[] z = symulacja(true);
+        String[] bez = symulacja(false);
+        System.out.println(&quot;a) &quot; + z[0]);
+        System.out.println(&quot;b) &quot; + z[1]);
+        System.out.println(&quot;c) &quot; + bez[2]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 2015-04-19, b) 188 dni, c) 1 399 242 m3</p><ul><li><a href="https://www.youtube.com/watch?v=skn67wqwX-E&amp;ab_channel=Excel.iAdam" target="_blank" rel="noopener">Wyjaśnienie</a></li></ul><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj.html%235-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_maj/2018_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

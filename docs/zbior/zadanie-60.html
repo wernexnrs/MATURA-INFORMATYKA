@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#60-1">60.1</a></li><li><a href="#60-2">60.2</a></li><li><a href="#60-3">60.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 60. Dzielniki</span></nav>
-<h1 class="page-title">Zadanie 60. Dzielniki</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="60-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-1">60.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">male = []
+<h1 class="page-title">Zadanie 60. Dzielniki</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="60-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-1">60.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 200 różnych liczb całkowitych z przedziału [2, 1 000 000], po jednej w wierszu. Odpowiedzi zapisz w pliku <code>wyniki.txt</code>.</p><p>Policz, ile liczb w pliku jest mniejszych niż 1000, oraz podaj dwie takie liczby, które występują w pliku jako ostatnie (można założyć, że są co najmniej dwie).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">male = []
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -46,7 +46,43 @@ with open(&quot;liczby.txt&quot;) as file:
             male.append(liczba)
 
 print(len(male))
-print(male[-2], male[-1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 12; dwie ostatnie: 540 633</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="60-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-2">60.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dzielniki(n):
+print(male[-2], male[-1])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; male;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    int liczba;
+    while (plik &gt;&gt; liczba) {
+        if (liczba &lt; 1000) {
+            male.push_back(liczba);
+        }
+    }
+
+    std::println(&quot;{}&quot;, male.size());
+    std::println(&quot;{} {}&quot;, male[male.size() - 2], male[male.size() - 1]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; male = new ArrayList&lt;&gt;();
+
+        for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            int liczba = Integer.parseInt(linia.trim());
+            if (liczba &lt; 1000) {
+                male.add(liczba);
+            }
+        }
+
+        System.out.println(male.size());
+        System.out.println(male.get(male.size() - 2) + &quot; &quot; + male.get(male.size() - 1));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 12; dwie ostatnie: 540 633</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/60.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2060.%20Dzielniki%20%E2%80%94%2060.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-60.html%2360-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="60-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-2">60.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 60.1 (200 liczb w pliku <code>liczby.txt</code>).</p><p>Znajdź liczby, które mają dokładnie 18 dzielników naturalnych (licząc 1 i samą liczbę). Dla każdej z nich wypisz jej wartość oraz rosnąco posortowaną listę wszystkich jej dzielników.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dzielniki(n):
     male = []
     duze = []
     i = 1
@@ -65,7 +101,80 @@ with open(&quot;liczby.txt&quot;) as file:
         lista = dzielniki(liczba)
         if len(lista) == 18:
             print(liczba)
-            print(*lista)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 989532, 131072, 702027, 461817, 17298 (np. 17298: 1 2 3 6 9 18 31 62 93 186 279 558 961 1922 2883 5766 8649 17298)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="60-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-3">60.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nwd(a, b):
+            print(*lista)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; dzielniki(int n) {
+    std::vector&lt;int&gt; male;
+    std::vector&lt;int&gt; duze;
+    int i = 1;
+    while (i * i &lt;= n) {
+        if (n % i == 0) {
+            male.push_back(i);
+            if (i != n / i) {
+                duze.push_back(n / i);
+            }
+        }
+        i += 1;
+    }
+    male.insert(male.end(), duze.rbegin(), duze.rend());  // rosnąco
+    return male;
+}
+
+int main() {
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    int liczba;
+    while (plik &gt;&gt; liczba) {
+        std::vector&lt;int&gt; lista = dzielniki(liczba);
+        if (lista.size() == 18) {
+            std::println(&quot;{}&quot;, liczba);
+            for (size_t i = 0; i &lt; lista.size(); i++) {
+                std::print(&quot;{}{}&quot;, i &gt; 0 ? &quot; &quot; : &quot;&quot;, lista[i]);
+            }
+            std::println();
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Zadanie {
+    static List&lt;Integer&gt; dzielniki(int n) {
+        List&lt;Integer&gt; male = new ArrayList&lt;&gt;();
+        List&lt;Integer&gt; duze = new ArrayList&lt;&gt;();
+        int i = 1;
+        while (i * i &lt;= n) {
+            if (n % i == 0) {
+                male.add(i);
+                if (i != n / i) {
+                    duze.add(n / i);
+                }
+            }
+            i += 1;
+        }
+        Collections.reverse(duze);
+        male.addAll(duze);  // rosnąco
+        return male;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            int liczba = Integer.parseInt(linia.trim());
+            List&lt;Integer&gt; lista = dzielniki(liczba);
+            if (lista.size() == 18) {
+                System.out.println(liczba);
+                List&lt;String&gt; napisy = new ArrayList&lt;&gt;();
+                for (int d : lista) {
+                    napisy.add(String.valueOf(d));
+                }
+                System.out.println(String.join(&quot; &quot;, napisy));
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 989532, 131072, 702027, 461817, 17298 (np. 17298: 1 2 3 6 9 18 31 62 93 186 279 558 961 1922 2883 5766 8649 17298)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/60.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2060.%20Dzielniki%20%E2%80%94%2060.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-60.html%2360-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="60-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#60-3">60.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 60.1.</p><p>Znajdź największą liczbę z pliku, która jest względnie pierwsza ze wszystkimi pozostałymi liczbami, tzn. z żadną z nich nie ma wspólnego dzielnika większego niż 1.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nwd(a, b):
     while b &gt; 0:
         a, b = b, a % b
     return a
@@ -87,7 +196,82 @@ for i in range(len(liczby)):
     if wzglednie_pierwsza and liczby[i] &gt; najwieksza:
         najwieksza = liczby[i]
 
-print(najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 988027</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(najwieksza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int nwd(int a, int b) {
+    while (b &gt; 0) {
+        int reszta = a % b;
+        a = b;
+        b = reszta;
+    }
+    return a;
+}
+
+int main() {
+    std::vector&lt;int&gt; liczby;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    int x;
+    while (plik &gt;&gt; x) {
+        liczby.push_back(x);
+    }
+
+    int najwieksza = 0;
+    for (size_t i = 0; i &lt; liczby.size(); i++) {
+        bool wzglednie_pierwsza = true;
+        for (size_t j = 0; j &lt; liczby.size(); j++) {
+            if (i != j &amp;&amp; nwd(liczby[i], liczby[j]) &gt; 1) {
+                wzglednie_pierwsza = false;
+                break;
+            }
+        }
+        if (wzglednie_pierwsza &amp;&amp; liczby[i] &gt; najwieksza) {
+            najwieksza = liczby[i];
+        }
+    }
+
+    std::println(&quot;{}&quot;, najwieksza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static int nwd(int a, int b) {
+        while (b &gt; 0) {
+            int reszta = a % b;
+            a = b;
+            b = reszta;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; liczby = new ArrayList&lt;&gt;();
+
+        for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            liczby.add(Integer.parseInt(linia.trim()));
+        }
+
+        int najwieksza = 0;
+        for (int i = 0; i &lt; liczby.size(); i++) {
+            boolean wzgledniePierwsza = true;
+            for (int j = 0; j &lt; liczby.size(); j++) {
+                if (i != j &amp;&amp; nwd(liczby.get(i), liczby.get(j)) &gt; 1) {
+                    wzgledniePierwsza = false;
+                    break;
+                }
+            }
+            if (wzgledniePierwsza &amp;&amp; liczby.get(i) &gt; najwieksza) {
+                najwieksza = liczby.get(i);
+            }
+        }
+
+        System.out.println(najwieksza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 988027</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/60.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2060.%20Dzielniki%20%E2%80%94%2060.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-60.html%2360-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/60.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

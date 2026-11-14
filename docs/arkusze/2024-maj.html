@@ -37,7 +37,16 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#3-1">3.1</a></li><li><a href="#3-2">3.2</a></li><li><a href="#3-3">3.3</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2024 — maj, poziom rozszerzony (formuła 2023)</span></nav>
-<h1 class="page-title">Matura 2024 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(A):
+<h1 class="page-title">Matura 2024 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plansza ma n wierszy (numerowanych od góry 1..n) i m kolumn (numerowanych od lewej 1..m); każde pole jest białe albo czarne. Opisuje ją tablica A[1..n][1..m], w której A[i][j] = 1 oznacza pole białe, a 0 — czarne. Lewy górny i prawy dolny róg są zawsze białe. Algorytm korzysta z pomocniczej tablicy logicznej P[1..n][1..m] i zwraca PRAWDA albo FAŁSZ:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">P[1][1] ← PRAWDA
+dla i = 1, 2, ..., n wykonuj
+    dla j = 1, 2, ..., m wykonuj
+        jeżeli A[i][j] = 0
+            P[i][j] ← FAŁSZ
+        w przeciwnym przypadku
+            jeżeli i = 1 oraz j ≠ 1:  P[i][j] ← P[i][j−1]
+            jeżeli i ≠ 1 oraz j = 1:  P[i][j] ← P[i−1][j]
+            jeżeli i ≠ 1 oraz j ≠ 1:  P[i][j] ← P[i][j−1] lub P[i−1][j]
+podaj wynik P[n][m]</code></pre></div></div></div><ul><li>1.1 — Podaj wynik algorytmu dla trzech plansz przedstawionych na rysunkach w arkuszu: a) 3 × 3, b) 5 wierszy × 3 kolumny, c) 5 × 5.</li><li>1.2 — Podaj przykład planszy (z białymi narożnikami: lewym górnym i prawym dolnym): a) 5 × 5 z co najwyżej 2 czarnymi polami, dla której wynikiem jest FAŁSZ; b) 4 × 4 z co najmniej 9 czarnymi polami, dla której wynikiem jest PRAWDA.</li><li>1.3 — Dla kwadratowej planszy n × n podaj największą możliwą liczbę czarnych pól, przy której algorytm zwraca PRAWDA.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(A):
     n = len(A)
     m = len(A[0])
     P = [[False] * m for _ in range(n)]
@@ -92,7 +101,178 @@ for n in range(2, 5):
         if A[0][0] == 1 and A[n - 1][n - 1] == 1 and algorytm(A):
             czarne = sum(row.count(0) for row in A)
             najwiecej = max(najwiecej, czarne)
-    print(n, najwiecej, (n - 1) ** 2)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: a) PRAWDA, b) FAŁSZ, c) PRAWDA. 1.2: algorytm zwraca PRAWDA wtedy i tylko wtedy, gdy istnieje ścieżka po białych polach z lewego górnego do prawego dolnego rogu, poruszając się tylko w prawo lub w dół; a) np. plansza 5 × 5 z czarnymi polami (4, 5) i (5, 4) — FAŁSZ; b) np. plansza 4 × 4, w której białe są tylko pierwsza kolumna i ostatni wiersz (9 pól czarnych) — PRAWDA. 1.3: (n − 1)² (ścieżka z rogu do rogu ma zawsze 2n − 1 białych pól, więc czarnych może być n² − (2n − 1)).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+    print(n, najwiecej, (n - 1) ** 2)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+using Plansza = std::vector&lt;std::vector&lt;int&gt;&gt;;
+
+bool algorytm(const Plansza&amp; A) {
+    int n = A.size();
+    int m = A[0].size();
+    std::vector&lt;std::vector&lt;bool&gt;&gt; P(n, std::vector&lt;bool&gt;(m, false));
+    P[0][0] = true;
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; m; j++) {
+            if (A[i][j] == 0) {
+                P[i][j] = false;
+            } else if (i == 0 &amp;&amp; j != 0) {
+                P[i][j] = P[i][j - 1];
+            } else if (i != 0 &amp;&amp; j == 0) {
+                P[i][j] = P[i - 1][j];
+            } else if (i != 0 &amp;&amp; j != 0) {
+                P[i][j] = P[i][j - 1] || P[i - 1][j];
+            }
+        }
+    }
+    return P[n - 1][m - 1];
+}
+
+// wypisuje wartość logiczną tak jak Python
+const char* napis(bool w) {
+    return w ? &quot;True&quot; : &quot;False&quot;;
+}
+
+int main() {
+    // 1.1 (1 - pole białe, 0 - pole czarne)
+    Plansza a = {{1, 1, 1},
+                 {0, 1, 0},
+                 {1, 1, 1}};
+    Plansza b = {{1, 1, 1},
+                 {0, 0, 1},
+                 {1, 1, 1},
+                 {1, 0, 0},
+                 {1, 1, 1}};
+    Plansza c = {{1, 0, 0, 0, 0},
+                 {1, 1, 0, 0, 1},
+                 {0, 1, 0, 0, 1},
+                 {0, 1, 1, 1, 0},
+                 {0, 1, 0, 1, 1}};
+    for (const Plansza&amp; plansza : {a, b, c}) {
+        std::println(&quot;{}&quot;, napis(algorytm(plansza)));
+    }
+
+    // 1.2 - sprawdzenie przykładowych plansz
+    Plansza a2 = {{1, 1, 1, 1, 1},
+                  {1, 1, 1, 1, 1},
+                  {1, 1, 1, 1, 1},
+                  {1, 1, 1, 1, 0},
+                  {1, 1, 1, 0, 1}};
+    Plansza b2 = {{1, 0, 0, 0},
+                  {1, 0, 0, 0},
+                  {1, 0, 0, 0},
+                  {1, 1, 1, 1}};
+    std::println(&quot;{} {}&quot;, napis(algorytm(a2)), napis(algorytm(b2)));
+
+    // 1.3 - sprawdzenie wzoru (n-1)^2 dla małych plansz (przegląd wszystkich plansz)
+    for (int n = 2; n &lt; 5; n++) {
+        int najwiecej = 0;
+        for (int maska = 0; maska &lt; (1 &lt;&lt; (n * n)); maska++) {
+            Plansza A(n, std::vector&lt;int&gt;(n));
+            int czarne = 0;
+            for (int i = 0; i &lt; n; i++) {
+                for (int j = 0; j &lt; n; j++) {
+                    A[i][j] = (maska &gt;&gt; (i * n + j) &amp; 1) ? 0 : 1;
+                    if (A[i][j] == 0) {
+                        czarne++;
+                    }
+                }
+            }
+            if (A[0][0] == 1 &amp;&amp; A[n - 1][n - 1] == 1 &amp;&amp; algorytm(A)) {
+                najwiecej = std::max(najwiecej, czarne);
+            }
+        }
+        std::println(&quot;{} {} {}&quot;, n, najwiecej, (n - 1) * (n - 1));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static boolean algorytm(int[][] A) {
+        int n = A.length;
+        int m = A[0].length;
+        boolean[][] P = new boolean[n][m];
+        P[0][0] = true;
+        for (int i = 0; i &lt; n; i++) {
+            for (int j = 0; j &lt; m; j++) {
+                if (A[i][j] == 0) {
+                    P[i][j] = false;
+                } else if (i == 0 &amp;&amp; j != 0) {
+                    P[i][j] = P[i][j - 1];
+                } else if (i != 0 &amp;&amp; j == 0) {
+                    P[i][j] = P[i - 1][j];
+                } else if (i != 0 &amp;&amp; j != 0) {
+                    P[i][j] = P[i][j - 1] || P[i - 1][j];
+                }
+            }
+        }
+        return P[n - 1][m - 1];
+    }
+
+    // wypisuje wartość logiczną tak jak Python
+    static String napis(boolean w) {
+        return w ? &quot;True&quot; : &quot;False&quot;;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1 (1 - pole białe, 0 - pole czarne)
+        int[][] a = {{1, 1, 1},
+                     {0, 1, 0},
+                     {1, 1, 1}};
+        int[][] b = {{1, 1, 1},
+                     {0, 0, 1},
+                     {1, 1, 1},
+                     {1, 0, 0},
+                     {1, 1, 1}};
+        int[][] c = {{1, 0, 0, 0, 0},
+                     {1, 1, 0, 0, 1},
+                     {0, 1, 0, 0, 1},
+                     {0, 1, 1, 1, 0},
+                     {0, 1, 0, 1, 1}};
+        for (int[][] plansza : new int[][][]{a, b, c}) {
+            System.out.println(napis(algorytm(plansza)));
+        }
+
+        // 1.2 - sprawdzenie przykładowych plansz
+        int[][] a2 = {{1, 1, 1, 1, 1},
+                      {1, 1, 1, 1, 1},
+                      {1, 1, 1, 1, 1},
+                      {1, 1, 1, 1, 0},
+                      {1, 1, 1, 0, 1}};
+        int[][] b2 = {{1, 0, 0, 0},
+                      {1, 0, 0, 0},
+                      {1, 0, 0, 0},
+                      {1, 1, 1, 1}};
+        System.out.println(napis(algorytm(a2)) + &quot; &quot; + napis(algorytm(b2)));
+
+        // 1.3 - sprawdzenie wzoru (n-1)^2 dla małych plansz (przegląd wszystkich plansz)
+        for (int n = 2; n &lt; 5; n++) {
+            int najwiecej = 0;
+            for (int maska = 0; maska &lt; (1 &lt;&lt; (n * n)); maska++) {
+                int[][] A = new int[n][n];
+                int czarne = 0;
+                for (int i = 0; i &lt; n; i++) {
+                    for (int j = 0; j &lt; n; j++) {
+                        A[i][j] = ((maska &gt;&gt; (i * n + j)) &amp; 1) == 1 ? 0 : 1;
+                        if (A[i][j] == 0) {
+                            czarne++;
+                        }
+                    }
+                }
+                if (A[0][0] == 1 &amp;&amp; A[n - 1][n - 1] == 1 &amp;&amp; algorytm(A)) {
+                    najwiecej = Math.max(najwiecej, czarne);
+                }
+            }
+            System.out.println(n + &quot; &quot; + najwiecej + &quot; &quot; + (n - 1) * (n - 1));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: a) PRAWDA, b) FAŁSZ, c) PRAWDA. 1.2: algorytm zwraca PRAWDA wtedy i tylko wtedy, gdy istnieje ścieżka po białych polach z lewego górnego do prawego dolnego rogu, poruszając się tylko w prawo lub w dół; a) np. plansza 5 × 5 z czarnymi polami (4, 5) i (5, 4) — FAŁSZ; b) np. plansza 4 × 4, w której białe są tylko pierwsza kolumna i ostatni wiersz (9 pól czarnych) — PRAWDA. 1.3: (n − 1)² (ścieżka z rogu do rogu ma zawsze 2n − 1 białych pól, więc czarnych może być n² − (2n − 1)).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Algorytm dla nieujemnej liczby całkowitej n oblicza liczbę c (mod i div to reszta i iloraz z dzielenia całkowitego):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">b ← 1
+c ← 0
+dopóki n &gt; 0 wykonuj
+    a ← n mod 10
+    n ← n div 10
+    jeżeli a mod 2 = 0
+        c ← c + b * (a div 2)
+    w przeciwnym razie
+        c ← c + b
+    b ← b * 10</code></pre></div></div></div><ul><li>2.1 — Uzupełnij tabelę: dla n = 542102 oraz n = 87654321012345678 podaj wartość c po zakończeniu algorytmu i liczbę wykonań instrukcji c ← c + b (przykład: dla n = 33658 jest c = 11314 i 3 wykonania).</li><li>2.2 — Podaj wartość c dla osiemnastocyfrowej liczby n, której pierwsze sześć cyfr to 3, kolejne sześć to 6, a ostatnie sześć to 9.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
     b = 1
     c = 0
     wykonania = 0
@@ -114,7 +294,71 @@ for n in [33658, 542102, 87654321012345678]:
 
 # 2.2
 n = int(&quot;3&quot; * 6 + &quot;6&quot; * 6 + &quot;9&quot; * 6)
-print(algorytm(n)[0])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 33658 → 11314, 3 wykonania; 542102 → 121101, 2 wykonania; 87654321012345678 → 41312111011121314, 8 wykonań. 2.2: c = 111111333333111111.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1">3.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrot(n):
+print(algorytm(n)[0])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+
+// zwraca parę (c, liczba wykonań gałęzi &quot;else&quot;)
+std::pair&lt;long long, int&gt; algorytm(long long n) {
+    long long b = 1;
+    long long c = 0;
+    int wykonania = 0;
+    while (n &gt; 0) {
+        long long a = n % 10;
+        n = n / 10;
+        if (a % 2 == 0) {
+            c = c + b * (a / 2);
+        } else {
+            c = c + b;
+            wykonania += 1;
+        }
+        b = b * 10;
+    }
+    return {c, wykonania};
+}
+
+int main() {
+    // 2.1 (liczby do 10^17 - potrzebny long long)
+    for (long long n : {33658LL, 542102LL, 87654321012345678LL}) {
+        auto [c, wykonania] = algorytm(n);
+        std::println(&quot;{} {} {}&quot;, n, c, wykonania);
+    }
+
+    // 2.2
+    long long n = std::stoll(std::string(6, &#x27;3&#x27;) + std::string(6, &#x27;6&#x27;) + std::string(6, &#x27;9&#x27;));
+    std::println(&quot;{}&quot;, algorytm(n).first);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // zwraca tablicę {c, liczba wykonań gałęzi &quot;else&quot;}
+    static long[] algorytm(long n) {
+        long b = 1;
+        long c = 0;
+        long wykonania = 0;
+        while (n &gt; 0) {
+            long a = n % 10;
+            n = n / 10;
+            if (a % 2 == 0) {
+                c = c + b * (a / 2);
+            } else {
+                c = c + b;
+                wykonania += 1;
+            }
+            b = b * 10;
+        }
+        return new long[]{c, wykonania};
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1 (liczby do 10^17 - potrzebny long)
+        for (long n : new long[]{33658L, 542102L, 87654321012345678L}) {
+            long[] wynik = algorytm(n);
+            System.out.println(n + &quot; &quot; + wynik[0] + &quot; &quot; + wynik[1]);
+        }
+
+        // 2.2
+        long n = Long.parseLong(&quot;3&quot;.repeat(6) + &quot;6&quot;.repeat(6) + &quot;9&quot;.repeat(6));
+        System.out.println(algorytm(n)[0]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 33658 → 11314, 3 wykonania; 542102 → 121101, 2 wykonania; 87654321012345678 → 41312111011121314, 8 wykonań. 2.2: c = 111111333333111111.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1">3.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Nieparzystym skrótem dodatniej liczby całkowitej n jest liczba m powstała przez usunięcie z zapisu dziesiętnego n wszystkich cyfr parzystych. Jeśli n ma same cyfry parzyste, skrót nie istnieje. Przykłady: skrót 294762 to 97, skrót 39101 to 3911, skrót 224 nie istnieje.</p><p>Napisz (w pseudokodzie lub wybranym języku) funkcję, która dla dodatniej liczby całkowitej n, mającej nieparzysty skrót, wyznacza ten skrót m. Algorytm może operować wyłącznie na liczbach całkowitych i używać tylko podstawowych operacji arytmetycznych (w tym div i mod), porównań, instrukcji sterujących i własnych funkcji — bez funkcji wbudowanych.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrot(n):
     m = 0
     p = 1
     while n &gt; 0:
@@ -127,7 +371,47 @@ print(algorytm(n)[0])</code></pre></div><p class="answer"><strong>Odpowiedź:</s
 
 
 for n in [294762, 39101]:
-    print(n, skrot(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> funkcja <code>skrot</code> (np. skrot(294762) = 97, skrot(39101) = 3911).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-2">3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrot(n):
+    print(n, skrot(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int skrot(int n) {
+    int m = 0;
+    int p = 1;
+    while (n &gt; 0) {
+        int cyfra = n % 10;
+        if (cyfra % 2 != 0) {
+            m = m + cyfra * p;
+            p = p * 10;
+        }
+        n = n / 10;
+    }
+    return m;
+}
+
+int main() {
+    for (int n : {294762, 39101}) {
+        std::println(&quot;{} {}&quot;, n, skrot(n));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int skrot(int n) {
+        int m = 0;
+        int p = 1;
+        while (n &gt; 0) {
+            int cyfra = n % 10;
+            if (cyfra % 2 != 0) {
+                m = m + cyfra * p;
+                p = p * 10;
+            }
+            n = n / 10;
+        }
+        return m;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (int n : new int[]{294762, 39101}) {
+            System.out.println(n + &quot; &quot; + skrot(n));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> funkcja <code>skrot</code> (np. skrot(294762) = 97, skrot(39101) = 3911).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html%233-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-2">3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>skrot.txt</code> zawiera 200 dodatnich liczb całkowitych mniejszych od 30 000, po jednej w wierszu; dla co najmniej jednej z nich nieparzysty skrót (zob. 3.1) nie istnieje.</p><p>Napisz program, który poda, dla ilu liczb z pliku nieparzysty skrót nie istnieje, oraz największą z tych liczb. Odpowiedź zapisz w pliku <code>wyniki3_2.txt</code>. Dla pliku <code>skrot_przyklad.txt</code> są dwie takie liczby (266 i 2428), największa to 2428.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skrot(n):
     m = 0
     p = 1
     while n &gt; 0:
@@ -144,7 +428,74 @@ with open(&quot;skrot.txt&quot;) as file:
 
 bez_skrotu = [n for n in liczby if skrot(n) == 0]
 print(len(bez_skrotu))
-print(max(bez_skrotu))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 18 liczb, największa z nich: 28422.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-3">3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import gcd
+print(max(bez_skrotu))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int skrot(int n) {
+    int m = 0;
+    int p = 1;
+    while (n &gt; 0) {
+        int cyfra = n % 10;
+        if (cyfra % 2 != 0) {
+            m = m + cyfra * p;
+            p = p * 10;
+        }
+        n = n / 10;
+    }
+    return m;
+}
+
+int main() {
+    std::ifstream plik(&quot;skrot.txt&quot;);
+    std::vector&lt;int&gt; liczby;
+    int x;
+    while (plik &gt;&gt; x) {
+        liczby.push_back(x);
+    }
+
+    std::vector&lt;int&gt; bez_skrotu;
+    for (int n : liczby) {
+        if (skrot(n) == 0) {
+            bez_skrotu.push_back(n);
+        }
+    }
+    std::println(&quot;{}&quot;, bez_skrotu.size());
+    std::println(&quot;{}&quot;, std::ranges::max(bez_skrotu));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Zadanie {
+    static int skrot(int n) {
+        int m = 0;
+        int p = 1;
+        while (n &gt; 0) {
+            int cyfra = n % 10;
+            if (cyfra % 2 != 0) {
+                m = m + cyfra * p;
+                p = p * 10;
+            }
+            n = n / 10;
+        }
+        return m;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; bezSkrotu = new ArrayList&lt;&gt;();
+        for (String wiersz : Files.readAllLines(Path.of(&quot;skrot.txt&quot;))) {
+            int n = Integer.parseInt(wiersz.trim());
+            if (skrot(n) == 0) {
+                bezSkrotu.add(n);
+            }
+        }
+        System.out.println(bezSkrotu.size());
+        System.out.println(Collections.max(bezSkrotu));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 18 liczb, największa z nich: 28422.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html%233-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-3">3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>skrot2.txt</code> zawiera 200 dodatnich liczb całkowitych mniejszych od 30 000, po jednej w wierszu; każda ma nieparzysty skrót (zob. 3.1).</p><p>Napisz program, który wypisze (po jednej w wierszu) te liczby z pliku, dla których największy wspólny dzielnik liczby i jej nieparzystego skrótu jest równy 7. Wynik zapisz w pliku <code>wyniki3_3.txt</code>. Do testów służy plik <code>skrot2_przyklad.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import gcd
 
 
 def skrot(n):
@@ -163,7 +514,68 @@ with open(&quot;skrot2.txt&quot;) as file:
     for wiersz in file:
         n = int(wiersz)
         if gcd(n, skrot(n)) == 7:
-            print(n)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 784, 14196, 2247, 24087, 3871, 10192.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;liczby.txt&quot;) as file:
+            print(n)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;numeric&gt;
+#include &lt;print&gt;
+
+int skrot(int n) {
+    int m = 0;
+    int p = 1;
+    while (n &gt; 0) {
+        int cyfra = n % 10;
+        if (cyfra % 2 != 0) {
+            m = m + cyfra * p;
+            p = p * 10;
+        }
+        n = n / 10;
+    }
+    return m;
+}
+
+int main() {
+    std::ifstream plik(&quot;skrot2.txt&quot;);
+    int n;
+    while (plik &gt;&gt; n) {
+        if (std::gcd(n, skrot(n)) == 7) {
+            std::println(&quot;{}&quot;, n);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static int skrot(int n) {
+        int m = 0;
+        int p = 1;
+        while (n &gt; 0) {
+            int cyfra = n % 10;
+            if (cyfra % 2 != 0) {
+                m = m + cyfra * p;
+                p = p * 10;
+            }
+            n = n / 10;
+        }
+        return m;
+    }
+
+    static int gcd(int a, int b) {
+        while (b != 0) {
+            int t = a % b;
+            a = b;
+            b = t;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (String wiersz : Files.readAllLines(Path.of(&quot;skrot2.txt&quot;))) {
+            int n = Integer.parseInt(wiersz.trim());
+            if (gcd(n, skrot(n)) == 7) {
+                System.out.println(n);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 784, 14196, 2247, 24087, 3871, 10192.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html%233-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> ma dwa wiersze: w pierwszym jest 3000 liczb pierwszych z przedziału [2, 2000], w drugim — 20 liczb całkowitych z przedziału [2, 1 000 000 000]; liczby oddzielone są spacjami. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. Plik <code>liczby_przyklad.txt</code> (200 liczb 2, 3, 5, 7, 31 w pierwszym wierszu i 20 liczb w drugim) służy do testów.</p><ul><li>4.1 — Podaj, ile liczb z pierwszego wiersza jest dzielnikiem co najmniej jednej liczby z drugiego wiersza (dla pliku przykładowego: 199).</li><li>4.2 — Podaj liczbę, która po uporządkowaniu liczb z pierwszego wiersza jest sto pierwsza, licząc od największej (np. wśród 2, 4, 2, 3, 3, 4 druga od największej to 4; dla pliku przykładowego: 5).</li><li>4.3 — Wypisz te liczby z drugiego wiersza, które da się przedstawić jako iloczyn wyłącznie liczb z pierwszego wiersza, przy czym każdy czynnik może wystąpić w iloczynie co najwyżej tyle razy, ile razy występuje w pierwszym wierszu (dla pliku przykładowego: 10 12 14 15 18 20 21 25 27 28; np. 16 = 2·2·2·2 odpada, bo 2 występuje tylko dwa razy).</li><li>4.4 — W ciągu liczb z pierwszego wiersza znajdź spójny fragment o co najmniej 50 elementach i największej średniej arytmetycznej (przy remisie — pierwszy w pliku). Podaj tę średnią, liczbę elementów fragmentu i jego pierwszy element (dla pliku przykładowego: <code>5,52 50 5</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;liczby.txt&quot;) as file:
     pierwsze = [int(x) for x in file.readline().split()]
     liczby = [int(x) for x in file.readline().split()]
 
@@ -214,7 +626,191 @@ for start in range(n):
         # suma / dl &gt; najl_suma / najl_dl, bez ułamków
         if najl_start == -1 or suma * najl_dl &gt; najl_suma * dl:
             najl_suma, najl_dl, najl_start = suma, dl, start
-print(&quot;4.4&quot;, najl_suma / najl_dl, najl_dl, pierwsze[najl_start])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 212. 4.2: 1933. 4.3: 547839600, 2954285, 573219169, 573549984, 212444924. 4.4: średnia 1200,704918… (≈ 1200,70), 61 elementów, pierwszy element 1847.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;4.4&quot;, najl_suma / najl_dl, najl_dl, pierwsze[najl_start])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;functional&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;long long&gt; wczytaj_wiersz(std::ifstream&amp; plik) {
+    std::string linia;
+    std::getline(plik, linia);
+    std::istringstream strumien(linia);
+    std::vector&lt;long long&gt; wynik;
+    long long x;
+    while (strumien &gt;&gt; x) {
+        wynik.push_back(x);
+    }
+    return wynik;
+}
+
+int main() {
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::vector&lt;long long&gt; pierwsze = wczytaj_wiersz(plik);
+    std::vector&lt;long long&gt; liczby = wczytaj_wiersz(plik);
+
+    // 4.1
+    int ile = 0;
+    for (long long p : pierwsze) {
+        for (long long x : liczby) {
+            if (x % p == 0) {
+                ile += 1;
+                break;
+            }
+        }
+    }
+    std::println(&quot;4.1 {}&quot;, ile);
+
+    // 4.2
+    std::vector&lt;long long&gt; posortowane = pierwsze;
+    std::ranges::sort(posortowane, std::greater&lt;&gt;());
+    std::println(&quot;4.2 {}&quot;, posortowane[100]);
+
+    // 4.3
+    std::map&lt;long long, int&gt; wystapienia;
+    for (long long p : pierwsze) {
+        wystapienia[p] += 1;
+    }
+
+    std::vector&lt;long long&gt; wynik;
+    for (long long x : liczby) {
+        long long reszta = x;
+        bool dobra = true;
+        for (auto [p, ile_dozwolonych] : wystapienia) {
+            int ile_razy = 0;
+            while (reszta % p == 0) {
+                reszta /= p;
+                ile_razy += 1;
+            }
+            if (ile_razy &gt; ile_dozwolonych) {
+                dobra = false;
+            }
+        }
+        if (dobra &amp;&amp; reszta == 1) {
+            wynik.push_back(x);
+        }
+    }
+    std::print(&quot;4.3&quot;);
+    for (long long x : wynik) {
+        std::print(&quot; {}&quot;, x);
+    }
+    std::println();
+
+    // 4.4
+    int n = pierwsze.size();
+    std::vector&lt;long long&gt; prefiks(n + 1, 0);
+    for (int i = 0; i &lt; n; i++) {
+        prefiks[i + 1] = prefiks[i] + pierwsze[i];
+    }
+
+    long long najl_suma = 0, najl_dl = 1;
+    int najl_start = -1;
+    for (int start = 0; start &lt; n; start++) {
+        for (int koniec = start + 50; koniec &lt;= n; koniec++) {
+            long long suma = prefiks[koniec] - prefiks[start];
+            long long dl = koniec - start;
+            // suma / dl &gt; najl_suma / najl_dl, bez ułamków
+            if (najl_start == -1 || suma * najl_dl &gt; najl_suma * dl) {
+                najl_suma = suma;
+                najl_dl = dl;
+                najl_start = start;
+            }
+        }
+    }
+    std::println(&quot;4.4 {} {} {}&quot;, (double)najl_suma / najl_dl, najl_dl, pierwsze[najl_start]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zadanie {
+    static List&lt;Long&gt; naLiczby(String linia) {
+        List&lt;Long&gt; wynik = new ArrayList&lt;&gt;();
+        for (String s : linia.trim().split(&quot;\\s+&quot;)) {
+            wynik.add(Long.parseLong(s));
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;liczby.txt&quot;));
+        List&lt;Long&gt; pierwsze = naLiczby(linie.get(0));
+        List&lt;Long&gt; liczby = naLiczby(linie.get(1));
+
+        // 4.1
+        int ile = 0;
+        for (long p : pierwsze) {
+            for (long x : liczby) {
+                if (x % p == 0) {
+                    ile += 1;
+                    break;
+                }
+            }
+        }
+        System.out.println(&quot;4.1 &quot; + ile);
+
+        // 4.2
+        List&lt;Long&gt; posortowane = new ArrayList&lt;&gt;(pierwsze);
+        posortowane.sort(Comparator.reverseOrder());
+        System.out.println(&quot;4.2 &quot; + posortowane.get(100));
+
+        // 4.3
+        Map&lt;Long, Integer&gt; wystapienia = new LinkedHashMap&lt;&gt;();
+        for (long p : pierwsze) {
+            wystapienia.put(p, wystapienia.getOrDefault(p, 0) + 1);
+        }
+
+        StringBuilder wynik = new StringBuilder(&quot;4.3&quot;);
+        for (long x : liczby) {
+            long reszta = x;
+            boolean dobra = true;
+            for (var wpis : wystapienia.entrySet()) {
+                long p = wpis.getKey();
+                int ileRazy = 0;
+                while (reszta % p == 0) {
+                    reszta /= p;
+                    ileRazy += 1;
+                }
+                if (ileRazy &gt; wpis.getValue()) {
+                    dobra = false;
+                }
+            }
+            if (dobra &amp;&amp; reszta == 1) {
+                wynik.append(&quot; &quot;).append(x);
+            }
+        }
+        System.out.println(wynik);
+
+        // 4.4
+        int n = pierwsze.size();
+        long[] prefiks = new long[n + 1];
+        for (int i = 0; i &lt; n; i++) {
+            prefiks[i + 1] = prefiks[i] + pierwsze.get(i);
+        }
+
+        long najlSuma = 0, najlDl = 1;
+        int najlStart = -1;
+        for (int start = 0; start &lt; n; start++) {
+            for (int koniec = start + 50; koniec &lt;= n; koniec++) {
+                long suma = prefiks[koniec] - prefiks[start];
+                long dl = koniec - start;
+                // suma / dl &gt; najlSuma / najlDl, bez ułamków
+                if (najlStart == -1 || suma * najlDl &gt; najlSuma * dl) {
+                    najlSuma = suma;
+                    najlDl = dl;
+                    najlStart = start;
+                }
+            }
+        }
+        System.out.println(&quot;4.4 &quot; + (double) najlSuma / najlDl + &quot; &quot; + najlDl + &quot; &quot; + pierwsze.get(najlStart));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 212. 4.2: 1933. 4.3: 547839600, 2954285, 573219169, 573549984, 212444924. 4.4: średnia 1200,704918… (≈ 1200,70), 61 elementów, pierwszy element 1847.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

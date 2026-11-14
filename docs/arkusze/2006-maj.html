@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title" style="--c:var(--g1)">Arkusz I</p><ul style="--c:var(--g1)"><li><a href="#1a">1a</a></li><li><a href="#1b">1b</a></li><li><a href="#2a">2a</a></li><li><a href="#2b">2b</a></li><li><a href="#2c">2c</a></li></ul><p class="side-title" style="--c:var(--g2)">Arkusz II</p><ul style="--c:var(--g2)"><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#7a">7a</a></li><li><a href="#7b">7b</a></li><li><a href="#7c">7c</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2006 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2006 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI I</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-odpowiedzi-2.pdf" target="_blank" rel="noopener">ODPOWIEDZI II</a></p><p>Przykładowe wyniki CKE do arkusza II znajdują się w folderze <code>WYNIKI</code> w paczce z danymi.</p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def ss_wprost(n):
+<h1 class="page-title">Matura 2006 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI I</a><a href="https://arkusze.pl/maturalne/informatyka-2006-maj-matura-rozszerzona-odpowiedzi-2.pdf" target="_blank" rel="noopener">ODPOWIEDZI II</a></p><p>Przykładowe wyniki CKE do arkusza II znajdują się w folderze <code>WYNIKI</code> w paczce z danymi.</p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (suma silni). Silnia: 1! = 1, n! = (n−1)!·n dla n &gt; 1. Funkcja ss(n) = 1! + 2! + ... + n! dla n ≥ 1.</p><p>Podaj, ile mnożeń trzeba wykonać, aby obliczyć ss(3), ss(4) oraz ss(n), jeśli każdą silnię we wzorze liczymy osobno, wprost z definicji.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def ss_wprost(n):
     # każdą silnię liczymy osobno i liczymy mnożenia
     mnozenia = 0
     suma = 0
@@ -51,7 +51,52 @@
 
 
 for n in [3, 4, 10]:
-    print(n, *ss_wprost(n), n * (n - 1) // 2)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> ss(3): 0+1+2 = 3 mnożenia, ss(4): 0+1+2+3 = 6 mnożeń, ss(n): n(n-1)/2 mnożeń</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b">1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def ss(n):
+    print(n, *ss_wprost(n), n * (n - 1) // 2)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+
+std::pair&lt;long long, int&gt; ss_wprost(int n) {
+    // każdą silnię liczymy osobno i liczymy mnożenia
+    int mnozenia = 0;
+    long long suma = 0;
+    for (int k = 1; k &lt;= n; k++) {
+        long long silnia = 1;
+        for (int i = 2; i &lt;= k; i++) {
+            silnia *= i;
+            mnozenia++;
+        }
+        suma += silnia;
+    }
+    return {suma, mnozenia};
+}
+
+int main() {
+    for (int n : {3, 4, 10}) {
+        auto [suma, mnozenia] = ss_wprost(n);
+        std::println(&quot;{} {} {} {}&quot;, n, suma, mnozenia, n * (n - 1) / 2);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long[] ssWprost(int n) {
+        // każdą silnię liczymy osobno i liczymy mnożenia
+        long mnozenia = 0;
+        long suma = 0;
+        for (int k = 1; k &lt;= n; k++) {
+            long silnia = 1;
+            for (int i = 2; i &lt;= k; i++) {
+                silnia *= i;
+                mnozenia++;
+            }
+            suma += silnia;
+        }
+        return new long[]{suma, mnozenia};
+    }
+
+    public static void main(String[] args) {
+        for (int n : new int[]{3, 4, 10}) {
+            long[] wynik = ssWprost(n);
+            System.out.println(n + &quot; &quot; + wynik[0] + &quot; &quot; + wynik[1] + &quot; &quot; + n * (n - 1) / 2);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> ss(3): 0+1+2 = 3 mnożenia, ss(4): 0+1+2+3 = 6 mnożeń, ss(n): n(n-1)/2 mnożeń</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%231a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b">1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Czynnik 2 występuje w n−1 silniach sumy ss(n) = 1! + ... + n!, czynnik 3 w n−2 silniach itd. Wykorzystaj to i przekształć wzór (schemat zagnieżdżony, np. ss(3) = 1 + 2·(1 + 3), ss(4) = 1 + 2·(1 + 3·(1 + 4))), tak aby ss(n) dało się policzyć wykonując dokładnie n−2 mnożenia dla n ≥ 2. Uzupełnij tabelę dla ss(4), ss(5), ss(n), a następnie zapisz algorytm obliczania ss(n) według tego wzoru wraz ze specyfikacją.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def ss(n):
     # Dane: n - liczba naturalna &gt; 0
     # Wynik: ss = 1! + 2! + ... + n!
     # ss(n) = 1+2*(1+3*(1+...(n-2)*(1+(n-1)*(1+n))...))
@@ -66,7 +111,45 @@ for n in [3, 4, 10]:
 
 
 for n in range(1, 8):
-    print(n, ss(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> ss(5) = 1+2*(1+3*(1+4*(1+5))) (3 mnożenia); algorytm: ss := 1 + n, i := n − 1; dopóki i &gt; 1: ss := 1 + i·ss, i := i − 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def niepodzielne(N, A):
+    print(n, ss(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+long long ss(int n) {
+    // Dane: n - liczba naturalna &gt; 0
+    // Wynik: ss = 1! + 2! + ... + n!
+    // ss(n) = 1+2*(1+3*(1+...(n-2)*(1+(n-1)*(1+n))...))
+    if (n == 1) return 1;
+    long long wynik = 1 + n;
+    int i = n - 1;
+    while (i &gt; 1) {
+        wynik = 1 + i * wynik;
+        i--;
+    }
+    return wynik;
+}
+
+int main() {
+    for (int n = 1; n &lt; 8; n++)
+        std::println(&quot;{} {}&quot;, n, ss(n));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long ss(int n) {
+        // Dane: n - liczba naturalna &gt; 0
+        // Wynik: ss = 1! + 2! + ... + n!
+        // ss(n) = 1+2*(1+3*(1+...(n-2)*(1+(n-1)*(1+n))...))
+        if (n == 1) return 1;
+        long wynik = 1 + n;
+        int i = n - 1;
+        while (i &gt; 1) {
+            wynik = 1 + i * wynik;
+            i--;
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) {
+        for (int n = 1; n &lt; 8; n++)
+            System.out.println(n + &quot; &quot; + ss(n));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> ss(5) = 1+2*(1+3*(1+4*(1+5))) (3 mnożenia); algorytm: ss := 1 + n, i := n − 1; dopóki i &gt; 1: ss := 1 + i·ss, i := i − 1</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%231b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (liczby pierwsze). Dany jest algorytm sita Eratostenesa: dla N ≥ 2 wypełnia tablicę T[2..N] tak, że T[i] = 0, gdy i jest pierwsza, i T[i] = 1, gdy złożona (dla kolejnych i z T[i] = 0 ustawia T[j] := 1 dla j = 2i, 3i, ... ≤ N).</p><p>Dane są liczba naturalna M ≥ 1 i tablica A[1..M] liczb z przedziału [2, N]. Korzystając z sita, zaprojektuj algorytm (ze specyfikacją) wyznaczający te liczby z [2, N], które nie są podzielne przez żadną z liczb A[1], ..., A[M].</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def niepodzielne(N, A):
     # Dane: N &gt; 1, tablica A liczb z przedziału [2, N]
     # Wynik: T[i] = 0 wtedy i tylko wtedy, gdy i nie dzieli się przez żadną z liczb A
     T = [0] * (N + 1)
@@ -78,7 +161,44 @@ for n in range(1, 8):
     return [i for i in range(2, N + 1) if T[i] == 0]
 
 
-print(niepodzielne(30, [2, 3]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dla każdej liczby A[k] wykreślamy (T[j] := 1) wszystkie jej wielokrotności j = A[k], 2A[k], … ≤ N; liczby z T[i] = 0 nie są podzielne przez żadną z A[1..M].</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2b">2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">N = 100
+print(niepodzielne(30, [2, 3]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; niepodzielne(int N, const std::vector&lt;int&gt;&amp; A) {
+    // Dane: N &gt; 1, tablica A liczb z przedziału [2, N]
+    // Wynik: T[i] = 0 wtedy i tylko wtedy, gdy i nie dzieli się przez żadną z liczb A
+    std::vector&lt;int&gt; T(N + 1, 0);
+    for (int liczba : A)
+        for (int j = liczba; j &lt;= N; j += liczba)
+            T[j] = 1;
+    std::vector&lt;int&gt; wynik;
+    for (int i = 2; i &lt;= N; i++)
+        if (T[i] == 0) wynik.push_back(i);
+    return wynik;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, niepodzielne(30, {2, 3})); // wypisuje [5, 7, 11, ...]
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static List&lt;Integer&gt; niepodzielne(int N, int[] A) {
+        // Dane: N &gt; 1, tablica A liczb z przedziału [2, N]
+        // Wynik: T[i] = 0 wtedy i tylko wtedy, gdy i nie dzieli się przez żadną z liczb A
+        int[] T = new int[N + 1];
+        for (int liczba : A)
+            for (int j = liczba; j &lt;= N; j += liczba)
+                T[j] = 1;
+        var wynik = new ArrayList&lt;Integer&gt;();
+        for (int i = 2; i &lt;= N; i++)
+            if (T[i] == 0) wynik.add(i);
+        return wynik;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(niepodzielne(30, new int[]{2, 3})); // wypisuje [5, 7, 11, ...]
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dla każdej liczby A[k] wykreślamy (T[j] := 1) wszystkie jej wielokrotności j = A[k], 2A[k], … ≤ N; liczby z T[i] = 0 nie są podzielne przez żadną z A[1..M].</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%232a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2b">2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Sito z zadania 2 zmodyfikowano: zamiast T[j] := 1 wykonuje się T[j] := T[j] + 1 (dla każdej liczby i z T[i] = 0 zwiększamy T[j] dla j = 2i, 3i, ... ≤ N).</p><p>Podaj wartości T[13], T[24], T[33] po wykonaniu algorytmu dla N = 100. Dla jakiej wartości T[i] liczba i jest pierwsza? Jaką własność liczby i opisuje wartość T[i]?</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">N = 100
 T = [0] * (N + 1)
 i = 2
 while i &lt; N:
@@ -89,7 +209,42 @@ while i &lt; N:
             j = j + i
     i = i + 1
 
-print(T[13], T[24], T[33])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> T[13] = 0, T[24] = 2, T[33] = 2; i jest pierwsza, gdy T[i] = 0; T[i] to liczba różnych dzielników pierwszych liczby i (mniejszych od i).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(L):
+print(T[13], T[24], T[33])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    const int N = 100;
+    std::vector&lt;int&gt; T(N + 1, 0);
+    int i = 2;
+    while (i &lt; N) {
+        if (T[i] == 0) {
+            int j = 2 * i;
+            while (j &lt;= N) {
+                T[j] = T[j] + 1;
+                j = j + i;
+            }
+        }
+        i = i + 1;
+    }
+    std::println(&quot;{} {} {}&quot;, T[13], T[24], T[33]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    public static void main(String[] args) {
+        final int N = 100;
+        int[] T = new int[N + 1];
+        int i = 2;
+        while (i &lt; N) {
+            if (T[i] == 0) {
+                int j = 2 * i;
+                while (j &lt;= N) {
+                    T[j] = T[j] + 1;
+                    j = j + i;
+                }
+            }
+            i = i + 1;
+        }
+        System.out.println(T[13] + &quot; &quot; + T[24] + &quot; &quot; + T[33]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> T[13] = 0, T[24] = 2, T[33] = 2; i jest pierwsza, gdy T[i] = 0; T[i] to liczba różnych dzielników pierwszych liczby i (mniejszych od i).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%232b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Podaj (lista kroków, schemat blokowy lub program) inny niż sito algorytm sprawdzający, czy dana liczba naturalna L &gt; 1 jest pierwsza — bez sprawdzania pierwszości liczb mniejszych od L. Wynik: „Tak”, gdy L jest pierwsza, „Nie” w przeciwnym razie. Oceniana jest także złożoność czasowa.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(L):
     j = 2
     pierwsza = True
     while j * j &lt;= L and pierwsza:
@@ -99,7 +254,38 @@ print(T[13], T[24], T[33])</code></pre></div><p class="answer"><strong>Odpowied�
 
 
 for L in [2, 9, 13, 97, 100]:
-    print(L, czy_pierwsza(L))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> sprawdzamy dzielniki j = 2, 3, … dopóki j·j ≤ L; złożoność O(√L).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def f(x):
+    print(L, czy_pierwsza(L))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string czy_pierwsza(long long L) {
+    long long j = 2;
+    bool pierwsza = true;
+    while (j * j &lt;= L &amp;&amp; pierwsza) {
+        pierwsza = L % j != 0;
+        j++;
+    }
+    return pierwsza ? &quot;Tak&quot; : &quot;Nie&quot;;
+}
+
+int main() {
+    for (long long L : {2, 9, 13, 97, 100})
+        std::println(&quot;{} {}&quot;, L, czy_pierwsza(L));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String czyPierwsza(long L) {
+        long j = 2;
+        boolean pierwsza = true;
+        while (j * j &lt;= L &amp;&amp; pierwsza) {
+            pierwsza = L % j != 0;
+            j++;
+        }
+        return pierwsza ? &quot;Tak&quot; : &quot;Nie&quot;;
+    }
+
+    public static void main(String[] args) {
+        for (long L : new long[]{2, 9, 13, 97, 100})
+            System.out.println(L + &quot; &quot; + czyPierwsza(L));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> sprawdzamy dzielniki j = 2, 3, … dopóki j·j ≤ L; złożoność O(√L).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%232c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5 (figura). Dla liczby naturalnej C &gt; 0 figura F(C) jest ograniczona z lewej osią OY, z prawej prostą x = C, od dołu krzywą f(x) = −x²/50, a od góry krzywą g(x) = 1 + x²/100 − x/200.</p><p>Wyznacz przybliżone pole figury F(10) z dokładnością do 0,01. W pliku <code>figura.txt</code> opisz zastosowaną metodę i zapisz wynik (poprzedzony literą podpunktu).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def f(x):
     return -x * x / 50
 
 
@@ -117,7 +303,44 @@ for i in range(n):
     x2 = x1 + krok
     pole += ((g(x1) - f(x1)) + (g(x2) - f(x2))) / 2 * krok
 
-print(round(pole, 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 19,75</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+print(round(pole, 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;print&gt;
+
+double f(double x) { return -x * x / 50; }
+
+double g(double x) { return 1 + x * x / 100 - x / 200; }
+
+int main() {
+    // metoda trapezów
+    const double C = 10;
+    const int n = 100000;
+    double krok = C / n;
+    double pole = 0;
+    for (int i = 0; i &lt; n; i++) {
+        double x1 = i * krok;
+        double x2 = x1 + krok;
+        pole += ((g(x1) - f(x1)) + (g(x2) - f(x2))) / 2 * krok;
+    }
+    std::println(&quot;{}&quot;, std::round(pole * 100) / 100);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static double f(double x) { return -x * x / 50; }
+
+    static double g(double x) { return 1 + x * x / 100 - x / 200; }
+
+    public static void main(String[] args) {
+        // metoda trapezów
+        final double C = 10;
+        final int n = 100000;
+        double krok = C / n;
+        double pole = 0;
+        for (int i = 0; i &lt; n; i++) {
+            double x1 = i * krok;
+            double x2 = x1 + krok;
+            pole += ((g(x1) - f(x1)) + (g(x2) - f(x2))) / 2 * krok;
+        }
+        System.out.println(Math.round(pole * 100) / 100.0);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 19,75</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%235a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla figury F(C) z zadania 5 wyznacz najmniejsze naturalne C, dla którego wewnątrz F(C) (brzeg należy do wnętrza) mieści się prostokąt 100 × 26 o wierzchołkach w punktach o współrzędnych całkowitych, o bokach równoległych do osi, z dłuższymi bokami równoległymi do OX. W pliku <code>figura.txt</code> podaj C i współrzędne wierzchołków prostokąta.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 
 
 def f(x):
@@ -143,7 +366,61 @@ while not znalezione:
                 print((x0, y0), (x0 + 100, y0), (x0, y0 + 26), (x0 + 100, y0 + 26))
             break
     if not znalezione:
-        C += 1</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> C = 130, np. prostokąt (30, −17), (130, −17), (30, 9), (130, 9)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = {}
+        C += 1</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;print&gt;
+
+double f(double x) { return -x * x / 50; }
+
+double g(double x) { return 1 + x * x / 100 - x / 200; }
+
+int main() {
+    // dla x &gt;= 0 funkcja f maleje, a g rośnie dla x &gt;= 0.25,
+    // więc na przedziale [x0, x0+100] największe f jest w x0, a najmniejsze g w max(x0, 0.25)
+    bool znalezione = false;
+    int C = 100;
+    while (!znalezione) {
+        for (int x0 = 0; x0 &lt;= C - 100; x0++) {
+            int dol = (int)std::ceil(f(x0));
+            int gora = (int)std::floor(g(std::max((double)x0, 0.25)));
+            if (gora - dol &gt;= 26) {
+                znalezione = true;
+                std::println(&quot;C = {}&quot;, C);
+                for (int y0 = dol; y0 &lt;= gora - 26; y0++)
+                    std::println(&quot;({}, {}) ({}, {}) ({}, {}) ({}, {})&quot;,
+                                 x0, y0, x0 + 100, y0, x0, y0 + 26, x0 + 100, y0 + 26);
+                break;
+            }
+        }
+        if (!znalezione) C++;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static double f(double x) { return -x * x / 50; }
+
+    static double g(double x) { return 1 + x * x / 100 - x / 200; }
+
+    public static void main(String[] args) {
+        // dla x &gt;= 0 funkcja f maleje, a g rośnie dla x &gt;= 0.25,
+        // więc na przedziale [x0, x0+100] największe f jest w x0, a najmniejsze g w max(x0, 0.25)
+        boolean znalezione = false;
+        int C = 100;
+        while (!znalezione) {
+            for (int x0 = 0; x0 &lt;= C - 100; x0++) {
+                int dol = (int) Math.ceil(f(x0));
+                int gora = (int) Math.floor(g(Math.max(x0, 0.25)));
+                if (gora - dol &gt;= 26) {
+                    znalezione = true;
+                    System.out.println(&quot;C = &quot; + C);
+                    for (int y0 = dol; y0 &lt;= gora - 26; y0++)
+                        System.out.printf(&quot;(%d, %d) (%d, %d) (%d, %d) (%d, %d)%n&quot;,
+                                x0, y0, x0 + 100, y0, x0, y0 + 26, x0 + 100, y0 + 26);
+                    break;
+                }
+            }
+            if (!znalezione) C++;
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> C = 130, np. prostokąt (30, −17), (130, −17), (30, 9), (130, 9)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%235b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 6 (słowa). W pliku <code>dane.txt</code> w osobnych wierszach znajdują się słowa długości od 2 do 20 znaków złożone z liter A–F. Odpowiedzi zapisz w pliku <code>wyniki.txt</code>, poprzedzając je literą podpunktu.</p><p>Podaj w osobnych wierszach: ile jest słów występujących w pliku więcej niż raz, słowo o największej liczbie wystąpień oraz liczbę jego wystąpień.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = {}
 with open(&quot;dane.txt&quot;) as file:
     for linia in file:
         slowo = linia.strip()
@@ -157,14 +434,91 @@ for slowo in ile:
 najczestsze = max(ile, key=ile.get)
 print(powtorzone)
 print(najczestsze)
-print(ile[najczestsze])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 21; EBFAABCCBD; 30</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">parzyste = 0
+print(ile[najczestsze])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; ile;
+    std::vector&lt;std::string&gt; kolejnosc; // słowa w kolejności pierwszego wystąpienia (jak dict w Pythonie)
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo) {
+        if (ile[slowo] == 0) kolejnosc.push_back(slowo);
+        ile[slowo]++;
+    }
+
+    int powtorzone = 0;
+    for (const auto&amp; s : kolejnosc)
+        if (ile[s] &gt; 1) powtorzone++;
+
+    std::string najczestsze = kolejnosc[0];
+    for (const auto&amp; s : kolejnosc)
+        if (ile[s] &gt; ile[najczestsze]) najczestsze = s;
+    std::println(&quot;{}&quot;, powtorzone);
+    std::println(&quot;{}&quot;, najczestsze);
+    std::println(&quot;{}&quot;, ile[najczestsze]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // LinkedHashMap pamięta kolejność wstawiania (jak dict w Pythonie)
+        var ile = new LinkedHashMap&lt;String, Integer&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            String slowo = linia.strip();
+            ile.merge(slowo, 1, Integer::sum);
+        }
+
+        int powtorzone = 0;
+        for (String slowo : ile.keySet())
+            if (ile.get(slowo) &gt; 1) powtorzone++;
+
+        String najczestsze = null;
+        for (String slowo : ile.keySet())
+            if (najczestsze == null || ile.get(slowo) &gt; ile.get(najczestsze)) najczestsze = slowo;
+        System.out.println(powtorzone);
+        System.out.println(najczestsze);
+        System.out.println(ile.get(najczestsze));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 21; EBFAABCCBD; 30</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%236a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Traktując słowa z pliku <code>dane.txt</code> (litery A–F) jako liczby zapisane w systemie szesnastkowym, podaj, ile z nich jest parzystych. Wynik zapisz w <code>wyniki.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">parzyste = 0
 with open(&quot;dane.txt&quot;) as file:
     for linia in file:
         slowo = linia.strip()
         if int(slowo, 16) % 2 == 0:
             parzyste += 1
 
-print(parzyste)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 483</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_palindrom(slowo):
+print(parzyste)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    // słowa mają do kilkunastu cyfr szesnastkowych (więcej niż 64 bity),
+    // ale o parzystości liczby decyduje tylko jej ostatnia cyfra
+    int parzyste = 0;
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo) {
+        int ostatnia = std::stoi(slowo.substr(slowo.size() - 1), nullptr, 16);
+        if (ostatnia % 2 == 0) parzyste++;
+    }
+    std::println(&quot;{}&quot;, parzyste);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigInteger;
+import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // słowa mają do kilkunastu cyfr szesnastkowych (więcej niż 64 bity) - używamy BigInteger
+        int parzyste = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            String slowo = linia.strip();
+            if (!new BigInteger(slowo, 16).testBit(0)) parzyste++;
+        }
+        System.out.println(parzyste);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 483</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%236b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Palindrom to słowo czytane tak samo od lewej i od prawej (np. ABCDCBA, AEEFFEEA). Napisz program, który policzy palindromy w pliku <code>dane.txt</code>, i zapisz ich liczbę w <code>wyniki.txt</code>. Ocenie podlega też metoda sprawdzania, czy słowo jest palindromem.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_palindrom(slowo):
     i = 0
     j = len(slowo) - 1
     while i &lt; j:
@@ -181,7 +535,49 @@ with open(&quot;dane.txt&quot;) as file:
         if czy_palindrom(linia.strip()):
             palindromy += 1
 
-print(palindromy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 20</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7a" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7a">7a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def oprocentowanie(kwota):
+print(palindromy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+bool czy_palindrom(const std::string&amp; slowo) {
+    int i = 0;
+    int j = (int)slowo.size() - 1;
+    while (i &lt; j) {
+        if (slowo[i] != slowo[j]) return false;
+        i++;
+        j--;
+    }
+    return true;
+}
+
+int main() {
+    int palindromy = 0;
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo)
+        if (czy_palindrom(slowo)) palindromy++;
+    std::println(&quot;{}&quot;, palindromy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    static boolean czyPalindrom(String slowo) {
+        int i = 0;
+        int j = slowo.length() - 1;
+        while (i &lt; j) {
+            if (slowo.charAt(i) != slowo.charAt(j)) return false;
+            i++;
+            j--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int palindromy = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;)))
+            if (czyPalindrom(linia.strip())) palindromy++;
+        System.out.println(palindromy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 20</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%236c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7a" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7a">7a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 7 (finanse). Odpowiedzi zapisz w pliku <code>odpfinanse.txt</code>, poprzedzając je literą podpunktu. Plik <code>lokaty.txt</code> zawiera kwoty rocznych lokat klientów MatBanku (po jednej w wierszu). Oprocentowanie roczne zależy od kwoty:</p><ul><li>poniżej 10 000 zł — 6%,</li><li>10 000–19 999,99 zł — 7%,</li><li>20 000–29 999,99 zł — 8%,</li><li>30 000–39 999,99 zł — 9%,</li><li>40 000–49 999,99 zł — 10%,</li><li>50 000 zł i więcej — 11%.</li></ul><p>Np. lokata 5 000,10 zł daje po roku 5 300,11 zł, a 45 000 zł — 49 500 zł.</p><p>Podaj sumaryczną wartość wszystkich lokat na początku i na końcu roku oraz wartość największej lokaty na końcu roku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def oprocentowanie(kwota):
     if kwota &lt; 10000:
         return 6
     if kwota &lt; 20000:
@@ -208,7 +604,64 @@ with open(&quot;lokaty.txt&quot;) as file:
 
 print(&quot;%.2f&quot; % suma_poczatek)
 print(&quot;%.2f&quot; % suma_koniec)
-print(&quot;%.2f&quot; % najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> na początku roku 7 959 613,00 zł, na końcu roku 8 770 818,04 zł, największa lokata na końcu roku 88 728,96 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7b" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7b">7b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import datetime
+print(&quot;%.2f&quot; % najwieksza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int oprocentowanie(double kwota) {
+    if (kwota &lt; 10000) return 6;
+    if (kwota &lt; 20000) return 7;
+    if (kwota &lt; 30000) return 8;
+    if (kwota &lt; 40000) return 9;
+    if (kwota &lt; 50000) return 10;
+    return 11;
+}
+
+int main() {
+    double suma_poczatek = 0, suma_koniec = 0, najwieksza = 0;
+    std::ifstream plik(&quot;lokaty.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        std::replace(linia.begin(), linia.end(), &#x27;,&#x27;, &#x27;.&#x27;); // przecinek dziesiętny -&gt; kropka
+        double kwota = std::stod(linia);
+        double koniec = std::round(kwota * (100 + oprocentowanie(kwota)) / 100 * 100) / 100;
+        suma_poczatek += kwota;
+        suma_koniec += koniec;
+        najwieksza = std::max(najwieksza, koniec);
+    }
+    std::println(&quot;{:.2f}&quot;, suma_poczatek);
+    std::println(&quot;{:.2f}&quot;, suma_koniec);
+    std::println(&quot;{:.2f}&quot;, najwieksza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.Locale;
+
+public class Zadanie {
+    static int oprocentowanie(double kwota) {
+        if (kwota &lt; 10000) return 6;
+        if (kwota &lt; 20000) return 7;
+        if (kwota &lt; 30000) return 8;
+        if (kwota &lt; 40000) return 9;
+        if (kwota &lt; 50000) return 10;
+        return 11;
+    }
+
+    public static void main(String[] args) throws Exception {
+        double sumaPoczatek = 0, sumaKoniec = 0, najwieksza = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;lokaty.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            double kwota = Double.parseDouble(linia.strip().replace(&quot;,&quot;, &quot;.&quot;));
+            double koniec = Math.round(kwota * (100 + oprocentowanie(kwota)) / 100 * 100) / 100.0;
+            sumaPoczatek += kwota;
+            sumaKoniec += koniec;
+            najwieksza = Math.max(najwieksza, koniec);
+        }
+        System.out.println(String.format(Locale.ROOT, &quot;%.2f&quot;, sumaPoczatek));
+        System.out.println(String.format(Locale.ROOT, &quot;%.2f&quot;, sumaKoniec));
+        System.out.println(String.format(Locale.ROOT, &quot;%.2f&quot;, najwieksza));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> na początku roku 7 959 613,00 zł, na końcu roku 8 770 818,04 zł, największa lokata na końcu roku 88 728,96 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%207a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%237a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7b" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7b">7b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>1 stycznia 2005 r. mamy 20 000,00 zł. Każdego dnia możemy wymienić całe oszczędności z zł na euro lub odwrotnie po kursie średnim z danego dnia (plik <code>kursy.txt</code>: 365 kursów, po jednym w wierszu); po każdej wymianie kwotę zaokrąglamy do 0,01. Wyznacz wartość oszczędności na koniec roku dla dwóch strategii:</p><ul><li>I) 1 stycznia wymieniamy wszystko na euro, a pierwszego dnia każdego kolejnego miesiąca zmieniamy walutę (1 lutego na złote, 1 marca na euro itd.);</li><li>II) 1 stycznia wymieniamy wszystko na euro; każdego kolejnego dnia: jeśli mamy euro, wymieniamy je na złote tylko wtedy, gdy kurs spadł względem dnia poprzedniego; jeśli mamy złote, bezwarunkowo wymieniamy je na euro.</li></ul><p>Jeśli na koniec roku oszczędności są w euro, przelicz je na złote po kursie z 31 grudnia. Wyniki obu strategii zapisz w osobnych, opisanych wierszach <code>odpfinanse.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import datetime
 
 kursy = []
 with open(&quot;kursy.txt&quot;) as file:
@@ -246,7 +699,109 @@ for dzien in range(1, 365):
         w_euro = True
 if w_euro:
     kwota = round(kwota * kursy[364], 2)
-print(&quot;Sposób II:&quot;, &quot;%.2f&quot; % kwota)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> sposób I: 21 301,75 zł, sposób II: 21 335,51 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7c" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7c">7c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kursy = []
+print(&quot;Sposób II:&quot;, &quot;%.2f&quot; % kwota)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+double zaokraglij2(double x) { return std::round(x * 100) / 100; }
+
+int main() {
+    std::vector&lt;double&gt; kursy;
+    std::ifstream plik(&quot;kursy.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        std::replace(linia.begin(), linia.end(), &#x27;,&#x27;, &#x27;.&#x27;); // przecinek dziesiętny -&gt; kropka
+        kursy.push_back(std::stod(linia));
+    }
+
+    // sposób I - zmiana waluty pierwszego dnia każdego miesiąca
+    // numer dnia w roku 2005 (liczony od 0) dla 1. dnia każdego miesiąca
+    int dni_miesiaca[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    std::vector&lt;int&gt; pierwsze_dni;
+    int dzien = 0;
+    for (int miesiac = 0; miesiac &lt; 12; miesiac++) {
+        pierwsze_dni.push_back(dzien);
+        dzien += dni_miesiaca[miesiac];
+    }
+
+    double kwota = 20000.00;
+    bool w_euro = false;
+    for (int d : pierwsze_dni) {
+        if (w_euro)
+            kwota = zaokraglij2(kwota * kursy[d]);
+        else
+            kwota = zaokraglij2(kwota / kursy[d]);
+        w_euro = !w_euro;
+    }
+    if (w_euro) kwota = zaokraglij2(kwota * kursy[364]);
+    std::println(&quot;Sposób I: {:.2f}&quot;, kwota);
+
+    // sposób II
+    kwota = zaokraglij2(20000.00 / kursy[0]);
+    w_euro = true;
+    for (int d = 1; d &lt; 365; d++) {
+        if (w_euro) {
+            if (kursy[d] &lt; kursy[d - 1]) {
+                kwota = zaokraglij2(kwota * kursy[d]);
+                w_euro = false;
+            }
+        } else {
+            kwota = zaokraglij2(kwota / kursy[d]);
+            w_euro = true;
+        }
+    }
+    if (w_euro) kwota = zaokraglij2(kwota * kursy[364]);
+    std::println(&quot;Sposób II: {:.2f}&quot;, kwota);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.time.LocalDate;
+import java.util.*;
+
+public class Zadanie {
+    static double zaokraglij2(double x) { return Math.round(x * 100) / 100.0; }
+
+    public static void main(String[] args) throws Exception {
+        var kursy = new ArrayList&lt;Double&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;kursy.txt&quot;)))
+            if (!linia.isBlank()) kursy.add(Double.parseDouble(linia.strip().replace(&quot;,&quot;, &quot;.&quot;)));
+
+        // sposób I - zmiana waluty pierwszego dnia każdego miesiąca
+        var pierwszeDni = new ArrayList&lt;Integer&gt;();
+        for (int miesiac = 1; miesiac &lt;= 12; miesiac++)
+            pierwszeDni.add(LocalDate.of(2005, miesiac, 1).getDayOfYear() - 1);
+
+        double kwota = 20000.00;
+        boolean wEuro = false;
+        for (int dzien : pierwszeDni) {
+            if (wEuro)
+                kwota = zaokraglij2(kwota * kursy.get(dzien));
+            else
+                kwota = zaokraglij2(kwota / kursy.get(dzien));
+            wEuro = !wEuro;
+        }
+        if (wEuro) kwota = zaokraglij2(kwota * kursy.get(364));
+        System.out.println(String.format(Locale.ROOT, &quot;Sposób I: %.2f&quot;, kwota));
+
+        // sposób II
+        kwota = zaokraglij2(20000.00 / kursy.get(0));
+        wEuro = true;
+        for (int dzien = 1; dzien &lt; 365; dzien++) {
+            if (wEuro) {
+                if (kursy.get(dzien) &lt; kursy.get(dzien - 1)) {
+                    kwota = zaokraglij2(kwota * kursy.get(dzien));
+                    wEuro = false;
+                }
+            } else {
+                kwota = zaokraglij2(kwota / kursy.get(dzien));
+                wEuro = true;
+            }
+        }
+        if (wEuro) kwota = zaokraglij2(kwota * kursy.get(364));
+        System.out.println(String.format(Locale.ROOT, &quot;Sposób II: %.2f&quot;, kwota));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> sposób I: 21 301,75 zł, sposób II: 21 335,51 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%207b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%237b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="7c" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#7c">7c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie kursów euro z pliku <code>kursy.txt</code> (po jednym na dzień) policz, w ilu dniach, począwszy od 2 stycznia, kurs euro wzrósł w porównaniu z dniem poprzednim. Wynik zapisz w <code>odpfinanse.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kursy = []
 with open(&quot;kursy.txt&quot;) as file:
     for linia in file:
         kursy.append(float(linia.strip().replace(&quot;,&quot;, &quot;.&quot;)))
@@ -256,7 +811,40 @@ for i in range(1, len(kursy)):
     if kursy[i] &gt; kursy[i - 1]:
         wzrosty += 1
 
-print(wzrosty)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 194</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(wzrosty)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;double&gt; kursy;
+    std::ifstream plik(&quot;kursy.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        std::replace(linia.begin(), linia.end(), &#x27;,&#x27;, &#x27;.&#x27;); // przecinek dziesiętny -&gt; kropka
+        kursy.push_back(std::stod(linia));
+    }
+
+    int wzrosty = 0;
+    for (size_t i = 1; i &lt; kursy.size(); i++)
+        if (kursy[i] &gt; kursy[i - 1]) wzrosty++;
+    std::println(&quot;{}&quot;, wzrosty);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var kursy = new ArrayList&lt;Double&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;kursy.txt&quot;)))
+            if (!linia.isBlank()) kursy.add(Double.parseDouble(linia.strip().replace(&quot;,&quot;, &quot;.&quot;)));
+
+        int wzrosty = 0;
+        for (int i = 1; i &lt; kursy.size(); i++)
+            if (kursy.get(i) &gt; kursy.get(i - 1)) wzrosty++;
+        System.out.println(wzrosty);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 194</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202006%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%207c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2006-maj.html%237c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2006_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

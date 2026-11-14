@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1">1.1</a></li><li><a href="#1-2">1.2</a></li><li><a href="#2-1">2.1</a></li><li><a href="#2-2">2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3-i-4-4">4.3 i 4.4</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2015 — maj, poziom podstawowy</span></nav>
-<h1 class="page-title">Matura 2015 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_szostkowy(x):
+<h1 class="page-title">Matura 2015 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-stara-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Systemy pozycyjne. W systemie szóstkowym liczby zapisuje się cyframi 0–5 (np. 8 = 12₆, 39 = 103₆, 216 = 1000₆).</p><p>Wszystkie liczby w poniższych działaniach są zapisane w systemie szóstkowym. Uzupełnij brakujące argumenty (też w systemie szóstkowym) tak, aby wyniki były poprawne:</p><ul><li><code>10 * ____ = 1000</code></li><li><code>425 − ____ = 41</code></li><li><code>154 / ____ = 55</code></li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_szostkowy(x):
     wynik = &quot;&quot;
     while x &gt; 0:
         wynik = str(x % 6) + wynik
@@ -47,14 +47,73 @@
 
 print(na_szostkowy(int(&quot;1000&quot;, 6) // int(&quot;10&quot;, 6)))  # 10 * ? = 1000
 print(na_szostkowy(int(&quot;425&quot;, 6) - int(&quot;41&quot;, 6)))  # 425 - ? = 41
-print(na_szostkowy(int(&quot;154&quot;, 6) // int(&quot;55&quot;, 6)))  # 154 / ? = 55</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 10 * 100 = 1000, 425 − 344 = 41, 154 / 2 = 55</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wartosc(d, C):  # C[0] - cyfra najmniej znacząca
+print(na_szostkowy(int(&quot;154&quot;, 6) // int(&quot;55&quot;, 6)))  # 154 / ? = 55</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+std::string na_szostkowy(long long x) {
+    std::string wynik = &quot;&quot;;
+    while (x &gt; 0) {
+        wynik = std::to_string(x % 6) + wynik;
+        x = x / 6;
+    }
+    return wynik;
+}
+
+int main() {
+    // std::stoll(napis, nullptr, 6) - zamiana z systemu szóstkowego, jak int(napis, 6) w Pythonie
+    std::cout &lt;&lt; na_szostkowy(std::stoll(&quot;1000&quot;, nullptr, 6) / std::stoll(&quot;10&quot;, nullptr, 6)) &lt;&lt; &#x27;\n&#x27;;  // 10 * ? = 1000
+    std::cout &lt;&lt; na_szostkowy(std::stoll(&quot;425&quot;, nullptr, 6) - std::stoll(&quot;41&quot;, nullptr, 6)) &lt;&lt; &#x27;\n&#x27;;   // 425 - ? = 41
+    std::cout &lt;&lt; na_szostkowy(std::stoll(&quot;154&quot;, nullptr, 6) / std::stoll(&quot;55&quot;, nullptr, 6)) &lt;&lt; &#x27;\n&#x27;;  // 154 / ? = 55
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String naSzostkowy(long x) {
+        String wynik = &quot;&quot;;
+        while (x &gt; 0) {
+            wynik = (x % 6) + wynik;
+            x = x / 6;
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) {
+        // Long.parseLong(napis, 6) - zamiana z systemu szóstkowego, jak int(napis, 6) w Pythonie
+        System.out.println(naSzostkowy(Long.parseLong(&quot;1000&quot;, 6) / Long.parseLong(&quot;10&quot;, 6)));  // 10 * ? = 1000
+        System.out.println(naSzostkowy(Long.parseLong(&quot;425&quot;, 6) - Long.parseLong(&quot;41&quot;, 6)));   // 425 - ? = 41
+        System.out.println(naSzostkowy(Long.parseLong(&quot;154&quot;, 6) / Long.parseLong(&quot;55&quot;, 6)));  // 154 / ? = 55
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 10 * 100 = 1000, 425 − 344 = 41, 154 / 2 = 55</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%231-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zapisz (listą kroków, schematem blokowym lub w języku programowania) algorytm obliczający wartość liczby zapisanej w systemie szóstkowym.</p><p>Specyfikacja:</p><ul><li>Dane: <code>d</code> — dodatnia liczba całkowita, długość zapisu liczby w systemie szóstkowym; <code>C[1..d]</code> — kolejne cyfry tego zapisu, poczynając od cyfry najmniej znaczącej.</li><li>Wynik: <code>w</code> — wartość liczby.</li></ul><p>Przykład: dla d = 4 i C = [0, 0, 0, 1] wynikiem jest w = 216.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wartosc(d, C):  # C[0] - cyfra najmniej znacząca
     w = 0
     for i in range(d - 1, -1, -1):
         w = w * 6 + C[i]
     return w
 
 
-print(wartosc(4, [0, 0, 0, 1]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dla d = 4 i C = [0, 0, 0, 1] → 216</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1">2.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def zlicz(n, k, A):
+print(wartosc(4, [0, 0, 0, 1]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+long long wartosc(int d, const std::vector&lt;int&gt;&amp; C) {  // C[0] - cyfra najmniej znacząca
+    long long w = 0;
+    for (int i = d - 1; i &gt;= 0; i--)
+        w = w * 6 + C[i];
+    return w;
+}
+
+int main() {
+    std::cout &lt;&lt; wartosc(4, {0, 0, 0, 1}) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long wartosc(int d, int[] C) {  // C[0] - cyfra najmniej znacząca
+        long w = 0;
+        for (int i = d - 1; i &gt;= 0; i--)
+            w = w * 6 + C[i];
+        return w;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(wartosc(4, new int[] {0, 0, 0, 1}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dla d = 4 i C = [0, 0, 0, 1] → 216</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%231-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1">2.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dwie tablice. Dane: dodatnie liczby całkowite <code>n</code>, <code>k</code> oraz tablica <code>A[1..n]</code> liczb całkowitych z przedziału ⟨1, k⟩. Wynik: tablica <code>T[1..k]</code> liczb z przedziału ⟨0, n⟩. Algorytm:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">Krok 1. dla i = 1, 2, ..., k wykonaj T[i] ← 0
+Krok 2. dla i = 1, 2, ..., n wykonaj
+          pozycja ← A[i]
+          T[pozycja] ← T[pozycja] + 1</code></pre></div></div></div><p>Podaj zawartość tablicy T dla danych:</p><ul><li>n = 6, k = 6, A = [3, 5, 6, 2, 1, 4],</li><li>n = 7, k = 4, A = [2, 3, 4, 2, 3, 1, 2],</li><li>n = 7, k = 3, A = [3, 2, 3, 2, 3, 2, 3],</li><li>n = 5, k = 8, A = [3, 3, 1, 5, 8].</li></ul><p>Uzupełnij też specyfikację: co oznacza wartość T[i] (dla 1 ≤ i ≤ k).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def zlicz(n, k, A):
     T = [0] * (k + 1)  # T[0] nieużywane
     for i in range(n):
         pozycja = A[i]
@@ -65,7 +124,53 @@ print(wartosc(4, [0, 0, 0, 1]))</code></pre></div><p class="answer"><strong>Odpo
 print(zlicz(6, 6, [3, 5, 6, 2, 1, 4]))
 print(zlicz(7, 4, [2, 3, 4, 2, 3, 1, 2]))
 print(zlicz(7, 3, [3, 2, 3, 2, 3, 2, 3]))
-print(zlicz(5, 8, [3, 3, 1, 5, 8]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> T[i] to liczba wystąpień liczby i w tablicy A; [1, 1, 1, 1, 1, 1], [1, 3, 2, 1], [0, 3, 4], [1, 0, 2, 0, 1, 0, 0, 1]</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-2">2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najczestszy(n, k, A):
+print(zlicz(5, 8, [3, 3, 1, 5, 8]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; zlicz(int n, int k, const std::vector&lt;int&gt;&amp; A) {
+    std::vector&lt;int&gt; T(k + 1, 0);  // T[0] nieużywane
+    for (int i = 0; i &lt; n; i++) {
+        int pozycja = A[i];
+        T[pozycja] = T[pozycja] + 1;
+    }
+    return std::vector&lt;int&gt;(T.begin() + 1, T.end());
+}
+
+std::string jako_lista(const std::vector&lt;int&gt;&amp; T) {  // zapis jak lista w Pythonie
+    std::string s = &quot;[&quot;;
+    for (size_t i = 0; i &lt; T.size(); i++) {
+        if (i &gt; 0) s += &quot;, &quot;;
+        s += std::to_string(T[i]);
+    }
+    return s + &quot;]&quot;;
+}
+
+int main() {
+    std::cout &lt;&lt; jako_lista(zlicz(6, 6, {3, 5, 6, 2, 1, 4})) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; jako_lista(zlicz(7, 4, {2, 3, 4, 2, 3, 1, 2})) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; jako_lista(zlicz(7, 3, {3, 2, 3, 2, 3, 2, 3})) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; jako_lista(zlicz(5, 8, {3, 3, 1, 5, 8})) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int[] zlicz(int n, int k, int[] A) {
+        int[] T = new int[k + 1];  // T[0] nieużywane
+        for (int i = 0; i &lt; n; i++) {
+            int pozycja = A[i];
+            T[pozycja] = T[pozycja] + 1;
+        }
+        return Arrays.copyOfRange(T, 1, k + 1);
+    }
+
+    public static void main(String[] args) {
+        // Arrays.toString daje zapis [1, 2, 3] - taki sam jak lista w Pythonie
+        System.out.println(Arrays.toString(zlicz(6, 6, new int[] {3, 5, 6, 2, 1, 4})));
+        System.out.println(Arrays.toString(zlicz(7, 4, new int[] {2, 3, 4, 2, 3, 1, 2})));
+        System.out.println(Arrays.toString(zlicz(7, 3, new int[] {3, 2, 3, 2, 3, 2, 3})));
+        System.out.println(Arrays.toString(zlicz(5, 8, new int[] {3, 3, 1, 5, 8})));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> T[i] to liczba wystąpień liczby i w tablicy A; [1, 1, 1, 1, 1, 1], [1, 3, 2, 1], [0, 3, 4], [1, 0, 2, 0, 1, 0, 0, 1]</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%232-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-2">2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Korzystając z algorytmu z zadania 2.1, zapisz algorytm, który znajdzie element występujący w tablicy A najczęściej, tzn. taki, którego liczba wystąpień jest większa od liczby wystąpień każdego innego elementu (zakładamy, że taki element zawsze istnieje).</p><p>Specyfikacja — dane: dodatnie liczby całkowite <code>n</code>, <code>k</code> i tablica <code>A[1..n]</code> liczb z przedziału ⟨1, k⟩; wynik: <code>y</code> — element występujący w A najczęściej.</p><p>Przykład: dla [1, 2, 3, 2, 2] wynikiem jest 2, a dla [1, 2, 3, 3, 2, 3, 3, 3] — 3.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najczestszy(n, k, A):
     T = [0] * (k + 1)
     for i in range(n):
         T[A[i]] += 1
@@ -77,7 +182,40 @@ print(zlicz(5, 8, [3, 3, 1, 5, 8]))</code></pre></div><p class="answer"><strong>
 
 
 print(najczestszy(5, 3, [1, 2, 3, 2, 2]))
-print(najczestszy(8, 3, [1, 2, 3, 3, 2, 3, 3, 3]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2 oraz 3 (dla przykładów z treści)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">marki = [&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;]
+print(najczestszy(8, 3, [1, 2, 3, 3, 2, 3, 3, 3]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int najczestszy(int n, int k, const std::vector&lt;int&gt;&amp; A) {
+    std::vector&lt;int&gt; T(k + 1, 0);
+    for (int i = 0; i &lt; n; i++)
+        T[A[i]] += 1;
+    int y = 1;
+    for (int i = 2; i &lt;= k; i++)
+        if (T[i] &gt; T[y])
+            y = i;
+    return y;
+}
+
+int main() {
+    std::cout &lt;&lt; najczestszy(5, 3, {1, 2, 3, 2, 2}) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; najczestszy(8, 3, {1, 2, 3, 3, 2, 3, 3, 3}) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int najczestszy(int n, int k, int[] A) {
+        int[] T = new int[k + 1];
+        for (int i = 0; i &lt; n; i++)
+            T[A[i]] += 1;
+        int y = 1;
+        for (int i = 2; i &lt;= k; i++)
+            if (T[i] &gt; T[y])
+                y = i;
+        return y;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(najczestszy(5, 3, new int[] {1, 2, 3, 2, 2}));
+        System.out.println(najczestszy(8, 3, new int[] {1, 2, 3, 3, 2, 3, 3, 3}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2 oraz 3 (dla przykładów z treści)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%232-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Fabryka GAZELA produkuje od 2005 roku samochody czterech marek. W I kwartale 2005 roku wyprodukowano: Dama — 237, Granta — 198, Dorkas — 207, Lodera — 312 sztuk.</p><ul><li>Do końca 2009 roku produkcja co kwartał rosła względem poprzedniego kwartału: Dama o 2%, Granta o 2,7%, Dorkas o 3%, Lodera o 2%.</li><li>W 2010 roku produkcja w każdym kwartale była taka sama jak w ostatnim kwartale 2009 roku.</li><li>W latach 2011–2012 produkcja co kwartał malała: Dama o 1%, Granta o 1,2%, Dorkas o 1,9%, Lodera o 2,5%.</li></ul><p>Wszystkie obliczane wartości zaokrąglaj w dół do liczb całkowitych. Odpowiedzi (poza wykresem z 4.5) zapisz w pliku <code>wynik4.txt</code>, poprzedzając je numerem zadania.</p><p>Ile samochodów każdej marki wyprodukowano w ostatnim kwartale 2011 roku?</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">marki = [&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;]
 start = [237, 198, 207, 312]
 wzrost = [1020, 1027, 1030, 1020]  # w promilach: +2%, +2,7%, +3%, +2%
 spadek = [990, 988, 981, 975]  # -1%, -1,2%, -1,9%, -2,5%
@@ -95,7 +233,53 @@ def produkcja(m):  # lista produkcji w kolejnych kwartałach 2005-2012
 
 
 for m in range(4):
-    print(marki[m], produkcja(m)[27])  # IV kwartał 2011 to kwartał nr 28</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> Dama 317, Granta 300, Dorkas 322, Lodera 398</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">marki = [&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;]
+    print(marki[m], produkcja(m)[27])  # IV kwartał 2011 to kwartał nr 28</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+const std::vector&lt;std::string&gt; marki = {&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;};
+const std::vector&lt;long long&gt; start = {237, 198, 207, 312};
+const std::vector&lt;long long&gt; wzrost = {1020, 1027, 1030, 1020};  // w promilach: +2%, +2,7%, +3%, +2%
+const std::vector&lt;long long&gt; spadek = {990, 988, 981, 975};      // -1%, -1,2%, -1,9%, -2,5%
+
+std::vector&lt;long long&gt; produkcja(int m) {  // lista produkcji w kolejnych kwartałach 2005-2012
+    std::vector&lt;long long&gt; kwartaly = {start[m]};
+    for (int i = 0; i &lt; 19; i++)  // do końca 2009 roku
+        kwartaly.push_back(kwartaly.back() * wzrost[m] / 1000);
+    for (int i = 0; i &lt; 4; i++)  // 2010 - bez zmian
+        kwartaly.push_back(kwartaly.back());
+    for (int i = 0; i &lt; 8; i++)  // 2011 i 2012 - spadek
+        kwartaly.push_back(kwartaly.back() * spadek[m] / 1000);
+    return kwartaly;
+}
+
+int main() {
+    for (int m = 0; m &lt; 4; m++)
+        std::cout &lt;&lt; marki[m] &lt;&lt; &#x27; &#x27; &lt;&lt; produkcja(m)[27] &lt;&lt; &#x27;\n&#x27;;  // IV kwartał 2011 to kwartał nr 28
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static String[] marki = {&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;};
+    static long[] start = {237, 198, 207, 312};
+    static long[] wzrost = {1020, 1027, 1030, 1020};  // w promilach: +2%, +2,7%, +3%, +2%
+    static long[] spadek = {990, 988, 981, 975};      // -1%, -1,2%, -1,9%, -2,5%
+
+    static List&lt;Long&gt; produkcja(int m) {  // lista produkcji w kolejnych kwartałach 2005-2012
+        var kwartaly = new ArrayList&lt;Long&gt;(List.of(start[m]));
+        for (int i = 0; i &lt; 19; i++)  // do końca 2009 roku
+            kwartaly.add(kwartaly.getLast() * wzrost[m] / 1000);
+        for (int i = 0; i &lt; 4; i++)  // 2010 - bez zmian
+            kwartaly.add(kwartaly.getLast());
+        for (int i = 0; i &lt; 8; i++)  // 2011 i 2012 - spadek
+            kwartaly.add(kwartaly.getLast() * spadek[m] / 1000);
+        return kwartaly;
+    }
+
+    public static void main(String[] args) {
+        for (int m = 0; m &lt; 4; m++)
+            System.out.println(marki[m] + &quot; &quot; + produkcja(m).get(27));  // IV kwartał 2011 to kwartał nr 28
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> Dama 317, Granta 300, Dorkas 322, Lodera 398</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 4.1 (produkcja czterech marek w kolejnych kwartałach, wartości zaokrąglane w dół). Załóż, że w kolejnych latach produkcja spada tak samo jak w latach 2011–2012. Wskaż markę, której kwartalna produkcja najwcześniej stanie się mniejsza od jej produkcji z I kwartału 2005 roku. Podaj markę, liczbę wyprodukowanych wtedy samochodów oraz kwartał i rok.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">marki = [&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;]
 start = [237, 198, 207, 312]
 wzrost = [1020, 1027, 1030, 1020]
 spadek = [990, 988, 981, 975]
@@ -114,7 +298,66 @@ for m in range(4):
         najwczesniej = (numer, marki[m], kwartaly[-1])
 
 numer, marka, liczba = najwczesniej
-print(marka, liczba, &quot;kwartał:&quot;, numer % 4 + 1, &quot;rok:&quot;, 2005 + numer // 4)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> Lodera, 305 sztuk, II kwartał 2014 roku</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3-i-4-4">4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">marki = [&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;]
+print(marka, liczba, &quot;kwartał:&quot;, numer % 4 + 1, &quot;rok:&quot;, 2005 + numer // 4)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; marki = {&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;};
+    std::vector&lt;long long&gt; start = {237, 198, 207, 312};
+    std::vector&lt;long long&gt; wzrost = {1020, 1027, 1030, 1020};
+    std::vector&lt;long long&gt; spadek = {990, 988, 981, 975};
+
+    int naj_numer = -1;  // -1 oznacza &quot;jeszcze nic&quot; (None w Pythonie)
+    std::string naj_marka;
+    long long naj_liczba = 0;
+    for (int m = 0; m &lt; 4; m++) {
+        std::vector&lt;long long&gt; kwartaly = {start[m]};
+        for (int i = 0; i &lt; 19; i++)
+            kwartaly.push_back(kwartaly.back() * wzrost[m] / 1000);
+        for (int i = 0; i &lt; 4; i++)
+            kwartaly.push_back(kwartaly.back());
+        while (kwartaly.back() &gt;= start[m])  // spadek trwa aż do zejścia poniżej produkcji z I kw. 2005
+            kwartaly.push_back(kwartaly.back() * spadek[m] / 1000);
+        int numer = kwartaly.size() - 1;  // numer kwartału liczony od 0 (I kw. 2005)
+        if (naj_numer == -1 || numer &lt; naj_numer) {
+            naj_numer = numer;
+            naj_marka = marki[m];
+            naj_liczba = kwartaly.back();
+        }
+    }
+    std::cout &lt;&lt; naj_marka &lt;&lt; &#x27; &#x27; &lt;&lt; naj_liczba &lt;&lt; &quot; kwartał: &quot; &lt;&lt; naj_numer % 4 + 1
+              &lt;&lt; &quot; rok: &quot; &lt;&lt; 2005 + naj_numer / 4 &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) {
+        String[] marki = {&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;};
+        long[] start = {237, 198, 207, 312};
+        long[] wzrost = {1020, 1027, 1030, 1020};
+        long[] spadek = {990, 988, 981, 975};
+
+        int najNumer = -1;  // -1 oznacza &quot;jeszcze nic&quot; (None w Pythonie)
+        String najMarka = &quot;&quot;;
+        long najLiczba = 0;
+        for (int m = 0; m &lt; 4; m++) {
+            var kwartaly = new ArrayList&lt;Long&gt;(List.of(start[m]));
+            for (int i = 0; i &lt; 19; i++)
+                kwartaly.add(kwartaly.getLast() * wzrost[m] / 1000);
+            for (int i = 0; i &lt; 4; i++)
+                kwartaly.add(kwartaly.getLast());
+            while (kwartaly.getLast() &gt;= start[m])  // spadek trwa aż do zejścia poniżej produkcji z I kw. 2005
+                kwartaly.add(kwartaly.getLast() * spadek[m] / 1000);
+            int numer = kwartaly.size() - 1;  // numer kwartału liczony od 0 (I kw. 2005)
+            if (najNumer == -1 || numer &lt; najNumer) {
+                najNumer = numer;
+                najMarka = marki[m];
+                najLiczba = kwartaly.getLast();
+            }
+        }
+        System.out.println(najMarka + &quot; &quot; + najLiczba + &quot; kwartał: &quot; + (najNumer % 4 + 1) + &quot; rok: &quot; + (2005 + najNumer / 4));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> Lodera, 305 sztuk, II kwartał 2014 roku</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3-i-4-4">4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 4.1 (produkcja czterech marek w kolejnych kwartałach 2005–2012, wartości zaokrąglane w dół).</p><ul><li>4.3 — Podaj dla każdej marki, w ilu kwartałach od początku 2005 do końca 2012 roku produkcja przekraczała 300 sztuk.</li><li>4.4 — Podaj, ile samochodów łącznie wyprodukowano w fabryce do końca 2010 roku.</li><li>(4.5 — utwórz czytelny wykres kolumnowy 3D produkcji każdej marki w kolejnych latach 2005–2012.)</li></ul></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">marki = [&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;]
 start = [237, 198, 207, 312]
 wzrost = [1020, 1027, 1030, 1020]
 spadek = [990, 988, 981, 975]
@@ -137,7 +380,65 @@ for m in range(4):
 
     razem_do_2010 += sum(kwartaly[:24])  # 24 kwartały: 2005-2010
 
-print(&quot;4.4&quot;, razem_do_2010)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.3: Dama 18, Granta 9, Dorkas 17, Lodera 32; 4.4: 29368 (wykres 4.5 wykonuje się w arkuszu kalkulacyjnym)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dlugosci = [0] * 13
+print(&quot;4.4&quot;, razem_do_2010)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; marki = {&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;};
+    std::vector&lt;long long&gt; start = {237, 198, 207, 312};
+    std::vector&lt;long long&gt; wzrost = {1020, 1027, 1030, 1020};
+    std::vector&lt;long long&gt; spadek = {990, 988, 981, 975};
+
+    long long razem_do_2010 = 0;
+    for (int m = 0; m &lt; 4; m++) {
+        std::vector&lt;long long&gt; kwartaly = {start[m]};
+        for (int i = 0; i &lt; 19; i++)
+            kwartaly.push_back(kwartaly.back() * wzrost[m] / 1000);
+        for (int i = 0; i &lt; 4; i++)
+            kwartaly.push_back(kwartaly.back());
+        for (int i = 0; i &lt; 8; i++)
+            kwartaly.push_back(kwartaly.back() * spadek[m] / 1000);
+
+        int ponad_300 = 0;
+        for (long long x : kwartaly)
+            if (x &gt; 300) ponad_300++;
+        std::cout &lt;&lt; &quot;4.3 &quot; &lt;&lt; marki[m] &lt;&lt; &#x27; &#x27; &lt;&lt; ponad_300 &lt;&lt; &#x27;\n&#x27;;
+
+        for (int i = 0; i &lt; 24; i++)  // 24 kwartały: 2005-2010
+            razem_do_2010 += kwartaly[i];
+    }
+    std::cout &lt;&lt; &quot;4.4 &quot; &lt;&lt; razem_do_2010 &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) {
+        String[] marki = {&quot;Dama&quot;, &quot;Granta&quot;, &quot;Dorkas&quot;, &quot;Lodera&quot;};
+        long[] start = {237, 198, 207, 312};
+        long[] wzrost = {1020, 1027, 1030, 1020};
+        long[] spadek = {990, 988, 981, 975};
+
+        long razemDo2010 = 0;
+        for (int m = 0; m &lt; 4; m++) {
+            var kwartaly = new ArrayList&lt;Long&gt;(List.of(start[m]));
+            for (int i = 0; i &lt; 19; i++)
+                kwartaly.add(kwartaly.getLast() * wzrost[m] / 1000);
+            for (int i = 0; i &lt; 4; i++)
+                kwartaly.add(kwartaly.getLast());
+            for (int i = 0; i &lt; 8; i++)
+                kwartaly.add(kwartaly.getLast() * spadek[m] / 1000);
+
+            int ponad300 = 0;
+            for (long x : kwartaly)
+                if (x &gt; 300) ponad300++;
+            System.out.println(&quot;4.3 &quot; + marki[m] + &quot; &quot; + ponad300);
+
+            for (int i = 0; i &lt; 24; i++)  // 24 kwartały: 2005-2010
+                razemDo2010 += kwartaly.get(i);
+        }
+        System.out.println(&quot;4.4 &quot; + razemDo2010);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.3: Dama 18, Granta 9, Dorkas 17, Lodera 32; 4.4: 29368 (wykres 4.5 wykonuje się w arkuszu kalkulacyjnym)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%234-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>slowa.txt</code> jest 1000 słów, a w pliku <code>nowe.txt</code> — 25 słów. Słowa składają się z małych liter alfabetu łacińskiego, mają co najwyżej 12 znaków, każde w osobnym wierszu. Odpowiedzi zapisz w pliku <code>wynik5.txt</code>, poprzedzając je numerem zadania.</p><p>Dla każdego n od 1 do 12 wyznacz, ile wierszy pliku <code>slowa.txt</code> zawiera słowa n-literowe. Wypisz w osobnych wierszach pary: n oraz liczba takich słów.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dlugosci = [0] * 13
 
 with open(&quot;slowa.txt&quot;) as file:
     for line in file:
@@ -145,7 +446,32 @@ with open(&quot;slowa.txt&quot;) as file:
         dlugosci[len(slowo)] += 1
 
 for n in range(1, 13):
-    print(n, dlugosci[n])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1 84, 2 65, 3 92, 4 75, 5 104, 6 75, 7 95, 8 71, 9 81, 10 62, 11 102, 12 94</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">slowa = []
+    print(n, dlugosci[n])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; dlugosci(13, 0);
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo)
+        dlugosci[slowo.size()] += 1;
+
+    for (int n = 1; n &lt; 13; n++)
+        std::cout &lt;&lt; n &lt;&lt; &#x27; &#x27; &lt;&lt; dlugosci[n] &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int[] dlugosci = new int[13];
+        for (var line : Files.readAllLines(Path.of(&quot;slowa.txt&quot;)))
+            dlugosci[line.strip().length()] += 1;
+
+        for (int n = 1; n &lt; 13; n++)
+            System.out.println(n + &quot; &quot; + dlugosci[n]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1 84, 2 65, 3 92, 4 75, 5 104, 6 75, 7 95, 8 71, 9 81, 10 62, 11 102, 12 94</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%235-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Pliki <code>slowa.txt</code> (1000 słów) i <code>nowe.txt</code> (25 słów). Dla każdego słowa z <code>nowe.txt</code> wypisz to słowo oraz dwie liczby oddzielone spacją:</p><ul><li>liczbę wystąpień tego słowa w pliku <code>slowa.txt</code>,</li><li>liczbę wystąpień jego odbicia lustrzanego (słowa czytanego od końca, np. „mapa” → „apam”) w pliku <code>slowa.txt</code>.</li></ul><p>Słowo jednoliterowe jest swoim własnym odbiciem lustrzanym. Odpowiedź zapisz w <code>wynik5.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">slowa = []
 
 with open(&quot;slowa.txt&quot;) as file:
     for line in file:
@@ -154,7 +480,41 @@ with open(&quot;slowa.txt&quot;) as file:
 with open(&quot;nowe.txt&quot;) as file:
     for line in file:
         slowo = line.strip()
-        print(slowo, slowa.count(slowo), slowa.count(slowo[::-1]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> hxqsf 4 5, erraegrdsj 0 0, cpcxpzj 3 1, arphlqleftqm 10 1, wdt 0 4, … , rceij 5 0</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+        print(slowo, slowa.count(slowo), slowa.count(slowo[::-1]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; slowa;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo)
+        slowa.push_back(slowo);
+
+    std::ifstream nowe(&quot;nowe.txt&quot;);
+    while (nowe &gt;&gt; slowo) {
+        std::string odwrocone(slowo.rbegin(), slowo.rend());
+        std::cout &lt;&lt; slowo &lt;&lt; &#x27; &#x27; &lt;&lt; std::ranges::count(slowa, slowo) &lt;&lt; &#x27; &#x27;
+                  &lt;&lt; std::ranges::count(slowa, odwrocone) &lt;&lt; &#x27;\n&#x27;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var slowa = new ArrayList&lt;String&gt;();
+        for (var line : Files.readAllLines(Path.of(&quot;slowa.txt&quot;)))
+            slowa.add(line.strip());
+
+        for (var line : Files.readAllLines(Path.of(&quot;nowe.txt&quot;))) {
+            var slowo = line.strip();
+            var odwrocone = new StringBuilder(slowo).reverse().toString();
+            System.out.println(slowo + &quot; &quot; + Collections.frequency(slowa, slowo) + &quot; &quot; + Collections.frequency(slowa, odwrocone));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> hxqsf 4 5, erraegrdsj 0 0, cpcxpzj 3 1, arphlqleftqm 10 1, wdt 0 4, … , rceij 5 0</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-podstawa.html%235-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj_podstawa/2015_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

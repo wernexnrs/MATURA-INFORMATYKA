@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title" style="--c:var(--g1)">Arkusz I</p><ul style="--c:var(--g1)"><li><a href="#2a-i-2b">2a i 2b</a></li><li><a href="#3a">3a</a></li><li><a href="#3b">3b</a></li></ul><p class="side-title" style="--c:var(--g2)">Arkusz II</p><ul style="--c:var(--g2)"><li><a href="#4">4</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#5c">5c</a></li><li><a href="#5d">5d</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2009 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2009 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import floor
+<h1 class="page-title">Matura 2009 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (punkty kratowe). Punkt kratowy ma obie współrzędne całkowite. K(R) to koło o środku (0, 0) i promieniu R (z brzegiem), a N(R) — liczba punktów kratowych w K(R). Np. N(0) = 1, N(1) = 5, N(1,5) = 9.</p><ul><li>2a — podaj N(R) dla R = 2,01 oraz R = 4,50;</li><li>2b — zaproponuj algorytm, który dla danej nieujemnej liczby całkowitej R oblicza N(R).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import floor
 
 
 def punkty_kratowe(R):
@@ -53,7 +53,40 @@ def punkty_kratowe(R):
 
 print(punkty_kratowe(0), punkty_kratowe(1), punkty_kratowe(1.5))  # przykłady z treści: 1 5 9
 print(punkty_kratowe(2.01))
-print(punkty_kratowe(4.50))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> N(2,01) = 13, N(4,50) = 69</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3a" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#3a">3a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+print(punkty_kratowe(4.50))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;print&gt;
+
+int punkty_kratowe(double R) {
+    // liczba punktów (x, y) o współrzędnych całkowitych, dla których x^2 + y^2 &lt;= R^2
+    int r = (int)std::floor(R);
+    int N = 0;
+    for (int x = -r; x &lt;= r; x++)
+        for (int y = -r; y &lt;= r; y++)
+            if (x * x + y * y &lt;= R * R) N++;
+    return N;
+}
+
+int main() {
+    std::println(&quot;{} {} {}&quot;, punkty_kratowe(0), punkty_kratowe(1), punkty_kratowe(1.5)); // przykłady z treści: 1 5 9
+    std::println(&quot;{}&quot;, punkty_kratowe(2.01));
+    std::println(&quot;{}&quot;, punkty_kratowe(4.50));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int punktyKratowe(double R) {
+        // liczba punktów (x, y) o współrzędnych całkowitych, dla których x^2 + y^2 &lt;= R^2
+        int r = (int) Math.floor(R);
+        int N = 0;
+        for (int x = -r; x &lt;= r; x++)
+            for (int y = -r; y &lt;= r; y++)
+                if (x * x + y * y &lt;= R * R) N++;
+        return N;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(punktyKratowe(0) + &quot; &quot; + punktyKratowe(1) + &quot; &quot; + punktyKratowe(1.5)); // przykłady z treści: 1 5 9
+        System.out.println(punktyKratowe(2.01));
+        System.out.println(punktyKratowe(4.50));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> N(2,01) = 13, N(4,50) = 69</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202a%20i%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%232a-i-2b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3a" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#3a">3a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 3 (NWD). Algorytm Euklidesa rekurencyjnie: nwd(a, b) = a dla b = 0 oraz nwd(a, b) = nwd(b, a mod b) dla b ≥ 1. Np. nwd(16, 12) = nwd(12, 4) = nwd(4, 0) = 4 — funkcja jest wywoływana 3 razy.</p><p>Podaj liczbę wywołań funkcji dla a = 56, b = 72 oraz dla a = 72, b = 56.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
 
 
 def nwd(a, b):
@@ -67,7 +100,41 @@ def nwd(a, b):
 for a, b in [(56, 72), (72, 56)]:
     wywolania = 0
     nwd(a, b)
-    print(a, b, wywolania)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dla a = 56, b = 72 – 5 wywołań; dla a = 72, b = 56 – 4 wywołania</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3b" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#3b">3b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># Dane: liczby naturalne a i b, z których co najmniej jedna jest większa od 0
+    print(a, b, wywolania)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int wywolania = 0;
+
+int nwd(int a, int b) {
+    wywolania++;
+    if (b == 0) return a;
+    return nwd(b, a % b);
+}
+
+int main() {
+    int pary[2][2] = {{56, 72}, {72, 56}};
+    for (auto&amp; [a, b] : pary) {
+        wywolania = 0;
+        nwd(a, b);
+        std::println(&quot;{} {} {}&quot;, a, b, wywolania);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int wywolania = 0;
+
+    static int nwd(int a, int b) {
+        wywolania++;
+        if (b == 0) return a;
+        return nwd(b, a % b);
+    }
+
+    public static void main(String[] args) {
+        int[][] pary = {{56, 72}, {72, 56}};
+        for (int[] p : pary) {
+            wywolania = 0;
+            nwd(p[0], p[1]);
+            System.out.println(p[0] + &quot; &quot; + p[1] + &quot; &quot; + wywolania);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dla a = 56, b = 72 – 5 wywołań; dla a = 72, b = 56 – 4 wywołania</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%203a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%233a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3b" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#3b">3b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Podaj nierekurencyjny algorytm obliczania nwd(a, b) (a, b — liczby naturalne, z których co najmniej jedna jest większa od 0) wraz ze specyfikacją.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># Dane: liczby naturalne a i b, z których co najmniej jedna jest większa od 0
 # Wynik: największy wspólny dzielnik liczb a i b
 def nwd(a, b):
     while b &gt; 0:
@@ -77,7 +144,37 @@ def nwd(a, b):
     return a
 
 
-print(nwd(16, 12), nwd(56, 72))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dopóki b &gt; 0: reszta := a mod b, a := b, b := reszta; wynikiem jest a (np. nwd(16, 12) = 4)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4">4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p><em>Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</em> Podpunkty korzystają z tych samych wylosowanych punktów, dlatego są w jednym programie. Wykres (b) zapisywany jest jako <code>smok.svg</code> bez dodatkowych bibliotek.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from random import randint
+print(nwd(16, 12), nwd(56, 72))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+// Dane: liczby naturalne a i b, z których co najmniej jedna jest większa od 0
+// Wynik: największy wspólny dzielnik liczb a i b
+int nwd(int a, int b) {
+    while (b &gt; 0) {
+        int reszta = a % b;
+        a = b;
+        b = reszta;
+    }
+    return a;
+}
+
+int main() {
+    std::println(&quot;{} {}&quot;, nwd(16, 12), nwd(56, 72));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // Dane: liczby naturalne a i b, z których co najmniej jedna jest większa od 0
+    // Wynik: największy wspólny dzielnik liczb a i b
+    static int nwd(int a, int b) {
+        while (b &gt; 0) {
+            int reszta = a % b;
+            a = b;
+            b = reszta;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(nwd(16, 12) + &quot; &quot; + nwd(56, 72));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dopóki b &gt; 0: reszta := a mod b, a := b, b := reszta; wynikiem jest a (np. nwd(16, 12) = 4)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%203b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%233b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4">4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p><em>Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</em> Podpunkty korzystają z tych samych wylosowanych punktów, dlatego są w jednym programie. Wykres (b) zapisywany jest jako <code>smok.svg</code> bez dodatkowych bibliotek.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (iteracje). Dwa przekształcenia punktu (x, y), stosowane wielokrotnie w losowej kolejności (każde z prawdopodobieństwem 1/2), dają obraz smoka Heighwaya:</p><ul><li>x' = −0,4x − 1, y' = −0,4y + 0,1;</li><li>x' = 0,76x − 0,4y, y' = 0,4x + 0,76y.</li></ul><p>Wyniki podpunktów a, c, d zapisz w pliku <code>zad_4.txt</code>, poprzedzając je literą podpunktu:</p><ul><li>a) zaczynając od x = 1, y = 1, oblicz pierwsze 5000 wartości (x, y) kolejnych iteracji;</li><li>b) sporządź obraz smoka (pomiń 100 pierwszych iteracji) i zapisz go w pliku <code>smok.*</code>;</li><li>c) oblicz środek masy smoka — średnie wartości x i y (zaokrąglone do 0,1), pomijając 100 pierwszych iteracji;</li><li>d) podaj minimalne i maksymalne wartości x oraz y (zaokrąglone do 0,1), pomijając 100 pierwszych iteracji.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from random import randint
 
 x, y = 1, 1
 punkty = []
@@ -116,7 +213,198 @@ with open(&quot;smok.svg&quot;, &quot;w&quot;) as obraz:
         px = (x + 1.2) * skala
         py = 400 - (y + 0.5) * skala
         obraz.write(f&#x27;&lt;circle cx=&quot;{px:.1f}&quot; cy=&quot;{py:.1f}&quot; r=&quot;0.8&quot; fill=&quot;green&quot;/&gt;\n&#x27;)
-    obraz.write(&quot;&lt;/svg&gt;\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> wyniki są losowe, klucz nie podaje wartości; przykładowo: c) środek masy ≈ (−0,6; −0,1), d) x od −1,2 do 0,4, y od −0,7 do 0,4</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">palindromy = 0
+    obraz.write(&quot;&lt;/svg&gt;\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;charconv&gt;
+#include &lt;cmath&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;random&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// liczba rzeczywista zapisana tak jak w Pythonie: najkrótszy dokładny zapis,
+// np. 2.0, -0.123, 1.5e-05 (std::format(&quot;{}&quot;) pisze 2 zamiast 2.0)
+std::string jak_python(double x) {
+    if (x == 0) return std::signbit(x) ? &quot;-0.0&quot; : &quot;0.0&quot;;
+    char bufor[64];
+    auto koniec = std::to_chars(bufor, bufor + sizeof bufor, std::fabs(x), std::chars_format::scientific).ptr;
+    std::string s(bufor, koniec); // np. &quot;1.2345e-05&quot;
+    size_t e = s.find(&#x27;e&#x27;);
+    int wykladnik = std::stoi(s.substr(e + 1));
+    std::string cyfry = s.substr(0, e);
+    std::erase(cyfry, &#x27;.&#x27;); // np. &quot;12345&quot;
+    std::string znak = x &lt; 0 ? &quot;-&quot; : &quot;&quot;;
+    if (wykladnik &lt; -4 || wykladnik &gt;= 16) {
+        std::string mantysa = cyfry.substr(0, 1) + (cyfry.size() &gt; 1 ? &quot;.&quot; + cyfry.substr(1) : &quot;&quot;);
+        return std::format(&quot;{}{}e{}{:02}&quot;, znak, mantysa, wykladnik &lt; 0 ? &#x27;-&#x27; : &#x27;+&#x27;, std::abs(wykladnik));
+    }
+    if (wykladnik &lt; 0) return znak + &quot;0.&quot; + std::string(-wykladnik - 1, &#x27;0&#x27;) + cyfry;
+    if ((int)cyfry.size() &lt;= wykladnik + 1)
+        return znak + cyfry + std::string(wykladnik + 1 - cyfry.size(), &#x27;0&#x27;) + &quot;.0&quot;;
+    return znak + cyfry.substr(0, wykladnik + 1) + &quot;.&quot; + cyfry.substr(wykladnik + 1);
+}
+
+// round(x, 1) z Pythona
+double zaokraglij1(double x) { return std::stod(std::format(&quot;{:.1f}&quot;, x)); }
+
+int main() {
+    std::mt19937 generator(std::random_device{}());
+    std::uniform_int_distribution&lt;int&gt; los(0, 1);
+
+    double x = 1, y = 1;
+    std::vector&lt;std::pair&lt;double, double&gt;&gt; punkty;
+
+    // a) 5000 iteracji, za każdym razem losowy układ równań
+    for (int i = 0; i &lt; 5000; i++) {
+        double nowy_x, nowy_y;
+        if (los(generator) == 0) {
+            nowy_x = -0.4 * x - 1;
+            nowy_y = -0.4 * y + 0.1;
+        } else {
+            nowy_x = 0.76 * x - 0.4 * y;
+            nowy_y = 0.4 * x + 0.76 * y;
+        }
+        x = nowy_x;
+        y = nowy_y;
+        punkty.push_back({x, y});
+    }
+
+    // pomijamy 100 pierwszych iteracji
+    std::vector&lt;std::pair&lt;double, double&gt;&gt; smok(punkty.begin() + 100, punkty.end());
+    std::vector&lt;double&gt; xs, ys;
+    for (auto [px, py] : smok) {
+        xs.push_back(px);
+        ys.push_back(py);
+    }
+    double suma_x = 0, suma_y = 0;
+    for (double v : xs) suma_x += v;
+    for (double v : ys) suma_y += v;
+    std::string srodek_x = jak_python(zaokraglij1(suma_x / xs.size()));
+    std::string srodek_y = jak_python(zaokraglij1(suma_y / ys.size()));
+    std::string xmin = jak_python(zaokraglij1(std::ranges::min(xs)));
+    std::string xmax = jak_python(zaokraglij1(std::ranges::max(xs)));
+    std::string ymin = jak_python(zaokraglij1(std::ranges::min(ys)));
+    std::string ymax = jak_python(zaokraglij1(std::ranges::max(ys)));
+
+    std::ofstream wynik(&quot;zad_4.txt&quot;);
+    wynik &lt;&lt; &quot;a)\n&quot;;
+    for (auto [px, py] : punkty)
+        wynik &lt;&lt; jak_python(px) &lt;&lt; &quot; &quot; &lt;&lt; jak_python(py) &lt;&lt; &quot;\n&quot;;
+    // c) środek masy
+    wynik &lt;&lt; &quot;c) &quot; &lt;&lt; srodek_x &lt;&lt; &quot; &quot; &lt;&lt; srodek_y &lt;&lt; &quot;\n&quot;;
+    // d) rozmiary smoka
+    wynik &lt;&lt; &quot;d) xmin=&quot; &lt;&lt; xmin &lt;&lt; &quot; xmax=&quot; &lt;&lt; xmax &lt;&lt; &quot; ymin=&quot; &lt;&lt; ymin &lt;&lt; &quot; ymax=&quot; &lt;&lt; ymax &lt;&lt; &quot;\n&quot;;
+    wynik.close();
+
+    std::println(&quot;c) {} {}&quot;, srodek_x, srodek_y);
+    std::println(&quot;d) {} {} {} {}&quot;, xmin, xmax, ymin, ymax);
+
+    // b) obraz smoka jako plik SVG
+    const int skala = 300;
+    std::ofstream obraz(&quot;smok.svg&quot;);
+    obraz &lt;&lt; &quot;&lt;svg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; width=\&quot;600\&quot; height=\&quot;400\&quot; style=\&quot;background:white\&quot;&gt;\n&quot;;
+    for (auto [sx, sy] : smok) {
+        double px = (sx + 1.2) * skala;
+        double py = 400 - (sy + 0.5) * skala;
+        obraz &lt;&lt; std::format(&quot;&lt;circle cx=\&quot;{:.1f}\&quot; cy=\&quot;{:.1f}\&quot; r=\&quot;0.8\&quot; fill=\&quot;green\&quot;/&gt;\n&quot;, px, py);
+    }
+    obraz &lt;&lt; &quot;&lt;/svg&gt;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.math.*;
+import java.util.*;
+
+public class Zadanie {
+    // liczba rzeczywista zapisana tak jak w Pythonie: np. 2.0, -0.123, 1.5e-05
+    // (Java pisze małe liczby inaczej, np. 1.5E-5)
+    static String jakPython(double x) {
+        if (x == 0) return (1 / x &lt; 0) ? &quot;-0.0&quot; : &quot;0.0&quot;;
+        var bd = new BigDecimal(Double.toString(Math.abs(x))).stripTrailingZeros();
+        String cyfry = bd.unscaledValue().toString();
+        int wykladnik = cyfry.length() - 1 - bd.scale();
+        String znak = x &lt; 0 ? &quot;-&quot; : &quot;&quot;;
+        if (wykladnik &lt; -4 || wykladnik &gt;= 16) {
+            String mantysa = cyfry.length() &gt; 1 ? cyfry.charAt(0) + &quot;.&quot; + cyfry.substring(1) : cyfry;
+            return znak + mantysa + &quot;e&quot; + (wykladnik &lt; 0 ? &quot;-&quot; : &quot;+&quot;) + String.format(&quot;%02d&quot;, Math.abs(wykladnik));
+        }
+        String s = bd.toPlainString();
+        return znak + (s.contains(&quot;.&quot;) ? s : s + &quot;.0&quot;);
+    }
+
+    // f&quot;{v:.1f}&quot; z Pythona (dokładne zaokrąglenie wartości binarnej)
+    static String jedenMiejsce(double v) {
+        String s = new BigDecimal(v).setScale(1, RoundingMode.HALF_EVEN).toPlainString();
+        return (v &lt; 0 &amp;&amp; !s.startsWith(&quot;-&quot;)) ? &quot;-&quot; + s : s;
+    }
+
+    // round(v, 1) z Pythona
+    static double zaokraglij1(double v) {
+        return Double.parseDouble(jedenMiejsce(v));
+    }
+
+    public static void main(String[] args) throws Exception {
+        var los = new Random();
+        double x = 1, y = 1;
+        var punkty = new ArrayList&lt;double[]&gt;();
+
+        // a) 5000 iteracji, za każdym razem losowy układ równań
+        for (int i = 0; i &lt; 5000; i++) {
+            double nowyX, nowyY;
+            if (los.nextInt(2) == 0) {
+                nowyX = -0.4 * x - 1;
+                nowyY = -0.4 * y + 0.1;
+            } else {
+                nowyX = 0.76 * x - 0.4 * y;
+                nowyY = 0.4 * x + 0.76 * y;
+            }
+            x = nowyX;
+            y = nowyY;
+            punkty.add(new double[]{x, y});
+        }
+
+        var smok = punkty.subList(100, punkty.size()); // pomijamy 100 pierwszych iteracji
+        double sumaX = 0, sumaY = 0;
+        double minX = Double.MAX_VALUE, maxX = -Double.MAX_VALUE, minY = Double.MAX_VALUE, maxY = -Double.MAX_VALUE;
+        for (double[] p : smok) {
+            sumaX += p[0];
+            sumaY += p[1];
+            minX = Math.min(minX, p[0]);
+            maxX = Math.max(maxX, p[0]);
+            minY = Math.min(minY, p[1]);
+            maxY = Math.max(maxY, p[1]);
+        }
+        String srodekX = jakPython(zaokraglij1(sumaX / smok.size()));
+        String srodekY = jakPython(zaokraglij1(sumaY / smok.size()));
+        String xmin = jakPython(zaokraglij1(minX)), xmax = jakPython(zaokraglij1(maxX));
+        String ymin = jakPython(zaokraglij1(minY)), ymax = jakPython(zaokraglij1(maxY));
+
+        try (var wynik = new PrintWriter(&quot;zad_4.txt&quot;)) {
+            wynik.println(&quot;a)&quot;);
+            for (double[] p : punkty)
+                wynik.println(jakPython(p[0]) + &quot; &quot; + jakPython(p[1]));
+            // c) środek masy
+            wynik.println(&quot;c) &quot; + srodekX + &quot; &quot; + srodekY);
+            // d) rozmiary smoka
+            wynik.println(&quot;d) xmin=&quot; + xmin + &quot; xmax=&quot; + xmax + &quot; ymin=&quot; + ymin + &quot; ymax=&quot; + ymax);
+        }
+
+        System.out.println(&quot;c) &quot; + srodekX + &quot; &quot; + srodekY);
+        System.out.println(&quot;d) &quot; + xmin + &quot; &quot; + xmax + &quot; &quot; + ymin + &quot; &quot; + ymax);
+
+        // b) obraz smoka jako plik SVG
+        final int skala = 300;
+        try (var obraz = new PrintWriter(&quot;smok.svg&quot;)) {
+            obraz.println(&quot;&lt;svg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; width=\&quot;600\&quot; height=\&quot;400\&quot; style=\&quot;background:white\&quot;&gt;&quot;);
+            for (double[] p : smok) {
+                double px = (p[0] + 1.2) * skala;
+                double py = 400 - (p[1] + 0.5) * skala;
+                obraz.println(&quot;&lt;circle cx=\&quot;&quot; + jedenMiejsce(px) + &quot;\&quot; cy=\&quot;&quot; + jedenMiejsce(py) + &quot;\&quot; r=\&quot;0.8\&quot; fill=\&quot;green\&quot;/&gt;&quot;);
+            }
+            obraz.println(&quot;&lt;/svg&gt;&quot;);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> wyniki są losowe, klucz nie podaje wartości; przykładowo: c) środek masy ≈ (−0,6; −0,1), d) x od −1,2 do 0,4, y od −0,7 do 0,4</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%234" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5 (para słów). Plik <code>dane.txt</code> zawiera w każdym wierszu parę słów A i B z cyfr <code>0</code> i <code>1</code>, oddzielonych spacją; |A| ≥ |B|. Dla pary szukamy najkrótszego słowa C zawierającego A i B (B może być zawarte w A albo słowa mogą się nakładać sufiksem i prefiksem, w przeciwnym razie C to sklejenie A i B). Odpowiedzi do a–c zapisz w <code>zad_5.txt</code>, poprzedzając je literą podpunktu.</p><p>Podaj, ile spośród wszystkich słów w pliku <code>dane.txt</code> to palindromy.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">palindromy = 0
 
 with open(&quot;dane.txt&quot;) as file:
     for line in file:
@@ -124,7 +412,29 @@ with open(&quot;dane.txt&quot;) as file:
             if slowo == slowo[::-1]:
                 palindromy += 1
 
-print(palindromy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 46</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+print(palindromy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int palindromy = 0;
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo)
+        if (slowo == std::string(slowo.rbegin(), slowo.rend())) palindromy++;
+    std::println(&quot;{}&quot;, palindromy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int palindromy = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;)))
+            for (String slowo : linia.trim().split(&quot;\\s+&quot;))
+                if (!slowo.isEmpty() &amp;&amp; slowo.equals(new StringBuilder(slowo).reverse().toString()))
+                    palindromy++;
+        System.out.println(palindromy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 46</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%235a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Podaj, ile par (A, B) z pliku <code>dane.txt</code> ma tę własność, że słowo B jest zawarte wewnątrz słowa A. Odpowiedź zapisz w <code>zad_5.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;dane.txt&quot;) as file:
     for line in file:
@@ -132,7 +442,31 @@ with open(&quot;dane.txt&quot;) as file:
         if b in a:
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 35</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nakladka(a, b):
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string a, b;
+    while (plik &gt;&gt; a &gt;&gt; b)
+        if (a.find(b) != std::string::npos) licznik++; // czy b jest fragmentem a
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            String[] slowa = linia.trim().split(&quot;\\s+&quot;);
+            String a = slowa[0], b = slowa[1];
+            if (a.contains(b)) licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 35</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%235b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Podaj, ile par (A, B) z pliku <code>dane.txt</code> ma tę własność, że jedynym sposobem utworzenia najkrótszego słowa C zawierającego oba słowa jest sklejenie A i B (B nie jest zawarte w A i żaden sufiks jednego słowa nie jest prefiksem drugiego). Odpowiedź zapisz w <code>zad_5.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nakladka(a, b):
     # długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
     for k in range(min(len(a), len(b)), 0, -1):
         if a[-k:] == b[:k]:
@@ -148,7 +482,47 @@ with open(&quot;dane.txt&quot;) as file:
         if b not in a and nakladka(a, b) == 0 and nakladka(b, a) == 0:
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 13</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5d">5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nakladka(a, b):
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int nakladka(const std::string&amp; a, const std::string&amp; b) {
+    // długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
+    for (int k = (int)std::min(a.size(), b.size()); k &gt; 0; k--)
+        if (a.substr(a.size() - k) == b.substr(0, k)) return k;
+    return 0;
+}
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string a, b;
+    while (plik &gt;&gt; a &gt;&gt; b)
+        if (a.find(b) == std::string::npos &amp;&amp; nakladka(a, b) == 0 &amp;&amp; nakladka(b, a) == 0)
+            licznik++;
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    static int nakladka(String a, String b) {
+        // długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
+        for (int k = Math.min(a.length(), b.length()); k &gt; 0; k--)
+            if (a.substring(a.length() - k).equals(b.substring(0, k))) return k;
+        return 0;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            String[] slowa = linia.trim().split(&quot;\\s+&quot;);
+            String a = slowa[0], b = slowa[1];
+            if (!a.contains(b) &amp;&amp; nakladka(a, b) == 0 &amp;&amp; nakladka(b, a) == 0) licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 13</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%235c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5d">5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla każdej pary (A, B) z pliku <code>dane.txt</code> utwórz najkrótsze słowo C zawierające oba słowa (np. dla A = 10011101: z B = 111 → C = A; z B = 1100 nakładamy 3-znakowy sufiks B na prefiks A; z B = 1010 nakładamy 3-znakowy sufiks A na prefiks B). Słowa C zapisz w pliku <code>slowa.txt</code>, każde w osobnym wierszu, w kolejności par z pliku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nakladka(a, b):
     # długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
     for k in range(min(len(a), len(b)), 0, -1):
         if a[-k:] == b[:k]:
@@ -169,7 +543,60 @@ def slowo_c(a, b):
 with open(&quot;dane.txt&quot;) as file, open(&quot;slowa.txt&quot;, &quot;w&quot;) as wynik:
     for line in file:
         a, b = line.split()
-        wynik.write(slowo_c(a, b) + &quot;\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> plik slowa.txt: 0001100111101010111, 1100001101, 11000100, …</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+        wynik.write(slowo_c(a, b) + &quot;\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+
+int nakladka(const std::string&amp; a, const std::string&amp; b) {
+    // długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
+    for (int k = (int)std::min(a.size(), b.size()); k &gt; 0; k--)
+        if (a.substr(a.size() - k) == b.substr(0, k)) return k;
+    return 0;
+}
+
+std::string slowo_c(const std::string&amp; a, const std::string&amp; b) {
+    if (a.find(b) != std::string::npos) return a;
+    int k1 = nakladka(a, b); // najpierw A, potem B
+    int k2 = nakladka(b, a); // najpierw B, potem A
+    if (k1 &gt;= k2) return a + b.substr(k1);
+    return b + a.substr(k2);
+}
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::ofstream wynik(&quot;slowa.txt&quot;);
+    std::string a, b;
+    while (plik &gt;&gt; a &gt;&gt; b)
+        wynik &lt;&lt; slowo_c(a, b) &lt;&lt; &quot;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.*;
+
+public class Zadanie {
+    static int nakladka(String a, String b) {
+        // długość najdłuższego sufiksu słowa a, który jest prefiksem słowa b
+        for (int k = Math.min(a.length(), b.length()); k &gt; 0; k--)
+            if (a.substring(a.length() - k).equals(b.substring(0, k))) return k;
+        return 0;
+    }
+
+    static String slowoC(String a, String b) {
+        if (a.contains(b)) return a;
+        int k1 = nakladka(a, b); // najpierw A, potem B
+        int k2 = nakladka(b, a); // najpierw B, potem A
+        if (k1 &gt;= k2) return a + b.substring(k1);
+        return b + a.substring(k2);
+    }
+
+    public static void main(String[] args) throws Exception {
+        try (var wynik = new PrintWriter(&quot;slowa.txt&quot;)) {
+            for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+                if (linia.isBlank()) continue;
+                String[] slowa = linia.trim().split(&quot;\\s+&quot;);
+                wynik.println(slowoC(slowa[0], slowa[1]));
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> plik slowa.txt: 0001100111101010111, 1100001101, 11000100, …</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj.html%235d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2009_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

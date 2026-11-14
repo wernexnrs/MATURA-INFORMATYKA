@@ -37,7 +37,19 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1-4-2-4-3-4-4-i-4-5">4.1, 4.2, 4.3, 4.4 i 4.5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2025 — maj, poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2025 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+<h1 class="page-title">Matura 2025 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest rekurencyjna funkcja przestaw dla nieujemnej liczby całkowitej n (mod — reszta, div — część całkowita z dzielenia):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">przestaw(n):
+    r ← n mod 100
+    a ← r div 10
+    b ← r mod 10
+    n ← n div 100
+    jeżeli n &gt; 0
+        w ← a + 10 * b + 100 * przestaw(n)
+    w przeciwnym razie
+        jeżeli a &gt; 0
+            w ← a + 10 * b
+        w przeciwnym razie
+            w ← b
+    wynikiem jest w</code></pre></div></div></div><ul><li>1.1 — Uzupełnij tabelę: dla n = 43657688, 154005710 i 998877665544321 podaj wynik przestaw(n) oraz łączną liczbę wywołań funkcji (z pierwszym włącznie). Przykład: przestaw(316498) = 134689, 3 wywołania.</li><li>1.2 — Oceń (P/F), czy liczba wywołań funkcji dla liczby k-cyfrowej (k &gt; 0) jest równa: 1) k/2; 2) (k + 1) div 2; 3) k/2 dla parzystego k oraz (k + 1)/2 dla nieparzystego k; 4) k/2 + 1.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
 
 
 def przestaw(n):
@@ -65,8 +77,85 @@ for n in [43657688, 154005710, 998877665544321]:
 for k in range(1, 9):
     wywolania = 0
     przestaw(10 ** (k - 1))
-    print(k, wywolania, k / 2, (k + 1) // 2, k / 2 if k % 2 == 0 else (k + 1) / 2, (k + 1) / 2)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 43657688 → 34566788, 4 wywołania; 154005710 → 145007501, 5; 998877665544321 → 989786756453412, 8. 1.2: FPPF (liczba wywołań to (k + 1) div 2).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · 2.2</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 2.2
-def falista(n):
+    print(k, wywolania, k / 2, (k + 1) // 2, k / 2 if k % 2 == 0 else (k + 1) / 2, (k + 1) / 2)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int wywolania = 0;
+
+long long przestaw(long long n) {
+    wywolania += 1;
+    long long r = n % 100;
+    long long a = r / 10;
+    long long b = r % 10;
+    n = n / 100;
+    long long w;
+    if (n &gt; 0) {
+        w = a + 10 * b + 100 * przestaw(n);
+    } else if (a &gt; 0) {
+        w = a + 10 * b;
+    } else {
+        w = b;
+    }
+    return w;
+}
+
+int main() {
+    // 1.1 (największa liczba ma 15 cyfr - potrzebny long long)
+    for (long long n : {43657688LL, 154005710LL, 998877665544321LL}) {
+        wywolania = 0;
+        long long wynik = przestaw(n);
+        std::println(&quot;{} {} {}&quot;, n, wynik, wywolania);
+    }
+
+    // 1.2 - liczba wywołań dla liczby k-cyfrowej porównana z podanymi wzorami
+    // ułamki wypisujemy z jedną cyfrą po kropce (jak Python: 0.5, 1.0)
+    long long dziesiatka_do_k = 1;      // 10^(k-1)
+    for (int k = 1; k &lt; 9; k++) {
+        wywolania = 0;
+        przestaw(dziesiatka_do_k);
+        dziesiatka_do_k *= 10;
+        double wzor3 = k % 2 == 0 ? k / 2.0 : (k + 1) / 2.0;
+        std::println(&quot;{} {} {:.1f} {} {:.1f} {:.1f}&quot;, k, wywolania, k / 2.0, (k + 1) / 2, wzor3, (k + 1) / 2.0);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int wywolania = 0;
+
+    static long przestaw(long n) {
+        wywolania += 1;
+        long r = n % 100;
+        long a = r / 10;
+        long b = r % 10;
+        n = n / 100;
+        long w;
+        if (n &gt; 0) {
+            w = a + 10 * b + 100 * przestaw(n);
+        } else if (a &gt; 0) {
+            w = a + 10 * b;
+        } else {
+            w = b;
+        }
+        return w;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1 (największa liczba ma 15 cyfr - potrzebny long)
+        for (long n : new long[]{43657688L, 154005710L, 998877665544321L}) {
+            wywolania = 0;
+            long wynik = przestaw(n);
+            System.out.println(n + &quot; &quot; + wynik + &quot; &quot; + wywolania);
+        }
+
+        // 1.2 - liczba wywołań dla liczby k-cyfrowej porównana z podanymi wzorami
+        // double wypisuje się jak w Pythonie: 0.5, 1.0
+        long dziesiatkaDoK = 1;             // 10^(k-1)
+        for (int k = 1; k &lt; 9; k++) {
+            wywolania = 0;
+            przestaw(dziesiatkaDoK);
+            dziesiatkaDoK *= 10;
+            double wzor3 = k % 2 == 0 ? k / 2.0 : (k + 1) / 2.0;
+            System.out.println(k + &quot; &quot; + wywolania + &quot; &quot; + k / 2.0 + &quot; &quot; + (k + 1) / 2 + &quot; &quot; + wzor3 + &quot; &quot; + (k + 1) / 2.0);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 43657688 → 34566788, 4 wywołania; 154005710 → 145007501, 5; 998877665544321 → 989786756453412, 8. 1.2: FPPF (liczba wywołań to (k + 1) div 2).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-maj-f2015.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Liczba falista to liczba całkowita większa od 10, w której zapisie dziesiętnym na przemian występują tylko dwie różne cyfry (np. 41414, 4545). Liczba bazowa to liczba n &gt; 10, której dwie ostatnie cyfry są niezerowe i różne od siebie; te dwie cyfry (w tej kolejności) to jej baza. Z liczby bazowej otrzymujemy liczbę falistą o tej samej bazie i tej samej długości, np. 78234 → 43434, 52786 → 68686.</p><ul><li>2.1 — Uzupełnij tabelę: podaj liczby faliste dla liczb bazowych 326, 414141, 7732 i 21289.</li><li>2.2 — Zapisz (w pseudokodzie lub wybranym języku) algorytm, który dla liczby bazowej n oblicza liczbę falistą f o tej samej bazie i długości (np. 556621 → 212121, 45621 → 12121). Wolno używać tylko zmiennych przechowujących pojedyncze liczby, operatorów arytmetycznych (w tym dzielenia całkowitego i reszty), logicznych, porównań, przypisań i własnych funkcji — bez funkcji wbudowanych i konwersji liczba ↔ napis.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · 2.2</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def falista(n):
     baza = n % 100
     f = 0
     pot = 1
@@ -82,7 +171,55 @@ def falista(n):
 
 # 2.1
 for n in [326, 414141, 7732, 21289]:
-    print(n, falista(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 326 → 626, 414141 → 414141, 7732 → 3232, 21289 → 98989. 2.2: funkcja <code>falista</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-4-4-i-4-5" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-4-4-i-4-5">4.1, 4.2, 4.3, 4.4 i 4.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;symbole.txt&quot;) as file:
+    print(n, falista(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+// 2.2
+long long falista(long long n) {
+    long long baza = n % 100;
+    long long f = 0;
+    long long pot = 1;
+    while (n &gt; 0) {
+        if (n &gt;= 10) {              // zostały co najmniej dwie cyfry - wstawiamy całą bazę
+            f = f + baza * pot;
+        } else {                    // została jedna cyfra - wstawiamy cyfrę jedności bazy
+            f = f + (baza % 10) * pot;
+        }
+        n = n / 100;
+        pot = pot * 100;
+    }
+    return f;
+}
+
+int main() {
+    // 2.1
+    for (long long n : {326, 414141, 7732, 21289}) {
+        std::println(&quot;{} {}&quot;, n, falista(n));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // 2.2
+    static long falista(long n) {
+        long baza = n % 100;
+        long f = 0;
+        long pot = 1;
+        while (n &gt; 0) {
+            if (n &gt;= 10) {              // zostały co najmniej dwie cyfry - wstawiamy całą bazę
+                f = f + baza * pot;
+            } else {                    // została jedna cyfra - wstawiamy cyfrę jedności bazy
+                f = f + (baza % 10) * pot;
+            }
+            n = n / 100;
+            pot = pot * 100;
+        }
+        return f;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        for (long n : new long[]{326, 414141, 7732, 21289}) {
+            System.out.println(n + &quot; &quot; + falista(n));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 326 → 626, 414141 → 414141, 7732 → 3232, 21289 → 98989. 2.2: funkcja <code>falista</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-maj-f2015.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-4-4-i-4-5" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-4-4-i-4-5">4.1, 4.2, 4.3, 4.4 i 4.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>symbole.txt</code> zawiera 2000 napisów, każdy w osobnym wierszu i złożony z dokładnie 12 znaków spośród <code>o</code>, <code>+</code>, <code>*</code>. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. Plik <code>symbole_przyklad.txt</code> (20 wierszy) służy do testów.</p><ul><li>4.1 — Wypisz (po jednym w wierszu, w kolejności z pliku) wszystkie napisy będące palindromami (dla pliku przykładowego: <code>oooo+**+oooo</code>).</li><li>4.2 — Podaj, ile napisów nie jest palindromami, ale stałoby się nimi po zmianie dokładnie jednego znaku (dla pliku przykładowego: 1 — napis <code>*+++++++++**</code>).</li><li>4.3 — Traktując plik jako prostokąt znaków, znajdź wszystkie „kwadraty” 3 × 3 złożone z dziewięciu jednakowych symboli. Podaj ich liczbę oraz dla każdego numer wiersza i numer pozycji w wierszu (licząc od 1) jego środkowego pola (dla pliku przykładowego: <code>1 6 3</code>).</li><li>4.4 — Każdy napis traktujemy jako liczbę w systemie trójkowym: <code>o</code> = 0, <code>+</code> = 1, <code>*</code> = 2. Podaj największą z tych liczb w zapisie dziesiętnym oraz odpowiadający jej napis (dla pliku przykładowego: <code>519789 ***+o*ooo++o</code>).</li><li>4.5 — Oblicz sumę wszystkich liczb z pliku (w rozumieniu 4.4). Podaj ją dziesiętnie oraz w zapisie trójkowym symbolami <code>o</code>, <code>+</code>, <code>*</code> (dla pliku przykładowego: <code>4841542 +oooo****+oo+o+</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;symbole.txt&quot;) as file:
     napisy = [linia.strip() for linia in file if linia.strip()]
 
 wynik = open(&quot;wyniki4.txt&quot;, &quot;w&quot;)
@@ -148,7 +285,201 @@ for napis in napisy:
     suma += na_liczbe(napis)
 print(&quot;4.5&quot;, suma, na_napis(suma), file=wynik)
 
-wynik.close()</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: ++o+o++o+o++, +\<em>+\</em>\<em>++\</em>\<em>+\</em>+, \<em>+o++\</em>\<em>++o+\</em>, \<em>oo\*o\</em>\<em>o\*oo\</em>, +\<em>++\*oo\</em>++\*+, +o++oooo++o+. 4.2: 32. 4.3: 3 kwadraty, środki: (399, 5), (546, 2), (630, 11). 4.4: 531246, <code>*******o+*+o</code>. 4.5: 527865439, <code>++oo*+oo*++ooo*o*++</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2025_maj_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+wynik.close()</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+const std::string symbole = &quot;o+*&quot;;
+
+long long na_liczbe(const std::string&amp; napis) {
+    long long liczba = 0;
+    for (char znak : napis) {
+        liczba = liczba * 3 + symbole.find(znak);  // &quot;o&quot; -&gt; 0, &quot;+&quot; -&gt; 1, &quot;*&quot; -&gt; 2
+    }
+    return liczba;
+}
+
+std::string na_napis(long long liczba) {
+    std::string napis = &quot;&quot;;
+    while (liczba &gt; 0) {
+        napis = symbole[liczba % 3] + napis;
+        liczba /= 3;
+    }
+    return napis;
+}
+
+int main() {
+    std::ifstream plik(&quot;symbole.txt&quot;);
+    std::vector&lt;std::string&gt; napisy;
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        napisy.push_back(linia);
+    }
+
+    std::ofstream wynik(&quot;wyniki4.txt&quot;);
+
+    // 4.1
+    std::println(wynik, &quot;4.1&quot;);
+    for (const std::string&amp; napis : napisy) {
+        if (napis == std::string(napis.rbegin(), napis.rend())) {
+            std::println(wynik, &quot;{}&quot;, napis);
+        }
+    }
+
+    // 4.2 - dokładnie jedna para niezgodnych znaków napis[i] i napis[11 - i]
+    int ile = 0;
+    for (const std::string&amp; napis : napisy) {
+        int rozne = 0;
+        for (size_t i = 0; i &lt; napis.size() / 2; i++) {
+            if (napis[i] != napis[napis.size() - 1 - i]) {
+                rozne += 1;
+            }
+        }
+        if (rozne == 1) {
+            ile += 1;
+        }
+    }
+    std::println(wynik, &quot;4.2 {}&quot;, ile);
+
+    // 4.3
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; srodki;
+    for (int w = 1; w &lt; (int)napisy.size() - 1; w++) {
+        for (int k = 1; k &lt; (int)napisy[w].size() - 1; k++) {
+            char znak = napisy[w][k];
+            bool kwadrat = true;
+            for (int dw = -1; dw &lt;= 1; dw++) {
+                for (int dk = -1; dk &lt;= 1; dk++) {
+                    if (napisy[w + dw][k + dk] != znak) {
+                        kwadrat = false;
+                    }
+                }
+            }
+            if (kwadrat) {
+                srodki.push_back({w + 1, k + 1});
+            }
+        }
+    }
+    std::println(wynik, &quot;4.3 {}&quot;, srodki.size());
+    for (auto [w, k] : srodki) {
+        std::println(wynik, &quot;{} {}&quot;, w, k);
+    }
+
+    // 4.4 i 4.5
+    std::string najwiekszy = napisy[0];
+    for (const std::string&amp; napis : napisy) {
+        if (na_liczbe(napis) &gt; na_liczbe(najwiekszy)) {
+            najwiekszy = napis;
+        }
+    }
+    std::println(wynik, &quot;4.4 {} {}&quot;, na_liczbe(najwiekszy), najwiekszy);
+
+    long long suma = 0;
+    for (const std::string&amp; napis : napisy) {
+        suma += na_liczbe(napis);
+    }
+    std::println(wynik, &quot;4.5 {} {}&quot;, suma, na_napis(suma));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static final String SYMBOLE = &quot;o+*&quot;;
+
+    static long naLiczbe(String napis) {
+        long liczba = 0;
+        for (char znak : napis.toCharArray()) {
+            liczba = liczba * 3 + SYMBOLE.indexOf(znak);  // &quot;o&quot; -&gt; 0, &quot;+&quot; -&gt; 1, &quot;*&quot; -&gt; 2
+        }
+        return liczba;
+    }
+
+    static String naNapis(long liczba) {
+        String napis = &quot;&quot;;
+        while (liczba &gt; 0) {
+            napis = SYMBOLE.charAt((int) (liczba % 3)) + napis;
+            liczba /= 3;
+        }
+        return napis;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;String&gt; napisy = new ArrayList&lt;&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;symbole.txt&quot;))) {
+            if (!linia.isBlank()) {
+                napisy.add(linia.strip());
+            }
+        }
+
+        PrintWriter wynik = new PrintWriter(&quot;wyniki4.txt&quot;);
+
+        // 4.1
+        wynik.println(&quot;4.1&quot;);
+        for (String napis : napisy) {
+            if (napis.equals(new StringBuilder(napis).reverse().toString())) {
+                wynik.println(napis);
+            }
+        }
+
+        // 4.2 - dokładnie jedna para niezgodnych znaków napis[i] i napis[11 - i]
+        int ile = 0;
+        for (String napis : napisy) {
+            int rozne = 0;
+            for (int i = 0; i &lt; napis.length() / 2; i++) {
+                if (napis.charAt(i) != napis.charAt(napis.length() - 1 - i)) {
+                    rozne += 1;
+                }
+            }
+            if (rozne == 1) {
+                ile += 1;
+            }
+        }
+        wynik.println(&quot;4.2 &quot; + ile);
+
+        // 4.3
+        List&lt;int[]&gt; srodki = new ArrayList&lt;&gt;();
+        for (int w = 1; w &lt; napisy.size() - 1; w++) {
+            for (int k = 1; k &lt; napisy.get(w).length() - 1; k++) {
+                char znak = napisy.get(w).charAt(k);
+                boolean kwadrat = true;
+                for (int dw = -1; dw &lt;= 1; dw++) {
+                    for (int dk = -1; dk &lt;= 1; dk++) {
+                        if (napisy.get(w + dw).charAt(k + dk) != znak) {
+                            kwadrat = false;
+                        }
+                    }
+                }
+                if (kwadrat) {
+                    srodki.add(new int[]{w + 1, k + 1});
+                }
+            }
+        }
+        wynik.println(&quot;4.3 &quot; + srodki.size());
+        for (int[] s : srodki) {
+            wynik.println(s[0] + &quot; &quot; + s[1]);
+        }
+
+        // 4.4 i 4.5
+        String najwiekszy = napisy.get(0);
+        for (String napis : napisy) {
+            if (naLiczbe(napis) &gt; naLiczbe(najwiekszy)) {
+                najwiekszy = napis;
+            }
+        }
+        wynik.println(&quot;4.4 &quot; + naLiczbe(najwiekszy) + &quot; &quot; + najwiekszy);
+
+        long suma = 0;
+        for (String napis : napisy) {
+            suma += naLiczbe(napis);
+        }
+        wynik.println(&quot;4.5 &quot; + suma + &quot; &quot; + naNapis(suma));
+
+        wynik.close();
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: ++o+o++o+o++, +\<em>+\</em>\<em>++\</em>\<em>+\</em>+, \<em>+o++\</em>\<em>++o+\</em>, \<em>oo\*o\</em>\<em>o\*oo\</em>, +\<em>++\*oo\</em>++\*+, +o++oooo++o+. 4.2: 32. 4.3: 3 kwadraty, środki: (399, 5), (546, 2), (630, 11). 4.4: 531246, <code>*******o+*+o</code>. 4.5: 527865439, <code>++oo*+oo*++ooo*o*++</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%2C%204.4%20i%204.5&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-maj-f2015.html%234-1-4-2-4-3-4-4-i-4-5" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2025_maj_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

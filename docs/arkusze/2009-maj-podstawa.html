@@ -37,7 +37,11 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1a-i-1b">1a i 1b</a></li><li><a href="#1c">1c</a></li><li><a href="#2a-i-2b">2a i 2b</a></li><li><a href="#4a-i-4b">4a i 4b</a></li><li><a href="#4c">4c</a></li><li><a href="#4d">4d</a></li><li><a href="#5">5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2009 — maj, poziom podstawowy</span></nav>
-<h1 class="page-title">Matura 2009 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a-i-1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a-i-1b">1a i 1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(ciag):
+<h1 class="page-title">Matura 2009 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2009-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a-i-1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a-i-1b">1a i 1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (rzut oszczepem). Wyniki zawodników:</p><ul><li>A: 60,51 61,34 61,85 61,97 62,79 63,00 63,81 63,88</li><li>B: 60,41 60,44 60,85 62,71 61,79 60,00</li><li>C: 61,45 60,89 60,20 60,01 59,22 58,99 58,75</li></ul><p>Algorytm dla niepustego ciągu liczb dodatnich:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">1. aktualna ← pierwsza liczba
+2. jeśli brak kolejnej liczby → wypisz TAK, koniec
+3. następna ← kolejna liczba
+4. jeśli następna &gt; aktualna: aktualna ← następna, wróć do 2
+   w przeciwnym razie → wypisz NIE, koniec</code></pre></div></div></div><ul><li>1a — określ, kiedy algorytm wypisuje TAK, a kiedy NIE (uzupełnij wynik w specyfikacji);</li><li>1b — podaj, ile razy zostanie wykonany krok 3 dla ciągu wyników zawodników A, B i C.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(ciag):
     ile_razy = 0  # ile razy wykonano krok 3.
     aktualna = ciag[0]
     i = 1
@@ -57,7 +61,66 @@ B = [60.41, 60.44, 60.85, 62.71, 61.79, 60.00]
 C = [61.45, 60.89, 60.20, 60.01, 59.22, 58.99, 58.75]
 
 for ciag in [A, B, C]:
-    print(*algorytm(ciag))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) TAK, gdy ciąg jest rosnący, w przeciwnym przypadku NIE; b) A: 7, B: 4, C: 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najwiekszy(ciag):
+    print(*algorytm(ciag))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::pair&lt;std::string, int&gt; algorytm(const std::vector&lt;double&gt;&amp; ciag) {
+    int ile_razy = 0; // ile razy wykonano krok 3.
+    double aktualna = ciag[0];
+    size_t i = 1;
+    while (i &lt; ciag.size()) {
+        double nastepna = ciag[i];
+        ile_razy++;
+        i++;
+        if (nastepna &gt; aktualna)
+            aktualna = nastepna;
+        else
+            return {&quot;NIE&quot;, ile_razy};
+    }
+    return {&quot;TAK&quot;, ile_razy};
+}
+
+int main() {
+    std::vector&lt;double&gt; A = {60.51, 61.34, 61.85, 61.97, 62.79, 63.00, 63.81, 63.88};
+    std::vector&lt;double&gt; B = {60.41, 60.44, 60.85, 62.71, 61.79, 60.00};
+    std::vector&lt;double&gt; C = {61.45, 60.89, 60.20, 60.01, 59.22, 58.99, 58.75};
+
+    for (const auto&amp; ciag : {A, B, C}) {
+        auto [odpowiedz, ile_razy] = algorytm(ciag);
+        std::println(&quot;{} {}&quot;, odpowiedz, ile_razy);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    record Wynik(String odpowiedz, int ileRazy) {}
+
+    static Wynik algorytm(double[] ciag) {
+        int ileRazy = 0; // ile razy wykonano krok 3.
+        double aktualna = ciag[0];
+        int i = 1;
+        while (i &lt; ciag.length) {
+            double nastepna = ciag[i];
+            ileRazy++;
+            i++;
+            if (nastepna &gt; aktualna)
+                aktualna = nastepna;
+            else
+                return new Wynik(&quot;NIE&quot;, ileRazy);
+        }
+        return new Wynik(&quot;TAK&quot;, ileRazy);
+    }
+
+    public static void main(String[] args) {
+        double[] A = {60.51, 61.34, 61.85, 61.97, 62.79, 63.00, 63.81, 63.88};
+        double[] B = {60.41, 60.44, 60.85, 62.71, 61.79, 60.00};
+        double[] C = {61.45, 60.89, 60.20, 60.01, 59.22, 58.99, 58.75};
+
+        for (double[] ciag : new double[][]{A, B, C}) {
+            Wynik w = algorytm(ciag);
+            System.out.println(w.odpowiedz() + &quot; &quot; + w.ileRazy());
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) TAK, gdy ciąg jest rosnący, w przeciwnym przypadku NIE; b) A: 7, B: 4, C: 1</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201a%20i%201b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html%231a-i-1b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zmodyfikuj algorytm z zadania 1 tak, aby dla niepustego, skończonego ciągu liczb dodatnich znajdował najlepszy wynik zawodnika, czyli największą liczbę w ciągu. Zapisz go w wybranej notacji.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najwiekszy(ciag):
     maks = ciag[0]
     for liczba in ciag[1:]:
         if liczba &gt; maks:
@@ -65,7 +128,30 @@ for ciag in [A, B, C]:
     return maks
 
 
-print(najwiekszy([60.41, 60.44, 60.85, 62.71, 61.79, 60.00]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> algorytm wyznaczania maksimum (dla zawodnika B: 62.71)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dwojkowy_na_dziesietny(s):
+print(najwiekszy([60.41, 60.44, 60.85, 62.71, 61.79, 60.00]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+double najwiekszy(const std::vector&lt;double&gt;&amp; ciag) {
+    double maks = ciag[0];
+    for (size_t i = 1; i &lt; ciag.size(); i++)
+        if (ciag[i] &gt; maks) maks = ciag[i];
+    return maks;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, najwiekszy({60.41, 60.44, 60.85, 62.71, 61.79, 60.00}));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static double najwiekszy(double[] ciag) {
+        double maks = ciag[0];
+        for (int i = 1; i &lt; ciag.length; i++)
+            if (ciag[i] &gt; maks) maks = ciag[i];
+        return maks;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(najwiekszy(new double[]{60.41, 60.44, 60.85, 62.71, 61.79, 60.00}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> algorytm wyznaczania maksimum (dla zawodnika B: 62.71)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html%231c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2. Ceny podawane są w systemie dwójkowym i dziesiętnym (z dwoma miejscami po przecinku).</p><ul><li>2a — uzupełnij cennik: kakao 111,11₂ = 7,75; herbata czarna 100,01₂ = ?; herbata owocowa ? = 4,50; capuccino 101,00₂ = ?; kawa espresso ? = 6,00;</li><li>2b — zapisz algorytm przeliczania ceny z systemu dwójkowego na dziesiętny. Dane: napis <code>s</code> złożony z zer i jedynek, przecinka i dwóch cyfr binarnych po przecinku (część przed przecinkiem niepusta). Wynik: wartość dziesiętna <code>w</code> tej liczby.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dwojkowy_na_dziesietny(s):
     calkowita, ulamkowa = s.split(&quot;,&quot;)
     w = 0
     for cyfra in calkowita:
@@ -89,7 +175,77 @@ print(&quot;kakao&quot;, dwojkowy_na_dziesietny(&quot;111,11&quot;))
 print(&quot;herbata czarna&quot;, dwojkowy_na_dziesietny(&quot;100,01&quot;))
 print(&quot;herbata owocowa&quot;, dziesietny_na_dwojkowy(4.50))
 print(&quot;capuccino&quot;, dwojkowy_na_dziesietny(&quot;101,00&quot;))
-print(&quot;kawa espresso&quot;, dziesietny_na_dwojkowy(6.00))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> herbata czarna 4,25; herbata owocowa 100,10; capuccino 5,00; kawa espresso 110,00</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-i-4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a-i-4b">4a i 4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">srednie = []
+print(&quot;kawa espresso&quot;, dziesietny_na_dwojkowy(6.00))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;format&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+double dwojkowy_na_dziesietny(const std::string&amp; s) {
+    size_t przecinek = s.find(&#x27;,&#x27;);
+    std::string calkowita = s.substr(0, przecinek);
+    std::string ulamkowa = s.substr(przecinek + 1);
+    double w = 0;
+    for (char cyfra : calkowita)
+        w = w * 2 + (cyfra - &#x27;0&#x27;);
+    w = w + (ulamkowa[0] - &#x27;0&#x27;) * 0.5 + (ulamkowa[1] - &#x27;0&#x27;) * 0.25;
+    return w;
+}
+
+std::string dziesietny_na_dwojkowy(double x) {
+    int calkowita = (int)x;
+    double ulamkowa = x - calkowita;
+    std::string napis = std::format(&quot;{:b}&quot;, calkowita) + &quot;,&quot;; // {:b} - zapis dwójkowy
+    for (int k = 0; k &lt; 2; k++) {
+        ulamkowa *= 2;
+        napis += std::to_string((int)ulamkowa);
+        ulamkowa -= (int)ulamkowa;
+    }
+    return napis;
+}
+
+// liczba rzeczywista wypisana jak w Pythonie (5.0 zamiast 5)
+std::string zapis(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find_first_of(&quot;.e&quot;) == std::string::npos) s += &quot;.0&quot;;
+    return s;
+}
+
+int main() {
+    std::println(&quot;kakao {}&quot;, zapis(dwojkowy_na_dziesietny(&quot;111,11&quot;)));
+    std::println(&quot;herbata czarna {}&quot;, zapis(dwojkowy_na_dziesietny(&quot;100,01&quot;)));
+    std::println(&quot;herbata owocowa {}&quot;, dziesietny_na_dwojkowy(4.50));
+    std::println(&quot;capuccino {}&quot;, zapis(dwojkowy_na_dziesietny(&quot;101,00&quot;)));
+    std::println(&quot;kawa espresso {}&quot;, dziesietny_na_dwojkowy(6.00));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static double dwojkowyNaDziesietny(String s) {
+        String[] czesci = s.split(&quot;,&quot;);
+        String calkowita = czesci[0], ulamkowa = czesci[1];
+        double w = 0;
+        for (char cyfra : calkowita.toCharArray())
+            w = w * 2 + (cyfra - &#x27;0&#x27;);
+        w = w + (ulamkowa.charAt(0) - &#x27;0&#x27;) * 0.5 + (ulamkowa.charAt(1) - &#x27;0&#x27;) * 0.25;
+        return w;
+    }
+
+    static String dziesietnyNaDwojkowy(double x) {
+        int calkowita = (int) x;
+        double ulamkowa = x - calkowita;
+        String napis = Integer.toBinaryString(calkowita) + &quot;,&quot;;
+        for (int k = 0; k &lt; 2; k++) {
+            ulamkowa *= 2;
+            napis += (int) ulamkowa;
+            ulamkowa -= (int) ulamkowa;
+        }
+        return napis;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(&quot;kakao &quot; + dwojkowyNaDziesietny(&quot;111,11&quot;));
+        System.out.println(&quot;herbata czarna &quot; + dwojkowyNaDziesietny(&quot;100,01&quot;));
+        System.out.println(&quot;herbata owocowa &quot; + dziesietnyNaDwojkowy(4.50));
+        System.out.println(&quot;capuccino &quot; + dwojkowyNaDziesietny(&quot;101,00&quot;));
+        System.out.println(&quot;kawa espresso &quot; + dziesietnyNaDwojkowy(6.00));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> herbata czarna 4,25; herbata owocowa 100,10; capuccino 5,00; kawa espresso 110,00</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202a%20i%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html%232a-i-2b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-i-4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a-i-4b">4a i 4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (temperatury). Plik <code>temp.txt</code> zawiera średnie temperatury miesięczne w Warszawie w latach 1779–2006: w każdym wierszu rok i 12 temperatur (liczby z przecinkiem dziesiętnym, oddzielone spacjami). Odpowiedzi zapisz w pliku <code>zad_4.txt</code>, poprzedzając je literą podpunktu. Średnia roczna to suma 12 średnich miesięcznych podzielona przez 12.</p><ul><li>4a — podaj najniższą średnią roczną temperaturę (z dwoma miejscami po przecinku) i rok jej wystąpienia;</li><li>4b — podaj najwyższą średnią roczną temperaturę (z dwoma miejscami po przecinku) i rok jej wystąpienia.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">srednie = []
 
 with open(&quot;temp.txt&quot;) as file:
     for line in file:
@@ -101,7 +257,62 @@ with open(&quot;temp.txt&quot;) as file:
 najnizsza = min(srednie)
 najwyzsza = max(srednie)
 print(&quot;a)&quot;, round(najnizsza[0], 2), najnizsza[1])
-print(&quot;b)&quot;, round(najwyzsza[0], 2), najwyzsza[1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 4,74 — rok 1829; b) 9,82 — rok 1989</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4c">4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiace = [[] for _ in range(12)]
+print(&quot;b)&quot;, round(najwyzsza[0], 2), najwyzsza[1])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::pair&lt;double, int&gt;&gt; srednie; // (średnia, rok)
+    std::ifstream plik(&quot;temp.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::replace(linia.begin(), linia.end(), &#x27;,&#x27;, &#x27;.&#x27;); // przecinek dziesiętny -&gt; kropka
+        std::istringstream ss(linia);
+        int rok;
+        if (!(ss &gt;&gt; rok)) continue;
+        double suma = 0, t;
+        for (int i = 0; i &lt; 12; i++) {
+            ss &gt;&gt; t;
+            suma += t;
+        }
+        srednie.push_back({suma / 12, rok});
+    }
+
+    // pary porównują się najpierw po średniej, potem po roku - jak krotki w Pythonie
+    auto najnizsza = *std::min_element(srednie.begin(), srednie.end());
+    auto najwyzsza = *std::max_element(srednie.begin(), srednie.end());
+    std::println(&quot;a) {} {}&quot;, std::round(najnizsza.first * 100) / 100, najnizsza.second);
+    std::println(&quot;b) {} {}&quot;, std::round(najwyzsza.first * 100) / 100, najwyzsza.second);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    record Srednia(double wartosc, int rok) {}
+
+    public static void main(String[] args) throws Exception {
+        var srednie = new ArrayList&lt;Srednia&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;temp.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            String[] dane = linia.strip().replace(&quot;,&quot;, &quot;.&quot;).split(&quot;\\s+&quot;);
+            int rok = Integer.parseInt(dane[0]);
+            double suma = 0;
+            for (int i = 1; i &lt;= 12; i++) suma += Double.parseDouble(dane[i]);
+            srednie.add(new Srednia(suma / 12, rok));
+        }
+
+        // porównujemy najpierw po średniej, potem po roku - jak krotki w Pythonie
+        var porownanie = Comparator.comparingDouble(Srednia::wartosc).thenComparingInt(Srednia::rok);
+        Srednia najnizsza = Collections.min(srednie, porownanie);
+        Srednia najwyzsza = Collections.max(srednie, porownanie);
+        System.out.println(&quot;a) &quot; + Math.round(najnizsza.wartosc() * 100) / 100.0 + &quot; &quot; + najnizsza.rok());
+        System.out.println(&quot;b) &quot; + Math.round(najwyzsza.wartosc() * 100) / 100.0 + &quot; &quot; + najwyzsza.rok());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 4,74 — rok 1829; b) 9,82 — rok 1989</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204a%20i%204b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html%234a-i-4b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4c">4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie pliku <code>temp.txt</code> dla każdego z 12 miesięcy podaj minimalną i maksymalną średnią miesięczną temperaturę odnotowaną w latach 1779–2006 (zapisz w <code>zad_4.txt</code>). Sporządź wykres punktowy ilustrujący to zestawienie, z czytelnym opisem.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiace = [[] for _ in range(12)]
 
 with open(&quot;temp.txt&quot;) as file:
     for line in file:
@@ -110,7 +321,57 @@ with open(&quot;temp.txt&quot;) as file:
             miesiace[i].append(float(dane[i + 1]))
 
 for i in range(12):
-    print(i + 1, min(miesiace[i]), max(miesiace[i]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (miesiąc, min, max) 1: -13,5 3,5; 2: -13,7 5,1; 3: -6,9 7,4; 4: 2,4 13,2; 5: 7,9 18,2; 6: 13,0 22,4; 7: 14,6 23,5; 8: 14,0 23,8; 9: 9,1 16,8; 10: 1,8 12,6; 11: -3,4 7,6; 12: -14,8 3,9 (wykres punktowy wykonuje się w arkuszu kalkulacyjnym)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4d" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4d">4d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lata = []
+    print(i + 1, min(miesiace[i]), max(miesiace[i]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// liczba rzeczywista wypisana jak w Pythonie (13.0 zamiast 13)
+std::string zapis(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find_first_of(&quot;.e&quot;) == std::string::npos) s += &quot;.0&quot;;
+    return s;
+}
+
+int main() {
+    std::vector&lt;std::vector&lt;double&gt;&gt; miesiace(12);
+    std::ifstream plik(&quot;temp.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::replace(linia.begin(), linia.end(), &#x27;,&#x27;, &#x27;.&#x27;); // przecinek dziesiętny -&gt; kropka
+        std::istringstream ss(linia);
+        int rok;
+        if (!(ss &gt;&gt; rok)) continue;
+        double t;
+        for (int i = 0; i &lt; 12; i++) {
+            ss &gt;&gt; t;
+            miesiace[i].push_back(t);
+        }
+    }
+
+    for (int i = 0; i &lt; 12; i++)
+        std::println(&quot;{} {} {}&quot;, i + 1, zapis(std::ranges::min(miesiace[i])), zapis(std::ranges::max(miesiace[i])));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var miesiace = new ArrayList&lt;List&lt;Double&gt;&gt;();
+        for (int i = 0; i &lt; 12; i++) miesiace.add(new ArrayList&lt;&gt;());
+        for (String linia : Files.readAllLines(Path.of(&quot;temp.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            String[] dane = linia.strip().replace(&quot;,&quot;, &quot;.&quot;).split(&quot;\\s+&quot;);
+            for (int i = 0; i &lt; 12; i++)
+                miesiace.get(i).add(Double.parseDouble(dane[i + 1]));
+        }
+
+        for (int i = 0; i &lt; 12; i++)
+            System.out.println((i + 1) + &quot; &quot; + Collections.min(miesiace.get(i)) + &quot; &quot; + Collections.max(miesiace.get(i)));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (miesiąc, min, max) 1: -13,5 3,5; 2: -13,7 5,1; 3: -6,9 7,4; 4: 2,4 13,2; 5: 7,9 18,2; 6: 13,0 22,4; 7: 14,6 23,5; 8: 14,0 23,8; 9: 9,1 16,8; 10: 1,8 12,6; 11: -3,4 7,6; 12: -14,8 3,9 (wykres punktowy wykonuje się w arkuszu kalkulacyjnym)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html%234c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4d" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4d">4d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>temp.txt</code> znajdź najdłuższy malejący ciąg średnich temperatur sierpnia w kolejnych latach. Podaj rok początkowy, rok końcowy i długość tego ciągu (np. w ciągu 20,4; 18,3; 18,7; 19,6; 17,0; 16,6; 16,4; 16,4; 17,9 najdłuższy malejący fragment to 19,6; 17,0; 16,6; 16,4 o długości 4).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lata = []
 sierpien = []
 
 with open(&quot;temp.txt&quot;) as file:
@@ -132,7 +393,69 @@ for i in range(1, len(sierpien)):
         najdluzszy = dlugosc
         koniec = i
 
-print(lata[koniec - najdluzszy + 1], lata[koniec], najdluzszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> od 1982 do 1987, długość 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+print(lata[koniec - najdluzszy + 1], lata[koniec], najdluzszy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; lata;
+    std::vector&lt;double&gt; sierpien;
+    std::ifstream plik(&quot;temp.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::replace(linia.begin(), linia.end(), &#x27;,&#x27;, &#x27;.&#x27;); // przecinek dziesiętny -&gt; kropka
+        std::istringstream ss(linia);
+        int rok;
+        if (!(ss &gt;&gt; rok)) continue;
+        double t;
+        for (int i = 1; i &lt;= 8; i++) ss &gt;&gt; t; // 8. liczba po roku to sierpień
+        lata.push_back(rok);
+        sierpien.push_back(t);
+    }
+
+    int dlugosc = 1, najdluzszy = 1, koniec = 0;
+    for (int i = 1; i &lt; (int)sierpien.size(); i++) {
+        if (sierpien[i] &lt; sierpien[i - 1])
+            dlugosc++;
+        else
+            dlugosc = 1;
+        if (dlugosc &gt; najdluzszy) {
+            najdluzszy = dlugosc;
+            koniec = i;
+        }
+    }
+    std::println(&quot;{} {} {}&quot;, lata[koniec - najdluzszy + 1], lata[koniec], najdluzszy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var lata = new ArrayList&lt;Integer&gt;();
+        var sierpien = new ArrayList&lt;Double&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;temp.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            String[] dane = linia.strip().replace(&quot;,&quot;, &quot;.&quot;).split(&quot;\\s+&quot;);
+            lata.add(Integer.parseInt(dane[0]));
+            sierpien.add(Double.parseDouble(dane[8]));
+        }
+
+        int dlugosc = 1, najdluzszy = 1, koniec = 0;
+        for (int i = 1; i &lt; sierpien.size(); i++) {
+            if (sierpien.get(i) &lt; sierpien.get(i - 1))
+                dlugosc++;
+            else
+                dlugosc = 1;
+            if (dlugosc &gt; najdluzszy) {
+                najdluzszy = dlugosc;
+                koniec = i;
+            }
+        }
+        System.out.println(lata.get(koniec - najdluzszy + 1) + &quot; &quot; + lata.get(koniec) + &quot; &quot; + najdluzszy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> od 1982 do 1987, długość 6</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html%234d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5 (liczby pierwsze). Plik <code>liczby.txt</code> zawiera 500 liczb całkowitych dodatnich (co najwyżej 6-cyfrowych), po jednej w wierszu. Napisz program, który wybierze z pliku tylko te liczby, które są kwadratami liczb pierwszych (np. 49 = 7²), i zapisze je w pliku <code>zad_5.txt</code>. Program ma działać poprawnie dla dowolnych innych 500 takich liczb.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -154,7 +477,59 @@ with open(&quot;liczby.txt&quot;) as file:
                 pierwiastek += 1
             if pierwiastek * pierwiastek == liczba and czy_pierwsza(pierwiastek):
                 print(liczba)
-                wynik.write(str(liczba) + &quot;\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 5041, 1369, 32041, 844561, 4, 96721, 9, 942841, 49, 1849, 528529, 121, 961, 169</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+                wynik.write(str(liczba) + &quot;\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+
+bool czy_pierwsza(long long x) {
+    if (x &lt; 2) return false;
+    for (long long i = 2; i * i &lt;= x; i++)
+        if (x % i == 0) return false;
+    return true;
+}
+
+int main() {
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::ofstream wynik(&quot;zad_5.txt&quot;);
+    long long liczba;
+    while (plik &gt;&gt; liczba) {
+        long long pierwiastek = (long long)std::sqrt((double)liczba);
+        // poprawka ewentualnego błędu zaokrąglenia sqrt
+        while (pierwiastek * pierwiastek &gt; liczba) pierwiastek--;
+        while ((pierwiastek + 1) * (pierwiastek + 1) &lt;= liczba) pierwiastek++;
+        if (pierwiastek * pierwiastek == liczba &amp;&amp; czy_pierwsza(pierwiastek)) {
+            std::println(&quot;{}&quot;, liczba);
+            wynik &lt;&lt; liczba &lt;&lt; &quot;\n&quot;;
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.*;
+
+public class Zadanie {
+    static boolean czyPierwsza(long x) {
+        if (x &lt; 2) return false;
+        for (long i = 2; i * i &lt;= x; i++)
+            if (x % i == 0) return false;
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        try (var wynik = new PrintWriter(&quot;zad_5.txt&quot;)) {
+            for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+                if (linia.isBlank()) continue;
+                long liczba = Long.parseLong(linia.strip());
+                long pierwiastek = (long) Math.sqrt(liczba);
+                // poprawka ewentualnego błędu zaokrąglenia sqrt
+                while (pierwiastek * pierwiastek &gt; liczba) pierwiastek--;
+                while ((pierwiastek + 1) * (pierwiastek + 1) &lt;= liczba) pierwiastek++;
+                if (pierwiastek * pierwiastek == liczba &amp;&amp; czyPierwsza(pierwiastek)) {
+                    System.out.println(liczba);
+                    wynik.println(liczba);
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 5041, 1369, 32041, 844561, 4, 96721, 9, 942841, 49, 1849, 528529, 121, 961, 169</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202009%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2009-maj-podstawa.html%235" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2009_maj_podstawa/2009_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

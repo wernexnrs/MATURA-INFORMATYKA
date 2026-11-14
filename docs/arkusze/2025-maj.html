@@ -37,7 +37,19 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#1-3">1.3</a></li><li><a href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></li><li><a href="#3-1-i-3-2">3.1 i 3.2</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2025 — maj, poziom rozszerzony (formuła 2023)</span></nav>
-<h1 class="page-title">Matura 2025 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+<h1 class="page-title">Matura 2025 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2025-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest rekurencyjna funkcja przestaw dla nieujemnej liczby całkowitej n (mod — reszta, div — część całkowita z dzielenia):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">przestaw(n):
+    r ← n mod 100
+    a ← r div 10
+    b ← r mod 10
+    n ← n div 100
+    jeżeli n &gt; 0
+        w ← a + 10 * b + 100 * przestaw(n)
+    w przeciwnym razie
+        jeżeli a &gt; 0
+            w ← a + 10 * b
+        w przeciwnym razie
+            w ← b
+    wynikiem jest w</code></pre></div></div></div><ul><li>1.1 — Uzupełnij tabelę: dla n = 43657688, 154005710 i 998877665544321 podaj wynik przestaw(n) oraz łączną liczbę wywołań funkcji (z pierwszym włącznie). Przykład: przestaw(316498) = 134689, 3 wywołania.</li><li>1.2 — Oceń (P/F), czy liczba wywołań funkcji dla liczby k-cyfrowej (k &gt; 0) jest równa: 1) k/2; 2) (k + 1) div 2; 3) k/2 dla parzystego k oraz (k + 1)/2 dla nieparzystego k; 4) k/2 + 1.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
 
 
 def przestaw(n):
@@ -71,7 +83,105 @@ for k in range(1, 9):
     wzor3 = k / 2 if k % 2 == 0 else (k + 1) / 2
     wzor4 = (k + 1) / 2
     print(k, wywolania, wzor1 == wywolania, wzor2 == wywolania,
-          wzor3 == wywolania, wzor4 == wywolania)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 316498 → 134689, 3 wywołania; 43657688 → 34566788, 4; 154005710 → 145007501, 5; 998877665544321 → 989786756453412, 8. 1.2: 1. F, 2. P, 3. P, 4. F (liczba wywołań to (k + 1) div 2).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-3">1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def przestaw2(n):
+          wzor3 == wywolania, wzor4 == wywolania)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int wywolania = 0;
+
+long long przestaw(long long n) {
+    wywolania += 1;
+    long long r = n % 100;
+    long long a = r / 10;
+    long long b = r % 10;
+    n = n / 100;
+    long long w;
+    if (n &gt; 0) {
+        w = a + 10 * b + 100 * przestaw(n);
+    } else {
+        if (a &gt; 0) {
+            w = a + 10 * b;
+        } else {
+            w = b;
+        }
+    }
+    return w;
+}
+
+// wartość logiczna wypisana tak jak w Pythonie
+const char* napis(bool w) {
+    return w ? &quot;True&quot; : &quot;False&quot;;
+}
+
+int main() {
+    // 1.1 (największa liczba ma 15 cyfr - potrzebny long long)
+    for (long long n : {316498LL, 43657688LL, 154005710LL, 998877665544321LL}) {
+        wywolania = 0;
+        long long wynik = przestaw(n);
+        std::println(&quot;{} {} {}&quot;, n, wynik, wywolania);
+    }
+
+    // 1.2 - liczba wywołań dla liczb k-cyfrowych porównana ze wzorami
+    long long dziesiatka_do_k = 1;      // 10^(k-1)
+    for (int k = 1; k &lt; 9; k++) {
+        wywolania = 0;
+        przestaw(dziesiatka_do_k);      // dowolna liczba k-cyfrowa
+        dziesiatka_do_k *= 10;
+        double wzor1 = k / 2.0;
+        int wzor2 = (k + 1) / 2;
+        double wzor3 = k % 2 == 0 ? k / 2.0 : (k + 1) / 2.0;
+        double wzor4 = (k + 1) / 2.0;
+        std::println(&quot;{} {} {} {} {} {}&quot;, k, wywolania, napis(wzor1 == wywolania), napis(wzor2 == wywolania),
+                     napis(wzor3 == wywolania), napis(wzor4 == wywolania));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int wywolania = 0;
+
+    static long przestaw(long n) {
+        wywolania += 1;
+        long r = n % 100;
+        long a = r / 10;
+        long b = r % 10;
+        n = n / 100;
+        long w;
+        if (n &gt; 0) {
+            w = a + 10 * b + 100 * przestaw(n);
+        } else {
+            if (a &gt; 0) {
+                w = a + 10 * b;
+            } else {
+                w = b;
+            }
+        }
+        return w;
+    }
+
+    // wartość logiczna wypisana tak jak w Pythonie
+    static String napis(boolean w) {
+        return w ? &quot;True&quot; : &quot;False&quot;;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1 (największa liczba ma 15 cyfr - potrzebny long)
+        for (long n : new long[]{316498L, 43657688L, 154005710L, 998877665544321L}) {
+            wywolania = 0;
+            long wynik = przestaw(n);
+            System.out.println(n + &quot; &quot; + wynik + &quot; &quot; + wywolania);
+        }
+
+        // 1.2 - liczba wywołań dla liczb k-cyfrowych porównana ze wzorami
+        long dziesiatkaDoK = 1;             // 10^(k-1)
+        for (int k = 1; k &lt; 9; k++) {
+            wywolania = 0;
+            przestaw(dziesiatkaDoK);        // dowolna liczba k-cyfrowa
+            dziesiatkaDoK *= 10;
+            double wzor1 = k / 2.0;
+            int wzor2 = (k + 1) / 2;
+            double wzor3 = k % 2 == 0 ? k / 2.0 : (k + 1) / 2.0;
+            double wzor4 = (k + 1) / 2.0;
+            System.out.println(k + &quot; &quot; + wywolania + &quot; &quot; + napis(wzor1 == wywolania) + &quot; &quot; + napis(wzor2 == wywolania)
+                    + &quot; &quot; + napis(wzor3 == wywolania) + &quot; &quot; + napis(wzor4 == wywolania));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 316498 → 134689, 3 wywołania; 43657688 → 34566788, 4; 154005710 → 145007501, 5; 998877665544321 → 989786756453412, 8. 1.2: 1. F, 2. P, 3. P, 4. F (liczba wywołań to (k + 1) div 2).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-maj.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-3">1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Funkcja przestaw jest opisana w zadaniu 1.1.</p><p>Napisz (w pseudokodzie lub wybranym języku) nierekurencyjną funkcję przestaw2, która dla nieujemnej liczby całkowitej n zwraca taką samą wartość w jak przestaw(n).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def przestaw2(n):
     w = 0
     p = 1
     while n &gt; 0:
@@ -105,7 +215,97 @@ def przestaw(n):
 
 
 for n in range(0, 200000):
-    assert przestaw(n) == przestaw2(n)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> funkcja <code>przestaw2</code> (daje te same wyniki co <code>przestaw</code>).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;symbole.txt&quot;) as file:
+    assert przestaw(n) == przestaw2(n)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+long long przestaw2(long long n) {
+    long long w = 0;
+    long long p = 1;
+    while (n &gt; 0) {
+        long long r = n % 100;
+        long long a = r / 10;
+        long long b = r % 10;
+        if (n &gt; 9) {
+            w = p * a + 10 * p * b + w;
+        } else {
+            w = p * b + w;
+        }
+        n = n / 100;
+        p = p * 100;
+    }
+    return w;
+}
+
+// sprawdzenie z wersją rekurencyjną
+long long przestaw(long long n) {
+    long long r = n % 100;
+    long long a = r / 10;
+    long long b = r % 10;
+    n = n / 100;
+    if (n &gt; 0) {
+        return a + 10 * b + 100 * przestaw(n);
+    }
+    if (a &gt; 0) {
+        return a + 10 * b;
+    }
+    return b;
+}
+
+int main() {
+    for (long long n : {316498LL, 43657688LL, 154005710LL, 998877665544321LL}) {
+        std::println(&quot;{} {}&quot;, n, przestaw2(n));
+    }
+
+    for (long long n = 0; n &lt; 200000; n++) {
+        if (przestaw(n) != przestaw2(n)) {
+            std::println(&quot;BŁĄD dla n = {}&quot;, n);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long przestaw2(long n) {
+        long w = 0;
+        long p = 1;
+        while (n &gt; 0) {
+            long r = n % 100;
+            long a = r / 10;
+            long b = r % 10;
+            if (n &gt; 9) {
+                w = p * a + 10 * p * b + w;
+            } else {
+                w = p * b + w;
+            }
+            n = n / 100;
+            p = p * 100;
+        }
+        return w;
+    }
+
+    // sprawdzenie z wersją rekurencyjną
+    static long przestaw(long n) {
+        long r = n % 100;
+        long a = r / 10;
+        long b = r % 10;
+        n = n / 100;
+        if (n &gt; 0) {
+            return a + 10 * b + 100 * przestaw(n);
+        }
+        if (a &gt; 0) {
+            return a + 10 * b;
+        }
+        return b;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (long n : new long[]{316498L, 43657688L, 154005710L, 998877665544321L}) {
+            System.out.println(n + &quot; &quot; + przestaw2(n));
+        }
+
+        for (long n = 0; n &lt; 200000; n++) {
+            if (przestaw(n) != przestaw2(n)) {
+                System.out.println(&quot;BŁĄD dla n = &quot; + n);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> funkcja <code>przestaw2</code> (daje te same wyniki co <code>przestaw</code>).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-maj.html%231-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>symbole.txt</code> zawiera 2000 napisów, każdy w osobnym wierszu i złożony z dokładnie 12 znaków spośród <code>o</code>, <code>+</code>, <code>*</code>. Odpowiedzi zapisz w pliku <code>wyniki2.txt</code>, poprzedzając każdą numerem zadania. Plik <code>symbole_przyklad.txt</code> (20 wierszy) służy do testów.</p><ul><li>2.1 — Wypisz (po jednym w wierszu, w kolejności z pliku) wszystkie napisy będące palindromami (dla pliku przykładowego: <code>oooo+**+oooo</code>).</li><li>2.2 — Traktując plik jako prostokąt znaków, znajdź wszystkie „kwadraty” 3 × 3 złożone z dziewięciu jednakowych symboli. Podaj ich liczbę oraz dla każdego numer wiersza i numer pozycji w wierszu (licząc od 1) jego środkowego pola (dla pliku przykładowego: <code>1 6 3</code>).</li><li>2.3 — Każdy napis traktujemy jako liczbę w systemie trójkowym: <code>o</code> = 0, <code>+</code> = 1, <code>*</code> = 2. Podaj największą z tych liczb w zapisie dziesiętnym oraz odpowiadający jej napis (dla pliku przykładowego: <code>519789 ***+o*ooo++o</code>).</li><li>2.4 — Oblicz sumę wszystkich liczb z pliku (w rozumieniu 2.3). Podaj ją dziesiętnie oraz w zapisie trójkowym symbolami <code>o</code>, <code>+</code>, <code>*</code> (dla pliku przykładowego: <code>4841542 +oooo****+oo+o+</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;symbole.txt&quot;) as file:
     napisy = [wiersz.strip() for wiersz in file]
 
 # 2.1
@@ -155,7 +355,164 @@ najwiekszy = max(napisy, key=na_liczbe)
 print(&quot;2.3&quot;, na_liczbe(najwiekszy), najwiekszy)
 
 suma = sum(na_liczbe(napis) for napis in napisy)
-print(&quot;2.4&quot;, suma, na_napis(suma))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: ++o+o++o+o++, +<em>+<strong>++</strong>+</em>+, <em>+o++<strong>++o+</em>, <em>oo*o</strong>o*oo</em>, +<em>++*oo</em>++<em>+, +o++oooo++o+. 2.2: 3 kwadraty, środki: wiersz 399 pozycja 5, wiersz 546 pozycja 2, wiersz 630 pozycja 11. 2.3: 531246 <strong></em></strong><em>*o+</em>+o. 2.4: 527865439 ++oo*+oo*++ooo*o*++.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-2">3.1 i 3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import gcd
+print(&quot;2.4&quot;, suma, na_napis(suma))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+const std::string symbol = &quot;o+*&quot;;
+
+long long na_liczbe(const std::string&amp; napis) {
+    long long liczba = 0;
+    for (char znak : napis) {
+        liczba = liczba * 3 + symbol.find(znak);  // &quot;o&quot; -&gt; 0, &quot;+&quot; -&gt; 1, &quot;*&quot; -&gt; 2
+    }
+    return liczba;
+}
+
+std::string na_napis(long long liczba) {
+    std::string napis = &quot;&quot;;
+    while (liczba &gt; 0) {
+        napis = symbol[liczba % 3] + napis;
+        liczba /= 3;
+    }
+    return napis;
+}
+
+int main() {
+    std::ifstream plik(&quot;symbole.txt&quot;);
+    std::vector&lt;std::string&gt; napisy;
+    std::string wiersz;
+    while (plik &gt;&gt; wiersz) {
+        napisy.push_back(wiersz);
+    }
+
+    // 2.1
+    std::println(&quot;2.1&quot;);
+    for (const std::string&amp; napis : napisy) {
+        if (napis == std::string(napis.rbegin(), napis.rend())) {
+            std::println(&quot;{}&quot;, napis);
+        }
+    }
+
+    // 2.2
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; srodki;
+    for (int i = 1; i &lt; (int)napisy.size() - 1; i++) {
+        for (int j = 1; j &lt; 11; j++) {
+            char znak = napisy[i][j];
+            bool kwadrat = true;
+            for (int di = -1; di &lt;= 1; di++) {
+                for (int dj = -1; dj &lt;= 1; dj++) {
+                    if (napisy[i + di][j + dj] != znak) {
+                        kwadrat = false;
+                    }
+                }
+            }
+            if (kwadrat) {
+                srodki.push_back({i + 1, j + 1});   // numeracja od 1
+            }
+        }
+    }
+    std::print(&quot;2.2 {} &quot;, srodki.size());
+    for (auto [wiersz, pozycja] : srodki) {
+        std::print(&quot;{} {} &quot;, wiersz, pozycja);
+    }
+    std::println();
+
+    // 2.3 i 2.4
+    std::string najwiekszy = napisy[0];
+    for (const std::string&amp; napis : napisy) {
+        if (na_liczbe(napis) &gt; na_liczbe(najwiekszy)) {
+            najwiekszy = napis;
+        }
+    }
+    std::println(&quot;2.3 {} {}&quot;, na_liczbe(najwiekszy), najwiekszy);
+
+    long long suma = 0;
+    for (const std::string&amp; napis : napisy) {
+        suma += na_liczbe(napis);
+    }
+    std::println(&quot;2.4 {} {}&quot;, suma, na_napis(suma));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static final String SYMBOL = &quot;o+*&quot;;
+
+    static long naLiczbe(String napis) {
+        long liczba = 0;
+        for (char znak : napis.toCharArray()) {
+            liczba = liczba * 3 + SYMBOL.indexOf(znak);  // &quot;o&quot; -&gt; 0, &quot;+&quot; -&gt; 1, &quot;*&quot; -&gt; 2
+        }
+        return liczba;
+    }
+
+    static String naNapis(long liczba) {
+        String napis = &quot;&quot;;
+        while (liczba &gt; 0) {
+            napis = SYMBOL.charAt((int) (liczba % 3)) + napis;
+            liczba /= 3;
+        }
+        return napis;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;String&gt; napisy = new ArrayList&lt;&gt;();
+        for (String wiersz : Files.readAllLines(Path.of(&quot;symbole.txt&quot;))) {
+            napisy.add(wiersz.strip());
+        }
+
+        // 2.1
+        System.out.println(&quot;2.1&quot;);
+        for (String napis : napisy) {
+            if (napis.equals(new StringBuilder(napis).reverse().toString())) {
+                System.out.println(napis);
+            }
+        }
+
+        // 2.2
+        List&lt;int[]&gt; srodki = new ArrayList&lt;&gt;();
+        for (int i = 1; i &lt; napisy.size() - 1; i++) {
+            for (int j = 1; j &lt; 11; j++) {
+                char znak = napisy.get(i).charAt(j);
+                boolean kwadrat = true;
+                for (int di = -1; di &lt;= 1; di++) {
+                    for (int dj = -1; dj &lt;= 1; dj++) {
+                        if (napisy.get(i + di).charAt(j + dj) != znak) {
+                            kwadrat = false;
+                        }
+                    }
+                }
+                if (kwadrat) {
+                    srodki.add(new int[]{i + 1, j + 1});   // numeracja od 1
+                }
+            }
+        }
+        StringBuilder linia = new StringBuilder(&quot;2.2 &quot; + srodki.size() + &quot; &quot;);
+        for (int[] s : srodki) {
+            linia.append(s[0]).append(&quot; &quot;).append(s[1]).append(&quot; &quot;);
+        }
+        System.out.println(linia);
+
+        // 2.3 i 2.4
+        String najwiekszy = napisy.get(0);
+        for (String napis : napisy) {
+            if (naLiczbe(napis) &gt; naLiczbe(najwiekszy)) {
+                najwiekszy = napis;
+            }
+        }
+        System.out.println(&quot;2.3 &quot; + naLiczbe(najwiekszy) + &quot; &quot; + najwiekszy);
+
+        long suma = 0;
+        for (String napis : napisy) {
+            suma += naLiczbe(napis);
+        }
+        System.out.println(&quot;2.4 &quot; + suma + &quot; &quot; + naNapis(suma));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: ++o+o++o+o++, +<em>+<strong>++</strong>+</em>+, <em>+o++<strong>++o+</em>, <em>oo*o</strong>o*oo</em>, +<em>++*oo</em>++<em>+, +o++oooo++o+. 2.2: 3 kwadraty, środki: wiersz 399 pozycja 5, wiersz 546 pozycja 2, wiersz 630 pozycja 11. 2.3: 531246 <strong></em></strong><em>*o+</em>+o. 2.4: 527865439 ++oo*+oo*++ooo*o*++.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%2C%202.2%2C%202.3%20i%202.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-maj.html%232-1-2-2-2-3-i-2-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-2">3.1 i 3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dron leci po łamanej od punktu (0, 0) do punktu (20000, 0), poza startem i lądowaniem zawsze na dodatniej wysokości. Plik <code>dron.txt</code> zawiera 100 wierszy; w każdym są dwie liczby całkowite A i B oddzielone spacją: A (zawsze dodatnie) to przesunięcie w poziomie, a B — w pionie (dodatnie w górę, ujemne w dół, 0 bez zmiany wysokości) względem poprzedniej pozycji. Odpowiedzi zapisz w pliku <code>wyniki3.txt</code>, poprzedzając każdą numerem zadania. Plik <code>dron_przyklad.txt</code> służy do testów.</p><ul><li>3.1 — Podaj liczbę par [A, B], dla których NWD(|A|, |B|) jest większy od 1 (przyjmujemy NWD(A, 0) = A).</li><li>3.2 — Rozważ punkty, w których dron znajduje się po kolejnych ruchach (np. dla ruchów [3000, 2000], [2000, 9000], [5000, −7000] są to (3000, 2000), (5000, 11000), (10000, 4000)…). a) Podaj, ile z nich leży wewnątrz kwadratu o wierzchołkach (0, 0), (0, 5000), (5000, 5000), (5000, 0) (bez punktów na brzegu). b) Znajdź trzy różne punkty takie, że jeden jest środkiem odcinka o końcach w dwóch pozostałych (jest jedna taka trójka; punkty nie muszą być kolejne). Dla pliku przykładowego: a) 2, b) (14000, 3014), (16000, 2010), (18000, 1006).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import gcd
 
 with open(&quot;dron.txt&quot;) as file:
     ruchy = [tuple(map(int, wiersz.split())) for wiersz in file]
@@ -188,7 +545,136 @@ for i in range(len(punkty)):
         if (x1 + x2) % 2 == 0 and (y1 + y2) % 2 == 0:
             srodek = ((x1 + x2) // 2, (y1 + y2) // 2)
             if srodek in zbior and srodek != punkty[i]:
-                print(&quot;3.2 b)&quot;, punkty[i], srodek, punkty[j])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 40. 3.2: a) 24; b) (5832, 1801), (7410, 1990), (8988, 2179) — środkiem jest (7410, 1990).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2025_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+                print(&quot;3.2 b)&quot;, punkty[i], srodek, punkty[j])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;numeric&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+using Punkt = std::pair&lt;int, int&gt;;
+
+int main() {
+    std::ifstream plik(&quot;dron.txt&quot;);
+    std::vector&lt;Punkt&gt; ruchy;
+    int a, b;
+    while (plik &gt;&gt; a &gt;&gt; b) {
+        ruchy.push_back({a, b});
+    }
+
+    // 3.1
+    int ile = 0;
+    for (auto [a, b] : ruchy) {
+        if (std::gcd(std::abs(a), std::abs(b)) &gt; 1) {
+            ile += 1;
+        }
+    }
+    std::println(&quot;3.1 {}&quot;, ile);
+
+    // 3.2
+    std::vector&lt;Punkt&gt; punkty;
+    int x = 0, y = 0;
+    for (auto [a, b] : ruchy) {
+        x += a;
+        y += b;
+        punkty.push_back({x, y});
+    }
+
+    int wewnatrz = 0;
+    for (auto [x, y] : punkty) {
+        if (0 &lt; x &amp;&amp; x &lt; 5000 &amp;&amp; 0 &lt; y &amp;&amp; y &lt; 5000) {
+            wewnatrz += 1;
+        }
+    }
+    std::println(&quot;3.2 a) {}&quot;, wewnatrz);
+
+    std::set&lt;Punkt&gt; zbior(punkty.begin(), punkty.end());
+    for (size_t i = 0; i &lt; punkty.size(); i++) {
+        for (size_t j = i + 1; j &lt; punkty.size(); j++) {
+            auto [x1, y1] = punkty[i];
+            auto [x2, y2] = punkty[j];
+            if ((x1 + x2) % 2 == 0 &amp;&amp; (y1 + y2) % 2 == 0) {
+                Punkt srodek = {(x1 + x2) / 2, (y1 + y2) / 2};
+                if (zbior.contains(srodek) &amp;&amp; srodek != punkty[i]) {
+                    // para wypisuje się jak krotka w Pythonie: (x, y)
+                    std::println(&quot;3.2 b) {} {} {}&quot;, punkty[i], srodek, punkty[j]);
+                }
+            }
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Zadanie {
+    // punkt jako rekord - equals i hashCode działają po wartościach
+    record Punkt(int x, int y) {
+        @Override
+        public String toString() {
+            return &quot;(&quot; + x + &quot;, &quot; + y + &quot;)&quot;;
+        }
+    }
+
+    static int gcd(int a, int b) {
+        while (b != 0) {
+            int t = a % b;
+            a = b;
+            b = t;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;int[]&gt; ruchy = new ArrayList&lt;&gt;();
+        for (String wiersz : Files.readAllLines(Path.of(&quot;dron.txt&quot;))) {
+            String[] t = wiersz.trim().split(&quot;\\s+&quot;);
+            ruchy.add(new int[]{Integer.parseInt(t[0]), Integer.parseInt(t[1])});
+        }
+
+        // 3.1
+        int ile = 0;
+        for (int[] r : ruchy) {
+            if (gcd(Math.abs(r[0]), Math.abs(r[1])) &gt; 1) {
+                ile += 1;
+            }
+        }
+        System.out.println(&quot;3.1 &quot; + ile);
+
+        // 3.2
+        List&lt;Punkt&gt; punkty = new ArrayList&lt;&gt;();
+        int x = 0, y = 0;
+        for (int[] r : ruchy) {
+            x += r[0];
+            y += r[1];
+            punkty.add(new Punkt(x, y));
+        }
+
+        int wewnatrz = 0;
+        for (Punkt p : punkty) {
+            if (0 &lt; p.x() &amp;&amp; p.x() &lt; 5000 &amp;&amp; 0 &lt; p.y() &amp;&amp; p.y() &lt; 5000) {
+                wewnatrz += 1;
+            }
+        }
+        System.out.println(&quot;3.2 a) &quot; + wewnatrz);
+
+        Set&lt;Punkt&gt; zbior = new HashSet&lt;&gt;(punkty);
+        for (int i = 0; i &lt; punkty.size(); i++) {
+            for (int j = i + 1; j &lt; punkty.size(); j++) {
+                Punkt p1 = punkty.get(i), p2 = punkty.get(j);
+                if ((p1.x() + p2.x()) % 2 == 0 &amp;&amp; (p1.y() + p2.y()) % 2 == 0) {
+                    Punkt srodek = new Punkt((p1.x() + p2.x()) / 2, (p1.y() + p2.y()) / 2);
+                    if (zbior.contains(srodek) &amp;&amp; !srodek.equals(p1)) {
+                        System.out.println(&quot;3.2 b) &quot; + p1 + &quot; &quot; + srodek + &quot; &quot; + p2);
+                    }
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 40. 3.2: a) 24; b) (5832, 1801), (7410, 1990), (8988, 2179) — środkiem jest (7410, 1990).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1%20i%203.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-maj.html%233-1-i-3-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2025_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

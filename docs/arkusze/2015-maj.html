@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#3-1-i-3-2">3.1 i 3.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2015 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2015 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def minuty(godzina):
+<h1 class="page-title">Matura 2015 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Problem telewidza. Program telewizyjny to lista filmów emitowanych jednego dnia w różnych stacjach. Telewidz chce obejrzeć w całości jak najwięcej filmów, ale może oglądać tylko jeden film naraz (zmiana stacji nie zajmuje czasu, więc film kończący się o 12:00 nie koliduje z filmem zaczynającym się o 12:00). Przykładowy program:</p><ul><li>TV1: film 1 od 9:00 do 12:00, film 2 od 15:00 do 17:00,</li><li>TV2: film 3 od 11:00 do 16:00,</li><li>TV3: film 4 od 12:00 do 14:00,</li><li>TV4: film 5 od 11:30 do 12:30.</li></ul><p>Algorytm (dane: zbiór filmów T i strategia S; wynik: zbiór P filmów do obejrzenia): dopóki T nie jest pusty, wybierz z T film x według strategii S, przenieś go do P i usuń z T wszystkie filmy kolidujące z x.</p><ul><li>Strategia A — najdłuższy film (remis: kończący się najwcześniej),</li><li>Strategia B — najkrótszy film (remis: kończący się najwcześniej),</li><li>Strategia C — film zaczynający się najwcześniej (remis: kończący się najwcześniej),</li><li>Strategia D — film kończący się najwcześniej (remis: zaczynający się najpóźniej).</li></ul><p>Dla podanego programu strategia A daje P = {film 3}.</p><ul><li>1.1 — Podaj zawartość zbioru P po wykonaniu algorytmu dla powyższego programu przy strategiach B, C i D.</li><li>1.2 — Strategia jest optymalna, jeśli dla każdego programu daje największą możliwą liczbę filmów. Dla każdej ze strategii A, B i C podaj kontrprzykład: program z czterema filmami w dwóch stacjach (godziny emisji i czasy trwania), wynik algorytmu dla tej strategii oraz liczniejszy zbiór filmów, które telewidz może obejrzeć.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def minuty(godzina):
     h, m = godzina.split(&quot;:&quot;)
     return int(h) * 60 + int(m)
 
@@ -83,7 +83,158 @@ kontrprzyklady = {
           (&quot;film 3&quot;, &quot;10:00&quot;, &quot;12:00&quot;), (&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;)],
 }
 for s in kontrprzyklady:
-    print(s, telewidz(kontrprzyklady[s], s), &quot;optymalnie:&quot;, telewidz(kontrprzyklady[s], &quot;D&quot;))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: B: {film 5, film 2}, C: {film 1, film 4, film 2}, D: {film 1, film 4, film 2}. 1.2: np. A: {film 1, film 2} zamiast {film 3, film 4, film 2} (programy jak w kodzie).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-2">3.1 i 3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozszerzony_euklides(a, b, poziom=1):
+    print(s, telewidz(kontrprzyklady[s], s), &quot;optymalnie:&quot;, telewidz(kontrprzyklady[s], &quot;D&quot;))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+struct Film {
+    std::string nazwa;
+    int od, koniec;
+};
+
+struct Pozycja {  // film z programu: nazwa, godzina rozpoczęcia, godzina zakończenia
+    std::string nazwa, od, koniec;
+};
+
+int minuty(const std::string&amp; godzina) {
+    auto dwukropek = godzina.find(&#x27;:&#x27;);
+    return std::stoi(godzina.substr(0, dwukropek)) * 60 + std::stoi(godzina.substr(dwukropek + 1));
+}
+
+// klucz wyboru filmu dla danej strategii (porównywany jak krotka w Pythonie)
+std::pair&lt;int, int&gt; klucz(const Film&amp; f, char strategia) {
+    if (strategia == &#x27;A&#x27;) return {-(f.koniec - f.od), f.koniec};  // najdłuższy, potem najwcześniej się kończy
+    if (strategia == &#x27;B&#x27;) return {f.koniec - f.od, f.koniec};     // najkrótszy, potem najwcześniej się kończy
+    if (strategia == &#x27;C&#x27;) return {f.od, f.koniec};                // najwcześniej się zaczyna, potem najwcześniej się kończy
+    return {f.koniec, -f.od};                                     // D: najwcześniej się kończy, potem najpóźniej się zaczyna
+}
+
+std::vector&lt;std::string&gt; telewidz(const std::vector&lt;Pozycja&gt;&amp; program, char strategia) {
+    std::vector&lt;Film&gt; T;
+    for (const auto&amp; p : program) T.push_back({p.nazwa, minuty(p.od), minuty(p.koniec)});
+    std::vector&lt;std::string&gt; P;
+    while (!T.empty()) {
+        size_t najlepszy = 0;
+        for (size_t i = 1; i &lt; T.size(); i++)
+            if (klucz(T[i], strategia) &lt; klucz(T[najlepszy], strategia)) najlepszy = i;
+        Film x = T[najlepszy];
+        T.erase(T.begin() + najlepszy);
+        P.push_back(x.nazwa);
+        // usuwamy filmy kolidujące z x (koniec jednego = początek drugiego to nie kolizja)
+        std::vector&lt;Film&gt; reszta;
+        for (const auto&amp; f : T)
+            if (f.koniec &lt;= x.od || f.od &gt;= x.koniec) reszta.push_back(f);
+        T = reszta;
+    }
+    return P;
+}
+
+std::string jako_lista(const std::vector&lt;std::string&gt;&amp; P) {  // zapis jak lista w Pythonie
+    std::string s = &quot;[&quot;;
+    for (size_t i = 0; i &lt; P.size(); i++) {
+        if (i &gt; 0) s += &quot;, &quot;;
+        s += &quot;&#x27;&quot; + P[i] + &quot;&#x27;&quot;;
+    }
+    return s + &quot;]&quot;;
+}
+
+int main() {
+    // 1.1 - program z treści zadania
+    std::vector&lt;Pozycja&gt; program = {
+        {&quot;film 1&quot;, &quot;9:00&quot;, &quot;12:00&quot;},
+        {&quot;film 2&quot;, &quot;15:00&quot;, &quot;17:00&quot;},
+        {&quot;film 3&quot;, &quot;11:00&quot;, &quot;16:00&quot;},
+        {&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;},
+        {&quot;film 5&quot;, &quot;11:30&quot;, &quot;12:30&quot;},
+    };
+    for (char s : std::string(&quot;ABCD&quot;))
+        std::cout &lt;&lt; s &lt;&lt; &#x27; &#x27; &lt;&lt; jako_lista(telewidz(program, s)) &lt;&lt; &#x27;\n&#x27;;
+
+    // 1.2 - kontrprzykłady (strategia D jest optymalna, więc służy jako wzorzec)
+    std::map&lt;char, std::vector&lt;Pozycja&gt;&gt; kontrprzyklady = {
+        {&#x27;A&#x27;, {{&quot;film 1&quot;, &quot;10:00&quot;, &quot;12:00&quot;}, {&quot;film 2&quot;, &quot;12:00&quot;, &quot;14:00&quot;},
+               {&quot;film 3&quot;, &quot;10:00&quot;, &quot;11:00&quot;}, {&quot;film 4&quot;, &quot;11:00&quot;, &quot;12:00&quot;}}},
+        {&#x27;B&#x27;, {{&quot;film 1&quot;, &quot;11:30&quot;, &quot;12:30&quot;}, {&quot;film 2&quot;, &quot;15:00&quot;, &quot;16:00&quot;},
+               {&quot;film 3&quot;, &quot;10:00&quot;, &quot;12:00&quot;}, {&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;}}},
+        {&#x27;C&#x27;, {{&quot;film 1&quot;, &quot;9:00&quot;, &quot;14:00&quot;}, {&quot;film 2&quot;, &quot;15:00&quot;, &quot;16:00&quot;},
+               {&quot;film 3&quot;, &quot;10:00&quot;, &quot;12:00&quot;}, {&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;}}},
+    };
+    for (const auto&amp; [s, prog] : kontrprzyklady)
+        std::cout &lt;&lt; s &lt;&lt; &#x27; &#x27; &lt;&lt; jako_lista(telewidz(prog, s)) &lt;&lt; &quot; optymalnie: &quot;
+                  &lt;&lt; jako_lista(telewidz(prog, &#x27;D&#x27;)) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    record Film(String nazwa, int od, int koniec) {}
+
+    static int minuty(String godzina) {
+        var czesci = godzina.split(&quot;:&quot;);
+        return Integer.parseInt(czesci[0]) * 60 + Integer.parseInt(czesci[1]);
+    }
+
+    // porównanie filmów dla danej strategii (jak klucz-krotka w Pythonie)
+    static Comparator&lt;Film&gt; strategia(char s) {
+        return switch (s) {
+            case &#x27;A&#x27; -&gt; Comparator.comparingInt((Film f) -&gt; -(f.koniec() - f.od())).thenComparingInt(Film::koniec);
+            case &#x27;B&#x27; -&gt; Comparator.comparingInt((Film f) -&gt; f.koniec() - f.od()).thenComparingInt(Film::koniec);
+            case &#x27;C&#x27; -&gt; Comparator.comparingInt(Film::od).thenComparingInt(Film::koniec);
+            default -&gt; Comparator.comparingInt(Film::koniec).thenComparingInt((Film f) -&gt; -f.od());
+        };
+    }
+
+    static List&lt;String&gt; telewidz(String[][] program, char s) {
+        var T = new ArrayList&lt;Film&gt;();
+        for (var p : program) T.add(new Film(p[0], minuty(p[1]), minuty(p[2])));
+        var P = new ArrayList&lt;String&gt;();
+        while (!T.isEmpty()) {
+            Film x = T.get(0);
+            for (var f : T) if (strategia(s).compare(f, x) &lt; 0) x = f;  // pierwszy najmniejszy
+            T.remove(x);
+            P.add(x.nazwa());
+            // usuwamy filmy kolidujące z x (koniec jednego = początek drugiego to nie kolizja)
+            final Film wybrany = x;
+            T.removeIf(f -&gt; !(f.koniec() &lt;= wybrany.od() || f.od() &gt;= wybrany.koniec()));
+        }
+        return P;
+    }
+
+    static String jakoLista(List&lt;String&gt; P) {  // zapis jak lista w Pythonie
+        var s = new StringJoiner(&quot;, &quot;, &quot;[&quot;, &quot;]&quot;);
+        for (var nazwa : P) s.add(&quot;&#x27;&quot; + nazwa + &quot;&#x27;&quot;);
+        return s.toString();
+    }
+
+    public static void main(String[] args) {
+        // 1.1 - program z treści zadania
+        String[][] program = {
+            {&quot;film 1&quot;, &quot;9:00&quot;, &quot;12:00&quot;},
+            {&quot;film 2&quot;, &quot;15:00&quot;, &quot;17:00&quot;},
+            {&quot;film 3&quot;, &quot;11:00&quot;, &quot;16:00&quot;},
+            {&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;},
+            {&quot;film 5&quot;, &quot;11:30&quot;, &quot;12:30&quot;},
+        };
+        for (char s : &quot;ABCD&quot;.toCharArray())
+            System.out.println(s + &quot; &quot; + jakoLista(telewidz(program, s)));
+
+        // 1.2 - kontrprzykłady (strategia D jest optymalna, więc służy jako wzorzec)
+        var kontrprzyklady = new LinkedHashMap&lt;Character, String[][]&gt;();
+        kontrprzyklady.put(&#x27;A&#x27;, new String[][] {{&quot;film 1&quot;, &quot;10:00&quot;, &quot;12:00&quot;}, {&quot;film 2&quot;, &quot;12:00&quot;, &quot;14:00&quot;},
+                                               {&quot;film 3&quot;, &quot;10:00&quot;, &quot;11:00&quot;}, {&quot;film 4&quot;, &quot;11:00&quot;, &quot;12:00&quot;}});
+        kontrprzyklady.put(&#x27;B&#x27;, new String[][] {{&quot;film 1&quot;, &quot;11:30&quot;, &quot;12:30&quot;}, {&quot;film 2&quot;, &quot;15:00&quot;, &quot;16:00&quot;},
+                                               {&quot;film 3&quot;, &quot;10:00&quot;, &quot;12:00&quot;}, {&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;}});
+        kontrprzyklady.put(&#x27;C&#x27;, new String[][] {{&quot;film 1&quot;, &quot;9:00&quot;, &quot;14:00&quot;}, {&quot;film 2&quot;, &quot;15:00&quot;, &quot;16:00&quot;},
+                                               {&quot;film 3&quot;, &quot;10:00&quot;, &quot;12:00&quot;}, {&quot;film 4&quot;, &quot;12:00&quot;, &quot;14:00&quot;}});
+        for (var e : kontrprzyklady.entrySet())
+            System.out.println(e.getKey() + &quot; &quot; + jakoLista(telewidz(e.getValue(), e.getKey()))
+                    + &quot; optymalnie: &quot; + jakoLista(telewidz(e.getValue(), &#x27;D&#x27;)));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: B: {film 5, film 2}, C: {film 1, film 4, film 2}, D: {film 1, film 4, film 2}. 1.2: np. A: {film 1, film 2} zamiast {film 3, film 4, film 2} (programy jak w kodzie).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-2">3.1 i 3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Rozszerzony algorytm Euklidesa. Dla liczb całkowitych a &gt; 0 i b ≥ 0 należy wyznaczyć liczby całkowite x, y takie, że NWD(a, b) = a·x + b·y. Jeśli b ≠ 0 i dla pary (b, a mod b) znamy x', y' spełniające NWD(b, a mod b) = b·x' + (a mod b)·y', to x = y', y = x' − (a div b)·y'. Dla b = 0 wynikiem jest para (1, 0). Przykład: NWD(231, 30) = 3 = 3·231 + (−23)·30.</p><ul><li>3.1 — Uzupełnij tabelę kolejnych wywołań funkcji RozszerzonyEuklides(a, b) dla a = 188, b = 12: dla każdego wywołania podaj wartości a i b oraz zwrócone x i y.</li><li>3.2 — Uzupełnij rekurencyjną funkcję:</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">RozszerzonyEuklides(a, b):
+  Krok 1. Jeśli b = 0, zwróć (1, 0) i zakończ.
+  Krok 2. r ← a mod b
+  Krok 3. (x, y) ← RozszerzonyEuklides(____, ____)
+  Krok 4. Zwróć parę (____, ____).</code></pre></div></div></div></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozszerzony_euklides(a, b, poziom=1):
     if b == 0:
         print(poziom, a, b, 1, 0)
         return 1, 0
@@ -96,7 +247,44 @@ for s in kontrprzyklady:
 
 # 3.1 - tabela dla a = 188, b = 12 (wiersze wypisywane przy powrocie z rekurencji)
 x, y = rozszerzony_euklides(188, 12)
-print(&quot;NWD =&quot;, 188 * x + 12 * y)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: (188, 12, -1, 16), (12, 8, 1, -1), (8, 4, 0, 1), (4, 0, 1, 0). 3.2: krok 3: (b, r), krok 4: (y', x' - (a div b) · y').</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynik = 0
+print(&quot;NWD =&quot;, 188 * x + 12 * y)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;utility&gt;
+
+std::pair&lt;long long, long long&gt; rozszerzony_euklides(long long a, long long b, int poziom = 1) {
+    if (b == 0) {
+        std::cout &lt;&lt; poziom &lt;&lt; &#x27; &#x27; &lt;&lt; a &lt;&lt; &#x27; &#x27; &lt;&lt; b &lt;&lt; &#x27; &#x27; &lt;&lt; 1 &lt;&lt; &#x27; &#x27; &lt;&lt; 0 &lt;&lt; &#x27;\n&#x27;;
+        return {1, 0};
+    }
+    long long r = a % b;
+    auto [x1, y1] = rozszerzony_euklides(b, r, poziom + 1);  // krok 3: (b, r)
+    long long x = y1, y = x1 - (a / b) * y1;                  // krok 4: (y&#x27;, x&#x27; - (a div b) * y&#x27;)
+    std::cout &lt;&lt; poziom &lt;&lt; &#x27; &#x27; &lt;&lt; a &lt;&lt; &#x27; &#x27; &lt;&lt; b &lt;&lt; &#x27; &#x27; &lt;&lt; x &lt;&lt; &#x27; &#x27; &lt;&lt; y &lt;&lt; &#x27;\n&#x27;;
+    return {x, y};
+}
+
+int main() {
+    // 3.1 - tabela dla a = 188, b = 12 (wiersze wypisywane przy powrocie z rekurencji)
+    auto [x, y] = rozszerzony_euklides(188, 12);
+    std::cout &lt;&lt; &quot;NWD = &quot; &lt;&lt; 188 * x + 12 * y &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long[] rozszerzonyEuklides(long a, long b, int poziom) {
+        if (b == 0) {
+            System.out.println(poziom + &quot; &quot; + a + &quot; &quot; + b + &quot; &quot; + 1 + &quot; &quot; + 0);
+            return new long[] {1, 0};
+        }
+        long r = a % b;
+        long[] xy = rozszerzonyEuklides(b, r, poziom + 1);  // krok 3: (b, r)
+        long x = xy[1], y = xy[0] - (a / b) * xy[1];        // krok 4: (y&#x27;, x&#x27; - (a div b) * y&#x27;)
+        System.out.println(poziom + &quot; &quot; + a + &quot; &quot; + b + &quot; &quot; + x + &quot; &quot; + y);
+        return new long[] {x, y};
+    }
+
+    public static void main(String[] args) {
+        // 3.1 - tabela dla a = 188, b = 12 (wiersze wypisywane przy powrocie z rekurencji)
+        long[] xy = rozszerzonyEuklides(188, 12, 1);
+        System.out.println(&quot;NWD = &quot; + (188 * xy[0] + 12 * xy[1]));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: (188, 12, -1, 16), (12, 8, 1, -1), (8, 4, 0, 1), (4, 0, 1, 0). 3.2: krok 3: (b, r), krok 4: (y', x' - (a div b) · y').</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%203.1%20i%203.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%233-1-i-3-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>liczby.txt</code> znajduje się 1000 liczb naturalnych zapisanych binarnie, każda w osobnym wierszu. Liczba ma co najwyżej 250 cyfr, więc może nie mieścić się w typie całkowitym (np. <code>int</code>). Odpowiedzi zapisz w pliku <code>wynik4.txt</code>, poprzedzając każdą numerem zadania.</p><p>Podaj, ile liczb z pliku ma w zapisie binarnym więcej zer niż jedynek.</p><p>Przykład: dla liczb 101011010011001100111, 10001001, 1000000, 101010011100, 100010 odpowiedzią jest 3.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynik = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -104,7 +292,33 @@ with open(&quot;liczby.txt&quot;) as file:
         if liczba.count(&quot;0&quot;) &gt; liczba.count(&quot;1&quot;):
             wynik += 1
 
-print(wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 422</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przez_dwa = przez_osiem = 0
+print(wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int wynik = 0;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string liczba;
+    while (plik &gt;&gt; liczba)
+        if (std::ranges::count(liczba, &#x27;0&#x27;) &gt; std::ranges::count(liczba, &#x27;1&#x27;))
+            wynik++;
+    std::cout &lt;&lt; wynik &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int wynik = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            var liczba = line.strip();
+            long zera = liczba.chars().filter(c -&gt; c == &#x27;0&#x27;).count();
+            long jedynki = liczba.chars().filter(c -&gt; c == &#x27;1&#x27;).count();
+            if (zera &gt; jedynki) wynik++;
+        }
+        System.out.println(wynik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 422</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 1000 liczb binarnych (do 250 cyfr). Podaj, ile liczb z pliku jest podzielnych przez 2, a ile przez 8. Odpowiedź zapisz w <code>wynik4.txt</code>.</p><p>Przykład: dla liczb 101011010011001100000, 10001001, 100100, 101010010101011011000, 100011 trzy liczby są podzielne przez 2, a dwie przez 8.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przez_dwa = przez_osiem = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -115,14 +329,81 @@ with open(&quot;liczby.txt&quot;) as file:
         if liczba[-3:] == &quot;000&quot;:
             przez_osiem += 1
 
-print(przez_dwa, przez_osiem)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 500 liczb podzielnych przez 2, 123 liczby podzielne przez 8</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lista = []
+print(przez_dwa, przez_osiem)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int przez_dwa = 0, przez_osiem = 0;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string liczba;
+    while (plik &gt;&gt; liczba) {
+        // liczba binarna jest podzielna przez 2, gdy kończy się na 0, a przez 8 - gdy kończy się na 000
+        if (liczba.ends_with(&quot;0&quot;)) przez_dwa++;
+        if (liczba.ends_with(&quot;000&quot;)) przez_osiem++;
+    }
+    std::cout &lt;&lt; przez_dwa &lt;&lt; &#x27; &#x27; &lt;&lt; przez_osiem &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int przezDwa = 0, przezOsiem = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            var liczba = line.strip();
+            // liczba binarna jest podzielna przez 2, gdy kończy się na 0, a przez 8 - gdy kończy się na 000
+            if (liczba.endsWith(&quot;0&quot;)) przezDwa++;
+            if (liczba.endsWith(&quot;000&quot;)) przezOsiem++;
+        }
+        System.out.println(przezDwa + &quot; &quot; + przezOsiem);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 500 liczb podzielnych przez 2, 123 liczby podzielne przez 8</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 1000 liczb binarnych (do 250 cyfr). Znajdź najmniejszą i największą liczbę w pliku i podaj numery wierszy, w których się znajdują (najpierw najmniejszej, potem największej). Odpowiedź zapisz w <code>wynik4.txt</code>.</p><p>Przykład: dla liczb 101011010011001100111, 10001001011101010, 1001000, 101010011100, 1000110 odpowiedzią jest 5, 1.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lista = []
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
         lista.append(int(line.strip(), 2))
 
 # numer wiersza najmniejszej i największej liczby
-print(lista.index(min(lista)) + 1, lista.index(max(lista)) + 1)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 859 (najmniejsza), 925 (największa)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ludnosc = {&quot;A&quot;: 0, &quot;B&quot;: 0, &quot;C&quot;: 0, &quot;D&quot;: 0}
+print(lista.index(min(lista)) + 1, lista.index(max(lista)) + 1)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// liczby mają do 200 cyfr, więc nie mieszczą się w long long - porównujemy napisy:
+// dłuższa liczba (bez zer wiodących) jest większa, przy równej długości decyduje porządek leksykograficzny
+bool mniejsza(const std::string&amp; a, const std::string&amp; b) {
+    if (a.size() != b.size()) return a.size() &lt; b.size();
+    return a &lt; b;
+}
+
+int main() {
+    std::vector&lt;std::string&gt; lista;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string liczba;
+    while (plik &gt;&gt; liczba) {
+        while (liczba.size() &gt; 1 &amp;&amp; liczba[0] == &#x27;0&#x27;) liczba.erase(0, 1);  // usuwamy zera wiodące
+        lista.push_back(liczba);
+    }
+    size_t najmniejsza = 0, najwieksza = 0;  // pierwsze wystąpienie, jak index() w Pythonie
+    for (size_t i = 1; i &lt; lista.size(); i++) {
+        if (mniejsza(lista[i], lista[najmniejsza])) najmniejsza = i;
+        if (mniejsza(lista[najwieksza], lista[i])) najwieksza = i;
+    }
+    // numer wiersza najmniejszej i największej liczby
+    std::cout &lt;&lt; najmniejsza + 1 &lt;&lt; &#x27; &#x27; &lt;&lt; najwieksza + 1 &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigInteger;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var lista = new ArrayList&lt;BigInteger&gt;();  // liczby mają do 200 cyfr
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;)))
+            lista.add(new BigInteger(line.strip(), 2));
+
+        // numer wiersza najmniejszej i największej liczby
+        System.out.println((lista.indexOf(Collections.min(lista)) + 1) + &quot; &quot; + (lista.indexOf(Collections.max(lista)) + 1));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 859 (najmniejsza), 925 (największa)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>kraina.txt</code> zawiera dane demograficzne 50 województw Edulandii. Każde należy do jednego z regionów A, B, C, D. Wiersz zawiera dane rozdzielone średnikami: nazwa województwa, liczba kobiet w 2013, liczba mężczyzn w 2013, liczba kobiet w 2014, liczba mężczyzn w 2014 (np. <code>w01D;1415007;1397195;1499070;1481105</code>). Nazwa ma postać „w”, dwucyfrowy numer i litera regionu. Odpowiedzi zapisz w pliku <code>wynik5.txt</code>, poprzedzając je numerem zadania.</p><p>Wyznacz ludność (kobiety + mężczyźni) każdego z regionów A, B, C i D w roku 2013 i sporządź czytelny wykres kolumnowy porównujący te wartości.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ludnosc = {&quot;A&quot;: 0, &quot;B&quot;: 0, &quot;C&quot;: 0, &quot;D&quot;: 0}
 
 with open(&quot;kraina.txt&quot;) as file:
     for line in file:
@@ -131,7 +412,44 @@ with open(&quot;kraina.txt&quot;) as file:
         ludnosc[region] += int(k13) + int(m13)
 
 for region in ludnosc:
-    print(region, ludnosc[region])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> A: 33 929 579, B: 41 736 619, C: 57 649 017, D: 36 530 387 (+ wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">regiony = {&quot;A&quot;: 0, &quot;B&quot;: 0, &quot;C&quot;: 0, &quot;D&quot;: 0}
+    print(region, ludnosc[region])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::map&lt;char, long long&gt; ludnosc = {{&#x27;A&#x27;, 0}, {&#x27;B&#x27;, 0}, {&#x27;C&#x27;, 0}, {&#x27;D&#x27;, 0}};
+    std::ifstream plik(&quot;kraina.txt&quot;);
+    std::string line;
+    while (plik &gt;&gt; line) {
+        std::stringstream ss(line);
+        std::string nazwa, k13, m13;
+        std::getline(ss, nazwa, &#x27;;&#x27;);
+        std::getline(ss, k13, &#x27;;&#x27;);
+        std::getline(ss, m13, &#x27;;&#x27;);
+        char region = nazwa.back();
+        ludnosc[region] += std::stoll(k13) + std::stoll(m13);
+    }
+    for (auto [region, liczba] : ludnosc)
+        std::cout &lt;&lt; region &lt;&lt; &#x27; &#x27; &lt;&lt; liczba &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var ludnosc = new LinkedHashMap&lt;Character, Long&gt;();
+        for (char r : &quot;ABCD&quot;.toCharArray()) ludnosc.put(r, 0L);
+
+        for (var line : Files.readAllLines(Path.of(&quot;kraina.txt&quot;))) {
+            var p = line.strip().split(&quot;;&quot;);  // nazwa, k13, m13, k14, m14
+            char region = p[0].charAt(p[0].length() - 1);
+            ludnosc.merge(region, Long.parseLong(p[1]) + Long.parseLong(p[2]), Long::sum);
+        }
+        for (var e : ludnosc.entrySet())
+            System.out.println(e.getKey() + &quot; &quot; + e.getValue());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> A: 33 929 579, B: 41 736 619, C: 57 649 017, D: 36 530 387 (+ wykres kolumnowy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%235-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>kraina.txt</code> (województwo; kobiety 2013; mężczyźni 2013; kobiety 2014; mężczyźni 2014). Wybierz województwa, w których w 2014 roku zarówno liczba kobiet, jak i liczba mężczyzn była większa niż w 2013. Podaj liczbę takich województw w całym kraju oraz osobno w każdym regionie A, B, C i D.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">regiony = {&quot;A&quot;: 0, &quot;B&quot;: 0, &quot;C&quot;: 0, &quot;D&quot;: 0}
 
 with open(&quot;kraina.txt&quot;) as file:
     for line in file:
@@ -141,7 +459,48 @@ with open(&quot;kraina.txt&quot;) as file:
 
 print(sum(regiony.values()))
 for region in regiony:
-    print(region, regiony[region])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 19 województw, w tym A: 3, B: 4, C: 8, D: 4</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma_2025 = 0
+    print(region, regiony[region])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;char, int&gt; regiony = {{&#x27;A&#x27;, 0}, {&#x27;B&#x27;, 0}, {&#x27;C&#x27;, 0}, {&#x27;D&#x27;, 0}};
+    std::ifstream plik(&quot;kraina.txt&quot;);
+    std::string line;
+    while (plik &gt;&gt; line) {
+        std::stringstream ss(line);
+        std::vector&lt;std::string&gt; p;  // nazwa, k13, m13, k14, m14
+        std::string pole;
+        while (std::getline(ss, pole, &#x27;;&#x27;)) p.push_back(pole);
+        if (std::stoll(p[3]) &gt; std::stoll(p[1]) &amp;&amp; std::stoll(p[4]) &gt; std::stoll(p[2]))
+            regiony[p[0].back()]++;
+    }
+    int suma = 0;
+    for (auto [region, ile] : regiony) suma += ile;
+    std::cout &lt;&lt; suma &lt;&lt; &#x27;\n&#x27;;
+    for (auto [region, ile] : regiony)
+        std::cout &lt;&lt; region &lt;&lt; &#x27; &#x27; &lt;&lt; ile &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var regiony = new LinkedHashMap&lt;Character, Integer&gt;();
+        for (char r : &quot;ABCD&quot;.toCharArray()) regiony.put(r, 0);
+
+        for (var line : Files.readAllLines(Path.of(&quot;kraina.txt&quot;))) {
+            var p = line.strip().split(&quot;;&quot;);  // nazwa, k13, m13, k14, m14
+            if (Long.parseLong(p[3]) &gt; Long.parseLong(p[1]) &amp;&amp; Long.parseLong(p[4]) &gt; Long.parseLong(p[2]))
+                regiony.merge(p[0].charAt(p[0].length() - 1), 1, Integer::sum);
+        }
+        System.out.println(regiony.values().stream().mapToInt(Integer::intValue).sum());
+        for (var e : regiony.entrySet())
+            System.out.println(e.getKey() + &quot; &quot; + e.getValue());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 19 województw, w tym A: 3, B: 4, C: 8, D: 4</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%235-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>kraina.txt</code>. Tempo wzrostu województwa to iloraz ludność(2014) / ludność(2013) zaokrąglony w dół do 4 miejsc po przecinku. Dla r &gt; 2014: ludność(r) = ludność(r − 1) · tempo, zaokrąglone w dół do liczby całkowitej. Jeśli w danym roku ludność województwa jest ponad dwukrotnie większa niż w 2013, występuje przeludnienie i od następnego roku ludność tego województwa już się nie zmienia.</p><p>Przykład: dla w01D ludność 2013 = 2 812 202, 2014 = 2 980 175, tempo = 1,0597, ludność 2015 = 3 158 091; w 2025 roku wyniesie 5 639 669 (przeludnienie).</p><p>Podaj:</p><ul><li>łączną liczbę mieszkańców Edulandii w 2025 roku oraz województwo, które będzie miało wtedy najwięcej mieszkańców,</li><li>liczbę województw, w których w latach 2014–2025 włącznie wystąpi efekt przeludnienia.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma_2025 = 0
 najwiecej = 0
 najwieksze = &quot;&quot;
 przeludnione = 0
@@ -171,7 +530,80 @@ with open(&quot;kraina.txt&quot;) as file:
 
 print(suma_2025)
 print(najwieksze)
-print(przeludnione)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 125 930 205 mieszkańców w 2025 roku, najwięcej: w12C, przeludnienie w 18 województwach</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(przeludnione)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    long long suma_2025 = 0, najwiecej = 0;
+    std::string najwieksze;
+    int przeludnione = 0;
+
+    std::ifstream plik(&quot;kraina.txt&quot;);
+    std::string line;
+    while (plik &gt;&gt; line) {
+        std::stringstream ss(line);
+        std::vector&lt;std::string&gt; p;  // nazwa, k13, m13, k14, m14
+        std::string pole;
+        while (std::getline(ss, pole, &#x27;;&#x27;)) p.push_back(pole);
+        long long l2013 = std::stoll(p[1]) + std::stoll(p[2]);
+        long long l2014 = std::stoll(p[3]) + std::stoll(p[4]);
+        // tempo zaokrąglone w dół do 4 miejsc - liczymy w dziesięciotysięcznych, żeby uniknąć błędów float
+        long long tempo = l2014 * 10000 / l2013;
+
+        long long ludnosc = l2014;
+        bool przeludnienie = ludnosc &gt; 2 * l2013;
+        for (int rok = 2015; rok &lt; 2026; rok++) {
+            if (!przeludnienie) {
+                ludnosc = ludnosc * tempo / 10000;
+                if (ludnosc &gt; 2 * l2013) przeludnienie = true;
+            }
+        }
+        if (przeludnienie) przeludnione++;
+        suma_2025 += ludnosc;
+        if (ludnosc &gt; najwiecej) {
+            najwiecej = ludnosc;
+            najwieksze = p[0];
+        }
+    }
+    std::cout &lt;&lt; suma_2025 &lt;&lt; &#x27;\n&#x27; &lt;&lt; najwieksze &lt;&lt; &#x27;\n&#x27; &lt;&lt; przeludnione &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        long suma2025 = 0, najwiecej = 0;
+        String najwieksze = &quot;&quot;;
+        int przeludnione = 0;
+
+        for (var line : Files.readAllLines(Path.of(&quot;kraina.txt&quot;))) {
+            var p = line.strip().split(&quot;;&quot;);  // nazwa, k13, m13, k14, m14
+            long l2013 = Long.parseLong(p[1]) + Long.parseLong(p[2]);
+            long l2014 = Long.parseLong(p[3]) + Long.parseLong(p[4]);
+            // tempo zaokrąglone w dół do 4 miejsc - liczymy w dziesięciotysięcznych, żeby uniknąć błędów float
+            long tempo = l2014 * 10000 / l2013;
+
+            long ludnosc = l2014;
+            boolean przeludnienie = ludnosc &gt; 2 * l2013;
+            for (int rok = 2015; rok &lt; 2026; rok++) {
+                if (!przeludnienie) {
+                    ludnosc = ludnosc * tempo / 10000;
+                    if (ludnosc &gt; 2 * l2013) przeludnienie = true;
+                }
+            }
+            if (przeludnienie) przeludnione++;
+            suma2025 += ludnosc;
+            if (ludnosc &gt; najwiecej) {
+                najwiecej = ludnosc;
+                najwieksze = p[0];
+            }
+        }
+        System.out.println(suma2025);
+        System.out.println(najwieksze);
+        System.out.println(przeludnione);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 125 930 205 mieszkańców w 2025 roku, najwięcej: w12C, przeludnienie w 18 województwach</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj.html%235-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

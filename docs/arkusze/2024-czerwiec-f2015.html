@@ -37,8 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2024 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2024 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · 1.2 - sprawdzamy kolejne cyfry binarne od końca</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 1.2 - sprawdzamy kolejne cyfry binarne od końca
-def czy_nieliczna(k):
+<h1 class="page-title">Matura 2024 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dodatnia liczba całkowita L jest <em>nieliczna</em>, jeśli w jej zapisie binarnym żadne dwie jedynki nie sąsiadują ze sobą.</p><ul><li>1.1 — Uzupełnij tabelę: podaj zapis binarny liczb 2001₈ i 3574₁₆ oraz rozstrzygnij (PRAWDA/FAŁSZ), czy są nieliczne. Przykład: 259₁₀ = 100000011₂ — FAŁSZ.</li><li>1.2 — Napisz funkcję <code>czy_nieliczna(k)</code>, która dla dodatniej liczby k zwraca PRAWDA, gdy k jest nieliczna, a FAŁSZ w przeciwnym razie. Wolno używać tylko zmiennych całkowitych i podstawowych operacji arytmetycznych, porównań i instrukcji sterujących — bez funkcji wbudowanych i bez funkcji zamiany systemów liczbowych.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · 1.2 - sprawdzamy kolejne cyfry binarne od końca</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_nieliczna(k):
     poprzednia = 0
     while k &gt; 0:
         cyfra = k % 2
@@ -52,7 +51,67 @@ def czy_nieliczna(k):
 # 1.1
 for zapis, podstawa in [(&quot;20012&quot;, 8), (&quot;3574&quot;, 16)]:
     L = int(zapis, podstawa)
-    print(zapis, podstawa, bin(L)[2:], czy_nieliczna(L))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 20012₈ = 10000000001010₂ – PRAWDA; 3574₁₆ = 11010101110100₂ – FAŁSZ. 1.2: funkcja <code>czy_nieliczna</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm1(A):                   # A[0] to element A[1] z treści
+    print(zapis, podstawa, bin(L)[2:], czy_nieliczna(L))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+// 1.2 - sprawdzamy kolejne cyfry binarne od końca
+bool czy_nieliczna(long long k) {
+    int poprzednia = 0;
+    while (k &gt; 0) {
+        int cyfra = k % 2;
+        if (cyfra == 1 &amp;&amp; poprzednia == 1) return false;
+        poprzednia = cyfra;
+        k = k / 2;
+    }
+    return true;
+}
+
+std::string binarnie(long long n) {
+    std::string wynik;
+    while (n &gt; 0) {
+        wynik = char(&#x27;0&#x27; + n % 2) + wynik;
+        n /= 2;
+    }
+    return wynik;
+}
+
+int main() {
+    // 1.1
+    std::string zapisy[] = {&quot;20012&quot;, &quot;3574&quot;};
+    int podstawy[] = {8, 16};
+    for (int i = 0; i &lt; 2; i++) {
+        long long L = std::stoll(zapisy[i], nullptr, podstawy[i]);
+        std::println(&quot;{} {} {} {}&quot;, zapisy[i], podstawy[i], binarnie(L), czy_nieliczna(L) ? &quot;True&quot; : &quot;False&quot;);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // 1.2 - sprawdzamy kolejne cyfry binarne od końca
+    static boolean czyNieliczna(long k) {
+        long poprzednia = 0;
+        while (k &gt; 0) {
+            long cyfra = k % 2;
+            if (cyfra == 1 &amp;&amp; poprzednia == 1) return false;
+            poprzednia = cyfra;
+            k = k / 2;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        String[] zapisy = {&quot;20012&quot;, &quot;3574&quot;};
+        int[] podstawy = {8, 16};
+        for (int i = 0; i &lt; 2; i++) {
+            long L = Long.parseLong(zapisy[i], podstawy[i]);
+            System.out.println(zapisy[i] + &quot; &quot; + podstawy[i] + &quot; &quot; + Long.toBinaryString(L) + &quot; &quot;
+                    + (czyNieliczna(L) ? &quot;True&quot; : &quot;False&quot;));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 20012₈ = 10000000001010₂ – PRAWDA; 3574₁₆ = 11010101110100₂ – FAŁSZ. 1.2: funkcja <code>czy_nieliczna</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-czerwiec-f2015.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest tablica A[1..n] i algorytm 1:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">p ← 1; m ← 1
+dla i = 1, 2, ..., n
+    licz ← 0
+    dla j = 1, 2, ..., n
+        jeżeli A[i] = A[j]: licz ← licz + 1
+    jeżeli licz &gt; m: p ← i; m ← licz</code></pre></div></div></div><ul><li>2.1 — Podaj wartości p, A[p] i m po wykonaniu algorytmu dla A = [7, 9, 15, 0, 6, 7, 6, 10, 15, 6, 0].</li><li>2.2 — Podaj, ile razy wykonywane jest porównanie A[i] = A[j] dla n = 3 oraz dla dowolnego n (wzór).</li><li>2.3 — Uzupełnij luki (zakres pętli po i, początkową wartość <code>licz</code>, zakres pętli po j) w algorytmie 2, który daje ten sam wynik co algorytm 1, ale wykonuje porównanie A[i] = A[j] nie więcej niż n(n−1)/2 razy.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm1(A):                   # A[0] to element A[1] z treści
     n = len(A)
     p, m = 1, 1
     porownania = 0
@@ -86,7 +145,107 @@ def algorytm2(A):
 A = [7, 9, 15, 0, 6, 7, 6, 10, 15, 6, 0]
 print(algorytm1(A))                  # 2.1 (p, A[p], m, liczba porównań)
 print(algorytm1([1, 2, 3])[3])       # 2.2 dla n = 3
-print(algorytm2(A))                  # 2.3 - ten sam wynik, n(n-1)/2 = 55 porównań</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: p = 5, A[p] = 6, m = 3. 2.2: n = 3 → 9, dla n → n². 2.3: <code>dla i = 1, 2, ..., n - 1</code>, <code>licz ← 1</code>, <code>dla j = i + 1, i + 2, ..., n</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
+print(algorytm2(A))                  # 2.3 - ten sam wynik, n(n-1)/2 = 55 porównań</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;format&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+struct Wynik {
+    int p, ap, m, porownania;  // p, A[p], m, liczba porównań
+    std::string tekst() const { return std::format(&quot;({}, {}, {}, {})&quot;, p, ap, m, porownania); }
+};
+
+Wynik algorytm1(const std::vector&lt;int&gt;&amp; A) {  // A[0] to element A[1] z treści
+    int n = A.size();
+    int p = 1, m = 1;
+    int porownania = 0;
+    for (int i = 1; i &lt;= n; i++) {
+        int licz = 0;
+        for (int j = 1; j &lt;= n; j++) {
+            porownania++;
+            if (A[i - 1] == A[j - 1]) licz++;
+        }
+        if (licz &gt; m) {
+            p = i;
+            m = licz;
+        }
+    }
+    return {p, A[p - 1], m, porownania};
+}
+
+// 2.3 - porównujemy A[i] tylko z elementami dalej w tablicy
+Wynik algorytm2(const std::vector&lt;int&gt;&amp; A) {
+    int n = A.size();
+    int p = 1, m = 1;
+    int porownania = 0;
+    for (int i = 1; i &lt; n; i++) {          // i = 1, 2, ..., n - 1
+        int licz = 1;                      // A[i] liczy się samo
+        for (int j = i + 1; j &lt;= n; j++) { // j = i + 1, ..., n
+            porownania++;
+            if (A[i - 1] == A[j - 1]) licz++;
+        }
+        if (licz &gt; m) {
+            p = i;
+            m = licz;
+        }
+    }
+    return {p, A[p - 1], m, porownania};
+}
+
+int main() {
+    std::vector&lt;int&gt; A = {7, 9, 15, 0, 6, 7, 6, 10, 15, 6, 0};
+    std::println(&quot;{}&quot;, algorytm1(A).tekst());                 // 2.1 (p, A[p], m, liczba porównań)
+    std::println(&quot;{}&quot;, algorytm1({1, 2, 3}).porownania);      // 2.2 dla n = 3
+    std::println(&quot;{}&quot;, algorytm2(A).tekst());                 // 2.3 - ten sam wynik, n(n-1)/2 = 55 porównań
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    record Wynik(int p, int ap, int m, int porownania) {  // p, A[p], m, liczba porównań
+        String tekst() { return &quot;(&quot; + p + &quot;, &quot; + ap + &quot;, &quot; + m + &quot;, &quot; + porownania + &quot;)&quot;; }
+    }
+
+    static Wynik algorytm1(int[] A) {  // A[0] to element A[1] z treści
+        int n = A.length;
+        int p = 1, m = 1;
+        int porownania = 0;
+        for (int i = 1; i &lt;= n; i++) {
+            int licz = 0;
+            for (int j = 1; j &lt;= n; j++) {
+                porownania++;
+                if (A[i - 1] == A[j - 1]) licz++;
+            }
+            if (licz &gt; m) {
+                p = i;
+                m = licz;
+            }
+        }
+        return new Wynik(p, A[p - 1], m, porownania);
+    }
+
+    // 2.3 - porównujemy A[i] tylko z elementami dalej w tablicy
+    static Wynik algorytm2(int[] A) {
+        int n = A.length;
+        int p = 1, m = 1;
+        int porownania = 0;
+        for (int i = 1; i &lt; n; i++) {          // i = 1, 2, ..., n - 1
+            int licz = 1;                      // A[i] liczy się samo
+            for (int j = i + 1; j &lt;= n; j++) { // j = i + 1, ..., n
+                porownania++;
+                if (A[i - 1] == A[j - 1]) licz++;
+            }
+            if (licz &gt; m) {
+                p = i;
+                m = licz;
+            }
+        }
+        return new Wynik(p, A[p - 1], m, porownania);
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[] A = {7, 9, 15, 0, 6, 7, 6, 10, 15, 6, 0};
+        System.out.println(algorytm1(A).tekst());                         // 2.1 (p, A[p], m, liczba porównań)
+        System.out.println(algorytm1(new int[] {1, 2, 3}).porownania());  // 2.2 dla n = 3
+        System.out.println(algorytm2(A).tekst());                         // 2.3 - ten sam wynik, n(n-1)/2 = 55 porównań
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: p = 5, A[p] = 6, m = 3. 2.2: n = 3 → 9, dla n → n². 2.3: <code>dla i = 1, 2, ..., n - 1</code>, <code>licz ← 1</code>, <code>dla j = i + 1, i + 2, ..., n</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-czerwiec-f2015.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>slowa.txt</code> zawiera 1000 słów z małych liter alfabetu angielskiego, o długości od 1 do 200. Odpowiedzi zapisz w <code>wyniki4.txt</code>, poprzedzając je numerami zadań (przykład: <code>slowa_przyklad.txt</code>, 10 słów).</p><ul><li>4.1 — Podaj, w ilu słowach występuje fragment <code>k?t</code>, gdzie <code>?</code> to dowolna jedna litera (np. „alamakota”, „brokat”, ale nie „krata”). Przykład: 2.</li><li>4.2 — Wypisz wszystkie pięcioliterowe fragmenty słów zaczynające się i kończące literą <code>e</code> (przykład: <code>erefe efere</code>).</li><li>4.3 — ROT13 zamienia każdą literę na literę o 13 pozycji dalej (cyklicznie). Podaj, ile słów po zakodowaniu ROT13 staje się swoim odwróceniem (np. <code>aren</code> → <code>nera</code>), i wypisz najdłuższe z nich. Przykład: <code>2</code> i <code>aren</code>.</li><li>4.4 — Wypisz wszystkie słowa, w których ta sama litera zajmuje co najmniej połowę pozycji (np. „owocowo” tak, „ambaras” nie). Przykład: terefere, ananas, bo, alabama.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
     slowa = [linia.strip() for linia in file if linia.strip()]
 
 wynik = open(&quot;wyniki4.txt&quot;, &quot;w&quot;)
@@ -127,7 +286,117 @@ for slowo in slowa:
     if 2 * max(slowo.count(c) for c in slowo) &gt;= len(slowo):
         print(slowo, file=wynik)
 
-wynik.close()</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 26. 4.2: ebeee eeeie eipqe eqgle ejoge ecype evuye enmje ellye elome exsxe ezobe elnne ehcye evrue esfxe etrfe eryae exdye etcce etuke evtte. 4.3: 5 słów, najdłuższe: rhszzohhubwbojohuubmmfue. 4.4: vzwzwgszezvzzlzzzzzzouz, azaaasfakaaaxbaaaaau, ppppppnoppnoclpop, zggggggpegpnovzgg, nyrpvqycpaylffffffffffffff, kkkkkkkkkkwpijccdbl, tstevttebttktnetitbttti, gvsvjvvvvvqppvuvcvvvi.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+wynik.close()</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// 4.3
+std::string rot13(const std::string&amp; slowo) {
+    std::string wynik_rot;
+    for (char c : slowo) wynik_rot += (char)((c - &#x27;a&#x27; + 13) % 26 + &#x27;a&#x27;);
+    return wynik_rot;
+}
+
+int main() {
+    std::vector&lt;std::string&gt; slowa;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) slowa.push_back(linia);
+
+    std::ofstream wynik(&quot;wyniki4.txt&quot;);
+
+    // 4.1
+    int ile = 0;
+    for (auto&amp; slowo : slowa) {
+        for (size_t i = 0; i + 2 &lt; slowo.size(); i++) {
+            if (slowo[i] == &#x27;k&#x27; &amp;&amp; slowo[i + 2] == &#x27;t&#x27;) {
+                ile++;
+                break;
+            }
+        }
+    }
+    wynik &lt;&lt; &quot;4.1 &quot; &lt;&lt; ile &lt;&lt; &quot;\n&quot;;
+
+    // 4.2
+    wynik &lt;&lt; &quot;4.2&quot;;
+    for (auto&amp; slowo : slowa)
+        for (size_t i = 0; i + 4 &lt; slowo.size(); i++)
+            if (slowo[i] == &#x27;e&#x27; &amp;&amp; slowo[i + 4] == &#x27;e&#x27;) wynik &lt;&lt; &quot; &quot; &lt;&lt; slowo.substr(i, 5);
+    wynik &lt;&lt; &quot;\n&quot;;
+
+    std::vector&lt;std::string&gt; dobre;
+    for (auto&amp; slowo : slowa)
+        if (rot13(slowo) == std::string(slowo.rbegin(), slowo.rend())) dobre.push_back(slowo);
+    std::string najdluzsze = dobre[0];  // przy remisie pierwsze (jak max w Pythonie)
+    for (auto&amp; slowo : dobre)
+        if (slowo.size() &gt; najdluzsze.size()) najdluzsze = slowo;
+    wynik &lt;&lt; &quot;4.3 &quot; &lt;&lt; dobre.size() &lt;&lt; &quot; &quot; &lt;&lt; najdluzsze &lt;&lt; &quot;\n&quot;;
+
+    // 4.4
+    wynik &lt;&lt; &quot;4.4\n&quot;;
+    for (auto&amp; slowo : slowa) {
+        long najczestsza = 0;
+        for (char c : slowo) najczestsza = std::max(najczestsza, (long)std::count(slowo.begin(), slowo.end(), c));
+        if (2 * najczestsza &gt;= (long)slowo.size()) wynik &lt;&lt; slowo &lt;&lt; &quot;\n&quot;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    // 4.3
+    static String rot13(String slowo) {
+        var wynikRot = new StringBuilder();
+        for (char c : slowo.toCharArray()) wynikRot.append((char) ((c - &#x27;a&#x27; + 13) % 26 + &#x27;a&#x27;));
+        return wynikRot.toString();
+    }
+
+    public static void main(String[] args) throws Exception {
+        var slowa = new ArrayList&lt;String&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;slowa.txt&quot;)))
+            if (!linia.isBlank()) slowa.add(linia.strip());
+
+        try (var wynik = new PrintWriter(&quot;wyniki4.txt&quot;)) {
+            // 4.1
+            int ile = 0;
+            for (var slowo : slowa) {
+                for (int i = 0; i + 2 &lt; slowo.length(); i++) {
+                    if (slowo.charAt(i) == &#x27;k&#x27; &amp;&amp; slowo.charAt(i + 2) == &#x27;t&#x27;) {
+                        ile++;
+                        break;
+                    }
+                }
+            }
+            wynik.println(&quot;4.1 &quot; + ile);
+
+            // 4.2
+            var fragmenty = new StringBuilder(&quot;4.2&quot;);
+            for (var slowo : slowa)
+                for (int i = 0; i + 4 &lt; slowo.length(); i++)
+                    if (slowo.charAt(i) == &#x27;e&#x27; &amp;&amp; slowo.charAt(i + 4) == &#x27;e&#x27;)
+                        fragmenty.append(&quot; &quot;).append(slowo, i, i + 5);
+            wynik.println(fragmenty);
+
+            var dobre = new ArrayList&lt;String&gt;();
+            for (var slowo : slowa)
+                if (rot13(slowo).equals(new StringBuilder(slowo).reverse().toString())) dobre.add(slowo);
+            String najdluzsze = dobre.get(0);  // przy remisie pierwsze (jak max w Pythonie)
+            for (var slowo : dobre)
+                if (slowo.length() &gt; najdluzsze.length()) najdluzsze = slowo;
+            wynik.println(&quot;4.3 &quot; + dobre.size() + &quot; &quot; + najdluzsze);
+
+            // 4.4
+            wynik.println(&quot;4.4&quot;);
+            for (var slowo : slowa) {
+                int[] ileLiter = new int[128];
+                int najczestsza = 0;
+                for (char c : slowo.toCharArray()) najczestsza = Math.max(najczestsza, ++ileLiter[c]);
+                if (2 * najczestsza &gt;= slowo.length()) wynik.println(slowo);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 26. 4.2: ebeee eeeie eipqe eqgle ejoge ecype evuye enmje ellye elome exsxe ezobe elnne ehcye evrue esfxe etrfe eryae exdye etcce etuke evtte. 4.3: 5 słów, najdłuższe: rhszzohhubwbojohuubmmfue. 4.4: vzwzwgszezvzzlzzzzzzouz, azaaasfakaaaxbaaaaau, ppppppnoppnoclpop, zggggggpegpnovzgg, nyrpvqycpaylffffffffffffff, kkkkkkkkkkwpijccdbl, tstevttebttktnetitbttti, gvsvjvvvvvqppvuvcvvvi.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-czerwiec-f2015.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

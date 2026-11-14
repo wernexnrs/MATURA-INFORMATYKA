@@ -37,7 +37,16 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2025 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2025 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozklad(n):
+<h1 class="page-title">Matura 2025 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2025-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Każdą liczbę całkowitą większą od 1 można rozłożyć na czynniki pierwsze.</p><ul><li>1.1 — Uzupełnij tabelę: dla n = 14, 27 i 33 zapisz rozkład na czynniki pierwsze oraz TAK, jeśli n jest iloczynem dokładnie dwóch różnych liczb pierwszych, albo NIE w przeciwnym razie (przykłady: 6 = 2 · 3 — TAK, 9 = 3 · 3 — NIE, 13 — NIE).</li><li>1.2 — Dla n ≥ 2 tablica P[2..n] zawiera dla każdego i najmniejszy czynnik pierwszy liczby i (np. dla n = 19: P[4] = 2, P[9] = 3, P[15] = 3, P[17] = 17). Uzupełnij luki w algorytmie Rozkład tak, aby po jego wykonaniu P[i] = 1, gdy i jest liczbą pierwszą, P[i] = 2, gdy i jest iloczynem dokładnie dwóch różnych liczb pierwszych, i P[i] = 3 w pozostałych przypadkach:</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">dla i = 2, 3, ..., n
+    jeżeli P[i] = i
+        P[i] = ......
+    inaczej
+        j1 ← P[i]
+        j2 ← i / j1
+        jeżeli j1 ≠ j2 oraz ......
+            P[i] = ......
+        inaczej
+            P[i] = ......</code></pre></div></div></div></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozklad(n):
     czynniki = []
     d = 2
     while n &gt; 1:
@@ -75,7 +84,121 @@ for i in range(2, n + 1):           # algorytm Rozklad
         else:
             P[i] = 3
 
-print(P[2:])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 14 = 2 · 7 – TAK; 27 = 3 · 3 · 3 – NIE; 33 = 3 · 11 – TAK. 1.2: luki: <code>P[i] = 1</code>; <code>P[j2] = 1</code>; <code>P[i] = 2</code>; <code>P[i] = 3</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+print(P[2:])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; rozklad(int n) {
+    std::vector&lt;int&gt; czynniki;
+    int d = 2;
+    while (n &gt; 1) {
+        if (n % d == 0) {
+            czynniki.push_back(d);
+            n /= d;
+        } else {
+            d += 1;
+        }
+    }
+    return czynniki;
+}
+
+int main() {
+    // 1.1 (wektor wypisuje się jak lista w Pythonie: [2, 7])
+    for (int n : {14, 27, 33}) {
+        std::vector&lt;int&gt; czynniki = rozklad(n);
+        bool dwie_rozne = czynniki.size() == 2 &amp;&amp; czynniki[0] != czynniki[1];
+        std::println(&quot;{} {} {}&quot;, n, czynniki, dwie_rozne ? &quot;TAK&quot; : &quot;NIE&quot;);
+    }
+
+    // 1.2
+    int n = 40;
+    std::vector&lt;int&gt; P(n + 1, 0);       // P[2..n] - najmniejszy czynnik pierwszy liczby i
+    for (int i = 2; i &lt;= n; i++) {
+        int d = 2;
+        while (i % d != 0) {
+            d += 1;
+        }
+        P[i] = d;
+    }
+
+    for (int i = 2; i &lt;= n; i++) {      // algorytm Rozklad
+        if (P[i] == i) {
+            P[i] = 1;
+        } else {
+            int j1 = P[i];
+            int j2 = i / j1;
+            if (j1 != j2 &amp;&amp; P[j2] == 1) {   // P[j2] jest już przetworzone, bo j2 &lt; i
+                P[i] = 2;
+            } else {
+                P[i] = 3;
+            }
+        }
+    }
+
+    std::println(&quot;{}&quot;, std::vector&lt;int&gt;(P.begin() + 2, P.end()));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Zadanie {
+    static List&lt;Integer&gt; rozklad(int n) {
+        List&lt;Integer&gt; czynniki = new ArrayList&lt;&gt;();
+        int d = 2;
+        while (n &gt; 1) {
+            if (n % d == 0) {
+                czynniki.add(d);
+                n /= d;
+            } else {
+                d += 1;
+            }
+        }
+        return czynniki;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1 (lista wypisuje się jak w Pythonie: [2, 7])
+        for (int n : new int[]{14, 27, 33}) {
+            List&lt;Integer&gt; czynniki = rozklad(n);
+            boolean dwieRozne = czynniki.size() == 2 &amp;&amp; !czynniki.get(0).equals(czynniki.get(1));
+            System.out.println(n + &quot; &quot; + czynniki + &quot; &quot; + (dwieRozne ? &quot;TAK&quot; : &quot;NIE&quot;));
+        }
+
+        // 1.2
+        int n = 40;
+        int[] P = new int[n + 1];           // P[2..n] - najmniejszy czynnik pierwszy liczby i
+        for (int i = 2; i &lt;= n; i++) {
+            int d = 2;
+            while (i % d != 0) {
+                d += 1;
+            }
+            P[i] = d;
+        }
+
+        for (int i = 2; i &lt;= n; i++) {      // algorytm Rozklad
+            if (P[i] == i) {
+                P[i] = 1;
+            } else {
+                int j1 = P[i];
+                int j2 = i / j1;
+                if (j1 != j2 &amp;&amp; P[j2] == 1) {   // P[j2] jest już przetworzone, bo j2 &lt; i
+                    P[i] = 2;
+                } else {
+                    P[i] = 3;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(Arrays.copyOfRange(P, 2, n + 1)));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 14 = 2 · 7 – TAK; 27 = 3 · 3 · 3 – NIE; 33 = 3 · 11 – TAK. 1.2: luki: <code>P[i] = 1</code>; <code>P[j2] = 1</code>; <code>P[i] = 2</code>; <code>P[i] = 3</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-czerwiec-f2015.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Funkcje pomocnicze dla nieujemnej liczby całkowitej x: skróć(x) usuwa ostatnią cyfrę zapisu dziesiętnego (skróć(249) = 24, skróć(5) = 0), dopisz(x) dopisuje na końcu cyfrę 0 (dopisz(29) = 290, dopisz(0) = 0), ostatnia(x) zwraca ostatnią cyfrę (ostatnia(307) = 7). Dla nieujemnych liczb całkowitych a, b dana jest funkcja:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">f(a, b):
+    jeżeli b = 0
+        wynik 0, zakończ
+    k ← ostatnia(b)
+    w ← f(a, skróć(b))
+    w ← dopisz(w)
+    dopóki k &gt; 0 powtarzaj
+        w ← w + a
+        k ← k − 1
+    wynik w</code></pre></div></div></div><ul><li>2.1 — Podaj wynik f(a, b) dla par (42, 2), (4, 125), (103, 104).</li><li>2.2 — Ile łącznie razy zostanie wywołana funkcja f, jeśli pierwszym wywołaniem jest f(987654321, 123456789)?</li><li>2.3 — Ile łącznie razy zostanie wykonana instrukcja w ← w + a, jeśli pierwszym wywołaniem jest a) f(2024, 1000), b) f(2024, 1234)?</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
 dodawania = 0
 
 
@@ -107,7 +230,89 @@ print(wywolania)
 for a, b in [(2024, 1000), (2024, 1234)]:
     dodawania = 0
     f(a, b)
-    print(a, b, dodawania)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 84, 500, 10712. 2.2: 10. 2.3: a) 1, b) 10.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
+    print(a, b, dodawania)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int wywolania = 0;
+int dodawania = 0;
+
+long long f(long long a, long long b) {
+    wywolania += 1;
+    if (b == 0) {
+        return 0;
+    }
+    long long k = b % 10;           // ostatnia(b)
+    long long w = f(a, b / 10);     // skróć(b)
+    w = w * 10;                     // dopisz(w)
+    while (k &gt; 0) {
+        w = w + a;
+        dodawania += 1;
+        k -= 1;
+    }
+    return w;
+}
+
+int main() {
+    // 2.1 (funkcja oblicza a * b)
+    std::vector&lt;std::pair&lt;long long, long long&gt;&gt; pary = {{42, 2}, {4, 125}, {103, 104}};
+    for (auto [a, b] : pary) {
+        std::println(&quot;{} {} {}&quot;, a, b, f(a, b));
+    }
+
+    // 2.2
+    wywolania = 0;
+    f(987654321, 123456789);
+    std::println(&quot;{}&quot;, wywolania);
+
+    // 2.3
+    std::vector&lt;std::pair&lt;long long, long long&gt;&gt; pary3 = {{2024, 1000}, {2024, 1234}};
+    for (auto [a, b] : pary3) {
+        dodawania = 0;
+        f(a, b);
+        std::println(&quot;{} {} {}&quot;, a, b, dodawania);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int wywolania = 0;
+    static int dodawania = 0;
+
+    static long f(long a, long b) {
+        wywolania += 1;
+        if (b == 0) {
+            return 0;
+        }
+        long k = b % 10;            // ostatnia(b)
+        long w = f(a, b / 10);      // skróć(b)
+        w = w * 10;                 // dopisz(w)
+        while (k &gt; 0) {
+            w = w + a;
+            dodawania += 1;
+            k -= 1;
+        }
+        return w;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1 (funkcja oblicza a * b)
+        long[][] pary = {{42, 2}, {4, 125}, {103, 104}};
+        for (long[] p : pary) {
+            System.out.println(p[0] + &quot; &quot; + p[1] + &quot; &quot; + f(p[0], p[1]));
+        }
+
+        // 2.2
+        wywolania = 0;
+        f(987654321L, 123456789L);
+        System.out.println(wywolania);
+
+        // 2.3
+        long[][] pary3 = {{2024, 1000}, {2024, 1234}};
+        for (long[] p : pary3) {
+            dodawania = 0;
+            f(p[0], p[1]);
+            System.out.println(p[0] + &quot; &quot; + p[1] + &quot; &quot; + dodawania);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 84, 500, 10712. 2.2: 10. 2.3: a) 1, b) 10.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-czerwiec-f2015.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>dane.txt</code> zawiera jeden napis złożony z 10 000 znaków (kody ASCII 33–126), wśród których ukryte są liczby. Liczba ukryta to niepusty ciąg cyfr, przed którym i za którym nie stoi cyfra (np. w <code>356xv@@4vdfvdfD#$%@@#245</code> ukryte są 356, 4 i 245). Numer telefonu to ukryta liczba złożona z dokładnie 9 cyfr. Odpowiedzi zapisz w plikach <code>wyniki4_1.txt</code> … <code>wyniki4_4.txt</code>. Plik <code>dane_przyklad.txt</code> (200 znaków) służy do testów.</p><ul><li>4.1 — Podaj, ile ukrytych liczb zaczyna się od cyfr <code>50</code> (każde wystąpienie liczymy osobno). Np. w <code>fs@dx+cd50450505VfF^&amp;x50</code> są dwie takie liczby: 50450505 i 50.</li><li>4.2 — Podaj najczęściej występującą w pliku cyfrę i liczbę jej wystąpień (jest jedna taka cyfra; dla pliku przykładowego: <code>0 17</code>).</li><li>4.3 — Wypisz wszystkie numery telefonów zaczynające się od cyfry 5, w kolejności występowania w pliku.</li><li>4.4 — Podaj te numery telefonów, które składają się z najmniejszej liczby różnych cyfr.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
     napis = file.read().strip()
 
 # wydzielenie ukrytych liczb (maksymalnych ciągów cyfr)
@@ -150,7 +355,177 @@ najmniej = min(len(set(telefon)) for telefon in telefony)
 with open(&quot;wyniki4_4.txt&quot;, &quot;w&quot;) as wynik:
     for telefon in telefony:
         if len(set(telefon)) == najmniej:
-            print(telefon, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 4. 4.2: cyfra 1, 342 razy. 4.3: 588095244, 593151643, 583327270, 565269349, 583672019, 506585224, 574489008, 587103844, 510672749, 529135372, 515437684, 589477488. 4.4: 033035335, 050525250.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2025_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+            print(telefon, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cctype&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// liczba różnych cyfr w napisie
+size_t rozne(const std::string&amp; s) {
+    return std::set&lt;char&gt;(s.begin(), s.end()).size();
+}
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string napis;
+    std::getline(plik, napis);
+    while (!napis.empty() &amp;&amp; std::isspace((unsigned char)napis.back())) {
+        napis.pop_back();  // odpowiednik strip() - usuwa m.in. znak &#x27;\r&#x27;
+    }
+
+    // wydzielenie ukrytych liczb (maksymalnych ciągów cyfr)
+    std::vector&lt;std::string&gt; liczby;
+    std::string biezaca = &quot;&quot;;
+    for (char znak : napis + &quot; &quot;) {
+        if (std::isdigit((unsigned char)znak)) {
+            biezaca += znak;
+        } else {
+            if (biezaca != &quot;&quot;) {
+                liczby.push_back(biezaca);
+            }
+            biezaca = &quot;&quot;;
+        }
+    }
+
+    // 4.1
+    int ile = 0;
+    for (const std::string&amp; liczba : liczby) {
+        if (liczba.substr(0, 2) == &quot;50&quot;) {
+            ile += 1;
+        }
+    }
+    std::ofstream wynik1(&quot;wyniki4_1.txt&quot;);
+    std::println(wynik1, &quot;{}&quot;, ile);
+
+    // 4.2
+    std::vector&lt;int&gt; wystapienia(10, 0);
+    for (char znak : napis) {
+        if (std::isdigit((unsigned char)znak)) {
+            wystapienia[znak - &#x27;0&#x27;] += 1;
+        }
+    }
+    auto najwiecej = std::ranges::max_element(wystapienia);  // pierwsza z największych
+    std::ofstream wynik2(&quot;wyniki4_2.txt&quot;);
+    std::println(wynik2, &quot;{} {}&quot;, najwiecej - wystapienia.begin(), *najwiecej);
+
+    // 4.3
+    std::vector&lt;std::string&gt; telefony;
+    for (const std::string&amp; liczba : liczby) {
+        if (liczba.size() == 9) {
+            telefony.push_back(liczba);
+        }
+    }
+    std::ofstream wynik3(&quot;wyniki4_3.txt&quot;);
+    for (const std::string&amp; telefon : telefony) {
+        if (telefon[0] == &#x27;5&#x27;) {
+            std::println(wynik3, &quot;{}&quot;, telefon);
+        }
+    }
+
+    // 4.4
+    size_t najmniej = 10;
+    for (const std::string&amp; telefon : telefony) {
+        najmniej = std::min(najmniej, rozne(telefon));
+    }
+    std::ofstream wynik4(&quot;wyniki4_4.txt&quot;);
+    for (const std::string&amp; telefon : telefony) {
+        if (rozne(telefon) == najmniej) {
+            std::println(wynik4, &quot;{}&quot;, telefon);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static boolean cyfra(char znak) {
+        return znak &gt;= &#x27;0&#x27; &amp;&amp; znak &lt;= &#x27;9&#x27;;
+    }
+
+    // liczba różnych cyfr w napisie
+    static long rozne(String s) {
+        return s.chars().distinct().count();
+    }
+
+    public static void main(String[] args) throws Exception {
+        String napis = Files.readString(Path.of(&quot;dane.txt&quot;)).strip();
+
+        // wydzielenie ukrytych liczb (maksymalnych ciągów cyfr)
+        List&lt;String&gt; liczby = new ArrayList&lt;&gt;();
+        String biezaca = &quot;&quot;;
+        for (char znak : (napis + &quot; &quot;).toCharArray()) {
+            if (cyfra(znak)) {
+                biezaca += znak;
+            } else {
+                if (!biezaca.equals(&quot;&quot;)) {
+                    liczby.add(biezaca);
+                }
+                biezaca = &quot;&quot;;
+            }
+        }
+
+        // 4.1
+        int ile = 0;
+        for (String liczba : liczby) {
+            if (liczba.startsWith(&quot;50&quot;)) {
+                ile += 1;
+            }
+        }
+        try (PrintWriter wynik = new PrintWriter(&quot;wyniki4_1.txt&quot;)) {
+            wynik.println(ile);
+        }
+
+        // 4.2
+        int[] wystapienia = new int[10];
+        for (char znak : napis.toCharArray()) {
+            if (cyfra(znak)) {
+                wystapienia[znak - &#x27;0&#x27;] += 1;
+            }
+        }
+        int najczestsza = 0;
+        for (int c = 1; c &lt; 10; c++) {
+            if (wystapienia[c] &gt; wystapienia[najczestsza]) {
+                najczestsza = c;
+            }
+        }
+        try (PrintWriter wynik = new PrintWriter(&quot;wyniki4_2.txt&quot;)) {
+            wynik.println(najczestsza + &quot; &quot; + wystapienia[najczestsza]);
+        }
+
+        // 4.3
+        List&lt;String&gt; telefony = new ArrayList&lt;&gt;();
+        for (String liczba : liczby) {
+            if (liczba.length() == 9) {
+                telefony.add(liczba);
+            }
+        }
+        try (PrintWriter wynik = new PrintWriter(&quot;wyniki4_3.txt&quot;)) {
+            for (String telefon : telefony) {
+                if (telefon.charAt(0) == &#x27;5&#x27;) {
+                    wynik.println(telefon);
+                }
+            }
+        }
+
+        // 4.4
+        long najmniej = 10;
+        for (String telefon : telefony) {
+            najmniej = Math.min(najmniej, rozne(telefon));
+        }
+        try (PrintWriter wynik = new PrintWriter(&quot;wyniki4_4.txt&quot;)) {
+            for (String telefon : telefony) {
+                if (rozne(telefon) == najmniej) {
+                    wynik.println(telefon);
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 4. 4.2: cyfra 1, 342 razy. 4.3: 588095244, 593151643, 583327270, 565269349, 583672019, 506585224, 574489008, 587103844, 510672749, 529135372, 515437684, 589477488. 4.4: 033035335, 050525250.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2025_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202025%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2025-czerwiec-f2015.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2025_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

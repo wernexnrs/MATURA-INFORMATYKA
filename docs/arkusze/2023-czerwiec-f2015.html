@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2023 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2023 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><blockquote class="callout">Pliki do zadania 4 są w archiwum w folderze <code>DANE/DANE_E</code>.</blockquote><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_cyfr(x):
+<h1 class="page-title">Matura 2023 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><blockquote class="callout"><p>Pliki do zadania 4 są w archiwum w folderze <code>DANE/DANE_E</code>.</p></blockquote><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dwie dodatnie liczby całkowite a i b są <em>przyjaciółkami</em>, gdy mają taką samą sumę cyfr. Są <em>dobrymi przyjaciółkami</em>, gdy są przyjaciółkami i dodatkowo pierwsza cyfra jednej z nich jest równa ostatniej cyfrze drugiej (pierwsza cyfra a = ostatnia cyfra b lub pierwsza cyfra b = ostatnia cyfra a). Np. 15 i 24 są przyjaciółkami, ale nie dobrymi; 124 i 61 oraz 431 i 17 są dobrymi przyjaciółkami.</p><ul><li>1.1 — Uzupełnij tabelę: dla par (131, 50), (416, 84), (32, 221) podaj sumy cyfr obu liczb oraz czy są przyjaciółkami i czy są dobrymi przyjaciółkami (PRAWDA/FAŁSZ). Przykład: 433 i 352 — sumy 10 i 10, PRAWDA, PRAWDA.</li><li>1.2 — Zapisz w pseudokodzie lub języku programowania algorytm, który dla dodatnich liczb całkowitych a, b zwraca PRAWDA, gdy są dobrymi przyjaciółkami, a FAŁSZ w przeciwnym razie. Wolno używać tylko operacji arytmetycznych (w tym <code>div</code> i <code>mod</code>), porównań, instrukcji sterujących i własnych funkcji — bez funkcji wbudowanych i bez zamiany liczb na napisy.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_cyfr(x):
     s = 0
     while x &gt; 0:
         s += x % 10
@@ -68,7 +68,102 @@ def dobre_przyjaciolki(a, b):
 
 # 1.1
 for a, b in [(131, 50), (416, 84), (32, 221)]:
-    print(a, b, suma_cyfr(a), suma_cyfr(b), suma_cyfr(a) == suma_cyfr(b), dobre_przyjaciolki(a, b))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 131 i 50: 5, 5, PRAWDA, FAŁSZ; 416 i 84: 11, 12, FAŁSZ, FAŁSZ; 32 i 221: 5, 5, PRAWDA, PRAWDA. 1.2: funkcja <code>dobre_przyjaciolki</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dodawania = 0
+    print(a, b, suma_cyfr(a), suma_cyfr(b), suma_cyfr(a) == suma_cyfr(b), dobre_przyjaciolki(a, b))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+int suma_cyfr(int x) {
+    int s = 0;
+    while (x &gt; 0) {
+        s += x % 10;
+        x /= 10;
+    }
+    return s;
+}
+
+// 1.2 - tylko operacje na liczbach całkowitych
+bool dobre_przyjaciolki(int a, int b) {
+    int ostatnia_a = a % 10;
+    int ostatnia_b = b % 10;
+    int pierwsza_a = 0, pierwsza_b = 0;
+    int suma_a = 0;
+    while (a &gt; 0) {
+        if (a &lt; 10) pierwsza_a = a;
+        suma_a += a % 10;
+        a /= 10;
+    }
+    int suma_b = 0;
+    while (b &gt; 0) {
+        if (b &lt; 10) pierwsza_b = b;
+        suma_b += b % 10;
+        b /= 10;
+    }
+    if (suma_a != suma_b) return false;
+    return pierwsza_a == ostatnia_b || pierwsza_b == ostatnia_a;
+}
+
+// wartość logiczna zapisana jak w Pythonie
+std::string tekst(bool b) { return b ? &quot;True&quot; : &quot;False&quot;; }
+
+int main() {
+    // 1.1
+    int dane[3][2] = {{131, 50}, {416, 84}, {32, 221}};
+    for (auto&amp; [a, b] : dane)
+        std::println(&quot;{} {} {} {} {} {}&quot;, a, b, suma_cyfr(a), suma_cyfr(b),
+                     tekst(suma_cyfr(a) == suma_cyfr(b)), tekst(dobre_przyjaciolki(a, b)));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int sumaCyfr(int x) {
+        int s = 0;
+        while (x &gt; 0) {
+            s += x % 10;
+            x /= 10;
+        }
+        return s;
+    }
+
+    // 1.2 - tylko operacje na liczbach całkowitych
+    static boolean dobrePrzyjaciolki(int a, int b) {
+        int ostatniaA = a % 10;
+        int ostatniaB = b % 10;
+        int pierwszaA = 0, pierwszaB = 0;
+        int sumaA = 0;
+        while (a &gt; 0) {
+            if (a &lt; 10) pierwszaA = a;
+            sumaA += a % 10;
+            a /= 10;
+        }
+        int sumaB = 0;
+        while (b &gt; 0) {
+            if (b &lt; 10) pierwszaB = b;
+            sumaB += b % 10;
+            b /= 10;
+        }
+        if (sumaA != sumaB) return false;
+        return pierwszaA == ostatniaB || pierwszaB == ostatniaA;
+    }
+
+    // wartość logiczna zapisana jak w Pythonie
+    static String tekst(boolean b) { return b ? &quot;True&quot; : &quot;False&quot;; }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        int[][] dane = {{131, 50}, {416, 84}, {32, 221}};
+        for (var d : dane) {
+            int a = d[0], b = d[1];
+            System.out.println(a + &quot; &quot; + b + &quot; &quot; + sumaCyfr(a) + &quot; &quot; + sumaCyfr(b) + &quot; &quot;
+                    + tekst(sumaCyfr(a) == sumaCyfr(b)) + &quot; &quot; + tekst(dobrePrzyjaciolki(a, b)));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 131 i 50: 5, 5, PRAWDA, FAŁSZ; 416 i 84: 11, 12, FAŁSZ, FAŁSZ; 32 i 221: 5, 5, PRAWDA, PRAWDA. 1.2: funkcja <code>dobre_przyjaciolki</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-czerwiec-f2015.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dany jest rekurencyjny algorytm mnożenia dodatnich liczb całkowitych x, y, używający tylko dodawania i dzielenia całkowitego przez 2:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">iloczyn(x, y):
+    jeżeli y = 1: wynikiem jest x
+    w przeciwnym razie:
+        k ← y div 2
+        z ← iloczyn(x, k)
+        jeżeli y mod 2 = 0: wynikiem jest z + z
+        w przeciwnym razie: wynikiem jest x + z + z</code></pre></div></div></div><p>Interesuje nas liczba operacji dodawania wykonanych przy obliczaniu iloczyn(x, y) (np. iloczyn(9, 11) wykonuje 5 dodawań).</p><ul><li>2.1 — Uzupełnij tabelę kolejnych wywołań (x, y, k, z, wynik) dla iloczyn(10, 45) — łącznie 6 wywołań, ostatnie z y = 1.</li><li>2.2 — Podaj liczbę dodawań wykonanych dla par (x, y): (9, 11), (8, 32), (2, 47), (112, 112).</li><li>2.3 — Uzupełnij trzy luki w iteracyjnej wersji algorytmu (wynik z = x·y; wolno używać tylko dodawania, odejmowania, <code>div</code> i <code>mod</code>, bez mnożenia):</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">z ← ____
+dopóki ____ wykonuj
+    jeżeli y mod 2 = 1: z ← z + x
+    x ← x + x
+    y ← ____</code></pre></div></div></div></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dodawania = 0
 
 
 def iloczyn(x, y):
@@ -108,7 +203,105 @@ for x, y in [(9, 11), (8, 32), (2, 47), (112, 112)]:
     print(&quot;liczba dodawań:&quot;, x, y, dodawania)
 
 # 2.3 - sprawdzenie
-print(all(iloczyn_iter(x, y) == x * y for x in range(1, 50) for y in range(1, 50)))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: (x, y, k, z, wynik): (10, 45, 22, 220, 450), (10, 22, 11, 110, 220), (10, 11, 5, 50, 110), (10, 5, 2, 20, 50), (10, 2, 1, 10, 20), (10, 1, –, –, 10). 2.2: 5, 5, 9, 8. 2.3: <code>z ← 0</code>, <code>dopóki y ≥ 1</code> (tzn. y &gt; 0), <code>y ← y div 2</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;anagram.txt&quot;) as file:
+print(all(iloczyn_iter(x, y) == x * y for x in range(1, 50) for y in range(1, 50)))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int dodawania = 0;
+
+long long iloczyn(long long x, long long y) {
+    if (y == 1) return x;
+    long long k = y / 2;
+    long long z = iloczyn(x, k);
+    long long wynik;
+    if (y % 2 == 0) {
+        dodawania += 1;
+        wynik = z + z;
+    } else {
+        dodawania += 2;
+        wynik = x + z + z;
+    }
+    std::println(&quot;{} {} {} {} {}&quot;, x, y, k, z, wynik);  // 2.1 - wiersz tabeli (wypisywane od najgłębszego wywołania)
+    return wynik;
+}
+
+// 2.3 - wersja iteracyjna
+long long iloczyn_iter(long long x, long long y) {
+    long long z = 0;
+    while (y &gt;= 1) {
+        if (y % 2 == 1) z = z + x;
+        x = x + x;
+        y = y / 2;
+    }
+    return z;
+}
+
+int main() {
+    // 2.1
+    iloczyn(10, 45);
+
+    // 2.2
+    int dane[4][2] = {{9, 11}, {8, 32}, {2, 47}, {112, 112}};
+    for (auto&amp; [x, y] : dane) {
+        dodawania = 0;
+        iloczyn(x, y);
+        std::println(&quot;liczba dodawań: {} {} {}&quot;, x, y, dodawania);
+    }
+
+    // 2.3 - sprawdzenie
+    bool wszystkie = true;
+    for (int x = 1; x &lt; 50; x++)
+        for (int y = 1; y &lt; 50; y++)
+            if (iloczyn_iter(x, y) != x * y) wszystkie = false;
+    std::println(&quot;{}&quot;, wszystkie ? &quot;True&quot; : &quot;False&quot;);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int dodawania = 0;
+
+    static long iloczyn(long x, long y) {
+        if (y == 1) return x;
+        long k = y / 2;
+        long z = iloczyn(x, k);
+        long wynik;
+        if (y % 2 == 0) {
+            dodawania += 1;
+            wynik = z + z;
+        } else {
+            dodawania += 2;
+            wynik = x + z + z;
+        }
+        System.out.println(x + &quot; &quot; + y + &quot; &quot; + k + &quot; &quot; + z + &quot; &quot; + wynik);  // 2.1 - wiersz tabeli (od najgłębszego wywołania)
+        return wynik;
+    }
+
+    // 2.3 - wersja iteracyjna
+    static long iloczynIter(long x, long y) {
+        long z = 0;
+        while (y &gt;= 1) {
+            if (y % 2 == 1) z = z + x;
+            x = x + x;
+            y = y / 2;
+        }
+        return z;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        iloczyn(10, 45);
+
+        // 2.2
+        int[][] dane = {{9, 11}, {8, 32}, {2, 47}, {112, 112}};
+        for (var d : dane) {
+            dodawania = 0;
+            iloczyn(d[0], d[1]);
+            System.out.println(&quot;liczba dodawań: &quot; + d[0] + &quot; &quot; + d[1] + &quot; &quot; + dodawania);
+        }
+
+        // 2.3 - sprawdzenie
+        boolean wszystkie = true;
+        for (int x = 1; x &lt; 50; x++)
+            for (int y = 1; y &lt; 50; y++)
+                if (iloczynIter(x, y) != x * y) wszystkie = false;
+        System.out.println(wszystkie ? &quot;True&quot; : &quot;False&quot;);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: (x, y, k, z, wynik): (10, 45, 22, 220, 450), (10, 22, 11, 110, 220), (10, 11, 5, 50, 110), (10, 5, 2, 20, 50), (10, 2, 1, 10, 20), (10, 1, –, –, 10). 2.2: 5, 5, 9, 8. 2.3: <code>z ← 0</code>, <code>dopóki y ≥ 1</code> (tzn. y &gt; 0), <code>y ← y div 2</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-czerwiec-f2015.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>anagram.txt</code> zawiera 1000 wierszy, w każdym liczbę binarną o co najwyżej 14 cyfrach, zaczynającą się od 1; liczby się nie powtarzają. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania (plik <code>przyklad.txt</code> zawiera 100 przykładowych wierszy).</p><ul><li>4.1 — Liczba jest <em>zrównoważona</em>, gdy ma tyle samo zer i jedynek, a <em>prawie zrównoważona</em>, gdy liczby jedynek i zer różnią się o 1. Podaj, ile jest liczb zrównoważonych i ile prawie zrównoważonych (dla przykładu: 21 i 15).</li><li>4.2 — Anagram to liczba utworzona z tych samych cyfr w innej kolejności, bez zera na początku (np. z 11100 da się utworzyć 6 anagramów). Wypisz, w kolejności z pliku, wszystkie 8-cyfrowe liczby binarne, z których można utworzyć największą liczbę anagramów.</li><li>4.3 — Podaj największą wartość bezwzględną różnicy między liczbami z sąsiednich wierszy pliku, zapisaną binarnie (dla przykładu: 1110001010).</li><li>4.4 — Zamień wszystkie liczby na system dziesiętny, a następnie: a) podaj, ile z nich nie zawiera cyfry 0; b) podaj liczbę o największej sumie <em>różnych</em> cyfr (np. dla 20462 suma ta wynosi 12); przy remisie — pierwszą w pliku. Dla przykładu: 81 i 895.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;anagram.txt&quot;) as file:
     liczby = [linia.strip() for linia in file if linia.strip()]
 
 wynik = open(&quot;wyniki4.txt&quot;, &quot;w&quot;)
@@ -163,7 +356,168 @@ for x in dziesietne:
         najlepsza = x
 print(&quot;4.4&quot;, bez_zera, najlepsza, file=wynik)
 
-wynik.close()</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 118 zrównoważonych, 219 prawie zrównoważonych. 4.2: 10110101, 11010100, 10100101, 11001001, 10110100, 11001101, 11000110. 4.3: 10011000111001. 4.4: a) 728, b) 7896.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+wynik.close()</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// 4.2 - pierwsza cyfra musi być 1, pozostałe jedynki rozmieszczamy na 7 miejscach: C(7, jedynki - 1)
+long long silnia(int n) {
+    long long s = 1;
+    for (int i = 2; i &lt;= n; i++) s *= i;
+    return s;
+}
+
+long long anagramy(const std::string&amp; liczba) {
+    int reszta = liczba.size() - 1;
+    int jedynki = std::count(liczba.begin(), liczba.end(), &#x27;1&#x27;) - 1;
+    return silnia(reszta) / (silnia(jedynki) * silnia(reszta - jedynki));
+}
+
+// suma różnych cyfr liczby (sum(int(c) for c in set(str(x))))
+int suma_roznych_cyfr(long long x) {
+    std::string s = std::to_string(x);
+    std::set&lt;char&gt; rozne(s.begin(), s.end());
+    int suma = 0;
+    for (char c : rozne) suma += c - &#x27;0&#x27;;
+    return suma;
+}
+
+std::string na_dwojkowy(long long n) {
+    if (n == 0) return &quot;0&quot;;
+    std::string wynik;
+    while (n &gt; 0) {
+        wynik = char(&#x27;0&#x27; + n % 2) + wynik;
+        n /= 2;
+    }
+    return wynik;
+}
+
+int main() {
+    std::vector&lt;std::string&gt; liczby;
+    std::ifstream plik(&quot;anagram.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) liczby.push_back(linia);
+
+    std::ofstream wynik(&quot;wyniki4.txt&quot;);
+
+    // 4.1
+    int zrownowazone = 0;
+    int prawie = 0;
+    for (auto&amp; liczba : liczby) {
+        int roznica = std::abs((int)std::count(liczba.begin(), liczba.end(), &#x27;1&#x27;) -
+                               (int)std::count(liczba.begin(), liczba.end(), &#x27;0&#x27;));
+        if (roznica == 0)
+            zrownowazone++;
+        else if (roznica == 1)
+            prawie++;
+    }
+    wynik &lt;&lt; &quot;4.1 &quot; &lt;&lt; zrownowazone &lt;&lt; &quot; &quot; &lt;&lt; prawie &lt;&lt; &quot;\n&quot;;
+
+    std::vector&lt;std::string&gt; osmiocyfrowe;
+    for (auto&amp; liczba : liczby)
+        if (liczba.size() == 8) osmiocyfrowe.push_back(liczba);
+    long long najwiecej = 0;
+    for (auto&amp; liczba : osmiocyfrowe) najwiecej = std::max(najwiecej, anagramy(liczba));
+    wynik &lt;&lt; &quot;4.2\n&quot;;
+    for (auto&amp; liczba : osmiocyfrowe)
+        if (anagramy(liczba) == najwiecej) wynik &lt;&lt; liczba &lt;&lt; &quot;\n&quot;;
+
+    // 4.3
+    std::vector&lt;long long&gt; dziesietne;
+    for (auto&amp; liczba : liczby) dziesietne.push_back(std::stoll(liczba, nullptr, 2));
+    long long najwieksza = 0;
+    for (size_t i = 1; i &lt; dziesietne.size(); i++)
+        najwieksza = std::max(najwieksza, std::llabs(dziesietne[i] - dziesietne[i - 1]));
+    wynik &lt;&lt; &quot;4.3 &quot; &lt;&lt; na_dwojkowy(najwieksza) &lt;&lt; &quot;\n&quot;;
+
+    // 4.4
+    int bez_zera = 0;
+    long long najlepsza = dziesietne[0];
+    for (long long x : dziesietne) {
+        if (!std::to_string(x).contains(&#x27;0&#x27;)) bez_zera++;
+        if (suma_roznych_cyfr(x) &gt; suma_roznych_cyfr(najlepsza)) najlepsza = x;
+    }
+    wynik &lt;&lt; &quot;4.4 &quot; &lt;&lt; bez_zera &lt;&lt; &quot; &quot; &lt;&lt; najlepsza &lt;&lt; &quot;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static int ile(String x, char c) {
+        return (int) x.chars().filter(z -&gt; z == c).count();
+    }
+
+    // 4.2 - pierwsza cyfra musi być 1, pozostałe jedynki rozmieszczamy na 7 miejscach: C(7, jedynki - 1)
+    static long silnia(int n) {
+        long s = 1;
+        for (int i = 2; i &lt;= n; i++) s *= i;
+        return s;
+    }
+
+    static long anagramy(String liczba) {
+        int reszta = liczba.length() - 1;
+        int jedynki = ile(liczba, &#x27;1&#x27;) - 1;
+        return silnia(reszta) / (silnia(jedynki) * silnia(reszta - jedynki));
+    }
+
+    // suma różnych cyfr liczby (sum(int(c) for c in set(str(x))))
+    static int sumaRoznychCyfr(long x) {
+        var rozne = new HashSet&lt;Character&gt;();
+        for (char c : Long.toString(x).toCharArray()) rozne.add(c);
+        int suma = 0;
+        for (char c : rozne) suma += c - &#x27;0&#x27;;
+        return suma;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;String&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;anagram.txt&quot;)))
+            if (!linia.isBlank()) liczby.add(linia.strip());
+
+        try (var wynik = new PrintWriter(&quot;wyniki4.txt&quot;)) {
+            // 4.1
+            int zrownowazone = 0;
+            int prawie = 0;
+            for (var liczba : liczby) {
+                int roznica = Math.abs(ile(liczba, &#x27;1&#x27;) - ile(liczba, &#x27;0&#x27;));
+                if (roznica == 0)
+                    zrownowazone++;
+                else if (roznica == 1)
+                    prawie++;
+            }
+            wynik.println(&quot;4.1 &quot; + zrownowazone + &quot; &quot; + prawie);
+
+            var osmiocyfrowe = new ArrayList&lt;String&gt;();
+            for (var liczba : liczby)
+                if (liczba.length() == 8) osmiocyfrowe.add(liczba);
+            long najwiecej = 0;
+            for (var liczba : osmiocyfrowe) najwiecej = Math.max(najwiecej, anagramy(liczba));
+            wynik.println(&quot;4.2&quot;);
+            for (var liczba : osmiocyfrowe)
+                if (anagramy(liczba) == najwiecej) wynik.println(liczba);
+
+            // 4.3
+            var dziesietne = new ArrayList&lt;Long&gt;();
+            for (var liczba : liczby) dziesietne.add(Long.parseLong(liczba, 2));
+            long najwieksza = 0;
+            for (int i = 1; i &lt; dziesietne.size(); i++)
+                najwieksza = Math.max(najwieksza, Math.abs(dziesietne.get(i) - dziesietne.get(i - 1)));
+            wynik.println(&quot;4.3 &quot; + Long.toBinaryString(najwieksza));
+
+            // 4.4
+            int bezZera = 0;
+            long najlepsza = dziesietne.get(0);
+            for (long x : dziesietne) {
+                if (!Long.toString(x).contains(&quot;0&quot;)) bezZera++;
+                if (sumaRoznychCyfr(x) &gt; sumaRoznychCyfr(najlepsza)) najlepsza = x;
+            }
+            wynik.println(&quot;4.4 &quot; + bezZera + &quot; &quot; + najlepsza);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 118 zrównoważonych, 219 prawie zrównoważonych. 4.2: 10110101, 11010100, 10100101, 11001001, 10110100, 11001101, 11000110. 4.3: 10011000111001. 4.4: a) 728, b) 7896.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-czerwiec-f2015.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

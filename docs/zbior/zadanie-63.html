@@ -37,19 +37,76 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#63-1">63.1</a></li><li><a href="#63-2">63.2</a></li><li><a href="#63-3">63.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 63. Ciągi zerojedynkowe</span></nav>
-<h1 class="page-title">Zadanie 63. Ciągi zerojedynkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="63-1" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-1">63.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;ciagi.txt&quot;) as file:
+<h1 class="page-title">Zadanie 63. Ciągi zerojedynkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="63-1" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-1">63.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>ciagi.txt</code> zawiera 1000 różnych ciągów zerojedynkowych o długości od 2 do 18, każdy w osobnym wierszu. Odpowiedzi zapisz w pliku <code>wyniki_ciagi.txt</code>, poprzedzając wyniki każdego zadania jego numerem.</p><p>Ciąg dwucykliczny to ciąg zerojedynkowy o parzystej długości, który składa się z dwóch identycznych połówek (x = AB, gdzie A = B), np. <code>11001100</code>. Wypisz wszystkie ciągi dwucykliczne z pliku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;ciagi.txt&quot;) as file:
     for line in file:
         ciag = line.strip()
         polowa = len(ciag) // 2
         if len(ciag) % 2 == 0 and ciag[:polowa] == ciag[polowa:]:
-            print(ciag)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 11, 101000101000, 10110001011000, 1010, 110110110110, 100100, 11001100, 111111, 10111011, 101101, … (18 ciągów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="63-2" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-2">63.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
+            print(ciag)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;ciagi.txt&quot;);
+    std::string ciag;
+    while (plik &gt;&gt; ciag) {  // wczytanie słowa pomija białe znaki - jak strip()
+        size_t polowa = ciag.size() / 2;
+        if (ciag.size() % 2 == 0 &amp;&amp; ciag.substr(0, polowa) == ciag.substr(polowa)) {
+            std::println(&quot;{}&quot;, ciag);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(&quot;ciagi.txt&quot;))) {
+            String ciag = linia.strip();
+            int polowa = ciag.length() / 2;
+            if (ciag.length() % 2 == 0 &amp;&amp; ciag.substring(0, polowa).equals(ciag.substring(polowa))) {
+                System.out.println(ciag);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 11, 101000101000, 10110001011000, 1010, 110110110110, 100100, 11001100, 111111, 10111011, 101101, … (18 ciągów)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/63.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2063.%20Ci%C4%85gi%20zerojedynkowe%20%E2%80%94%2063.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-63.html%2363-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="63-2" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-2">63.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 63.1 (1000 ciągów zerojedynkowych w pliku <code>ciagi.txt</code>).</p><p>Podaj, w ilu ciągach z pliku nigdzie nie stoją obok siebie dwie jedynki.</p><p>Przykład: spośród ciągów <code>11001101001</code>, <code>10001000</code>, <code>000011</code> warunek spełnia tylko <code>10001000</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
 
 with open(&quot;ciagi.txt&quot;) as file:
     for line in file:
         if &quot;11&quot; not in line:
             count += 1
 
-print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 93</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="63-3" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-3">63.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_czynnikow(n):  # liczba czynników pierwszych (z powtórzeniami)
+print(count)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int count = 0;
+
+    std::ifstream plik(&quot;ciagi.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        if (!linia.contains(&quot;11&quot;)) {
+            count += 1;
+        }
+    }
+
+    std::println(&quot;{}&quot;, count);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int count = 0;
+
+        for (String linia : Files.readAllLines(Path.of(&quot;ciagi.txt&quot;))) {
+            if (!linia.contains(&quot;11&quot;)) {
+                count += 1;
+            }
+        }
+
+        System.out.println(count);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 93</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/63.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2063.%20Ci%C4%85gi%20zerojedynkowe%20%E2%80%94%2063.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-63.html%2363-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="63-3" style="--c:var(--g7)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#63-3">63.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 63.1.</p><p>Liczba półpierwsza to iloczyn dwóch liczb pierwszych (mogą być równe). Podaj, ile ciągów z pliku jest zapisem binarnym liczby półpierwszej, oraz największą i najmniejszą taką liczbę w zapisie dziesiętnym.</p><p>Przykład: <code>100010</code> = 34 = 2·17 i <code>1101001001</code> = 841 = 29·29 są półpierwsze; <code>1100101</code> = 101 (liczba pierwsza) i <code>1111111111</code> = 1023 = 3·11·31 — nie.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_czynnikow(n):  # liczba czynników pierwszych (z powtórzeniami)
     ile = 0
     i = 2
     while i * i &lt;= n:
@@ -71,7 +128,79 @@ with open(&quot;ciagi.txt&quot;) as file:
             polpierwsze.append(liczba)
 
 print(len(polpierwsze))
-print(&quot;min:&quot;, min(polpierwsze), &quot;max:&quot;, max(polpierwsze))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 259 liczb półpierwszych, min = 6, max = 248667</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;min:&quot;, min(polpierwsze), &quot;max:&quot;, max(polpierwsze))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int liczba_czynnikow(long long n) {  // liczba czynników pierwszych (z powtórzeniami)
+    int ile = 0;
+    long long i = 2;
+    while (i * i &lt;= n) {
+        while (n % i == 0) {
+            ile += 1;
+            n /= i;
+        }
+        i += 1;
+    }
+    if (n &gt; 1) {
+        ile += 1;
+    }
+    return ile;
+}
+
+int main() {
+    std::vector&lt;long long&gt; polpierwsze;
+
+    std::ifstream plik(&quot;ciagi.txt&quot;);
+    std::string ciag;
+    while (plik &gt;&gt; ciag) {
+        long long liczba = std::stoll(ciag, nullptr, 2);  // zapis dwójkowy
+        if (liczba_czynnikow(liczba) == 2) {
+            polpierwsze.push_back(liczba);
+        }
+    }
+
+    std::println(&quot;{}&quot;, polpierwsze.size());
+    std::println(&quot;min: {} max: {}&quot;, std::ranges::min(polpierwsze), std::ranges::max(polpierwsze));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Zadanie {
+    static int liczbaCzynnikow(long n) {  // liczba czynników pierwszych (z powtórzeniami)
+        int ile = 0;
+        long i = 2;
+        while (i * i &lt;= n) {
+            while (n % i == 0) {
+                ile += 1;
+                n /= i;
+            }
+            i += 1;
+        }
+        if (n &gt; 1) {
+            ile += 1;
+        }
+        return ile;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Long&gt; polpierwsze = new ArrayList&lt;&gt;();
+
+        for (String linia : Files.readAllLines(Path.of(&quot;ciagi.txt&quot;))) {
+            long liczba = Long.parseLong(linia.strip(), 2);  // zapis dwójkowy
+            if (liczbaCzynnikow(liczba) == 2) {
+                polpierwsze.add(liczba);
+            }
+        }
+
+        System.out.println(polpierwsze.size());
+        System.out.println(&quot;min: &quot; + Collections.min(polpierwsze) + &quot; max: &quot; + Collections.max(polpierwsze));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 259 liczb półpierwszych, min = 6, max = 248667</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/63.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2063.%20Ci%C4%85gi%20zerojedynkowe%20%E2%80%94%2063.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-63.html%2363-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/63.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

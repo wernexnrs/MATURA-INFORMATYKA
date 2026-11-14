@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#3-1-3-2-i-3-3">3.1, 3.2 i 3.3</a></li><li><a href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></li><li><a href="#6">6</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura próbna 2024 — grudzień (formuła 2023)</span></nav>
-<h1 class="page-title">Matura próbna 2024 — grudzień (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 1.2 - wypisuje kolejne elementy J(n) (tylko operacje na liczbach całkowitych)
+<h1 class="page-title">Matura próbna 2024 — grudzień (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-grudzien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla dodatniej liczby całkowitej n niech J(n) oznacza ciąg kolejnych pozycji jedynek w zapisie dwójkowym n, licząc pozycje od 1 od najmniej znaczącej (ostatniej) cyfry. Przykład: 19 = 10011₂, więc J(19) = (1, 2, 5).</p><ul><li>1.1 — Uzupełnij tabelę: podaj zapis dwójkowy i J(n) dla n = 6 oraz n = 42, a także liczbę n (i jej zapis dwójkowy), dla której J(n) = (1, 2, 4, 7).</li><li>1.2 — Zapisz algorytm (w pseudojęzyku lub języku programowania), który dla dodatniej liczby całkowitej n wypisuje kolejne elementy ciągu J(n) (dla n = 19: 1, 2, 5). Wolno używać tylko zmiennych całkowitych, operacji arytmetycznych (+, −, ·, /, div, mod), porównań, instrukcji sterujących i własnych funkcji; zabronione są funkcje wbudowane, w szczególności konwersje typów.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 1.2 - wypisuje kolejne elementy J(n) (tylko operacje na liczbach całkowitych)
 def J(n):
     pozycja = 1
     while n &gt; 0:
@@ -53,7 +53,65 @@ for n in [19, 6, 42, 75]:
     print(n, bin(n)[2:], end=&quot;: &quot;)
     J(n)
 # brakująca liczba n dla J(n) = (1, 2, 4, 7): 2^0 + 2^1 + 2^3 + 2^6
-print(1 + 2 + 8 + 64)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: J(6) = (2, 3); 42 = 101010₂, J(42) = (2, 4, 6); J(n) = (1, 2, 4, 7) dla n = 75 = 1001011₂. 1.2: funkcja <code>J</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+print(1 + 2 + 8 + 64)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// 1.2 - wypisuje kolejne elementy J(n) (tylko operacje na liczbach całkowitych)
+void J(int n) {
+    int pozycja = 1;
+    while (n &gt; 0) {
+        if (n % 2 == 1) {
+            std::print(&quot;{} &quot;, pozycja);
+        }
+        n = n / 2;
+        pozycja = pozycja + 1;
+    }
+    std::println();
+}
+
+int main() {
+    // 1.1
+    std::vector&lt;int&gt; liczby = {19, 6, 42, 75};
+    for (int n : liczby) {
+        std::print(&quot;{} {:b}: &quot;, n, n);
+        J(n);
+    }
+    // brakująca liczba n dla J(n) = (1, 2, 4, 7): 2^0 + 2^1 + 2^3 + 2^6
+    std::println(&quot;{}&quot;, 1 + 2 + 8 + 64);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // 1.2 - wypisuje kolejne elementy J(n) (tylko operacje na liczbach całkowitych)
+    static void J(int n) {
+        int pozycja = 1;
+        while (n &gt; 0) {
+            if (n % 2 == 1) {
+                System.out.print(pozycja + &quot; &quot;);
+            }
+            n = n / 2;
+            pozycja = pozycja + 1;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        int[] liczby = {19, 6, 42, 75};
+        for (int n : liczby) {
+            System.out.print(n + &quot; &quot; + Integer.toBinaryString(n) + &quot;: &quot;);
+            J(n);
+        }
+        // brakująca liczba n dla J(n) = (1, 2, 4, 7): 2^0 + 2^1 + 2^3 + 2^6
+        System.out.println(1 + 2 + 8 + 64);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: J(6) = (2, 3); 42 = 101010₂, J(42) = (2, 4, 6); J(n) = (1, 2, 4, 7) dla n = 75 = 1001011₂. 1.2: funkcja <code>J</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202024%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest funkcja rekurencyjna F(x, p), gdzie x jest nieujemną liczbą całkowitą, a p liczbą całkowitą spełniającą 1 &lt; p &lt; 10:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">F(x, p):
+    jeżeli x = 0
+        podaj wynik 0
+    w przeciwnym przypadku
+        c ← x mod p
+        jeżeli c mod 2 = 1
+            podaj wynik F(x div p, p) + c
+        w przeciwnym przypadku
+            podaj wynik F(x div p, p) − c</code></pre></div></div></div><ul><li>2.1 — Uzupełnij tabelę: dla par (x, p) = (130, 3) oraz (220, 4) podaj wartość F(x, p) i łączną liczbę wywołań funkcji F (wliczając pierwsze). Przykład: F(125, 2) = 6, wywołań jest 8.</li><li>2.2 — Dla p = 3 i p = 4 podaj największą liczbę x &lt; 100, dla której F(x, p) = 0.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
 
 
 def F(x, p):
@@ -78,7 +136,76 @@ for p in [3, 4]:
     x = 99
     while F(x, p) != 0:
         x -= 1
-    print(p, x)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: F(130, 3) = 2 (6 wywołań), F(220, 4) = 7 (5 wywołań). 2.2: p = 3 → x = 96, p = 4 → x = 97.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-i-3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-i-3-3">3.1, 3.2 i 3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;liczby.txt&quot;) as file:
+    print(p, x)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int wywolania = 0;
+
+int F(int x, int p) {
+    wywolania += 1;
+    if (x == 0) {
+        return 0;
+    }
+    int c = x % p;
+    if (c % 2 == 1) {
+        return F(x / p, p) + c;
+    }
+    return F(x / p, p) - c;
+}
+
+int main() {
+    // 2.1
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; dane = {{125, 2}, {130, 3}, {220, 4}};
+    for (auto [x, p] : dane) {
+        wywolania = 0;
+        int wynik = F(x, p);
+        std::println(&quot;{} {} {} {}&quot;, x, p, wynik, wywolania);
+    }
+
+    // 2.2 - największe x &lt; 100, dla którego F(x, p) = 0
+    for (int p : {3, 4}) {
+        int x = 99;
+        while (F(x, p) != 0) {
+            x -= 1;
+        }
+        std::println(&quot;{} {}&quot;, p, x);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int wywolania = 0;
+
+    static int F(int x, int p) {
+        wywolania += 1;
+        if (x == 0) {
+            return 0;
+        }
+        int c = x % p;
+        if (c % 2 == 1) {
+            return F(x / p, p) + c;
+        }
+        return F(x / p, p) - c;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        int[][] dane = {{125, 2}, {130, 3}, {220, 4}};
+        for (int[] para : dane) {
+            int x = para[0], p = para[1];
+            wywolania = 0;
+            int wynik = F(x, p);
+            System.out.println(x + &quot; &quot; + p + &quot; &quot; + wynik + &quot; &quot; + wywolania);
+        }
+
+        // 2.2 - największe x &lt; 100, dla którego F(x, p) = 0
+        for (int p : new int[]{3, 4}) {
+            int x = 99;
+            while (F(x, p) != 0) {
+                x -= 1;
+            }
+            System.out.println(p + &quot; &quot; + x);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: F(130, 3) = 2 (6 wywołań), F(220, 4) = 7 (5 wywołań). 2.2: p = 3 → x = 96, p = 4 → x = 97.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202024%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-i-3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-i-3-3">3.1, 3.2 i 3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 2000 różnych liczb całkowitych z zakresu [1000, 9999], każdą w osobnym wierszu. Odpowiedzi zapisz w pliku <code>wyniki3.txt</code>, poprzedzając każdą numerem zadania. Plik <code>liczby_przyklad.txt</code> zawiera 20 liczb do testów.</p><ul><li>3.1 — Znajdź liczby, które są kwadratami liczb całkowitych. Podaj, ile ich jest, oraz tę, która występuje w pliku jako pierwsza.</li><li>3.2 — Wypisz wszystkie liczby z pliku, które mają co najmniej 5 różnych dzielników pierwszych (w pliku przykładowym jest jedna taka liczba: 2730).</li><li>3.3 — Dla każdej liczby z jej czterech cyfr tworzymy największą i najmniejszą możliwą liczbę (zera traktujemy jak zwykłe cyfry, np. dla 2047: 7420 − 0247 = 7173) i obliczamy ich różnicę (dla 3151: 5311 − 1135 = 4176). Podaj, ile razy ta różnica jest mniejsza od danej liczby, ile razy większa, a ile razy równa, oraz wypisz każdą liczbę, dla której różnica jest jej równa. Dla pliku przykładowego: 8 razy mniejsza, 12 razy większa, ani razu równa.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;liczby.txt&quot;) as file:
     liczby = [int(linia) for linia in file if linia.strip()]
 
 # 3.1
@@ -127,7 +254,155 @@ for x in liczby:
         wieksze += 1
     else:
         rowne.append(x)
-print(&quot;3.3&quot;, mniejsze, wieksze, rowne)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 20 kwadratów, pierwszy to 4489. 3.2: 2730, 8190, 2310, 4620, 7770, 8610, 4830, 4290, 6930, 6630. 3.3: mniejszych 947, większych 1052, równa: 6174.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">prostokaty = []
+print(&quot;3.3&quot;, mniejsze, wieksze, rowne)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int rozne_dzielniki_pierwsze(int n) {
+    int ile = 0;
+    int d = 2;
+    while (d * d &lt;= n) {
+        if (n % d == 0) {
+            ile += 1;
+            while (n % d == 0) {
+                n /= d;
+            }
+        }
+        d += 1;
+    }
+    if (n &gt; 1) {
+        ile += 1;
+    }
+    return ile;
+}
+
+int main() {
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::vector&lt;int&gt; liczby;
+    int x;
+    while (plik &gt;&gt; x) {
+        liczby.push_back(x);
+    }
+
+    // 3.1
+    std::vector&lt;int&gt; kwadraty;
+    for (int x : liczby) {
+        int k = 1;
+        while (k * k &lt; x) {
+            k += 1;
+        }
+        if (k * k == x) {
+            kwadraty.push_back(x);
+        }
+    }
+    std::println(&quot;3.1 {} {}&quot;, kwadraty.size(), kwadraty[0]);
+
+    // 3.2
+    std::println(&quot;3.2&quot;);
+    for (int x : liczby) {
+        if (rozne_dzielniki_pierwsze(x) &gt;= 5) {
+            std::println(&quot;{}&quot;, x);
+        }
+    }
+
+    // 3.3
+    int mniejsze = 0;
+    int wieksze = 0;
+    std::vector&lt;int&gt; rowne;
+    for (int x : liczby) {
+        std::string cyfry = std::to_string(x);
+        std::ranges::sort(cyfry);
+        int najmniejsza = std::stoi(cyfry);
+        std::ranges::reverse(cyfry);
+        int najwieksza = std::stoi(cyfry);
+        int roznica = najwieksza - najmniejsza;
+        if (roznica &lt; x) {
+            mniejsze += 1;
+        } else if (roznica &gt; x) {
+            wieksze += 1;
+        } else {
+            rowne.push_back(x);
+        }
+    }
+    std::println(&quot;3.3 {} {} {}&quot;, mniejsze, wieksze, rowne);  // wektor wypisze się jak lista: [6174]
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Zadanie {
+    static int rozneDzielnikiPierwsze(int n) {
+        int ile = 0;
+        int d = 2;
+        while (d * d &lt;= n) {
+            if (n % d == 0) {
+                ile += 1;
+                while (n % d == 0) {
+                    n /= d;
+                }
+            }
+            d += 1;
+        }
+        if (n &gt; 1) {
+            ile += 1;
+        }
+        return ile;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; liczby = new ArrayList&lt;&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            if (!linia.isBlank()) {
+                liczby.add(Integer.parseInt(linia.trim()));
+            }
+        }
+
+        // 3.1
+        List&lt;Integer&gt; kwadraty = new ArrayList&lt;&gt;();
+        for (int x : liczby) {
+            int k = 1;
+            while (k * k &lt; x) {
+                k += 1;
+            }
+            if (k * k == x) {
+                kwadraty.add(x);
+            }
+        }
+        System.out.println(&quot;3.1 &quot; + kwadraty.size() + &quot; &quot; + kwadraty.get(0));
+
+        // 3.2
+        System.out.println(&quot;3.2&quot;);
+        for (int x : liczby) {
+            if (rozneDzielnikiPierwsze(x) &gt;= 5) {
+                System.out.println(x);
+            }
+        }
+
+        // 3.3
+        int mniejsze = 0;
+        int wieksze = 0;
+        List&lt;Integer&gt; rowne = new ArrayList&lt;&gt;();
+        for (int x : liczby) {
+            char[] cyfry = String.valueOf(x).toCharArray();
+            Arrays.sort(cyfry);
+            String rosnaco = new String(cyfry);
+            int najmniejsza = Integer.parseInt(rosnaco);
+            int najwieksza = Integer.parseInt(new StringBuilder(rosnaco).reverse().toString());
+            int roznica = najwieksza - najmniejsza;
+            if (roznica &lt; x) {
+                mniejsze += 1;
+            } else if (roznica &gt; x) {
+                wieksze += 1;
+            } else {
+                rowne.add(x);
+            }
+        }
+        System.out.println(&quot;3.3 &quot; + mniejsze + &quot; &quot; + wieksze + &quot; &quot; + rowne);  // lista wypisze się jako [6174]
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 20 kwadratów, pierwszy to 4489. 3.2: 2730, 8190, 2310, 4620, 7770, 8610, 4830, 4290, 6930, 6630. 3.3: mniejszych 947, większych 1052, równa: 6174.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202024%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1%2C%203.2%20i%203.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html%233-1-3-2-i-3-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>prostokaty.txt</code> opisuje 5000 prostokątów, po jednym w wierszu: dwie dodatnie liczby całkowite nie większe niż 40 000, oddzielone spacją — wysokość h i szerokość s. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. Plik <code>prostokaty_przyklad.txt</code> zawiera 20 prostokątów do testów.</p><ul><li>4.1 — Podaj najmniejsze i największe pole prostokąta w pliku (dla pliku przykładowego: 252 i 9409).</li><li>4.2 — Prostokąt (s, h) mieści się w prostokącie (s', h'), gdy s ≤ s' i h ≤ h'. Znajdź najdłuższy ciąg kolejnych prostokątów z pliku, w którym każdy prostokąt (poza pierwszym) mieści się w poprzednim. Podaj długość ciągu oraz wysokość i szerokość jego ostatniego prostokąta (dla pliku przykładowego: <code>4 83 5</code>).</li><li>4.3 — Prostokąty o tej samej wysokości można sklejać: powstaje prostokąt o tej wysokości i szerokości równej sumie szerokości. Podaj największe szerokości, jakie można uzyskać, sklejając dokładnie 2, 3 i 5 prostokątów opisanych w różnych (niekoniecznie kolejnych) wierszach pliku (dla pliku przykładowego: 183, 266, 409).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">prostokaty = []
 with open(&quot;prostokaty.txt&quot;) as file:
     for linia in file:
         if linia.strip():
@@ -166,7 +441,137 @@ for k in [2, 3, 5]:
         lista = sorted(szerokosci[h], reverse=True)
         if len(lista) &gt;= k:
             najlepsza = max(najlepsza, sum(lista[:k]))
-    print(&quot;4.3&quot;, k, najlepsza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: najmniejsze pole 10425, największe 1545605418. 4.2: <code>10 1001 627</code>. 4.3: 2 prostokąty: 79506, 3 prostokąty: 118786, 5 prostokątów: 180895.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6">6</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_dziesietny(napis, podstawa):
+    print(&quot;4.3&quot;, k, najlepsza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;functional&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;prostokaty.txt&quot;);
+    std::vector&lt;std::pair&lt;long long, long long&gt;&gt; prostokaty;
+    long long h, s;
+    while (plik &gt;&gt; h &gt;&gt; s) {
+        prostokaty.push_back({h, s});
+    }
+
+    // 4.1 (pola nie mieszczą się bezpiecznie w int - używamy long long)
+    long long najmniejsze = prostokaty[0].first * prostokaty[0].second;
+    long long najwieksze = najmniejsze;
+    for (auto [h, s] : prostokaty) {
+        najmniejsze = std::min(najmniejsze, h * s);
+        najwieksze = std::max(najwieksze, h * s);
+    }
+    std::println(&quot;4.1 {} {}&quot;, najmniejsze, najwieksze);
+
+    // 4.2
+    int najdluzszy = 1;
+    int koniec = 0;
+    int dlugosc = 1;
+    for (size_t i = 1; i &lt; prostokaty.size(); i++) {
+        auto [h, s] = prostokaty[i];
+        auto [h_pop, s_pop] = prostokaty[i - 1];
+        if (s &lt;= s_pop &amp;&amp; h &lt;= h_pop) {
+            dlugosc += 1;
+        } else {
+            dlugosc = 1;
+        }
+        if (dlugosc &gt; najdluzszy) {
+            najdluzszy = dlugosc;
+            koniec = i;
+        }
+    }
+    std::println(&quot;4.2 {} {} {}&quot;, najdluzszy, prostokaty[koniec].first, prostokaty[koniec].second);
+
+    // 4.3 - dla każdej wysokości bierzemy k najszerszych prostokątów
+    std::map&lt;long long, std::vector&lt;long long&gt;&gt; szerokosci;
+    for (auto [h, s] : prostokaty) {
+        szerokosci[h].push_back(s);
+    }
+    for (int k : {2, 3, 5}) {
+        long long najlepsza = 0;
+        for (auto&amp; [h, lista] : szerokosci) {
+            std::vector&lt;long long&gt; posortowane = lista;
+            std::ranges::sort(posortowane, std::greater&lt;&gt;());
+            if ((int)posortowane.size() &gt;= k) {
+                long long suma = 0;
+                for (int j = 0; j &lt; k; j++) {
+                    suma += posortowane[j];
+                }
+                najlepsza = std::max(najlepsza, suma);
+            }
+        }
+        std::println(&quot;4.3 {} {}&quot;, k, najlepsza);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;long[]&gt; prostokaty = new ArrayList&lt;&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;prostokaty.txt&quot;))) {
+            if (!linia.isBlank()) {
+                String[] t = linia.trim().split(&quot;\\s+&quot;);
+                prostokaty.add(new long[]{Long.parseLong(t[0]), Long.parseLong(t[1])});
+            }
+        }
+
+        // 4.1 (pola nie mieszczą się bezpiecznie w int - używamy long)
+        long najmniejsze = Long.MAX_VALUE;
+        long najwieksze = 0;
+        for (long[] p : prostokaty) {
+            najmniejsze = Math.min(najmniejsze, p[0] * p[1]);
+            najwieksze = Math.max(najwieksze, p[0] * p[1]);
+        }
+        System.out.println(&quot;4.1 &quot; + najmniejsze + &quot; &quot; + najwieksze);
+
+        // 4.2
+        int najdluzszy = 1;
+        int koniec = 0;
+        int dlugosc = 1;
+        for (int i = 1; i &lt; prostokaty.size(); i++) {
+            long h = prostokaty.get(i)[0], s = prostokaty.get(i)[1];
+            long hPop = prostokaty.get(i - 1)[0], sPop = prostokaty.get(i - 1)[1];
+            if (s &lt;= sPop &amp;&amp; h &lt;= hPop) {
+                dlugosc += 1;
+            } else {
+                dlugosc = 1;
+            }
+            if (dlugosc &gt; najdluzszy) {
+                najdluzszy = dlugosc;
+                koniec = i;
+            }
+        }
+        System.out.println(&quot;4.2 &quot; + najdluzszy + &quot; &quot; + prostokaty.get(koniec)[0] + &quot; &quot; + prostokaty.get(koniec)[1]);
+
+        // 4.3 - dla każdej wysokości bierzemy k najszerszych prostokątów
+        Map&lt;Long, List&lt;Long&gt;&gt; szerokosci = new HashMap&lt;&gt;();
+        for (long[] p : prostokaty) {
+            szerokosci.computeIfAbsent(p[0], klucz -&gt; new ArrayList&lt;&gt;()).add(p[1]);
+        }
+        for (int k : new int[]{2, 3, 5}) {
+            long najlepsza = 0;
+            for (List&lt;Long&gt; lista : szerokosci.values()) {
+                List&lt;Long&gt; posortowane = new ArrayList&lt;&gt;(lista);
+                posortowane.sort(Comparator.reverseOrder());
+                if (posortowane.size() &gt;= k) {
+                    long suma = 0;
+                    for (int j = 0; j &lt; k; j++) {
+                        suma += posortowane.get(j);
+                    }
+                    najlepsza = Math.max(najlepsza, suma);
+                }
+            }
+            System.out.println(&quot;4.3 &quot; + k + &quot; &quot; + najlepsza);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: najmniejsze pole 10425, największe 1545605418. 4.2: <code>10 1001 627</code>. 4.3: 2 prostokąty: 79506, 3 prostokąty: 118786, 5 prostokątów: 180895.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202024%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%204.1%2C%204.2%20i%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html%234-1-4-2-i-4-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6">6</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Wykonaj działania na liczbach zapisanych w systemie piątkowym i podaj wyniki również w systemie piątkowym: 2024₅ + 1044₅ oraz 2024₅ − 1044₅.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_dziesietny(napis, podstawa):
     liczba = 0
     for c in napis:
         liczba = liczba * podstawa + int(c)
@@ -183,7 +588,54 @@ def z_dziesietnego(liczba, podstawa):
 
 a = na_dziesietny(&quot;2024&quot;, 5)
 b = na_dziesietny(&quot;1044&quot;, 5)
-print(z_dziesietnego(a + b, 5), z_dziesietnego(a - b, 5))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2024₅ + 1044₅ = 3123₅, 2024₅ − 1044₅ = 430₅.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(z_dziesietnego(a + b, 5), z_dziesietnego(a - b, 5))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+long long na_dziesietny(const std::string&amp; napis, int podstawa) {
+    long long liczba = 0;
+    for (char c : napis) {
+        liczba = liczba * podstawa + (c - &#x27;0&#x27;);
+    }
+    return liczba;
+}
+
+std::string z_dziesietnego(long long liczba, int podstawa) {
+    std::string wynik = &quot;&quot;;
+    while (liczba &gt; 0) {
+        wynik = std::to_string(liczba % podstawa) + wynik;
+        liczba = liczba / podstawa;
+    }
+    return wynik;
+}
+
+int main() {
+    long long a = na_dziesietny(&quot;2024&quot;, 5);
+    long long b = na_dziesietny(&quot;1044&quot;, 5);
+    std::println(&quot;{} {}&quot;, z_dziesietnego(a + b, 5), z_dziesietnego(a - b, 5));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long naDziesietny(String napis, int podstawa) {
+        long liczba = 0;
+        for (char c : napis.toCharArray()) {
+            liczba = liczba * podstawa + (c - &#x27;0&#x27;);
+        }
+        return liczba;
+    }
+
+    static String zDziesietnego(long liczba, int podstawa) {
+        String wynik = &quot;&quot;;
+        while (liczba &gt; 0) {
+            wynik = (liczba % podstawa) + wynik;
+            liczba = liczba / podstawa;
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        long a = naDziesietny(&quot;2024&quot;, 5);
+        long b = naDziesietny(&quot;1044&quot;, 5);
+        System.out.println(zDziesietnego(a + b, 5) + &quot; &quot; + zDziesietnego(a - b, 5));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2024₅ + 1044₅ = 3123₅, 2024₅ − 1044₅ = 430₅.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202024%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%206&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-grudzien-pr.html%236" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_grudzien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

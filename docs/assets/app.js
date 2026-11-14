@@ -33,21 +33,40 @@
   }
   if (window.hljs) highlight(); else window.addEventListener("load", highlight);
 
-  /* ---------- zakładki i kopiowanie ---------- */
-  document.querySelectorAll(".code").forEach(function (box) {
-    var tabs = box.querySelectorAll(".tab");
-    var panes = box.querySelectorAll(".pane");
-    tabs.forEach(function (tab, i) {
-      tab.addEventListener("click", function () {
-        tabs.forEach(function (t, j) { t.setAttribute("aria-selected", i === j ? "true" : "false"); });
-        panes.forEach(function (p, j) { p.hidden = i !== j; });
+  /* ---------- przełącznik języków (zapamiętany dla całej strony) i kopiowanie ---------- */
+  var LANG_KEY = "jezyk";
+  function showLang(box, lang) {
+    var btns = box.querySelectorAll(".lang-btn");
+    if (!box.querySelector('.lang-pane[data-lang="' + lang + '"]')) return false;
+    btns.forEach(function (b) { b.setAttribute("aria-selected", b.dataset.lang === lang ? "true" : "false"); });
+    box.querySelectorAll(".lang-pane").forEach(function (p) { p.hidden = p.dataset.lang !== lang; });
+    return true;
+  }
+  function showLangEverywhere(lang, except) {
+    document.querySelectorAll(".code.multi").forEach(function (box) { if (box !== except) showLang(box, lang); });
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(LANG_KEY); } catch (e) { /* brak dostępu */ }
+  if (saved) showLangEverywhere(saved, null);
+
+  document.querySelectorAll(".code.multi").forEach(function (box) {
+    box.querySelectorAll(".lang-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var lang = btn.dataset.lang;
+        var top = btn.getBoundingClientRect().top;
+        showLang(box, lang);
+        showLangEverywhere(lang, box);
+        // zachowaj pozycję klikniętego przełącznika (inne bloki mogły zmienić wysokość)
+        window.scrollBy(0, btn.getBoundingClientRect().top - top);
+        try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* brak dostępu */ }
       });
     });
-    var copy = box.querySelector(".copy");
-    if (!copy) return;
+  });
+
+  document.querySelectorAll(".variant .copy").forEach(function (copy) {
     copy.addEventListener("click", function () {
-      var pane = box.querySelector(".pane:not([hidden]) code") || box.querySelector("code");
-      var text = pane ? pane.textContent : "";
+      var code = copy.closest(".variant").querySelector("code");
+      var text = code ? code.textContent : "";
       var done = function () {
         copy.textContent = "Skopiowano";
         copy.classList.add("done");

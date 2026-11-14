@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1">1.1</a></li><li><a href="#1-2">1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#2-3-i-2-4">2.3 i 2.4</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#6-1-6-2-6-3-i-6-4">6.1, 6.2, 6.3 i 6.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2015 — maj, poziom rozszerzony (stara formuła)</span></nav>
-<h1 class="page-title">Matura 2015 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/MIN-R1_1P-152.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/MIN-R2_1P-152.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/Dane_PR2.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/odpowiedzi/MIN-R1-S.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skladniki(n):
+<h1 class="page-title">Matura 2015 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/MIN-R1_1P-152.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/MIN-R2_1P-152.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/Dane_PR2.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_do_2014/odpowiedzi/MIN-R1-S.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Potęgi dwójki. Każdą dodatnią liczbę całkowitą n można zapisać jako sumę różnych potęg liczby 2, np. 11 = 1 + 2 + 8 = 2⁰ + 2¹ + 2³, 18 = 2 + 16 = 2¹ + 2⁴.</p><p>Zapisz liczby 23 i 50 jako sumy różnych potęg liczby 2 (dla 11 odpowiedzią jest 1 + 2 + 8).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def skladniki(n):
     wynik = []
     potega = 1
     while n &gt; 0:
@@ -49,7 +49,52 @@
 
 
 for n in [11, 23, 50]:
-    print(n, &quot;=&quot;, &quot; + &quot;.join(str(x) for x in skladniki(n)))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 23 = 1 + 2 + 4 + 16, 50 = 2 + 16 + 32</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_poteg(n):
+    print(n, &quot;=&quot;, &quot; + &quot;.join(str(x) for x in skladniki(n)))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; skladniki(int n) {
+    std::vector&lt;int&gt; wynik;
+    int potega = 1;
+    while (n &gt; 0) {
+        if (n % 2 == 1)
+            wynik.push_back(potega);
+        n = n / 2;
+        potega *= 2;
+    }
+    return wynik;
+}
+
+int main() {
+    for (int n : {11, 23, 50}) {
+        std::cout &lt;&lt; n &lt;&lt; &quot; =&quot;;
+        auto s = skladniki(n);
+        for (size_t i = 0; i &lt; s.size(); i++)
+            std::cout &lt;&lt; (i == 0 ? &quot; &quot; : &quot; + &quot;) &lt;&lt; s[i];
+        std::cout &lt;&lt; &#x27;\n&#x27;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static List&lt;Integer&gt; skladniki(int n) {
+        var wynik = new ArrayList&lt;Integer&gt;();
+        int potega = 1;
+        while (n &gt; 0) {
+            if (n % 2 == 1)
+                wynik.add(potega);
+            n = n / 2;
+            potega *= 2;
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) {
+        for (int n : new int[] {11, 23, 50}) {
+            var s = new StringJoiner(&quot; + &quot;);
+            for (int x : skladniki(n)) s.add(String.valueOf(x));
+            System.out.println(n + &quot; = &quot; + s);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 23 = 1 + 2 + 4 + 16, 50 = 2 + 16 + 32</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%201.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%231-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Każdą dodatnią liczbę całkowitą n można zapisać jako sumę różnych potęg liczby 2. Zapisz algorytm (lista kroków, schemat blokowy lub język programowania), który oblicza, ile różnych potęg dwójki daje w sumie n. Można używać dodawania, odejmowania, mnożenia, dzielenia, dzielenia całkowitego i reszty z dzielenia lub własnych funkcji.</p><p>Specyfikacja — dane: <code>n</code> — dodatnia liczba całkowita; wynik: <code>lp</code> — liczba różnych potęg dwójki, których suma wynosi n.</p><p>Przykład: dla n = 18 wynikiem jest lp = 2.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_poteg(n):
     lp = 0
     while n &gt; 0:
         lp += n % 2
@@ -57,8 +102,40 @@ for n in [11, 23, 50]:
     return lp
 
 
-print(liczba_poteg(18))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dla n = 18 wynik lp = 2 (liczba jedynek w zapisie binarnym n)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · zabawki: (nazwa, masa, cena)</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># zabawki: (nazwa, masa, cena)
-zabawki = [(&quot;rowerek&quot;, 8, 320), (&quot;wozek dla lalek&quot;, 4, 152), (&quot;lalka&quot;, 1, 37), (&quot;duzy mis&quot;, 2, 70),
+print(liczba_poteg(18))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int liczba_poteg(int n) {
+    int lp = 0;
+    while (n &gt; 0) {
+        lp += n % 2;
+        n = n / 2;
+    }
+    return lp;
+}
+
+int main() {
+    std::cout &lt;&lt; liczba_poteg(18) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int liczbaPoteg(int n) {
+        int lp = 0;
+        while (n &gt; 0) {
+            lp += n % 2;
+            n = n / 2;
+        }
+        return lp;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(liczbaPoteg(18));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dla n = 18 wynik lp = 2 (liczba jedynek w zapisie binarnym n)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%231-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Koszyk zabawek. Wygrałeś koszyk zakupów o łącznej masie co najwyżej 10 kg i chcesz, by wartość zabawek była jak największa. Dostępne zabawki (masa, cena): rowerek 8 kg, 320 zł; wózek dla lalek 4 kg, 152 zł; lalka 1 kg, 37 zł; duży miś 2 kg, 70 zł; klocki 3 kg, 99 zł; hulajnoga 5 kg, 155 zł; mały miś 1 kg, 30 zł. Strategie wyboru (zawsze pilnując limitu masy):</p><ul><li>I — od najdroższej do najtańszej (przy równej cenie lżejsza),</li><li>II — od najlżejszej do najcięższej (przy równej masie droższa),</li><li>III — od największego do najmniejszego ilorazu cena/masa.</li></ul><p>Przy kilku zabawkach spełniających kryterium wybierasz dowolną.</p><ul><li>2.1 — Zakładając, że te same zabawki można brać wielokrotnie, podaj dla każdej strategii I, II, III zawartość koszyka (nazwy i liczby egzemplarzy) oraz jego łączną wartość.</li><li>2.2 — Uzupełnij brakujące kroki 2 i 7 algorytmu obliczającego wartość koszyka dla strategii III (zabawki mogą się powtarzać). Dane: <code>mk</code> — limit masy, <code>n</code> — liczba artykułów, <code>MASA[1..n]</code>, <code>CENA[1..n]</code> — masy i ceny uporządkowane nierosnąco według ilorazu cena/masa (wszystko dodatnie całkowite). Wynik: <code>K[1..n]</code> — liczby egzemplarzy kolejnych zabawek w koszyku, <code>w</code> — łączna wartość koszyka.</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">krok 1: dla i = 1 do n wykonaj K[i] ← 0
+krok 2: ............
+krok 3: i ← 1
+krok 4: dopóki i &lt;= n oraz mk &gt; 0
+krok 5:     K[i] ← mk div MASA[i]
+krok 6:     mk ← mk mod MASA[i]
+krok 7:     ............
+krok 8:     i ← i + 1</code></pre></div></div></div></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · zabawki: (nazwa, masa, cena)</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zabawki = [(&quot;rowerek&quot;, 8, 320), (&quot;wozek dla lalek&quot;, 4, 152), (&quot;lalka&quot;, 1, 37), (&quot;duzy mis&quot;, 2, 70),
            (&quot;klocki&quot;, 3, 99), (&quot;hulajnoga&quot;, 5, 155), (&quot;maly mis&quot;, 1, 30)]
 
 
@@ -85,7 +162,119 @@ strategie = {
 for nazwa_strategii, lista in strategie.items():
     K, w = koszyk_z_powtorzeniami(lista, 10)
     zawartosc = [f&quot;{K[i]}x {lista[i][0]}&quot; for i in range(len(lista)) if K[i] &gt; 0]
-    print(nazwa_strategii, zawartosc, w)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> I: rowerek + duży miś, 390 zł; II: 10x lalka, 370 zł; III: rowerek + 2x lalka, 394 zł. Uzupełnienie algorytmu: krok 2: <code>w ← 0</code>, krok 7: <code>w ← w + K[i] * CENA[i]</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-3-i-2-4">2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zabawki = [(&quot;rowerek&quot;, 8, 320), (&quot;wozek dla lalek&quot;, 4, 152), (&quot;lalka&quot;, 1, 37), (&quot;duzy mis&quot;, 2, 70),
+    print(nazwa_strategii, zawartosc, w)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+struct Zabawka {
+    std::string nazwa;
+    int masa, cena;
+};
+
+// zabawki: (nazwa, masa, cena)
+const std::vector&lt;Zabawka&gt; zabawki = {{&quot;rowerek&quot;, 8, 320}, {&quot;wozek dla lalek&quot;, 4, 152}, {&quot;lalka&quot;, 1, 37}, {&quot;duzy mis&quot;, 2, 70},
+                                      {&quot;klocki&quot;, 3, 99}, {&quot;hulajnoga&quot;, 5, 155}, {&quot;maly mis&quot;, 1, 30}};
+
+std::pair&lt;std::vector&lt;int&gt;, int&gt; koszyk_z_powtorzeniami(const std::vector&lt;Zabawka&gt;&amp; lista, int mk) {
+    // algorytm z zadania 2.2 - zachlannie, kazda zabawka moze wystapic wiele razy
+    std::vector&lt;int&gt; K(lista.size(), 0);
+    int w = 0;  // krok 2
+    size_t i = 0;
+    while (i &lt; lista.size() &amp;&amp; mk &gt; 0) {
+        K[i] = mk / lista[i].masa;
+        mk = mk % lista[i].masa;
+        w = w + K[i] * lista[i].cena;  // krok 7
+        i++;
+    }
+    return {K, w};
+}
+
+// stable_sort zachowuje kolejność przy remisie, tak jak sorted() w Pythonie
+template &lt;typename Porownanie&gt;
+std::vector&lt;Zabawka&gt; posortowane(Porownanie mniejsza) {
+    auto lista = zabawki;
+    std::ranges::stable_sort(lista, mniejsza);
+    return lista;
+}
+
+int main() {
+    std::vector&lt;std::pair&lt;std::string, std::vector&lt;Zabawka&gt;&gt;&gt; strategie = {
+        // od najdrozszej, przy remisie lzejsza
+        {&quot;I&quot;, posortowane([](const Zabawka&amp; a, const Zabawka&amp; b) {
+             return std::pair(-a.cena, a.masa) &lt; std::pair(-b.cena, b.masa); })},
+        // od najlzejszej, przy remisie drozsza
+        {&quot;II&quot;, posortowane([](const Zabawka&amp; a, const Zabawka&amp; b) {
+             return std::pair(a.masa, -a.cena) &lt; std::pair(b.masa, -b.cena); })},
+        // od najwiekszego ilorazu cena/masa
+        {&quot;III&quot;, posortowane([](const Zabawka&amp; a, const Zabawka&amp; b) {
+             return -static_cast&lt;double&gt;(a.cena) / a.masa &lt; -static_cast&lt;double&gt;(b.cena) / b.masa; })},
+    };
+
+    for (const auto&amp; [nazwa_strategii, lista] : strategie) {
+        auto [K, w] = koszyk_z_powtorzeniami(lista, 10);
+        std::cout &lt;&lt; nazwa_strategii &lt;&lt; &quot; [&quot;;
+        bool pierwszy = true;
+        for (size_t i = 0; i &lt; lista.size(); i++) {
+            if (K[i] &gt; 0) {
+                std::cout &lt;&lt; (pierwszy ? &quot;&quot; : &quot;, &quot;) &lt;&lt; &quot;&#x27;&quot; &lt;&lt; K[i] &lt;&lt; &quot;x &quot; &lt;&lt; lista[i].nazwa &lt;&lt; &quot;&#x27;&quot;;
+                pierwszy = false;
+            }
+        }
+        std::cout &lt;&lt; &quot;] &quot; &lt;&lt; w &lt;&lt; &#x27;\n&#x27;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    record Zabawka(String nazwa, int masa, int cena) {}
+
+    // zabawki: (nazwa, masa, cena)
+    static List&lt;Zabawka&gt; zabawki = List.of(new Zabawka(&quot;rowerek&quot;, 8, 320), new Zabawka(&quot;wozek dla lalek&quot;, 4, 152),
+            new Zabawka(&quot;lalka&quot;, 1, 37), new Zabawka(&quot;duzy mis&quot;, 2, 70), new Zabawka(&quot;klocki&quot;, 3, 99),
+            new Zabawka(&quot;hulajnoga&quot;, 5, 155), new Zabawka(&quot;maly mis&quot;, 1, 30));
+
+    static int[] K;  // ile sztuk każdej zabawki z listy trafiło do koszyka
+
+    static int koszykZPowtorzeniami(List&lt;Zabawka&gt; lista, int mk) {
+        // algorytm z zadania 2.2 - zachlannie, kazda zabawka moze wystapic wiele razy
+        K = new int[lista.size()];
+        int w = 0;  // krok 2
+        int i = 0;
+        while (i &lt; lista.size() &amp;&amp; mk &gt; 0) {
+            K[i] = mk / lista.get(i).masa();
+            mk = mk % lista.get(i).masa();
+            w = w + K[i] * lista.get(i).cena();  // krok 7
+            i++;
+        }
+        return w;
+    }
+
+    static List&lt;Zabawka&gt; posortowane(Comparator&lt;Zabawka&gt; porownanie) {
+        var lista = new ArrayList&lt;&gt;(zabawki);
+        lista.sort(porownanie);  // sortowanie stabilne, jak sorted() w Pythonie
+        return lista;
+    }
+
+    public static void main(String[] args) {
+        var strategie = new LinkedHashMap&lt;String, List&lt;Zabawka&gt;&gt;();
+        // od najdrozszej, przy remisie lzejsza
+        strategie.put(&quot;I&quot;, posortowane(Comparator.comparingInt((Zabawka z) -&gt; -z.cena()).thenComparingInt(Zabawka::masa)));
+        // od najlzejszej, przy remisie drozsza
+        strategie.put(&quot;II&quot;, posortowane(Comparator.comparingInt(Zabawka::masa).thenComparingInt((Zabawka z) -&gt; -z.cena())));
+        // od najwiekszego ilorazu cena/masa
+        strategie.put(&quot;III&quot;, posortowane(Comparator.comparingDouble((Zabawka z) -&gt; -(double) z.cena() / z.masa())));
+
+        for (var e : strategie.entrySet()) {
+            var lista = e.getValue();
+            int w = koszykZPowtorzeniami(lista, 10);
+            var zawartosc = new StringJoiner(&quot;, &quot;, &quot;[&quot;, &quot;]&quot;);
+            for (int i = 0; i &lt; lista.size(); i++)
+                if (K[i] &gt; 0) zawartosc.add(&quot;&#x27;&quot; + K[i] + &quot;x &quot; + lista.get(i).nazwa() + &quot;&#x27;&quot;);
+            System.out.println(e.getKey() + &quot; &quot; + zawartosc + &quot; &quot; + w);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> I: rowerek + duży miś, 390 zł; II: 10x lalka, 370 zł; III: rowerek + 2x lalka, 394 zł. Uzupełnienie algorytmu: krok 2: <code>w ← 0</code>, krok 7: <code>w ← w + K[i] * CENA[i]</code></p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-3-i-2-4">2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Koszyk zabawek o limicie 10 kg i zabawki jak w zadaniu 2.1 (rowerek 8 kg/320 zł, wózek 4 kg/152 zł, lalka 1 kg/37 zł, duży miś 2 kg/70 zł, klocki 3 kg/99 zł, hulajnoga 5 kg/155 zł, mały miś 1 kg/30 zł); strategie I (od najdroższej), II (od najlżejszej), III (od największego ilorazu cena/masa).</p><ul><li>2.3 — Zakładając, że zabawki nie mogą się powtarzać, podaj dla każdej strategii I, II, III nazwy wybranych zabawek i łączną wartość koszyka.</li><li>2.4 — Zapisz algorytm doboru zabawek według strategii III bez powtórzeń. Dane: <code>mk</code>, <code>n</code>, <code>MASA[1..n]</code>, <code>CENA[1..n]</code> (uporządkowane nierosnąco według ilorazu cena/masa). Wynik: <code>K[1..n]</code>, gdzie K[i] = 1, gdy i-ta zabawka trafiła do koszyka, a 0 w przeciwnym razie, oraz <code>w</code> — łączna wartość koszyka.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zabawki = [(&quot;rowerek&quot;, 8, 320), (&quot;wozek dla lalek&quot;, 4, 152), (&quot;lalka&quot;, 1, 37), (&quot;duzy mis&quot;, 2, 70),
            (&quot;klocki&quot;, 3, 99), (&quot;hulajnoga&quot;, 5, 155), (&quot;maly mis&quot;, 1, 30)]
 
 
@@ -111,7 +300,110 @@ strategie = {
 for nazwa_strategii, lista in strategie.items():
     K, w = koszyk_bez_powtorzen(lista, 10)
     zawartosc = [lista[i][0] for i in range(len(lista)) if K[i] == 1]
-    print(nazwa_strategii, zawartosc, w)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> I: rowerek, duży miś — 390 zł; II: lalka, mały miś, duży miś, klocki — 236 zł; III: rowerek, lalka, mały miś — 387 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+    print(nazwa_strategii, zawartosc, w)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+struct Zabawka {
+    std::string nazwa;
+    int masa, cena;
+};
+
+const std::vector&lt;Zabawka&gt; zabawki = {{&quot;rowerek&quot;, 8, 320}, {&quot;wozek dla lalek&quot;, 4, 152}, {&quot;lalka&quot;, 1, 37}, {&quot;duzy mis&quot;, 2, 70},
+                                      {&quot;klocki&quot;, 3, 99}, {&quot;hulajnoga&quot;, 5, 155}, {&quot;maly mis&quot;, 1, 30}};
+
+std::pair&lt;std::vector&lt;int&gt;, int&gt; koszyk_bez_powtorzen(const std::vector&lt;Zabawka&gt;&amp; lista, int mk) {
+    // algorytm z zadania 2.4 - kazda zabawka co najwyzej raz
+    std::vector&lt;int&gt; K(lista.size(), 0);
+    int w = 0;
+    for (size_t i = 0; i &lt; lista.size(); i++) {
+        if (lista[i].masa &lt;= mk) {
+            K[i] = 1;
+            mk -= lista[i].masa;
+            w += lista[i].cena;
+        }
+    }
+    return {K, w};
+}
+
+template &lt;typename Porownanie&gt;
+std::vector&lt;Zabawka&gt; posortowane(Porownanie mniejsza) {
+    auto lista = zabawki;
+    std::ranges::stable_sort(lista, mniejsza);  // stabilne, jak sorted() w Pythonie
+    return lista;
+}
+
+int main() {
+    std::vector&lt;std::pair&lt;std::string, std::vector&lt;Zabawka&gt;&gt;&gt; strategie = {
+        {&quot;I&quot;, posortowane([](const Zabawka&amp; a, const Zabawka&amp; b) {
+             return std::pair(-a.cena, a.masa) &lt; std::pair(-b.cena, b.masa); })},
+        {&quot;II&quot;, posortowane([](const Zabawka&amp; a, const Zabawka&amp; b) {
+             return std::pair(a.masa, -a.cena) &lt; std::pair(b.masa, -b.cena); })},
+        {&quot;III&quot;, posortowane([](const Zabawka&amp; a, const Zabawka&amp; b) {
+             return -static_cast&lt;double&gt;(a.cena) / a.masa &lt; -static_cast&lt;double&gt;(b.cena) / b.masa; })},
+    };
+
+    for (const auto&amp; [nazwa_strategii, lista] : strategie) {
+        auto [K, w] = koszyk_bez_powtorzen(lista, 10);
+        std::cout &lt;&lt; nazwa_strategii &lt;&lt; &quot; [&quot;;
+        bool pierwszy = true;
+        for (size_t i = 0; i &lt; lista.size(); i++) {
+            if (K[i] == 1) {
+                std::cout &lt;&lt; (pierwszy ? &quot;&quot; : &quot;, &quot;) &lt;&lt; &quot;&#x27;&quot; &lt;&lt; lista[i].nazwa &lt;&lt; &quot;&#x27;&quot;;
+                pierwszy = false;
+            }
+        }
+        std::cout &lt;&lt; &quot;] &quot; &lt;&lt; w &lt;&lt; &#x27;\n&#x27;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    record Zabawka(String nazwa, int masa, int cena) {}
+
+    static List&lt;Zabawka&gt; zabawki = List.of(new Zabawka(&quot;rowerek&quot;, 8, 320), new Zabawka(&quot;wozek dla lalek&quot;, 4, 152),
+            new Zabawka(&quot;lalka&quot;, 1, 37), new Zabawka(&quot;duzy mis&quot;, 2, 70), new Zabawka(&quot;klocki&quot;, 3, 99),
+            new Zabawka(&quot;hulajnoga&quot;, 5, 155), new Zabawka(&quot;maly mis&quot;, 1, 30));
+
+    static int[] K;  // 1 - zabawka z listy trafiła do koszyka
+
+    static int koszykBezPowtorzen(List&lt;Zabawka&gt; lista, int mk) {
+        // algorytm z zadania 2.4 - kazda zabawka co najwyzej raz
+        K = new int[lista.size()];
+        int w = 0;
+        for (int i = 0; i &lt; lista.size(); i++) {
+            if (lista.get(i).masa() &lt;= mk) {
+                K[i] = 1;
+                mk -= lista.get(i).masa();
+                w += lista.get(i).cena();
+            }
+        }
+        return w;
+    }
+
+    static List&lt;Zabawka&gt; posortowane(Comparator&lt;Zabawka&gt; porownanie) {
+        var lista = new ArrayList&lt;&gt;(zabawki);
+        lista.sort(porownanie);  // sortowanie stabilne, jak sorted() w Pythonie
+        return lista;
+    }
+
+    public static void main(String[] args) {
+        var strategie = new LinkedHashMap&lt;String, List&lt;Zabawka&gt;&gt;();
+        strategie.put(&quot;I&quot;, posortowane(Comparator.comparingInt((Zabawka z) -&gt; -z.cena()).thenComparingInt(Zabawka::masa)));
+        strategie.put(&quot;II&quot;, posortowane(Comparator.comparingInt(Zabawka::masa).thenComparingInt((Zabawka z) -&gt; -z.cena())));
+        strategie.put(&quot;III&quot;, posortowane(Comparator.comparingDouble((Zabawka z) -&gt; -(double) z.cena() / z.masa())));
+
+        for (var e : strategie.entrySet()) {
+            var lista = e.getValue();
+            int w = koszykBezPowtorzen(lista, 10);
+            var zawartosc = new StringJoiner(&quot;, &quot;, &quot;[&quot;, &quot;]&quot;);
+            for (int i = 0; i &lt; lista.size(); i++)
+                if (K[i] == 1) zawartosc.add(&quot;&#x27;&quot; + lista.get(i).nazwa() + &quot;&#x27;&quot;);
+            System.out.println(e.getKey() + &quot; &quot; + zawartosc + &quot; &quot; + w);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> I: rowerek, duży miś — 390 zł; II: lalka, mały miś, duży miś, klocki — 236 zł; III: rowerek, lalka, mały miś — 387 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%202.3%20i%202.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%232-3-i-2-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>slowa.txt</code> jest 1000 słów zerojedynkowych o długości od 2 do 25 znaków, po jednym w wierszu. Odpowiedzi zapisz w pliku <code>wynik4.txt</code>, poprzedzając każdą numerem zadania. Blokiem nazywamy maksymalny (niedający się wydłużyć) ciąg kolejnych jednakowych znaków — np. słowo 100110001 ma 5 bloków: 1, 00, 11, 000, 1.</p><p>Podaj, ile słów z pliku ma więcej zer niż jedynek.</p><p>Przykład: dla słów 101011010011001100111, 10001001, 0001000, 101010011100, 000011, 1111100 wynikiem jest 3.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;slowa.txt&quot;) as file:
     for line in file:
@@ -119,7 +411,33 @@ with open(&quot;slowa.txt&quot;) as file:
         if slowo.count(&quot;0&quot;) &gt; slowo.count(&quot;1&quot;):
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 441</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo)
+        if (std::ranges::count(slowo, &#x27;0&#x27;) &gt; std::ranges::count(slowo, &#x27;1&#x27;))
+            licznik++;
+    std::cout &lt;&lt; licznik &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;slowa.txt&quot;))) {
+            var slowo = line.strip();
+            long zera = slowo.chars().filter(c -&gt; c == &#x27;0&#x27;).count();
+            long jedynki = slowo.chars().filter(c -&gt; c == &#x27;1&#x27;).count();
+            if (zera &gt; jedynki) licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 441</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>slowa.txt</code> zawiera 1000 słów zerojedynkowych. Podaj, ile słów składa się z dokładnie dwóch niepustych bloków: pierwszego złożonego z samych zer i drugiego — z samych jedynek (czyli postaci 0…01…1). Odpowiedź zapisz w <code>wynik4.txt</code>.</p><p>Przykład: dla słów 100010000100, 000000111111, 00000000, 11111111110000, 00000000000000001 wynikiem jest 2.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;slowa.txt&quot;) as file:
     for line in file:
@@ -129,7 +447,38 @@ with open(&quot;slowa.txt&quot;) as file:
         if 0 &lt; zera &lt; len(slowo) and slowo[zera:] == &quot;1&quot; * (len(slowo) - zera):
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 44</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdluzszy_blok_zer(slowo):
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo) {
+        // dokladnie dwa bloki: najpierw same zera, potem same jedynki
+        size_t zera = 0;
+        while (zera &lt; slowo.size() &amp;&amp; slowo[zera] == &#x27;0&#x27;) zera++;
+        if (0 &lt; zera &amp;&amp; zera &lt; slowo.size() &amp;&amp; slowo.substr(zera) == std::string(slowo.size() - zera, &#x27;1&#x27;))
+            licznik++;
+    }
+    std::cout &lt;&lt; licznik &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;slowa.txt&quot;))) {
+            var slowo = line.strip();
+            // dokladnie dwa bloki: najpierw same zera, potem same jedynki
+            int zera = 0;
+            while (zera &lt; slowo.length() &amp;&amp; slowo.charAt(zera) == &#x27;0&#x27;) zera++;
+            if (0 &lt; zera &amp;&amp; zera &lt; slowo.length() &amp;&amp; slowo.substring(zera).equals(&quot;1&quot;.repeat(slowo.length() - zera)))
+                licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 44</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>slowa.txt</code> zawiera 1000 słów zerojedynkowych. Podaj długość najdłuższego bloku złożonego z samych zer, występującego w słowach z pliku, i wypisz wszystkie słowa zawierające blok zer o tej długości. Odpowiedź zapisz w <code>wynik4.txt</code>.</p><p>Przykład: dla słów 100010000100, 001, 000, 10101001110000, 000011 wynikiem jest 4 oraz słowa 100010000100, 10101001110000 i 000011.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdluzszy_blok_zer(slowo):
     najdluzszy = biezacy = 0
     for znak in slowo:
         if znak == &quot;0&quot;:
@@ -152,7 +501,72 @@ for slowo in slowa:
 print(maks)
 for slowo in slowa:
     if najdluzszy_blok_zer(slowo) == maks:
-        print(slowo)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 10; 001010000000000, 1001010001000000000011001</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1-6-2-6-3-i-6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1-6-2-6-3-i-6-4">6.1, 6.2, 6.3 i 6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
+        print(slowo)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int najdluzszy_blok_zer(const std::string&amp; slowo) {
+    int najdluzszy = 0, biezacy = 0;
+    for (char znak : slowo) {
+        if (znak == &#x27;0&#x27;) {
+            biezacy++;
+            najdluzszy = std::max(najdluzszy, biezacy);
+        } else {
+            biezacy = 0;
+        }
+    }
+    return najdluzszy;
+}
+
+int main() {
+    std::vector&lt;std::string&gt; slowa;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo)
+        slowa.push_back(slowo);
+
+    int maks = 0;
+    for (const auto&amp; s : slowa)
+        maks = std::max(maks, najdluzszy_blok_zer(s));
+
+    std::cout &lt;&lt; maks &lt;&lt; &#x27;\n&#x27;;
+    for (const auto&amp; s : slowa)
+        if (najdluzszy_blok_zer(s) == maks)
+            std::cout &lt;&lt; s &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static int najdluzszyBlokZer(String slowo) {
+        int najdluzszy = 0, biezacy = 0;
+        for (char znak : slowo.toCharArray()) {
+            if (znak == &#x27;0&#x27;) {
+                biezacy++;
+                najdluzszy = Math.max(najdluzszy, biezacy);
+            } else {
+                biezacy = 0;
+            }
+        }
+        return najdluzszy;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var slowa = new ArrayList&lt;String&gt;();
+        for (var line : Files.readAllLines(Path.of(&quot;slowa.txt&quot;)))
+            slowa.add(line.strip());
+
+        int maks = 0;
+        for (var slowo : slowa)
+            maks = Math.max(maks, najdluzszyBlokZer(slowo));
+
+        System.out.println(maks);
+        for (var slowo : slowa)
+            if (najdluzszyBlokZer(slowo) == maks)
+                System.out.println(slowo);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 10; 001010000000000, 1001010001000000000011001</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1-6-2-6-3-i-6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1-6-2-6-3-i-6-4">6.1, 6.2, 6.3 i 6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Ogródki działkowe: 100 działek po 500 m². Plik <code>deszcz.txt</code> zawiera dla dni od 1 maja do 30 września 2014 roku datę i liczbę 0 (brak opadów) lub 1 (deszcz), rozdzielone tabulatorem (pierwszy wiersz to nagłówek <code>data opady</code>). Zbiornik na deszczówkę ma pojemność 2 500 000 litrów; w nocy z 30 kwietnia na 1 maja był pełny. Zasady:</p><ul><li>w dzień bez deszczu rano zrasza się działki (2 litry na 1 m²), a wieczorem z pozostałej wody ubywa 1% przez parowanie,</li><li>w dzień deszczowy zraszacze nie działają, a wieczorem woda w zbiorniku zwiększa się o 3% względem stanu z rana; nadmiar ponad pojemność trafia do kanalizacji,</li><li>na koniec każdej soboty wodociągi dolewają wodę — maksymalnie 500 000 litrów, nie przekraczając pojemności zbiornika.</li></ul><p>Obliczenia prowadź bez zaokrągleń, odpowiedzi podaj zaokrąglone do liczb całkowitych. Wskazówka: 1 czerwca 2014 rano w zbiorniku było ok. 2 336 406 litrów. Odpowiedzi zapisz w pliku <code>wynik6.txt</code>.</p><ul><li>6.1 — W ilu dniach w badanym okresie deszczówka będzie odprowadzana do kanalizacji?</li><li>6.2 — Ile łącznie wody pobrano z wodociągów na uzupełnianie zbiornika?</li><li>6.3 — Którego dnia rano w zbiorniku będzie najmniej wody? Podaj datę i ilość wody.</li><li>6.4 — Dla każdej majowej soboty podaj jej datę, ilość wody odprowadzonej tego dnia do kanalizacji i ilość wody dolanej z wodociągów.</li><li>(6.5 — narysuj wykres kolumnowy ilości dolewanej wody w sobotach maja.)</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
 
 POJEMNOSC = 2500000
 woda = POJEMNOSC
@@ -192,7 +606,121 @@ print(&quot;6.2&quot;, round(z_wodociagow))
 print(&quot;6.3&quot;, najmniej[0], round(najmniej[1]))
 print(&quot;6.4&quot;)
 for wiersz in soboty_maja:
-    print(*wiersz)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 6.1: 13; 6.2: 8 289 356 (lub 8 289 355); 6.3: 2014-09-20, 1 303 938 l; 6.4: 2014-05-03 0 176 193, 2014-05-10 75 000 0, 2014-05-17 0 109 538, 2014-05-24 0 354 118, 2014-05-31 0 500 000; 6.5 — wykres kolumnowy z kolumny „dolano” zestawienia 6.4</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(*wiersz)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;chrono&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;tuple&gt;
+#include &lt;vector&gt;
+
+int main() {
+    const double POJEMNOSC = 2500000;
+    double woda = POJEMNOSC;
+    int dni_odprowadzania = 0;
+    double z_wodociagow = 0;
+    std::string najmniej_data;  // pusty napis - jeszcze nic (None w Pythonie)
+    double najmniej_woda = 0;
+    std::vector&lt;std::tuple&lt;std::string, long long, long long&gt;&gt; soboty_maja;
+
+    // std::nearbyint zaokrągla połówki do parzystej, tak jak round() w Pythonie
+    auto zaokraglij = [](double x) { return static_cast&lt;long long&gt;(std::nearbyint(x)); };
+
+    std::ifstream plik(&quot;deszcz.txt&quot;);
+    std::string naglowek, data, opady;
+    std::getline(plik, naglowek);
+    while (plik &gt;&gt; data &gt;&gt; opady) {
+        int r = std::stoi(data.substr(0, 4)), m = std::stoi(data.substr(5, 2)), d = std::stoi(data.substr(8, 2));
+        std::chrono::year_month_day dzien{std::chrono::year(r), std::chrono::month(m), std::chrono::day(d)};
+        // stan rano
+        if (najmniej_data.empty() || woda &lt; najmniej_woda) {
+            najmniej_data = data;
+            najmniej_woda = woda;
+        }
+        double odprowadzono = 0;
+        if (opady == &quot;1&quot;) {
+            woda *= 1.03;
+            if (woda &gt; POJEMNOSC) {
+                odprowadzono = woda - POJEMNOSC;
+                woda = POJEMNOSC;
+                dni_odprowadzania++;
+            }
+        } else {
+            woda -= 100 * 500 * 2;  // zraszanie 100 dzialek po 500 m2, 2 l/m2
+            woda *= 0.99;           // parowanie
+        }
+        double dolano = 0;
+        if (std::chrono::weekday(std::chrono::sys_days(dzien)) == std::chrono::Saturday) {
+            dolano = std::min(500000.0, POJEMNOSC - woda);
+            woda += dolano;
+            z_wodociagow += dolano;
+            if (m == 5)
+                soboty_maja.push_back({data, zaokraglij(odprowadzono), zaokraglij(dolano)});
+        }
+    }
+
+    std::cout &lt;&lt; &quot;6.1 &quot; &lt;&lt; dni_odprowadzania &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; &quot;6.2 &quot; &lt;&lt; zaokraglij(z_wodociagow) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; &quot;6.3 &quot; &lt;&lt; najmniej_data &lt;&lt; &#x27; &#x27; &lt;&lt; zaokraglij(najmniej_woda) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; &quot;6.4\n&quot;;
+    for (const auto&amp; [d, odp, dol] : soboty_maja)
+        std::cout &lt;&lt; d &lt;&lt; &#x27; &#x27; &lt;&lt; odp &lt;&lt; &#x27; &#x27; &lt;&lt; dol &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.time.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        final double POJEMNOSC = 2500000;
+        double woda = POJEMNOSC;
+        int dniOdprowadzania = 0;
+        double zWodociagow = 0;
+        String najmniejData = null;
+        double najmniejWoda = 0;
+        var sobotyMaja = new ArrayList&lt;String&gt;();
+
+        var linie = Files.readAllLines(Path.of(&quot;deszcz.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            var p = line.strip().split(&quot;\\s+&quot;);
+            String data = p[0], opady = p[1];
+            var dzien = LocalDate.parse(data);
+            // stan rano
+            if (najmniejData == null || woda &lt; najmniejWoda) {
+                najmniejData = data;
+                najmniejWoda = woda;
+            }
+            double odprowadzono = 0;
+            if (opady.equals(&quot;1&quot;)) {
+                woda *= 1.03;
+                if (woda &gt; POJEMNOSC) {
+                    odprowadzono = woda - POJEMNOSC;
+                    woda = POJEMNOSC;
+                    dniOdprowadzania++;
+                }
+            } else {
+                woda -= 100 * 500 * 2;  // zraszanie 100 dzialek po 500 m2, 2 l/m2
+                woda *= 0.99;           // parowanie
+            }
+            double dolano = 0;
+            if (dzien.getDayOfWeek() == DayOfWeek.SATURDAY) {
+                dolano = Math.min(500000, POJEMNOSC - woda);
+                woda += dolano;
+                zWodociagow += dolano;
+                if (dzien.getMonthValue() == 5)
+                    // Math.rint zaokrągla połówki do parzystej, tak jak round() w Pythonie
+                    sobotyMaja.add(data + &quot; &quot; + (long) Math.rint(odprowadzono) + &quot; &quot; + (long) Math.rint(dolano));
+            }
+        }
+
+        System.out.println(&quot;6.1 &quot; + dniOdprowadzania);
+        System.out.println(&quot;6.2 &quot; + (long) Math.rint(zWodociagow));
+        System.out.println(&quot;6.3 &quot; + najmniejData + &quot; &quot; + (long) Math.rint(najmniejWoda));
+        System.out.println(&quot;6.4&quot;);
+        for (var wiersz : sobotyMaja)
+            System.out.println(wiersz);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 6.1: 13; 6.2: 8 289 356 (lub 8 289 355); 6.3: 2014-09-20, 1 303 938 l; 6.4: 2014-05-03 0 176 193, 2014-05-10 75 000 0, 2014-05-17 0 109 538, 2014-05-24 0 354 118, 2014-05-31 0 500 000; 6.5 — wykres kolumnowy z kolumny „dolano” zestawienia 6.4</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202015%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%206.1%2C%206.2%2C%206.3%20i%206.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-maj-stare.html%236-1-6-2-6-3-i-6-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

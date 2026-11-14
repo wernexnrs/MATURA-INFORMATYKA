@@ -10,11 +10,18 @@ Dzięki, że chcesz pomóc! Ten projekt istnieje po to, żeby każdy mógł za d
 4. [Dodawanie algorytmu](#4-dodawanie-algorytmu)
 5. [Dodawanie rozwiązań arkusza](#5-dodawanie-rozwiązań-arkusza)
 6. [Sprawdzanie zmian i podgląd strony](#6-sprawdzanie-zmian-i-podgląd-strony)
-7. [Zasady](#7-zasady)
+7. [Co dzieje się z Twoją zmianą](#7-co-dzieje-się-z-twoją-zmianą)
+8. [Zasady](#8-zasady)
 
 ---
 
 ## 1. Najprostsze sposoby pomocy
+
+> **Najszybciej: prosto ze strony.** Pod każdym algorytmem i zadaniem na [stronie](https://wernexnrs.github.io/MATURA-INFORMATYKA/) są przyciski:
+> - **✏️ Popraw lub dodaj** — otwiera ten plik w edytorze GitHuba. Wprowadzasz zmianę, klikasz *Commit changes → Propose changes → Create pull request*. GitHub sam zrobi Twoją kopię repozytorium.
+> - **⚠ Zgłoś błąd** — otwiera gotowy formularz z adresem sekcji; wystarczy opisać problem.
+>
+> Potrzebujesz tylko darmowego konta na GitHubie. **Każda zmiana trafia do sprawdzenia** i pojawia się na stronie dopiero po zatwierdzeniu przez opiekuna projektu — nie bój się, że coś zepsujesz.
 
 | Chcesz… | Zrób to |
 | --- | --- |
@@ -163,7 +170,13 @@ python tools/build_site.py         # buduje stronę do docs/
 python -m http.server 8000 --directory docs   # podgląd: http://localhost:8000
 ```
 
-## 7. Zasady
+## 7. Co dzieje się z Twoją zmianą
+
+1. Automatyczne testy sprawdzają pull request (Markdown, składnia, uruchomienie kodu algorytmów).
+2. Opiekun projektu przegląda zmianę — może poprosić o poprawki w komentarzu.
+3. Po zatwierdzeniu zmiana trafia do `master`, a strona przebudowuje się sama w ciągu kilku minut.
+
+## 8. Zasady
 
 - Bądź miły i pomocny — wszyscy się tu uczymy.
 - Jeden pull request = jedna sprawa (np. jeden arkusz albo jeden algorytm). Łatwiej go przejrzeć.

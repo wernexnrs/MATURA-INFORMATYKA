@@ -37,7 +37,11 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1">1.1</a></li><li><a href="#1-2-i-1-3">1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2017 — maj, poziom podstawowy</span></nav>
-<h1 class="page-title">Matura 2017 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfruj(s, k, n):
+<h1 class="page-title">Matura 2017 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2017-maj-matura-stara-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1. Szyfrowanie. Dane: długość tekstu <code>d &gt; 1</code>, tekst jawny <code>s[1..d]</code> oraz liczby całkowite dodatnie <code>k &lt; d</code> i <code>n &lt; d</code>. Wynik: zaszyfrowany tekst <code>szyfr[1..d]</code>. Algorytm (<code>↔</code> oznacza zamianę znaków miejscami):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">od j=1 do d: szyfr[j] ← s[j]
+i ← 1
+dopóki i ≤ d − k
+    szyfr[i] ↔ szyfr[i+k]
+    i ← i+n</code></pre></div></div></div><p>Podaj szyfr dla danych: <code>ataknadranem</code> (d=12, k=4, n=2), <code>maturazinformatyki</code> (d=18, k=3, n=5), <code>stokrotka</code> (d=9, k=1, n=2).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfruj(s, k, n):
     d = len(s)
     szyfr = list(s)
     i = 1  # numeracja od 1 jak w treści
@@ -49,7 +53,51 @@
 
 print(szyfruj(&quot;ataknadranem&quot;, 4, 2))
 print(szyfruj(&quot;maturazinformatyki&quot;, 3, 5))
-print(szyfruj(&quot;stokrotka&quot;, 1, 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> ntdkaaeranam, uatmrnziafarmotyki, tskoorkta</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2-i-1-3">1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def odszyfruj(szyfr, k, n):
+print(szyfruj(&quot;stokrotka&quot;, 1, 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+
+std::string szyfruj(std::string s, int k, int n) {
+    int d = s.size();
+    std::string szyfr = s;
+    int i = 1;  // numeracja od 1 jak w treści
+    while (i &lt;= d - k) {
+        std::swap(szyfr[i - 1], szyfr[i + k - 1]);
+        i = i + n;
+    }
+    return szyfr;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, szyfruj(&quot;ataknadranem&quot;, 4, 2));
+    std::println(&quot;{}&quot;, szyfruj(&quot;maturazinformatyki&quot;, 3, 5));
+    std::println(&quot;{}&quot;, szyfruj(&quot;stokrotka&quot;, 1, 2));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String szyfruj(String s, int k, int n) {
+        int d = s.length();
+        char[] szyfr = s.toCharArray();
+        int i = 1;  // numeracja od 1 jak w treści
+        while (i &lt;= d - k) {
+            char pom = szyfr[i - 1];
+            szyfr[i - 1] = szyfr[i + k - 1];
+            szyfr[i + k - 1] = pom;
+            i = i + n;
+        }
+        return new String(szyfr);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(szyfruj(&quot;ataknadranem&quot;, 4, 2));
+        System.out.println(szyfruj(&quot;maturazinformatyki&quot;, 3, 5));
+        System.out.println(szyfruj(&quot;stokrotka&quot;, 1, 2));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> ntdkaaeranam, uatmrnziafarmotyki, tskoorkta</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%231-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2-i-1-3">1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dotyczy algorytmu szyfrującego z zadania 1 (kopiuje <code>s</code> do <code>szyfr</code>, a potem dla <code>i = 1, 1+n, 1+2n, …</code> dopóki <code>i ≤ d−k</code> zamienia <code>szyfr[i] ↔ szyfr[i+k]</code>).</p><ul><li>1.2 — Odszyfruj tekst <code>eiindaezotinwezssyktpo</code> (d=22, k=2, n=2).</li><li>1.3 — Uzupełnij algorytm deszyfrujący (dane: <code>d</code>, <code>szyfr[1..d]</code>, <code>k</code>, <code>n</code>; wynik: tekst jawny <code>s[1..d]</code>); wolno używać operacji arytmetycznych, zamiany <code>↔</code> i własnych funkcji:</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">od j=1 do d: s[j] ← szyfr[j]
+i ← 1
+dopóki ..........
+    i ← i+n
+dopóki i ≥ 1
+    s[i] ↔ s[i+k]
+    ..........</code></pre></div></div></div></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def odszyfruj(szyfr, k, n):
     d = len(szyfr)
     s = list(szyfr)
     i = 1
@@ -61,7 +109,45 @@ print(szyfruj(&quot;stokrotka&quot;, 1, 2))</code></pre></div><p class="answer">
     return &quot;&quot;.join(s)
 
 
-print(odszyfruj(&quot;eiindaezotinwezssyktpo&quot;, 2, 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> pieniadzetoniewszystko; luki: dopóki i ≤ d − k − n, i ← i − n</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pierwsza(x):
+print(odszyfruj(&quot;eiindaezotinwezssyktpo&quot;, 2, 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+
+std::string odszyfruj(std::string szyfr, int k, int n) {
+    int d = szyfr.size();
+    std::string s = szyfr;
+    int i = 1;
+    while (i &lt;= d - k - n)  // szukamy ostatniej zamiany wykonanej przy szyfrowaniu
+        i = i + n;
+    while (i &gt;= 1) {  // wykonujemy zamiany w odwrotnej kolejności
+        std::swap(s[i - 1], s[i + k - 1]);
+        i = i - n;
+    }
+    return s;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, odszyfruj(&quot;eiindaezotinwezssyktpo&quot;, 2, 2));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String odszyfruj(String szyfr, int k, int n) {
+        int d = szyfr.length();
+        char[] s = szyfr.toCharArray();
+        int i = 1;
+        while (i &lt;= d - k - n)  // szukamy ostatniej zamiany wykonanej przy szyfrowaniu
+            i = i + n;
+        while (i &gt;= 1) {  // wykonujemy zamiany w odwrotnej kolejności
+            char pom = s[i - 1];
+            s[i - 1] = s[i + k - 1];
+            s[i + k - 1] = pom;
+            i = i - n;
+        }
+        return new String(s);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(odszyfruj(&quot;eiindaezotinwezssyktpo&quot;, 2, 2));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> pieniadzetoniewszystko; luki: dopóki i ≤ d − k − n, i ← i − n</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%231-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2. Liczby pierwsze. Parą liczb bliźniaczych nazywamy dwie liczby pierwsze różniące się o 2 (np. 11 i 13; para 13 i 15 nie jest bliźniacza, bo 15 jest złożona).</p><ul><li>2.1 — Dla <code>a</code> = 31, 41, 49 uzupełnij tabelę: czy <code>a</code> jest pierwsza, czy <code>a+2</code> jest pierwsza, czy <code>a−2</code> jest pierwsza i czy <code>a</code> należy do pary liczb bliźniaczych (np. dla 17: tak, 19 — tak, 15 — nie, odpowiedź TAK).</li><li>2.2 — Zapisz algorytm, który dla liczby całkowitej <code>a ≥ 3</code> wypisuje <code>TAK</code>, jeśli <code>a</code> należy do pary liczb bliźniaczych, a <code>NIE</code> w przeciwnym razie. Wolno używać tylko podstawowych operacji arytmetycznych (w tym dzielenia całkowitego i reszty), operacji logicznych i własnych funkcji.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -79,7 +165,65 @@ def blizniacze(a):
 
 
 for a in [17, 5, 31, 41, 49]:
-    print(a, pierwsza(a), pierwsza(a + 2), pierwsza(a - 2), blizniacze(a))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 31 → TAK (29), 41 → TAK (43), 49 → NIE</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
+    print(a, pierwsza(a), pierwsza(a + 2), pierwsza(a - 2), blizniacze(a))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+bool pierwsza(int x) {
+    if (x &lt; 2)
+        return false;
+    int i = 2;
+    while (i * i &lt;= x) {
+        if (x % i == 0)
+            return false;
+        i = i + 1;
+    }
+    return true;
+}
+
+std::string blizniacze(int a) {
+    if (pierwsza(a) &amp;&amp; (pierwsza(a - 2) || pierwsza(a + 2)))
+        return &quot;TAK&quot;;
+    return &quot;NIE&quot;;
+}
+
+// wartość logiczna zapisana jak w Pythonie
+std::string py(bool b) {
+    return b ? &quot;True&quot; : &quot;False&quot;;
+}
+
+int main() {
+    for (int a : {17, 5, 31, 41, 49})
+        std::println(&quot;{} {} {} {} {}&quot;, a, py(pierwsza(a)), py(pierwsza(a + 2)), py(pierwsza(a - 2)), blizniacze(a));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static boolean pierwsza(int x) {
+        if (x &lt; 2)
+            return false;
+        int i = 2;
+        while (i * i &lt;= x) {
+            if (x % i == 0)
+                return false;
+            i = i + 1;
+        }
+        return true;
+    }
+
+    static String blizniacze(int a) {
+        if (pierwsza(a) &amp;&amp; (pierwsza(a - 2) || pierwsza(a + 2)))
+            return &quot;TAK&quot;;
+        return &quot;NIE&quot;;
+    }
+
+    // wartość logiczna zapisana jak w Pythonie
+    static String py(boolean b) {
+        return b ? &quot;True&quot; : &quot;False&quot;;
+    }
+
+    public static void main(String[] args) {
+        for (int a : new int[]{17, 5, 31, 41, 49})
+            System.out.println(a + &quot; &quot; + py(pierwsza(a)) + &quot; &quot; + py(pierwsza(a + 2)) + &quot; &quot;
+                    + py(pierwsza(a - 2)) + &quot; &quot; + blizniacze(a));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 31 → TAK (29), 41 → TAK (43), 49 → NIE</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4. Trójki liczb. Plik <code>liczby.txt</code> zawiera 1000 wierszy, w każdym trzy liczby całkowite z przedziału [1, 32 767] oddzielone spacjami. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając je numerami zadań.</p><p>Podaj, w ilu wierszach liczby są uporządkowane rosnąco. Przykład: dla wierszy <code>4587 9351 28950</code>, <code>15010 28342 31848</code>, <code>30172 7492 6768</code>, <code>29120 21664 32328</code> odpowiedzią jest 2.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -87,7 +231,36 @@ with open(&quot;liczby.txt&quot;) as file:
         if a &lt; b &lt; c:
             count += 1
 
-print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 139</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nwd(a, b):
+print(count)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+
+int main() {
+    int count = 0;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    long long a, b, c;
+    while (plik &gt;&gt; a &gt;&gt; b &gt;&gt; c)
+        if (a &lt; b &amp;&amp; b &lt; c)
+            count++;
+
+    std::println(&quot;{}&quot;, count);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int count = 0;
+
+        for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            String[] pola = linia.trim().split(&quot;\\s+&quot;);
+            long a = Long.parseLong(pola[0]), b = Long.parseLong(pola[1]), c = Long.parseLong(pola[2]);
+            if (a &lt; b &amp;&amp; b &lt; c)
+                count++;
+        }
+
+        System.out.println(count);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 139</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla każdego wiersza pliku <code>liczby.txt</code> (1000 trójek liczb z [1, 32 767]) wyznacz NWD trzech zapisanych w nim liczb i podaj sumę tych NWD. Przykład: dla wierszy <code>3 6 9</code>, <code>34 10 4</code>, <code>36 20 28</code>, <code>16 40 56</code> wynik to 3+2+4+8 = 17. Wynik zapisz w <code>wyniki4.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def nwd(a, b):
     while b &gt; 0:
         a, b = b, a % b
     return a
@@ -100,7 +273,52 @@ with open(&quot;liczby.txt&quot;) as file:
         a, b, c = map(int, line.split())
         suma += nwd(nwd(a, b), c)
 
-print(suma)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1404</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">sumy_cyfr = []
+print(suma)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+
+long long nwd(long long a, long long b) {
+    while (b &gt; 0) {
+        long long r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+int main() {
+    long long suma = 0;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    long long a, b, c;
+    while (plik &gt;&gt; a &gt;&gt; b &gt;&gt; c)
+        suma += nwd(nwd(a, b), c);
+
+    std::println(&quot;{}&quot;, suma);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static long nwd(long a, long b) {
+        while (b &gt; 0) {
+            long r = a % b;
+            a = b;
+            b = r;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) throws Exception {
+        long suma = 0;
+
+        for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            String[] pola = linia.trim().split(&quot;\\s+&quot;);
+            long a = Long.parseLong(pola[0]), b = Long.parseLong(pola[1]), c = Long.parseLong(pola[2]);
+            suma += nwd(nwd(a, b), c);
+        }
+
+        System.out.println(suma);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1404</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla każdego wiersza pliku <code>liczby.txt</code> oblicz sumę cyfr wszystkich trzech liczb. Podaj:</p><ul><li>liczbę wierszy, w których ta suma wynosi 35;</li><li>największą sumę cyfr w wierszu oraz liczbę wierszy, w których ona występuje.</li></ul><p>Przykład: dla wierszy <code>45 9151 2800</code>, <code>2882 15040 2800</code>, <code>30172 2592 1102</code>, <code>29121 23564 320</code>, <code>3 243 765</code> suma 35 występuje w dwóch wierszach, a maksymalna suma 40 — także w dwóch. Wynik zapisz w <code>wyniki4.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">sumy_cyfr = []
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -111,7 +329,50 @@ with open(&quot;liczby.txt&quot;) as file:
         sumy_cyfr.append(suma)
 
 najwieksza = max(sumy_cyfr)
-print(sumy_cyfr.count(35), najwieksza, sumy_cyfr.count(najwieksza))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4 wiersze z sumą 35; największa suma cyfr 88, wystąpiła 2 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynajmy = {}
+print(sumy_cyfr.count(35), najwieksza, sumy_cyfr.count(najwieksza))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; sumy_cyfr;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        int suma = 0;
+        for (char znak : linia)
+            if (znak &gt;= &#x27;0&#x27; &amp;&amp; znak &lt;= &#x27;9&#x27;)  // pomijamy spacje i \r
+                suma += znak - &#x27;0&#x27;;
+        sumy_cyfr.push_back(suma);
+    }
+
+    int najwieksza = *std::max_element(sumy_cyfr.begin(), sumy_cyfr.end());
+    std::println(&quot;{} {} {}&quot;, std::ranges::count(sumy_cyfr, 35), najwieksza, std::ranges::count(sumy_cyfr, najwieksza));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; sumyCyfr = new ArrayList&lt;&gt;();
+
+        for (String linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            int suma = 0;
+            for (char znak : linia.strip().toCharArray())
+                if (znak != &#x27; &#x27;)
+                    suma += znak - &#x27;0&#x27;;
+            sumyCyfr.add(suma);
+        }
+
+        int najwieksza = Collections.max(sumyCyfr);
+        System.out.println(Collections.frequency(sumyCyfr, 35) + &quot; &quot; + najwieksza + &quot; &quot;
+                + Collections.frequency(sumyCyfr, najwieksza));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4 wiersze z sumą 35; największa suma cyfr 88, wystąpiła 2 razy</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5. Kemping. Ośrodek ma domki 2-, 3-, 4-, 5- i 6-osobowe. Plik <code>wynajem.txt</code> (pola rozdzielone tabulatorami, pierwszy wiersz nagłówkowy) zawiera historię wynajmu z 2014 r.: data przyjazdu, data wyjazdu (format <code>RRRR-MM-DD</code>), koszt energii, koszt wody, typ domku (liczba osób). Odpowiedzi zapisz w pliku <code>wyniki5.txt</code> (poza wykresem z 5.4), poprzedzając je numerami zadań.</p><p>Podaj, domki którego typu były wynajmowane najwięcej razy.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynajmy = {}
 
 with open(&quot;wynajem.txt&quot;) as file:
     next(file)  # pomijamy nagłówek
@@ -119,7 +380,65 @@ with open(&quot;wynajem.txt&quot;) as file:
         przyjazd, wyjazd, energia, woda, typ = line.strip().split(&quot;\t&quot;)
         wynajmy[typ] = wynajmy.get(typ, 0) + 1
 
-print(max(wynajmy, key=wynajmy.get))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> domki 2-osobowe</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
+print(max(wynajmy, key=wynajmy.get))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    // typ -&gt; liczba wynajmów; wektor zachowuje kolejność pierwszego wystąpienia (jak dict w Pythonie)
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; wynajmy;
+
+    std::ifstream plik(&quot;wynajem.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // pomijamy nagłówek
+    while (std::getline(plik, linia)) {
+        std::istringstream ss(linia);
+        std::string przyjazd, wyjazd, energia, woda, typ;
+        ss &gt;&gt; przyjazd &gt;&gt; wyjazd &gt;&gt; energia &gt;&gt; woda &gt;&gt; typ;
+        bool znaleziony = false;
+        for (auto&amp; [t, ile] : wynajmy)
+            if (t == typ) {
+                ile++;
+                znaleziony = true;
+            }
+        if (!znaleziony)
+            wynajmy.push_back({typ, 1});
+    }
+
+    // pierwszy typ z największą liczbą wynajmów, jak max(..., key=...) w Pythonie
+    auto najlepszy = wynajmy[0];
+    for (auto&amp; para : wynajmy)
+        if (para.second &gt; najlepszy.second)
+            najlepszy = para;
+    std::println(&quot;{}&quot;, najlepszy.first);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // typ -&gt; liczba wynajmów; LinkedHashMap zachowuje kolejność wstawiania (jak dict w Pythonie)
+        Map&lt;String, Integer&gt; wynajmy = new LinkedHashMap&lt;&gt;();
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;wynajem.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            wynajmy.merge(pola[4], 1, Integer::sum);
+        }
+
+        // pierwszy typ z największą liczbą wynajmów, jak max(..., key=...) w Pythonie
+        String najlepszy = null;
+        for (String typ : wynajmy.keySet())
+            if (najlepszy == null || wynajmy.get(typ) &gt; wynajmy.get(najlepszy))
+                najlepszy = typ;
+        System.out.println(najlepszy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> domki 2-osobowe</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%235-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie pliku <code>wynajem.txt</code> oblicz dla każdego typu domku łączną liczbę dób wynajmu (liczba dób = data wyjazdu − data przyjazdu). Przykład: dla wynajmów 02.01–11.01 (typ 5), 02.01–23.01 (typ 6), 02.01–14.01 (typ 6), 02.01–22.01 (typ 5) domki typu 5 wynajęto na 29 dób, a typu 6 — na 33 doby. Wynik zapisz w <code>wyniki5.txt</code>.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
 
 doby = {}
 
@@ -131,7 +450,61 @@ with open(&quot;wynajem.txt&quot;) as file:
         doby[typ] = doby.get(typ, 0) + liczba_dob
 
 for typ in sorted(doby):
-    print(typ, doby[typ])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2 – 2985, 3 – 2816, 4 – 2944, 5 – 2997, 6 – 3244</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
+    print(typ, doby[typ])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;chrono&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+
+using namespace std::chrono;
+
+// &quot;rrrr-mm-dd&quot; -&gt; dzień kalendarzowy, na którym można liczyć różnice
+sys_days na_date(const std::string&amp; tekst) {
+    int r = std::stoi(tekst.substr(0, 4));
+    unsigned m = std::stoi(tekst.substr(5, 2)), d = std::stoi(tekst.substr(8, 2));
+    return year(r) / month(m) / day(d);
+}
+
+int main() {
+    std::map&lt;std::string, long long&gt; doby;  // std::map - typy posortowane
+
+    std::ifstream plik(&quot;wynajem.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        std::istringstream ss(linia);
+        std::string przyjazd, wyjazd, energia, woda, typ;
+        ss &gt;&gt; przyjazd &gt;&gt; wyjazd &gt;&gt; energia &gt;&gt; woda &gt;&gt; typ;
+        long long liczba_dob = (na_date(wyjazd) - na_date(przyjazd)).count();
+        doby[typ] += liczba_dob;
+    }
+
+    for (auto&amp; [typ, suma] : doby)
+        std::println(&quot;{} {}&quot;, typ, suma);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        Map&lt;String, Long&gt; doby = new TreeMap&lt;&gt;();  // TreeMap - typy posortowane
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;wynajem.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            long liczbaDob = ChronoUnit.DAYS.between(LocalDate.parse(pola[0]), LocalDate.parse(pola[1]));
+            doby.merge(pola[4], liczbaDob, Long::sum);
+        }
+
+        for (var wpis : doby.entrySet())
+            System.out.println(wpis.getKey() + &quot; &quot; + wpis.getValue());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2 – 2985, 3 – 2816, 4 – 2944, 5 – 2997, 6 – 3244</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%235-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Opłata za wynajem to czynsz plus koszt mediów (energia i woda), przy czym czynsz = 10 zł · liczba osób (typ domku) · liczba dób. Np. domek 5-osobowy na 9 dób z energią 39,35 zł i wodą 1,04 zł kosztuje 450 + 39,35 + 1,04 = 490,39 zł. Na podstawie <code>wynajem.txt</code> utwórz zestawienie łącznych opłat dla każdego typu domku, posortowane nierosnąco według kwoty. Wynik zapisz w <code>wyniki5.txt</code>.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
 
 oplaty = {}
 
@@ -145,7 +518,108 @@ with open(&quot;wynajem.txt&quot;) as file:
         oplaty[typ] = oplaty.get(typ, 0) + oplata
 
 for typ in sorted(oplaty, key=oplaty.get, reverse=True):
-    print(typ, round(oplaty[typ], 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 6 – 196 335,25 zł; 5 – 151 509,94 zł; 4 – 119 478,24 zł; 3 – 86 170,73 zł; 2 – 61 401,00 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">media = [0] * 13
+    print(typ, round(oplaty[typ], 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;chrono&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+using namespace std::chrono;
+
+// &quot;rrrr-mm-dd&quot; -&gt; dzień kalendarzowy, na którym można liczyć różnice
+sys_days na_date(const std::string&amp; tekst) {
+    int r = std::stoi(tekst.substr(0, 4));
+    unsigned m = std::stoi(tekst.substr(5, 2)), d = std::stoi(tekst.substr(8, 2));
+    return year(r) / month(m) / day(d);
+}
+
+// &quot;39,35&quot; -&gt; 39.35
+double na_liczbe(std::string tekst) {
+    std::replace(tekst.begin(), tekst.end(), &#x27;,&#x27;, &#x27;.&#x27;);
+    return std::stod(tekst);
+}
+
+// zaokraglenie do 2 miejsc jak round(x, 2) w Pythonie
+double zaokraglij(double x) {
+    return std::stod(std::format(&quot;{:.2f}&quot;, x));
+}
+
+// liczba zmiennoprzecinkowa wypisana tak jak w Pythonie (np. 61401.0, 196335.25)
+std::string jak_python(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find_first_of(&quot;.e&quot;) == std::string::npos)
+        s += &quot;.0&quot;;
+    return s;
+}
+
+int main() {
+    // typ -&gt; suma opłat; wektor zachowuje kolejność pierwszego wystąpienia (jak dict w Pythonie)
+    std::vector&lt;std::pair&lt;std::string, double&gt;&gt; oplaty;
+
+    std::ifstream plik(&quot;wynajem.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        std::istringstream ss(linia);
+        std::string przyjazd, wyjazd, energia, woda, typ;
+        ss &gt;&gt; przyjazd &gt;&gt; wyjazd &gt;&gt; energia &gt;&gt; woda &gt;&gt; typ;
+        long long liczba_dob = (na_date(wyjazd) - na_date(przyjazd)).count();
+        long long czynsz = 10 * std::stoll(typ) * liczba_dob;
+        double oplata = czynsz + na_liczbe(energia) + na_liczbe(woda);
+        auto it = std::ranges::find_if(oplaty, [&amp;](const auto&amp; p) { return p.first == typ; });
+        if (it == oplaty.end())
+            oplaty.push_back({typ, oplata});
+        else
+            it-&gt;second += oplata;
+    }
+
+    // stable_sort - malejąco po opłatach, remisy w kolejności wstawiania (jak sorted w Pythonie)
+    std::stable_sort(oplaty.begin(), oplaty.end(),
+                     [](const auto&amp; a, const auto&amp; b) { return a.second &gt; b.second; });
+    for (auto&amp; [typ, suma] : oplaty)
+        std::println(&quot;{} {}&quot;, typ, jak_python(zaokraglij(suma)));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zadanie {
+    // zaokraglenie do 2 miejsc jak round(x, 2) w Pythonie
+    static double zaokraglij(double x) {
+        return new BigDecimal(x).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+    }
+
+    public static void main(String[] args) throws Exception {
+        // typ -&gt; suma opłat; LinkedHashMap zachowuje kolejność wstawiania (jak dict w Pythonie)
+        Map&lt;String, Double&gt; oplaty = new LinkedHashMap&lt;&gt;();
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;wynajem.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            long liczbaDob = ChronoUnit.DAYS.between(LocalDate.parse(pola[0]), LocalDate.parse(pola[1]));
+            long czynsz = 10 * Long.parseLong(pola[4]) * liczbaDob;
+            double oplata = czynsz + Double.parseDouble(pola[2].replace(&quot;,&quot;, &quot;.&quot;))
+                    + Double.parseDouble(pola[3].replace(&quot;,&quot;, &quot;.&quot;));
+            oplaty.merge(pola[4], oplata, Double::sum);
+        }
+
+        // sortowanie listy jest stabilne - malejąco po opłatach, remisy w kolejności wstawiania
+        List&lt;String&gt; typy = new ArrayList&lt;&gt;(oplaty.keySet());
+        typy.sort((a, b) -&gt; Double.compare(oplaty.get(b), oplaty.get(a)));
+        for (String typ : typy)
+            System.out.println(typ + &quot; &quot; + zaokraglij(oplaty.get(typ)));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 6 – 196 335,25 zł; 5 – 151 509,94 zł; 4 – 119 478,24 zł; 3 – 86 170,73 zł; 2 – 61 401,00 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%235-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie <code>wynajem.txt</code> utwórz zestawienie łącznych kosztów mediów (energia + woda) w poszczególnych miesiącach, przypisując każdy wynajem do miesiąca daty przyjazdu. Sporządź czytelnie opisany wykres kolumnowy tego zestawienia.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">media = [0] * 13
 
 with open(&quot;wynajem.txt&quot;) as file:
     next(file)
@@ -155,7 +629,76 @@ with open(&quot;wynajem.txt&quot;) as file:
         media[miesiac] += float(energia.replace(&quot;,&quot;, &quot;.&quot;)) + float(woda.replace(&quot;,&quot;, &quot;.&quot;))
 
 for miesiac in range(1, 13):
-    print(miesiac, round(media[miesiac], 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1: 1078,32; 2: 611,15; 3: 565,22; 4: 322,96; 5: 299,66; 6: 568,59; 7: 628,60; 8: 531,33; 9: 1045,12; 10: 813,25; 11: 1107,80; 12: 893,16 (wykres kolumnowy wykonuje się w arkuszu kalkulacyjnym)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(miesiac, round(media[miesiac], 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// &quot;39,35&quot; -&gt; 39.35
+double na_liczbe(std::string tekst) {
+    std::replace(tekst.begin(), tekst.end(), &#x27;,&#x27;, &#x27;.&#x27;);
+    return std::stod(tekst);
+}
+
+// zaokraglenie do 2 miejsc jak round(x, 2) w Pythonie
+double zaokraglij(double x) {
+    return std::stod(std::format(&quot;{:.2f}&quot;, x));
+}
+
+// liczba zmiennoprzecinkowa wypisana tak jak w Pythonie (np. 628.6, 1078.32)
+std::string jak_python(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find_first_of(&quot;.e&quot;) == std::string::npos)
+        s += &quot;.0&quot;;
+    return s;
+}
+
+int main() {
+    std::vector&lt;double&gt; media(13, 0.0);
+
+    std::ifstream plik(&quot;wynajem.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        std::istringstream ss(linia);
+        std::string przyjazd, wyjazd, energia, woda, typ;
+        ss &gt;&gt; przyjazd &gt;&gt; wyjazd &gt;&gt; energia &gt;&gt; woda &gt;&gt; typ;
+        int miesiac = std::stoi(przyjazd.substr(5, 2));
+        media[miesiac] += na_liczbe(energia) + na_liczbe(woda);
+    }
+
+    for (int miesiac = 1; miesiac &lt;= 12; miesiac++)
+        std::println(&quot;{} {}&quot;, miesiac, jak_python(zaokraglij(media[miesiac])));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
+public class Zadanie {
+    // zaokraglenie do 2 miejsc jak round(x, 2) w Pythonie
+    static double zaokraglij(double x) {
+        return new BigDecimal(x).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+    }
+
+    public static void main(String[] args) throws Exception {
+        double[] media = new double[13];
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;wynajem.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            int miesiac = Integer.parseInt(pola[0].substring(5, 7));
+            media[miesiac] += Double.parseDouble(pola[2].replace(&quot;,&quot;, &quot;.&quot;))
+                    + Double.parseDouble(pola[3].replace(&quot;,&quot;, &quot;.&quot;));
+        }
+
+        for (int miesiac = 1; miesiac &lt;= 12; miesiac++)
+            System.out.println(miesiac + &quot; &quot; + zaokraglij(media[miesiac]));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1: 1078,32; 2: 611,15; 3: 565,22; 4: 322,96; 5: 299,66; 6: 568,59; 7: 628,60; 8: 531,33; 9: 1045,12; 10: 813,25; 11: 1107,80; 12: 893,16 (wykres kolumnowy wykonuje się w arkuszu kalkulacyjnym)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-maj-podstawa.html%235-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_maj_podstawa/2017_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

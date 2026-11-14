@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2021 — maj, poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2021 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dopelnienie(n):
+<h1 class="page-title">Matura 2021 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Niech n będzie nieujemną liczbą całkowitą, której najbardziej znacząca cyfra jest większa od 0 i mniejsza od 9. Cyfrowe dopełnienie d liczby n powstaje przez zastąpienie każdej cyfry n jej uzupełnieniem do 9 (np. dla 2021 jest to 7978).</p><ul><li><strong>1.1</strong> — Podaj czterocyfrową liczbę n, dla której |n − d| jest a) najmniejsza, b) największa.</li><li><strong>1.2</strong> — Napisz algorytm, który dla dodatniej liczby n (spełniającej warunek jak wyżej) oblicza jej cyfrowe dopełnienie d. Algorytm może używać wyłącznie zmiennych całkowitych i podstawowych operacji arytmetycznych (w tym div i mod); nie wolno korzystać z funkcji wbudowanych ani konwersji liczba ↔ napis.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def dopelnienie(n):
     # 1.2 - tylko operacje na liczbach całkowitych
     d = 0
     potega = 1
@@ -59,7 +59,66 @@ for n in range(1000, 9000):
         najmniejsza = n
     if roznica &gt; abs(najwieksza - dopelnienie(najwieksza)):
         najwieksza = n
-print(najmniejsza, najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: a) 4999 (lub 5000) — różnica 1; b) 1000 (lub 8999) — różnica 7999. 1.2: algorytm powyżej (dopelnienie(2021) = 7978)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def d(T, x):
+print(najmniejsza, najwieksza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;print&gt;
+
+int dopelnienie(int n) {
+    // 1.2 - tylko operacje na liczbach całkowitych
+    int d = 0;
+    int potega = 1;
+    while (n &gt; 0) {
+        int cyfra = n % 10;
+        n = n / 10;
+        d = d + (9 - cyfra) * potega;
+        potega = potega * 10;
+    }
+    return d;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, dopelnienie(2021));
+
+    // 1.1 - sprawdzamy wszystkie czterocyfrowe n z pierwszą cyfrą od 1 do 8
+    int najmniejsza = 1000, najwieksza = 1000;
+    for (int n = 1000; n &lt; 9000; n++) {
+        int roznica = std::abs(n - dopelnienie(n));
+        if (roznica &lt; std::abs(najmniejsza - dopelnienie(najmniejsza))) najmniejsza = n;
+        if (roznica &gt; std::abs(najwieksza - dopelnienie(najwieksza))) najwieksza = n;
+    }
+    std::println(&quot;{} {}&quot;, najmniejsza, najwieksza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int dopelnienie(int n) {
+        // 1.2 - tylko operacje na liczbach całkowitych
+        int d = 0;
+        int potega = 1;
+        while (n &gt; 0) {
+            int cyfra = n % 10;
+            n = n / 10;
+            d = d + (9 - cyfra) * potega;
+            potega = potega * 10;
+        }
+        return d;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(dopelnienie(2021));
+
+        // 1.1 - sprawdzamy wszystkie czterocyfrowe n z pierwszą cyfrą od 1 do 8
+        int najmniejsza = 1000, najwieksza = 1000;
+        for (int n = 1000; n &lt; 9000; n++) {
+            int roznica = Math.abs(n - dopelnienie(n));
+            if (roznica &lt; Math.abs(najmniejsza - dopelnienie(najmniejsza))) najmniejsza = n;
+            if (roznica &gt; Math.abs(najwieksza - dopelnienie(najwieksza))) najwieksza = n;
+        }
+        System.out.println(najmniejsza + &quot; &quot; + najwieksza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: a) 4999 (lub 5000) — różnica 1; b) 1000 (lub 8999) — różnica 7999. 1.2: algorytm powyżej (dopelnienie(2021) = 7978)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202021%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-maj.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>T[1..n] to tablica n liczb całkowitych (dla n = 0 pusta). Funkcja d(x) dopisuje x na końcu tablicy i przesuwa go w górę (div — dzielenie całkowite; „oraz” liczone leniwie):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">d(x):
+    n ← n + 1
+    T[n] ← x
+    s ← n
+    dopóki ((s div 2) ≥ 1) oraz (T[s] &gt; T[s div 2]) wykonuj
+        zamień T[s] z T[s div 2]
+        s ← s div 2</code></pre></div></div></div><ul><li><strong>2.1</strong> — Podaj zawartość T po wykonaniu d(x) dla: T=[36,15,17,3], x=−5 oraz T=[27,6,13,4,−3,−2,−3], x=30. (Przykład: [26,3,5,−4], x=5 → [26,5,5,−4,3].)</li><li><strong>2.2</strong> — Podaj zawartość T po kolejnych wywołaniach d z argumentami 6, −4, 12, 27, 26, 8, zaczynając od pustej tablicy.</li><li><strong>2.3</strong> — Do pustej tablicy wstawiono kolejno liczby 1, 2, …, k−1, a potem wywołano d(k). Podaj, ile razy sprawdzany jest warunek pętli „dopóki” podczas d(k) dla wartości k podanych w tabeli arkusza (np. dla k = 4 — 3 razy).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def d(T, x):
     # T[0] nieużywane - tablica indeksowana od 1, jak w treści
     # zwraca liczbę sprawdzeń warunku pętli dopóki
     T.append(x)
@@ -91,7 +150,100 @@ for k in [4, 16, 1025]:
     T = [None]
     for x in range(1, k):
         d(T, x)
-    print(k, d(T, k))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 36, 15, 17, 3, −5 oraz 30, 27, 13, 6, −3, −2, −3, 4. 2.2: 27, 26, 8, −4, 12, 6. 2.3: k = 16 — 5 razy, k = 1025 — 11 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">instrukcje = []
+    print(k, d(T, k))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// T[0] nieużywane - tablica indeksowana od 1, jak w treści
+// zwraca liczbę sprawdzeń warunku pętli dopóki
+int d(std::vector&lt;int&gt;&amp; T, int x) {
+    T.push_back(x);
+    int s = T.size() - 1;
+    int sprawdzenia = 0;
+    while (true) {
+        sprawdzenia++;
+        if (!(s / 2 &gt;= 1 &amp;&amp; T[s] &gt; T[s / 2])) break;
+        std::swap(T[s], T[s / 2]);
+        s = s / 2;
+    }
+    return sprawdzenia;
+}
+
+void wypisz(const std::vector&lt;int&gt;&amp; T) {
+    std::vector&lt;int&gt; bez0(T.begin() + 1, T.end());
+    std::println(&quot;{}&quot;, bez0);  // format [1, 2, 3] jak w Pythonie
+}
+
+int main() {
+    // 2.1
+    std::vector&lt;std::vector&lt;int&gt;&gt; tablice = {{26, 3, 5, -4}, {36, 15, 17, 3}, {27, 6, 13, 4, -3, -2, -3}};
+    int iksy[] = {5, -5, 30};
+    for (int t = 0; t &lt; 3; t++) {
+        std::vector&lt;int&gt; T = {0};  // T[0] nieużywane
+        T.insert(T.end(), tablice[t].begin(), tablice[t].end());
+        d(T, iksy[t]);
+        wypisz(T);
+    }
+
+    // 2.2
+    std::vector&lt;int&gt; T = {0};
+    for (int x : {6, -4, 12, 27, 26, 8}) d(T, x);
+    wypisz(T);
+
+    // 2.3
+    for (int k : {4, 16, 1025}) {
+        std::vector&lt;int&gt; T = {0};
+        for (int x = 1; x &lt; k; x++) d(T, x);
+        std::println(&quot;{} {}&quot;, k, d(T, k));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    // T.get(0) nieużywane - tablica indeksowana od 1, jak w treści
+    // zwraca liczbę sprawdzeń warunku pętli dopóki
+    static int d(List&lt;Integer&gt; T, int x) {
+        T.add(x);
+        int s = T.size() - 1;
+        int sprawdzenia = 0;
+        while (true) {
+            sprawdzenia++;
+            if (!(s / 2 &gt;= 1 &amp;&amp; T.get(s) &gt; T.get(s / 2))) break;
+            Collections.swap(T, s, s / 2);
+            s = s / 2;
+        }
+        return sprawdzenia;
+    }
+
+    static List&lt;Integer&gt; nowaTablica(Integer... elementy) {
+        var T = new ArrayList&lt;Integer&gt;();
+        T.add(null);  // T[0] nieużywane
+        T.addAll(List.of(elementy));
+        return T;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        Integer[][] tablice = {{26, 3, 5, -4}, {36, 15, 17, 3}, {27, 6, 13, 4, -3, -2, -3}};
+        int[] iksy = {5, -5, 30};
+        for (int t = 0; t &lt; 3; t++) {
+            var T = nowaTablica(tablice[t]);
+            d(T, iksy[t]);
+            System.out.println(T.subList(1, T.size()));
+        }
+
+        // 2.2
+        var T = nowaTablica();
+        for (int x : new int[] {6, -4, 12, 27, 26, 8}) d(T, x);
+        System.out.println(T.subList(1, T.size()));
+
+        // 2.3
+        for (int k : new int[] {4, 16, 1025}) {
+            var tab = nowaTablica();
+            for (int x = 1; x &lt; k; x++) d(tab, x);
+            System.out.println(k + &quot; &quot; + d(tab, k));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 36, 15, 17, 3, −5 oraz 30, 27, 13, 6, −3, −2, −3, 4. 2.2: 27, 26, 8, −4, 12, 6. 2.3: k = 16 — 5 razy, k = 1025 — 11 razy</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202021%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-maj.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>instrukcje.txt</code> zawiera 2000 instrukcji automatu tworzącego napis z wielkich liter (początkowo pusty). Każda instrukcja to polecenie, spacja i jeden znak:</p><ul><li><code>DOPISZ litera</code> — dopisz literę na końcu napisu;</li><li><code>ZMIEN litera</code> — zamień ostatnią literę napisu na podaną;</li><li><code>USUN 1</code> — usuń ostatnią literę;</li><li><code>PRZESUN litera</code> — pierwsze od lewej wystąpienie litery zamień na następną w alfabecie (Z → A); gdy litery brak, nic nie rób.</li></ul><p>Odpowiedzi zapisz w <code>wyniki4.txt</code>, poprzedzając je numerem zadania. Plik <code>przyklad.txt</code> (20 instrukcji) służy do testów.</p><ul><li><strong>4.1</strong> — Podaj długość napisu po wykonaniu wszystkich instrukcji. (Przykład: 10.)</li><li><strong>4.2</strong> — Znajdź najdłuższy ciąg kolejnych instrukcji tego samego rodzaju; podaj rodzaj i długość (jest jeden taki ciąg). (Przykład: DOPISZ 5.)</li><li><strong>4.3</strong> — Podaj literę najczęściej dopisywaną instrukcją DOPISZ i liczbę jej dopisań (jest jedna taka). (Przykład: U 3.)</li><li><strong>4.4</strong> — Podaj napis powstały po wykonaniu wszystkich instrukcji. (Przykład: <code>ALANTURING</code>.)</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">instrukcje = []
 with open(&quot;instrukcje.txt&quot;) as file:
     for line in file:
         polecenie, znak = line.split()
@@ -135,7 +287,135 @@ with open(&quot;wyniki4.txt&quot;, &quot;w&quot;) as wynik:
     print(&quot;4.1.&quot;, len(napis), file=wynik)
     print(&quot;4.2.&quot;, rodzaj, najdluzszy, file=wynik)
     print(&quot;4.3.&quot;, litera, ile[litera], file=wynik)
-    print(&quot;4.4.&quot;, &quot;&quot;.join(napis), file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 517; 4.2: ZMIEN 7; 4.3: Z 37; 4.4: POZNIEJMOWIONOZECZLOWIEKTENNADSZEDLODPOLNOCYODBRAMYPOWROZNIC… (początek opowiadania „Wiedźmin” A. Sapkowskiego)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(&quot;4.4.&quot;, &quot;&quot;.join(napis), file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::pair&lt;std::string, char&gt;&gt; instrukcje;
+    std::ifstream plik(&quot;instrukcje.txt&quot;);
+    std::string polecenie;
+    char znak;
+    while (plik &gt;&gt; polecenie &gt;&gt; znak) instrukcje.push_back({polecenie, znak});
+
+    // 4.1 i 4.4 - wykonujemy wszystkie instrukcje
+    std::string napis;
+    for (auto&amp; [polecenie, znak] : instrukcje) {
+        if (polecenie == &quot;DOPISZ&quot;) {
+            napis += znak;
+        } else if (polecenie == &quot;ZMIEN&quot;) {
+            napis.back() = znak;
+        } else if (polecenie == &quot;USUN&quot;) {
+            napis.pop_back();
+        } else if (polecenie == &quot;PRZESUN&quot;) {
+            size_t i = napis.find(znak);  // pierwsze wystąpienie od lewej
+            if (i != std::string::npos) napis[i] = (char)((znak - &#x27;A&#x27; + 1) % 26 + &#x27;A&#x27;);
+        }
+    }
+
+    // 4.2 - najdłuższy ciąg kolejnych instrukcji tego samego rodzaju
+    int najdluzszy = 0;
+    std::string rodzaj;
+    int dlugosc = 0;
+    for (size_t i = 0; i &lt; instrukcje.size(); i++) {
+        if (i &gt; 0 &amp;&amp; instrukcje[i].first == instrukcje[i - 1].first)
+            dlugosc++;
+        else
+            dlugosc = 1;
+        if (dlugosc &gt; najdluzszy) {
+            najdluzszy = dlugosc;
+            rodzaj = instrukcje[i].first;
+        }
+    }
+
+    // 4.3 - najczęściej dopisywana litera (przy remisie pierwsza dopisana, jak max w Pythonie)
+    std::map&lt;char, int&gt; ile;
+    std::vector&lt;char&gt; kolejnosc;  // kolejność pierwszego pojawienia się litery
+    for (auto&amp; [polecenie, znak] : instrukcje) {
+        if (polecenie == &quot;DOPISZ&quot;) {
+            if (ile[znak] == 0) kolejnosc.push_back(znak);
+            ile[znak]++;
+        }
+    }
+    char litera = kolejnosc[0];
+    for (char z : kolejnosc)
+        if (ile[z] &gt; ile[litera]) litera = z;
+
+    std::ofstream wynik(&quot;wyniki4.txt&quot;);
+    wynik &lt;&lt; &quot;4.1. &quot; &lt;&lt; napis.size() &lt;&lt; &quot;\n&quot;;
+    wynik &lt;&lt; &quot;4.2. &quot; &lt;&lt; rodzaj &lt;&lt; &quot; &quot; &lt;&lt; najdluzszy &lt;&lt; &quot;\n&quot;;
+    wynik &lt;&lt; &quot;4.3. &quot; &lt;&lt; litera &lt;&lt; &quot; &quot; &lt;&lt; ile[litera] &lt;&lt; &quot;\n&quot;;
+    wynik &lt;&lt; &quot;4.4. &quot; &lt;&lt; napis &lt;&lt; &quot;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var polecenia = new ArrayList&lt;String&gt;();
+        var znaki = new ArrayList&lt;Character&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;instrukcje.txt&quot;))) {
+            var czesci = linia.trim().split(&quot;\\s+&quot;);
+            polecenia.add(czesci[0]);
+            znaki.add(czesci[1].charAt(0));
+        }
+
+        // 4.1 i 4.4 - wykonujemy wszystkie instrukcje
+        var napis = new StringBuilder();
+        for (int k = 0; k &lt; polecenia.size(); k++) {
+            String polecenie = polecenia.get(k);
+            char znak = znaki.get(k);
+            switch (polecenie) {
+                case &quot;DOPISZ&quot; -&gt; napis.append(znak);
+                case &quot;ZMIEN&quot; -&gt; napis.setCharAt(napis.length() - 1, znak);
+                case &quot;USUN&quot; -&gt; napis.deleteCharAt(napis.length() - 1);
+                case &quot;PRZESUN&quot; -&gt; {
+                    int i = napis.indexOf(String.valueOf(znak));  // pierwsze wystąpienie od lewej
+                    if (i != -1) napis.setCharAt(i, (char) ((znak - &#x27;A&#x27; + 1) % 26 + &#x27;A&#x27;));
+                }
+            }
+        }
+
+        // 4.2 - najdłuższy ciąg kolejnych instrukcji tego samego rodzaju
+        int najdluzszy = 0;
+        String rodzaj = &quot;&quot;;
+        int dlugosc = 0;
+        for (int i = 0; i &lt; polecenia.size(); i++) {
+            if (i &gt; 0 &amp;&amp; polecenia.get(i).equals(polecenia.get(i - 1)))
+                dlugosc++;
+            else
+                dlugosc = 1;
+            if (dlugosc &gt; najdluzszy) {
+                najdluzszy = dlugosc;
+                rodzaj = polecenia.get(i);
+            }
+        }
+
+        // 4.3 - najczęściej dopisywana litera (LinkedHashMap pamięta kolejność, jak dict w Pythonie)
+        var ile = new LinkedHashMap&lt;Character, Integer&gt;();
+        for (int k = 0; k &lt; polecenia.size(); k++)
+            if (polecenia.get(k).equals(&quot;DOPISZ&quot;))
+                ile.merge(znaki.get(k), 1, Integer::sum);
+        char litera = &#x27; &#x27;;
+        int najwiecej = 0;
+        for (var e : ile.entrySet()) {
+            if (e.getValue() &gt; najwiecej) {
+                najwiecej = e.getValue();
+                litera = e.getKey();
+            }
+        }
+
+        try (var wynik = new PrintWriter(&quot;wyniki4.txt&quot;)) {
+            wynik.println(&quot;4.1. &quot; + napis.length());
+            wynik.println(&quot;4.2. &quot; + rodzaj + &quot; &quot; + najdluzszy);
+            wynik.println(&quot;4.3. &quot; + litera + &quot; &quot; + najwiecej);
+            wynik.println(&quot;4.4. &quot; + napis);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 517; 4.2: ZMIEN 7; 4.3: Z 37; 4.4: POZNIEJMOWIONOZECZLOWIEKTENNADSZEDLODPOLNOCYODBRAMYPOWROZNIC… (początek opowiadania „Wiedźmin” A. Sapkowskiego)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202021%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-maj.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

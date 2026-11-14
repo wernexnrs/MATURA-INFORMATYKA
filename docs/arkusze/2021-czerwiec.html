@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2021 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2021 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def zachlanna(n):
+<h1 class="page-title">Matura 2021 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2021-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Każdą dodatnią liczbę całkowitą n można zapisać jako sumę kwadratów dodatnich liczb całkowitych (reprezentacja kwadratowa); długość reprezentacji to liczba składników (np. 9 = 3² = 2²+2²+1² = 2²+1²+1²+1²+1²+1², długości 1, 3 i 6). W metodzie zachłannej w każdym kroku bierze się największy kwadrat, przy którym suma nie przekracza n — nie zawsze daje to najkrótszą reprezentację.</p><ul><li><strong>1.1</strong> — Uzupełnij tabelę: podaj reprezentację liczby 23 krótszą niż zachłanna (zachłanna: 4²+2²+1²+1²+1²) oraz wymyśl własną liczbę n &gt; 23, dla której reprezentacja zachłanna nie jest najkrótsza — zapisz obie reprezentacje (przykłady z tabeli: 12 = 3²+1²+1²+1² wobec 2²+2²+2²; 18 = 4²+1²+1² wobec 3²+3²).</li><li><strong>1.2</strong> — Napisz algorytm, który dla dodatniej liczby całkowitej n oblicza długość <code>dl</code> jej reprezentacji kwadratowej wyznaczonej metodą zachłanną. Wolno używać tylko podstawowych operacji arytmetycznych (bez funkcji wbudowanych, w szczególności bez pierwiastka). Przykład: dla n = 12 wynikiem jest dl = 4.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def zachlanna(n):
     # 1.2 - długość reprezentacji metodą zachłanną, bez funkcji pierwiastek
     kw = 1
     while (kw + 1) * (kw + 1) &lt;= n:
@@ -71,7 +71,89 @@ print(zachlanna(23), najkrotsza(23))
 n = 24
 while zachlanna(n) == najkrotsza(n):
     n += 1
-print(n, zachlanna(n), najkrotsza(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 23 = 3² + 3² + 2² + 1²; np. n = 32: zachłannie 5² + 2² + 1² + 1² + 1², krócej 4² + 4². 1.2: algorytm powyżej (dla n = 12: dl = 4)</p><blockquote class="callout">W kluczu CKE przykładowy pseudokod do 1.2 ma warunek <code>kw * kw &lt; s</code> — powinno być <code>kw * kw ≤ s</code> (z <code>&lt;</code> np. dla n = 12 pętla się nie kończy).</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def modyfikuj(T, n, s, k):
+print(n, zachlanna(n), najkrotsza(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int zachlanna(int n) {
+    // 1.2 - długość reprezentacji metodą zachłanną, bez funkcji pierwiastek
+    int kw = 1;
+    while ((kw + 1) * (kw + 1) &lt;= n) kw++;
+    int dl = 0;
+    int s = n;
+    while (s &gt; 0) {
+        if (kw * kw &lt;= s) {
+            s -= kw * kw;
+            dl++;
+        } else {
+            kw--;
+        }
+    }
+    return dl;
+}
+
+int najkrotsza(int n) {
+    // długość najkrótszej reprezentacji (programowanie dynamiczne) - do sprawdzenia 1.1
+    std::vector&lt;int&gt; najkrotsze(n + 1, 0);
+    for (int i = 1; i &lt;= n; i++) {
+        najkrotsze[i] = i;  // same jedynki
+        for (int k = 1; k * k &lt;= i; k++)
+            najkrotsze[i] = std::min(najkrotsze[i], najkrotsze[i - k * k] + 1);
+    }
+    return najkrotsze[n];
+}
+
+int main() {
+    std::println(&quot;{}&quot;, zachlanna(12));
+    std::println(&quot;{} {}&quot;, zachlanna(23), najkrotsza(23));
+    // 1.1 - pierwsza liczba n &gt; 23, dla której metoda zachłanna nie daje najkrótszej reprezentacji
+    int n = 24;
+    while (zachlanna(n) == najkrotsza(n)) n++;
+    std::println(&quot;{} {} {}&quot;, n, zachlanna(n), najkrotsza(n));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int zachlanna(int n) {
+        // 1.2 - długość reprezentacji metodą zachłanną, bez funkcji pierwiastek
+        int kw = 1;
+        while ((kw + 1) * (kw + 1) &lt;= n) kw++;
+        int dl = 0;
+        int s = n;
+        while (s &gt; 0) {
+            if (kw * kw &lt;= s) {
+                s -= kw * kw;
+                dl++;
+            } else {
+                kw--;
+            }
+        }
+        return dl;
+    }
+
+    static int najkrotsza(int n) {
+        // długość najkrótszej reprezentacji (programowanie dynamiczne) - do sprawdzenia 1.1
+        int[] najkrotsze = new int[n + 1];
+        for (int i = 1; i &lt;= n; i++) {
+            najkrotsze[i] = i;  // same jedynki
+            for (int k = 1; k * k &lt;= i; k++)
+                najkrotsze[i] = Math.min(najkrotsze[i], najkrotsze[i - k * k] + 1);
+        }
+        return najkrotsze[n];
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(zachlanna(12));
+        System.out.println(zachlanna(23) + &quot; &quot; + najkrotsza(23));
+        // 1.1 - pierwsza liczba n &gt; 23, dla której metoda zachłanna nie daje najkrótszej reprezentacji
+        int n = 24;
+        while (zachlanna(n) == najkrotsza(n)) n++;
+        System.out.println(n + &quot; &quot; + zachlanna(n) + &quot; &quot; + najkrotsza(n));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 23 = 3² + 3² + 2² + 1²; np. n = 32: zachłannie 5² + 2² + 1² + 1² + 1², krócej 4² + 4². 1.2: algorytm powyżej (dla n = 12: dl = 4)</p><blockquote class="callout"><p>W kluczu CKE przykładowy pseudokod do 1.2 ma warunek <code>kw * kw &lt; s</code> — powinno być <code>kw * kw ≤ s</code> (z <code>&lt;</code> np. dla n = 12 pętla się nie kończy).</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202021%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-czerwiec.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest liczba n, tablica liczb całkowitych T[1..n] oraz rekurencyjna procedura (s, k — dodatnie, s ≤ n):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">modyfikuj(s, k)
+    jeżeli s + k &lt; n to
+        modyfikuj(s + k, k)
+    i ← s + 1
+    dopóki (i ≤ n) oraz (i ≤ s + k) wykonuj
+        T[s] ← T[s] + T[i]
+        i ← i + 1</code></pre></div></div></div><ul><li><strong>2.1</strong> — Podaj zawartość T po wywołaniu <code>modyfikuj(s, k)</code> dla: n=10, T=[1,4,2,8,3,6,2,9,1,5], s=5, k=6; n=13, T=[4,2,6,2,9,3,5,2,7,4,3,2,3], s=3, k=5 oraz dla tej samej tablicy s=4, k=4. (Przykład: n=8, T=[1,…,1], s=3, k=3 daje [1,1,6,1,1,3,1,1].)</li><li><strong>2.2</strong> — Podaj łączną liczbę wywołań procedury (licząc pierwsze) dla: n=5, s=1, k=3; n=2021, s=1, k=100; n=2021, s=20, k=35.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def modyfikuj(T, n, s, k):
     # T[0] nieużywane - tablica indeksowana od 1; zwraca liczbę wywołań
     wywolania = 1
     if s + k &lt; n:
@@ -94,7 +176,79 @@ for T, s, k in [([1, 4, 2, 8, 3, 6, 2, 9, 1, 5], 5, 6),
 # 2.2
 for n, s, k in [(5, 1, 3), (2021, 1, 100), (2021, 20, 35)]:
     T = [None] + [0] * n
-    print(n, s, k, modyfikuj(T, n, s, k))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: [1, 4, 2, 8, 26, 6, 2, 9, 1, 5]; [4, 2, 46, 2, 9, 3, 5, 21, 7, 4, 3, 2, 3]; [4, 2, 6, 40, 9, 3, 5, 21, 7, 4, 3, 5, 3]. 2.2: 21 i 58</p><blockquote class="callout">W kluczu CKE w drugim wierszu 2.1 jest literówka: [1,4,2,8,26,6,2,<strong>6</strong>,1,5] — ósmy element nie jest zmieniany i wynosi 9.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">napisy = []
+    print(n, s, k, modyfikuj(T, n, s, k))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+// T[0] nieużywane - tablica indeksowana od 1; zwraca liczbę wywołań
+int modyfikuj(std::vector&lt;long long&gt;&amp; T, int n, int s, int k) {
+    int wywolania = 1;
+    if (s + k &lt; n) wywolania += modyfikuj(T, n, s + k, k);
+    int i = s + 1;
+    while (i &lt;= n &amp;&amp; i &lt;= s + k) {
+        T[s] = T[s] + T[i];
+        i++;
+    }
+    return wywolania;
+}
+
+int main() {
+    // 2.1
+    std::vector&lt;std::vector&lt;long long&gt;&gt; tablice = {
+        {1, 4, 2, 8, 3, 6, 2, 9, 1, 5},
+        {4, 2, 6, 2, 9, 3, 5, 2, 7, 4, 3, 2, 3},
+        {4, 2, 6, 2, 9, 3, 5, 2, 7, 4, 3, 2, 3}};
+    int sk[3][2] = {{5, 6}, {3, 5}, {4, 4}};
+    for (int t = 0; t &lt; 3; t++) {
+        std::vector&lt;long long&gt; T = {0};  // T[0] nieużywane
+        T.insert(T.end(), tablice[t].begin(), tablice[t].end());
+        modyfikuj(T, T.size() - 1, sk[t][0], sk[t][1]);
+        std::vector&lt;long long&gt; bez0(T.begin() + 1, T.end());
+        std::println(&quot;{}&quot;, bez0);  // format [1, 4, 2, ...] jak w Pythonie
+    }
+    // 2.2
+    int dane[3][3] = {{5, 1, 3}, {2021, 1, 100}, {2021, 20, 35}};
+    for (auto&amp; d : dane) {
+        int n = d[0], s = d[1], k = d[2];
+        std::vector&lt;long long&gt; T(n + 1, 0);
+        std::println(&quot;{} {} {} {}&quot;, n, s, k, modyfikuj(T, n, s, k));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    // T[0] nieużywane - tablica indeksowana od 1; zwraca liczbę wywołań
+    static int modyfikuj(long[] T, int n, int s, int k) {
+        int wywolania = 1;
+        if (s + k &lt; n) wywolania += modyfikuj(T, n, s + k, k);
+        int i = s + 1;
+        while (i &lt;= n &amp;&amp; i &lt;= s + k) {
+            T[s] = T[s] + T[i];
+            i++;
+        }
+        return wywolania;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        long[][] tablice = {
+            {1, 4, 2, 8, 3, 6, 2, 9, 1, 5},
+            {4, 2, 6, 2, 9, 3, 5, 2, 7, 4, 3, 2, 3},
+            {4, 2, 6, 2, 9, 3, 5, 2, 7, 4, 3, 2, 3}};
+        int[][] sk = {{5, 6}, {3, 5}, {4, 4}};
+        for (int t = 0; t &lt; 3; t++) {
+            long[] T = new long[tablice[t].length + 1];  // T[0] nieużywane
+            System.arraycopy(tablice[t], 0, T, 1, tablice[t].length);
+            modyfikuj(T, T.length - 1, sk[t][0], sk[t][1]);
+            System.out.println(Arrays.toString(Arrays.copyOfRange(T, 1, T.length)));
+        }
+        // 2.2
+        int[][] dane = {{5, 1, 3}, {2021, 1, 100}, {2021, 20, 35}};
+        for (var d : dane) {
+            int n = d[0], s = d[1], k = d[2];
+            long[] T = new long[n + 1];
+            System.out.println(n + &quot; &quot; + s + &quot; &quot; + k + &quot; &quot; + modyfikuj(T, n, s, k));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: [1, 4, 2, 8, 26, 6, 2, 9, 1, 5]; [4, 2, 46, 2, 9, 3, 5, 21, 7, 4, 3, 2, 3]; [4, 2, 6, 40, 9, 3, 5, 21, 7, 4, 3, 5, 3]. 2.2: 21 i 58</p><blockquote class="callout"><p>W kluczu CKE w drugim wierszu 2.1 jest literówka: [1,4,2,8,26,6,2,<strong>6</strong>,1,5] — ósmy element nie jest zmieniany i wynosi 9.</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202021%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-czerwiec.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>napisy.txt</code> zawiera 1000 wierszy, każdy to napis długości 50 złożony z wielkich liter alfabetu angielskiego i cyfr. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. Plik <code>przyklad.txt</code> zawiera dane przykładowe (wyniki dla niego podano niżej).</p><ul><li><strong>4.1</strong> — Podaj łączną liczbę cyfr we wszystkich napisach. (Przykład: 46504.)</li><li><strong>4.2</strong> — W co dwudziestym wierszu (20, 40, …, 1000) ukryto jedną literę hasła: w wierszu 20 na pozycji 1., w wierszu 40 na pozycji 2., …, w wierszu 1000 na pozycji 50. Podaj to 50-znakowe hasło. (Przykład: <code>UDALOSIEIZDAJEMYEGZAMINYMATURALNEZWIELUPRZEDMIOTOW</code>.)</li><li><strong>4.3</strong> — Niektóre napisy można zamienić w palindrom, dopisując dokładnie jeden znak na początku lub na końcu. Podaj hasło utworzone ze środkowych liter tak powstałych palindromów (w kolejności wierszy). (Przykład: <code>INFORMATYKA</code>.)</li><li><strong>4.4</strong> — Cyfry z każdego wiersza grupuj kolejno po dwie (ostatnią pomiń, gdy cyfr jest nieparzyście wiele). Liczbę z przedziału [65, 90] zamień na znak ASCII o tym kodzie, pozostałe pomiń. Odczyt kończy się po otrzymaniu trzech kolejnych znaków <code>X</code>. Podaj odczytane hasło. (Przykład: <code>NAPISANIEMATURYXXX</code>.)</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">napisy = []
 with open(&quot;napisy.txt&quot;) as file:
     for line in file:
         napisy.append(line.strip())
@@ -140,7 +294,121 @@ with open(&quot;wyniki4.txt&quot;, &quot;w&quot;) as wynik:
     print(&quot;4.1.&quot;, cyfry_razem, file=wynik)
     print(&quot;4.2.&quot;, haslo2, file=wynik)
     print(&quot;4.3.&quot;, haslo3, file=wynik)
-    print(&quot;4.4.&quot;, haslo4, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 11844; 4.2: SZYBKOROZWIAZUJEPROGRAMISTYCZNEZADANIAZINFORMATYKI; 4.3: ZADANIEMATURALNE; 4.4: LITWOOJCZYZNOMOJATYJESTESJAKZDROWIEILECIETRZEBACENIC…KRETYJAKWAZBOAXXX</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(&quot;4.4.&quot;, haslo4, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cctype&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+bool palindrom(const std::string&amp; s) {
+    return std::equal(s.begin(), s.end(), s.rbegin());
+}
+
+int main() {
+    std::vector&lt;std::string&gt; napisy;
+    std::ifstream plik(&quot;napisy.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) napisy.push_back(linia);
+
+    // 4.1
+    int cyfry_razem = 0;
+    for (auto&amp; napis : napisy)
+        for (char znak : napis)
+            if (std::isdigit((unsigned char)znak)) cyfry_razem++;
+
+    // 4.2 - w wierszu 20*j litera na pozycji j (numeracja od 1)
+    std::string haslo2;
+    for (int nr = 20; nr &lt;= 1000; nr += 20) haslo2 += napisy[nr - 1][nr / 20 - 1];
+
+    // 4.3 - dopisanie znaku na końcu: napis[1:] musi być palindromem, środek to napis[25];
+    //       dopisanie na początku: napis[:-1] musi być palindromem, środek to napis[24]
+    std::string haslo3;
+    for (auto&amp; napis : napisy) {
+        if (palindrom(napis.substr(1)))
+            haslo3 += napis[25];
+        else if (palindrom(napis.substr(0, napis.size() - 1)))
+            haslo3 += napis[24];
+    }
+
+    // 4.4 - cyfry z wiersza w parach, koniec po trzech kolejnych X (także z różnych wierszy)
+    std::string haslo4;
+    for (auto&amp; napis : napisy) {
+        std::string cyfry;
+        for (char znak : napis)
+            if (std::isdigit((unsigned char)znak)) cyfry += znak;
+        for (size_t j = 0; j + 1 &lt; cyfry.size(); j += 2) {
+            int liczba = (cyfry[j] - &#x27;0&#x27;) * 10 + (cyfry[j + 1] - &#x27;0&#x27;);
+            if (65 &lt;= liczba &amp;&amp; liczba &lt;= 90) {
+                haslo4 += (char)liczba;
+                if (haslo4.ends_with(&quot;XXX&quot;)) break;
+            }
+        }
+        if (haslo4.ends_with(&quot;XXX&quot;)) break;
+    }
+
+    std::ofstream wynik(&quot;wyniki4.txt&quot;);
+    wynik &lt;&lt; &quot;4.1. &quot; &lt;&lt; cyfry_razem &lt;&lt; &quot;\n&quot;;
+    wynik &lt;&lt; &quot;4.2. &quot; &lt;&lt; haslo2 &lt;&lt; &quot;\n&quot;;
+    wynik &lt;&lt; &quot;4.3. &quot; &lt;&lt; haslo3 &lt;&lt; &quot;\n&quot;;
+    wynik &lt;&lt; &quot;4.4. &quot; &lt;&lt; haslo4 &lt;&lt; &quot;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static boolean palindrom(String s) {
+        return s.equals(new StringBuilder(s).reverse().toString());
+    }
+
+    public static void main(String[] args) throws Exception {
+        var napisy = new ArrayList&lt;String&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;napisy.txt&quot;)))
+            napisy.add(linia.strip());
+
+        // 4.1
+        int cyfryRazem = 0;
+        for (var napis : napisy)
+            for (char znak : napis.toCharArray())
+                if (Character.isDigit(znak)) cyfryRazem++;
+
+        // 4.2 - w wierszu 20*j litera na pozycji j (numeracja od 1)
+        var haslo2 = new StringBuilder();
+        for (int nr = 20; nr &lt;= 1000; nr += 20) haslo2.append(napisy.get(nr - 1).charAt(nr / 20 - 1));
+
+        // 4.3 - dopisanie znaku na końcu: napis[1:] musi być palindromem, środek to napis[25];
+        //       dopisanie na początku: napis[:-1] musi być palindromem, środek to napis[24]
+        var haslo3 = new StringBuilder();
+        for (var napis : napisy) {
+            if (palindrom(napis.substring(1)))
+                haslo3.append(napis.charAt(25));
+            else if (palindrom(napis.substring(0, napis.length() - 1)))
+                haslo3.append(napis.charAt(24));
+        }
+
+        // 4.4 - cyfry z wiersza w parach, koniec po trzech kolejnych X (także z różnych wierszy)
+        var haslo4 = new StringBuilder();
+        for (var napis : napisy) {
+            var cyfry = new StringBuilder();
+            for (char znak : napis.toCharArray())
+                if (Character.isDigit(znak)) cyfry.append(znak);
+            for (int j = 0; j + 1 &lt; cyfry.length(); j += 2) {
+                int liczba = Integer.parseInt(cyfry.substring(j, j + 2));
+                if (65 &lt;= liczba &amp;&amp; liczba &lt;= 90) {
+                    haslo4.append((char) liczba);
+                    if (haslo4.toString().endsWith(&quot;XXX&quot;)) break;
+                }
+            }
+            if (haslo4.toString().endsWith(&quot;XXX&quot;)) break;
+        }
+
+        try (var wynik = new PrintWriter(&quot;wyniki4.txt&quot;)) {
+            wynik.println(&quot;4.1. &quot; + cyfryRazem);
+            wynik.println(&quot;4.2. &quot; + haslo2);
+            wynik.println(&quot;4.3. &quot; + haslo3);
+            wynik.println(&quot;4.4. &quot; + haslo4);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 11844; 4.2: SZYBKOROZWIAZUJEPROGRAMISTYCZNEZADANIAZINFORMATYKI; 4.3: ZADANIEMATURALNE; 4.4: LITWOOJCZYZNOMOJATYJESTESJAKZDROWIEILECIETRZEBACENIC…KRETYJAKWAZBOAXXX</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202021%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-czerwiec.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

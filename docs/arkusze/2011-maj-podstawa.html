@@ -37,8 +37,20 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1a-i-1b">1a i 1b</a></li><li><a href="#1c">1c</a></li><li><a href="#2a">2a</a></li><li><a href="#2c">2c</a></li><li><a href="#4a">4a</a></li><li><a href="#4b">4b</a></li><li><a href="#4c">4c</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li><li><a href="#6e">6e</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2011 — maj, poziom podstawowy</span></nav>
-<h1 class="page-title">Matura 2011 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a-i-1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a-i-1b">1a i 1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">print(len(bin(14400)[2:]))  # liczba pól zegara
-print(int(&quot;1111110100100&quot;, 2) // 60)  # liczba minut</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 14 pól; b) 135 minut</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_jedynek(s):
+<h1 class="page-title">Matura 2011 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2011-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a-i-1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a-i-1b">1a i 1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zegar nad wejściem do auli odlicza sekundy od początku wykładu i wyświetla ich liczbę w systemie dwójkowym, po jednej cyfrze na polu (przed startem świeci tylko skrajne prawe pole z zerem). Np. po 10 s widać 4 pola: <code>1010</code>, po 25 s — 5 pól: <code>11001</code>.</p><ul><li>1a — Na ilu polach zostanie wyświetlony czas najdłuższego wykładu, trwającego 240 minut (14 400 s)?</li><li>1b — Ile minut trwał wykład, jeśli na koniec zegar pokazywał <code>1111110100100</code>? Podaj wynik dziesiętnie (pamiętaj o zamianie sekund na minuty).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">print(len(bin(14400)[2:]))  # liczba pól zegara
+print(int(&quot;1111110100100&quot;, 2) // 60)  # liczba minut</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;format&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::println(&quot;{}&quot;, std::format(&quot;{:b}&quot;, 14400).size()); // liczba pól zegara
+    std::println(&quot;{}&quot;, std::stoi(&quot;1111110100100&quot;, nullptr, 2) / 60); // liczba minut
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        System.out.println(Integer.toBinaryString(14400).length()); // liczba pól zegara
+        System.out.println(Integer.parseInt(&quot;1111110100100&quot;, 2) / 60); // liczba minut
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 14 pól; b) 135 minut</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201a%20i%201b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%231a-i-1b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zegar dwójkowy z zadania 1a/1b.</p><p>Zapisz algorytm, który dla czasu wykładu s (liczba całkowita dodatnia, w sekundach) obliczy l — liczbę jedynek wyświetlonych na zegarze na koniec wykładu. Uzupełnij też tabelę przykładów dla s = 3600 i s = 5400 (np. napis <code>111000010000</code> zawiera 4 jedynki).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_jedynek(s):
     l = 0
     while s &gt; 0:
         if s % 2 == 1:
@@ -47,7 +59,41 @@ print(int(&quot;1111110100100&quot;, 2) // 60)  # liczba minut</code></pre></div
     return l
 
 
-print(liczba_jedynek(3600), liczba_jedynek(5400))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dla 3600 → 4, dla 5400 → 5</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+print(liczba_jedynek(3600), liczba_jedynek(5400))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int liczba_jedynek(int s) {
+    int l = 0;
+    while (s &gt; 0) {
+        if (s % 2 == 1) {
+            l += 1;
+        }
+        s = s / 2;
+    }
+    return l;
+}
+
+int main() {
+    std::println(&quot;{} {}&quot;, liczba_jedynek(3600), liczba_jedynek(5400));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int liczbaJedynek(int s) {
+        int l = 0;
+        while (s &gt; 0) {
+            if (s % 2 == 1) {
+                l += 1;
+            }
+            s = s / 2;
+        }
+        return l;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(liczbaJedynek(3600) + &quot; &quot; + liczbaJedynek(5400));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dla 3600 → 4, dla 5400 → 5</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%231c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Algorytm dla liczby całkowitej n ≥ 2 wypisuje TAK lub NIE (<code>n mod i</code> — reszta z dzielenia n przez i):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">krok 1. i ← 2
+krok 2. jeśli i ≥ n, wypisz TAK i przejdź do kroku 5
+krok 3. jeśli (n mod i) = 0, wypisz NIE i przejdź do kroku 5
+krok 4. i ← i + 1 i przejdź do kroku 2
+krok 5. zakończ</code></pre></div></div></div><ul><li>2a — Podaj komunikat wypisany dla n = 25, 37, 41, 49.</li><li>2b — Oceń prawdziwość zdań: (1) warunek z kroku 3 wykona się dla każdego n dokładnie n razy; (2) wynikiem jest TAK, gdy n jest liczbą pierwszą; (3) wynikiem jest NIE, gdy n jest liczbą złożoną; (4) dla nieparzystego n algorytm nigdy się nie zakończy.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
     i = 2
     while True:
         if i &gt;= n:
@@ -58,7 +104,46 @@ print(liczba_jedynek(3600), liczba_jedynek(5400))</code></pre></div><p class="an
 
 
 for n in [25, 37, 41, 49]:
-    print(n, algorytm(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 25 NIE, 37 TAK, 41 TAK, 49 NIE; b) F, P, P, F</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozklad(n):
+    print(n, algorytm(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string algorytm(int n) {
+    int i = 2;
+    while (true) {
+        if (i &gt;= n) {
+            return &quot;TAK&quot;;
+        }
+        if (n % i == 0) {
+            return &quot;NIE&quot;;
+        }
+        i += 1;
+    }
+}
+
+int main() {
+    for (int n : {25, 37, 41, 49}) {
+        std::println(&quot;{} {}&quot;, n, algorytm(n));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String algorytm(int n) {
+        int i = 2;
+        while (true) {
+            if (i &gt;= n) {
+                return &quot;TAK&quot;;
+            }
+            if (n % i == 0) {
+                return &quot;NIE&quot;;
+            }
+            i += 1;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (int n : new int[]{25, 37, 41, 49}) {
+            System.out.println(n + &quot; &quot; + algorytm(n));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 25 NIE, 37 TAK, 41 TAK, 49 NIE; b) F, P, P, F</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%232a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zapisz algorytm rozkładu liczby całkowitej n ≥ 2 na czynniki pierwsze — wynikiem jest ciąg liczb pierwszych, których iloczyn daje n.</p><p>Przykłady: n = 42 → 2, 3, 7; n = 17 → 17; n = 36 → 2, 2, 3, 3.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozklad(n):
     czynniki = []
     i = 2
     while n &gt; 1:
@@ -70,7 +155,48 @@ for n in [25, 37, 41, 49]:
 
 
 for n in [42, 17, 36]:
-    print(n, rozklad(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 42 → 2, 3, 7; 17 → 17; 36 → 2, 2, 3, 3</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a">4a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">parzyste = 0
+    print(n, rozklad(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; rozklad(int n) {
+    std::vector&lt;int&gt; czynniki;
+    int i = 2;
+    while (n &gt; 1) {
+        while (n % i == 0) {
+            czynniki.push_back(i);
+            n = n / i;
+        }
+        i += 1;
+    }
+    return czynniki;
+}
+
+int main() {
+    for (int n : {42, 17, 36}) {
+        std::println(&quot;{} {}&quot;, n, rozklad(n)); // wektor wypisuje się jako [2, 3, 7]
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static List&lt;Integer&gt; rozklad(int n) {
+        var czynniki = new ArrayList&lt;Integer&gt;();
+        int i = 2;
+        while (n &gt; 1) {
+            while (n % i == 0) {
+                czynniki.add(i);
+                n = n / i;
+            }
+            i += 1;
+        }
+        return czynniki;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (int n : new int[]{42, 17, 36}) {
+            System.out.println(n + &quot; &quot; + rozklad(n)); // lista wypisuje się jako [2, 3, 7]
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 42 → 2, 3, 7; 17 → 17; 36 → 2, 2, 3, 3</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%232c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a">4a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>hasla.txt</code> zapisano 200 haseł, każde w osobnym wierszu; hasło składa się z małych liter alfabetu angielskiego i ma od 3 do 10 znaków.</p><p>Podaj, ile haseł ma parzystą, a ile nieparzystą liczbę znaków. Odpowiedź zapisz w pliku <code>wynik4a.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">parzyste = 0
 nieparzyste = 0
 
 with open(&quot;hasla.txt&quot;) as file:
@@ -81,17 +207,103 @@ with open(&quot;hasla.txt&quot;) as file:
         else:
             nieparzyste += 1
 
-print(parzyste, nieparzyste)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 105 haseł ma parzystą liczbę znaków, 95 nieparzystą</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4b">4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;hasla.txt&quot;) as file:
+print(parzyste, nieparzyste)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int parzyste = 0;
+    int nieparzyste = 0;
+    std::ifstream plik(&quot;hasla.txt&quot;);
+    std::string haslo;
+    while (plik &gt;&gt; haslo) {
+        if (haslo.size() % 2 == 0) {
+            parzyste += 1;
+        } else {
+            nieparzyste += 1;
+        }
+    }
+    std::println(&quot;{} {}&quot;, parzyste, nieparzyste);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int parzyste = 0;
+        int nieparzyste = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;hasla.txt&quot;))) {
+            String haslo = linia.strip();
+            if (haslo.length() % 2 == 0) {
+                parzyste += 1;
+            } else {
+                nieparzyste += 1;
+            }
+        }
+        System.out.println(parzyste + &quot; &quot; + nieparzyste);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 105 haseł ma parzystą liczbę znaków, 95 nieparzystą</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%234a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4b">4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>hasla.txt</code> (200 haseł z małych liter).</p><p>Wypisz hasła będące palindromami (czytane od lewej i od prawej brzmią tak samo, np. kajak), po jednym w wierszu, w kolejności z pliku. Wynik zapisz w pliku <code>wynik4b.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;hasla.txt&quot;) as file:
     for line in file:
         haslo = line.strip()
         if haslo == haslo[::-1]:
-            print(haslo)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dompmod, grafarg, kajak, komok, matam, mpoopm, mpouiuopm, oddo, omo, pokop, plkjjklp, pokkop, plolp</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4c">4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;hasla.txt&quot;) as file:
+            print(haslo)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;hasla.txt&quot;);
+    std::string haslo;
+    while (plik &gt;&gt; haslo) {
+        std::string odwrocone(haslo.rbegin(), haslo.rend());
+        if (haslo == odwrocone) {
+            std::println(&quot;{}&quot;, haslo);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(&quot;hasla.txt&quot;))) {
+            String haslo = linia.strip();
+            if (haslo.equals(new StringBuilder(haslo).reverse().toString())) {
+                System.out.println(haslo);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dompmod, grafarg, kajak, komok, matam, mpoopm, mpouiuopm, oddo, omo, pokop, plkjjklp, pokkop, plolp</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%234b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4c">4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>hasla.txt</code> (200 haseł z małych liter).</p><p>Wypisz hasła zawierające dwa sąsiednie znaki, których suma kodów ASCII wynosi 220 (np. <code>krzysio</code> zawiera „si”: 115 + 105 = 220; <code>cyrk</code> zawiera „cy”: 99 + 121 = 220), po jednym w wierszu, w kolejności z pliku. Wynik zapisz w pliku <code>wynik4c.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;hasla.txt&quot;) as file:
     for line in file:
         haslo = line.strip()
         for i in range(1, len(haslo)):
             if ord(haslo[i - 1]) + ord(haslo[i]) == 220:
                 print(haslo)
-                break</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> amodda, damod, damodd, dompmod, edamo, edamod, isksad, iughd, … (54 hasła)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">uczniowie = []
+                break</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;hasla.txt&quot;);
+    std::string haslo;
+    while (plik &gt;&gt; haslo) {
+        for (size_t i = 1; i &lt; haslo.size(); i++) {
+            if (haslo[i - 1] + haslo[i] == 220) { // suma kodów ASCII sąsiednich znaków
+                std::println(&quot;{}&quot;, haslo);
+                break;
+            }
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(&quot;hasla.txt&quot;))) {
+            String haslo = linia.strip();
+            for (int i = 1; i &lt; haslo.length(); i++) {
+                if (haslo.charAt(i - 1) + haslo.charAt(i) == 220) { // suma kodów ASCII sąsiednich znaków
+                    System.out.println(haslo);
+                    break;
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> amodda, damod, damodd, dompmod, edamo, edamod, isksad, iughd, … (54 hasła)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%234c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W liceum przeprowadzono test z historii złożony z 25 pytań: pytania 1–5 dotyczą prehistorii, 6–10 starożytności, 11–15 średniowiecza, 16–20 historii nowożytnej, 21–25 historii najnowszej. Plik <code>test.txt</code> zawiera wyniki 126 uczniów: pierwszy wiersz to nagłówek (<code>Nr_ucznia</code> i numery pytań), a każdy kolejny — numer ucznia i 25 wartości 0/1 (1 — poprawna odpowiedź) oddzielonych spacjami. Odpowiedzi zapisz w pliku <code>wyniki6.txt</code>, poprzedzając je literą podpunktu.</p><p>Podaj numery pytań, na które poprawnie odpowiedziało więcej niż 50% uczniów.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">uczniowie = []
 
 with open(&quot;test.txt&quot;) as file:
     next(file)
@@ -103,7 +315,58 @@ for pytanie in range(1, 26):
     for uczen in uczniowie:
         poprawne += uczen[pytanie]
     if poprawne &gt; len(uczniowie) / 2:
-        print(pytanie)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2, 9, 12, 18, 19, 20, 22</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wyniki = []
+        print(pytanie)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::vector&lt;int&gt;&gt; uczniowie;
+    std::ifstream plik(&quot;test.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia); // pomijamy wiersz nagłówka
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        std::vector&lt;int&gt; odpowiedzi;
+        int x;
+        while (strumien &gt;&gt; x) {
+            odpowiedzi.push_back(x);
+        }
+        uczniowie.push_back(odpowiedzi);
+    }
+
+    for (int pytanie = 1; pytanie &lt; 26; pytanie++) {
+        int poprawne = 0;
+        for (const auto&amp; uczen : uczniowie) {
+            poprawne += uczen[pytanie];
+        }
+        if (poprawne &gt; uczniowie.size() / 2.0) {
+            std::println(&quot;{}&quot;, pytanie);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var uczniowie = new ArrayList&lt;int[]&gt;();
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;test.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) { // pomijamy wiersz nagłówka
+            uczniowie.add(Arrays.stream(linia.strip().split(&quot;\\s+&quot;)).mapToInt(Integer::parseInt).toArray());
+        }
+
+        for (int pytanie = 1; pytanie &lt; 26; pytanie++) {
+            int poprawne = 0;
+            for (int[] uczen : uczniowie) {
+                poprawne += uczen[pytanie];
+            }
+            if (poprawne &gt; uczniowie.size() / 2.0) {
+                System.out.println(pytanie);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2, 9, 12, 18, 19, 20, 22</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%236a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>test.txt</code> (126 uczniów, 25 pytań, 0/1).</p><p>Podaj, ilu uczniów uzyskało wynik (liczbę poprawnych odpowiedzi) wyższy od średniej w całej grupie.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wyniki = []
 
 with open(&quot;test.txt&quot;) as file:
     next(file)
@@ -117,7 +380,69 @@ for wynik in wyniki:
     if wynik &gt; srednia:
         count += 1
 
-print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 55</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">bardzo_dobre = 0
+print(count)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; wyniki;
+    std::ifstream plik(&quot;test.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia); // pomijamy wiersz nagłówka
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        int numer, x, suma = 0;
+        strumien &gt;&gt; numer; // pierwsza liczba to numer ucznia
+        while (strumien &gt;&gt; x) {
+            suma += x;
+        }
+        wyniki.push_back(suma);
+    }
+
+    double srednia = 0;
+    for (int wynik : wyniki) {
+        srednia += wynik;
+    }
+    srednia /= wyniki.size();
+    int count = 0;
+    for (int wynik : wyniki) {
+        if (wynik &gt; srednia) {
+            count += 1;
+        }
+    }
+    std::println(&quot;{}&quot;, count);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var wyniki = new ArrayList&lt;Integer&gt;();
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;test.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) { // pomijamy wiersz nagłówka
+            String[] odpowiedzi = linia.strip().split(&quot;\\s+&quot;);
+            int suma = 0;
+            for (int i = 1; i &lt; odpowiedzi.length; i++) { // pierwsza liczba to numer ucznia
+                suma += Integer.parseInt(odpowiedzi[i]);
+            }
+            wyniki.add(suma);
+        }
+
+        double srednia = 0;
+        for (int wynik : wyniki) {
+            srednia += wynik;
+        }
+        srednia /= wyniki.size();
+        int count = 0;
+        for (int wynik : wyniki) {
+            if (wynik &gt; srednia) {
+                count += 1;
+            }
+        }
+        System.out.println(count);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 55</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%236b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>test.txt</code> (126 uczniów, 25 pytań, 0/1).</p><p>Podaj, ilu uczniów otrzymało ocenę bardzo dobrą (powyżej 90% poprawnych odpowiedzi), a ilu niedostateczną (30% i mniej poprawnych odpowiedzi).</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">bardzo_dobre = 0
 niedostateczne = 0
 
 with open(&quot;test.txt&quot;) as file:
@@ -130,12 +455,97 @@ with open(&quot;test.txt&quot;) as file:
         if procent &lt;= 30:
             niedostateczne += 1
 
-print(&quot;bardzo dobre:&quot;, bardzo_dobre, &quot;niedostateczne:&quot;, niedostateczne)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> bardzo dobre: 1, niedostateczne: 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6d" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6d">6d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;test.txt&quot;) as file:
+print(&quot;bardzo dobre:&quot;, bardzo_dobre, &quot;niedostateczne:&quot;, niedostateczne)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int bardzo_dobre = 0;
+    int niedostateczne = 0;
+    std::ifstream plik(&quot;test.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia); // pomijamy wiersz nagłówka
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        int numer, x, suma = 0;
+        strumien &gt;&gt; numer; // pierwsza liczba to numer ucznia
+        while (strumien &gt;&gt; x) {
+            suma += x;
+        }
+        double procent = suma / 25.0 * 100;
+        if (procent &gt; 90) {
+            bardzo_dobre += 1;
+        }
+        if (procent &lt;= 30) {
+            niedostateczne += 1;
+        }
+    }
+    std::println(&quot;bardzo dobre: {} niedostateczne: {}&quot;, bardzo_dobre, niedostateczne);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int bardzoDobre = 0;
+        int niedostateczne = 0;
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;test.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) { // pomijamy wiersz nagłówka
+            String[] odpowiedzi = linia.strip().split(&quot;\\s+&quot;);
+            int suma = 0;
+            for (int i = 1; i &lt; odpowiedzi.length; i++) { // pierwsza liczba to numer ucznia
+                suma += Integer.parseInt(odpowiedzi[i]);
+            }
+            double procent = suma / 25.0 * 100;
+            if (procent &gt; 90) {
+                bardzoDobre += 1;
+            }
+            if (procent &lt;= 30) {
+                niedostateczne += 1;
+            }
+        }
+        System.out.println(&quot;bardzo dobre: &quot; + bardzoDobre + &quot; niedostateczne: &quot; + niedostateczne);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> bardzo dobre: 1, niedostateczne: 6</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%236c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6d" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6d">6d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>test.txt</code> (126 uczniów, 25 pytań, 0/1).</p><p>Podaj numery uczniów, którzy poprawnie odpowiedzieli na pytania 5, 15 i 25.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;test.txt&quot;) as file:
     next(file)
     for line in file:
         odpowiedzi = list(map(int, line.split()))
         if odpowiedzi[5] == 1 and odpowiedzi[15] == 1 and odpowiedzi[25] == 1:
-            print(odpowiedzi[0])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2, 45, 65, 70, 79</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6e" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6e">6e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">epoki = [&quot;prehistoria&quot;, &quot;starożytność&quot;, &quot;średniowiecze&quot;, &quot;historia nowożytna&quot;, &quot;historia najnowsza&quot;]
+            print(odpowiedzi[0])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;test.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia); // pomijamy wiersz nagłówka
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        std::vector&lt;int&gt; odpowiedzi;
+        int x;
+        while (strumien &gt;&gt; x) {
+            odpowiedzi.push_back(x);
+        }
+        if (odpowiedzi[5] == 1 &amp;&amp; odpowiedzi[15] == 1 &amp;&amp; odpowiedzi[25] == 1) {
+            std::println(&quot;{}&quot;, odpowiedzi[0]);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;test.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) { // pomijamy wiersz nagłówka
+            int[] odpowiedzi = Arrays.stream(linia.strip().split(&quot;\\s+&quot;)).mapToInt(Integer::parseInt).toArray();
+            if (odpowiedzi[5] == 1 &amp;&amp; odpowiedzi[15] == 1 &amp;&amp; odpowiedzi[25] == 1) {
+                System.out.println(odpowiedzi[0]);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2, 45, 65, 70, 79</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%236d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6e" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6e">6e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>test.txt</code>; epoki: pytania 1–5 prehistoria, 6–10 starożytność, 11–15 średniowiecze, 16–20 historia nowożytna, 21–25 historia najnowsza.</p><p>Zestaw dla każdej epoki łączną liczbę poprawnych odpowiedzi uczniów na pytania z tej epoki i wykonaj czytelnie opisany wykres kolumnowy.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">epoki = [&quot;prehistoria&quot;, &quot;starożytność&quot;, &quot;średniowiecze&quot;, &quot;historia nowożytna&quot;, &quot;historia najnowsza&quot;]
 poprawne = [0] * 5
 
 with open(&quot;test.txt&quot;) as file:
@@ -146,7 +556,51 @@ with open(&quot;test.txt&quot;) as file:
             poprawne[(pytanie - 1) // 5] += odpowiedzi[pytanie]
 
 for i in range(5):
-    print(epoki[i], poprawne[i])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> prehistoria 278, starożytność 263, średniowiecze 281, historia nowożytna 320, historia najnowsza 298 (wykres kolumnowy wykonuje się w arkuszu kalkulacyjnym)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(epoki[i], poprawne[i])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; epoki = {&quot;prehistoria&quot;, &quot;starożytność&quot;, &quot;średniowiecze&quot;, &quot;historia nowożytna&quot;, &quot;historia najnowsza&quot;};
+    std::vector&lt;int&gt; poprawne(5, 0);
+    std::ifstream plik(&quot;test.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia); // pomijamy wiersz nagłówka
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        std::vector&lt;int&gt; odpowiedzi;
+        int x;
+        while (strumien &gt;&gt; x) {
+            odpowiedzi.push_back(x);
+        }
+        for (int pytanie = 1; pytanie &lt; 26; pytanie++) {
+            poprawne[(pytanie - 1) / 5] += odpowiedzi[pytanie];
+        }
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        std::println(&quot;{} {}&quot;, epoki[i], poprawne[i]);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String[] epoki = {&quot;prehistoria&quot;, &quot;starożytność&quot;, &quot;średniowiecze&quot;, &quot;historia nowożytna&quot;, &quot;historia najnowsza&quot;};
+        int[] poprawne = new int[5];
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;test.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) { // pomijamy wiersz nagłówka
+            int[] odpowiedzi = Arrays.stream(linia.strip().split(&quot;\\s+&quot;)).mapToInt(Integer::parseInt).toArray();
+            for (int pytanie = 1; pytanie &lt; 26; pytanie++) {
+                poprawne[(pytanie - 1) / 5] += odpowiedzi[pytanie];
+            }
+        }
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.println(epoki[i] + &quot; &quot; + poprawne[i]);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> prehistoria 278, starożytność 263, średniowiecze 281, historia nowożytna 320, historia najnowsza 298 (wykres kolumnowy wykonuje się w arkuszu kalkulacyjnym)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202011%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206e&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2011-maj-podstawa.html%236e" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2011_maj_podstawa/2011_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

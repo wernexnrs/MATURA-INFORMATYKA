@@ -238,31 +238,80 @@ def code_block(lang, lines, ctx):
         # "// C++23" / "// Java 25" -> zakładka "C++23" zamiast "C++ · C++23"
         if re.fullmatch(r"(C\+\+\d\d|Java \d+)", note):
             label, note = note, ""
+        # pierwsza linia-komentarz trafia do podpisu wersji, więc nie powtarzamy jej w kodzie
+        code = code.split("\n", 1)[1] if "\n" in code else ""
+        code = code.lstrip("\n")
     hl ={"python": "python", "py": "python", "cpp": "cpp", "c++": "cpp", "java": "java", "sql": "sql"}.get(lang)
     cls = "language-%s" % hl if hl else "nohighlight"
     return {"label": label, "note": note, "html": '<pre><code class="%s">%s</code></pre>' % (cls, html.escape(code))}
 
 
+LANG_FAMILIES = [("python", "Python"), ("pseudo", "Pseudokod"), ("cpp", "C++"), ("java", "Java"), ("sql", "SQL")]
+
+
+def lang_family(label):
+    if label == "Python":
+        return "python"
+    if label == "Pseudokod":
+        return "pseudo"
+    if label.startswith("C++"):
+        return "cpp"
+    if label.startswith("Java"):
+        return "java"
+    return slugify(label) or "kod"
+
+
+def render_variant(b, title):
+    return ('<div class="variant"><div class="variant-bar"><span>%s</span>'
+            '<button class="copy" type="button">Kopiuj</button></div>%s</div>' % (title, b["html"]))
+
+
 def render_code_group(blocks):
-    if len(blocks) == 1:
-        b = blocks[0]
-        title = b["label"] + (" · " + html.escape(b["note"]) if b["note"] else "")
-        pseudo = " pseudo" if b["label"] == "Pseudokod" else ""
-        return ('<div class="code%s"><div class="code-bar"><span>%s</span>'
-                '<button class="copy" type="button">Kopiuj</button></div>%s</div>' % (pseudo, title, b["html"]))
-    tabs, panes = [], []
-    base = [b["label"] + (" · " + html.escape(b["note"]) if b["note"] else "") for b in blocks]
-    titles = ["%s %d" % (t, base[:i + 1].count(t)) if base.count(t) > 1 else t for i, t in enumerate(base)]
-    for i, b in enumerate(blocks):
-        title = titles[i]
-        sel = "true" if i == 0 else "false"
-        lang = "c" if b["label"].startswith("C++") else ("java" if b["label"].startswith("Java") else slugify(b["label"]))
-        tabs.append('<button type="button" role="tab" aria-selected="%s" class="tab" data-lang="%s">%s</button>'
-                    % (sel, lang, title))
-        panes.append('<div class="pane%s"%s>%s</div>' % (" pseudo" if b["label"] == "Pseudokod" else "",
-                                                         "" if i == 0 else " hidden", b["html"]))
-    return ('<div class="code tabs"><div class="code-bar"><div class="tablist" role="tablist">%s</div>'
-            '<button class="copy" type="button">Kopiuj</button></div>%s</div>' % ("".join(tabs), "".join(panes)))
+    """Kolejne bloki kodu: przełącznik języków + wszystkie wersje danego języka jedna pod drugą."""
+    fams = {}
+    order = []
+    for b in blocks:
+        f = lang_family(b["label"])
+        if f not in fams:
+            fams[f] = []
+            order.append(f)
+        fams[f].append(b)
+    known = [f for f, _ in LANG_FAMILIES if f in fams]
+    order = known + [f for f in order if f not in known]
+    names = dict(LANG_FAMILIES)
+
+    def titles(f):
+        items = fams[f]
+        res = []
+        py_notes = [b["note"] for b in fams.get("python", [])]
+        for i, b in enumerate(items):
+            note = b["note"]
+            # pseudokod k-ty opisuje k-tą wersję Pythona
+            if not note and f == "pseudo" and len(items) == len(py_notes) and len(items) > 1:
+                note = py_notes[i]
+            if len(items) == 1:
+                t = b["label"] if not note else "%s · %s" % (b["label"], note)
+            else:
+                t = "Wersja %d" % (i + 1) + (" · %s" % note if note else "")
+            res.append(html.escape(t, quote=False) if "<" in t else t)
+        return res
+
+    panes = []
+    for k, f in enumerate(order):
+        vs = "".join(render_variant(b, t) for b, t in zip(fams[f], titles(f)))
+        panes.append('<div class="lang-pane%s" data-lang="%s"%s>%s</div>'
+                     % (" pseudo" if f == "pseudo" else "", f, "" if k == 0 else " hidden", vs))
+    if len(order) == 1:
+        return '<div class="code single" data-langs="%s">%s</div>' % (order[0], "".join(panes))
+    buttons = []
+    for k, f in enumerate(order):
+        n = len(fams[f])
+        count = '<span class="count">%d</span>' % n if n > 1 else ""
+        buttons.append('<button type="button" role="tab" class="lang-btn" data-lang="%s" aria-selected="%s">'
+                       '<span class="dot"></span>%s%s</button>'
+                       % (f, "true" if k == 0 else "false", names.get(f, fams[f][0]["label"]), count))
+    return ('<div class="code multi" data-langs="%s"><div class="lang-switch" role="tablist" aria-label="Język">%s</div>%s</div>'
+            % (",".join(order), "".join(buttons), "".join(panes)))
 
 
 def render_list(lines, ctx):
@@ -422,9 +471,20 @@ def markdown_blocks(text, ctx):
             flush()
             quote = []
             while i < len(lines) and lines[i].strip().startswith(">"):
-                quote.append(lines[i].strip()[1:].strip())
+                q = lines[i].strip()[1:]
+                quote.append(q[1:] if q.startswith(" ") else q)
                 i += 1
-            blocks.append(("html", '<blockquote class="callout">%s</blockquote>' % inline(" ".join(quote), ctx)))
+            first = quote[0].strip() if quote else ""
+            m = re.match(r"^\*\*Treść( zadania)?:?\*\*:?\s*", first)
+            if m:
+                # "> **Treść zadania:** ..." -> zwijane pole z treścią zadania (pełny Markdown w środku)
+                quote[0] = first[m.end():]
+                inner = blocks_to_html(markdown_blocks("\n".join(quote), ctx))
+                blocks.append(("html", '<details class="task-text" open><summary>Treść zadania</summary>'
+                                       '<div class="task-body">%s</div></details>' % inner))
+            else:
+                blocks.append(("html", '<blockquote class="callout">%s</blockquote>'
+                               % blocks_to_html(markdown_blocks("\n".join(quote), ctx))))
             continue
         if re.match(r"^\s*([-*+]|\d+\.)\s+", line):
             flush()
@@ -634,10 +694,22 @@ def build_page(src, out, kind, page_map):
         style = ' style="--c:var(--g%d)"' % s["color"] if s.get("color") else ""
         body.append('<section class="card%s" id="%s"%s>%s<header class="card-head">%s<div class="head-text">%s'
                     '<h2><a class="self" href="#%s">%s</a></h2>%s</div>%s</header>%s'
-                    '<a class="to-top" href="#top" aria-label="Do góry">↑</a></section>'
+                    '%s<a class="to-top" href="#top" aria-label="Do góry">↑</a></section>'
                     % (" tinted" if style else "", s["id"], style, extra, idx, group, s["id"],
-                       html.escape(s["title"]), sub, langs, inner))
+                       html.escape(s["title"]), sub, langs, inner, contribute_bar(src, out, title, s)))
     return {"title": title, "html": "".join(body), "sections": sections, "groups": groups}
+
+
+def contribute_bar(src, out, page_title, s):
+    """Przyciski pod sekcją: poprawka w edytorze GitHuba (fork + pull request) i zgłoszenie błędu."""
+    from urllib.parse import quote
+    page_url = SITE_URL + out + "#" + s["id"]
+    edit = "%s/edit/master/%s" % (REPO_URL, src)
+    issue = "%s/issues/new?template=blad.yml&title=%s&gdzie=%s" % (
+        REPO_URL, quote("[Błąd] %s — %s" % (page_title or "", s["title"])), quote(page_url))
+    return ('<div class="contrib"><a href="%s" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — '
+            'zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="%s" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div>'
+            % (html.escape(edit), html.escape(issue)))
 
 
 LOCK_SVG = ('<svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a5 5 0 0 1 5 5v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v3h6V7a3 3 0 0 0-3-3Zm0 9a2 2 0 0 0-1 3.73V19h2v-2.27A2 2 0 0 0 12 13Z"/></svg>')

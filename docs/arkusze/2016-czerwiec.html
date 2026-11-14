@@ -37,7 +37,13 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#4-4">4.4</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li><li><a href="#6-4">6.4</a></li><li><a href="#6-5">6.5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2016 — czerwiec (termin dodatkowy), poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2016 — czerwiec (termin dodatkowy), poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = []
+<h1 class="page-title">Matura 2016 — czerwiec (termin dodatkowy), poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2016-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Rekurencja. Dla dodatniej liczby całkowitej n dana jest funkcja:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">F(n):
+  jeżeli n = 1 lub n = 2
+      s ← n
+  w przeciwnym razie
+      s ← n * F(n−2)
+      s ← s * (n+1)
+  wynikiem jest s</code></pre></div></div></div><ul><li>1.1 — Podaj wartości F(n) dla n = 1, 2, 3, 4, 5, 6.</li><li>1.2 — Wypisz ciąg wywołań funkcji F dla n = 11 (np. dla n = 3 jest to F(3), F(1)).</li><li>1.3 — Wskaż, jaką wartość oblicza algorytm: a) (n+1)(n+2)/2, b) (n+1)!, c) n^(n/2).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = []
 
 
 def F(n):
@@ -63,7 +69,75 @@ print(&quot;, &quot;.join(wywolania))
 silnia = 1
 for n in range(1, 11):
     silnia *= n + 1
-    print(n, F(n), silnia)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: F(1..6) = 2, 6, 24, 120, 720, 5040; 1.2: F(11), F(9), F(7), F(5), F(3), F(1); 1.3: (n+1)!</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def mniejsza(a, b):
+    print(n, F(n), silnia)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::string&gt; wywolania;
+
+long long F(int n) {
+    wywolania.push_back(&quot;F(&quot; + std::to_string(n) + &quot;)&quot;);
+    long long s;
+    if (n == 1 || n == 2)
+        s = n;
+    else
+        s = n * F(n - 2);
+    s = s * (n + 1);
+    return s;
+}
+
+int main() {
+    // 1.1
+    for (int n = 1; n &lt; 7; n++)
+        std::cout &lt;&lt; n &lt;&lt; &#x27; &#x27; &lt;&lt; F(n) &lt;&lt; &#x27;\n&#x27;;
+
+    // 1.2
+    wywolania.clear();
+    F(11);
+    for (size_t i = 0; i &lt; wywolania.size(); i++)
+        std::cout &lt;&lt; (i &gt; 0 ? &quot;, &quot; : &quot;&quot;) &lt;&lt; wywolania[i];
+    std::cout &lt;&lt; &#x27;\n&#x27;;
+
+    // 1.3 - porównanie z (n+1)!
+    long long silnia = 1;
+    for (int n = 1; n &lt; 11; n++) {
+        silnia *= n + 1;
+        std::cout &lt;&lt; n &lt;&lt; &#x27; &#x27; &lt;&lt; F(n) &lt;&lt; &#x27; &#x27; &lt;&lt; silnia &lt;&lt; &#x27;\n&#x27;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static List&lt;String&gt; wywolania = new ArrayList&lt;&gt;();
+
+    static long F(int n) {
+        wywolania.add(&quot;F(&quot; + n + &quot;)&quot;);
+        long s;
+        if (n == 1 || n == 2)
+            s = n;
+        else
+            s = n * F(n - 2);
+        s = s * (n + 1);
+        return s;
+    }
+
+    public static void main(String[] args) {
+        // 1.1
+        for (int n = 1; n &lt; 7; n++)
+            System.out.println(n + &quot; &quot; + F(n));
+
+        // 1.2
+        wywolania.clear();
+        F(11);
+        System.out.println(String.join(&quot;, &quot;, wywolania));
+
+        // 1.3 - porównanie z (n+1)!
+        long silnia = 1;
+        for (int n = 1; n &lt; 11; n++) {
+            silnia *= n + 1;
+            System.out.println(n + &quot; &quot; + F(n) + &quot; &quot; + silnia);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: F(1..6) = 2, 6, 24, 120, 720, 5040; 1.2: F(11), F(9), F(7), F(5), F(3), F(1); 1.3: (n+1)!</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dziwny porządek. Na planecie X wśród dodatnich liczb całkowitych każda liczba parzysta jest mniejsza od każdej nieparzystej. Liczby parzyste są uporządkowane normalnie (2 &lt; 4 &lt; 6 &lt; …), a nieparzyste odwrotnie — największa jest 1 (… &lt; 5 &lt; 3 &lt; 1). Na przykład liczby 1–6 w kolejności rosnącej to: 2, 4, 6, 5, 3, 1.</p><ul><li>2.1 — Uporządkuj rosnąco według porządku planety X zbiór {3, 6, 8, 11, 15, 20, 35, 70, 100, 1000}.</li><li>2.2 — Dopisz dwa elementy do zbioru {_, _, 27, 16, 7, 32} tak, aby jego najmniejszym elementem (według porządku X) była liczba 10.</li><li>2.3 — Zapisz (pseudokodem lub w języku programowania) algorytm, który dla dodatniej liczby całkowitej <code>n</code> i tablicy <code>A[1..n]</code> dodatnich liczb całkowitych znajduje największą liczbę w tablicy według porządku planety X.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def mniejsza(a, b):
     # czy a &lt;&lt; b na planecie X
     if a % 2 == 0 and b % 2 == 1:
         return True
@@ -98,7 +172,98 @@ print(min([10, 1, 27, 16, 7, 32], key=klucz))
 
 # 2.3
 print(najwiekszy([3, 6, 8, 11, 15, 20, 35, 70, 100, 1000]))
-print(najwiekszy([2, 4, 6, 8]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 6, 8, 20, 70, 100, 1000, 35, 15, 11, 3; 2.2: 10 i np. 1 (dowolna nieparzysta oprócz 7 i 27 albo parzysta większa od 10)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiace = [0] * 13
+print(najwiekszy([2, 4, 6, 8]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+bool mniejsza(int a, int b) {
+    // czy a &lt;&lt; b na planecie X
+    if (a % 2 == 0 &amp;&amp; b % 2 == 1)
+        return true;
+    if (a % 2 == 1 &amp;&amp; b % 2 == 0)
+        return false;
+    if (a % 2 == 0)  // obie parzyste - zwykły porządek
+        return a &lt; b;
+    return a &gt; b;    // obie nieparzyste - odwrotny porządek
+}
+
+std::pair&lt;int, int&gt; klucz(int a) {
+    // klucz sortowania: najpierw parzyste rosnąco, potem nieparzyste malejąco
+    if (a % 2 == 0)
+        return {0, a};
+    return {1, -a};
+}
+
+int najwiekszy(const std::vector&lt;int&gt;&amp; A) {
+    // 2.3
+    int maks = A[0];
+    for (size_t i = 1; i &lt; A.size(); i++)
+        if (mniejsza(maks, A[i]))
+            maks = A[i];
+    return maks;
+}
+
+void wypisz(const std::vector&lt;int&gt;&amp; lista) {  // zapis jak lista w Pythonie
+    std::cout &lt;&lt; &#x27;[&#x27;;
+    for (size_t i = 0; i &lt; lista.size(); i++)
+        std::cout &lt;&lt; (i &gt; 0 ? &quot;, &quot; : &quot;&quot;) &lt;&lt; lista[i];
+    std::cout &lt;&lt; &quot;]\n&quot;;
+}
+
+int main() {
+    // 2.1
+    std::vector&lt;int&gt; liczby = {3, 6, 8, 11, 15, 20, 35, 70, 100, 1000};
+    std::ranges::stable_sort(liczby, {}, klucz);
+    wypisz(liczby);
+
+    // 2.2 - najmniejszym elementem ma być 10, np. dopisujemy 10 i 1
+    std::cout &lt;&lt; std::ranges::min(std::vector&lt;int&gt;{10, 1, 27, 16, 7, 32}, {}, klucz) &lt;&lt; &#x27;\n&#x27;;
+
+    // 2.3
+    std::cout &lt;&lt; najwiekszy({3, 6, 8, 11, 15, 20, 35, 70, 100, 1000}) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; najwiekszy({2, 4, 6, 8}) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static boolean mniejsza(int a, int b) {
+        // czy a &lt;&lt; b na planecie X
+        if (a % 2 == 0 &amp;&amp; b % 2 == 1)
+            return true;
+        if (a % 2 == 1 &amp;&amp; b % 2 == 0)
+            return false;
+        if (a % 2 == 0)  // obie parzyste - zwykły porządek
+            return a &lt; b;
+        return a &gt; b;    // obie nieparzyste - odwrotny porządek
+    }
+
+    // porządek sortowania: najpierw parzyste rosnąco, potem nieparzyste malejąco
+    static Comparator&lt;Integer&gt; klucz = Comparator.comparingInt((Integer a) -&gt; a % 2 == 0 ? 0 : 1)
+            .thenComparingInt(a -&gt; a % 2 == 0 ? a : -a);
+
+    static int najwiekszy(int[] A) {
+        // 2.3
+        int maks = A[0];
+        for (int i = 1; i &lt; A.length; i++)
+            if (mniejsza(maks, A[i]))
+                maks = A[i];
+        return maks;
+    }
+
+    public static void main(String[] args) {
+        // 2.1
+        var liczby = new ArrayList&lt;&gt;(List.of(3, 6, 8, 11, 15, 20, 35, 70, 100, 1000));
+        liczby.sort(klucz);
+        System.out.println(liczby);
+
+        // 2.2 - najmniejszym elementem ma być 10, np. dopisujemy 10 i 1
+        System.out.println(Collections.min(List.of(10, 1, 27, 16, 7, 32), klucz));
+
+        // 2.3
+        System.out.println(najwiekszy(new int[] {3, 6, 8, 11, 15, 20, 35, 70, 100, 1000}));
+        System.out.println(najwiekszy(new int[] {2, 4, 6, 8}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 6, 8, 20, 70, 100, 1000, 35, 15, 11, 3; 2.2: 10 i np. 1 (dowolna nieparzysta oprócz 7 i 27 albo parzysta większa od 10)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>ubezpieczenia.txt</code> są dane 331 osób ubezpieczonych na życie: nazwisko, imię, data urodzenia (RRRR-MM-DD) i miejsce zamieszkania, rozdzielone średnikami; pierwszy wiersz to nagłówek (np. <code>Czarnecka;Ewelina;1960-10-01;srednie miasto</code>). Imiona wszystkich kobiet (i tylko kobiet) kończą się literą „a”. Wyniki zapisz w pliku <code>wyniki_4.txt</code>, poprzedzając je numerem zadania.</p><p>Utwórz zestawienie: dla każdego miesiąca (styczeń, luty, …) liczba osób, które mają w nim urodziny.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miesiace = [0] * 13
 
 with open(&quot;ubezpieczenia.txt&quot;) as file:
     next(file)
@@ -107,7 +272,38 @@ with open(&quot;ubezpieczenia.txt&quot;) as file:
         miesiace[int(data[5:7])] += 1
 
 for miesiac in range(1, 13):
-    print(miesiac, miesiace[miesiac])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1: 26, 2: 22, 3: 30, 4: 27, 5: 25, 6: 31, 7: 33, 8: 19, 9: 29, 10: 32, 11: 28, 12: 29</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kobiety = {}
+    print(miesiac, miesiace[miesiac])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; miesiace(13, 0);
+    std::ifstream plik(&quot;ubezpieczenia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);  // nagłówek
+    while (std::getline(plik, line)) {
+        // pola: nazwisko;imie;data;miejsce - data to trzecie pole, miesiąc na pozycjach 5-6
+        size_t p1 = line.find(&#x27;;&#x27;), p2 = line.find(&#x27;;&#x27;, p1 + 1);
+        std::string data = line.substr(p2 + 1, 10);
+        miesiace[std::stoi(data.substr(5, 2))] += 1;
+    }
+    for (int miesiac = 1; miesiac &lt; 13; miesiac++)
+        std::cout &lt;&lt; miesiac &lt;&lt; &#x27; &#x27; &lt;&lt; miesiace[miesiac] &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int[] miesiace = new int[13];
+        var linie = Files.readAllLines(Path.of(&quot;ubezpieczenia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            var p = line.strip().split(&quot;;&quot;);  // nazwisko, imie, data, miejsce
+            miesiace[Integer.parseInt(p[2].substring(5, 7))] += 1;
+        }
+        for (int miesiac = 1; miesiac &lt; 13; miesiac++)
+            System.out.println(miesiac + &quot; &quot; + miesiace[miesiac]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1: 26, 2: 22, 3: 30, 4: 27, 5: 25, 6: 31, 7: 33, 8: 19, 9: 29, 10: 32, 11: 28, 12: 29</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>ubezpieczenia.txt</code> (nazwisko; imię; data urodzenia; miejsce zamieszkania; imiona kobiet kończą się na „a”). Utwórz zestawienie podające dla każdego miejsca zamieszkania liczbę ubezpieczonych kobiet.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kobiety = {}
 
 with open(&quot;ubezpieczenia.txt&quot;) as file:
     next(file)
@@ -117,7 +313,57 @@ with open(&quot;ubezpieczenia.txt&quot;) as file:
             kobiety[miejsce] = kobiety.get(miejsce, 0) + 1
 
 for miejsce in kobiety:
-    print(miejsce, kobiety[miejsce])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> wieś 24, małe miasto 20, średnie miasto 59, duże miasto 97</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma_kobiety = 0
+    print(miejsce, kobiety[miejsce])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    // lista par (miejsce, liczba) - zachowuje kolejność pierwszego pojawienia się, jak słownik w Pythonie
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; kobiety;
+
+    std::ifstream plik(&quot;ubezpieczenia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);  // nagłówek
+    while (std::getline(plik, line)) {
+        if (!line.empty() &amp;&amp; line.back() == &#x27;\r&#x27;) line.pop_back();
+        std::stringstream ss(line);
+        std::string nazwisko, imie, data, miejsce;
+        std::getline(ss, nazwisko, &#x27;;&#x27;);
+        std::getline(ss, imie, &#x27;;&#x27;);
+        std::getline(ss, data, &#x27;;&#x27;);
+        std::getline(ss, miejsce, &#x27;;&#x27;);
+        if (imie.back() == &#x27;a&#x27;) {
+            bool znalezione = false;
+            for (auto&amp; [m, ile] : kobiety)
+                if (m == miejsce) {
+                    ile++;
+                    znalezione = true;
+                }
+            if (!znalezione) kobiety.push_back({miejsce, 1});
+        }
+    }
+    for (const auto&amp; [miejsce, ile] : kobiety)
+        std::cout &lt;&lt; miejsce &lt;&lt; &#x27; &#x27; &lt;&lt; ile &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var kobiety = new LinkedHashMap&lt;String, Integer&gt;();  // zachowuje kolejność, jak słownik w Pythonie
+        var linie = Files.readAllLines(Path.of(&quot;ubezpieczenia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            var p = line.strip().split(&quot;;&quot;);  // nazwisko, imie, data, miejsce
+            String imie = p[1], miejsce = p[3];
+            if (imie.endsWith(&quot;a&quot;))
+                kobiety.merge(miejsce, 1, Integer::sum);
+        }
+        for (var e : kobiety.entrySet())
+            System.out.println(e.getKey() + &quot; &quot; + e.getValue());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> wieś 24, małe miasto 20, średnie miasto 59, duże miasto 97</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>ubezpieczenia.txt</code>. Kwota ubezpieczenia wynosi 25 000 zł dla kobiet i 30 000 zł dla mężczyzn. Miesięczna składka to procent kwoty ubezpieczenia zależny od wieku:</p><ul><li>do 30 lat — 0,1%,</li><li>od 31 do 45 lat — 0,15%,</li><li>od 46 lat — 0,12%.</li></ul><p>Osobom, których wiek przekroczył 60 lat, dolicza się do składki 49 zł. Wiek liczymy rocznikami (na 1 stycznia 2016 r.: 2016 − rok urodzenia). Oblicz sumę miesięcznych składek za styczeń 2016 roku osobno dla kobiet i osobno dla mężczyzn; każdy wynik zaokrąglij do dwóch miejsc po przecinku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma_kobiety = 0
 suma_mezczyzni = 0
 
 with open(&quot;ubezpieczenia.txt&quot;) as file:
@@ -150,7 +396,89 @@ with open(&quot;ubezpieczenia.txt&quot;) as file:
             suma_mezczyzni += skladka
 
 print(f&quot;{suma_kobiety:.2f}&quot;)
-print(f&quot;{suma_mezczyzni:.2f}&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> kobiety 8961,50 zł, mężczyźni 6261,00 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-4">4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przedzialy = {}  # początek przedziału (20, 30, ..., 70) -&gt; liczba osób
+print(f&quot;{suma_mezczyzni:.2f}&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+
+int main() {
+    double suma_kobiety = 0, suma_mezczyzni = 0;
+
+    std::ifstream plik(&quot;ubezpieczenia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);  // nagłówek
+    while (std::getline(plik, line)) {
+        std::stringstream ss(line);
+        std::string nazwisko, imie, data;
+        std::getline(ss, nazwisko, &#x27;;&#x27;);
+        std::getline(ss, imie, &#x27;;&#x27;);
+        std::getline(ss, data, &#x27;;&#x27;);
+        int wiek = 2016 - std::stoi(data.substr(0, 4));  // liczymy rocznikami
+
+        // składka w tysięcznych częściach procenta (0,1% = 100, 0,15% = 150, 0,12% = 120),
+        // żeby uniknąć błędów zaokrągleń float
+        int procent;
+        if (wiek &lt;= 30)
+            procent = 100;
+        else if (wiek &lt;= 45)
+            procent = 150;
+        else
+            procent = 120;
+
+        bool kobieta = imie.back() == &#x27;a&#x27;;
+        int kwota = kobieta ? 25000 : 30000;
+
+        double skladka = kwota * procent / 100000.0;
+        if (wiek &gt; 60)
+            skladka += 49;
+
+        if (kobieta)
+            suma_kobiety += skladka;
+        else
+            suma_mezczyzni += skladka;
+    }
+    std::println(&quot;{:.2f}&quot;, suma_kobiety);
+    std::println(&quot;{:.2f}&quot;, suma_mezczyzni);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.Locale;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        double sumaKobiety = 0, sumaMezczyzni = 0;
+
+        var linie = Files.readAllLines(Path.of(&quot;ubezpieczenia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            var p = line.strip().split(&quot;;&quot;);  // nazwisko, imie, data, miejsce
+            String imie = p[1];
+            int wiek = 2016 - Integer.parseInt(p[2].substring(0, 4));  // liczymy rocznikami
+
+            // składka w tysięcznych częściach procenta (0,1% = 100, 0,15% = 150, 0,12% = 120),
+            // żeby uniknąć błędów zaokrągleń float
+            int procent;
+            if (wiek &lt;= 30)
+                procent = 100;
+            else if (wiek &lt;= 45)
+                procent = 150;
+            else
+                procent = 120;
+
+            boolean kobieta = imie.endsWith(&quot;a&quot;);
+            int kwota = kobieta ? 25000 : 30000;
+
+            double skladka = kwota * procent / 100000.0;
+            if (wiek &gt; 60)
+                skladka += 49;
+
+            if (kobieta)
+                sumaKobiety += skladka;
+            else
+                sumaMezczyzni += skladka;
+        }
+        // Locale.ROOT - kropka dziesiętna, jak w Pythonie
+        System.out.println(String.format(Locale.ROOT, &quot;%.2f&quot;, sumaKobiety));
+        System.out.println(String.format(Locale.ROOT, &quot;%.2f&quot;, sumaMezczyzni));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> kobiety 8961,50 zł, mężczyźni 6261,00 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-4">4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>ubezpieczenia.txt</code> (wiek liczony rocznikami na 1 stycznia 2016 r.). Utwórz zestawienie liczby osób w przedziałach wiekowych 20–29, 30–39, 40–49, 50–59, 60–69, 70–79 i sporządź czytelnie opisany wykres kolumnowy tego zestawienia.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">przedzialy = {}  # początek przedziału (20, 30, ..., 70) -&gt; liczba osób
 
 with open(&quot;ubezpieczenia.txt&quot;) as file:
     next(file)
@@ -161,14 +489,76 @@ with open(&quot;ubezpieczenia.txt&quot;) as file:
         przedzialy[poczatek] = przedzialy.get(poczatek, 0) + 1
 
 for poczatek in range(20, 80, 10):
-    print(f&quot;{poczatek}-{poczatek + 9}&quot;, przedzialy.get(poczatek, 0))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 20-29: 62, 30-39: 56, 40-49: 64, 50-59: 56, 60-69: 71, 70-79: 22 (+ wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+    print(f&quot;{poczatek}-{poczatek + 9}&quot;, przedzialy.get(poczatek, 0))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::map&lt;int, int&gt; przedzialy;  // początek przedziału (20, 30, ..., 70) -&gt; liczba osób
+
+    std::ifstream plik(&quot;ubezpieczenia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);  // nagłówek
+    while (std::getline(plik, line)) {
+        std::stringstream ss(line);
+        std::string nazwisko, imie, data;
+        std::getline(ss, nazwisko, &#x27;;&#x27;);
+        std::getline(ss, imie, &#x27;;&#x27;);
+        std::getline(ss, data, &#x27;;&#x27;);
+        int wiek = 2016 - std::stoi(data.substr(0, 4));
+        int poczatek = wiek / 10 * 10;
+        przedzialy[poczatek]++;
+    }
+    for (int poczatek = 20; poczatek &lt; 80; poczatek += 10)
+        std::cout &lt;&lt; poczatek &lt;&lt; &#x27;-&#x27; &lt;&lt; poczatek + 9 &lt;&lt; &#x27; &#x27; &lt;&lt; przedzialy[poczatek] &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var przedzialy = new HashMap&lt;Integer, Integer&gt;();  // początek przedziału (20, 30, ..., 70) -&gt; liczba osób
+        var linie = Files.readAllLines(Path.of(&quot;ubezpieczenia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            var p = line.strip().split(&quot;;&quot;);  // nazwisko, imie, data, miejsce
+            int wiek = 2016 - Integer.parseInt(p[2].substring(0, 4));
+            int poczatek = wiek / 10 * 10;
+            przedzialy.merge(poczatek, 1, Integer::sum);
+        }
+        for (int poczatek = 20; poczatek &lt; 80; poczatek += 10)
+            System.out.println(poczatek + &quot;-&quot; + (poczatek + 9) + &quot; &quot; + przedzialy.getOrDefault(poczatek, 0));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 20-29: 62, 30-39: 56, 40-49: 64, 50-59: 56, 60-69: 71, 70-79: 22 (+ wykres kolumnowy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%234-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>liczby.txt</code> jest 999 kodów liczb, każdy w osobnym wierszu. Ostatnia cyfra kodu to podstawa systemu (od 2 do 9), a cyfry od pierwszej do przedostatniej to zapis liczby w tym systemie (np. <code>12345678</code> oznacza liczbę 1234567 w systemie ósemkowym). Kod zaczyna się cyfrą większą od 0 i ma co najwyżej 10 cyfr (wartość może nie mieścić się w 32-bitowym typie całkowitym). Odpowiedzi zapisz w plikach <code>wyniki_6_1.txt</code> … <code>wyniki_6_5.txt</code>.</p><p>Podaj, ile liczb w pliku zapisano w systemie ósemkowym.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
         if line.strip()[-1] == &quot;8&quot;:
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 103</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string kod;
+    while (plik &gt;&gt; kod)
+        if (kod.back() == &#x27;8&#x27;)
+            licznik++;
+    std::cout &lt;&lt; licznik &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;)))
+            if (line.strip().endsWith(&quot;8&quot;))
+                licznik++;
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 103</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%236-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 999 kodów (ostatnia cyfra — podstawa systemu 2–9, pozostałe — zapis liczby). Podaj, ile wierszy zawiera liczby zapisane w systemie czwórkowym, w których zapisie nie występuje cyfra 0. Odpowiedź zapisz w <code>wyniki_6_2.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -176,7 +566,34 @@ with open(&quot;liczby.txt&quot;) as file:
         if kod[-1] == &quot;4&quot; and &quot;0&quot; not in kod[:-1]:
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 29</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string kod;
+    while (plik &gt;&gt; kod) {
+        std::string liczba = kod.substr(0, kod.size() - 1);  // kod bez ostatniej cyfry (podstawy)
+        if (kod.back() == &#x27;4&#x27; &amp;&amp; liczba.find(&#x27;0&#x27;) == std::string::npos)
+            licznik++;
+    }
+    std::cout &lt;&lt; licznik &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            var kod = line.strip();
+            var liczba = kod.substring(0, kod.length() - 1);  // kod bez ostatniej cyfry (podstawy)
+            if (kod.endsWith(&quot;4&quot;) &amp;&amp; !liczba.contains(&quot;0&quot;))
+                licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 29</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%236-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 999 kodów (ostatnia cyfra — podstawa systemu 2–9, pozostałe — zapis liczby). Podaj, ile wierszy zawiera liczby parzyste zapisane w systemie dwójkowym. Odpowiedź zapisz w <code>wyniki_6_3.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -185,7 +602,34 @@ with open(&quot;liczby.txt&quot;) as file:
         if kod[-1] == &quot;2&quot; and kod[-2] == &quot;0&quot;:
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 153</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-4">6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma = 0
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string kod;
+    while (plik &gt;&gt; kod) {
+        // liczba dwójkowa jest parzysta, gdy jej ostatnia cyfra (przedostatni znak kodu) to 0
+        if (kod[kod.size() - 1] == &#x27;2&#x27; &amp;&amp; kod[kod.size() - 2] == &#x27;0&#x27;)
+            licznik++;
+    }
+    std::cout &lt;&lt; licznik &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            var kod = line.strip();
+            // liczba dwójkowa jest parzysta, gdy jej ostatnia cyfra (przedostatni znak kodu) to 0
+            if (kod.charAt(kod.length() - 1) == &#x27;2&#x27; &amp;&amp; kod.charAt(kod.length() - 2) == &#x27;0&#x27;)
+                licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 153</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%236-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-4">6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 999 kodów (ostatnia cyfra — podstawa systemu 2–9, pozostałe — zapis liczby). Podaj w systemie dziesiętnym sumę wszystkich liczb zapisanych w systemie ósemkowym. Odpowiedź zapisz w <code>wyniki_6_4.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">suma = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -193,7 +637,31 @@ with open(&quot;liczby.txt&quot;) as file:
         if kod[-1] == &quot;8&quot;:
             suma += int(kod[:-1], 8)
 
-print(suma)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 887918739</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-5" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-5">6.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kod_min = kod_max = None
+print(suma)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    long long suma = 0;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string kod;
+    while (plik &gt;&gt; kod)
+        if (kod.back() == &#x27;8&#x27;)
+            suma += std::stoll(kod.substr(0, kod.size() - 1), nullptr, 8);  // zamiana z systemu ósemkowego
+    std::cout &lt;&lt; suma &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        long suma = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            var kod = line.strip();
+            if (kod.endsWith(&quot;8&quot;))
+                suma += Long.parseLong(kod.substring(0, kod.length() - 1), 8);  // zamiana z systemu ósemkowego
+        }
+        System.out.println(suma);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 887918739</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%236-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-5" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-5">6.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 999 kodów (ostatnia cyfra — podstawa systemu 2–9, pozostałe — zapis liczby). Podaj kod największej i kod najmniejszej z zakodowanych liczb oraz ich wartości w systemie dziesiętnym. Odpowiedź zapisz w <code>wyniki_6_5.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kod_min = kod_max = None
 wartosc_min = wartosc_max = None
 
 with open(&quot;liczby.txt&quot;) as file:
@@ -208,7 +676,54 @@ with open(&quot;liczby.txt&quot;) as file:
             kod_max = kod
 
 print(kod_max, wartosc_max)
-print(kod_min, wartosc_min)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> największa: 8066218209 (347931225), najmniejsza: 100002 (16)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(kod_min, wartosc_min)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string kod_min, kod_max;  // pusty napis - jeszcze nic (None w Pythonie)
+    long long wartosc_min = 0, wartosc_max = 0;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string kod;
+    while (plik &gt;&gt; kod) {
+        int podstawa = kod.back() - &#x27;0&#x27;;
+        long long wartosc = std::stoll(kod.substr(0, kod.size() - 1), nullptr, podstawa);
+        if (kod_min.empty() || wartosc &lt; wartosc_min) {
+            wartosc_min = wartosc;
+            kod_min = kod;
+        }
+        if (kod_max.empty() || wartosc &gt; wartosc_max) {
+            wartosc_max = wartosc;
+            kod_max = kod;
+        }
+    }
+    std::cout &lt;&lt; kod_max &lt;&lt; &#x27; &#x27; &lt;&lt; wartosc_max &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; kod_min &lt;&lt; &#x27; &#x27; &lt;&lt; wartosc_min &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String kodMin = null, kodMax = null;
+        long wartoscMin = 0, wartoscMax = 0;
+
+        for (var line : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            var kod = line.strip();
+            int podstawa = kod.charAt(kod.length() - 1) - &#x27;0&#x27;;
+            long wartosc = Long.parseLong(kod.substring(0, kod.length() - 1), podstawa);
+            if (kodMin == null || wartosc &lt; wartoscMin) {
+                wartoscMin = wartosc;
+                kodMin = kod;
+            }
+            if (kodMax == null || wartosc &gt; wartoscMax) {
+                wartoscMax = wartosc;
+                kodMax = kod;
+            }
+        }
+        System.out.println(kodMax + &quot; &quot; + wartoscMax);
+        System.out.println(kodMin + &quot; &quot; + wartoscMin);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> największa: 8066218209 (347931225), najmniejsza: 100002 (16)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.5&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-czerwiec.html%236-5" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

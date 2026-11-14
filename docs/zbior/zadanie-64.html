@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#64-1">64.1</a></li><li><a href="#64-2">64.2</a></li><li><a href="#64-3">64.3</a></li><li><a href="#64-4">64.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 64. Obrazki</span></nav>
-<h1 class="page-title">Zadanie 64. Obrazki</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><p>Każdy obrazek w pliku to 21 wierszy: 20 wierszy po 20 pikseli + bit parzystości wiersza oraz ostatni wiersz z 20 bitami parzystości kolumn. Obrazki oddzielone są pustym wierszem.</p><section class="card tinted" id="64-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-1">64.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+<h1 class="page-title">Zadanie 64. Obrazki</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><p>Każdy obrazek w pliku to 21 wierszy: 20 wierszy po 20 pikseli + bit parzystości wiersza oraz ostatni wiersz z 20 bitami parzystości kolumn. Obrazki oddzielone są pustym wierszem.</p><section class="card tinted" id="64-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-1">64.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Bit parzystości ciągu zer i jedynek wynosi 0, gdy jedynek jest parzyście wiele, a 1 w przeciwnym razie. Czarno-biały obrazek n × n zapisujemy jako n wierszy po n pikseli (0 — biały, 1 — czarny); na końcu każdego wiersza dopisany jest jego bit parzystości, a pod obrazkiem — wiersz bitów parzystości kolejnych kolumn. Bity parzystości nie należą do obrazka. Plik <code>dane_obrazki.txt</code> zawiera 200 obrazków 20 × 20, oddzielonych pustym wierszem. Odpowiedzi zapisz w pliku <code>wyniki_obrazki.txt</code>, każdą od nowego wiersza, poprzedzoną numerem zadania.</p><p>Obrazek jest rewersem, jeśli ma więcej pikseli czarnych niż białych. Podaj, ile obrazków w pliku jest rewersami, oraz największą liczbę czarnych pikseli w jednym obrazku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
 
 with open(&quot;dane_obrazki.txt&quot;) as file:
     wiersze = file.read().split()  # puste wiersze znikają
@@ -54,7 +54,75 @@ for obrazek in obrazki:
         rewersy += 1
     najwiecej_czarnych = max(najwiecej_czarnych, czarne)
 
-print(rewersy, najwiecej_czarnych)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 13 rewersów, największa liczba pikseli czarnych: 381</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="64-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-2">64.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+print(rewersy, najwiecej_czarnych)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    // wczytujemy słowo po słowie - puste wiersze znikają
+    std::ifstream plik(&quot;dane_obrazki.txt&quot;);
+    std::vector&lt;std::string&gt; wiersze;
+    std::string s;
+    while (plik &gt;&gt; s) {
+        wiersze.push_back(s);
+    }
+    std::vector&lt;std::vector&lt;std::string&gt;&gt; obrazki;
+    for (size_t i = 0; i &lt; wiersze.size(); i += 21) {
+        obrazki.push_back(std::vector&lt;std::string&gt;(wiersze.begin() + i, wiersze.begin() + i + 21));
+    }
+
+    int rewersy = 0;
+    int najwiecej_czarnych = 0;
+    for (const auto&amp; obrazek : obrazki) {
+        int czarne = 0;
+        for (int w = 0; w &lt; 20; w++) {
+            czarne += std::count(obrazek[w].begin(), obrazek[w].begin() + 20, &#x27;1&#x27;);
+        }
+        if (czarne &gt; 400 - czarne) {
+            rewersy += 1;
+        }
+        najwiecej_czarnych = std::max(najwiecej_czarnych, czarne);
+    }
+
+    std::println(&quot;{} {}&quot;, rewersy, najwiecej_czarnych);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // dzielimy cały plik na słowa - puste wiersze znikają
+        String[] wiersze = Files.readString(Path.of(&quot;dane_obrazki.txt&quot;)).strip().split(&quot;\\s+&quot;);
+        List&lt;String[]&gt; obrazki = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; wiersze.length; i += 21) {
+            String[] obrazek = new String[21];
+            System.arraycopy(wiersze, i, obrazek, 0, 21);
+            obrazki.add(obrazek);
+        }
+
+        int rewersy = 0;
+        int najwiecejCzarnych = 0;
+        for (String[] obrazek : obrazki) {
+            int czarne = 0;
+            for (int w = 0; w &lt; 20; w++) {
+                for (int k = 0; k &lt; 20; k++) {
+                    if (obrazek[w].charAt(k) == &#x27;1&#x27;) {
+                        czarne++;
+                    }
+                }
+            }
+            if (czarne &gt; 400 - czarne) {
+                rewersy += 1;
+            }
+            najwiecejCzarnych = Math.max(najwiecejCzarnych, czarne);
+        }
+
+        System.out.println(rewersy + &quot; &quot; + najwiecejCzarnych);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 13 rewersów, największa liczba pikseli czarnych: 381</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/64.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2064.%20Obrazki%20%E2%80%94%2064.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-64.html%2364-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="64-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-2">64.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 64.1 (200 obrazków 20 × 20 z bitami parzystości w pliku <code>dane_obrazki.txt</code>).</p><p>Obrazek n × n jest rekurencyjny, jeśli n jest parzyste, a obrazek składa się z czterech kopii tego samego obrazka o rozmiarze n/2 × n/2 (cztery ćwiartki są identyczne). Podaj liczbę obrazków rekurencyjnych oraz opis pierwszego z nich w pliku — 20 wierszy po 20 pikseli, bez bitów parzystości.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
 
 with open(&quot;dane_obrazki.txt&quot;) as file:
     wiersze = file.read().split()
@@ -81,7 +149,95 @@ for obrazek in obrazki:
 
 print(len(rekurencyjne))
 for wiersz in rekurencyjne[0]:
-    print(wiersz)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 60 obrazków rekurencyjnych; pierwszy z nich to naprzemiennie wiersze <code>11111111111111111111</code> i <code>00000000000000000000</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="64-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-3">64.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+    print(wiersz)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using Obrazek = std::vector&lt;std::string&gt;;
+
+bool czy_rekurencyjny(const Obrazek&amp; obrazek) {
+    for (int w = 0; w &lt; 10; w++) {
+        for (int k = 0; k &lt; 10; k++) {
+            char piksel = obrazek[w][k];
+            if (obrazek[w][k + 10] != piksel || obrazek[w + 10][k] != piksel || obrazek[w + 10][k + 10] != piksel) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+int main() {
+    std::ifstream plik(&quot;dane_obrazki.txt&quot;);
+    std::vector&lt;std::string&gt; wiersze;
+    std::string s;
+    while (plik &gt;&gt; s) {
+        wiersze.push_back(s);
+    }
+    std::vector&lt;Obrazek&gt; obrazki;
+    for (size_t i = 0; i &lt; wiersze.size(); i += 21) {
+        Obrazek obrazek;
+        for (size_t w = i; w &lt; i + 20; w++) {
+            obrazek.push_back(wiersze[w].substr(0, 20));  // bez bitów parzystości
+        }
+        obrazki.push_back(obrazek);
+    }
+
+    std::vector&lt;Obrazek&gt; rekurencyjne;
+    for (const Obrazek&amp; obrazek : obrazki) {
+        if (czy_rekurencyjny(obrazek)) {
+            rekurencyjne.push_back(obrazek);
+        }
+    }
+
+    std::println(&quot;{}&quot;, rekurencyjne.size());
+    for (const std::string&amp; wiersz : rekurencyjne[0]) {
+        std::println(&quot;{}&quot;, wiersz);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static boolean czyRekurencyjny(String[] obrazek) {
+        for (int w = 0; w &lt; 10; w++) {
+            for (int k = 0; k &lt; 10; k++) {
+                char piksel = obrazek[w].charAt(k);
+                if (obrazek[w].charAt(k + 10) != piksel || obrazek[w + 10].charAt(k) != piksel
+                        || obrazek[w + 10].charAt(k + 10) != piksel) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        String[] wiersze = Files.readString(Path.of(&quot;dane_obrazki.txt&quot;)).strip().split(&quot;\\s+&quot;);
+        List&lt;String[]&gt; obrazki = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; wiersze.length; i += 21) {
+            String[] obrazek = new String[20];
+            for (int w = 0; w &lt; 20; w++) {
+                obrazek[w] = wiersze[i + w].substring(0, 20);  // bez bitów parzystości
+            }
+            obrazki.add(obrazek);
+        }
+
+        List&lt;String[]&gt; rekurencyjne = new ArrayList&lt;&gt;();
+        for (String[] obrazek : obrazki) {
+            if (czyRekurencyjny(obrazek)) {
+                rekurencyjne.add(obrazek);
+            }
+        }
+
+        System.out.println(rekurencyjne.size());
+        for (String wiersz : rekurencyjne.get(0)) {
+            System.out.println(wiersz);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 60 obrazków rekurencyjnych; pierwszy z nich to naprzemiennie wiersze <code>11111111111111111111</code> i <code>00000000000000000000</code></p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/64.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2064.%20Obrazki%20%E2%80%94%2064.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-64.html%2364-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="64-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-3">64.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 64.1.</p><p>Obrazek jest poprawny, jeśli wszystkie jego bity parzystości (wierszy i kolumn) są poprawne. Jest naprawialny, jeśli nie jest poprawny, ale ma co najwyżej jeden błędny bit parzystości wiersza i co najwyżej jeden błędny bit parzystości kolumny. Pozostałe obrazki są nienaprawialne. Podaj liczbę obrazków poprawnych, naprawialnych i nienaprawialnych oraz największą liczbę błędnych bitów parzystości w jednym obrazku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
 
 with open(&quot;dane_obrazki.txt&quot;) as file:
     wiersze = file.read().split()
@@ -120,7 +276,125 @@ for obrazek in obrazki:
     else:
         nienaprawialne += 1
 
-print(poprawne, naprawialne, nienaprawialne, najwiecej_bledow)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> poprawne: 171, naprawialne: 14, nienaprawialne: 15, największa liczba błędnych bitów parzystości: 7</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="64-4" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-4">64.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
+print(poprawne, naprawialne, nienaprawialne, najwiecej_bledow)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using Obrazek = std::vector&lt;std::string&gt;;
+
+// numery wierszy i kolumn, których bit parzystości się nie zgadza
+void bledne_bity(const Obrazek&amp; obrazek, std::vector&lt;int&gt;&amp; bledne_wiersze, std::vector&lt;int&gt;&amp; bledne_kolumny) {
+    for (int w = 0; w &lt; 20; w++) {
+        int jedynki = std::count(obrazek[w].begin(), obrazek[w].begin() + 20, &#x27;1&#x27;);
+        if (jedynki % 2 != obrazek[w][20] - &#x27;0&#x27;) {
+            bledne_wiersze.push_back(w);
+        }
+    }
+    for (int k = 0; k &lt; 20; k++) {
+        int jedynki = 0;
+        for (int w = 0; w &lt; 20; w++) {
+            jedynki += obrazek[w][k] - &#x27;0&#x27;;
+        }
+        if (jedynki % 2 != obrazek[20][k] - &#x27;0&#x27;) {
+            bledne_kolumny.push_back(k);
+        }
+    }
+}
+
+int main() {
+    std::ifstream plik(&quot;dane_obrazki.txt&quot;);
+    std::vector&lt;std::string&gt; wiersze;
+    std::string s;
+    while (plik &gt;&gt; s) {
+        wiersze.push_back(s);
+    }
+    std::vector&lt;Obrazek&gt; obrazki;
+    for (size_t i = 0; i &lt; wiersze.size(); i += 21) {
+        obrazki.push_back(Obrazek(wiersze.begin() + i, wiersze.begin() + i + 21));
+    }
+
+    int poprawne = 0;
+    int naprawialne = 0;
+    int nienaprawialne = 0;
+    int najwiecej_bledow = 0;
+
+    for (const Obrazek&amp; obrazek : obrazki) {
+        std::vector&lt;int&gt; bledne_wiersze, bledne_kolumny;
+        bledne_bity(obrazek, bledne_wiersze, bledne_kolumny);
+        int bledy = bledne_wiersze.size() + bledne_kolumny.size();
+        najwiecej_bledow = std::max(najwiecej_bledow, bledy);
+        if (bledy == 0) {
+            poprawne += 1;
+        } else if (bledne_wiersze.size() &lt;= 1 &amp;&amp; bledne_kolumny.size() &lt;= 1) {
+            naprawialne += 1;
+        } else {
+            nienaprawialne += 1;
+        }
+    }
+
+    std::println(&quot;{} {} {} {}&quot;, poprawne, naprawialne, nienaprawialne, najwiecej_bledow);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    // numery wierszy i kolumn, których bit parzystości się nie zgadza
+    static void bledneBity(String[] obrazek, List&lt;Integer&gt; bledneWiersze, List&lt;Integer&gt; bledneKolumny) {
+        for (int w = 0; w &lt; 20; w++) {
+            int jedynki = 0;
+            for (int k = 0; k &lt; 20; k++) {
+                jedynki += obrazek[w].charAt(k) - &#x27;0&#x27;;
+            }
+            if (jedynki % 2 != obrazek[w].charAt(20) - &#x27;0&#x27;) {
+                bledneWiersze.add(w);
+            }
+        }
+        for (int k = 0; k &lt; 20; k++) {
+            int jedynki = 0;
+            for (int w = 0; w &lt; 20; w++) {
+                jedynki += obrazek[w].charAt(k) - &#x27;0&#x27;;
+            }
+            if (jedynki % 2 != obrazek[20].charAt(k) - &#x27;0&#x27;) {
+                bledneKolumny.add(k);
+            }
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        String[] wiersze = Files.readString(Path.of(&quot;dane_obrazki.txt&quot;)).strip().split(&quot;\\s+&quot;);
+        List&lt;String[]&gt; obrazki = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; wiersze.length; i += 21) {
+            String[] obrazek = new String[21];
+            System.arraycopy(wiersze, i, obrazek, 0, 21);
+            obrazki.add(obrazek);
+        }
+
+        int poprawne = 0;
+        int naprawialne = 0;
+        int nienaprawialne = 0;
+        int najwiecejBledow = 0;
+
+        for (String[] obrazek : obrazki) {
+            List&lt;Integer&gt; bledneWiersze = new ArrayList&lt;&gt;();
+            List&lt;Integer&gt; bledneKolumny = new ArrayList&lt;&gt;();
+            bledneBity(obrazek, bledneWiersze, bledneKolumny);
+            int bledy = bledneWiersze.size() + bledneKolumny.size();
+            najwiecejBledow = Math.max(najwiecejBledow, bledy);
+            if (bledy == 0) {
+                poprawne += 1;
+            } else if (bledneWiersze.size() &lt;= 1 &amp;&amp; bledneKolumny.size() &lt;= 1) {
+                naprawialne += 1;
+            } else {
+                nienaprawialne += 1;
+            }
+        }
+
+        System.out.println(poprawne + &quot; &quot; + naprawialne + &quot; &quot; + nienaprawialne + &quot; &quot; + najwiecejBledow);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> poprawne: 171, naprawialne: 14, nienaprawialne: 15, największa liczba błędnych bitów parzystości: 7</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/64.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2064.%20Obrazki%20%E2%80%94%2064.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-64.html%2364-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="64-4" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#64-4">64.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 64.1; definicje jak w zadaniu 64.3.</p><p>Obrazek naprawialny można poprawić, zmieniając jedną wartość: jeśli błędne są bity parzystości i-tego wiersza i j-tej kolumny, zmieniamy j-ty piksel w i-tym wierszu; jeśli błędny jest tylko jeden bit parzystości (wiersza albo kolumny), zmieniamy ten bit. Podaj numery wszystkich obrazków naprawialnych (obrazki numerujemy od 1), a przy każdym numer wiersza i kolumny wartości, którą trzeba zmienić.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">obrazki = []
 
 with open(&quot;dane_obrazki.txt&quot;) as file:
     wiersze = file.read().split()
@@ -152,7 +426,113 @@ for numer in range(len(obrazki)):
     # wiersz/kolumna 21 oznacza bit parzystości
     wiersz = bledne_wiersze[0] + 1 if bledne_wiersze else 21
     kolumna = bledne_kolumny[0] + 1 if bledne_kolumny else 21
-    print(numer + 1, wiersz, kolumna)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (numer obrazka, wiersz, kolumna) (14, 1, 15), (19, 4, 20), (26, 21, 13), (29, 2, 8), (33, 15, 21), (115, 21, 14), (116, 21, 13), (129, 21, 14), (131, 10, 7), (143, 7, 15), (154, 7, 7), (161, 21, 17), (162, 21, 16), (187, 21, 18)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/64.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(numer + 1, wiersz, kolumna)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using Obrazek = std::vector&lt;std::string&gt;;
+
+// numery wierszy i kolumn, których bit parzystości się nie zgadza
+void bledne_bity(const Obrazek&amp; obrazek, std::vector&lt;int&gt;&amp; bledne_wiersze, std::vector&lt;int&gt;&amp; bledne_kolumny) {
+    for (int w = 0; w &lt; 20; w++) {
+        int jedynki = std::count(obrazek[w].begin(), obrazek[w].begin() + 20, &#x27;1&#x27;);
+        if (jedynki % 2 != obrazek[w][20] - &#x27;0&#x27;) {
+            bledne_wiersze.push_back(w);
+        }
+    }
+    for (int k = 0; k &lt; 20; k++) {
+        int jedynki = 0;
+        for (int w = 0; w &lt; 20; w++) {
+            jedynki += obrazek[w][k] - &#x27;0&#x27;;
+        }
+        if (jedynki % 2 != obrazek[20][k] - &#x27;0&#x27;) {
+            bledne_kolumny.push_back(k);
+        }
+    }
+}
+
+int main() {
+    std::ifstream plik(&quot;dane_obrazki.txt&quot;);
+    std::vector&lt;std::string&gt; wiersze;
+    std::string s;
+    while (plik &gt;&gt; s) {
+        wiersze.push_back(s);
+    }
+    std::vector&lt;Obrazek&gt; obrazki;
+    for (size_t i = 0; i &lt; wiersze.size(); i += 21) {
+        obrazki.push_back(Obrazek(wiersze.begin() + i, wiersze.begin() + i + 21));
+    }
+
+    for (size_t numer = 0; numer &lt; obrazki.size(); numer++) {
+        std::vector&lt;int&gt; bledne_wiersze, bledne_kolumny;
+        bledne_bity(obrazki[numer], bledne_wiersze, bledne_kolumny);
+        if (bledne_wiersze.size() + bledne_kolumny.size() == 0) {
+            continue;
+        }
+        if (bledne_wiersze.size() &gt; 1 || bledne_kolumny.size() &gt; 1) {
+            continue;
+        }
+        // wiersz/kolumna 21 oznacza bit parzystości
+        int wiersz = bledne_wiersze.empty() ? 21 : bledne_wiersze[0] + 1;
+        int kolumna = bledne_kolumny.empty() ? 21 : bledne_kolumny[0] + 1;
+        std::println(&quot;{} {} {}&quot;, numer + 1, wiersz, kolumna);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    // numery wierszy i kolumn, których bit parzystości się nie zgadza
+    static void bledneBity(String[] obrazek, List&lt;Integer&gt; bledneWiersze, List&lt;Integer&gt; bledneKolumny) {
+        for (int w = 0; w &lt; 20; w++) {
+            int jedynki = 0;
+            for (int k = 0; k &lt; 20; k++) {
+                jedynki += obrazek[w].charAt(k) - &#x27;0&#x27;;
+            }
+            if (jedynki % 2 != obrazek[w].charAt(20) - &#x27;0&#x27;) {
+                bledneWiersze.add(w);
+            }
+        }
+        for (int k = 0; k &lt; 20; k++) {
+            int jedynki = 0;
+            for (int w = 0; w &lt; 20; w++) {
+                jedynki += obrazek[w].charAt(k) - &#x27;0&#x27;;
+            }
+            if (jedynki % 2 != obrazek[20].charAt(k) - &#x27;0&#x27;) {
+                bledneKolumny.add(k);
+            }
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        String[] wiersze = Files.readString(Path.of(&quot;dane_obrazki.txt&quot;)).strip().split(&quot;\\s+&quot;);
+        List&lt;String[]&gt; obrazki = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; wiersze.length; i += 21) {
+            String[] obrazek = new String[21];
+            System.arraycopy(wiersze, i, obrazek, 0, 21);
+            obrazki.add(obrazek);
+        }
+
+        for (int numer = 0; numer &lt; obrazki.size(); numer++) {
+            List&lt;Integer&gt; bledneWiersze = new ArrayList&lt;&gt;();
+            List&lt;Integer&gt; bledneKolumny = new ArrayList&lt;&gt;();
+            bledneBity(obrazki.get(numer), bledneWiersze, bledneKolumny);
+            if (bledneWiersze.size() + bledneKolumny.size() == 0) {
+                continue;
+            }
+            if (bledneWiersze.size() &gt; 1 || bledneKolumny.size() &gt; 1) {
+                continue;
+            }
+            // wiersz/kolumna 21 oznacza bit parzystości
+            int wiersz = bledneWiersze.isEmpty() ? 21 : bledneWiersze.get(0) + 1;
+            int kolumna = bledneKolumny.isEmpty() ? 21 : bledneKolumny.get(0) + 1;
+            System.out.println((numer + 1) + &quot; &quot; + wiersz + &quot; &quot; + kolumna);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (numer obrazka, wiersz, kolumna) (14, 1, 15), (19, 4, 20), (26, 21, 13), (29, 2, 8), (33, 15, 21), (115, 21, 14), (116, 21, 13), (129, 21, 14), (131, 10, 7), (143, 7, 15), (154, 7, 7), (161, 21, 17), (162, 21, 16), (187, 21, 18)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/64.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2064.%20Obrazki%20%E2%80%94%2064.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-64.html%2364-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/64.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

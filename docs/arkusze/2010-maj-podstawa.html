@@ -37,7 +37,13 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1a">1a</a></li><li><a href="#1c">1c</a></li><li><a href="#2a-i-2b">2a i 2b</a></li><li><a href="#4">4</a></li><li><a href="#5a-i-5b">5a i 5b</a></li><li><a href="#5c-i-5d">5c i 5d</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2010 — maj, poziom podstawowy</span></nav>
-<h1 class="page-title">Matura 2010 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfruj(s, k):
+<h1 class="page-title">Matura 2010 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Poniższy algorytm szyfruje słowo s szyfrem przestawieniowym, a wynik zapisuje w zmiennej w (<code>&#x27;&#x27;</code> — słowo puste, <code>s[j]</code> — j-ty znak słowa numerowany od 1, <code>•</code> — sklejanie):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">1. i ← 1, w ← &#x27;&#x27;, k ← 2
+2. dopóki i ≤ k wykonuj
+       j ← i
+       dopóki j ≤ długość(s) wykonuj
+           w ← w • s[j]
+           j ← j + k
+       i ← i + 1</code></pre></div></div></div><ul><li>1a — Podaj wynik działania algorytmu dla słów ARKA i MOTOR.</li><li>1b — Kluczem szyfrującym nazywamy wartość potrzebną przy szyfrowaniu i deszyfrowaniu, której zmiana zmienia wynik szyfrowania. Która ze zmiennych i, j, k przechowuje klucz?</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfruj(s, k):
     w = &quot;&quot;
     i = 0
     while i &lt; k:
@@ -49,7 +55,44 @@
     return w
 
 
-print(szyfruj(&quot;ARKA&quot;, 2), szyfruj(&quot;MOTOR&quot;, 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> AKRA, MTROO (kluczem jest k)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfruj_pary(s):
+print(szyfruj(&quot;ARKA&quot;, 2), szyfruj(&quot;MOTOR&quot;, 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string szyfruj(const std::string&amp; s, int k) {
+    std::string w = &quot;&quot;;
+    int i = 0;
+    while (i &lt; k) {
+        int j = i;
+        while (j &lt; static_cast&lt;int&gt;(s.size())) {
+            w = w + s[j];
+            j = j + k;
+        }
+        i = i + 1;
+    }
+    return w;
+}
+
+int main() {
+    std::println(&quot;{} {}&quot;, szyfruj(&quot;ARKA&quot;, 2), szyfruj(&quot;MOTOR&quot;, 2));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String szyfruj(String s, int k) {
+        String w = &quot;&quot;;
+        int i = 0;
+        while (i &lt; k) {
+            int j = i;
+            while (j &lt; s.length()) {
+                w = w + s.charAt(j);
+                j = j + k;
+            }
+            i = i + 1;
+        }
+        return w;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(szyfruj(&quot;ARKA&quot;, 2) + &quot; &quot; + szyfruj(&quot;MOTOR&quot;, 2));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> AKRA, MTROO (kluczem jest k)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj-podstawa.html%231a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zapisz algorytm innego szyfru: słowo s dzielimy na pary kolejnych znaków i w każdej parze zamieniamy znaki miejscami; przy nieparzystej długości ostatni znak zostaje bez zmian. Wynik zapisz w zmiennej w.</p><p>Przykłady: MOTOR → MO TO R → OM OT R → <code>OMOTR</code>; MATURA → MA TU RA → <code>AMUTAR</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfruj_pary(s):
     w = &quot;&quot;
     i = 0
     while i + 1 &lt; len(s):
@@ -60,7 +103,42 @@ print(szyfruj(&quot;ARKA&quot;, 2), szyfruj(&quot;MOTOR&quot;, 2))</code></pre><
     return w
 
 
-print(szyfruj_pary(&quot;MOTOR&quot;), szyfruj_pary(&quot;MATURA&quot;))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> OMOTR, AMUTAR</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czynniki_pierwsze(n):
+print(szyfruj_pary(&quot;MOTOR&quot;), szyfruj_pary(&quot;MATURA&quot;))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string szyfruj_pary(const std::string&amp; s) {
+    std::string w = &quot;&quot;;
+    size_t i = 0;
+    while (i + 1 &lt; s.size()) {
+        w = w + s[i + 1] + s[i];
+        i = i + 2;
+    }
+    if (i &lt; s.size()) { // nieparzysta długość - ostatni znak bez zmian
+        w = w + s[i];
+    }
+    return w;
+}
+
+int main() {
+    std::println(&quot;{} {}&quot;, szyfruj_pary(&quot;MOTOR&quot;), szyfruj_pary(&quot;MATURA&quot;));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String szyfrujPary(String s) {
+        String w = &quot;&quot;;
+        int i = 0;
+        while (i + 1 &lt; s.length()) {
+            w = w + s.charAt(i + 1) + s.charAt(i);
+            i = i + 2;
+        }
+        if (i &lt; s.length()) { // nieparzysta długość - ostatni znak bez zmian
+            w = w + s.charAt(i);
+        }
+        return w;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(szyfrujPary(&quot;MOTOR&quot;) + &quot; &quot; + szyfrujPary(&quot;MATURA&quot;));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> OMOTR, AMUTAR</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj-podstawa.html%231c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Rozkład liczby całkowitej większej od 1 na czynniki pierwsze to zapisanie jej jako iloczynu liczb pierwszych (liczba pierwsza ma rozkład złożony tylko z niej samej), np. 24 = 2 · 2 · 2 · 3, 20 = 2 · 2 · 5, 19 = 19.</p><ul><li>2a — Podaj rozkład na czynniki pierwsze liczb 63, 184 i 277.</li><li>2b — Zapisz algorytm, który dla liczby całkowitej n &gt; 1 wypisuje wszystkie czynniki pierwsze jej rozkładu (z powtórzeniami), np. dla n = 24 wynik to 2, 2, 2, 3, a dla n = 19 — 19.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czynniki_pierwsze(n):
     czynniki = []
     dzielnik = 2
     while n &gt; 1:
@@ -72,13 +150,85 @@ print(szyfruj_pary(&quot;MOTOR&quot;), szyfruj_pary(&quot;MATURA&quot;))</code><
 
 
 for n in [63, 184, 277]:
-    print(n, czynniki_pierwsze(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 63 = 3·3·7; 184 = 2·2·2·23; 277 = 277</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4">4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
+    print(n, czynniki_pierwsze(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; czynniki_pierwsze(int n) {
+    std::vector&lt;int&gt; czynniki;
+    int dzielnik = 2;
+    while (n &gt; 1) {
+        while (n % dzielnik == 0) {
+            czynniki.push_back(dzielnik);
+            n = n / dzielnik;
+        }
+        dzielnik = dzielnik + 1;
+    }
+    return czynniki;
+}
+
+int main() {
+    for (int n : {63, 184, 277}) {
+        std::println(&quot;{} {}&quot;, n, czynniki_pierwsze(n)); // wektor wypisuje się jako [3, 3, 7]
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static List&lt;Integer&gt; czynnikiPierwsze(int n) {
+        var czynniki = new ArrayList&lt;Integer&gt;();
+        int dzielnik = 2;
+        while (n &gt; 1) {
+            while (n % dzielnik == 0) {
+                czynniki.add(dzielnik);
+                n = n / dzielnik;
+            }
+            dzielnik = dzielnik + 1;
+        }
+        return czynniki;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (int n : new int[]{63, 184, 277}) {
+            System.out.println(n + &quot; &quot; + czynnikiPierwsze(n)); // lista wypisuje się jako [3, 3, 7]
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 63 = 3·3·7; 184 = 2·2·2·23; 277 = 277</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202a%20i%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj-podstawa.html%232a-i-2b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4">4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>dane.txt</code> znajduje się 1000 słów (każde w osobnym wierszu) o długości od 2 do 25 znaków, złożonych z wielkich liter A–J. Palindrom to słowo, które czytane od lewej i od prawej jest takie samo (np. ABBA; JANA nie jest palindromem).</p><p>Napisz program, który wypisze wszystkie palindromy z pliku, po jednym w wierszu, w kolejności występowania w pliku. Wyniki zapisz w pliku <code>zadanie4.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
     with open(&quot;zadanie4.txt&quot;, &quot;w&quot;) as wynik:
         for line in file:
             slowo = line.strip()
             if slowo == slowo[::-1]:
                 print(slowo)
-                wynik.write(slowo + &quot;\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> CBJBC, AABBHHIHHBBAA, CCJGJCC, FDDFFFDDF, BCACHCACB, DFDCCDFD, DFFFD, AABBAA, … (42 palindromy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a-i-5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5a-i-5b">5a i 5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def koszt_a(x):  # koszt w groszach
+                wynik.write(slowo + &quot;\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::ofstream wynik(&quot;zadanie4.txt&quot;);
+    std::string slowo;
+    while (plik &gt;&gt; slowo) {
+        std::string odwrocone(slowo.rbegin(), slowo.rend());
+        if (slowo == odwrocone) {
+            std::println(&quot;{}&quot;, slowo);
+            wynik &lt;&lt; slowo &lt;&lt; &quot;\n&quot;;
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        try (var wynik = new PrintWriter(new FileWriter(&quot;zadanie4.txt&quot;))) {
+            for (String linia : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+                String slowo = linia.strip();
+                String odwrocone = new StringBuilder(slowo).reverse().toString();
+                if (slowo.equals(odwrocone)) {
+                    System.out.println(slowo);
+                    wynik.println(slowo);
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> CBJBC, AABBHHIHHBBAA, CCJGJCC, FDDFFFDDF, BCACHCACB, DFDCCDFD, DFFFD, AABBAA, … (42 palindromy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj-podstawa.html%234" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a-i-5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5a-i-5b">5a i 5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Producenci A i B sprzedają towar po 12,00 zł za sztukę z upustami (x — liczba sztuk, k — koszt):</p><ul><li>Producent A: dla x ≤ 500: k = x · (1 − 0,15) · 12; dla x &gt; 500: k = x · (1 − 0,25) · 12.</li><li>Producent B: dla x ≤ 300: k = x · (1 − 0,1) · 12; dla 300 &lt; x ≤ 600: k = 300 · (1 − 0,1) · 12 + (x − 300) · (1 − 0,25) · 12; dla x &gt; 600: k = x · (1 − 0,35) · 12.</li></ul><p>Towar pakowany jest po 10 sztuk, więc x to wielokrotność 10 z przedziału [10, 1000]. Odpowiedzi zapisz w pliku <code>zadanie5.txt</code>, poprzedzając je literą podpunktu.</p><ul><li>5a — W jakich przedziałach wartości x zakup u producenta A jest tańszy?</li><li>5b — Przy jakiej liczbie sztuk koszt u obu producentów jest taki sam?</li></ul></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def koszt_a(x):  # koszt w groszach
     if x &lt;= 500:
         return x * 85 * 12
     return x * 75 * 12
@@ -105,7 +255,89 @@ print(&quot;a)&quot;, przedzialy)
 # b) ten sam koszt
 for x in range(10, 1001, 10):
     if koszt_a(x) == koszt_b(x):
-        print(&quot;b)&quot;, x)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) &lt;10, 440&gt; i &lt;510, 600&gt;; b) 450 sztuk</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c-i-5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5c-i-5d">5c i 5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def koszt_a(x):  # koszt w groszach
+        print(&quot;b)&quot;, x)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;array&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int koszt_a(int x) { // koszt w groszach
+    if (x &lt;= 500) {
+        return x * 85 * 12;
+    }
+    return x * 75 * 12;
+}
+
+int koszt_b(int x) {
+    if (x &lt;= 300) {
+        return x * 90 * 12;
+    }
+    if (x &lt;= 600) {
+        return 300 * 90 * 12 + (x - 300) * 75 * 12;
+    }
+    return x * 65 * 12;
+}
+
+int main() {
+    // a) przedziały, w których A jest tańszy
+    std::vector&lt;std::array&lt;int, 2&gt;&gt; przedzialy;
+    for (int x = 10; x &lt;= 1000; x += 10) {
+        if (koszt_a(x) &lt; koszt_b(x)) {
+            if (!przedzialy.empty() &amp;&amp; przedzialy.back()[1] == x - 10) {
+                przedzialy.back()[1] = x;
+            } else {
+                przedzialy.push_back({x, x});
+            }
+        }
+    }
+    std::println(&quot;a) {}&quot;, przedzialy);
+
+    // b) ten sam koszt
+    for (int x = 10; x &lt;= 1000; x += 10) {
+        if (koszt_a(x) == koszt_b(x)) {
+            std::println(&quot;b) {}&quot;, x);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int kosztA(int x) { // koszt w groszach
+        if (x &lt;= 500) {
+            return x * 85 * 12;
+        }
+        return x * 75 * 12;
+    }
+
+    static int kosztB(int x) {
+        if (x &lt;= 300) {
+            return x * 90 * 12;
+        }
+        if (x &lt;= 600) {
+            return 300 * 90 * 12 + (x - 300) * 75 * 12;
+        }
+        return x * 65 * 12;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // a) przedziały, w których A jest tańszy
+        var przedzialy = new ArrayList&lt;List&lt;Integer&gt;&gt;();
+        for (int x = 10; x &lt;= 1000; x += 10) {
+            if (kosztA(x) &lt; kosztB(x)) {
+                if (!przedzialy.isEmpty() &amp;&amp; przedzialy.getLast().get(1) == x - 10) {
+                    przedzialy.getLast().set(1, x);
+                } else {
+                    przedzialy.add(new ArrayList&lt;&gt;(List.of(x, x)));
+                }
+            }
+        }
+        System.out.println(&quot;a) &quot; + przedzialy);
+
+        // b) ten sam koszt
+        for (int x = 10; x &lt;= 1000; x += 10) {
+            if (kosztA(x) == kosztB(x)) {
+                System.out.println(&quot;b) &quot; + x);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) &lt;10, 440&gt; i &lt;510, 600&gt;; b) 450 sztuk</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205a%20i%205b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj-podstawa.html%235a-i-5b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c-i-5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5c-i-5d">5c i 5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane i reguły cenowe producentów A i B jak w 5a (x — wielokrotność 10 z przedziału [10, 1000]); odpowiedzi w pliku <code>zadanie5.txt</code>.</p><ul><li>5c — Jaka jest największa liczba sztuk, dla której koszt zakupu u A jest mniejszy niż koszt zakupu 500 sztuk u B?</li><li>5d — Jaka jest największa liczba sztuk, dla której koszt zakupu u B jest mniejszy niż koszt zakupu 600 sztuk u A?</li></ul></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def koszt_a(x):  # koszt w groszach
     if x &lt;= 500:
         return x * 85 * 12
     return x * 75 * 12
@@ -128,7 +360,71 @@ for x in range(10, 1001, 10):
         najwiecej_d = x
 
 print(&quot;c)&quot;, najwiecej_c)
-print(&quot;d)&quot;, najwiecej_d)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> c) 550 sztuk; d) 690 sztuk</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;d)&quot;, najwiecej_d)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int koszt_a(int x) { // koszt w groszach
+    if (x &lt;= 500) {
+        return x * 85 * 12;
+    }
+    return x * 75 * 12;
+}
+
+int koszt_b(int x) {
+    if (x &lt;= 300) {
+        return x * 90 * 12;
+    }
+    if (x &lt;= 600) {
+        return 300 * 90 * 12 + (x - 300) * 75 * 12;
+    }
+    return x * 65 * 12;
+}
+
+int main() {
+    int najwiecej_c = 0;
+    int najwiecej_d = 0;
+    for (int x = 10; x &lt;= 1000; x += 10) {
+        if (koszt_a(x) &lt; koszt_b(500)) {
+            najwiecej_c = x;
+        }
+        if (koszt_b(x) &lt; koszt_a(600)) {
+            najwiecej_d = x;
+        }
+    }
+    std::println(&quot;c) {}&quot;, najwiecej_c);
+    std::println(&quot;d) {}&quot;, najwiecej_d);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int kosztA(int x) { // koszt w groszach
+        if (x &lt;= 500) {
+            return x * 85 * 12;
+        }
+        return x * 75 * 12;
+    }
+
+    static int kosztB(int x) {
+        if (x &lt;= 300) {
+            return x * 90 * 12;
+        }
+        if (x &lt;= 600) {
+            return 300 * 90 * 12 + (x - 300) * 75 * 12;
+        }
+        return x * 65 * 12;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int najwiecejC = 0;
+        int najwiecejD = 0;
+        for (int x = 10; x &lt;= 1000; x += 10) {
+            if (kosztA(x) &lt; kosztB(500)) {
+                najwiecejC = x;
+            }
+            if (kosztB(x) &lt; kosztA(600)) {
+                najwiecejD = x;
+            }
+        }
+        System.out.println(&quot;c) &quot; + najwiecejC);
+        System.out.println(&quot;d) &quot; + najwiecejD);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> c) 550 sztuk; d) 690 sztuk</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205c%20i%205d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj-podstawa.html%235c-i-5d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj_podstawa/2010_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

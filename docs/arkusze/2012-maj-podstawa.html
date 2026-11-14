@@ -37,7 +37,9 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1a-i-1b">1a i 1b</a></li><li><a href="#1c">1c</a></li><li><a href="#2a">2a</a></li><li><a href="#2b">2b</a></li><li><a href="#4a">4a</a></li><li><a href="#4b">4b</a></li><li><a href="#4c">4c</a></li><li><a href="#5a-i-5b">5a i 5b</a></li><li><a href="#5d">5d</a></li><li><a href="#5e">5e</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2012 — maj, poziom podstawowy</span></nav>
-<h1 class="page-title">Matura 2012 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a-i-1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a-i-1b">1a i 1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">poziomy = []
+<h1 class="page-title">Matura 2012 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2012-maj-matura-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a-i-1b" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a-i-1b">1a i 1b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Funkcja rekurencyjna Fib oblicza k-ty wyraz ciągu Fibonacciego (k — liczba naturalna większa od zera):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">Fib(k):
+1. jeżeli k = 1 lub k = 2, to wynikiem jest 1
+2. jeżeli k &gt; 2, to wynikiem jest Fib(k − 1) + Fib(k − 2)</code></pre></div></div></div><p>Np. Fib(4) = Fib(3) + Fib(2) = Fib(2) + Fib(1) + Fib(2) = 3.</p><ul><li>1a — Uzupełnij tabelę wartości Fib(k) (m.in. dla k = 8 i k = 11).</li><li>1b — Wywołanie Fib(k) dla k &gt; 2 powoduje dwa wywołania z mniejszymi argumentami, co można przedstawić jako drzewo wywołań (w arkuszu podano drzewo dla k = 5, w węzłach są argumenty). Narysuj drzewo wywołań dla Fib(6).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">poziomy = []
 
 
 def fib(k, poziom=0):
@@ -56,7 +58,67 @@ print(&quot;Fib(11) =&quot;, fib(11))
 poziomy.clear()
 fib(6)
 for poziom in poziomy:  # drzewo wywołań dla Fib(6), poziom po poziomie
-    print(*poziom)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) Fib(8) = 21, Fib(11) = 89; b) drzewo: 6 / 5 4 / 4 3 3 2 / 3 2 2 1 2 1 / 2 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wyraz(k):
+    print(*poziom)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::vector&lt;int&gt;&gt; poziomy;
+
+int fib(int k, int poziom = 0) {
+    // zapamiętujemy argumenty wywołań na kolejnych poziomach drzewa
+    if (static_cast&lt;int&gt;(poziomy.size()) &lt;= poziom) {
+        poziomy.push_back({});
+    }
+    poziomy[poziom].push_back(k);
+    if (k == 1 || k == 2) {
+        return 1;
+    }
+    return fib(k - 1, poziom + 1) + fib(k - 2, poziom + 1);
+}
+
+int main() {
+    std::println(&quot;Fib(8) = {}&quot;, fib(8));
+    std::println(&quot;Fib(11) = {}&quot;, fib(11));
+
+    poziomy.clear();
+    fib(6);
+    for (const auto&amp; poziom : poziomy) { // drzewo wywołań dla Fib(6), poziom po poziomie
+        for (size_t i = 0; i &lt; poziom.size(); i++) {
+            std::print(&quot;{}{}&quot;, i &gt; 0 ? &quot; &quot; : &quot;&quot;, poziom[i]);
+        }
+        std::println();
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static List&lt;List&lt;Integer&gt;&gt; poziomy = new ArrayList&lt;&gt;();
+
+    static int fib(int k, int poziom) {
+        // zapamiętujemy argumenty wywołań na kolejnych poziomach drzewa
+        if (poziomy.size() &lt;= poziom) {
+            poziomy.add(new ArrayList&lt;&gt;());
+        }
+        poziomy.get(poziom).add(k);
+        if (k == 1 || k == 2) {
+            return 1;
+        }
+        return fib(k - 1, poziom + 1) + fib(k - 2, poziom + 1);
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(&quot;Fib(8) = &quot; + fib(8, 0));
+        System.out.println(&quot;Fib(11) = &quot; + fib(11, 0));
+
+        poziomy.clear();
+        fib(6, 0);
+        for (List&lt;Integer&gt; poziom : poziomy) { // drzewo wywołań dla Fib(6), poziom po poziomie
+            var napisy = new ArrayList&lt;String&gt;();
+            for (int k : poziom) {
+                napisy.add(String.valueOf(k));
+            }
+            System.out.println(String.join(&quot; &quot;, napisy));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) Fib(8) = 21, Fib(11) = 89; b) drzewo: 6 / 5 4 / 4 3 3 2 / 3 2 2 1 2 1 / 2 1</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201a%20i%201b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%231a-i-1b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Ciąg Fibonacciego można liczyć iteracyjnie, pamiętając dwa ostatnie wyrazy. Zdefiniujmy nowy ciąg: pierwszy i drugi wyraz są równe 1; dla k &gt; 2 parzystego k-ty wyraz jest sumą trzech wyrazów go poprzedzających; dla k &gt; 2 nieparzystego k-ty wyraz jest równy wyrazowi o numerze k − 1. Początkowe wyrazy (k = 1..8): 1, 1, 1, 3, 3, 7, 7, 17.</p><p>Zapisz iteracyjny algorytm, który dla danego k &gt; 0 wyznacza k-ty wyraz tego ciągu.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wyraz(k):
     a = [0, 1, 1]  # a[1] = a[2] = 1, a[0] nieużywane
     for i in range(3, k + 1):
         if i % 2 == 0:
@@ -67,7 +129,51 @@ for poziom in poziomy:  # drzewo wywołań dla Fib(6), poziom po poziomie
 
 
 for k in range(1, 9):
-    print(k, wyraz(k))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1, 1, 1, 3, 3, 7, 7, 17 (zgodnie z tabelą w treści)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(d):
+    print(k, wyraz(k))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int wyraz(int k) {
+    std::vector&lt;int&gt; a = {0, 1, 1}; // a[1] = a[2] = 1, a[0] nieużywane
+    for (int i = 3; i &lt;= k; i++) {
+        if (i % 2 == 0) {
+            a.push_back(a[i - 1] + a[i - 2] + a[i - 3]);
+        } else {
+            a.push_back(a[i - 1]);
+        }
+    }
+    return a[k];
+}
+
+int main() {
+    for (int k = 1; k &lt; 9; k++) {
+        std::println(&quot;{} {}&quot;, k, wyraz(k));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int wyraz(int k) {
+        var a = new ArrayList&lt;Integer&gt;(List.of(0, 1, 1)); // a[1] = a[2] = 1, a[0] nieużywane
+        for (int i = 3; i &lt;= k; i++) {
+            if (i % 2 == 0) {
+                a.add(a.get(i - 1) + a.get(i - 2) + a.get(i - 3));
+            } else {
+                a.add(a.get(i - 1));
+            }
+        }
+        return a.get(k);
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (int k = 1; k &lt; 9; k++) {
+            System.out.println(k + &quot; &quot; + wyraz(k));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1, 1, 1, 3, 3, 7, 7, 17 (zgodnie z tabelą w treści)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%231c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W sejfie jest n diamentów o różnych cenach d₁, …, dₙ, znanych tylko jubilerowi. Jubiler wykonuje jedynie operację porównania: <code>większe(i, j)</code> jest prawdą, gdy dᵢ &gt; dⱼ, a fałszem, gdy dᵢ &lt; dⱼ. Dany jest algorytm:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">1. j ← 0
+2. i ← 1
+3. dopóki i &lt; n
+       jeżeli większe(i, i + 1), to j ← j + 1
+       i ← i + 1
+4. wypisz j</code></pre></div></div></div><p>Podaj wynik algorytmu dla n = 4 i ciągów cen: (5, 2, 1, 6), (2, 5, 1, 2), (1, 2, 3, 4), (4, 3, 2, 1) (pierwszy wynik, 2, podano w arkuszu).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(d):
     n = len(d)
     j = 0
     i = 1
@@ -79,7 +185,50 @@ for k in range(1, 9):
 
 
 for d in [[5, 2, 1, 6], [2, 5, 1, 2], [1, 2, 3, 4], [4, 3, 2, 1]]:
-    print(d, algorytm(d))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2 (podane), 1, 0, 3</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2b">2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdrozszy(d):
+    print(d, algorytm(d))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int algorytm(const std::vector&lt;int&gt;&amp; d) {
+    int n = static_cast&lt;int&gt;(d.size());
+    int j = 0;
+    int i = 1;
+    while (i &lt; n) {
+        if (d[i - 1] &gt; d[i]) { // większe(i, i+1), numeracja od 1
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    return j;
+}
+
+int main() {
+    std::vector&lt;std::vector&lt;int&gt;&gt; dane = {{5, 2, 1, 6}, {2, 5, 1, 2}, {1, 2, 3, 4}, {4, 3, 2, 1}};
+    for (const auto&amp; d : dane) {
+        std::println(&quot;{} {}&quot;, d, algorytm(d));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int algorytm(List&lt;Integer&gt; d) {
+        int n = d.size();
+        int j = 0;
+        int i = 1;
+        while (i &lt; n) {
+            if (d.get(i - 1) &gt; d.get(i)) { // większe(i, i+1), numeracja od 1
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        return j;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var dane = List.of(List.of(5, 2, 1, 6), List.of(2, 5, 1, 2), List.of(1, 2, 3, 4), List.of(4, 3, 2, 1));
+        for (List&lt;Integer&gt; d : dane) {
+            System.out.println(d + &quot; &quot; + algorytm(d));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2 (podane), 1, 0, 3</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%232a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2b">2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Diamenty i operacja <code>większe(i, j)</code> jak w 2a.</p><p>Zapisz algorytm, który dla n &gt; 0 diamentów o różnych cenach znajduje numer i diamentu o najwyższej cenie, korzystając wyłącznie z operacji <code>większe</code>. Podaj, ile porównań wykonuje Twój algorytm dla n = 1000.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdrozszy(d):
     porownania = 0
     i = 1
     for k in range(2, len(d) + 1):
@@ -90,14 +239,84 @@ for d in [[5, 2, 1, 6], [2, 5, 1, 2], [1, 2, 3, 4], [4, 3, 2, 1]]:
 
 
 print(najdrozszy([5, 2, 1, 6]))
-print(najdrozszy(list(range(1000)))[1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dla n = 1000 algorytm wykonuje 999 porównań</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a">4a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">parzyste = 0
+print(najdrozszy(list(range(1000)))[1])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;numeric&gt;
+#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::pair&lt;int, int&gt; najdrozszy(const std::vector&lt;int&gt;&amp; d) {
+    int porownania = 0;
+    int i = 1;
+    for (int k = 2; k &lt;= static_cast&lt;int&gt;(d.size()); k++) {
+        porownania += 1;
+        if (d[k - 1] &gt; d[i - 1]) { // większe(k, i)
+            i = k;
+        }
+    }
+    return {i, porownania};
+}
+
+int main() {
+    std::println(&quot;{}&quot;, najdrozszy({5, 2, 1, 6})); // para wypisuje się jako (4, 3)
+    std::vector&lt;int&gt; d(1000);
+    std::iota(d.begin(), d.end(), 0); // 0, 1, ..., 999
+    std::println(&quot;{}&quot;, najdrozszy(d).second);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // zwraca parę (indeks najdroższego, liczba porównań)
+    static int[] najdrozszy(int[] d) {
+        int porownania = 0;
+        int i = 1;
+        for (int k = 2; k &lt;= d.length; k++) {
+            porownania += 1;
+            if (d[k - 1] &gt; d[i - 1]) { // większe(k, i)
+                i = k;
+            }
+        }
+        return new int[]{i, porownania};
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[] wynik = najdrozszy(new int[]{5, 2, 1, 6});
+        System.out.println(&quot;(&quot; + wynik[0] + &quot;, &quot; + wynik[1] + &quot;)&quot;);
+        int[] d = new int[1000];
+        for (int i = 0; i &lt; 1000; i++) {
+            d[i] = i;
+        }
+        System.out.println(najdrozszy(d)[1]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dla n = 1000 algorytm wykonuje 999 porównań</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%232b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a">4a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>cyfry.txt</code> znajduje się 1000 liczb naturalnych mniejszych niż 10⁹, każda w osobnym wierszu. Odpowiedzi zapisz w pliku <code>zadanie4.txt</code>, poprzedzając je oznaczeniem podpunktu.</p><p>Ile liczb w pliku jest parzystych?</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">parzyste = 0
 
 with open(&quot;cyfry.txt&quot;) as file:
     for line in file:
         if int(line) % 2 == 0:
             parzyste += 1
 
-print(parzyste)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 495</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4b">4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_cyfr(liczba):
+print(parzyste)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+
+int main() {
+    int parzyste = 0;
+    std::ifstream plik(&quot;cyfry.txt&quot;);
+    long long liczba;
+    while (plik &gt;&gt; liczba) {
+        if (liczba % 2 == 0) {
+            parzyste += 1;
+        }
+    }
+    std::println(&quot;{}&quot;, parzyste);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int parzyste = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;cyfry.txt&quot;))) {
+            if (Long.parseLong(linia.strip()) % 2 == 0) {
+                parzyste += 1;
+            }
+        }
+        System.out.println(parzyste);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 495</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%234a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4b">4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>cyfry.txt</code> (1000 liczb naturalnych &lt; 10⁹).</p><p>Podaj liczbę o największej sumie cyfr oraz liczbę o najmniejszej sumie cyfr (każda jest jedyna). Przykład: dla 121324, 66562, 675100, 1187010 odpowiedzią jest 66562 (suma 25) oraz 121324 (suma 13).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_cyfr(liczba):
     suma = 0
     for cyfra in liczba:
         suma += int(cyfra)
@@ -116,7 +335,60 @@ with open(&quot;cyfry.txt&quot;) as file:
             najmniejsza = liczba
 
 print(&quot;największa suma cyfr:&quot;, najwieksza)
-print(&quot;najmniejsza suma cyfr:&quot;, najmniejsza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> największa suma cyfr: 187869866, najmniejsza suma cyfr: 10010</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4c">4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;cyfry.txt&quot;) as file:
+print(&quot;najmniejsza suma cyfr:&quot;, najmniejsza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int suma_cyfr(const std::string&amp; liczba) {
+    int suma = 0;
+    for (char cyfra : liczba) {
+        suma += cyfra - &#x27;0&#x27;;
+    }
+    return suma;
+}
+
+int main() {
+    std::string najwieksza = &quot;&quot;;
+    std::string najmniejsza = &quot;&quot;;
+    std::ifstream plik(&quot;cyfry.txt&quot;);
+    std::string liczba;
+    while (plik &gt;&gt; liczba) {
+        if (najwieksza == &quot;&quot; || suma_cyfr(liczba) &gt; suma_cyfr(najwieksza)) {
+            najwieksza = liczba;
+        }
+        if (najmniejsza == &quot;&quot; || suma_cyfr(liczba) &lt; suma_cyfr(najmniejsza)) {
+            najmniejsza = liczba;
+        }
+    }
+    std::println(&quot;największa suma cyfr: {}&quot;, najwieksza);
+    std::println(&quot;najmniejsza suma cyfr: {}&quot;, najmniejsza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    static int sumaCyfr(String liczba) {
+        int suma = 0;
+        for (char cyfra : liczba.toCharArray()) {
+            suma += cyfra - &#x27;0&#x27;;
+        }
+        return suma;
+    }
+
+    public static void main(String[] args) throws Exception {
+        String najwieksza = &quot;&quot;;
+        String najmniejsza = &quot;&quot;;
+        for (String linia : Files.readAllLines(Path.of(&quot;cyfry.txt&quot;))) {
+            String liczba = linia.strip();
+            if (najwieksza.isEmpty() || sumaCyfr(liczba) &gt; sumaCyfr(najwieksza)) {
+                najwieksza = liczba;
+            }
+            if (najmniejsza.isEmpty() || sumaCyfr(liczba) &lt; sumaCyfr(najmniejsza)) {
+                najmniejsza = liczba;
+            }
+        }
+        System.out.println(&quot;największa suma cyfr: &quot; + najwieksza);
+        System.out.println(&quot;najmniejsza suma cyfr: &quot; + najmniejsza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> największa suma cyfr: 187869866, najmniejsza suma cyfr: 10010</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%234b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4c">4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>cyfry.txt</code> (1000 liczb naturalnych &lt; 10⁹).</p><p>Wypisz wszystkie liczby, których cyfry tworzą ciąg ściśle rosnący (np. 123579 tak; 1232 i 34556 nie).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;cyfry.txt&quot;) as file:
     for line in file:
         liczba = line.strip()
         rosnace = True
@@ -124,7 +396,42 @@ print(&quot;najmniejsza suma cyfr:&quot;, najmniejsza)</code></pre></div><p clas
             if liczba[i] &lt;= liczba[i - 1]:
                 rosnace = False
         if rosnace:
-            print(liczba)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2389, 23567, 123456789, 3468</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a-i-5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5a-i-5b">5a i 5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">cena = [200, 200, 200]
+            print(liczba)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;cyfry.txt&quot;);
+    std::string liczba;
+    while (plik &gt;&gt; liczba) {
+        bool rosnace = true;
+        for (size_t i = 1; i &lt; liczba.size(); i++) {
+            if (liczba[i] &lt;= liczba[i - 1]) {
+                rosnace = false;
+            }
+        }
+        if (rosnace) {
+            std::println(&quot;{}&quot;, liczba);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(&quot;cyfry.txt&quot;))) {
+            String liczba = linia.strip();
+            boolean rosnace = true;
+            for (int i = 1; i &lt; liczba.length(); i++) {
+                if (liczba.charAt(i) &lt;= liczba.charAt(i - 1)) {
+                    rosnace = false;
+                }
+            }
+            if (rosnace) {
+                System.out.println(liczba);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2389, 23567, 123456789, 3468</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%234c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a-i-5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5a-i-5b">5a i 5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>gielda.txt</code> ma 400 wierszy; w każdym są trzy liczby całkowite — zmiany cen akcji firm A, B i C w kolejnych dniach. Przed pierwszym dniem każda akcja kosztowała 200 zł (np. wiersze <code>0 12 -7</code>, <code>1 -3 4</code> dają ceny 200/212/193, potem 201/209/197). Odpowiedzi (poza wykresem z c) zapisz w pliku <code>zadanie5.txt</code>, poprzedzając je literą podpunktu.</p><ul><li>5a — Wyznacz końcową (po 400 dniach) cenę akcji każdej z firm.</li><li>5b — Podaj najwyższą i najniższą cenę akcji każdej z firm w ciągu tych 400 dni.</li></ul></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">cena = [200, 200, 200]
 najwyzsza = [200, 200, 200]
 najnizsza = [10 ** 9, 10 ** 9, 10 ** 9]
 
@@ -137,7 +444,50 @@ with open(&quot;gielda.txt&quot;) as file:
             najnizsza[i] = min(najnizsza[i], cena[i])
 
 print(&quot;a)&quot;, &quot;A:&quot;, cena[0], &quot;B:&quot;, cena[1], &quot;C:&quot;, cena[2])
-print(&quot;b) max:&quot;, najwyzsza, &quot;min:&quot;, najnizsza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) A – 221, B – 117, C – 198; b) max: A 264, B 210, C 223; min: A 167, B 62, C 97</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5d">5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">cena = [200, 200, 200]
+print(&quot;b) max:&quot;, najwyzsza, &quot;min:&quot;, najnizsza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; cena = {200, 200, 200};
+    std::vector&lt;int&gt; najwyzsza = {200, 200, 200};
+    std::vector&lt;int&gt; najnizsza = {1000000000, 1000000000, 1000000000};
+
+    std::ifstream plik(&quot;gielda.txt&quot;);
+    int zmiany[3];
+    while (plik &gt;&gt; zmiany[0] &gt;&gt; zmiany[1] &gt;&gt; zmiany[2]) {
+        for (int i = 0; i &lt; 3; i++) {
+            cena[i] += zmiany[i];
+            najwyzsza[i] = std::max(najwyzsza[i], cena[i]);
+            najnizsza[i] = std::min(najnizsza[i], cena[i]);
+        }
+    }
+
+    std::println(&quot;a) A: {} B: {} C: {}&quot;, cena[0], cena[1], cena[2]);
+    std::println(&quot;b) max: {} min: {}&quot;, najwyzsza, najnizsza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int[] cena = {200, 200, 200};
+        int[] najwyzsza = {200, 200, 200};
+        int[] najnizsza = {1000000000, 1000000000, 1000000000};
+
+        for (String linia : Files.readAllLines(Path.of(&quot;gielda.txt&quot;))) {
+            String[] zmiany = linia.strip().split(&quot;\\s+&quot;);
+            for (int i = 0; i &lt; 3; i++) {
+                cena[i] += Integer.parseInt(zmiany[i]);
+                najwyzsza[i] = Math.max(najwyzsza[i], cena[i]);
+                najnizsza[i] = Math.min(najnizsza[i], cena[i]);
+            }
+        }
+
+        System.out.println(&quot;a) A: &quot; + cena[0] + &quot; B: &quot; + cena[1] + &quot; C: &quot; + cena[2]);
+        System.out.println(&quot;b) max: &quot; + Arrays.toString(najwyzsza) + &quot; min: &quot; + Arrays.toString(najnizsza));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) A – 221, B – 117, C – 198; b) max: A 264, B 210, C 223; min: A 167, B 62, C 97</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205a%20i%205b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%235a-i-5b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5d">5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>gielda.txt</code> (dzienne zmiany cen akcji A, B, C; start 200 zł).</p><p>Krach giełdowy to dzień, w którym spadła cena akcji każdej z trzech firm, a suma spadków przekracza 20 zł (np. 233/166/164 → 230/150/160: spadki 3 + 16 + 4 &gt; 20). Podaj liczbę krachów oraz ceny akcji wszystkich firm w dniu ostatniego krachu.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">cena = [200, 200, 200]
 krachy = 0
 ostatni = []
 
@@ -150,7 +500,53 @@ with open(&quot;gielda.txt&quot;) as file:
             krachy += 1
             ostatni = cena[:]
 
-print(krachy, ostatni)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 6 krachów, ceny przy ostatnim krachu: A – 224, B – 163, C – 194</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5e" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5e">5e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">cena = 200
+print(krachy, ostatni)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; cena = {200, 200, 200};
+    int krachy = 0;
+    std::vector&lt;int&gt; ostatni;
+
+    std::ifstream plik(&quot;gielda.txt&quot;);
+    int zmiany[3];
+    while (plik &gt;&gt; zmiany[0] &gt;&gt; zmiany[1] &gt;&gt; zmiany[2]) {
+        for (int i = 0; i &lt; 3; i++) {
+            cena[i] += zmiany[i];
+        }
+        int suma = zmiany[0] + zmiany[1] + zmiany[2];
+        if (zmiany[0] &lt; 0 &amp;&amp; zmiany[1] &lt; 0 &amp;&amp; zmiany[2] &lt; 0 &amp;&amp; -suma &gt; 20) {
+            krachy += 1;
+            ostatni = cena; // kopia wektora
+        }
+    }
+
+    std::println(&quot;{} {}&quot;, krachy, ostatni);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int[] cena = {200, 200, 200};
+        int krachy = 0;
+        int[] ostatni = {};
+
+        for (String linia : Files.readAllLines(Path.of(&quot;gielda.txt&quot;))) {
+            int[] zmiany = Arrays.stream(linia.strip().split(&quot;\\s+&quot;)).mapToInt(Integer::parseInt).toArray();
+            for (int i = 0; i &lt; 3; i++) {
+                cena[i] += zmiany[i];
+            }
+            int suma = zmiany[0] + zmiany[1] + zmiany[2];
+            if (zmiany[0] &lt; 0 &amp;&amp; zmiany[1] &lt; 0 &amp;&amp; zmiany[2] &lt; 0 &amp;&amp; -suma &gt; 20) {
+                krachy += 1;
+                ostatni = cena.clone(); // kopia tablicy
+            }
+        }
+
+        System.out.println(krachy + &quot; &quot; + Arrays.toString(ostatni));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 6 krachów, ceny przy ostatnim krachu: A – 224, B – 163, C – 194</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%235d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5e" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5e">5e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>gielda.txt</code> (dzienne zmiany cen akcji A, B, C; start 200 zł).</p><p>Rekord firmy to cena akcji w dniu, w którym jest ona wyższa od wszystkich wcześniejszych cen tej firmy (przed pierwszym dniem rekord wynosi 200 zł). Podaj, ile razy w ciągu 400 dni zmieniał się rekord firmy A.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">cena = 200
 rekord = 200
 zmiany_rekordu = 0
 
@@ -161,7 +557,45 @@ with open(&quot;gielda.txt&quot;) as file:
             rekord = cena
             zmiany_rekordu += 1
 
-print(zmiany_rekordu)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 14 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(zmiany_rekordu)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int cena = 200;
+    int rekord = 200;
+    int zmiany_rekordu = 0;
+
+    std::ifstream plik(&quot;gielda.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        cena += std::stoi(linia); // stoi czyta pierwszą liczbę w wierszu (spółka A)
+        if (cena &gt; rekord) {
+            rekord = cena;
+            zmiany_rekordu += 1;
+        }
+    }
+
+    std::println(&quot;{}&quot;, zmiany_rekordu);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int cena = 200;
+        int rekord = 200;
+        int zmianyRekordu = 0;
+
+        for (String linia : Files.readAllLines(Path.of(&quot;gielda.txt&quot;))) {
+            cena += Integer.parseInt(linia.strip().split(&quot;\\s+&quot;)[0]); // pierwsza liczba w wierszu (spółka A)
+            if (cena &gt; rekord) {
+                rekord = cena;
+                zmianyRekordu += 1;
+            }
+        }
+
+        System.out.println(zmianyRekordu);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 14 razy</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202012%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%205e&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2012-maj-podstawa.html%235e" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2012_maj_podstawa/2012_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

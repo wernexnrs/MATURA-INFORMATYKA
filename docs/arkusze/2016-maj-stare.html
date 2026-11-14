@@ -37,7 +37,15 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#3-1-i-3-3">3.1 i 3.3</a></li><li><a href="#4-1-4-2-i-4-4">4.1, 4.2 i 4.4</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1-5-2-i-5-3">5.1, 5.2 i 5.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2016 — maj, poziom rozszerzony (stara formuła)</span></nav>
-<h1 class="page-title">Matura 2016 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/MIN-R1_1P-162.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/MIN-R2_1P-162.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/Dane_PR2.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/zasady_oceniania/MIN-R1-S.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def popularnosc(A):
+<h1 class="page-title">Matura 2016 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/MIN-R1_1P-162.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/MIN-R2_1P-162.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/Dane_PR2.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2016/formula_do_2014/zasady_oceniania/MIN-R1-S.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2. Popularność. Dane: liczba całkowita <code>n &gt; 1</code> oraz tablica liczb całkowitych <code>A[1..n]</code>. Rozważamy algorytm:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">max ← 1; nr ← 1
+dla i = 1, 2, ..., n wykonuj:
+    k ← 0
+    dla j = i, i+1, ..., n wykonuj:
+        jeżeli A[i] = A[j], to            (wiersz 5)
+            k ← k + 1                     (wiersz 6)
+    jeżeli k &gt; max, to
+        max ← k; nr ← i                   (wiersz 8)
+wynikiem jest A[nr]</code></pre></div></div></div><ul><li>2.1 — Podaj wynik algorytmu dla danych: <code>n=5: 1, 2, 1, 2, 1</code>; <code>n=6: 2, 4, 4, 2, 4, 2</code>; <code>n=9: 2, 3, 3, 4, 4, 3, 2, 2, 3</code>.</li><li>2.2 — Podaj, ile razy zostanie wykonane porównanie <code>A[i] = A[j]</code> (wiersz 5) dla <code>n</code> = 2 (odpowiedź: 3), 3, 7, 10, 15 i 1000.</li><li>2.3 — Podaj, ile razy wykona się instrukcja z wiersza 6, a ile z wiersza 8, gdy wszystkie elementy tablicy są równe.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def popularnosc(A):
     n = len(A)
     maks = 1
     nr = 0
@@ -69,14 +77,128 @@ for n in [2, 3, 7, 10, 15, 1000]:
 # 2.3 - wszystkie elementy rowne
 n = 10
 wynik, porownania, wiersz6, wiersz8 = popularnosc([5] * n)
-print(wiersz6, n * (n + 1) // 2, wiersz8)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 1; 2; 3. 2.2: 3; 6; 28; 55; 120; 500500 (czyli n(n+1)/2). 2.3: wiersz 6. — n(n+1)/2 razy, wiersz 8. — 1 raz</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-3">3.1 i 3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_przekatnej(n):
+print(wiersz6, n * (n + 1) // 2, wiersz8)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+struct Wynik {
+    int najpopularniejszy;
+    long long porownania, wiersz6, wiersz8;
+};
+
+Wynik popularnosc(const std::vector&lt;int&gt;&amp; A) {
+    int n = A.size();
+    int maks = 1;
+    int nr = 0;
+    long long porownania = 0;  // wiersz 5.
+    long long wiersz6 = 0;
+    long long wiersz8 = 0;
+    for (int i = 0; i &lt; n; i++) {
+        int k = 0;
+        for (int j = i; j &lt; n; j++) {
+            porownania++;
+            if (A[i] == A[j]) {
+                k++;
+                wiersz6++;
+            }
+        }
+        if (k &gt; maks) {
+            maks = k;
+            nr = i;
+            wiersz8++;
+        }
+    }
+    return {A[nr], porownania, wiersz6, wiersz8};
+}
+
+int main() {
+    // 2.1
+    std::vector&lt;std::vector&lt;int&gt;&gt; ciagi = {{1, 2, 1, 2, 1}, {2, 4, 4, 2, 4, 2}, {2, 3, 3, 4, 4, 3, 2, 2, 3}};
+    for (const auto&amp; A : ciagi)
+        std::println(&quot;{}&quot;, popularnosc(A).najpopularniejszy);
+
+    // 2.2 - liczba porownan w wierszu 5.
+    for (int n : {2, 3, 7, 10, 15, 1000})
+        std::println(&quot;{} {}&quot;, n, popularnosc(std::vector&lt;int&gt;(n, 0)).porownania);
+
+    // 2.3 - wszystkie elementy rowne
+    int n = 10;
+    Wynik w = popularnosc(std::vector&lt;int&gt;(n, 5));
+    std::println(&quot;{} {} {}&quot;, w.wiersz6, n * (n + 1) / 2, w.wiersz8);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    record Wynik(int najpopularniejszy, long porownania, long wiersz6, long wiersz8) {}
+
+    static Wynik popularnosc(int[] A) {
+        int n = A.length;
+        int maks = 1;
+        int nr = 0;
+        long porownania = 0;  // wiersz 5.
+        long wiersz6 = 0;
+        long wiersz8 = 0;
+        for (int i = 0; i &lt; n; i++) {
+            int k = 0;
+            for (int j = i; j &lt; n; j++) {
+                porownania++;
+                if (A[i] == A[j]) {
+                    k++;
+                    wiersz6++;
+                }
+            }
+            if (k &gt; maks) {
+                maks = k;
+                nr = i;
+                wiersz8++;
+            }
+        }
+        return new Wynik(A[nr], porownania, wiersz6, wiersz8);
+    }
+
+    public static void main(String[] args) {
+        // 2.1
+        int[][] ciagi = {{1, 2, 1, 2, 1}, {2, 4, 4, 2, 4, 2}, {2, 3, 3, 4, 4, 3, 2, 2, 3}};
+        for (int[] A : ciagi)
+            System.out.println(popularnosc(A).najpopularniejszy());
+
+        // 2.2 - liczba porownan w wierszu 5.
+        for (int n : new int[]{2, 3, 7, 10, 15, 1000})
+            System.out.println(n + &quot; &quot; + popularnosc(new int[n]).porownania());
+
+        // 2.3 - wszystkie elementy rowne
+        int n = 10;
+        int[] piatki = new int[n];
+        java.util.Arrays.fill(piatki, 5);
+        Wynik w = popularnosc(piatki);
+        System.out.println(w.wiersz6() + &quot; &quot; + n * (n + 1) / 2 + &quot; &quot; + w.wiersz8());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 1; 2; 3. 2.2: 3; 6; 28; 55; 120; 500500 (czyli n(n+1)/2). 2.3: wiersz 6. — n(n+1)/2 razy, wiersz 8. — 1 raz</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-stare.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-3">3.1 i 3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 3. Przekątne w tabliczce mnożenia. W tabliczce mnożenia rozważamy przekątne biegnące „w lewo w dół”: n-ta przekątna zawiera iloczyny <code>i·j</code>, dla których <code>i + j = n + 1</code>. Suma liczb na 1. przekątnej wynosi 1, a na 6. przekątnej — 56 (na 4. przekątnej: 4+3+3+2+2+2+1+1+1+1 = 20).</p><ul><li>3.1 — Podaj sumę liczb na 8. przekątnej.</li><li>3.3 — Zapisz algorytm, który dla danej dodatniej liczby całkowitej <code>n</code> obliczy sumę <code>w</code> liczb na n-tej przekątnej tabliczki mnożenia.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_przekatnej(n):
     suma = 0
     for i in range(1, n + 1):
         suma += i * (n - i + 1)
     return suma
 
 
-print(suma_przekatnej(1), suma_przekatnej(6), suma_przekatnej(8))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 120 (3.2: liczba piątek na n-tej przekątnej to n − 4)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-4">4.1, 4.2 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def doswiadczenie(porcja):
+print(suma_przekatnej(1), suma_przekatnej(6), suma_przekatnej(8))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+long long suma_przekatnej(int n) {
+    long long suma = 0;
+    for (int i = 1; i &lt;= n; i++)
+        suma += i * (n - i + 1);
+    return suma;
+}
+
+int main() {
+    std::println(&quot;{} {} {}&quot;, suma_przekatnej(1), suma_przekatnej(6), suma_przekatnej(8));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long sumaPrzekatnej(int n) {
+        long suma = 0;
+        for (int i = 1; i &lt;= n; i++)
+            suma += i * (n - i + 1);
+        return suma;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sumaPrzekatnej(1) + &quot; &quot; + sumaPrzekatnej(6) + &quot; &quot; + sumaPrzekatnej(8));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 120 (3.2: liczba piątek na n-tej przekątnej to n − 4)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%203.1%20i%203.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-stare.html%233-1-i-3-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-4">4.1, 4.2 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4. Doświadczenie. Doświadczenie trwa 1500 minut. Na początku (minuta 0) w naczyniu jest 5 l roztworu o stężeniu 80% (4000 ml substancji X i 1000 ml wody). Pod koniec każdej parzystej minuty dozownik pobiera z naczynia 20 ml roztworu (pierwszy raz w 2. minucie). Co 50 minut, począwszy od 51. minuty, robot dolewa wodę, uzupełniając roztwór do 5 l (np. w 51. minucie przed dolaniem jest 4,5 l roztworu o stężeniu 80%, a po dolaniu 5 l o stężeniu 72%). Odpowiedzi zaokrąglone do dwóch miejsc po przecinku (zaokrąglaj dopiero wynik końcowy) zapisz w pliku <code>wyniki_4.txt</code>, poprzedzając każdą numerem zadania.</p><ul><li>4.1 — Podaj poziom roztworu w naczyniu w 191. minucie: ilość roztworu, ilość wody i ilość substancji X.</li><li>4.2 — Podaj stężenie roztworu po 1500 minutach oraz łączną objętość wody dolanej w czasie doświadczenia.</li><li>4.4 — Podaj maksymalną objętość porcji pobieranej przez dozownik (z dokładnością do 0,01 ml, przy niezmienionej pracy robota), przy której stężenie roztworu w trakcie doświadczenia nigdy nie spadnie poniżej 1%.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def doswiadczenie(porcja):
     substancja = 4000.0
     woda = 1000.0
     dolana_woda = 0
@@ -108,8 +230,127 @@ print(&quot;4.2&quot;, round(stezenie * 100, 2), round(dolana_woda, 2))
 setne = 2000
 while doswiadczenie((setne + 1) / 100)[3] &gt;= 0.01:
     setne += 1
-print(&quot;4.4&quot;, setne / 100)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: roztwór 4600,00 ml, woda 1917,28 ml, substancja X 2682,72 ml (w kluczu CKE wartości wody i substancji są zamienione miejscami — stężenie 0,8·0,9³ = 58,32% daje 2682,72 ml substancji); 4.2: 3,77%, 14 500 ml; 4.4: 28,04 ml</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python · dane do wykresu liniowego: minuta, woda, substancja X</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># dane do wykresu liniowego: minuta, woda, substancja X
-substancja = 4000.0
+print(&quot;4.4&quot;, setne / 100)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;format&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+// zaokraglenie do 2 miejsc jak round(x, 2) w Pythonie
+double zaokraglij(double x) {
+    return std::stod(std::format(&quot;{:.2f}&quot;, x));
+}
+
+// liczba zmiennoprzecinkowa wypisana tak jak w Pythonie (np. 14500.0, 1917.28)
+std::string jak_python(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find_first_of(&quot;.e&quot;) == std::string::npos)
+        s += &quot;.0&quot;;
+    return s;
+}
+
+struct Wynik {
+    double roztwor_191, woda_191, substancja_191;
+    double stezenie, dolana_woda, najmniejsze_stezenie;
+};
+
+Wynik doswiadczenie(double porcja) {
+    double substancja = 4000.0;
+    double woda = 1000.0;
+    double dolana_woda = 0;
+    Wynik w{};
+    double najmniejsze_stezenie = 1;
+    for (int minuta = 1; minuta &lt;= 1500; minuta++) {
+        if (minuta == 191) {
+            w.roztwor_191 = substancja + woda;
+            w.woda_191 = woda;
+            w.substancja_191 = substancja;
+        }
+        // koniec parzystej minuty - dozownik pobiera porcje roztworu
+        if (minuta % 2 == 0) {
+            double objetosc = substancja + woda;
+            substancja -= porcja * substancja / objetosc;
+            woda -= porcja * woda / objetosc;
+        }
+        // co 50 minut (51., 101., ...) robot dolewa wode do 5 litrow
+        if (minuta % 50 == 1 &amp;&amp; minuta &gt; 1) {
+            double dolewka = 5000 - (substancja + woda);
+            woda += dolewka;
+            dolana_woda += dolewka;
+        }
+        najmniejsze_stezenie = std::min(najmniejsze_stezenie, substancja / (substancja + woda));
+    }
+    w.stezenie = substancja / (substancja + woda);
+    w.dolana_woda = dolana_woda;
+    w.najmniejsze_stezenie = najmniejsze_stezenie;
+    return w;
+}
+
+int main() {
+    Wynik w = doswiadczenie(20);
+    std::println(&quot;4.1 [{}, {}, {}]&quot;, jak_python(zaokraglij(w.roztwor_191)),
+                 jak_python(zaokraglij(w.woda_191)), jak_python(zaokraglij(w.substancja_191)));
+    std::println(&quot;4.2 {} {}&quot;, jak_python(zaokraglij(w.stezenie * 100)), jak_python(zaokraglij(w.dolana_woda)));
+
+    // 4.4 - zwiekszamy porcje co 0,01 ml, dopoki stezenie nie spadnie ponizej 1%
+    int setne = 2000;
+    while (doswiadczenie((setne + 1) / 100.0).najmniejsze_stezenie &gt;= 0.01)
+        setne++;
+    std::println(&quot;4.4 {}&quot;, jak_python(setne / 100.0));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class Zadanie {
+    // zaokraglenie do 2 miejsc jak round(x, 2) w Pythonie
+    static double zaokraglij(double x) {
+        return new BigDecimal(x).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+    }
+
+    record Wynik(double roztwor191, double woda191, double substancja191,
+                 double stezenie, double dolanaWoda, double najmniejszeStezenie) {}
+
+    static Wynik doswiadczenie(double porcja) {
+        double substancja = 4000.0;
+        double woda = 1000.0;
+        double dolanaWoda = 0;
+        double roztwor191 = 0, woda191 = 0, substancja191 = 0;
+        double najmniejszeStezenie = 1;
+        for (int minuta = 1; minuta &lt;= 1500; minuta++) {
+            if (minuta == 191) {
+                roztwor191 = substancja + woda;
+                woda191 = woda;
+                substancja191 = substancja;
+            }
+            // koniec parzystej minuty - dozownik pobiera porcje roztworu
+            if (minuta % 2 == 0) {
+                double objetosc = substancja + woda;
+                substancja -= porcja * substancja / objetosc;
+                woda -= porcja * woda / objetosc;
+            }
+            // co 50 minut (51., 101., ...) robot dolewa wode do 5 litrow
+            if (minuta % 50 == 1 &amp;&amp; minuta &gt; 1) {
+                double dolewka = 5000 - (substancja + woda);
+                woda += dolewka;
+                dolanaWoda += dolewka;
+            }
+            najmniejszeStezenie = Math.min(najmniejszeStezenie, substancja / (substancja + woda));
+        }
+        double stezenie = substancja / (substancja + woda);
+        return new Wynik(roztwor191, woda191, substancja191, stezenie, dolanaWoda, najmniejszeStezenie);
+    }
+
+    public static void main(String[] args) {
+        Wynik w = doswiadczenie(20);
+        System.out.println(&quot;4.1 [&quot; + zaokraglij(w.roztwor191()) + &quot;, &quot; + zaokraglij(w.woda191()) + &quot;, &quot;
+                + zaokraglij(w.substancja191()) + &quot;]&quot;);
+        System.out.println(&quot;4.2 &quot; + zaokraglij(w.stezenie() * 100) + &quot; &quot; + zaokraglij(w.dolanaWoda()));
+
+        // 4.4 - zwiekszamy porcje co 0,01 ml, dopoki stezenie nie spadnie ponizej 1%
+        int setne = 2000;
+        while (doswiadczenie((setne + 1) / 100.0).najmniejszeStezenie() &gt;= 0.01)
+            setne++;
+        System.out.println(&quot;4.4 &quot; + setne / 100.0);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: roztwór 4600,00 ml, woda 1917,28 ml, substancja X 2682,72 ml (w kluczu CKE wartości wody i substancji są zamienione miejscami — stężenie 0,8·0,9³ = 58,32% daje 2682,72 ml substancji); 4.2: 3,77%, 14 500 ml; 4.4: 28,04 ml</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.1%2C%204.2%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-stare.html%234-1-4-2-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W doświadczeniu z zadania 4 (naczynie 5 l, początkowo 4000 ml substancji X i 1000 ml wody; co parzystą minutę dozownik pobiera 20 ml roztworu, od 51. minuty co 50 minut robot dolewa wodę do 5 l) przedstaw na jednym wykresie liniowym, jak przez cały czas doświadczenia (od minuty 0 do 1500) zmieniały się ilość wody i ilość substancji X w naczyniu. Zadbaj o czytelność wykresu.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · dane do wykresu liniowego: minuta, woda, substancja X</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">substancja = 4000.0
 woda = 1000.0
 
 with open(&quot;wykres_4_3.txt&quot;, &quot;w&quot;) as wynik:
@@ -121,7 +362,56 @@ with open(&quot;wykres_4_3.txt&quot;, &quot;w&quot;) as wynik:
             substancja -= 20 * substancja / objetosc
             woda -= 20 * woda / objetosc
         if minuta % 50 == 1 and minuta &gt; 1:
-            woda += 5000 - (substancja + woda)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> wykres liniowy dwóch serii (woda — rośnie „ząbkami”, substancja X — maleje) tworzymy z pliku <code>wykres_4_3.txt</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1-5-2-i-5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1-5-2-i-5-3">5.1, 5.2 i 5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def sasiedzi(plansza, w, k):
+            woda += 5000 - (substancja + woda)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+
+int main() {
+    // dane do wykresu liniowego: minuta, woda, substancja X
+    double substancja = 4000.0;
+    double woda = 1000.0;
+
+    std::ofstream wynik(&quot;wykres_4_3.txt&quot;);
+    std::println(wynik, &quot;minuta;woda;substancja&quot;);
+    for (int minuta = 0; minuta &lt;= 1500; minuta++) {
+        std::println(wynik, &quot;{};{:.2f};{:.2f}&quot;, minuta, woda, substancja);
+        if (minuta % 2 == 0 &amp;&amp; minuta &gt; 0) {
+            double objetosc = substancja + woda;
+            substancja -= 20 * substancja / objetosc;
+            woda -= 20 * woda / objetosc;
+        }
+        if (minuta % 50 == 1 &amp;&amp; minuta &gt; 1)
+            woda += 5000 - (substancja + woda);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class Zadanie {
+    // liczba z 2 miejscami po kropce, jak f&quot;{x:.2f}&quot; w Pythonie
+    static String dwaMiejsca(double x) {
+        return new BigDecimal(x).setScale(2, RoundingMode.HALF_EVEN).toPlainString();
+    }
+
+    public static void main(String[] args) throws Exception {
+        // dane do wykresu liniowego: minuta, woda, substancja X
+        double substancja = 4000.0;
+        double woda = 1000.0;
+
+        try (var wynik = new PrintWriter(&quot;wykres_4_3.txt&quot;)) {
+            wynik.println(&quot;minuta;woda;substancja&quot;);
+            for (int minuta = 0; minuta &lt;= 1500; minuta++) {
+                wynik.println(minuta + &quot;;&quot; + dwaMiejsca(woda) + &quot;;&quot; + dwaMiejsca(substancja));
+                if (minuta % 2 == 0 &amp;&amp; minuta &gt; 0) {
+                    double objetosc = substancja + woda;
+                    substancja -= 20 * substancja / objetosc;
+                    woda -= 20 * woda / objetosc;
+                }
+                if (minuta % 50 == 1 &amp;&amp; minuta &gt; 1)
+                    woda += 5000 - (substancja + woda);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> wykres liniowy dwóch serii (woda — rośnie „ząbkami”, substancja X — maleje) tworzymy z pliku <code>wykres_4_3.txt</code></p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-stare.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1-5-2-i-5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1-5-2-i-5-3">5.1, 5.2 i 5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5. Gra w życie. Plansza ma 12 wierszy i 20 kolumn (plik <code>gra.txt</code>, każdy wiersz planszy w osobnym wierszu; <code>X</code> — komórka żywa, <code>.</code> — martwa). Plansza jest „zawinięta”: prawa krawędź sąsiaduje z lewą, a górny wiersz z dolnym; każda komórka ma 8 sąsiadów (bokiem lub wierzchołkiem). W następnym pokoleniu żywe są tylko komórki, które: są żywe i mają 2 lub 3 żywych sąsiadów albo są martwe i mają dokładnie 3 żywych sąsiadów. Plik zawiera pierwsze pokolenie. Odpowiedzi zapisz w pliku <code>wyniki_5.txt</code>, poprzedzając każdą numerem zadania.</p><ul><li>5.1 — Podaj liczbę żywych sąsiadów komórki w 2. wierszu i 19. kolumnie w 37. pokoleniu.</li><li>5.2 — Podaj liczbę żywych komórek w drugim pokoleniu.</li><li>5.3 — W którym pokoleniu (sprawdzając najwyżej do 100.) układ się ustali, tzn. będzie identyczny jak w poprzednim? Podaj numer tego pokolenia i liczbę żywych komórek w nim.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def sasiedzi(plansza, w, k):
     n, m = len(plansza), len(plansza[0])
     licznik = 0
     for dw in (-1, 0, 1):
@@ -164,7 +454,139 @@ print(&quot;5.2&quot;, zywe(pokolenia[2]))
 for p in range(2, 101):
     if pokolenia[p] == pokolenia[p - 1]:
         print(&quot;5.3&quot;, p, zywe(pokolenia[p]))
-        break</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 5.1: 4; 5.2: 8; 5.3: w 51. pokoleniu, 8 żywych komórek</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+        break</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using Plansza = std::vector&lt;std::string&gt;;
+
+int sasiedzi(const Plansza&amp; plansza, int w, int k) {
+    int n = plansza.size(), m = plansza[0].size();
+    int licznik = 0;
+    for (int dw = -1; dw &lt;= 1; dw++)
+        for (int dk = -1; dk &lt;= 1; dk++)
+            // (x % n + n) % n - reszta zawsze nieujemna, jak % w Pythonie
+            if ((dw != 0 || dk != 0) &amp;&amp; plansza[((w + dw) % n + n) % n][((k + dk) % m + m) % m] == &#x27;X&#x27;)
+                licznik++;
+    return licznik;
+}
+
+Plansza nastepne_pokolenie(const Plansza&amp; plansza) {
+    Plansza nowa;
+    for (int w = 0; w &lt; (int)plansza.size(); w++) {
+        std::string wiersz;
+        for (int k = 0; k &lt; (int)plansza[0].size(); k++) {
+            int s = sasiedzi(plansza, w, k);
+            if (s == 3 || (plansza[w][k] == &#x27;X&#x27; &amp;&amp; s == 2))
+                wiersz += &#x27;X&#x27;;
+            else
+                wiersz += &#x27;.&#x27;;
+        }
+        nowa.push_back(wiersz);
+    }
+    return nowa;
+}
+
+int zywe(const Plansza&amp; plansza) {
+    int suma = 0;
+    for (const auto&amp; wiersz : plansza)
+        for (char c : wiersz)
+            if (c == &#x27;X&#x27;)
+                suma++;
+    return suma;
+}
+
+int main() {
+    Plansza plansza;
+    std::ifstream plik(&quot;gra.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        while (!linia.empty() &amp;&amp; (linia.back() == &#x27;\r&#x27; || linia.back() == &#x27; &#x27;))
+            linia.pop_back();
+        if (!linia.empty())
+            plansza.push_back(linia);
+    }
+
+    std::map&lt;int, Plansza&gt; pokolenia;
+    pokolenia[1] = plansza;
+    for (int p = 2; p &lt;= 100; p++)
+        pokolenia[p] = nastepne_pokolenie(pokolenia[p - 1]);
+
+    std::println(&quot;5.1 {}&quot;, sasiedzi(pokolenia[37], 1, 18));
+    std::println(&quot;5.2 {}&quot;, zywe(pokolenia[2]));
+    for (int p = 2; p &lt;= 100; p++) {
+        if (pokolenia[p] == pokolenia[p - 1]) {
+            std::println(&quot;5.3 {} {}&quot;, p, zywe(pokolenia[p]));
+            break;
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zadanie {
+    static int sasiedzi(List&lt;String&gt; plansza, int w, int k) {
+        int n = plansza.size(), m = plansza.get(0).length();
+        int licznik = 0;
+        for (int dw = -1; dw &lt;= 1; dw++)
+            for (int dk = -1; dk &lt;= 1; dk++)
+                // Math.floorMod - reszta zawsze nieujemna, jak % w Pythonie
+                if ((dw != 0 || dk != 0) &amp;&amp; plansza.get(Math.floorMod(w + dw, n)).charAt(Math.floorMod(k + dk, m)) == &#x27;X&#x27;)
+                    licznik++;
+        return licznik;
+    }
+
+    static List&lt;String&gt; nastepnePokolenie(List&lt;String&gt; plansza) {
+        List&lt;String&gt; nowa = new ArrayList&lt;&gt;();
+        for (int w = 0; w &lt; plansza.size(); w++) {
+            var wiersz = new StringBuilder();
+            for (int k = 0; k &lt; plansza.get(0).length(); k++) {
+                int s = sasiedzi(plansza, w, k);
+                if (s == 3 || (plansza.get(w).charAt(k) == &#x27;X&#x27; &amp;&amp; s == 2))
+                    wiersz.append(&#x27;X&#x27;);
+                else
+                    wiersz.append(&#x27;.&#x27;);
+            }
+            nowa.add(wiersz.toString());
+        }
+        return nowa;
+    }
+
+    static int zywe(List&lt;String&gt; plansza) {
+        int suma = 0;
+        for (String wiersz : plansza)
+            for (char c : wiersz.toCharArray())
+                if (c == &#x27;X&#x27;)
+                    suma++;
+        return suma;
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;String&gt; plansza = new ArrayList&lt;&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;gra.txt&quot;)))
+            if (!linia.strip().isEmpty())
+                plansza.add(linia.strip());
+
+        Map&lt;Integer, List&lt;String&gt;&gt; pokolenia = new HashMap&lt;&gt;();
+        pokolenia.put(1, plansza);
+        for (int p = 2; p &lt;= 100; p++)
+            pokolenia.put(p, nastepnePokolenie(pokolenia.get(p - 1)));
+
+        System.out.println(&quot;5.1 &quot; + sasiedzi(pokolenia.get(37), 1, 18));
+        System.out.println(&quot;5.2 &quot; + zywe(pokolenia.get(2)));
+        for (int p = 2; p &lt;= 100; p++) {
+            if (pokolenia.get(p).equals(pokolenia.get(p - 1))) {
+                System.out.println(&quot;5.3 &quot; + p + &quot; &quot; + zywe(pokolenia.get(p)));
+                break;
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 5.1: 4; 5.2: 8; 5.3: w 51. pokoleniu, 8 żywych komórek</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%205.1%2C%205.2%20i%205.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-stare.html%235-1-5-2-i-5-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

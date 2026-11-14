@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title" style="--c:var(--g1)">Arkusz I</p><ul style="--c:var(--g1)"><li><a href="#1a">1a</a></li><li><a href="#1b-i-1c">1b i 1c</a></li><li><a href="#2a-i-2b">2a i 2b</a></li></ul><p class="side-title" style="--c:var(--g2)">Arkusz II</p><ul style="--c:var(--g2)"><li><a href="#4a">4a</a></li><li><a href="#4b">4b</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#5c">5c</a></li><li><a href="#5d">5d</a></li><li><a href="#5e">5e</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2010 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2010 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import ceil, sqrt
+<h1 class="page-title">Matura 2010 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2010-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Szyfr przestawieniowy: tekst wpisujemy wierszami do kwadratowej tablicy n × n, a szyfrogram odczytujemy kolumnami od lewej do prawej. Wymiar n to najmniejsza liczba, przy której cały tekst mieści się w tablicy; wolne pola uzupełnia się znakami odstępu (oznaczanymi <code>_</code>).</p><p>Przykład: <code>ALGORYTM_PRZESTAWIENIOWY</code> (24 znaki) → tablica 5 × 5 → <code>AYRAILTZWOGMEIWO_SEYRPTN_</code>.</p><p>Podaj wzór (lub algorytm) wyznaczający liczbę wierszy i kolumn tablicy dla tekstu o długości d znaków.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import ceil, sqrt
 
 
 def wymiar(d):
@@ -48,7 +48,34 @@ def wymiar(d):
     return n
 
 
-print(wymiar(24), wymiar(25), wymiar(26))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> n = ⌈√d⌉ – najmniejsza liczba naturalna większa lub równa √d</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1b-i-1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b-i-1c">1b i 1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import ceil, sqrt
+print(wymiar(24), wymiar(25), wymiar(26))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;print&gt;
+
+int wymiar(int d) {
+    // najmniejsze n, dla którego n * n &gt;= d, czyli n = sufit(pierwiastek(d))
+    int n = static_cast&lt;int&gt;(std::ceil(std::sqrt(d)));
+    while (n * n &lt; d) { // zabezpieczenie przed błędem zaokrąglenia
+        n += 1;
+    }
+    return n;
+}
+
+int main() {
+    std::println(&quot;{} {} {}&quot;, wymiar(24), wymiar(25), wymiar(26));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int wymiar(int d) {
+        // najmniejsze n, dla którego n * n &gt;= d, czyli n = sufit(pierwiastek(d))
+        int n = (int) Math.ceil(Math.sqrt(d));
+        while (n * n &lt; d) { // zabezpieczenie przed błędem zaokrąglenia
+            n += 1;
+        }
+        return n;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(wymiar(24) + &quot; &quot; + wymiar(25) + &quot; &quot; + wymiar(26));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> n = ⌈√d⌉ – najmniejsza liczba naturalna większa lub równa √d</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%231a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1b-i-1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b-i-1c">1b i 1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Szyfr przestawieniowy z zadania 1a (tekst wpisywany wierszami do tablicy n × n, odczytywany kolumnami).</p><ul><li>1b — Rozszyfruj cytat z Sokratesa zaszyfrowany tą metodą — szyfrogram (64 znaki, czyli tablica 8 × 8) jest podany w arkuszu.</li><li>1c — Zapisz algorytm szyfrujący tą metodą. Dane: d — długość tekstu, <code>tekst[1..d]</code> — znaki tekstu. Wynik: s — długość szyfrogramu, <code>szyfr[1..s]</code> — znaki szyfrogramu.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from math import ceil, sqrt
 
 
 def szyfruj(tekst):
@@ -71,7 +98,89 @@ print(szyfruj(&quot;ALGORYTM_PRZESTAWIENIOWY&quot;))
 # b) szyfr ma 64 znaki (kwadrat 8 x 8), a zamiana wierszy z kolumnami
 #    wykonana drugi raz przywraca tekst - wystarczy &quot;zaszyfrować&quot; szyfr
 szyfr = &quot;BTLLTU_ĘL_EOYPM_ĄPJZLCYNDREOKYLI_ZMFO_ĄGJY_Ó_N_DEWFWGISYSII_ŁEI_&quot;
-print(szyfruj(szyfr))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> b) BŁĄD JEST PRZYWILEJEM FILOZOFÓW, TYLKO GŁUPCY NIE MYLĄ SIĘ NIGDY; c) przykład: AYRAILTZWOGMEIWO_SEYRPTN_</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_zer(a):
+print(szyfruj(szyfr))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// std::string przechowuje bajty UTF-8, a polskie litery (np. Ę, Ą) zajmują po 2 bajty,
+// dlatego najpierw dzielimy tekst na pojedyncze znaki - każdy jako osobny napis
+std::vector&lt;std::string&gt; znaki(const std::string&amp; tekst) {
+    std::vector&lt;std::string&gt; wynik;
+    size_t i = 0;
+    while (i &lt; tekst.size()) {
+        unsigned char bajt = tekst[i];
+        size_t dlugosc = 1;
+        if (bajt &gt;= 0xF0) dlugosc = 4;
+        else if (bajt &gt;= 0xE0) dlugosc = 3;
+        else if (bajt &gt;= 0xC0) dlugosc = 2;
+        wynik.push_back(tekst.substr(i, dlugosc));
+        i += dlugosc;
+    }
+    return wynik;
+}
+
+std::string szyfruj(const std::string&amp; napis) {
+    std::vector&lt;std::string&gt; tekst = znaki(napis);
+    int d = static_cast&lt;int&gt;(tekst.size());
+    int n = static_cast&lt;int&gt;(std::ceil(std::sqrt(d)));
+    while (n * n &lt; d) {
+        n += 1;
+    }
+    int s = n * n;
+    tekst.resize(s, &quot;_&quot;); // puste pola uzupełniamy znakami odstępu
+    std::string szyfr = &quot;&quot;;
+    for (int kolumna = 0; kolumna &lt; n; kolumna++) { // odczyt kolumnami
+        for (int wiersz = 0; wiersz &lt; n; wiersz++) {
+            szyfr += tekst[wiersz * n + kolumna];
+        }
+    }
+    return szyfr;
+}
+
+int main() {
+    // c) przykład z treści
+    std::println(&quot;{}&quot;, szyfruj(&quot;ALGORYTM_PRZESTAWIENIOWY&quot;));
+
+    // b) szyfr ma 64 znaki (kwadrat 8 x 8), a zamiana wierszy z kolumnami
+    //    wykonana drugi raz przywraca tekst - wystarczy &quot;zaszyfrować&quot; szyfr
+    std::string szyfr = &quot;BTLLTU_ĘL_EOYPM_ĄPJZLCYNDREOKYLI_ZMFO_ĄGJY_Ó_N_DEWFWGISYSII_ŁEI_&quot;;
+    std::println(&quot;{}&quot;, szyfruj(szyfr));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String szyfruj(String tekst) {
+        int d = tekst.length();
+        int n = (int) Math.ceil(Math.sqrt(d));
+        while (n * n &lt; d) {
+            n += 1;
+        }
+        int s = n * n;
+        tekst = tekst + &quot;_&quot;.repeat(s - d); // puste pola uzupełniamy znakami odstępu
+        var szyfr = new StringBuilder();
+        for (int kolumna = 0; kolumna &lt; n; kolumna++) { // odczyt kolumnami
+            for (int wiersz = 0; wiersz &lt; n; wiersz++) {
+                szyfr.append(tekst.charAt(wiersz * n + kolumna));
+            }
+        }
+        return szyfr.toString();
+    }
+
+    public static void main(String[] args) throws Exception {
+        // c) przykład z treści
+        System.out.println(szyfruj(&quot;ALGORYTM_PRZESTAWIENIOWY&quot;));
+
+        // b) szyfr ma 64 znaki (kwadrat 8 x 8), a zamiana wierszy z kolumnami
+        //    wykonana drugi raz przywraca tekst - wystarczy &quot;zaszyfrować&quot; szyfr
+        String szyfr = &quot;BTLLTU_ĘL_EOYPM_ĄPJZLCYNDREOKYLI_ZMFO_ĄGJY_Ó_N_DEWFWGISYSII_ŁEI_&quot;;
+        System.out.println(szyfruj(szyfr));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> b) BŁĄD JEST PRZYWILEJEM FILOZOFÓW, TYLKO GŁUPCY NIE MYLĄ SIĘ NIGDY; c) przykład: AYRAILTZWOGMEIWO_SEYRPTN_</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201b%20i%201c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%231b-i-1c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W tablicy <code>a[1..1023]</code> zapisano ciąg zer i jedynek tak, że wszystkie zera poprzedzają jedynki (mogą wystąpić same zera albo same jedynki). Dany jest niepełny algorytm liczenia zer:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">liczba_zer ← 0
+l ← 1, p ← 1023
+dopóki l ≤ p wykonuj
+    s ← (l + p) div 2
+    jeżeli a[s] = 1 to p ← s − 1
+    w przeciwnym przypadku
+        liczba_zer ← liczba_zer + .....
+        l ← .....</code></pre></div></div></div><ul><li>2a — Uzupełnij brakujące wyrażenia tak, aby algorytm zawsze poprawnie liczył zera.</li><li>2b — Ile razy wykonywane jest przypisanie <code>s ← (l + p) div 2</code> w każdym przebiegu algorytmu? Uzasadnij.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_zer(a):
     # a[1..1023], a[0] nieużywane - indeksy jak w zadaniu
     przypisania_s = 0
     zera = 0
@@ -95,12 +204,148 @@ for k in range(1024):
     if zera != k:
         print(&quot;błąd dla&quot;, k)
     liczby_przypisan.add(przypisania_s)
-print(liczby_przypisan)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) liczba_zer + (s − l + 1), l ← s + 1; b) zawsze 10 = log₂1024 – w każdym przebiegu pętli przedział do sprawdzenia zmniejsza się o połowę</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4a">4a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;anagram.txt&quot;) as file, open(&quot;odp_4a.txt&quot;, &quot;w&quot;) as wynik:
+print(liczby_przypisan)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::pair&lt;int, int&gt; liczba_zer(const std::vector&lt;int&gt;&amp; a) {
+    // a[1..1023], a[0] nieużywane - indeksy jak w zadaniu
+    int przypisania_s = 0;
+    int zera = 0;
+    int l = 1, p = static_cast&lt;int&gt;(a.size()) - 1;
+    while (l &lt;= p) {
+        int s = (l + p) / 2;
+        przypisania_s += 1;
+        if (a[s] == 1) {
+            p = s - 1;
+        } else {
+            zera = zera + (s - l + 1); // zera na pozycjach l..s
+            l = s + 1;
+        }
+    }
+    return {zera, przypisania_s};
+}
+
+int main() {
+    // sprawdzenie dla wszystkich możliwych tablic (k zer, potem jedynki)
+    std::set&lt;int&gt; liczby_przypisan;
+    for (int k = 0; k &lt; 1024; k++) {
+        std::vector&lt;int&gt; a(1024, 1); // a[0] nieużywane
+        for (int i = 1; i &lt;= k; i++) {
+            a[i] = 0;
+        }
+        auto [zera, przypisania_s] = liczba_zer(a);
+        if (zera != k) {
+            std::println(&quot;błąd dla {}&quot;, k);
+        }
+        liczby_przypisan.insert(przypisania_s);
+    }
+    std::println(&quot;{}&quot;, liczby_przypisan); // zbiór wypisuje się jako {..}
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int[] liczbaZer(int[] a) {
+        // a[1..1023], a[0] nieużywane - indeksy jak w zadaniu
+        int przypisaniaS = 0;
+        int zera = 0;
+        int l = 1, p = a.length - 1;
+        while (l &lt;= p) {
+            int s = (l + p) / 2;
+            przypisaniaS += 1;
+            if (a[s] == 1) {
+                p = s - 1;
+            } else {
+                zera = zera + (s - l + 1); // zera na pozycjach l..s
+                l = s + 1;
+            }
+        }
+        return new int[]{zera, przypisaniaS};
+    }
+
+    public static void main(String[] args) throws Exception {
+        // sprawdzenie dla wszystkich możliwych tablic (k zer, potem jedynki)
+        var liczbyPrzypisan = new TreeSet&lt;Integer&gt;();
+        for (int k = 0; k &lt; 1024; k++) {
+            int[] a = new int[1024]; // a[0] nieużywane
+            for (int i = k + 1; i &lt; 1024; i++) {
+                a[i] = 1;
+            }
+            int[] wynik = liczbaZer(a);
+            if (wynik[0] != k) {
+                System.out.println(&quot;błąd dla &quot; + k);
+            }
+            liczbyPrzypisan.add(wynik[1]);
+        }
+        // zbiór wypisujemy w nawiasach klamrowych, jak Python
+        var napisy = new ArrayList&lt;String&gt;();
+        for (int x : liczbyPrzypisan) {
+            napisy.add(String.valueOf(x));
+        }
+        System.out.println(&quot;{&quot; + String.join(&quot;, &quot;, napisy) + &quot;}&quot;);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) liczba_zer + (s − l + 1), l ← s + 1; b) zawsze 10 = log₂1024 – w każdym przebiegu pętli przedział do sprawdzenia zmniejsza się o połowę</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202a%20i%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%232a-i-2b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4a">4a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W pliku <code>anagram.txt</code> jest 200 wierszy, w każdym 5 słów (ciągów liter alfabetu łacińskiego, długości od 1 do 20) oddzielonych spacjami. Anagram to słowo powstałe z innego przez przestawienie liter (np. barok – korba – robak).</p><p>Wypisz te wiersze, w których wszystkie słowa mają tę samą liczbę znaków. Zapisz je w pliku <code>odp_4a.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;anagram.txt&quot;) as file, open(&quot;odp_4a.txt&quot;, &quot;w&quot;) as wynik:
     for line in file:
         slowa = line.split()
         if all(len(slowo) == len(slowa[0]) for slowo in slowa):
             wynik.write(&quot; &quot;.join(slowa) + &quot;\n&quot;)
-            print(&quot; &quot;.join(slowa))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> wrona rossa slowo gwert rezas, grant hello zakon lloeh hello, kabaret kabanos kabaret gertyfu kabaret, … , burza orkan lukde pudeh lerfy (25 wierszy z klucza; program wypisuje też pierwszy wiersz pliku – przykład z treści „abcd cdba dbac cbad dcba”, którego klucz nie wymienia)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4b">4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_anagram(a, b):
+            print(&quot; &quot;.join(slowa))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;anagram.txt&quot;);
+    std::ofstream wynik(&quot;odp_4a.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        std::vector&lt;std::string&gt; slowa;
+        std::string slowo;
+        while (strumien &gt;&gt; slowo) {
+            slowa.push_back(slowo);
+        }
+        bool rowne = true;
+        for (const auto&amp; s : slowa) {
+            if (s.size() != slowa[0].size()) {
+                rowne = false;
+            }
+        }
+        if (rowne) {
+            std::string zlaczone = &quot;&quot;;
+            for (size_t i = 0; i &lt; slowa.size(); i++) {
+                if (i &gt; 0) zlaczone += &quot; &quot;;
+                zlaczone += slowa[i];
+            }
+            wynik &lt;&lt; zlaczone &lt;&lt; &quot;\n&quot;;
+            std::cout &lt;&lt; zlaczone &lt;&lt; &quot;\n&quot;;
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        try (var wynik = new PrintWriter(new FileWriter(&quot;odp_4a.txt&quot;))) {
+            for (String linia : Files.readAllLines(Path.of(&quot;anagram.txt&quot;))) {
+                String[] slowa = linia.strip().split(&quot;\\s+&quot;);
+                boolean rowne = true;
+                for (String slowo : slowa) {
+                    if (slowo.length() != slowa[0].length()) {
+                        rowne = false;
+                    }
+                }
+                if (rowne) {
+                    String zlaczone = String.join(&quot; &quot;, slowa);
+                    wynik.println(zlaczone);
+                    System.out.println(zlaczone);
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> wrona rossa slowo gwert rezas, grant hello zakon lloeh hello, kabaret kabanos kabaret gertyfu kabaret, … , burza orkan lukde pudeh lerfy (25 wierszy z klucza; program wypisuje też pierwszy wiersz pliku – przykład z treści „abcd cdba dbac cbad dcba”, którego klucz nie wymienia)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%234a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4b">4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w 4a (plik <code>anagram.txt</code>, 200 wierszy po 5 słów).</p><p>Wypisz wszystkie wiersze, w których każde słowo jest anagramem pierwszego słowa w danym wierszu. Zapisz je w pliku <code>odp_4b.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_anagram(a, b):
     return sorted(a) == sorted(b)
 
 
@@ -109,7 +354,78 @@ with open(&quot;anagram.txt&quot;) as file, open(&quot;odp_4b.txt&quot;, &quot;w
         slowa = line.split()
         if all(czy_anagram(slowa[0], slowo) for slowo in slowa[1:]):
             wynik.write(&quot; &quot;.join(slowa) + &quot;\n&quot;)
-            print(&quot; &quot;.join(slowa))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> foto foto tofo tofo foto, glob lobg bogl glbo gblo, triada dariat aadrit iatdar adatri, kotek tekok teokk kokte otekk, rower werro werro owerr erwor, foto tofo foot ftoo ootf, spiker kerspi erspik erspki kiersp (oraz pierwszy wiersz pliku „abcd cdba dbac cbad dcba”, pominięty w kluczu)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">grudzien = 0
+            print(&quot; &quot;.join(slowa))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+bool czy_anagram(std::string a, std::string b) {
+    std::ranges::sort(a);
+    std::ranges::sort(b);
+    return a == b;
+}
+
+int main() {
+    std::ifstream plik(&quot;anagram.txt&quot;);
+    std::ofstream wynik(&quot;odp_4b.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        std::vector&lt;std::string&gt; slowa;
+        std::string slowo;
+        while (strumien &gt;&gt; slowo) {
+            slowa.push_back(slowo);
+        }
+        bool anagramy = true;
+        for (size_t i = 1; i &lt; slowa.size(); i++) {
+            if (!czy_anagram(slowa[0], slowa[i])) {
+                anagramy = false;
+            }
+        }
+        if (anagramy) {
+            std::string zlaczone = &quot;&quot;;
+            for (size_t i = 0; i &lt; slowa.size(); i++) {
+                if (i &gt; 0) zlaczone += &quot; &quot;;
+                zlaczone += slowa[i];
+            }
+            wynik &lt;&lt; zlaczone &lt;&lt; &quot;\n&quot;;
+            std::cout &lt;&lt; zlaczone &lt;&lt; &quot;\n&quot;;
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static boolean czyAnagram(String a, String b) {
+        char[] x = a.toCharArray();
+        char[] y = b.toCharArray();
+        Arrays.sort(x);
+        Arrays.sort(y);
+        return Arrays.equals(x, y);
+    }
+
+    public static void main(String[] args) throws Exception {
+        try (var wynik = new PrintWriter(new FileWriter(&quot;odp_4b.txt&quot;))) {
+            for (String linia : Files.readAllLines(Path.of(&quot;anagram.txt&quot;))) {
+                String[] slowa = linia.strip().split(&quot;\\s+&quot;);
+                boolean anagramy = true;
+                for (int i = 1; i &lt; slowa.length; i++) {
+                    if (!czyAnagram(slowa[0], slowa[i])) {
+                        anagramy = false;
+                    }
+                }
+                if (anagramy) {
+                    String zlaczone = String.join(&quot; &quot;, slowa);
+                    wynik.println(zlaczone);
+                    System.out.println(zlaczone);
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> foto foto tofo tofo foto, glob lobg bogl glbo gblo, triada dariat aadrit iatdar adatri, kotek tekok teokk kokte otekk, rower werro werro owerr erwor, foto tofo foot ftoo ootf, spiker kerspi erspik erspki kiersp (oraz pierwszy wiersz pliku „abcd cdba dbac cbad dcba”, pominięty w kluczu)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%234b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>pesel.txt</code> zawiera 150 numerów PESEL pracowników biura (wszyscy urodzeni przed 2000 r.). Cyfry 1–6 to data urodzenia (RRMMDD), 7–9 — liczba porządkowa, 10. — płeć (parzysta: kobieta, nieparzysta: mężczyzna), 11. — cyfra kontrolna. Cyfrę kontrolną liczy się tak: dziesięć pierwszych cyfr mnoży się przez wagi 1, 3, 7, 9, 1, 3, 7, 9, 1, 3, sumuje iloczyny, bierze resztę z dzielenia sumy przez 10; jeśli reszta to 0, cyfra kontrolna wynosi 0, w przeciwnym razie 10 − reszta. Dane osobowe są poprawne nawet przy błędnej cyfrze kontrolnej. Odpowiedzi zapisz w pliku <code>odp_5.txt</code>, poprzedzając je literą podpunktu.</p><p>Podaj, ile osób urodziło się w grudniu.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">grudzien = 0
 
 with open(&quot;pesel.txt&quot;) as file:
     for line in file:
@@ -117,7 +433,34 @@ with open(&quot;pesel.txt&quot;) as file:
         if pesel[2:4] == &quot;12&quot;:
             grudzien += 1
 
-print(grudzien)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 20</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kobiety = 0
+print(grudzien)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int grudzien = 0;
+    std::ifstream plik(&quot;pesel.txt&quot;);
+    std::string pesel;
+    while (plik &gt;&gt; pesel) {
+        if (pesel.substr(2, 2) == &quot;12&quot;) {
+            grudzien += 1;
+        }
+    }
+    std::println(&quot;{}&quot;, grudzien);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int grudzien = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;pesel.txt&quot;))) {
+            String pesel = linia.strip();
+            if (pesel.substring(2, 4).equals(&quot;12&quot;)) {
+                grudzien += 1;
+            }
+        }
+        System.out.println(grudzien);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 20</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%235a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pesel.txt</code> (10. cyfra PESEL parzysta oznacza kobietę).</p><p>Podaj, ile kobiet pracuje w biurze.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kobiety = 0
 
 with open(&quot;pesel.txt&quot;) as file:
     for line in file:
@@ -125,14 +468,84 @@ with open(&quot;pesel.txt&quot;) as file:
         if int(pesel[9]) % 2 == 0:
             kobiety += 1
 
-print(kobiety)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 74</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lata = {}
+print(kobiety)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int kobiety = 0;
+    std::ifstream plik(&quot;pesel.txt&quot;);
+    std::string pesel;
+    while (plik &gt;&gt; pesel) {
+        if ((pesel[9] - &#x27;0&#x27;) % 2 == 0) {
+            kobiety += 1;
+        }
+    }
+    std::println(&quot;{}&quot;, kobiety);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int kobiety = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;pesel.txt&quot;))) {
+            String pesel = linia.strip();
+            if ((pesel.charAt(9) - &#x27;0&#x27;) % 2 == 0) {
+                kobiety += 1;
+            }
+        }
+        System.out.println(kobiety);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 74</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%235b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5c">5c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pesel.txt</code>.</p><p>Podaj rok, w którym urodziło się najwięcej pracowników biura.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">lata = {}
 
 with open(&quot;pesel.txt&quot;) as file:
     for line in file:
         rok = &quot;19&quot; + line.strip()[:2]
         lata[rok] = lata.get(rok, 0) + 1
 
-print(max(lata, key=lata.get))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1989</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5d">5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wagi = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3]
+print(max(lata, key=lata.get))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; lata;
+    std::vector&lt;std::string&gt; kolejnosc; // lata w kolejności pojawienia się (jak słownik w Pythonie)
+    std::ifstream plik(&quot;pesel.txt&quot;);
+    std::string pesel;
+    while (plik &gt;&gt; pesel) {
+        std::string rok = &quot;19&quot; + pesel.substr(0, 2);
+        if (!lata.contains(rok)) {
+            kolejnosc.push_back(rok);
+        }
+        lata[rok] += 1;
+    }
+    std::string najczestszy = kolejnosc[0];
+    for (const auto&amp; rok : kolejnosc) {
+        if (lata[rok] &gt; lata[najczestszy]) {
+            najczestszy = rok;
+        }
+    }
+    std::println(&quot;{}&quot;, najczestszy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var lata = new LinkedHashMap&lt;String, Integer&gt;(); // zachowuje kolejność jak słownik w Pythonie
+        for (String linia : Files.readAllLines(Path.of(&quot;pesel.txt&quot;))) {
+            String rok = &quot;19&quot; + linia.strip().substring(0, 2);
+            lata.put(rok, lata.getOrDefault(rok, 0) + 1);
+        }
+        String najczestszy = null;
+        for (String rok : lata.keySet()) {
+            if (najczestszy == null || lata.get(rok) &gt; lata.get(najczestszy)) {
+                najczestszy = rok;
+            }
+        }
+        System.out.println(najczestszy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1989</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%235c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5d" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5d">5d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pesel.txt</code> (algorytm cyfry kontrolnej opisany w 5a).</p><p>Wypisz numery PESEL z niepoprawną cyfrą kontrolną, posortowane rosnąco.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wagi = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3]
 bledne = []
 
 with open(&quot;pesel.txt&quot;) as file:
@@ -146,7 +559,55 @@ with open(&quot;pesel.txt&quot;) as file:
             bledne.append(pesel)
 
 for pesel in sorted(bledne):
-    print(pesel)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 54043010088, 60061144469, 77072919805, 77120835871, 83041812338, 89081421445, 91032272651, 92022716243</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5e" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5e">5e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dekady = {&quot;50&quot;: 0, &quot;60&quot;: 0, &quot;70&quot;: 0, &quot;80&quot;: 0, &quot;90&quot;: 0}
+    print(pesel)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    int wagi[] = {1, 3, 7, 9, 1, 3, 7, 9, 1, 3};
+    std::vector&lt;std::string&gt; bledne;
+    std::ifstream plik(&quot;pesel.txt&quot;);
+    std::string pesel;
+    while (plik &gt;&gt; pesel) {
+        int suma = 0;
+        for (int i = 0; i &lt; 10; i++) {
+            suma += (pesel[i] - &#x27;0&#x27;) * wagi[i];
+        }
+        int kontrolna = (10 - suma % 10) % 10;
+        if (kontrolna != pesel[10] - &#x27;0&#x27;) {
+            bledne.push_back(pesel);
+        }
+    }
+    std::ranges::sort(bledne);
+    for (const auto&amp; p : bledne) {
+        std::println(&quot;{}&quot;, p);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int[] wagi = {1, 3, 7, 9, 1, 3, 7, 9, 1, 3};
+        var bledne = new ArrayList&lt;String&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;pesel.txt&quot;))) {
+            String pesel = linia.strip();
+            int suma = 0;
+            for (int i = 0; i &lt; 10; i++) {
+                suma += (pesel.charAt(i) - &#x27;0&#x27;) * wagi[i];
+            }
+            int kontrolna = (10 - suma % 10) % 10;
+            if (kontrolna != pesel.charAt(10) - &#x27;0&#x27;) {
+                bledne.add(pesel);
+            }
+        }
+        Collections.sort(bledne);
+        for (String pesel : bledne) {
+            System.out.println(pesel);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 54043010088, 60061144469, 77072919805, 77120835871, 83041812338, 89081421445, 91032272651, 92022716243</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%235d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5e" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#5e">5e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pesel.txt</code>.</p><p>Zestaw liczby osób urodzonych w kolejnych dziesięcioleciach: latach 50., 60., 70., 80. i 90. (np. lata 50. to roczniki 1950–1959 włącznie). Wykonaj wykres przedstawiający procentowy rozkład liczby osób w tych przedziałach.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dekady = {&quot;50&quot;: 0, &quot;60&quot;: 0, &quot;70&quot;: 0, &quot;80&quot;: 0, &quot;90&quot;: 0}
 
 with open(&quot;pesel.txt&quot;) as file:
     for line in file:
@@ -155,7 +616,50 @@ with open(&quot;pesel.txt&quot;) as file:
 wszyscy = sum(dekady.values())
 for dekada in dekady:
     procent = dekady[dekada] / wszyscy * 100
-    print(f&quot;{dekada}-te {dekady[dekada]} {procent:.1f}%&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 50-te 22, 60-te 28, 70-te 36, 80-te 58, 90-te 6 (wykres kołowy z procentami: ok. 15%, 19%, 24%, 39%, 4%)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(f&quot;{dekada}-te {dekady[dekada]} {procent:.1f}%&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; dekady = {{&quot;50&quot;, 0}, {&quot;60&quot;, 0}, {&quot;70&quot;, 0}, {&quot;80&quot;, 0}, {&quot;90&quot;, 0}};
+    std::ifstream plik(&quot;pesel.txt&quot;);
+    std::string pesel;
+    while (plik &gt;&gt; pesel) {
+        dekady[pesel.substr(0, 1) + &quot;0&quot;] += 1;
+    }
+    int wszyscy = 0;
+    for (const auto&amp; [dekada, ile] : dekady) {
+        wszyscy += ile;
+    }
+    for (const auto&amp; [dekada, ile] : dekady) {
+        double procent = static_cast&lt;double&gt;(ile) / wszyscy * 100;
+        std::println(&quot;{}-te {} {:.1f}%&quot;, dekada, ile, procent);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var dekady = new LinkedHashMap&lt;String, Integer&gt;();
+        for (String d : List.of(&quot;50&quot;, &quot;60&quot;, &quot;70&quot;, &quot;80&quot;, &quot;90&quot;)) {
+            dekady.put(d, 0);
+        }
+        for (String linia : Files.readAllLines(Path.of(&quot;pesel.txt&quot;))) {
+            String dekada = linia.charAt(0) + &quot;0&quot;;
+            dekady.put(dekada, dekady.get(dekada) + 1);
+        }
+        int wszyscy = 0;
+        for (int ile : dekady.values()) {
+            wszyscy += ile;
+        }
+        for (var e : dekady.entrySet()) {
+            double procent = (double) e.getValue() / wszyscy * 100;
+            // Locale.ROOT - kropka dziesiętna niezależnie od ustawień systemu
+            System.out.println(String.format(Locale.ROOT, &quot;%s-te %d %.1f%%&quot;, e.getKey(), e.getValue(), procent));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 50-te 22, 60-te 28, 70-te 36, 80-te 58, 90-te 6 (wykres kołowy z procentami: ok. 15%, 19%, 24%, 39%, 4%)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202010%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205e&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2010-maj.html%235e" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2010_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

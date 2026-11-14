@@ -37,8 +37,10 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1a">1a</a></li><li><a href="#1c">1c</a></li><li><a href="#2a-i-2b">2a i 2b</a></li><li><a href="#2c">2c</a></li><li><a href="#3a">3a</a></li><li><a href="#4a-4b-i-4c">4a, 4b i 4c</a></li><li><a href="#4d">4d</a></li><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#5c">5c</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2014 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2014 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · C - czarny koralik, B - bialy koralik</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># C - czarny koralik, B - bialy koralik
-def korale(n):
+<h1 class="page-title">Matura 2014 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2014-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1. Korale. Rekurencyjna procedura <code>Korale(n)</code> dla dodatniej liczby całkowitej <code>n</code>:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">Korale(n):
+    jeżeli n = 1: nawlecz czarny koralik na prawy koniec sznurka; zakończ
+    jeżeli n parzyste: Korale(n/2); nawlecz biały koralik na prawy koniec; zakończ
+    jeżeli n nieparzyste: Korale((n-1)/2); nawlecz czarny koralik na prawy koniec; zakończ</code></pre></div></div></div><p>Podaj wynik działania <code>Korale(n)</code> (ciąg koralików) dla <code>n = 1, 2, 3, 4, 7, 8, 15, 16</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · C - czarny koralik, B - bialy koralik</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def korale(n):
     if n == 1:
         return &quot;C&quot;
     if n % 2 == 0:
@@ -47,7 +49,34 @@ def korale(n):
 
 
 for n in [1, 2, 3, 4, 7, 8, 15, 16]:
-    print(n, korale(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1: C, 2: CB, 3: CC, 4: CBB, 7: CCC, 8: CBBB, 15: CCCC, 16: CBBBB (czarny = 1, biały = 0 — zapis binarny liczby n)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># nierekurencyjna wersja - koraliki nawlekamy zawsze na lewy koniec sznurka
+    print(n, korale(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+// C - czarny koralik, B - bialy koralik
+std::string korale(int n) {
+    if (n == 1) return &quot;C&quot;;
+    if (n % 2 == 0) return korale(n / 2) + &quot;B&quot;;
+    return korale((n - 1) / 2) + &quot;C&quot;;
+}
+
+int main() {
+    for (int n : {1, 2, 3, 4, 7, 8, 15, 16}) {
+        std::println(&quot;{} {}&quot;, n, korale(n));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // C - czarny koralik, B - bialy koralik
+    static String korale(int n) {
+        if (n == 1) return &quot;C&quot;;
+        if (n % 2 == 0) return korale(n / 2) + &quot;B&quot;;
+        return korale((n - 1) / 2) + &quot;C&quot;;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (int n : new int[]{1, 2, 3, 4, 7, 8, 15, 16}) {
+            System.out.println(n + &quot; &quot; + korale(n));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1: C, 2: CB, 3: CC, 4: CBB, 7: CCC, 8: CBBB, 15: CCCC, 16: CBBBB (czarny = 1, biały = 0 — zapis binarny liczby n)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%231a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1c">1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Procedura <code>Korale(n)</code> jak w zadaniu 1a (w efekcie nawleka koraliki odpowiadające zapisowi binarnemu <code>n</code>: czarny = 1, biały = 0). Zaprojektuj nierekurencyjną procedurę <code>KoraleBis(n)</code> dającą ten sam efekt, przy czym koraliki wolno nawlekać tylko na jeden, wybrany koniec sznurka.</p><p>(W podpunkcie 1b należało podać i uzasadnić, ile koralików zostanie nawleczonych.)</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># nierekurencyjna wersja - koraliki nawlekamy zawsze na lewy koniec sznurka
 def korale_bis(n):
     sznurek = &quot;&quot;
     while n &gt; 0:
@@ -60,7 +89,42 @@ def korale_bis(n):
 
 
 for n in [1, 2, 3, 4, 7, 8, 15, 16]:
-    print(n, korale_bis(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> ten sam wynik co <code>Korale(n)</code>; liczba koralików (1b) to liczba cyfr binarnych n, czyli ⌊log2 n⌋ + 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def f(x):
+    print(n, korale_bis(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+// nierekurencyjna wersja - koraliki nawlekamy zawsze na lewy koniec sznurka
+std::string korale_bis(int n) {
+    std::string sznurek = &quot;&quot;;
+    while (n &gt; 0) {
+        if (n % 2 == 0) sznurek = &quot;B&quot; + sznurek;
+        else sznurek = &quot;C&quot; + sznurek;
+        n = n / 2;
+    }
+    return sznurek;
+}
+
+int main() {
+    for (int n : {1, 2, 3, 4, 7, 8, 15, 16}) {
+        std::println(&quot;{} {}&quot;, n, korale_bis(n));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // nierekurencyjna wersja - koraliki nawlekamy zawsze na lewy koniec sznurka
+    static String koraleBis(int n) {
+        String sznurek = &quot;&quot;;
+        while (n &gt; 0) {
+            if (n % 2 == 0) sznurek = &quot;B&quot; + sznurek;
+            else sznurek = &quot;C&quot; + sznurek;
+            n = n / 2;
+        }
+        return sznurek;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (int n : new int[]{1, 2, 3, 4, 7, 8, 15, 16}) {
+            System.out.println(n + &quot; &quot; + koraleBis(n));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> ten sam wynik co <code>Korale(n)</code>; liczba koralików (1b) to liczba cyfr binarnych n, czyli ⌊log2 n⌋ + 1</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%231c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2a-i-2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-i-2b">2a i 2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2. Bisekcja. Dla funkcji ciągłej na <code>&lt;a, b&gt;</code>, o wartościach różnych znaków na końcach przedziału, liczymy <code>f</code> w środku <code>x = (a+b)/2</code>. Jeśli <code>f(x) = 0</code>, <code>x</code> jest miejscem zerowym; w przeciwnym razie zawężamy przedział do <code>&lt;a, x&gt;</code> lub <code>&lt;x, b&gt;</code> tak, by na końcach znów były różne znaki. Powtarzamy do znalezienia zera lub aż długość przedziału spadnie poniżej dokładności <code>d</code> — wtedy wynikiem jest środek ostatniego przedziału.</p><p>Dla <code>f(x) = x³ − x − 2</code> i przedziału <code>&lt;0, 2&gt;</code>:</p><ul><li>2a — wykonaj trzy pierwsze kroki bisekcji, podając w każdym <code>a</code>, <code>b</code>, <code>f(a)</code>, <code>f(b)</code>, <code>x</code>, <code>f(x)</code> i wybrany nowy przedział (krok 1: <code>a = 0</code>, <code>b = 2</code>, <code>f(a) = −2</code>, <code>f(b) = 4</code>, <code>x = 1</code>, <code>f(x) = −2</code>, więc wybieramy <code>&lt;x, b&gt;</code>).</li><li>2b — podaj, w którym kroku długość przedziału <code>&lt;a, b&gt;</code> po raz pierwszy będzie mniejsza niż <code>0,1</code>.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def f(x):
     return x ** 3 - x - 2
 
 
@@ -76,7 +140,76 @@ while b - a &gt;= 0.1:
         a = x
     krok += 1
 
-print(&quot;dlugosc przedzialu &lt; 0,1 w kroku&quot;, krok)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) krok 1: a=0, b=2, f(a)=-2, f(b)=4, x=1, f(x)=-2; krok 2: a=1, b=2, f(a)=-2, f(b)=4, x=1,5, f(x)=-0,125; krok 3: a=1,5, b=2, f(a)=-0,125, f(b)=4, x=1,75, f(x)=1,609375; b) 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def bisekcja(f, a, b, d):
+print(&quot;dlugosc przedzialu &lt; 0,1 w kroku&quot;, krok)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;format&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+double f(double x) {
+    return std::pow(x, 3) - x - 2;
+}
+
+// W Pythonie a i b są na początku liczbami całkowitymi (0 i 2) i wypisują się bez &quot;.0&quot;;
+// po przypisaniu x stają się liczbami rzeczywistymi. Odwzorowujemy to przy wypisywaniu.
+std::string wypisz(double x, bool rzeczywista) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (rzeczywista &amp;&amp; s.find(&#x27;.&#x27;) == std::string::npos) s += &quot;.0&quot;;
+    return s;
+}
+
+int main() {
+    double a = 0, b = 2;
+    bool a_rzecz = false, b_rzecz = false;
+    int krok = 1;
+    while (b - a &gt;= 0.1) {
+        double x = (a + b) / 2;
+        if (krok &lt;= 3) {
+            std::println(&quot;{} {} {} {} {} {} {}&quot;, krok, wypisz(a, a_rzecz), wypisz(b, b_rzecz), wypisz(f(a), a_rzecz),
+                         wypisz(f(b), b_rzecz), wypisz(x, true), wypisz(f(x), true));
+        }
+        if (f(a) * f(x) &lt; 0) {
+            b = x;
+            b_rzecz = true;
+        } else {
+            a = x;
+            a_rzecz = true;
+        }
+        krok++;
+    }
+    std::println(&quot;dlugosc przedzialu &lt; 0,1 w kroku {}&quot;, krok);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static double f(double x) {
+        return Math.pow(x, 3) - x - 2;
+    }
+
+    // W Pythonie a i b są na początku liczbami całkowitymi (0 i 2) i wypisują się bez &quot;.0&quot;;
+    // po przypisaniu x stają się liczbami rzeczywistymi. Odwzorowujemy to przy wypisywaniu.
+    static String wypisz(double x, boolean rzeczywista) {
+        return rzeczywista ? Double.toString(x) : Long.toString((long) x);
+    }
+
+    public static void main(String[] args) throws Exception {
+        double a = 0, b = 2;
+        boolean aRzecz = false, bRzecz = false;
+        int krok = 1;
+        while (b - a &gt;= 0.1) {
+            double x = (a + b) / 2;
+            if (krok &lt;= 3) {
+                System.out.println(krok + &quot; &quot; + wypisz(a, aRzecz) + &quot; &quot; + wypisz(b, bRzecz) + &quot; &quot; + wypisz(f(a), aRzecz)
+                        + &quot; &quot; + wypisz(f(b), bRzecz) + &quot; &quot; + x + &quot; &quot; + f(x));
+            }
+            if (f(a) * f(x) &lt; 0) {
+                b = x;
+                bRzecz = true;
+            } else {
+                a = x;
+                aRzecz = true;
+            }
+            krok++;
+        }
+        System.out.println(&quot;dlugosc przedzialu &lt; 0,1 w kroku &quot; + krok);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) krok 1: a=0, b=2, f(a)=-2, f(b)=4, x=1, f(x)=-2; krok 2: a=1, b=2, f(a)=-2, f(b)=4, x=1,5, f(x)=-0,125; krok 3: a=1,5, b=2, f(a)=-0,125, f(b)=4, x=1,75, f(x)=1,609375; b) 6</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202a%20i%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%232a-i-2b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Bisekcja jak w zadaniu 2. Dane są: przedział domknięty <code>&lt;a, b&gt;</code>, funkcja <code>f</code> ciągła na nim, taka że <code>f(a)·f(b) &lt; 0</code>, oraz dodatnia dokładność <code>d ≤ b − a</code>. Zapisz algorytm wyznaczający metodą bisekcji przybliżenie miejsca zerowego <code>f</code> w <code>&lt;a, b&gt;</code> z dokładnością <code>d</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def bisekcja(f, a, b, d):
     x = (a + b) / 2
     while b - a &gt;= d:
         if f(x) == 0:
@@ -89,7 +222,44 @@ print(&quot;dlugosc przedzialu &lt; 0,1 w kroku&quot;, krok)</code></pre></div><
     return x
 
 
-print(bisekcja(lambda x: x ** 3 - x - 2, 0, 2, 0.0001))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> algorytm jak wyżej (dla f(x) = x³ − x − 2 na &lt;0, 2&gt; daje ok. 1,5214)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3a" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3a">3a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+print(bisekcja(lambda x: x ** 3 - x - 2, 0, 2, 0.0001))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;functional&gt;
+#include &lt;print&gt;
+
+double bisekcja(std::function&lt;double(double)&gt; f, double a, double b, double d) {
+    double x = (a + b) / 2;
+    while (b - a &gt;= d) {
+        if (f(x) == 0) return x;
+        if (f(a) * f(x) &lt; 0) b = x;
+        else a = x;
+        x = (a + b) / 2;
+    }
+    return x;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, bisekcja([](double x) { return std::pow(x, 3) - x - 2; }, 0, 2, 0.0001));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.function.DoubleUnaryOperator;
+
+public class Zadanie {
+    static double bisekcja(DoubleUnaryOperator f, double a, double b, double d) {
+        double x = (a + b) / 2;
+        while (b - a &gt;= d) {
+            if (f.applyAsDouble(x) == 0) return x;
+            if (f.applyAsDouble(a) * f.applyAsDouble(x) &lt; 0) b = x;
+            else a = x;
+            x = (a + b) / 2;
+        }
+        return x;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(bisekcja(x -&gt; Math.pow(x, 3) - x - 2, 0, 2, 0.0001));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> algorytm jak wyżej (dla f(x) = x³ − x − 2 na &lt;0, 2&gt; daje ok. 1,5214)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%232c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3a" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3a">3a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 3. Dla dodatniej liczby całkowitej <code>n</code>:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">jeżeli n = 1: suma ← 1
+w przeciwnym razie:
+    suma ← 1 + n; i ← n - 1
+    dopóki i &gt; 1: suma ← 1 + i * suma; i ← i - 1</code></pre></div></div></div><p>Podaj wartość zmiennej <code>suma</code> po zakończeniu algorytmu dla <code>n = 4</code> i <code>n = 6</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
     if n == 1:
         return 1
     suma = 1 + n
@@ -100,7 +270,37 @@ print(bisekcja(lambda x: x ** 3 - x - 2, 0, 2, 0.0001))</code></pre></div><p cla
     return suma
 
 
-print(algorytm(4), algorytm(6))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> n = 4: 33, n = 6: 873</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-4b-i-4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a-4b-i-4c">4a, 4b i 4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kury = 200
+print(algorytm(4), algorytm(6))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+long long algorytm(int n) {
+    if (n == 1) return 1;
+    long long suma = 1 + n;
+    int i = n - 1;
+    while (i &gt; 1) {
+        suma = 1 + i * suma;
+        i--;
+    }
+    return suma;
+}
+
+int main() {
+    std::println(&quot;{} {}&quot;, algorytm(4), algorytm(6));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long algorytm(int n) {
+        if (n == 1) return 1;
+        long suma = 1 + n;
+        int i = n - 1;
+        while (i &gt; 1) {
+            suma = 1 + i * suma;
+            i--;
+        }
+        return suma;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(algorytm(4) + &quot; &quot; + algorytm(6));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> n = 4: 33, n = 6: 873</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%203a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%233a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-4b-i-4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a-4b-i-4c">4a, 4b i 4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4. Ferma. Na fermie jest początkowo 200 kur. Kilogram paszy kosztuje 1,9 zł, a kura zjada dziennie 0,2 kg. Okres hodowli to dni 1–180; pierwsza niedziela to dzień 7. Codziennie w południe, oprócz niedziel, każda kura znosi 1 jajko, a wszystkie jajka są sprzedawane tego dnia po 0,9 zł. W każdy dzień o nieparzystym numerze po zmroku (po posiłku i sprzedaży) lis zmniejsza stado o 2 kury. Co 30 dni (dzień 30, 60, …) rano, przed posiłkiem, stado powiększa się o 20% (liczbę kupionych kur zaokrąglamy w dół) — kura kosztuje 18 zł. Odpowiedzi do a–c zapisz w kolejnych wierszach pliku <code>ZADANIE4.TXT</code>, poprzedzając każdą literą podpunktu.</p><ul><li>a) Podaj dzień i porę dnia, w której liczba kur po raz pierwszy ponownie wyniesie dokładnie 200.</li><li>b) Podaj łączną kwotę wydaną na paszę w ciągu 180 dni.</li><li>c) Dzienny zysk to przychód ze sprzedaży jajek minus koszt paszy i koszt kur dokupionych tego dnia; realny zysk to suma dotychczasowych dziennych zysków. Podaj, po którym dniu realny zysk po raz pierwszy przekroczy 1500 zł, oraz jaki będzie realny zysk po 180 dniach.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">kury = 200
 pasza = 0
 realny_zysk = 0
 dzien_200 = None
@@ -133,7 +333,101 @@ for dzien in range(1, 181):
 
 print(&quot;a)&quot;, dzien_200)
 print(&quot;b)&quot;, round(pasza, 2))
-print(&quot;c)&quot;, dzien_1500, round(realny_zysk, 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 33 dnia po zmroku; b) 13 533,70 zł; c) po 19 dniu, 10 220,90 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4d" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4d">4d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># dane do wykresu liniowego: dzien, przychod ze sprzedazy jaj, koszty (pasza + zakup kur)
+print(&quot;c)&quot;, dzien_1500, round(realny_zysk, 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;format&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+// liczba rzeczywista wypisana tak jak w Pythonie (np. 13533.7, 5.0)
+std::string jak_python(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find(&#x27;.&#x27;) == std::string::npos) s += &quot;.0&quot;;
+    return s;
+}
+
+// round(x, 2) z Pythona
+double zaokraglij2(double x) {
+    return std::stod(std::format(&quot;{:.2f}&quot;, x));
+}
+
+int main() {
+    int kury = 200;
+    double pasza = 0;
+    double realny_zysk = 0;
+    std::string dzien_200 = &quot;None&quot;;
+    std::string dzien_1500 = &quot;None&quot;;
+
+    for (int dzien = 1; dzien &lt;= 180; dzien++) {
+        // rano - co 30 dni zakup kur
+        int koszt_kur = 0;
+        if (dzien % 30 == 0) {
+            int nowe = int(kury * 0.2);
+            kury += nowe;
+            koszt_kur = nowe * 18;
+            if (kury == 200 &amp;&amp; dzien_200 == &quot;None&quot;) dzien_200 = std::format(&quot;({}, &#x27;rano&#x27;)&quot;, dzien);
+        }
+        // posilek
+        double koszt_paszy = kury * 0.2 * 1.9;
+        pasza += koszt_paszy;
+        // poludnie - sprzedaz jajek (bez niedziel)
+        double przychod = 0;
+        if (dzien % 7 != 0) przychod = kury * 0.9;
+        realny_zysk += przychod - koszt_paszy - koszt_kur;
+        if (realny_zysk &gt; 1500 &amp;&amp; dzien_1500 == &quot;None&quot;) dzien_1500 = std::to_string(dzien);
+        // po zmroku - lis
+        if (dzien % 2 == 1) {
+            kury -= 2;
+            if (kury == 200 &amp;&amp; dzien_200 == &quot;None&quot;) dzien_200 = std::format(&quot;({}, &#x27;po zmroku&#x27;)&quot;, dzien);
+        }
+    }
+
+    std::println(&quot;a) {}&quot;, dzien_200);
+    std::println(&quot;b) {}&quot;, jak_python(zaokraglij2(pasza)));
+    std::println(&quot;c) {} {}&quot;, dzien_1500, jak_python(zaokraglij2(realny_zysk)));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class Zadanie {
+    // round(x, 2) z Pythona
+    static double zaokraglij2(double x) {
+        return new BigDecimal(x).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+    }
+
+    public static void main(String[] args) throws Exception {
+        int kury = 200;
+        double pasza = 0;
+        double realnyZysk = 0;
+        String dzien200 = &quot;None&quot;;
+        String dzien1500 = &quot;None&quot;;
+
+        for (int dzien = 1; dzien &lt;= 180; dzien++) {
+            // rano - co 30 dni zakup kur
+            int kosztKur = 0;
+            if (dzien % 30 == 0) {
+                int nowe = (int) (kury * 0.2);
+                kury += nowe;
+                kosztKur = nowe * 18;
+                if (kury == 200 &amp;&amp; dzien200.equals(&quot;None&quot;)) dzien200 = &quot;(&quot; + dzien + &quot;, &#x27;rano&#x27;)&quot;;
+            }
+            // posilek
+            double kosztPaszy = kury * 0.2 * 1.9;
+            pasza += kosztPaszy;
+            // poludnie - sprzedaz jajek (bez niedziel)
+            double przychod = 0;
+            if (dzien % 7 != 0) przychod = kury * 0.9;
+            realnyZysk += przychod - kosztPaszy - kosztKur;
+            if (realnyZysk &gt; 1500 &amp;&amp; dzien1500.equals(&quot;None&quot;)) dzien1500 = Integer.toString(dzien);
+            // po zmroku - lis
+            if (dzien % 2 == 1) {
+                kury -= 2;
+                if (kury == 200 &amp;&amp; dzien200.equals(&quot;None&quot;)) dzien200 = &quot;(&quot; + dzien + &quot;, &#x27;po zmroku&#x27;)&quot;;
+            }
+        }
+
+        System.out.println(&quot;a) &quot; + dzien200);
+        System.out.println(&quot;b) &quot; + zaokraglij2(pasza));
+        System.out.println(&quot;c) &quot; + dzien1500 + &quot; &quot; + zaokraglij2(realnyZysk));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 33 dnia po zmroku; b) 13 533,70 zł; c) po 19 dniu, 10 220,90 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204a%2C%204b%20i%204c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%234a-4b-i-4c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4d" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4d">4d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Symulacja fermy jak w zadaniu 4. Wykonaj czytelny wykres liniowy porównujący dzienny przychód (wartość sprzedanych jajek) z dziennymi kosztami w okresie 180 dni. Wykres zapisz w osobnym pliku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># dane do wykresu liniowego: dzien, przychod ze sprzedazy jaj, koszty (pasza + zakup kur)
 kury = 200
 
 with open(&quot;wykres_4d.txt&quot;, &quot;w&quot;) as wynik:
@@ -148,7 +442,50 @@ with open(&quot;wykres_4d.txt&quot;, &quot;w&quot;) as wynik:
         przychod = kury * 0.9 if dzien % 7 != 0 else 0
         wynik.write(f&quot;{dzien};{przychod:.2f};{koszty:.2f}\n&quot;)
         if dzien % 2 == 1:
-            kury -= 2</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> wykres liniowy (2 serie: przychód i koszty) tworzymy w arkuszu z pliku <code>wykres_4d.txt</code></p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+            kury -= 2</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;format&gt;
+#include &lt;fstream&gt;
+
+// dane do wykresu liniowego: dzien, przychod ze sprzedazy jaj, koszty (pasza + zakup kur)
+int main() {
+    int kury = 200;
+    std::ofstream wynik(&quot;wykres_4d.txt&quot;);
+    wynik &lt;&lt; &quot;dzien;przychod;koszty\n&quot;;
+    for (int dzien = 1; dzien &lt;= 180; dzien++) {
+        int koszt_kur = 0;
+        if (dzien % 30 == 0) {
+            int nowe = int(kury * 0.2);
+            kury += nowe;
+            koszt_kur = nowe * 18;
+        }
+        double koszty = kury * 0.2 * 1.9 + koszt_kur;
+        double przychod = (dzien % 7 != 0) ? kury * 0.9 : 0;
+        wynik &lt;&lt; std::format(&quot;{};{:.2f};{:.2f}\n&quot;, dzien, przychod, koszty);
+        if (dzien % 2 == 1) kury -= 2;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.util.Locale;
+
+public class Zadanie {
+    // dane do wykresu liniowego: dzien, przychod ze sprzedazy jaj, koszty (pasza + zakup kur)
+    public static void main(String[] args) throws Exception {
+        int kury = 200;
+        try (var wynik = new PrintWriter(&quot;wykres_4d.txt&quot;)) {
+            wynik.print(&quot;dzien;przychod;koszty\n&quot;);
+            for (int dzien = 1; dzien &lt;= 180; dzien++) {
+                int kosztKur = 0;
+                if (dzien % 30 == 0) {
+                    int nowe = (int) (kury * 0.2);
+                    kury += nowe;
+                    kosztKur = nowe * 18;
+                }
+                double koszty = kury * 0.2 * 1.9 + kosztKur;
+                double przychod = (dzien % 7 != 0) ? kury * 0.9 : 0;
+                wynik.print(String.format(Locale.ROOT, &quot;%d;%.2f;%.2f\n&quot;, dzien, przychod, koszty));
+                if (dzien % 2 == 1) kury -= 2;
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> wykres liniowy (2 serie: przychód i koszty) tworzymy w arkuszu z pliku <code>wykres_4d.txt</code></p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%234d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5. Ciekawe napisy. W pliku <code>NAPIS.TXT</code> jest 1000 napisów (każdy w osobnym wierszu) o długości od 2 do 25 znaków, złożonych z wielkich liter alfabetu łacińskiego. Odpowiedzi zapisz w kolejnych wierszach pliku <code>ZADANIE5.TXT</code>, poprzedzając każdą literą podpunktu.</p><p>Napis pierwszy to napis, którego suma kodów ASCII jest liczbą pierwszą (np. <code>ABB</code>: suma 197). Podaj, ile jest napisów pierwszych w pliku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -169,7 +506,51 @@ with open(&quot;NAPIS.TXT&quot;) as file:
         if czy_pierwsza(suma):
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 122</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;NAPIS.TXT&quot;) as file:
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+bool czy_pierwsza(int x) {
+    if (x &lt; 2) return false;
+    for (int i = 2; i * i &lt;= x; i++) {
+        if (x % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    std::ifstream plik(&quot;NAPIS.TXT&quot;);
+    int licznik = 0;
+    std::string napis;
+    while (plik &gt;&gt; napis) {
+        int suma = 0;
+        for (char znak : napis) suma += znak;  // kod ASCII znaku
+        if (czy_pierwsza(suma)) licznik++;
+    }
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static boolean czyPierwsza(int x) {
+        if (x &lt; 2) return false;
+        for (int i = 2; i * i &lt;= x; i++) {
+            if (x % i == 0) return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (String line : Files.readAllLines(Path.of(&quot;NAPIS.TXT&quot;))) {
+            String napis = line.strip();
+            int suma = 0;
+            for (char znak : napis.toCharArray()) suma += znak;  // kod ASCII znaku
+            if (czyPierwsza(suma)) licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 122</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%235a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Napisy z pliku <code>NAPIS.TXT</code> jak w zadaniu 5a. Napis rosnący to napis, w którym kod ASCII każdej kolejnej litery jest większy od kodu poprzedniej. Wypisz wszystkie napisy rosnące z pliku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;NAPIS.TXT&quot;) as file:
     for line in file:
         napis = line.strip()
         rosnacy = True
@@ -178,7 +559,41 @@ print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 
                 rosnacy = False
                 break
         if rosnacy:
-            print(napis)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> FHJLMU, BEJNOSY, MNS, AEIOUY, BDL, JT, BJQR, AHJS, FHJLMU, DIT, CEGKZ, BCV, CEGIKOT, CEGKZ</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5c">5c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = {}
+            print(napis)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;NAPIS.TXT&quot;);
+    std::string napis;
+    while (plik &gt;&gt; napis) {
+        bool rosnacy = true;
+        for (size_t i = 1; i &lt; napis.size(); i++) {
+            if (napis[i] &lt;= napis[i - 1]) {
+                rosnacy = false;
+                break;
+            }
+        }
+        if (rosnacy) std::println(&quot;{}&quot;, napis);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        for (String line : Files.readAllLines(Path.of(&quot;NAPIS.TXT&quot;))) {
+            String napis = line.strip();
+            boolean rosnacy = true;
+            for (int i = 1; i &lt; napis.length(); i++) {
+                if (napis.charAt(i) &lt;= napis.charAt(i - 1)) {
+                    rosnacy = false;
+                    break;
+                }
+            }
+            if (rosnacy) System.out.println(napis);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> FHJLMU, BEJNOSY, MNS, AEIOUY, BDL, JT, BJQR, AHJS, FHJLMU, DIT, CEGKZ, BCV, CEGIKOT, CEGKZ</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%235b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5c" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5c">5c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Napisy z pliku <code>NAPIS.TXT</code> jak w zadaniu 5a. Wypisz napisy, które występują w pliku więcej niż raz (każdy taki napis tylko jeden raz).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = {}
 with open(&quot;NAPIS.TXT&quot;) as file:
     for line in file:
         napis = line.strip()
@@ -186,7 +601,40 @@ with open(&quot;NAPIS.TXT&quot;) as file:
 
 for napis, liczba in ile.items():
     if liczba &gt; 1:
-        print(napis)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> FHJLMU, GC, QULA, CEGKZ, BZYFFLOICLUNWLTH, SWIFT</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+        print(napis)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; ile;
+    std::vector&lt;std::string&gt; kolejnosc;  // kolejność pierwszego wystąpienia (jak w słowniku Pythona)
+    std::ifstream plik(&quot;NAPIS.TXT&quot;);
+    std::string napis;
+    while (plik &gt;&gt; napis) {
+        if (!ile.contains(napis)) kolejnosc.push_back(napis);
+        ile[napis]++;
+    }
+    for (const auto&amp; n : kolejnosc) {
+        if (ile[n] &gt; 1) std::println(&quot;{}&quot;, n);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.LinkedHashMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // LinkedHashMap pamięta kolejność dodawania (jak słownik w Pythonie)
+        var ile = new LinkedHashMap&lt;String, Integer&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;NAPIS.TXT&quot;))) {
+            ile.merge(line.strip(), 1, Integer::sum);
+        }
+        for (var wpis : ile.entrySet()) {
+            if (wpis.getValue() &gt; 1) System.out.println(wpis.getKey());
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> FHJLMU, GC, QULA, CEGKZ, BZYFFLOICLUNWLTH, SWIFT</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202014%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2014-maj.html%235c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2014_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

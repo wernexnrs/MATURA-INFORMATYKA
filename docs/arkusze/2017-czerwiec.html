@@ -37,7 +37,15 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#3-1-i-3-2">3.1 i 3.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#4-4">4.4</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2017 — czerwiec (termin dodatkowy), poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2017 — czerwiec (termin dodatkowy), poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+<h1 class="page-title">Matura 2017 — czerwiec (termin dodatkowy), poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2017-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1. Sitko. Dana jest procedura z parametrem — dodatnią liczbą całkowitą <code>n</code>:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">Sitko(n):
+    dla i = 1, 2, ..., n: Czyjest[i] ← prawda
+    j ← 1
+    dopóki j*j &lt; n: j ← j+1
+    dla i = 2, 3, ..., j wykonuj
+        kw ← i*i; poz ← kw
+        dopóki poz ≤ n wykonuj
+            (*) Czyjest[poz] ← fałsz
+            poz ← poz + kw</code></pre></div></div></div><ul><li>1.1 — Podaj wartość <code>j</code> oraz <code>Czyjest[k]</code> po wykonaniu <code>Sitko(n)</code> dla par: <code>n=10, k=9</code> (wzór: <code>j=4</code>, prawda), <code>n=10, k=5</code>, <code>n=100, k=10</code>, <code>n=100, k=75</code>.</li><li>1.2 — Dla <code>Sitko(100)</code> podaj, ile razy wykona się wiersz <code>(*)</code> dla <code>i</code> = 3, 5, 9 (dla <code>i=2</code> jest to 25) oraz łączną liczbę wykonań wiersza <code>(*)</code> w całej procedurze.</li><li>1.3 — Liczba jest kwadratowa, jeśli da się ją zapisać jako <code>a·b² + c·d²</code>, gdzie <code>a, b, c, d</code> są dodatnimi liczbami całkowitymi, a <code>b, d &gt; 1</code>. Korzystając z tablicy <code>Czyjest[1..n]</code> obliczonej przez <code>Sitko(n)</code>, zapisz algorytm, który dla liczby <code>k</code> (<code>1 ≤ k ≤ n</code>) zwraca prawdę, gdy <code>k</code> jest kwadratowa, a fałsz w przeciwnym razie.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 
 
 def sitko(n):
@@ -82,7 +90,158 @@ print(&quot;100 * (1/2^2 + ... + 1/10^2):&quot;, 100 * sum(1 / i ** 2 for i in r
 print(&quot;sqrt(100):&quot;, math.sqrt(100) &gt; razem)
 
 # 1.3
-print([k for k in range(1, 101) if czy_kwadratowa(k, czyjest)])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (10, 9): j = 4, prawda; (10, 5): 4, fałsz; (100, 10): 10, fałsz; (100, 75): 10, prawda. 1.2: i = 2: 25, 3: 11, 5: 4, 9: 1; większe od łącznej liczby wykonań: 100 oraz 100 · (1/2² + … + 1/10²). 1.3: funkcja <code>czy_kwadratowa</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def REG(w, n):
+print([k for k in range(1, 101) if czy_kwadratowa(k, czyjest)])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+struct Sitko {
+    int j;
+    std::vector&lt;bool&gt; czyjest;     // indeksy 1..n
+    std::map&lt;int, int&gt; wykonania;  // i -&gt; liczba wykonań wiersza (*)
+};
+
+Sitko sitko(int n) {
+    Sitko s;
+    s.czyjest.assign(n + 1, false);
+    int j = 1;
+    while (j * j &lt; n)
+        j++;
+    s.j = j;
+    for (int i = 2; i &lt;= j; i++) {
+        int kw = i * i;
+        int poz = kw;
+        s.wykonania[i] = 0;
+        while (poz &lt;= n) {
+            s.czyjest[poz] = true;  // (*)
+            s.wykonania[i]++;
+            poz += kw;
+        }
+    }
+    return s;
+}
+
+bool czy_kwadratowa(int k, const std::vector&lt;bool&gt;&amp; czyjest) {
+    // k = a*b^2 + c*d^2 (b, d &gt; 1) &lt;=&gt; k = x + (k - x), gdzie czyjest[x] i czyjest[k - x]
+    for (int x = 1; x &lt; k; x++)
+        if (czyjest[x] &amp;&amp; czyjest[k - x])
+            return true;
+    return false;
+}
+
+// wartość logiczna zapisana jak w Pythonie
+std::string py(bool b) {
+    return b ? &quot;True&quot; : &quot;False&quot;;
+}
+
+int main() {
+    // 1.1
+    int pary[4][2] = {{10, 9}, {10, 5}, {100, 10}, {100, 75}};
+    for (auto&amp; [n, k] : pary) {
+        Sitko s = sitko(n);
+        std::println(&quot;{} {} {} {}&quot;, n, k, s.j, py(s.czyjest[k]));
+    }
+
+    // 1.2
+    Sitko s = sitko(100);
+    for (int i : {2, 3, 5, 9})
+        std::println(&quot;{} {}&quot;, i, s.wykonania[i]);
+    int razem = 0;
+    for (auto&amp; [i, ile] : s.wykonania)
+        razem += ile;
+    std::println(&quot;razem: {}&quot;, razem);
+    std::println(&quot;ln 100: {}&quot;, py(std::log(100) &gt; razem));
+    std::println(&quot;100: {}&quot;, py(100 &gt; razem));
+    double suma = 0;
+    for (int i = 2; i &lt;= 10; i++)
+        suma += 1.0 / (i * i);
+    std::println(&quot;100 * (1/2^2 + ... + 1/10^2): {}&quot;, py(100 * suma &gt; razem));
+    std::println(&quot;sqrt(100): {}&quot;, py(std::sqrt(100) &gt; razem));
+
+    // 1.3
+    std::vector&lt;int&gt; kwadratowe;
+    for (int k = 1; k &lt;= 100; k++)
+        if (czy_kwadratowa(k, s.czyjest))
+            kwadratowe.push_back(k);
+    std::println(&quot;{}&quot;, kwadratowe);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeMap;
+
+public class Zadanie {
+    record Sitko(int j, boolean[] czyjest, TreeMap&lt;Integer, Integer&gt; wykonania) {}
+
+    static Sitko sitko(int n) {
+        boolean[] czyjest = new boolean[n + 1];  // indeksy 1..n
+        int j = 1;
+        while (j * j &lt; n)
+            j++;
+        var wykonania = new TreeMap&lt;Integer, Integer&gt;();  // i -&gt; liczba wykonań wiersza (*)
+        for (int i = 2; i &lt;= j; i++) {
+            int kw = i * i;
+            int poz = kw;
+            wykonania.put(i, 0);
+            while (poz &lt;= n) {
+                czyjest[poz] = true;  // (*)
+                wykonania.put(i, wykonania.get(i) + 1);
+                poz += kw;
+            }
+        }
+        return new Sitko(j, czyjest, wykonania);
+    }
+
+    static boolean czyKwadratowa(int k, boolean[] czyjest) {
+        // k = a*b^2 + c*d^2 (b, d &gt; 1) &lt;=&gt; k = x + (k - x), gdzie czyjest[x] i czyjest[k - x]
+        for (int x = 1; x &lt; k; x++)
+            if (czyjest[x] &amp;&amp; czyjest[k - x])
+                return true;
+        return false;
+    }
+
+    // wartość logiczna zapisana jak w Pythonie
+    static String py(boolean b) {
+        return b ? &quot;True&quot; : &quot;False&quot;;
+    }
+
+    public static void main(String[] args) {
+        // 1.1
+        int[][] pary = {{10, 9}, {10, 5}, {100, 10}, {100, 75}};
+        for (int[] para : pary) {
+            int n = para[0], k = para[1];
+            Sitko s = sitko(n);
+            System.out.println(n + &quot; &quot; + k + &quot; &quot; + s.j() + &quot; &quot; + py(s.czyjest()[k]));
+        }
+
+        // 1.2
+        Sitko s = sitko(100);
+        for (int i : new int[]{2, 3, 5, 9})
+            System.out.println(i + &quot; &quot; + s.wykonania().get(i));
+        int razem = 0;
+        for (int ile : s.wykonania().values())
+            razem += ile;
+        System.out.println(&quot;razem: &quot; + razem);
+        System.out.println(&quot;ln 100: &quot; + py(Math.log(100) &gt; razem));
+        System.out.println(&quot;100: &quot; + py(100 &gt; razem));
+        double suma = 0;
+        for (int i = 2; i &lt;= 10; i++)
+            suma += 1.0 / (i * i);
+        System.out.println(&quot;100 * (1/2^2 + ... + 1/10^2): &quot; + py(100 * suma &gt; razem));
+        System.out.println(&quot;sqrt(100): &quot; + py(Math.sqrt(100) &gt; razem));
+
+        // 1.3
+        List&lt;Integer&gt; kwadratowe = new ArrayList&lt;&gt;();
+        for (int k = 1; k &lt;= 100; k++)
+            if (czyKwadratowa(k, s.czyjest()))
+                kwadratowe.add(k);
+        System.out.println(kwadratowe);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (10, 9): j = 4, prawda; (10, 5): 4, fałsz; (100, 10): 10, fałsz; (100, 75): 10, prawda. 1.2: i = 2: 25, 3: 11, 5: 4, 9: 1; większe od łącznej liczby wykonań: 100 oraz 100 · (1/2² + … + 1/10²). 1.3: funkcja <code>czy_kwadratowa</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2. Regularność. Rozważamy słowa nad alfabetem {A, B}. Regularność <code>reg(w)</code> definiujemy tak:</p><ul><li>słowo jednoliterowe jest palindromem i <code>reg(w) = 1</code>;</li><li>dłuższe słowo zapisujemy jako <code>w = w1 Z w2</code> (długość nieparzysta, <code>Z</code> — jedna litera) lub <code>w = w1 w2</code> (długość parzysta), gdzie <code>w1</code>, <code>w2</code> mają równe długości; jeśli <code>w</code> nie jest palindromem, to <code>reg(w) = 0</code>, a jeśli jest — <code>reg(w) = reg(w1) + 1</code>.</li></ul><p>Np. <code>reg(BAAAB) = 3</code>, <code>reg(BABBAB) = 3</code>.</p><ul><li>2.1 — Podaj <code>reg(w)</code> dla słów: <code>BABBBB</code>, <code>BAAAAB</code>, <code>B</code>, <code>BBB</code>, <code>AAAAAAAA</code>.</li><li>2.2 — Uzupełnij luki w rekurencyjnej funkcji <code>REG(w, n)</code> (dane: <code>n</code> — długość, <code>w[1..n]</code> — słowo; wynik: <code>reg(w)</code>):</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">jeżeli n = 1: wynikiem jest .....
+w przeciwnym przypadku
+    m ← n/2 (dla n parzystego) albo (n-1)/2 (dla nieparzystego)
+    dla i = 1..m: jeżeli w[i] ≠ ..... : wynikiem jest 0, koniec
+    x ← w[1..m]
+    wynikiem jest 1 + .....</code></pre></div></div></div></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def REG(w, n):
     if n == 1:
         return 1
     m = n // 2                      # dla n nieparzystego to (n - 1) / 2
@@ -94,7 +253,40 @@ print([k for k in range(1, 101) if czy_kwadratowa(k, czyjest)])</code></pre></di
 
 # 2.1
 for w in [&quot;BABBAB&quot;, &quot;BABBBB&quot;, &quot;BAAAAB&quot;, &quot;B&quot;, &quot;BBB&quot;, &quot;AAAAAAAA&quot;]:
-    print(w, REG(w, len(w)))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 3, 0, 1, 1, 2, 4. 2.2: wynikiem jest 1; w[i] ≠ w[n + 1 - i]; wynikiem jest 1 + REG(x, m).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-2">3.1 i 3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">A = int(&quot;00010110100&quot;, 2)
+    print(w, REG(w, len(w)))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+int REG(const std::string&amp; w, int n) {
+    if (n == 1)
+        return 1;
+    int m = n / 2;                  // dla n nieparzystego to (n - 1) / 2
+    for (int i = 0; i &lt; m; i++)     // w[i] porównujemy z w[n + 1 - i] (tu indeksy od 0)
+        if (w[i] != w[n - 1 - i])
+            return 0;
+    return 1 + REG(w.substr(0, m), m);
+}
+
+int main() {
+    // 2.1
+    for (std::string w : {&quot;BABBAB&quot;, &quot;BABBBB&quot;, &quot;BAAAAB&quot;, &quot;B&quot;, &quot;BBB&quot;, &quot;AAAAAAAA&quot;})
+        std::println(&quot;{} {}&quot;, w, REG(w, w.size()));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int REG(String w, int n) {
+        if (n == 1)
+            return 1;
+        int m = n / 2;                  // dla n nieparzystego to (n - 1) / 2
+        for (int i = 0; i &lt; m; i++)     // w[i] porównujemy z w[n + 1 - i] (tu indeksy od 0)
+            if (w.charAt(i) != w.charAt(n - 1 - i))
+                return 0;
+        return 1 + REG(w.substring(0, m), m);
+    }
+
+    public static void main(String[] args) {
+        // 2.1
+        for (String w : new String[]{&quot;BABBAB&quot;, &quot;BABBBB&quot;, &quot;BAAAAB&quot;, &quot;B&quot;, &quot;BBB&quot;, &quot;AAAAAAAA&quot;})
+            System.out.println(w + &quot; &quot; + REG(w, w.length()));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 3, 0, 1, 1, 2, 4. 2.2: wynikiem jest 1; w[i] ≠ w[n + 1 - i]; wynikiem jest 1 + REG(x, m).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-i-3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-i-3-2">3.1 i 3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 3. Zegary. Zegary w trzech oddziałach pokazują liczbę minut od początku doby: oddział A w systemie dwójkowym, B — czwórkowym, C — szesnastkowym. Oddziały leżą w różnych strefach czasowych. W pewnej chwili wskazania wynosiły: A: <code>00010110100</code>, B: <code>000330</code>, C: <code>078</code>.</p><ul><li>3.1 — Oceń prawdziwość zdań: wszystkie wskazania są wielokrotnościami 6; różnica wskazań każdej pary zegarów jest wielokrotnością 60; największe wskazanie ma zegar A, a najmniejsze zegar C.</li><li>3.2 — Po pewnym czasie odczytano zegary jednocześnie, ale część cyfr (X) była nieczytelna: A: <code>000110100XX</code>, B: <code>001XX2</code>, C: <code>X96</code>. Podaj pełne wskazania wszystkich trzech zegarów.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">A = int(&quot;00010110100&quot;, 2)
 B = int(&quot;000330&quot;, 4)
 C = int(&quot;078&quot;, 16)
 
@@ -122,7 +314,104 @@ def pasuje(liczba, wzorzec, podstawa):
 for t in range(0, 24 * 60):
     if pasuje(A + t, &quot;000110100XX&quot;, 2) and pasuje(B + t, &quot;001XX2&quot;, 4) and pasuje(C + t, &quot;X96&quot;, 16):
         print(bin(A + t)[2:].zfill(11), A + t)
-        print(B + t, C + t)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: F, P, P (A = 180, B = 60, C = 120). 3.2: A: 00011010010, B: 001122, C: 096.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+        print(B + t, C + t)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+// wartość logiczna zapisana jak w Pythonie
+std::string py(bool b) {
+    return b ? &quot;True&quot; : &quot;False&quot;;
+}
+
+// 3.2 - szukamy wartości pasujących do wzorców; po tym samym czasie t od pierwszego odczytu
+// wszystkie zegary przesunęły się o tyle samo minut (pomijamy przejście przez północ)
+bool pasuje(int liczba, const std::string&amp; wzorzec, int podstawa) {
+    const std::string cyfry = &quot;0123456789ABCDEF&quot;;
+    std::string zapis;
+    for (size_t i = 0; i &lt; wzorzec.size(); i++) {
+        zapis = cyfry[liczba % podstawa] + zapis;
+        liczba /= podstawa;
+    }
+    if (liczba &gt; 0)
+        return false;
+    for (size_t i = 0; i &lt; wzorzec.size(); i++)
+        if (wzorzec[i] != &#x27;X&#x27; &amp;&amp; zapis[i] != wzorzec[i])
+            return false;
+    return true;
+}
+
+// zapis binarny uzupełniony zerami z przodu do podanej długości
+std::string binarnie(int liczba, int dlugosc) {
+    std::string zapis;
+    while (liczba &gt; 0) {
+        zapis = char(&#x27;0&#x27; + liczba % 2) + zapis;
+        liczba /= 2;
+    }
+    while ((int)zapis.size() &lt; dlugosc)
+        zapis = &quot;0&quot; + zapis;
+    return zapis;
+}
+
+int main() {
+    int A = std::stoi(&quot;00010110100&quot;, nullptr, 2);
+    int B = std::stoi(&quot;000330&quot;, nullptr, 4);
+    int C = std::stoi(&quot;078&quot;, nullptr, 16);
+
+    // 3.1
+    std::println(&quot;{} {} {}&quot;, A, B, C);
+    std::println(&quot;{}&quot;, py(A % 6 == 0 &amp;&amp; B % 6 == 0 &amp;&amp; C % 6 == 0));
+    std::println(&quot;{}&quot;, py((A - B) % 60 == 0 &amp;&amp; (A - C) % 60 == 0 &amp;&amp; (B - C) % 60 == 0));
+
+    // 3.2
+    for (int t = 0; t &lt; 24 * 60; t++) {
+        if (pasuje(A + t, &quot;000110100XX&quot;, 2) &amp;&amp; pasuje(B + t, &quot;001XX2&quot;, 4) &amp;&amp; pasuje(C + t, &quot;X96&quot;, 16)) {
+            std::println(&quot;{} {}&quot;, binarnie(A + t, 11), A + t);
+            std::println(&quot;{} {}&quot;, B + t, C + t);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // wartość logiczna zapisana jak w Pythonie
+    static String py(boolean b) {
+        return b ? &quot;True&quot; : &quot;False&quot;;
+    }
+
+    // 3.2 - szukamy wartości pasujących do wzorców; po tym samym czasie t od pierwszego odczytu
+    // wszystkie zegary przesunęły się o tyle samo minut (pomijamy przejście przez północ)
+    static boolean pasuje(int liczba, String wzorzec, int podstawa) {
+        String cyfry = &quot;0123456789ABCDEF&quot;;
+        String zapis = &quot;&quot;;
+        for (int i = 0; i &lt; wzorzec.length(); i++) {
+            zapis = cyfry.charAt(liczba % podstawa) + zapis;
+            liczba /= podstawa;
+        }
+        if (liczba &gt; 0)
+            return false;
+        for (int i = 0; i &lt; wzorzec.length(); i++)
+            if (wzorzec.charAt(i) != &#x27;X&#x27; &amp;&amp; zapis.charAt(i) != wzorzec.charAt(i))
+                return false;
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int A = Integer.parseInt(&quot;00010110100&quot;, 2);
+        int B = Integer.parseInt(&quot;000330&quot;, 4);
+        int C = Integer.parseInt(&quot;078&quot;, 16);
+
+        // 3.1
+        System.out.println(A + &quot; &quot; + B + &quot; &quot; + C);
+        System.out.println(py(A % 6 == 0 &amp;&amp; B % 6 == 0 &amp;&amp; C % 6 == 0));
+        System.out.println(py((A - B) % 60 == 0 &amp;&amp; (A - C) % 60 == 0 &amp;&amp; (B - C) % 60 == 0));
+
+        // 3.2
+        for (int t = 0; t &lt; 24 * 60; t++) {
+            if (pasuje(A + t, &quot;000110100XX&quot;, 2) &amp;&amp; pasuje(B + t, &quot;001XX2&quot;, 4) &amp;&amp; pasuje(C + t, &quot;X96&quot;, 16)) {
+                // zapis binarny uzupełniony zerami z przodu do 11 cyfr
+                String binarnie = &quot;0&quot;.repeat(11) + Integer.toBinaryString(A + t);
+                System.out.println(binarnie.substring(binarnie.length() - 11) + &quot; &quot; + (A + t));
+                System.out.println((B + t) + &quot; &quot; + (C + t));
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: F, P, P (A = 180, B = 60, C = 120). 3.2: A: 00011010010, B: 001122, C: 096.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%203.1%20i%203.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%233-1-i-3-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4. Punkty. Plik <code>punkty.txt</code> zawiera 1000 wierszy; w każdym są dwie liczby całkowite z przedziału [0, 10000] oddzielone spacją — współrzędne <code>(x, y)</code> punktu. Punkty się nie powtarzają. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania.</p><p>Podaj, ile jest punktów, których obie współrzędne są liczbami pierwszymi.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -141,7 +430,54 @@ with open(&quot;punkty.txt&quot;) as file:
         if czy_pierwsza(x) and czy_pierwsza(y):
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 18</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+
+bool czy_pierwsza(long long x) {
+    if (x &lt; 2)
+        return false;
+    for (long long i = 2; i * i &lt;= x; i++)
+        if (x % i == 0)
+            return false;
+    return true;
+}
+
+int main() {
+    int licznik = 0;
+
+    std::ifstream plik(&quot;punkty.txt&quot;);
+    long long x, y;
+    while (plik &gt;&gt; x &gt;&gt; y)
+        if (czy_pierwsza(x) &amp;&amp; czy_pierwsza(y))
+            licznik++;
+
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static boolean czyPierwsza(long x) {
+        if (x &lt; 2)
+            return false;
+        for (long i = 2; i * i &lt;= x; i++)
+            if (x % i == 0)
+                return false;
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+
+        for (String linia : Files.readAllLines(Path.of(&quot;punkty.txt&quot;))) {
+            String[] pola = linia.trim().split(&quot;\\s+&quot;);
+            long x = Long.parseLong(pola[0]), y = Long.parseLong(pola[1]);
+            if (czyPierwsza(x) &amp;&amp; czyPierwsza(y))
+                licznik++;
+        }
+
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 18</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla punktów z pliku <code>punkty.txt</code> (1000 par współrzędnych z [0, 10000]): dwie liczby są cyfropodobne, jeśli do ich zapisu użyto dokładnie tego samego zbioru cyfr (np. 123 i 1321 są cyfropodobne, a 505 i 55 — nie). Podaj, ile jest punktów, których współrzędne są cyfropodobne. Wynik dopisz do <code>wyniki4.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;punkty.txt&quot;) as file:
     for line in file:
@@ -150,7 +486,51 @@ with open(&quot;punkty.txt&quot;) as file:
         if set(x) == set(y):
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 5</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+int main() {
+    int licznik = 0;
+
+    std::ifstream plik(&quot;punkty.txt&quot;);
+    std::string x, y;
+    while (plik &gt;&gt; x &gt;&gt; y) {
+        // cyfropodobne - zbiory użytych cyfr są równe (porównujemy zbiory, nie listy)
+        std::set&lt;char&gt; cyfry_x(x.begin(), x.end());
+        std::set&lt;char&gt; cyfry_y(y.begin(), y.end());
+        if (cyfry_x == cyfry_y)
+            licznik++;
+    }
+
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Zadanie {
+    static Set&lt;Character&gt; zbiorCyfr(String liczba) {
+        Set&lt;Character&gt; zbior = new HashSet&lt;&gt;();
+        for (char c : liczba.toCharArray())
+            zbior.add(c);
+        return zbior;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+
+        for (String linia : Files.readAllLines(Path.of(&quot;punkty.txt&quot;))) {
+            String[] pola = linia.trim().split(&quot;\\s+&quot;);
+            // cyfropodobne - zbiory użytych cyfr są równe (porównujemy zbiory, nie listy)
+            if (zbiorCyfr(pola[0]).equals(zbiorCyfr(pola[1])))
+                licznik++;
+        }
+
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 5</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Wśród punktów z pliku <code>punkty.txt</code> znajdź dwa najbardziej oddalone od siebie (taka para jest jedna). Podaj współrzędne obu punktów oraz odległość między nimi zaokrągloną do liczby całkowitej, gdzie <code>|AB| = √((xA−xB)² + (yA−yB)²)</code>. Wynik dopisz do <code>wyniki4.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 
 punkty = []
 with open(&quot;punkty.txt&quot;) as file:
@@ -168,7 +548,73 @@ for i in range(len(punkty)):
             najwieksza = kwadrat
             para = (punkty[i], punkty[j])
 
-print(para[0], para[1], round(math.sqrt(najwieksza)))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (9901, 593) i (35, 9583), odległość 13348</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-4">4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wewnatrz = na_boku = na_zewnatrz = 0
+print(para[0], para[1], round(math.sqrt(najwieksza)))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::pair&lt;long long, long long&gt;&gt; punkty;
+    std::ifstream plik(&quot;punkty.txt&quot;);
+    long long x, y;
+    while (plik &gt;&gt; x &gt;&gt; y)
+        punkty.push_back({x, y});
+
+    long long najwieksza = -1;  // kwadrat odległości - porównujemy bez pierwiastka
+    std::pair&lt;long long, long long&gt; p1, p2;
+    for (size_t i = 0; i &lt; punkty.size(); i++) {
+        for (size_t j = i + 1; j &lt; punkty.size(); j++) {
+            auto [x1, y1] = punkty[i];
+            auto [x2, y2] = punkty[j];
+            long long kwadrat = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
+            if (kwadrat &gt; najwieksza) {
+                najwieksza = kwadrat;
+                p1 = punkty[i];
+                p2 = punkty[j];
+            }
+        }
+    }
+
+    std::println(&quot;({}, {}) ({}, {}) {}&quot;, p1.first, p1.second, p2.first, p2.second,
+                 std::llround(std::sqrt(najwieksza)));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    record Punkt(long x, long y) {
+        @Override
+        public String toString() {
+            return &quot;(&quot; + x + &quot;, &quot; + y + &quot;)&quot;;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Punkt&gt; punkty = new ArrayList&lt;&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;punkty.txt&quot;))) {
+            String[] pola = linia.trim().split(&quot;\\s+&quot;);
+            punkty.add(new Punkt(Long.parseLong(pola[0]), Long.parseLong(pola[1])));
+        }
+
+        long najwieksza = -1;  // kwadrat odległości - porównujemy bez pierwiastka
+        Punkt p1 = null, p2 = null;
+        for (int i = 0; i &lt; punkty.size(); i++) {
+            for (int j = i + 1; j &lt; punkty.size(); j++) {
+                Punkt a = punkty.get(i), b = punkty.get(j);
+                long kwadrat = (a.x() - b.x()) * (a.x() - b.x()) + (a.y() - b.y()) * (a.y() - b.y());
+                if (kwadrat &gt; najwieksza) {
+                    najwieksza = kwadrat;
+                    p1 = a;
+                    p2 = b;
+                }
+            }
+        }
+
+        System.out.println(p1 + &quot; &quot; + p2 + &quot; &quot; + Math.round(Math.sqrt(najwieksza)));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (9901, 593) i (35, 9583), odległość 13348</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-4">4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Kwadrat K ma bok długości 10000, środek symetrii w początku układu współrzędnych i boki równoległe do osi. Dla punktów z pliku <code>punkty.txt</code> podaj, ile z nich leży: a) wewnątrz K (bez boków), b) na bokach K, c) na zewnątrz K. Wynik dopisz do <code>wyniki4.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wewnatrz = na_boku = na_zewnatrz = 0
 
 with open(&quot;punkty.txt&quot;) as file:
     for line in file:
@@ -181,7 +627,48 @@ with open(&quot;punkty.txt&quot;) as file:
         else:
             na_zewnatrz += 1
 
-print(wewnatrz, na_boku, na_zewnatrz)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 249, b) 2, c) 749</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def amortyzacja(rok, cena, przebieg):
+print(wewnatrz, na_boku, na_zewnatrz)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+
+int main() {
+    int wewnatrz = 0, na_boku = 0, na_zewnatrz = 0;
+
+    std::ifstream plik(&quot;punkty.txt&quot;);
+    long long x, y;
+    while (plik &gt;&gt; x &gt;&gt; y) {
+        // kwadrat K: -5000 &lt;= x, y &lt;= 5000 (bok 10000, środek w (0, 0))
+        if (std::llabs(x) &lt; 5000 &amp;&amp; std::llabs(y) &lt; 5000)
+            wewnatrz++;
+        else if (std::llabs(x) &lt;= 5000 &amp;&amp; std::llabs(y) &lt;= 5000)
+            na_boku++;
+        else
+            na_zewnatrz++;
+    }
+
+    std::println(&quot;{} {} {}&quot;, wewnatrz, na_boku, na_zewnatrz);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int wewnatrz = 0, naBoku = 0, naZewnatrz = 0;
+
+        for (String linia : Files.readAllLines(Path.of(&quot;punkty.txt&quot;))) {
+            String[] pola = linia.trim().split(&quot;\\s+&quot;);
+            long x = Long.parseLong(pola[0]), y = Long.parseLong(pola[1]);
+            // kwadrat K: -5000 &lt;= x, y &lt;= 5000 (bok 10000, środek w (0, 0))
+            if (Math.abs(x) &lt; 5000 &amp;&amp; Math.abs(y) &lt; 5000)
+                wewnatrz++;
+            else if (Math.abs(x) &lt;= 5000 &amp;&amp; Math.abs(y) &lt;= 5000)
+                naBoku++;
+            else
+                naZewnatrz++;
+        }
+
+        System.out.println(wewnatrz + &quot; &quot; + naBoku + &quot; &quot; + naZewnatrz);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 249, b) 2, c) 749</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%234-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5. Firma transportowa. Plik <code>transport.txt</code> (dane rozdzielone tabulatorami, pierwszy wiersz nagłówkowy) opisuje samochody firmy: marka i model (jedno pole), rok produkcji, cena zakupu w zł, numer rejestracyjny, przebieg w km, data ostatniego remontu. Wartość samochodu maleje o 5% ceny zakupu za każdy rok od roku produkcji oraz o 2% ceny zakupu za każde pełne 100 000 km przebiegu (np. auto z 2015 r. za 70 000 zł z przebiegiem 350 000 km jest w 2017 r. warte 70 000 − 7000 − 4200 = 58 800 zł). Odpowiedzi zapisz w pliku <code>wyniki5.txt</code>, poprzedzając je numerami zadań.</p><ul><li>a) Podaj wartość w roku 2017 samochodu Volvo FH o numerze <code>ERA 092 TR</code> oraz jego amortyzację z tytułu upływu czasu i z tytułu przebiegu.</li><li>b) Znajdź samochód o najniższej wartości w 2017 r.; podaj jego markę i model, numer rejestracyjny i wartość.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def amortyzacja(rok, cena, przebieg):
     czasowa = cena * 5 * (2017 - rok) // 100
     zuzycie = cena * 2 * (przebieg // 100000) // 100
     return czasowa, zuzycie
@@ -204,7 +691,86 @@ with open(&quot;transport.txt&quot;) as file:
             najmniejsza = wartosc
             najtanszy = (model, nr, wartosc)
 
-print(*najtanszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) wartość 43 610 zł, amortyzacja czasowa 40 050 zł, z przebiegu 5 340 zł; b) DAF LF45, ERA 132 TR, 17 390 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczba = {}
+print(*najtanszy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz na pola rozdzielone tabulatorem (i usuwa \r z końca)
+std::vector&lt;std::string&gt; podziel(std::string linia) {
+    if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+        linia.pop_back();
+    std::vector&lt;std::string&gt; pola;
+    std::stringstream ss(linia);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;))
+        pola.push_back(pole);
+    return pola;
+}
+
+int main() {
+    bool pierwszy = true;
+    long long najmniejsza = 0;
+    std::string najtanszy_model, najtanszy_nr;
+
+    std::ifstream plik(&quot;transport.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        auto pola = podziel(linia);
+        std::string model = pola[0], nr = pola[3];
+        long long rok = std::stoll(pola[1]), cena = std::stoll(pola[2]), przebieg = std::stoll(pola[4]);
+        long long czasowa = cena * 5 * (2017 - rok) / 100;
+        long long zuzycie = cena * 2 * (przebieg / 100000) / 100;
+        long long wartosc = cena - czasowa - zuzycie;
+
+        // a)
+        if (nr == &quot;ERA 092 TR&quot;)
+            std::println(&quot;{} {} {} {}&quot;, model, wartosc, czasowa, zuzycie);
+
+        // b)
+        if (pierwszy || wartosc &lt; najmniejsza) {
+            pierwszy = false;
+            najmniejsza = wartosc;
+            najtanszy_model = model;
+            najtanszy_nr = nr;
+        }
+    }
+
+    std::println(&quot;{} {} {}&quot;, najtanszy_model, najtanszy_nr, najmniejsza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        Long najmniejsza = null;
+        String najtanszy = &quot;&quot;;
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;transport.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            String model = pola[0], nr = pola[3];
+            long rok = Long.parseLong(pola[1]), cena = Long.parseLong(pola[2]), przebieg = Long.parseLong(pola[4]);
+            long czasowa = cena * 5 * (2017 - rok) / 100;
+            long zuzycie = cena * 2 * (przebieg / 100000) / 100;
+            long wartosc = cena - czasowa - zuzycie;
+
+            // a)
+            if (nr.equals(&quot;ERA 092 TR&quot;))
+                System.out.println(model + &quot; &quot; + wartosc + &quot; &quot; + czasowa + &quot; &quot; + zuzycie);
+
+            // b)
+            if (najmniejsza == null || wartosc &lt; najmniejsza) {
+                najmniejsza = wartosc;
+                najtanszy = model + &quot; &quot; + nr + &quot; &quot; + wartosc;
+            }
+        }
+
+        System.out.println(najtanszy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) wartość 43 610 zł, amortyzacja czasowa 40 050 zł, z przebiegu 5 340 zł; b) DAF LF45, ERA 132 TR, 17 390 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%205.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%235-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Pole z marką i modelem samochodu w pliku <code>transport.txt</code> zawiera markę i model oddzielone spacją. Wyodrębnij markę każdego samochodu i dla każdej marki podaj: a) liczbę samochodów tej marki, b) średni przebieg (w km, zaokrąglony do liczby całkowitej). Wykonaj wykres kolumnowy średniego przebiegu dla każdej marki z tytułem i etykietami osi poziomej. Wynik zapisz w <code>wyniki5.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczba = {}
 suma_przebiegow = {}
 
 with open(&quot;transport.txt&quot;) as file:
@@ -216,7 +782,71 @@ with open(&quot;transport.txt&quot;) as file:
         suma_przebiegow[marka] = suma_przebiegow.get(marka, 0) + int(przebieg)
 
 for marka in sorted(liczba):
-    print(marka, liczba[marka], round(suma_przebiegow[marka] / liczba[marka]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> DAF 30 / 273 240, Iveco 12 / 657 434, MAN 18 / 289 637, Mercedes 17 / 486 546, Renault 17 / 519 936, Scania 17 / 557 118, Volvo 23 / 307 130 (+ wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zestawienie = {}  # (rok, marka) -&gt; liczba samochodów
+    print(marka, liczba[marka], round(suma_przebiegow[marka] / liczba[marka]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz na pola rozdzielone tabulatorem (i usuwa \r z końca)
+std::vector&lt;std::string&gt; podziel(std::string linia) {
+    if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+        linia.pop_back();
+    std::vector&lt;std::string&gt; pola;
+    std::stringstream ss(linia);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;))
+        pola.push_back(pole);
+    return pola;
+}
+
+int main() {
+    std::map&lt;std::string, long long&gt; liczba;  // std::map trzyma klucze posortowane
+    std::map&lt;std::string, long long&gt; suma_przebiegow;
+
+    std::ifstream plik(&quot;transport.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        auto pola = podziel(linia);
+        std::string marka = pola[0].substr(0, pola[0].find(&#x27; &#x27;));
+        liczba[marka]++;
+        suma_przebiegow[marka] += std::stoll(pola[4]);
+    }
+
+    for (auto&amp; [marka, ile] : liczba) {
+        // std::nearbyint zaokrągla połówki do parzystej, tak jak round() w Pythonie
+        double srednia = (double)suma_przebiegow[marka] / ile;
+        std::println(&quot;{} {} {}&quot;, marka, ile, (long long)std::nearbyint(srednia));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        Map&lt;String, Long&gt; liczba = new TreeMap&lt;&gt;();  // TreeMap trzyma klucze posortowane
+        Map&lt;String, Long&gt; sumaPrzebiegow = new TreeMap&lt;&gt;();
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;transport.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            String marka = pola[0].split(&quot; &quot;)[0];
+            liczba.merge(marka, 1L, Long::sum);
+            sumaPrzebiegow.merge(marka, Long.parseLong(pola[4]), Long::sum);
+        }
+
+        for (String marka : liczba.keySet()) {
+            // Math.rint zaokrągla połówki do parzystej, tak jak round() w Pythonie
+            double srednia = (double) sumaPrzebiegow.get(marka) / liczba.get(marka);
+            System.out.println(marka + &quot; &quot; + liczba.get(marka) + &quot; &quot; + (long) Math.rint(srednia));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> DAF 30 / 273 240, Iveco 12 / 657 434, MAN 18 / 289 637, Mercedes 17 / 486 546, Renault 17 / 519 936, Scania 17 / 557 118, Volvo 23 / 307 130 (+ wykres kolumnowy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%205.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%235-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie pliku <code>transport.txt</code> utwórz zestawienie liczby samochodów poszczególnych marek wyprodukowanych w kolejnych latach od 2006 do 2015 włącznie. Wynik zapisz w <code>wyniki5.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zestawienie = {}  # (rok, marka) -&gt; liczba samochodów
 marki = set()
 
 with open(&quot;transport.txt&quot;) as file:
@@ -230,7 +860,85 @@ with open(&quot;transport.txt&quot;) as file:
 marki = sorted(marki)
 print(&quot;rok&quot;, *marki)
 for rok in range(2006, 2016):
-    print(rok, *[zestawienie.get((rok, marka), 0) for marka in marki])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> np. 2006: Iveco 5; 2009: DAF 2, Iveco 2, MAN 4, Mercedes 4, Renault 2, Scania 4, Volvo 8; … (pełna tabela z programu)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
+    print(rok, *[zestawienie.get((rok, marka), 0) for marka in marki])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz na pola rozdzielone tabulatorem (i usuwa \r z końca)
+std::vector&lt;std::string&gt; podziel(std::string linia) {
+    if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+        linia.pop_back();
+    std::vector&lt;std::string&gt; pola;
+    std::stringstream ss(linia);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;))
+        pola.push_back(pole);
+    return pola;
+}
+
+int main() {
+    std::map&lt;std::pair&lt;int, std::string&gt;, int&gt; zestawienie;  // (rok, marka) -&gt; liczba samochodów
+    std::set&lt;std::string&gt; marki;                             // std::set trzyma marki posortowane
+
+    std::ifstream plik(&quot;transport.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        auto pola = podziel(linia);
+        std::string marka = pola[0].substr(0, pola[0].find(&#x27; &#x27;));
+        marki.insert(marka);
+        zestawienie[{std::stoi(pola[1]), marka}]++;
+    }
+
+    std::print(&quot;rok&quot;);
+    for (const auto&amp; marka : marki)
+        std::print(&quot; {}&quot;, marka);
+    std::println();
+    for (int rok = 2006; rok &lt; 2016; rok++) {
+        std::print(&quot;{}&quot;, rok);
+        for (const auto&amp; marka : marki) {
+            auto it = zestawienie.find({rok, marka});
+            std::print(&quot; {}&quot;, it == zestawienie.end() ? 0 : it-&gt;second);
+        }
+        std::println();
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeSet;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        Map&lt;String, Integer&gt; zestawienie = new HashMap&lt;&gt;();  // &quot;rok marka&quot; -&gt; liczba samochodów
+        TreeSet&lt;String&gt; marki = new TreeSet&lt;&gt;();             // TreeSet trzyma marki posortowane
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;transport.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            String marka = pola[0].split(&quot; &quot;)[0];
+            marki.add(marka);
+            zestawienie.merge(Integer.parseInt(pola[1]) + &quot; &quot; + marka, 1, Integer::sum);
+        }
+
+        var naglowek = new StringBuilder(&quot;rok&quot;);
+        for (String marka : marki)
+            naglowek.append(&quot; &quot;).append(marka);
+        System.out.println(naglowek);
+        for (int rok = 2006; rok &lt; 2016; rok++) {
+            var wiersz = new StringBuilder(String.valueOf(rok));
+            for (String marka : marki)
+                wiersz.append(&quot; &quot;).append(zestawienie.getOrDefault(rok + &quot; &quot; + marka, 0));
+            System.out.println(wiersz);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> np. 2006: Iveco 5; 2009: DAF 2, Iveco 2, MAN 4, Mercedes 4, Renault 2, Scania 4, Volvo 8; … (pełna tabela z programu)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%205.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%235-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie pliku <code>transport.txt</code> znajdź cztery samochody, dla których od daty ostatniego remontu do 1 stycznia 2017 r. upłynęło najwięcej czasu. Dla każdego podaj markę i model, numer rejestracyjny oraz liczbę dni od ostatniego remontu do 1.01.2017. Wynik zapisz w <code>wyniki5.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
 
 samochody = []
 
@@ -244,7 +952,83 @@ with open(&quot;transport.txt&quot;) as file:
 
 samochody.sort(reverse=True)
 for dni, model, nr in samochody[:4]:
-    print(model, nr, dni)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> Mercedes Atego ERA 112 TR 722, Iveco Strails ERA 212 TR 708, Iveco Strails ERA 213 TR 708, Iveco Trakker Euro5 ERA 214 TR 708</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(model, nr, dni)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;chrono&gt;
+#include &lt;fstream&gt;
+#include &lt;functional&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;tuple&gt;
+#include &lt;vector&gt;
+
+using namespace std::chrono;
+
+// dzieli wiersz na pola rozdzielone tabulatorem (i usuwa \r z końca)
+std::vector&lt;std::string&gt; podziel(std::string linia) {
+    if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+        linia.pop_back();
+    std::vector&lt;std::string&gt; pola;
+    std::stringstream ss(linia);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;))
+        pola.push_back(pole);
+    return pola;
+}
+
+int main() {
+    std::vector&lt;std::tuple&lt;int, std::string, std::string&gt;&gt; samochody;  // (dni, model, nr)
+
+    std::ifstream plik(&quot;transport.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        auto pola = podziel(linia);
+        std::string remont = pola[5];  // rrrr-mm-dd
+        int r = std::stoi(remont.substr(0, 4));
+        unsigned m = std::stoi(remont.substr(5, 2)), d = std::stoi(remont.substr(8, 2));
+        sys_days data_remontu = year(r) / month(m) / day(d);
+        sys_days poczatek_2017 = year(2017) / January / 1;
+        int dni = (poczatek_2017 - data_remontu).count();
+        samochody.push_back({dni, pola[0], pola[3]});
+    }
+
+    std::sort(samochody.begin(), samochody.end(), std::greater&lt;&gt;());  // malejąco
+    for (int i = 0; i &lt; 4; i++) {
+        auto&amp; [dni, model, nr] = samochody[i];
+        std::println(&quot;{} {} {}&quot;, model, nr, dni);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class Zadanie {
+    record Samochod(long dni, String model, String nr) {}
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Samochod&gt; samochody = new ArrayList&lt;&gt;();
+
+        List&lt;String&gt; linie = Files.readAllLines(Path.of(&quot;transport.txt&quot;));
+        for (String linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            String[] pola = linia.strip().split(&quot;\t&quot;);
+            LocalDate remont = LocalDate.parse(pola[5]);
+            long dni = ChronoUnit.DAYS.between(remont, LocalDate.of(2017, 1, 1));
+            samochody.add(new Samochod(dni, pola[0], pola[3]));
+        }
+
+        // malejąco po (dni, model, nr) - jak sort(reverse=True) w Pythonie
+        samochody.sort(Comparator.comparingLong(Samochod::dni)
+                .thenComparing(Samochod::model)
+                .thenComparing(Samochod::nr)
+                .reversed());
+        for (Samochod s : samochody.subList(0, 4))
+            System.out.println(s.model() + &quot; &quot; + s.nr() + &quot; &quot; + s.dni());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> Mercedes Atego ERA 112 TR 722, Iveco Strails ERA 212 TR 708, Iveco Strails ERA 213 TR 708, Iveco Trakker Euro5 ERA 214 TR 708</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202017%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%E2%80%94%205.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2017-czerwiec.html%235-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2017_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

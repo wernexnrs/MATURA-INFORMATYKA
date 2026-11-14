@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2023 — maj, poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2023 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def opis(A):
+<h1 class="page-title">Matura 2023 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla ciągu A liczb całkowitych dodatnich tworzymy jego <em>opis</em> B: każdy maksymalny fragment A będący p-krotnym powtórzeniem liczby x zastępujemy parą liczb p, x. Np. opisem (1, 1, 3, 2, 2, 2, 1) jest (2, 1, 1, 3, 3, 2, 1, 1), a opisem (2, 2, 2, 2, 5, 3, 3) — (4, 2, 1, 5, 2, 3).</p><ul><li>1.1 — Uzupełnij tabelę: dla ciągów (3, 3, 3, 2, 2, 1, 1, 1, 6) i (2, 2, 2, 2, 2, 2) podaj opis i jego długość (liczbę elementów B); dla opisu (4, 1, 1, 4) odtwórz ciąg A.</li><li>1.2 — Zapisz algorytm, który dla tablicy A[1..n] liczb całkowitych dodatnich obliczy długość jej opisu (liczbę elementów ciągu B). Wolno używać tylko podstawowych operacji arytmetycznych, porównań, odwołań do pojedynczych elementów tablicy i instrukcji sterujących — bez funkcji wbudowanych.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def opis(A):
     B = []
     i = 0
     while i &lt; len(A):
@@ -66,7 +66,84 @@ B = [4, 1, 1, 4]                  # odtworzenie ciągu A z opisu
 A = []
 for i in range(0, len(B), 2):
     A += [B[i + 1]] * B[i]
-print(A, B, len(B))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (3, 3, 3, 2, 2, 1, 1, 1, 6) → (3, 3, 2, 2, 3, 1, 1, 6), długość 8; (2, 2, 2, 2, 2, 2) → (6, 2), długość 2; ciąg A = (1, 1, 1, 1, 4), długość 4. 1.2: funkcja <code>dlugosc_opisu</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zamiany = 0
+print(A, B, len(B))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; opis(const std::vector&lt;int&gt;&amp; A) {
+    std::vector&lt;int&gt; B;
+    int n = A.size();
+    int i = 0;
+    while (i &lt; n) {
+        int p = 1;
+        while (i + p &lt; n &amp;&amp; A[i + p] == A[i]) p++;
+        B.push_back(p);
+        B.push_back(A[i]);
+        i += p;
+    }
+    return B;
+}
+
+// 1.2 - długość opisu: każda zmiana wartości rozpoczyna nowy fragment (2 liczby)
+int dlugosc_opisu(const std::vector&lt;int&gt;&amp; A, int n) {
+    int w = 2;
+    for (int i = 0; i &lt; n - 1; i++)
+        if (A[i] != A[i + 1]) w += 2;
+    return w;
+}
+
+int main() {
+    // 1.1
+    std::vector&lt;std::vector&lt;int&gt;&gt; ciagi = {{3, 3, 3, 2, 2, 1, 1, 1, 6}, {2, 2, 2, 2, 2, 2}};
+    for (auto&amp; A : ciagi) std::println(&quot;{} {} {}&quot;, A, opis(A), dlugosc_opisu(A, A.size()));
+
+    std::vector&lt;int&gt; B = {4, 1, 1, 4};  // odtworzenie ciągu A z opisu
+    std::vector&lt;int&gt; A;
+    for (size_t i = 0; i &lt; B.size(); i += 2)
+        for (int k = 0; k &lt; B[i]; k++) A.push_back(B[i + 1]);
+    std::println(&quot;{} {} {}&quot;, A, B, B.size());
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static List&lt;Integer&gt; opis(List&lt;Integer&gt; A) {
+        var B = new ArrayList&lt;Integer&gt;();
+        int n = A.size();
+        int i = 0;
+        while (i &lt; n) {
+            int p = 1;
+            while (i + p &lt; n &amp;&amp; A.get(i + p).equals(A.get(i))) p++;
+            B.add(p);
+            B.add(A.get(i));
+            i += p;
+        }
+        return B;
+    }
+
+    // 1.2 - długość opisu: każda zmiana wartości rozpoczyna nowy fragment (2 liczby)
+    static int dlugoscOpisu(List&lt;Integer&gt; A, int n) {
+        int w = 2;
+        for (int i = 0; i &lt; n - 1; i++)
+            if (!A.get(i).equals(A.get(i + 1))) w += 2;
+        return w;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        List&lt;List&lt;Integer&gt;&gt; ciagi = List.of(List.of(3, 3, 3, 2, 2, 1, 1, 1, 6), List.of(2, 2, 2, 2, 2, 2));
+        for (var A : ciagi) System.out.println(A + &quot; &quot; + opis(A) + &quot; &quot; + dlugoscOpisu(A, A.size()));
+
+        List&lt;Integer&gt; B = List.of(4, 1, 1, 4);  // odtworzenie ciągu A z opisu
+        var A = new ArrayList&lt;Integer&gt;();
+        for (int i = 0; i &lt; B.size(); i += 2)
+            for (int k = 0; k &lt; B.get(i); k++) A.add(B.get(i + 1));
+        System.out.println(A + &quot; &quot; + B + &quot; &quot; + B.size());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (3, 3, 3, 2, 2, 1, 1, 1, 6) → (3, 3, 2, 2, 3, 1, 1, 6), długość 8; (2, 2, 2, 2, 2, 2) → (6, 2), długość 2; ciąg A = (1, 1, 1, 1, 4), długość 4. 1.2: funkcja <code>dlugosc_opisu</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj-f2015.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest tablica A[1..n] liczb całkowitych dodatnich i rekurencyjna funkcja f(p, q), gdzie 1 ≤ p ≤ q ≤ n:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">f(p, q):
+    jeżeli p &lt; q
+        k ← (q - p + 1) div 2
+        dla i = 1, 2, ..., k
+            zamień(A[p + i - 1], A[q - k + i])
+        f(p, p + k - 1)
+        f(q - k + 1, q)</code></pre></div></div></div><ul><li>2.1 — Podaj zawartość tablicy A po wywołaniu f(1, n) dla: n = 3, A = [2, 3, 4]; n = 4, A = [1, 2, 3, 4]; n = 10, A = [1, 2, ..., 10].</li><li>2.2 — Podaj, ile razy wykona się operacja zamień() po wywołaniu f(1, n) dla n = 8, 16 i 256 (dla n = 4 jest to 4). Liczba ta zależy tylko od n.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zamiany = 0
 
 
 def f(p, q):
@@ -90,13 +167,115 @@ for n in [4, 8, 16, 256]:
     A = [0] * (n + 1)
     zamiany = 0
     f(1, n)
-    print(n, zamiany)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: [4, 3, 2]; [4, 3, 2, 1]; [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]. 2.2: n = 8 → 12, n = 16 → 32, liczba zamian 1024 dla n = 256.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
+    print(n, zamiany)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; A;  // tablica indeksowana od 1, A[0] nieużywane
+int zamiany = 0;
+
+void f(int p, int q) {
+    if (p &lt; q) {
+        int k = (q - p + 1) / 2;
+        for (int i = 1; i &lt;= k; i++) {
+            std::swap(A[p + i - 1], A[q - k + i]);
+            zamiany++;
+        }
+        f(p, p + k - 1);
+        f(q - k + 1, q);
+    }
+}
+
+int main() {
+    // 2.1
+    std::vector&lt;std::vector&lt;int&gt;&gt; tablice = {{0, 2, 3, 4}, {0, 1, 2, 3, 4}, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}};
+    for (auto&amp; tab : tablice) {
+        A = tab;
+        f(1, A.size() - 1);
+        std::println(&quot;{}&quot;, std::vector&lt;int&gt;(A.begin() + 1, A.end()));
+    }
+
+    // 2.2
+    for (int n : {4, 8, 16, 256}) {
+        A.assign(n + 1, 0);
+        zamiany = 0;
+        f(1, n);
+        std::println(&quot;{} {}&quot;, n, zamiany);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int[] A;  // tablica indeksowana od 1, A[0] nieużywane
+    static int zamiany = 0;
+
+    static void f(int p, int q) {
+        if (p &lt; q) {
+            int k = (q - p + 1) / 2;
+            for (int i = 1; i &lt;= k; i++) {
+                int t = A[p + i - 1];
+                A[p + i - 1] = A[q - k + i];
+                A[q - k + i] = t;
+                zamiany++;
+            }
+            f(p, p + k - 1);
+            f(q - k + 1, q);
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        int[][] tablice = {{0, 2, 3, 4}, {0, 1, 2, 3, 4}, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}};
+        for (var tab : tablice) {
+            A = tab.clone();
+            f(1, A.length - 1);
+            System.out.println(Arrays.toString(Arrays.copyOfRange(A, 1, A.length)));
+        }
+
+        // 2.2
+        for (int n : new int[] {4, 8, 16, 256}) {
+            A = new int[n + 1];
+            zamiany = 0;
+            f(1, n);
+            System.out.println(n + &quot; &quot; + zamiany);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: [4, 3, 2]; [4, 3, 2, 1]; [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]. 2.2: n = 8 → 12, n = 16 → 32, liczba zamian 1024 dla n = 256.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj-f2015.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>slowa.txt</code> zawiera 50 słów (długości do 1000) złożonych z małych liter alfabetu angielskiego (dane przykładowe: <code>przyklad.txt</code>).</p><p><em>WK-słowo</em> to słowo, w którym litery <code>w</code> i <code>k</code> występują tyle samo razy (także po 0 razy, np. „matura”). Zapisz w pliku <code>wyniki4_1.txt</code> wszystkie WK-słowa z pliku, każde w osobnym wierszu, w kolejności z pliku.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
     slowa = [linia.strip() for linia in file if linia.strip()]
 
 with open(&quot;wyniki4_1.txt&quot;, &quot;w&quot;) as wynik:
     for slowo in slowa:
         if slowo.count(&quot;w&quot;) == slowo.count(&quot;k&quot;):
-            print(slowo, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dsasahdadelebsdsidihdiahsaihd, abba, echwakacjeachwakacje, weweakaddcjjreewakacjerk, … (19 słów, ostatnie: awszystkoprzepasanejakbywstega)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
+            print(slowo, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; slowa;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) slowa.push_back(linia);
+
+    std::ofstream wynik(&quot;wyniki4_1.txt&quot;);
+    for (auto&amp; slowo : slowa)
+        if (std::count(slowo.begin(), slowo.end(), &#x27;w&#x27;) == std::count(slowo.begin(), slowo.end(), &#x27;k&#x27;))
+            wynik &lt;&lt; slowo &lt;&lt; &quot;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        try (var wynik = new PrintWriter(&quot;wyniki4_1.txt&quot;)) {
+            for (var linia : Files.readAllLines(Path.of(&quot;slowa.txt&quot;))) {
+                String slowo = linia.strip();
+                if (slowo.isEmpty()) continue;
+                long w = slowo.chars().filter(c -&gt; c == &#x27;w&#x27;).count();
+                long k = slowo.chars().filter(c -&gt; c == &#x27;k&#x27;).count();
+                if (w == k) wynik.println(slowo);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dsasahdadelebsdsidihdiahsaihd, abba, echwakacjeachwakacje, weweakaddcjjreewakacjerk, … (19 słów, ostatnie: awszystkoprzepasanejakbywstega)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj-f2015.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 4.1 (50 słów w <code>slowa.txt</code>).</p><p>Dla każdego słowa oblicz, ile słów <code>wakacje</code> można ułożyć z jego liter (każdej litery wolno użyć najwyżej raz). Np. dla <code>wwwaaaaakkcccjjee</code> wynik to 2, dla <code>awkcjcje</code> — 0. Zapisz w jednym wierszu pliku <code>wyniki4_2.txt</code> 50 liczb oddzielonych spacjami (i-ta liczba dotyczy i-tego słowa).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
     slowa = [linia.strip() for linia in file if linia.strip()]
 
 wzor = &quot;wakacje&quot;
@@ -108,7 +287,58 @@ for slowo in slowa:
     wyniki.append(ile)
 
 with open(&quot;wyniki4_2.txt&quot;, &quot;w&quot;) as wynik:
-    print(*wyniki, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 0 0 2 2 2 3 2 17 2 6 78 1 19 4 4 91 0 14 4 2 23 1 19 5 6 137 1 21 2 5 88 0 13 3 14 124 2 21 4 8 123 0 0 1 1 1 0 2 2 3</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
+    print(*wyniki, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; slowa;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) slowa.push_back(linia);
+
+    std::string wzor = &quot;wakacje&quot;;
+    std::vector&lt;int&gt; wyniki;
+    for (auto&amp; slowo : slowa) {
+        int ile = slowo.size();
+        for (char litera : wzor) {
+            int w_slowie = std::count(slowo.begin(), slowo.end(), litera);
+            int we_wzorze = std::count(wzor.begin(), wzor.end(), litera);  // &quot;a&quot; potrzebne 2 razy
+            ile = std::min(ile, w_slowie / we_wzorze);
+        }
+        wyniki.push_back(ile);
+    }
+
+    std::ofstream wynik(&quot;wyniki4_2.txt&quot;);
+    for (size_t i = 0; i &lt; wyniki.size(); i++) wynik &lt;&lt; (i &gt; 0 ? &quot; &quot; : &quot;&quot;) &lt;&lt; wyniki[i];
+    wynik &lt;&lt; &quot;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static int ile(String s, char c) {
+        return (int) s.chars().filter(z -&gt; z == c).count();
+    }
+
+    public static void main(String[] args) throws Exception {
+        String wzor = &quot;wakacje&quot;;
+        var wyniki = new ArrayList&lt;String&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;slowa.txt&quot;))) {
+            String slowo = linia.strip();
+            if (slowo.isEmpty()) continue;
+            int ile = slowo.length();
+            for (char litera : wzor.toCharArray())
+                ile = Math.min(ile, ile(slowo, litera) / ile(wzor, litera));  // &quot;a&quot; potrzebne 2 razy
+            wyniki.add(String.valueOf(ile));
+        }
+
+        try (var wynik = new PrintWriter(&quot;wyniki4_2.txt&quot;)) {
+            wynik.println(String.join(&quot; &quot;, wyniki));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 0 0 2 2 2 3 2 17 2 6 78 1 19 4 4 91 0 14 4 2 23 1 19 5 6 137 1 21 2 5 88 0 13 3 14 124 2 21 4 8 123 0 0 1 1 1 0 2 2 3</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj-f2015.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 4.1 (50 słów w <code>slowa.txt</code>).</p><p><em>Wakacyjne słowo</em> to słowo <code>wakacje</code> sklejone ze sobą dowolnie wiele razy (także 0 razy — słowo puste). Dla każdego słowa oblicz najmniejszą liczbę liter, które trzeba z niego wykreślić (bez zmiany kolejności pozostałych), aby otrzymać wakacyjne słowo. Np. <code>wakaaaacjee</code> → 4, <code>waktfaczdjeaewasakvgacrje</code> → 11, <code>awkcjcje</code> → 8. Zapisz w jednym wierszu pliku <code>wyniki4_3.txt</code> 50 wyników oddzielonych spacjami.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;slowa.txt&quot;) as file:
     slowa = [linia.strip() for linia in file if linia.strip()]
 
 wzor = &quot;wakacje&quot;
@@ -125,7 +355,66 @@ for slowo in slowa:
     wyniki.append(len(slowo) - len(wzor) * pelne)
 
 with open(&quot;wyniki4_3.txt&quot;, &quot;w&quot;) as wynik:
-    print(*wyniki, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 29 4 6 6 10 17 100 965 33 65 545 100 965 12 79 419 100 972 12 93 951 100 965 5 65 48 100 958 33 65 426 100 965 19 2 146 100 951 12 44 160 9 4 55 0 76 30 24 44 15</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_maj_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(*wyniki, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; slowa;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) slowa.push_back(linia);
+
+    std::string wzor = &quot;wakacje&quot;;
+    std::vector&lt;int&gt; wyniki;
+    for (auto&amp; slowo : slowa) {
+        size_t j = 0;    // która litera słowa &quot;wakacje&quot; jest teraz szukana
+        int pelne = 0;   // liczba ułożonych pełnych słów &quot;wakacje&quot;
+        for (char litera : slowo) {
+            if (litera == wzor[j]) {
+                j++;
+                if (j == wzor.size()) {
+                    pelne++;
+                    j = 0;
+                }
+            }
+        }
+        wyniki.push_back(slowo.size() - wzor.size() * pelne);
+    }
+
+    std::ofstream wynik(&quot;wyniki4_3.txt&quot;);
+    for (size_t i = 0; i &lt; wyniki.size(); i++) wynik &lt;&lt; (i &gt; 0 ? &quot; &quot; : &quot;&quot;) &lt;&lt; wyniki[i];
+    wynik &lt;&lt; &quot;\n&quot;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String wzor = &quot;wakacje&quot;;
+        var wyniki = new ArrayList&lt;String&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;slowa.txt&quot;))) {
+            String slowo = linia.strip();
+            if (slowo.isEmpty()) continue;
+            int j = 0;      // która litera słowa &quot;wakacje&quot; jest teraz szukana
+            int pelne = 0;  // liczba ułożonych pełnych słów &quot;wakacje&quot;
+            for (char litera : slowo.toCharArray()) {
+                if (litera == wzor.charAt(j)) {
+                    j++;
+                    if (j == wzor.length()) {
+                        pelne++;
+                        j = 0;
+                    }
+                }
+            }
+            wyniki.add(String.valueOf(slowo.length() - wzor.length() * pelne));
+        }
+
+        try (var wynik = new PrintWriter(&quot;wyniki4_3.txt&quot;)) {
+            wynik.println(String.join(&quot; &quot;, wyniki));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 29 4 6 6 10 17 100 965 33 65 545 100 965 12 79 419 100 972 12 93 951 100 965 5 65 48 100 958 33 65 426 100 965 19 2 146 100 951 12 44 160 9 4 55 0 76 30 24 44 15</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj-f2015.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_maj_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1">1.1</a></li><li><a href="#1-4">1.4</a></li><li><a href="#2-1-i-2-3">2.1 i 2.3</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#4-4">4.4</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2016 — maj, poziom podstawowy</span></nav>
-<h1 class="page-title">Matura 2016 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def kompresuj(tekst):
+<h1 class="page-title">Matura 2016 — maj, poziom podstawowy</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2016-maj-matura-stara-podstawowa-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Kompresja. Algorytm zastępuje każdą grupę kolejnych jednakowych znaków jednym wystąpieniem tego znaku poprzedzonym liczbą jego kolejnych wystąpień (liczba ta nie przekracza 9, więc zajmuje jeden znak). Np. tekst <code>FFFYYYYYYYYYFFFHAAAAA</code> (21 znaków) po kompresji to <code>3F9Y3F1H5A</code> (10 znaków).</p><p>Skompresuj tym algorytmem tekst <code>***##!!*</code> i podaj rozmiar tekstu (w znakach) przed kompresją i po niej.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def kompresuj(tekst):
     wynik = &quot;&quot;
     i = 0
     while i &lt; len(tekst):
@@ -50,7 +50,46 @@
 
 
 skompresowany = kompresuj(&quot;***##!!*&quot;)
-print(skompresowany, len(&quot;***##!!*&quot;), len(skompresowany))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3\<em>2#2!1\</em>, rozmiar przed kompresją 8, po kompresji 8; 1.2: co najmniej 3 kolejne znaki; 1.3: bezstratna</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-4" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-4">1.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozmiar_po_kompresji(n, T):
+print(skompresowany, len(&quot;***##!!*&quot;), len(skompresowany))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+std::string kompresuj(const std::string&amp; tekst) {
+    std::string wynik = &quot;&quot;;
+    size_t i = 0;
+    while (i &lt; tekst.size()) {
+        size_t j = i;
+        while (j &lt; tekst.size() &amp;&amp; tekst[j] == tekst[i])
+            j++;
+        wynik += std::to_string(j - i) + tekst[i];
+        i = j;
+    }
+    return wynik;
+}
+
+int main() {
+    std::string tekst = &quot;***##!!*&quot;;
+    std::string skompresowany = kompresuj(tekst);
+    std::cout &lt;&lt; skompresowany &lt;&lt; &#x27; &#x27; &lt;&lt; tekst.size() &lt;&lt; &#x27; &#x27; &lt;&lt; skompresowany.size() &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String kompresuj(String tekst) {
+        var wynik = new StringBuilder();
+        int i = 0;
+        while (i &lt; tekst.length()) {
+            int j = i;
+            while (j &lt; tekst.length() &amp;&amp; tekst.charAt(j) == tekst.charAt(i))
+                j++;
+            wynik.append(j - i).append(tekst.charAt(i));
+            i = j;
+        }
+        return wynik.toString();
+    }
+
+    public static void main(String[] args) {
+        String tekst = &quot;***##!!*&quot;;
+        String skompresowany = kompresuj(tekst);
+        System.out.println(skompresowany + &quot; &quot; + tekst.length() + &quot; &quot; + skompresowany.length());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3\<em>2#2!1\</em>, rozmiar przed kompresją 8, po kompresji 8; 1.2: co najmniej 3 kolejne znaki; 1.3: bezstratna</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%231-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-4" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-4">1.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Kompresja: każda grupa kolejnych jednakowych znaków (co najwyżej 9) jest zapisywana jako liczba wystąpień i ten znak, np. <code>FFFYYYYYYYYYFFFHAAAAA</code> → <code>3F9Y3F1H5A</code>. Zapisz (lista kroków, schemat blokowy, pseudokod lub język programowania) algorytm obliczający rozmiar skompresowanego tekstu.</p><p>Specyfikacja:</p><ul><li>Dane: <code>n</code> — dodatnia liczba całkowita, długość tekstu; <code>T[1..n]</code> — tablica z tekstem, T[i] to i-ty znak.</li><li>Wynik: <code>b</code> — rozmiar skompresowanego tekstu T.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozmiar_po_kompresji(n, T):
     r = 1  # liczba grup takich samych znaków
     for i in range(1, n):
         if T[i] != T[i - 1]:
@@ -59,7 +98,34 @@ print(skompresowany, len(&quot;***##!!*&quot;), len(skompresowany))</code></pre>
 
 
 tekst = &quot;FFFYYYYYYYYYFFFHAAAAA&quot;
-print(rozmiar_po_kompresji(len(tekst), tekst))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> dla przykładu z treści – 10</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-3">2.1 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_cyfr(n):
+print(rozmiar_po_kompresji(len(tekst), tekst))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int rozmiar_po_kompresji(int n, const std::string&amp; T) {
+    int r = 1;  // liczba grup takich samych znaków
+    for (int i = 1; i &lt; n; i++)
+        if (T[i] != T[i - 1])
+            r++;
+    return 2 * r;
+}
+
+int main() {
+    std::string tekst = &quot;FFFYYYYYYYYYFFFHAAAAA&quot;;
+    std::cout &lt;&lt; rozmiar_po_kompresji(tekst.size(), tekst) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int rozmiarPoKompresji(int n, String T) {
+        int r = 1;  // liczba grup takich samych znaków
+        for (int i = 1; i &lt; n; i++)
+            if (T.charAt(i) != T.charAt(i - 1))
+                r++;
+        return 2 * r;
+    }
+
+    public static void main(String[] args) {
+        String tekst = &quot;FFFYYYYYYYYYFFFHAAAAA&quot;;
+        System.out.println(rozmiarPoKompresji(tekst.length(), tekst));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> dla przykładu z treści – 10</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%201.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%231-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-3">2.1 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zapis liczb. Każdą liczbę naturalną n można zapisać jako sumę jej cyfr i iloczynu pewnego naturalnego współczynnika k oraz liczby 9, np. 19 = 1 + 9 + (1 · 9), 123 = 1 + 2 + 3 + (13 · 9).</p><ul><li>2.1 — Podaj rozkład i współczynnik k dla liczb 42, 375 i 913 (dla 11: 1 + 1 + (1 · 9), k = 1).</li><li>2.3 — Zapisz algorytm, który dla danej liczby naturalnej n oblicza współczynnik k z jej rozkładu. Można używać tylko dodawania, odejmowania, mnożenia, dzielenia całkowitego i reszty z dzielenia oraz funkcji <code>suma_cyfr(n)</code> zwracającej sumę cyfr n.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_cyfr(n):
     s = 0
     while n &gt; 0:
         s = s + n % 10
@@ -72,7 +138,43 @@ def wspolczynnik(n):
 
 
 for n in [11, 42, 375, 913]:
-    print(n, &quot;=&quot;, suma_cyfr(n), &quot;+&quot;, wspolczynnik(n), &quot;* 9&quot;, &quot;  k =&quot;, wspolczynnik(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 42 → k = 4; 375 → k = 40; 913 → k = 100 (2.2 – funkcja <code>suma_cyfr</code>)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
+    print(n, &quot;=&quot;, suma_cyfr(n), &quot;+&quot;, wspolczynnik(n), &quot;* 9&quot;, &quot;  k =&quot;, wspolczynnik(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int suma_cyfr(int n) {
+    int s = 0;
+    while (n &gt; 0) {
+        s = s + n % 10;
+        n = n / 10;
+    }
+    return s;
+}
+
+int wspolczynnik(int n) {
+    return (n - suma_cyfr(n)) / 9;
+}
+
+int main() {
+    for (int n : {11, 42, 375, 913})
+        std::cout &lt;&lt; n &lt;&lt; &quot; = &quot; &lt;&lt; suma_cyfr(n) &lt;&lt; &quot; + &quot; &lt;&lt; wspolczynnik(n) &lt;&lt; &quot; * 9   k = &quot; &lt;&lt; wspolczynnik(n) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int sumaCyfr(int n) {
+        int s = 0;
+        while (n &gt; 0) {
+            s = s + n % 10;
+            n = n / 10;
+        }
+        return s;
+    }
+
+    static int wspolczynnik(int n) {
+        return (n - sumaCyfr(n)) / 9;
+    }
+
+    public static void main(String[] args) {
+        for (int n : new int[] {11, 42, 375, 913})
+            System.out.println(n + &quot; = &quot; + sumaCyfr(n) + &quot; + &quot; + wspolczynnik(n) + &quot; * 9   k = &quot; + wspolczynnik(n));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 42 → k = 4; 375 → k = 40; 913 → k = 100 (2.2 – funkcja <code>suma_cyfr</code>)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%202.1%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%232-1-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>demografia.txt</code> zawiera dane o urodzeniach, zgonach i ruchu naturalnym ludności w Polsce w 2009 roku w podziale na powiaty. Kolumny: powiat, województwo, ludność ogółem, współczynnik urodzeń, współczynnik zgonów, saldo migracji (pierwszy wiersz to nagłówek; np. <code>augustowski podlaskie 58763 10,4 10,5 -1,1</code>). Odpowiedzi zapisz w pliku <code>wyniki_4.txt</code>, poprzedzając je numerem zadania.</p><p>Podaj liczbę powiatów województwa mazowieckiego, w których saldo migracji było ujemne.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">count = 0
 
 with open(&quot;demografia.txt&quot;) as file:
     next(file)  # pomijamy nagłówek
@@ -82,7 +184,55 @@ with open(&quot;demografia.txt&quot;) as file:
         if dane[1] == &quot;mazowieckie&quot; and saldo &lt; 0:
             count += 1
 
-print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 24</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">powiaty = []
+print(count)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz po tabulatorach (bez końcowego \r)
+std::vector&lt;std::string&gt; podziel(std::string line) {
+    if (!line.empty() &amp;&amp; line.back() == &#x27;\r&#x27;) line.pop_back();
+    std::vector&lt;std::string&gt; dane;
+    std::stringstream ss(line);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;)) dane.push_back(pole);
+    return dane;
+}
+
+double liczba(std::string s) {  // &quot;10,4&quot; -&gt; 10.4
+    for (char&amp; c : s)
+        if (c == &#x27;,&#x27;) c = &#x27;.&#x27;;
+    return std::stod(s);
+}
+
+int main() {
+    int count = 0;
+    std::ifstream plik(&quot;demografia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);  // pomijamy nagłówek
+    while (std::getline(plik, line)) {
+        auto dane = podziel(line);
+        double saldo = liczba(dane[5]);
+        if (dane[1] == &quot;mazowieckie&quot; &amp;&amp; saldo &lt; 0)
+            count++;
+    }
+    std::cout &lt;&lt; count &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int count = 0;
+        var linie = Files.readAllLines(Path.of(&quot;demografia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            var dane = line.strip().split(&quot;\t&quot;);
+            double saldo = Double.parseDouble(dane[5].replace(&quot;,&quot;, &quot;.&quot;));
+            if (dane[1].equals(&quot;mazowieckie&quot;) &amp;&amp; saldo &lt; 0)
+                count++;
+        }
+        System.out.println(count);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 24</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>demografia.txt</code> (powiat, województwo, ludność, współczynnik urodzeń, współczynnik zgonów, saldo migracji). Współczynnik przyrostu naturalnego to różnica współczynnika urodzeń i współczynnika zgonów. Utwórz zestawienie 10 powiatów o największym współczynniku przyrostu naturalnego (nazwa powiatu i współczynnik), uporządkowane alfabetycznie.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">powiaty = []
 
 with open(&quot;demografia.txt&quot;) as file:
     next(file)
@@ -94,7 +244,77 @@ with open(&quot;demografia.txt&quot;) as file:
 
 powiaty.sort(reverse=True)
 for przyrost, powiat in sorted(powiaty[:10], key=lambda x: x[1]):
-    print(powiat, przyrost)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> bytowski 5,7; gdanski 6,0; kartuski 8,7; koscierski 7,2; limanowski 6,4; m Zory 5,7; nowosadecki 6,1; poznanski 6,0; pszczynski 5,5; wejherowski 7,2</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ludnosc = {}
+    print(powiat, przyrost)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::string&gt; podziel(std::string line) {  // dzieli wiersz po tabulatorach
+    if (!line.empty() &amp;&amp; line.back() == &#x27;\r&#x27;) line.pop_back();
+    std::vector&lt;std::string&gt; dane;
+    std::stringstream ss(line);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;)) dane.push_back(pole);
+    return dane;
+}
+
+double liczba(std::string s) {  // &quot;10,4&quot; -&gt; 10.4
+    for (char&amp; c : s)
+        if (c == &#x27;,&#x27;) c = &#x27;.&#x27;;
+    return std::stod(s);
+}
+
+int main() {
+    std::vector&lt;std::pair&lt;double, std::string&gt;&gt; powiaty;  // (przyrost, powiat)
+
+    std::ifstream plik(&quot;demografia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);
+    while (std::getline(plik, line)) {
+        auto dane = podziel(line);
+        double urodzenia = liczba(dane[3]);
+        double zgony = liczba(dane[4]);
+        // zaokrąglenie do 1 miejsca jak round(x, 1) w Pythonie: zapis &quot;{:.1f}&quot; i z powrotem na liczbę
+        double przyrost = std::stod(std::format(&quot;{:.1f}&quot;, urodzenia - zgony));
+        powiaty.push_back({przyrost, dane[0]});
+    }
+
+    std::ranges::sort(powiaty, std::greater{});  // malejąco, jak sort(reverse=True)
+    std::vector&lt;std::pair&lt;double, std::string&gt;&gt; najlepsze(powiaty.begin(), powiaty.begin() + 10);
+    std::ranges::stable_sort(najlepsze, {}, &amp;std::pair&lt;double, std::string&gt;::second);
+    for (const auto&amp; [przyrost, powiat] : najlepsze)
+        std::cout &lt;&lt; powiat &lt;&lt; &#x27; &#x27; &lt;&lt; std::format(&quot;{:.1f}&quot;, przyrost) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    record Powiat(double przyrost, String nazwa) {}
+
+    public static void main(String[] args) throws Exception {
+        var powiaty = new ArrayList&lt;Powiat&gt;();
+        var linie = Files.readAllLines(Path.of(&quot;demografia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {
+            var dane = line.strip().split(&quot;\t&quot;);
+            double urodzenia = Double.parseDouble(dane[3].replace(&quot;,&quot;, &quot;.&quot;));
+            double zgony = Double.parseDouble(dane[4].replace(&quot;,&quot;, &quot;.&quot;));
+            // zaokrąglenie do 1 miejsca dokładnie jak round(x, 1) w Pythonie
+            double przyrost = new BigDecimal(urodzenia - zgony).setScale(1, RoundingMode.HALF_EVEN).doubleValue();
+            powiaty.add(new Powiat(przyrost, dane[0]));
+        }
+
+        // malejąco po (przyrost, nazwa), jak sort(reverse=True) na krotkach
+        powiaty.sort(Comparator.comparingDouble(Powiat::przyrost).thenComparing(Powiat::nazwa).reversed());
+        var najlepsze = new ArrayList&lt;&gt;(powiaty.subList(0, 10));
+        najlepsze.sort(Comparator.comparing(Powiat::nazwa));
+        for (var p : najlepsze)
+            System.out.println(p.nazwa() + &quot; &quot; + p.przyrost());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> bytowski 5,7; gdanski 6,0; kartuski 8,7; koscierski 7,2; limanowski 6,4; m Zory 5,7; nowosadecki 6,1; poznanski 6,0; pszczynski 5,5; wejherowski 7,2</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>demografia.txt</code> (powiat, województwo, ludność ogółem, …). Podaj nazwy czterech województw o największej liczbie ludności oraz liczbę ludności każdego z nich.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ludnosc = {}
 
 with open(&quot;demografia.txt&quot;) as file:
     next(file)
@@ -104,7 +324,59 @@ with open(&quot;demografia.txt&quot;) as file:
 
 wojewodztwa = sorted(ludnosc, key=ludnosc.get, reverse=True)
 for wojewodztwo in wojewodztwa[:4]:
-    print(wojewodztwo, ludnosc[wojewodztwo])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> mazowieckie 5222167, slaskie 4640725, wielkopolskie 3408281, malopolskie 3298270</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-4">4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">urodzenia = []
+    print(wojewodztwo, ludnosc[wojewodztwo])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::string&gt; podziel(std::string line) {  // dzieli wiersz po tabulatorach
+    if (!line.empty() &amp;&amp; line.back() == &#x27;\r&#x27;) line.pop_back();
+    std::vector&lt;std::string&gt; dane;
+    std::stringstream ss(line);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;)) dane.push_back(pole);
+    return dane;
+}
+
+int main() {
+    std::map&lt;std::string, long long&gt; ludnosc;
+    std::vector&lt;std::string&gt; wojewodztwa;  // kolejność pierwszego pojawienia się (jak klucze słownika w Pythonie)
+
+    std::ifstream plik(&quot;demografia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);
+    while (std::getline(plik, line)) {
+        auto dane = podziel(line);
+        if (!ludnosc.contains(dane[1])) wojewodztwa.push_back(dane[1]);
+        ludnosc[dane[1]] += std::stoll(dane[2]);
+    }
+
+    std::ranges::stable_sort(wojewodztwa, [&amp;](const std::string&amp; a, const std::string&amp; b) {
+        return ludnosc[a] &gt; ludnosc[b];
+    });
+    for (int i = 0; i &lt; 4; i++)
+        std::cout &lt;&lt; wojewodztwa[i] &lt;&lt; &#x27; &#x27; &lt;&lt; ludnosc[wojewodztwa[i]] &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var ludnosc = new LinkedHashMap&lt;String, Long&gt;();  // zachowuje kolejność, jak słownik w Pythonie
+        var linie = Files.readAllLines(Path.of(&quot;demografia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {
+            var dane = line.strip().split(&quot;\t&quot;);
+            ludnosc.merge(dane[1], Long.parseLong(dane[2]), Long::sum);
+        }
+
+        var wojewodztwa = new ArrayList&lt;&gt;(ludnosc.keySet());
+        wojewodztwa.sort(Comparator.comparing((String w) -&gt; ludnosc.get(w)).reversed());
+        for (var wojewodztwo : wojewodztwa.subList(0, 4))
+            System.out.println(wojewodztwo + &quot; &quot; + ludnosc.get(wojewodztwo));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> mazowieckie 5222167, slaskie 4640725, wielkopolskie 3408281, malopolskie 3298270</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-4">4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>demografia.txt</code>. Współczynnik urodzeń to liczba urodzeń na 1000 mieszkańców: wsp_urodzen = liczba_urodzen / ludnosc_ogolem · 1000. Dla województwa opolskiego wykonaj alfabetycznie posortowane zestawienie powiatów wraz z liczbą urodzeń w 2009 roku w każdym z nich (obliczoną z ludności i współczynnika urodzeń, zaokrągloną w dół do liczby całkowitej). Na jego podstawie utwórz poprawnie opisany wykres kolumnowy.</p></div></details><p class="note">Zadanie na Excel — rozwiązanie w Pythonie.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">urodzenia = []
 
 with open(&quot;demografia.txt&quot;) as file:
     next(file)
@@ -116,7 +388,73 @@ with open(&quot;demografia.txt&quot;) as file:
             urodzenia.append((dane[0], int(dane[2]) * wsp // 10000))
 
 for powiat, liczba in sorted(urodzenia):
-    print(powiat, liczba)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> brzeski 995, glubczycki 459, kedzierzynsko-kozielski 812, kluczborski 591, krapkowicki 561, m Opole 1182, namyslowski 473, nyski 1337, oleski 584, opolski 1093, prudnicki 528, strzelecki 657 (wykres kolumnowy wykonuje się w arkuszu kalkulacyjnym)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p>W arkuszu plik nazywa się <code>dane_6.txt</code>, w paczce z danymi CKE – <code>dane4.txt</code>.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+    print(powiat, liczba)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::string&gt; podziel(std::string line) {  // dzieli wiersz po tabulatorach
+    if (!line.empty() &amp;&amp; line.back() == &#x27;\r&#x27;) line.pop_back();
+    std::vector&lt;std::string&gt; dane;
+    std::stringstream ss(line);
+    std::string pole;
+    while (std::getline(ss, pole, &#x27;\t&#x27;)) dane.push_back(pole);
+    return dane;
+}
+
+double liczba(std::string s) {  // &quot;10,4&quot; -&gt; 10.4
+    for (char&amp; c : s)
+        if (c == &#x27;,&#x27;) c = &#x27;.&#x27;;
+    return std::stod(s);
+}
+
+int main() {
+    std::vector&lt;std::pair&lt;std::string, long long&gt;&gt; urodzenia;
+
+    std::ifstream plik(&quot;demografia.txt&quot;);
+    std::string line;
+    std::getline(plik, line);
+    while (std::getline(plik, line)) {
+        auto dane = podziel(line);
+        if (dane[1] == &quot;opolskie&quot;) {
+            // współczynnik w dziesiątych częściach (np. 10,4 -&gt; 104), żeby liczyć na liczbach całkowitych
+            // (std::nearbyint zaokrągla jak round() w Pythonie)
+            long long wsp = static_cast&lt;long long&gt;(std::nearbyint(liczba(dane[3]) * 10));
+            urodzenia.push_back({dane[0], std::stoll(dane[2]) * wsp / 10000});
+        }
+    }
+
+    std::ranges::sort(urodzenia);
+    for (const auto&amp; [powiat, ile] : urodzenia)
+        std::cout &lt;&lt; powiat &lt;&lt; &#x27; &#x27; &lt;&lt; ile &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    record Powiat(String nazwa, long urodzenia) {}
+
+    public static void main(String[] args) throws Exception {
+        var urodzenia = new ArrayList&lt;Powiat&gt;();
+        var linie = Files.readAllLines(Path.of(&quot;demografia.txt&quot;));
+        for (var line : linie.subList(1, linie.size())) {
+            var dane = line.strip().split(&quot;\t&quot;);
+            if (dane[1].equals(&quot;opolskie&quot;)) {
+                // współczynnik w dziesiątych częściach (np. 10,4 -&gt; 104), żeby liczyć na liczbach całkowitych
+                // (Math.rint zaokrągla jak round() w Pythonie)
+                long wsp = (long) Math.rint(Double.parseDouble(dane[3].replace(&quot;,&quot;, &quot;.&quot;)) * 10);
+                urodzenia.add(new Powiat(dane[0], Long.parseLong(dane[2]) * wsp / 10000));
+            }
+        }
+
+        urodzenia.sort(Comparator.comparing(Powiat::nazwa).thenComparingLong(Powiat::urodzenia));
+        for (var p : urodzenia)
+            System.out.println(p.nazwa() + &quot; &quot; + p.urodzenia());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> brzeski 995, glubczycki 459, kedzierzynsko-kozielski 812, kluczborski 591, krapkowicki 561, m Opole 1182, namyslowski 473, nyski 1337, oleski 584, opolski 1093, prudnicki 528, strzelecki 657 (wykres kolumnowy wykonuje się w arkuszu kalkulacyjnym)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%234-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Liczba pierwsza to liczba naturalna większa od 1, mająca dokładnie dwa dzielniki naturalne: 1 i samą siebie. W pliku <code>dane_6.txt</code> jest 2000 liczb całkowitych z zakresu ⟨0, 30000⟩, każda w osobnym wierszu. Odpowiedzi zapisz w pliku <code>wyniki_6.txt</code>, poprzedzając je numerem zadania.</p><p>Podaj, ile liczb z pliku to liczby pierwsze.</p></div></details><p>W arkuszu plik nazywa się <code>dane_6.txt</code>, w paczce z danymi CKE – <code>dane4.txt</code>.</p><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -134,7 +472,46 @@ with open(&quot;dane4.txt&quot;) as file:
         if czy_pierwsza(int(line)):
             count += 1
 
-print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 236</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+print(count)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+bool czy_pierwsza(int x) {
+    if (x &lt; 2)
+        return false;
+    for (int i = 2; i * i &lt;= x; i++)
+        if (x % i == 0)
+            return false;
+    return true;
+}
+
+int main() {
+    int count = 0;
+    std::ifstream plik(&quot;dane4.txt&quot;);
+    int liczba;
+    while (plik &gt;&gt; liczba)
+        if (czy_pierwsza(liczba))
+            count++;
+    std::cout &lt;&lt; count &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    static boolean czyPierwsza(int x) {
+        if (x &lt; 2)
+            return false;
+        for (int i = 2; i * i &lt;= x; i++)
+            if (x % i == 0)
+                return false;
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int count = 0;
+        for (var line : Files.readAllLines(Path.of(&quot;dane4.txt&quot;)))
+            if (czyPierwsza(Integer.parseInt(line.strip())))
+                count++;
+        System.out.println(count);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 236</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%236-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>dane_6.txt</code> zawiera 2000 liczb całkowitych z zakresu ⟨0, 30000⟩. Podaj największą i najmniejszą liczbę pierwszą występującą w pliku. Odpowiedź zapisz w <code>wyniki_6.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -153,7 +530,52 @@ with open(&quot;dane4.txt&quot;) as file:
         if czy_pierwsza(liczba):
             pierwsze.append(liczba)
 
-print(&quot;max =&quot;, max(pierwsze), &quot;min =&quot;, min(pierwsze))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> max = 29881, min = 73</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+print(&quot;max =&quot;, max(pierwsze), &quot;min =&quot;, min(pierwsze))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+bool czy_pierwsza(int x) {
+    if (x &lt; 2)
+        return false;
+    for (int i = 2; i * i &lt;= x; i++)
+        if (x % i == 0)
+            return false;
+    return true;
+}
+
+int main() {
+    std::vector&lt;int&gt; pierwsze;
+    std::ifstream plik(&quot;dane4.txt&quot;);
+    int liczba;
+    while (plik &gt;&gt; liczba)
+        if (czy_pierwsza(liczba))
+            pierwsze.push_back(liczba);
+
+    std::cout &lt;&lt; &quot;max = &quot; &lt;&lt; std::ranges::max(pierwsze) &lt;&lt; &quot; min = &quot; &lt;&lt; std::ranges::min(pierwsze) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static boolean czyPierwsza(int x) {
+        if (x &lt; 2)
+            return false;
+        for (int i = 2; i * i &lt;= x; i++)
+            if (x % i == 0)
+                return false;
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var pierwsze = new ArrayList&lt;Integer&gt;();
+        for (var line : Files.readAllLines(Path.of(&quot;dane4.txt&quot;))) {
+            int liczba = Integer.parseInt(line.strip());
+            if (czyPierwsza(liczba))
+                pierwsze.add(liczba);
+        }
+        System.out.println(&quot;max = &quot; + Collections.max(pierwsze) + &quot; min = &quot; + Collections.min(pierwsze));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> max = 29881, min = 73</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%236-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>dane_6.txt</code> zawiera 2000 liczb całkowitych z zakresu ⟨0, 30000⟩. Liczby bliźniacze to dwie liczby pierwsze różniące się o 2, np. (3, 5), (5, 3), (11, 13), (19, 17). Zbadaj kolejne pary sąsiednich liczb w pliku (pierwsza i druga, druga i trzecia, …, przedostatnia i ostatnia). Podaj liczbę par liczb bliźniaczych i wypisz wszystkie te pary, każdą w osobnym wierszu. Odpowiedź zapisz w <code>wyniki_6.txt</code>.</p><p>Przykład: dla liczb 11698, 13234, 1999, 1997, 16444, 15173, 5927 odpowiedzią jest 1 oraz para 1999 i 1997.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -179,7 +601,70 @@ for i in range(1, len(liczby)):
 
 print(len(pary))
 for a, b in pary:
-    print(a, b)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4 pary: 1999 1997, 1721 1723, 1481 1483, 809 811</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(a, b)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+bool czy_pierwsza(int x) {
+    if (x &lt; 2)
+        return false;
+    for (int i = 2; i * i &lt;= x; i++)
+        if (x % i == 0)
+            return false;
+    return true;
+}
+
+int main() {
+    std::vector&lt;int&gt; liczby;
+    std::ifstream plik(&quot;dane4.txt&quot;);
+    int liczba;
+    while (plik &gt;&gt; liczba)
+        liczby.push_back(liczba);
+
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; pary;
+    for (size_t i = 1; i &lt; liczby.size(); i++) {
+        int a = liczby[i - 1];
+        int b = liczby[i];
+        if (std::abs(a - b) == 2 &amp;&amp; czy_pierwsza(a) &amp;&amp; czy_pierwsza(b))
+            pary.push_back({a, b});
+    }
+
+    std::cout &lt;&lt; pary.size() &lt;&lt; &#x27;\n&#x27;;
+    for (auto [a, b] : pary)
+        std::cout &lt;&lt; a &lt;&lt; &#x27; &#x27; &lt;&lt; b &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static boolean czyPierwsza(int x) {
+        if (x &lt; 2)
+            return false;
+        for (int i = 2; i * i &lt;= x; i++)
+            if (x % i == 0)
+                return false;
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;Integer&gt;();
+        for (var line : Files.readAllLines(Path.of(&quot;dane4.txt&quot;)))
+            liczby.add(Integer.parseInt(line.strip()));
+
+        var pary = new ArrayList&lt;int[]&gt;();
+        for (int i = 1; i &lt; liczby.size(); i++) {
+            int a = liczby.get(i - 1);
+            int b = liczby.get(i);
+            if (Math.abs(a - b) == 2 &amp;&amp; czyPierwsza(a) &amp;&amp; czyPierwsza(b))
+                pary.add(new int[] {a, b});
+        }
+
+        System.out.println(pary.size());
+        for (var p : pary)
+            System.out.println(p[0] + &quot; &quot; + p[1]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4 pary: 1999 1997, 1721 1723, 1481 1483, 809 811</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202016%20%E2%80%94%20maj%2C%20poziom%20podstawowy%20%E2%80%94%206.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2016-maj-podstawa.html%236-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2016_maj_podstawa/2016_maj_podstawa.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

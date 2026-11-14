@@ -37,7 +37,18 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1">1.1</a></li><li><a href="#1-2">1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura próbna 2020 — kwiecień</span></nav>
-<h1 class="page-title">Matura próbna 2020 — kwiecień</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># Liczba wywołań Rek zależy tylko od tego, w którą połowę przedziału p..k pójdzie rekurencja.
+<h1 class="page-title">Matura próbna 2020 — kwiecień</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-kwiecien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (rekurencja). Dana jest dodatnia liczba całkowita <code>n</code> i rosnąco uporządkowana tablica różnych liczb całkowitych <code>T[1..n]</code>. Funkcja rekurencyjna (parametry całkowite, <code>1 ≤ p ≤ k ≤ n</code>, div — dzielenie całkowite):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">Rek(x, p, k)
+    jeżeli p &lt; k
+        s ← (p + k) div 2
+        jeżeli T[s] ≥ x
+            wynikiem jest Rek(x, p, s)
+        w przeciwnym razie
+            wynikiem jest Rek(x, s + 1, k)
+    w przeciwnym razie
+        jeżeli T[p] = x
+            wynikiem jest p
+        w przeciwnym razie
+            wynikiem jest −1</code></pre></div></div></div><p>Podaj najmniejszą i największą możliwą liczbę wywołań funkcji <code>Rek</code> (wliczając pierwsze) po wywołaniu <code>Rek(2020, 5, 14)</code> dla <code>n = 17</code> i pewnej rosnącej tablicy <code>T[1..17]</code> różnych liczb całkowitych.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># Liczba wywołań Rek zależy tylko od tego, w którą połowę przedziału p..k pójdzie rekurencja.
 # Sprawdzamy obie możliwości w każdym kroku i wybieramy najmniejszą / największą liczbę wywołań.
 def wywolania(p, k, wybierz):
     if p &lt; k:
@@ -47,7 +58,43 @@ def wywolania(p, k, wybierz):
 
 
 print(&quot;najmniejsza:&quot;, wywolania(5, 14, min))
-print(&quot;największa:&quot;, wywolania(5, 14, max))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> najmniejsza liczba wywołań 4, największa 5</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">T = [1, 5, 8, 10, 12, 14, 19, 20, 23, 30, 38]
+print(&quot;największa:&quot;, wywolania(5, 14, max))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+#include &lt;print&gt;
+
+// Liczba wywołań Rek zależy tylko od tego, w którą połowę przedziału p..k pójdzie rekurencja.
+// Sprawdzamy obie możliwości w każdym kroku i wybieramy najmniejszą / największą liczbę wywołań.
+int wywolania(int p, int k, const std::function&lt;int(int, int)&gt;&amp; wybierz) {
+    if (p &lt; k) {
+        int s = (p + k) / 2;
+        return 1 + wybierz(wywolania(p, s, wybierz), wywolania(s + 1, k, wybierz));
+    }
+    return 1;
+}
+
+int main() {
+    auto mniejsza = [](int a, int b) { return std::min(a, b); };
+    auto wieksza = [](int a, int b) { return std::max(a, b); };
+    std::println(&quot;najmniejsza: {}&quot;, wywolania(5, 14, mniejsza));
+    std::println(&quot;największa: {}&quot;, wywolania(5, 14, wieksza));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.function.IntBinaryOperator;
+
+public class Zadanie {
+    // Liczba wywołań Rek zależy tylko od tego, w którą połowę przedziału p..k pójdzie rekurencja.
+    // Sprawdzamy obie możliwości w każdym kroku i wybieramy najmniejszą / największą liczbę wywołań.
+    static int wywolania(int p, int k, IntBinaryOperator wybierz) {
+        if (p &lt; k) {
+            int s = (p + k) / 2;
+            return 1 + wybierz.applyAsInt(wywolania(p, s, wybierz), wywolania(s + 1, k, wybierz));
+        }
+        return 1;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(&quot;najmniejsza: &quot; + wywolania(5, 14, Math::min));
+        System.out.println(&quot;największa: &quot; + wywolania(5, 14, Math::max));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> najmniejsza liczba wywołań 4, największa 5</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%201.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%231-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Funkcja <code>Rek(x, p, k)</code> jak w zadaniu 1.1 (rekurencyjne wyszukiwanie binarne <code>x</code> w rosnącej tablicy <code>T</code>).</p><p>Dla <code>n = 11</code>, tablicy <code>T = [1, 5, 8, 10, 12, 14, 19, 20, 23, 30, 38]</code> i pierwszego wywołania <code>Rek(7, 1, 11)</code> podaj wartości parametrów <code>(x, p, k)</code> w kolejnych wywołaniach funkcji.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">T = [1, 5, 8, 10, 12, 14, 19, 20, 23, 30, 38]
 
 
 def Rek(x, p, k):
@@ -64,7 +111,52 @@ def Rek(x, p, k):
         return -1
 
 
-print(&quot;wynik:&quot;, Rek(7, 1, 11))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> Rek(7,1,6), Rek(7,1,3), Rek(7,3,3) (1.3: D. logarytmiczna)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def moda(n, T):
+print(&quot;wynik:&quot;, Rek(7, 1, 11))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+const std::vector&lt;int&gt; T = {1, 5, 8, 10, 12, 14, 19, 20, 23, 30, 38};
+
+int Rek(int x, int p, int k) {
+    std::println(&quot;Rek({},{},{})&quot;, x, p, k);
+    if (p &lt; k) {
+        int s = (p + k) / 2;
+        if (T[s - 1] &gt;= x)  // tablica w treści jest numerowana od 1
+            return Rek(x, p, s);
+        else
+            return Rek(x, s + 1, k);
+    } else {
+        if (T[p - 1] == x)
+            return p;
+        return -1;
+    }
+}
+
+int main() {
+    int wynik = Rek(7, 1, 11);
+    std::println(&quot;wynik: {}&quot;, wynik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static final int[] T = {1, 5, 8, 10, 12, 14, 19, 20, 23, 30, 38};
+
+    static int Rek(int x, int p, int k) {
+        System.out.println(&quot;Rek(&quot; + x + &quot;,&quot; + p + &quot;,&quot; + k + &quot;)&quot;);
+        if (p &lt; k) {
+            int s = (p + k) / 2;
+            if (T[s - 1] &gt;= x)  // tablica w treści jest numerowana od 1
+                return Rek(x, p, s);
+            else
+                return Rek(x, s + 1, k);
+        } else {
+            if (T[p - 1] == x)
+                return p;
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        int wynik = Rek(7, 1, 11);
+        System.out.println(&quot;wynik: &quot; + wynik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> Rek(7,1,6), Rek(7,1,3), Rek(7,3,3) (1.3: D. logarytmiczna)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%231-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (moda). Moda (dominanta) zestawu danych to element występujący w nim najczęściej; zestaw może mieć kilka mód (np. 2, 3, -4, 2, 3, -5, 2, 3 ma mody 2 i 3). Jeśli wszystkie elementy występują jednakowo często, zestaw nie ma mody (np. 4, 4, 2, 3, 2, 3).</p><ul><li>2.1 — podaj, ile najwyżej różnych mód może mieć zestaw 10 elementów, i podaj przykład 10-elementowego zestawu z dokładnie trzema modami.</li><li>2.2 — napisz algorytm, który dla <code>n &gt; 2</code> i tablicy <code>T[1..n]</code> liczb całkowitych mającej dokładnie jedną modę wyznaczy tę modę <code>m</code>. Wolno używać tylko operacji arytmetycznych (w tym div i mod), odwołań do elementów tablicy, porównań, instrukcji sterujących, przypisań i własnych funkcji.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def moda(n, T):
     najwiecej = 0
     for i in range(n):
         ile = 0
@@ -79,7 +171,54 @@ print(&quot;wynik:&quot;, Rek(7, 1, 11))</code></pre></div><p class="answer"><st
 
 print(moda(9, [2, 3, 4, 2, 3, 5, 2, 100, 67]))
 # 2.1 - przykład 10-elementowego zestawu z trzema modami (maksymalnie mód może być 4)
-print([1, 1, 1, 2, 2, 2, 3, 3, 3, 4])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: maksymalnie 4 mody, np. 1 1 1 2 2 2 3 3 3 4; 2.2: algorytm w kodzie (dla przykładu z treści moda = 2)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane4.txt&quot;) as file:
+print([1, 1, 1, 2, 2, 2, 3, 3, 3, 4])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int moda(int n, const std::vector&lt;int&gt;&amp; T) {
+    int najwiecej = 0;
+    int m = 0;
+    for (int i = 0; i &lt; n; i++) {
+        int ile = 0;
+        for (int j = 0; j &lt; n; j++)
+            if (T[j] == T[i])
+                ile++;
+        if (ile &gt; najwiecej) {
+            najwiecej = ile;
+            m = T[i];
+        }
+    }
+    return m;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, moda(9, {2, 3, 4, 2, 3, 5, 2, 100, 67}));
+    // 2.1 - przykład 10-elementowego zestawu z trzema modami (maksymalnie mód może być 4)
+    std::println(&quot;{}&quot;, std::vector&lt;int&gt;{1, 1, 1, 2, 2, 2, 3, 3, 3, 4});
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.Arrays;
+
+public class Zadanie {
+    static int moda(int n, int[] T) {
+        int najwiecej = 0;
+        int m = 0;
+        for (int i = 0; i &lt; n; i++) {
+            int ile = 0;
+            for (int j = 0; j &lt; n; j++)
+                if (T[j] == T[i])
+                    ile++;
+            if (ile &gt; najwiecej) {
+                najwiecej = ile;
+                m = T[i];
+            }
+        }
+        return m;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(moda(9, new int[]{2, 3, 4, 2, 3, 5, 2, 100, 67}));
+        // 2.1 - przykład 10-elementowego zestawu z trzema modami (maksymalnie mód może być 4)
+        System.out.println(Arrays.toString(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 3, 4}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: maksymalnie 4 mody, np. 1 1 1 2 2 2 3 3 3 4; 2.2: algorytm w kodzie (dla przykładu z treści moda = 2)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (luki w ciągu). Luka to wartość bezwzględna różnicy dwóch kolejnych elementów ciągu (np. ciąg 5, 2, 7, 10 ma luki 3, 5, 3). Plik <code>dane4.txt</code> zawiera ciąg 1000 dodatnich liczb całkowitych nie większych od 2·10⁹. Odpowiedzi zapisz w pliku <code>zadanie4.txt</code>, poprzedzając każdą numerem zadania.</p><p>Podaj wartość największej i najmniejszej luki w ciągu.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane4.txt&quot;) as file:
     liczby = [int(line) for line in file]
 
 luki = []
@@ -87,7 +226,45 @@ for i in range(1, len(liczby)):
     luki.append(abs(liczby[i] - liczby[i - 1]))
 
 print(min(luki))
-print(max(luki))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> najmniejsza 1, największa 1056392131</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane4.txt&quot;) as file:
+print(max(luki))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane4.txt&quot;);
+    std::vector&lt;long long&gt; liczby;
+    long long x;
+    while (plik &gt;&gt; x)
+        liczby.push_back(x);
+
+    std::vector&lt;long long&gt; luki;
+    for (size_t i = 1; i &lt; liczby.size(); i++)
+        luki.push_back(std::llabs(liczby[i] - liczby[i - 1]));
+
+    std::println(&quot;{}&quot;, std::ranges::min(luki));
+    std::println(&quot;{}&quot;, std::ranges::max(luki));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;Long&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;dane4.txt&quot;)))
+            if (!line.isBlank())
+                liczby.add(Long.parseLong(line.trim()));
+
+        var luki = new ArrayList&lt;Long&gt;();
+        for (int i = 1; i &lt; liczby.size(); i++)
+            luki.add(Math.abs(liczby.get(i) - liczby.get(i - 1)));
+
+        System.out.println(Collections.min(luki));
+        System.out.println(Collections.max(luki));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> najmniejsza 1, największa 1056392131</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>dane4.txt</code> (ciąg 1000 liczb; luka = |różnica kolejnych elementów|).</p><p>Fragment ciągu jest regularny, jeśli wszystkie jego luki są równe. Znajdź najdłuższy fragment regularny (jest jeden taki) i podaj jego długość oraz pierwszą i ostatnią liczbę.</p><p>Przykład: w ciągu 4, 11, 4, 1, 4, 7, 11, 12, 13, 14, 7, 0, 3 najdłuższe fragmenty regularne mają długość 4: <code>4, 1, 4, 7</code> oraz <code>11, 12, 13, 14</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane4.txt&quot;) as file:
     liczby = [int(line) for line in file]
 
 najdluzszy = 2
@@ -104,7 +281,65 @@ for i in range(2, len(liczby)):
         poczatek = liczby[i - dlugosc + 1]
         koniec = liczby[i]
 
-print(najdluzszy, poczatek, koniec)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> długość 17, początek 193134524, koniec 223545714</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane4.txt&quot;) as file:
+print(najdluzszy, poczatek, koniec)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane4.txt&quot;);
+    std::vector&lt;long long&gt; liczby;
+    long long x;
+    while (plik &gt;&gt; x)
+        liczby.push_back(x);
+
+    int najdluzszy = 2;
+    int dlugosc = 2;  // każde dwa kolejne elementy tworzą fragment regularny
+    long long poczatek = liczby[0], koniec = liczby[1];
+
+    for (size_t i = 2; i &lt; liczby.size(); i++) {
+        if (std::llabs(liczby[i] - liczby[i - 1]) == std::llabs(liczby[i - 1] - liczby[i - 2]))
+            dlugosc++;
+        else
+            dlugosc = 2;
+        if (dlugosc &gt; najdluzszy) {
+            najdluzszy = dlugosc;
+            poczatek = liczby[i - dlugosc + 1];
+            koniec = liczby[i];
+        }
+    }
+
+    std::println(&quot;{} {} {}&quot;, najdluzszy, poczatek, koniec);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;Long&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;dane4.txt&quot;)))
+            if (!line.isBlank())
+                liczby.add(Long.parseLong(line.trim()));
+
+        int najdluzszy = 2;
+        int dlugosc = 2;  // każde dwa kolejne elementy tworzą fragment regularny
+        long poczatek = liczby.get(0), koniec = liczby.get(1);
+
+        for (int i = 2; i &lt; liczby.size(); i++) {
+            if (Math.abs(liczby.get(i) - liczby.get(i - 1)) == Math.abs(liczby.get(i - 1) - liczby.get(i - 2)))
+                dlugosc++;
+            else
+                dlugosc = 2;
+            if (dlugosc &gt; najdluzszy) {
+                najdluzszy = dlugosc;
+                poczatek = liczby.get(i - dlugosc + 1);
+                koniec = liczby.get(i);
+            }
+        }
+
+        System.out.println(najdluzszy + &quot; &quot; + poczatek + &quot; &quot; + koniec);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> długość 17, początek 193134524, koniec 223545714</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>dane4.txt</code> (ciąg 1000 liczb; luka = |różnica kolejnych elementów|).</p><p>Krotność luki to liczba jej wystąpień, a najczęstsza luka to luka o największej krotności. Podaj krotność najczęstszej luki oraz wartości wszystkich najczęstszych luk.</p><p>Przykład: dla ciągu 4, 11, 4, 1, 4, 7, 11, 12, 13, 14, 7, 0, 3 największa krotność to 4 i mają ją luki 7 i 3.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane4.txt&quot;) as file:
     liczby = [int(line) for line in file]
 
 krotnosc = {}
@@ -116,7 +351,62 @@ najwiecej = max(krotnosc.values())
 print(najwiecej)
 for luka in krotnosc:
     if krotnosc[luka] == najwiecej:
-        print(luka)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> krotność 31, luki 149 i 11</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">chlodne = cieple_bez_deszczu = cieple_z_deszczem = 0
+        print(luka)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;unordered_map&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane4.txt&quot;);
+    std::vector&lt;long long&gt; liczby;
+    long long x;
+    while (plik &gt;&gt; x)
+        liczby.push_back(x);
+
+    std::unordered_map&lt;long long, int&gt; krotnosc;
+    std::vector&lt;long long&gt; kolejnosc;  // luki w kolejności pojawienia się (jak słownik w Pythonie)
+    for (size_t i = 1; i &lt; liczby.size(); i++) {
+        long long luka = std::llabs(liczby[i] - liczby[i - 1]);
+        if (!krotnosc.contains(luka))
+            kolejnosc.push_back(luka);
+        krotnosc[luka]++;
+    }
+
+    int najwiecej = 0;
+    for (const auto&amp; [luka, ile] : krotnosc)
+        najwiecej = std::max(najwiecej, ile);
+    std::println(&quot;{}&quot;, najwiecej);
+    for (long long luka : kolejnosc)
+        if (krotnosc[luka] == najwiecej)
+            std::println(&quot;{}&quot;, luka);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;Long&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;dane4.txt&quot;)))
+            if (!line.isBlank())
+                liczby.add(Long.parseLong(line.trim()));
+
+        var krotnosc = new LinkedHashMap&lt;Long, Integer&gt;();  // pamięta kolejność dodawania, jak słownik w Pythonie
+        for (int i = 1; i &lt; liczby.size(); i++) {
+            long luka = Math.abs(liczby.get(i) - liczby.get(i - 1));
+            krotnosc.merge(luka, 1, Integer::sum);
+        }
+
+        int najwiecej = Collections.max(krotnosc.values());
+        System.out.println(najwiecej);
+        for (var e : krotnosc.entrySet())
+            if (e.getValue() == najwiecej)
+                System.out.println(e.getKey());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> krotność 31, luki 149 i 11</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5 (zbiornik wody). Ogród ma zbiornik na wodę o pojemności 25 000 litrów; 31 marca o 21:00 był pełny. Plik <code>pogoda.txt</code> zawiera (z wierszem nagłówkowym, dane rozdzielone tabulatorem) średnią dobową temperaturę i opady dobowe w l/m² dla kolejnych dni od 1 kwietnia do 30 września 2015 r. Zasady:</p><ul><li>temperatura i opady są mierzone od 20:00 dnia poprzedniego do 20:00 dnia bieżącego;</li><li>opady uzupełniają zbiornik o <code>700 · x</code> litrów (<code>x</code> — opady w l/m²), najwyżej do pełna;</li><li>w dni bezdeszczowe paruje <code>0,03% · T^1,5 · y</code> litrów (<code>T</code> — średnia temperatura, <code>y</code> — stan zbiornika o 21:00 dnia poprzedniego), zaokrąglone w górę;</li><li>ogród podlewa się o 20:00 w dni, gdy temperatura przekracza 15°C, a opady nie przekraczają 0,6 l/m²; zużywa się 12 000 l, a gdy temperatura przekracza 30°C — 24 000 l;</li><li>jeśli przed podlewaniem w zbiorniku brakuje wody, dolewa się go z wodociągu do pełna; podlewanie kończy się o 21:00.</li></ul><p>Wyniki zaokrąglaj w górę do pełnych litrów (kontrolnie: przez cały okres dolano 743 427 l). Odpowiedzi zapisz w pliku <code>wyniki5.txt</code>, poprzedzając je numerem zadania.</p><p>Podaj liczbę dni, w których:</p><ul><li>temperatura nie przekraczała 15°C,</li><li>temperatura przekraczała 15°C, a opady nie przekraczały 0,6 l/m²,</li><li>temperatura przekraczała 15°C i opady przekraczały 0,6 l/m².</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">chlodne = cieple_bez_deszczu = cieple_z_deszczem = 0
 
 with open(&quot;pogoda.txt&quot;) as file:
     file.readline()  # nagłówek
@@ -131,7 +421,61 @@ with open(&quot;pogoda.txt&quot;) as file:
         else:
             cieple_z_deszczem += 1
 
-print(chlodne, cieple_bez_deszczu, cieple_z_deszczem)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 88 dni (temperatura ≤ 15°C), 73 dni (temperatura &gt; 15°C i opady ≤ 0,6), 22 dni (temperatura &gt; 15°C i opady &gt; 0,6)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+print(chlodne, cieple_bez_deszczu, cieple_z_deszczem)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+// liczba z przecinkiem dziesiętnym, np. &quot;12,5&quot; -&gt; 12.5
+double na_liczbe(std::string tekst) {
+    std::ranges::replace(tekst, &#x27;,&#x27;, &#x27;.&#x27;);
+    return std::stod(tekst);
+}
+
+int main() {
+    int chlodne = 0, cieple_bez_deszczu = 0, cieple_z_deszczem = 0;
+
+    std::ifstream plik(&quot;pogoda.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);
+    std::string t, o;
+    while (plik &gt;&gt; t &gt;&gt; o) {
+        double temperatura = na_liczbe(t);
+        double opady = na_liczbe(o);
+        if (temperatura &lt;= 15)
+            chlodne++;
+        else if (opady &lt;= 0.6)
+            cieple_bez_deszczu++;
+        else
+            cieple_z_deszczem++;
+    }
+
+    std::println(&quot;{} {} {}&quot;, chlodne, cieple_bez_deszczu, cieple_z_deszczem);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int chlodne = 0, ciepleBezDeszczu = 0, ciepleZDeszczem = 0;
+
+        var linie = Files.readAllLines(Path.of(&quot;pogoda.txt&quot;));
+        for (String line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            if (line.isBlank())
+                continue;
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            double temperatura = Double.parseDouble(czesci[0].replace(&quot;,&quot;, &quot;.&quot;));
+            double opady = Double.parseDouble(czesci[1].replace(&quot;,&quot;, &quot;.&quot;));
+            if (temperatura &lt;= 15)
+                chlodne++;
+            else if (opady &lt;= 0.6)
+                ciepleBezDeszczu++;
+            else
+                ciepleZDeszczem++;
+        }
+
+        System.out.println(chlodne + &quot; &quot; + ciepleBezDeszczu + &quot; &quot; + ciepleZDeszczem);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 88 dni (temperatura ≤ 15°C), 73 dni (temperatura &gt; 15°C i opady ≤ 0,6), 22 dni (temperatura &gt; 15°C i opady &gt; 0,6)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%205.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%235-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pogoda.txt</code> i zasady pracy zbiornika jak w zadaniu 5.1.</p><p>Podaj datę, kiedy pierwszy raz trzeba było dolać wodę do zbiornika, oraz ilość dolanej wody.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 from datetime import date, timedelta
 
 with open(&quot;pogoda.txt&quot;) as file:
@@ -160,7 +504,112 @@ for temperatura, opady in dane:
     dzien += timedelta(days=1)
 
 print(dolewki[0])
-print(&quot;razem dolano:&quot;, sum(ile for d, ile in dolewki))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 6 maja 2015 r., 13172 litrów (łącznie dolano 743 427 litrów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+print(&quot;razem dolano:&quot;, sum(ile for d, ile in dolewki))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;chrono&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+using namespace std::chrono;
+
+// liczba z przecinkiem dziesiętnym, np. &quot;12,5&quot; -&gt; 12.5
+double na_liczbe(std::string tekst) {
+    std::ranges::replace(tekst, &#x27;,&#x27;, &#x27;.&#x27;);
+    return std::stod(tekst);
+}
+
+int main() {
+    std::ifstream plik(&quot;pogoda.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);  // nagłówek
+    std::vector&lt;std::pair&lt;double, double&gt;&gt; dane;
+    std::string t, o;
+    while (plik &gt;&gt; t &gt;&gt; o)
+        dane.push_back({na_liczbe(t), na_liczbe(o)});
+
+    const long long POJEMNOSC = 25000;
+    long long stan = POJEMNOSC;  // 31 marca o 21:00 zbiornik był pełen
+    sys_days dzien = year{2015} / 4 / 1;
+    std::vector&lt;std::pair&lt;sys_days, long long&gt;&gt; dolewki;  // (data, ile litrów dolano)
+
+    for (const auto&amp; [temperatura, opady] : dane) {
+        if (opady &gt; 0)
+            stan = std::min(POJEMNOSC, stan + (long long)std::ceil(700 * opady));
+        else
+            stan -= (long long)std::ceil(0.0003 * std::pow(temperatura, 1.5) * stan);
+        if (temperatura &gt; 15 &amp;&amp; opady &lt;= 0.6) {
+            long long potrzeba = temperatura &lt;= 30 ? 12000 : 24000;
+            if (stan &lt; potrzeba) {
+                dolewki.push_back({dzien, POJEMNOSC - stan});
+                stan = POJEMNOSC;
+            }
+            stan -= potrzeba;
+        }
+        dzien += days{1};
+    }
+
+    // wypisujemy tak jak Python: (datetime.date(2015, 5, 6), 13172)
+    year_month_day pierwsza{dolewki[0].first};
+    std::println(&quot;(datetime.date({}, {}, {}), {})&quot;, int(pierwsza.year()), unsigned(pierwsza.month()),
+                 unsigned(pierwsza.day()), dolewki[0].second);
+    long long razem = 0;
+    for (const auto&amp; [d, ile] : dolewki)
+        razem += ile;
+    std::println(&quot;razem dolano: {}&quot;, razem);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Zadanie {
+    record Dolewka(LocalDate data, long ile) {}
+
+    public static void main(String[] args) throws Exception {
+        var linie = Files.readAllLines(Path.of(&quot;pogoda.txt&quot;));
+        var dane = new ArrayList&lt;double[]&gt;();
+        for (String line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            if (line.isBlank())
+                continue;
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            dane.add(new double[]{Double.parseDouble(czesci[0].replace(&quot;,&quot;, &quot;.&quot;)),
+                                  Double.parseDouble(czesci[1].replace(&quot;,&quot;, &quot;.&quot;))});
+        }
+
+        final long POJEMNOSC = 25000;
+        long stan = POJEMNOSC;  // 31 marca o 21:00 zbiornik był pełen
+        var dzien = LocalDate.of(2015, 4, 1);
+        var dolewki = new ArrayList&lt;Dolewka&gt;();  // (data, ile litrów dolano)
+
+        for (double[] d : dane) {
+            double temperatura = d[0], opady = d[1];
+            if (opady &gt; 0)
+                stan = Math.min(POJEMNOSC, stan + (long) Math.ceil(700 * opady));
+            else
+                stan -= (long) Math.ceil(0.0003 * Math.pow(temperatura, 1.5) * stan);
+            if (temperatura &gt; 15 &amp;&amp; opady &lt;= 0.6) {
+                long potrzeba = temperatura &lt;= 30 ? 12000 : 24000;
+                if (stan &lt; potrzeba) {
+                    dolewki.add(new Dolewka(dzien, POJEMNOSC - stan));
+                    stan = POJEMNOSC;
+                }
+                stan -= potrzeba;
+            }
+            dzien = dzien.plusDays(1);
+        }
+
+        // wypisujemy tak jak Python: (datetime.date(2015, 5, 6), 13172)
+        var pierwsza = dolewki.get(0);
+        System.out.println(&quot;(datetime.date(&quot; + pierwsza.data().getYear() + &quot;, &quot; + pierwsza.data().getMonthValue()
+                + &quot;, &quot; + pierwsza.data().getDayOfMonth() + &quot;), &quot; + pierwsza.ile() + &quot;)&quot;);
+        long razem = 0;
+        for (var d : dolewki)
+            razem += d.ile();
+        System.out.println(&quot;razem dolano: &quot; + razem);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 6 maja 2015 r., 13172 litrów (łącznie dolano 743 427 litrów)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%205.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%235-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pogoda.txt</code> i zasady pracy zbiornika jak w zadaniu 5.1.</p><p>Wykonaj wykres liniowy ilości wody w zbiorniku od 1 kwietnia do 30 września 2015 r., przyjmując jako stan dnia wartość o 21:00 (po podlaniu). Wykres powinien mieć tytuł i opisy osi.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 from datetime import date, timedelta
 
 with open(&quot;pogoda.txt&quot;) as file:
@@ -185,7 +634,88 @@ for temperatura, opady in dane:
             stan = POJEMNOSC
         stan -= potrzeba
     print(dzien, stan)  # stan o 21:00 - dane do wykresu liniowego
-    dzien += timedelta(days=1)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> wykres liniowy stanu zbiornika o 21:00 w kolejnych dniach (od 2015-04-01 do 2015-09-30)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+    dzien += timedelta(days=1)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;chrono&gt;
+#include &lt;cmath&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+using namespace std::chrono;
+
+// liczba z przecinkiem dziesiętnym, np. &quot;12,5&quot; -&gt; 12.5
+double na_liczbe(std::string tekst) {
+    std::ranges::replace(tekst, &#x27;,&#x27;, &#x27;.&#x27;);
+    return std::stod(tekst);
+}
+
+int main() {
+    std::ifstream plik(&quot;pogoda.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);
+    std::vector&lt;std::pair&lt;double, double&gt;&gt; dane;
+    std::string t, o;
+    while (plik &gt;&gt; t &gt;&gt; o)
+        dane.push_back({na_liczbe(t), na_liczbe(o)});
+
+    const long long POJEMNOSC = 25000;
+    long long stan = POJEMNOSC;
+    sys_days dzien = year{2015} / 4 / 1;
+
+    for (const auto&amp; [temperatura, opady] : dane) {
+        if (opady &gt; 0)
+            stan = std::min(POJEMNOSC, stan + (long long)std::ceil(700 * opady));
+        else
+            stan -= (long long)std::ceil(0.0003 * std::pow(temperatura, 1.5) * stan);
+        if (temperatura &gt; 15 &amp;&amp; opady &lt;= 0.6) {
+            long long potrzeba = temperatura &lt;= 30 ? 12000 : 24000;
+            if (stan &lt; potrzeba)
+                stan = POJEMNOSC;
+            stan -= potrzeba;
+        }
+        std::println(&quot;{} {}&quot;, year_month_day{dzien}, stan);  // stan o 21:00 - dane do wykresu liniowego
+        dzien += days{1};
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var linie = Files.readAllLines(Path.of(&quot;pogoda.txt&quot;));
+        var dane = new ArrayList&lt;double[]&gt;();
+        for (String line : linie.subList(1, linie.size())) {
+            if (line.isBlank())
+                continue;
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            dane.add(new double[]{Double.parseDouble(czesci[0].replace(&quot;,&quot;, &quot;.&quot;)),
+                                  Double.parseDouble(czesci[1].replace(&quot;,&quot;, &quot;.&quot;))});
+        }
+
+        final long POJEMNOSC = 25000;
+        long stan = POJEMNOSC;
+        var dzien = LocalDate.of(2015, 4, 1);
+
+        for (double[] d : dane) {
+            double temperatura = d[0], opady = d[1];
+            if (opady &gt; 0)
+                stan = Math.min(POJEMNOSC, stan + (long) Math.ceil(700 * opady));
+            else
+                stan -= (long) Math.ceil(0.0003 * Math.pow(temperatura, 1.5) * stan);
+            if (temperatura &gt; 15 &amp;&amp; opady &lt;= 0.6) {
+                long potrzeba = temperatura &lt;= 30 ? 12000 : 24000;
+                if (stan &lt; potrzeba)
+                    stan = POJEMNOSC;
+                stan -= potrzeba;
+            }
+            System.out.println(dzien + &quot; &quot; + stan);  // stan o 21:00 - dane do wykresu liniowego
+            dzien = dzien.plusDays(1);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> wykres liniowy stanu zbiornika o 21:00 w kolejnych dniach (od 2015-04-01 do 2015-09-30)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%205.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%235-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pogoda.txt</code> i zasady pracy zbiornika jak w zadaniu 5.1.</p><p>Zestaw miesięczne (kwiecień–wrzesień 2015) koszty wody dolanej z wodociągu. 1 m³ (1000 l) kosztuje 11,74 zł; opłaty są miesięczne i naliczane za pełne m³ (zaokrąglenie w górę).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 from datetime import date, timedelta
 
 with open(&quot;pogoda.txt&quot;) as file:
@@ -215,7 +745,130 @@ for temperatura, opady in dane:
 
 for miesiac, litry in dolano.items():
     m3 = math.ceil(litry / 1000)
-    print(miesiac, litry, m3, round(m3 * 11.74, 2))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> kwiecień 0 zł, maj 164,36 zł, czerwiec 1056,60 zł, lipiec 2559,32 zł, sierpień 3651,14 zł, wrzesień 1326,62 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(miesiac, litry, m3, round(m3 * 11.74, 2))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;chrono&gt;
+#include &lt;cmath&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+using namespace std::chrono;
+
+// liczba z przecinkiem dziesiętnym, np. &quot;12,5&quot; -&gt; 12.5
+double na_liczbe(std::string tekst) {
+    std::ranges::replace(tekst, &#x27;,&#x27;, &#x27;.&#x27;);
+    return std::stod(tekst);
+}
+
+// round(x, 2) z Pythona: zaokrąglenie do 2 miejsc po przecinku
+double zaokraglij(double x) {
+    return std::stod(std::format(&quot;{:.2f}&quot;, x));
+}
+
+// liczba rzeczywista wypisana jak w Pythonie (np. 0.0 zamiast 0)
+std::string jak_python(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find_first_of(&quot;.en&quot;) == std::string::npos)
+        s += &quot;.0&quot;;
+    return s;
+}
+
+int main() {
+    std::ifstream plik(&quot;pogoda.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);
+    std::vector&lt;std::pair&lt;double, double&gt;&gt; dane;
+    std::string t, o;
+    while (plik &gt;&gt; t &gt;&gt; o)
+        dane.push_back({na_liczbe(t), na_liczbe(o)});
+
+    const long long POJEMNOSC = 25000;
+    long long stan = POJEMNOSC;
+    sys_days dzien = year{2015} / 4 / 1;
+    std::map&lt;unsigned, long long&gt; dolano;
+    for (unsigned miesiac = 4; miesiac &lt; 10; miesiac++)
+        dolano[miesiac] = 0;
+
+    for (const auto&amp; [temperatura, opady] : dane) {
+        if (opady &gt; 0)
+            stan = std::min(POJEMNOSC, stan + (long long)std::ceil(700 * opady));
+        else
+            stan -= (long long)std::ceil(0.0003 * std::pow(temperatura, 1.5) * stan);
+        if (temperatura &gt; 15 &amp;&amp; opady &lt;= 0.6) {
+            long long potrzeba = temperatura &lt;= 30 ? 12000 : 24000;
+            if (stan &lt; potrzeba) {
+                dolano[unsigned(year_month_day{dzien}.month())] += POJEMNOSC - stan;
+                stan = POJEMNOSC;
+            }
+            stan -= potrzeba;
+        }
+        dzien += days{1};
+    }
+
+    for (const auto&amp; [miesiac, litry] : dolano) {
+        long long m3 = (long long)std::ceil(litry / 1000.0);
+        std::println(&quot;{} {} {} {}&quot;, miesiac, litry, m3, jak_python(zaokraglij(m3 * 11.74)));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.TreeMap;
+
+public class Zadanie {
+    // round(x, 2) z Pythona: zaokrąglenie do 2 miejsc po przecinku
+    static double zaokraglij(double x) {
+        return new BigDecimal(x).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+    }
+
+    public static void main(String[] args) throws Exception {
+        var linie = Files.readAllLines(Path.of(&quot;pogoda.txt&quot;));
+        var dane = new ArrayList&lt;double[]&gt;();
+        for (String line : linie.subList(1, linie.size())) {
+            if (line.isBlank())
+                continue;
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            dane.add(new double[]{Double.parseDouble(czesci[0].replace(&quot;,&quot;, &quot;.&quot;)),
+                                  Double.parseDouble(czesci[1].replace(&quot;,&quot;, &quot;.&quot;))});
+        }
+
+        final long POJEMNOSC = 25000;
+        long stan = POJEMNOSC;
+        var dzien = LocalDate.of(2015, 4, 1);
+        var dolano = new TreeMap&lt;Integer, Long&gt;();
+        for (int miesiac = 4; miesiac &lt; 10; miesiac++)
+            dolano.put(miesiac, 0L);
+
+        for (double[] d : dane) {
+            double temperatura = d[0], opady = d[1];
+            if (opady &gt; 0)
+                stan = Math.min(POJEMNOSC, stan + (long) Math.ceil(700 * opady));
+            else
+                stan -= (long) Math.ceil(0.0003 * Math.pow(temperatura, 1.5) * stan);
+            if (temperatura &gt; 15 &amp;&amp; opady &lt;= 0.6) {
+                long potrzeba = temperatura &lt;= 30 ? 12000 : 24000;
+                if (stan &lt; potrzeba) {
+                    dolano.merge(dzien.getMonthValue(), POJEMNOSC - stan, Long::sum);
+                    stan = POJEMNOSC;
+                }
+                stan -= potrzeba;
+            }
+            dzien = dzien.plusDays(1);
+        }
+
+        for (var e : dolano.entrySet()) {
+            long litry = e.getValue();
+            long m3 = (long) Math.ceil(litry / 1000.0);
+            System.out.println(e.getKey() + &quot; &quot; + litry + &quot; &quot; + m3 + &quot; &quot; + zaokraglij(m3 * 11.74));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> kwiecień 0 zł, maj 164,36 zł, czerwiec 1056,60 zł, lipiec 2559,32 zł, sierpień 3651,14 zł, wrzesień 1326,62 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202020%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%205.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-kwiecien-pr.html%235-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_kwiecien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

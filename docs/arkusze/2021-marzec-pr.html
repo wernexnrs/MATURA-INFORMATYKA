@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#5-1">5.1</a></li><li><a href="#5-2">5.2</a></li><li><a href="#5-3">5.3</a></li><li><a href="#5-4">5.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura próbna 2021 — marzec</span></nav>
-<h1 class="page-title">Matura próbna 2021 — marzec</h1><p>Test diagnostyczny CKE – marzec 2021.</p><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def runda(k, x, y):
+<h1 class="page-title">Matura próbna 2021 — marzec</h1><p>Test diagnostyczny CKE – marzec 2021.</p><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2021-marzec-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W turnieju pucharowym bierze udział n = 2^k drużyn o numerach 0…n−1; turniej trwa k rund. W 1. rundzie w meczu nr i grają drużyny 2(i−1) i 2(i−1)+1, a w kolejnych rundach w meczu nr i grają zwycięzcy meczów 2i−1 i 2i z poprzedniej rundy. Numer rundy, w której mogą się spotkać drużyny x i y, wynika z ich k-bitowych zapisów binarnych.</p><ul><li><strong>1.1</strong> — Uzupełnij tabelę: podaj numer rundy dla k=4, x=3, y=7 oraz k=5, x=16, y=30. (Przykłady: k=3, x=2, y=6 → 3; k=4, x=0, y=3 → 2.)</li><li><strong>1.2</strong> — Napisz algorytm, który dla k ≥ 1 i różnych x, y z przedziału [0, 2^k − 1] wyznacza numer rundy, w której drużyny mogą się spotkać. Bez funkcji wbudowanych (w szczególności potęgowania).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def runda(k, x, y):
     # drużyny spotkają się w rundzie r, gdy ich numery różnią się tylko na r ostatnich bitach,
     # więc dzielimy oba numery przez 2 (usuwamy ostatni bit), aż staną się równe
     r = 0
@@ -49,7 +49,51 @@
 
 
 for k, x, y in [(3, 2, 6), (4, 0, 3), (4, 3, 7), (5, 16, 30)]:
-    print(k, x, y, runda(k, x, y))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (3, 2, 6) → 3, (4, 0, 3) → 2, (4, 3, 7) → 3, (5, 16, 30) → 4; 1.2: algorytm w kodzie</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def Algo(n):
+    print(k, x, y, runda(k, x, y))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int runda(int k, int x, int y) {
+    // drużyny spotkają się w rundzie r, gdy ich numery różnią się tylko na r ostatnich bitach,
+    // więc dzielimy oba numery przez 2 (usuwamy ostatni bit), aż staną się równe
+    (void)k;  // k (liczba rund) nie jest potrzebne w obliczeniach
+    int r = 0;
+    while (x != y) {
+        r++;
+        x /= 2;
+        y /= 2;
+    }
+    return r;
+}
+
+int main() {
+    int dane[4][3] = {{3, 2, 6}, {4, 0, 3}, {4, 3, 7}, {5, 16, 30}};
+    for (auto&amp; [k, x, y] : dane)
+        std::println(&quot;{} {} {} {}&quot;, k, x, y, runda(k, x, y));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int runda(int k, int x, int y) {
+        // drużyny spotkają się w rundzie r, gdy ich numery różnią się tylko na r ostatnich bitach,
+        // więc dzielimy oba numery przez 2 (usuwamy ostatni bit), aż staną się równe
+        int r = 0;
+        while (x != y) {
+            r++;
+            x /= 2;
+            y /= 2;
+        }
+        return r;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[][] dane = {{3, 2, 6}, {4, 0, 3}, {4, 3, 7}, {5, 16, 30}};
+        for (var d : dane)
+            System.out.println(d[0] + &quot; &quot; + d[1] + &quot; &quot; + d[2] + &quot; &quot; + runda(d[0], d[1], d[2]));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (3, 2, 6) → 3, (4, 0, 3) → 2, (4, 3, 7) → 3, (5, 16, 30) → 4; 1.2: algorytm w kodzie</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Przeanalizuj funkcję Algo(n) dla dodatniej liczby całkowitej n (div — dzielenie całkowite):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">Algo(n)
+    jeżeli n ≤ 2 to wynikiem jest 1
+    p ← 1; k ← n
+    dopóki k − p &gt; 1 wykonuj
+        s ← (p + k) div 2
+        jeżeli s * s ≤ n to p ← s
+        w przeciwnym przypadku k ← s
+    wynikiem jest p</code></pre></div></div></div><ul><li><strong>2.1</strong> — Podaj wynik Algo(n) dla wartości n z tabeli arkusza (np. Algo(5) = 2).</li><li><strong>2.2</strong> — Podaj, ile razy wykonuje się instrukcja <code>s ← (p + k) div 2</code> dla wartości n z tabeli (np. dla n = 5 — 2 razy).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def Algo(n):
     ile_s = 0  # liczba wykonań instrukcji s &lt;- (p + k) div 2
     if n &lt;= 2:
         return 1, ile_s
@@ -70,7 +114,56 @@ for n in [5, 35, 1025]:
     print(n, Algo(n)[0])
 # 2.2
 for n in [5, 2, 63, 1024]:
-    print(n, Algo(n)[1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: Algo(5) = 2, Algo(35) = 5, Algo(1025) = 32; 2.2: 5 → 2, 2 → 0, 63 → 6, 1024 → 10</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miasta = {}  # kod kraju -&gt; liczba miast
+    print(n, Algo(n)[1])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+
+// zwraca parę: (wynik, liczba wykonań instrukcji s &lt;- (p + k) div 2)
+std::pair&lt;int, int&gt; Algo(int n) {
+    int ile_s = 0;
+    if (n &lt;= 2) return {1, ile_s};
+    int p = 1;
+    int k = n;
+    while (k - p &gt; 1) {
+        int s = (p + k) / 2;
+        ile_s++;
+        if (s * s &lt;= n)
+            p = s;
+        else
+            k = s;
+    }
+    return {p, ile_s};
+}
+
+int main() {
+    // 2.1
+    for (int n : {5, 35, 1025}) std::println(&quot;{} {}&quot;, n, Algo(n).first);
+    // 2.2
+    for (int n : {5, 2, 63, 1024}) std::println(&quot;{} {}&quot;, n, Algo(n).second);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // zwraca tablicę: {wynik, liczba wykonań instrukcji s &lt;- (p + k) div 2}
+    static int[] Algo(int n) {
+        int ileS = 0;
+        if (n &lt;= 2) return new int[] {1, ileS};
+        int p = 1;
+        int k = n;
+        while (k - p &gt; 1) {
+            int s = (p + k) / 2;
+            ileS++;
+            if (s * s &lt;= n)
+                p = s;
+            else
+                k = s;
+        }
+        return new int[] {p, ileS};
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        for (int n : new int[] {5, 35, 1025}) System.out.println(n + &quot; &quot; + Algo(n)[0]);
+        // 2.2
+        for (int n : new int[] {5, 2, 63, 1024}) System.out.println(n + &quot; &quot; + Algo(n)[1]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: Algo(5) = 2, Algo(35) = 5, Algo(1025) = 32; 2.2: 5 → 2, 2 → 0, 63 → 6, 1024 → 10</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>galerie.txt</code> zawiera 50 wierszy, każdy opisuje planowaną galerię handlową: kod kraju, nazwę miasta (nazwy się nie powtarzają) i 70 par liczb — długość i szerokość (w metrach) prostokątnych lokali; brakujące lokale uzupełniono zerami. Plik <code>galerie_przyklad.txt</code> (10 wierszy) służy do testów.</p><p>Dla każdego kraju podaj liczbę miast, w których powstaną galerie. Wynik zapisz w <code>wynik4_1.txt</code> (w wierszu: kod kraju i liczba miast).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miasta = {}  # kod kraju -&gt; liczba miast
 
 with open(&quot;galerie.txt&quot;) as file:
     for line in file:
@@ -80,7 +173,54 @@ with open(&quot;galerie.txt&quot;) as file:
 with open(&quot;wynik4_1.txt&quot;, &quot;w&quot;) as wynik:
     for kod_kraju, ile in miasta.items():
         print(kod_kraju, ile)
-        wynik.write(f&quot;{kod_kraju} {ile}\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> GB 5, D 15, E 6, I 6, F 2, RO 1, A 1, H 1, BG 1, CZ 1, B 1, S 1, HR 1, NL 2, LV 1, GR 1, LT 1, FIN 1, DK 1, IRL 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">galerie = []  # (miasto, powierzchnia, liczba lokali)
+        wynik.write(f&quot;{kod_kraju} {ile}\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; miasta;  // kod kraju -&gt; liczba miast
+    std::vector&lt;std::string&gt; kolejnosc; // kody krajów w kolejności pojawienia się w pliku
+
+    std::ifstream plik(&quot;galerie.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::istringstream ss(linia);
+        std::string kod_kraju;
+        if (!(ss &gt;&gt; kod_kraju)) continue;
+        if (miasta[kod_kraju] == 0) kolejnosc.push_back(kod_kraju);
+        miasta[kod_kraju]++;
+    }
+
+    std::ofstream wynik(&quot;wynik4_1.txt&quot;);
+    for (auto&amp; kod_kraju : kolejnosc) {
+        std::println(&quot;{} {}&quot;, kod_kraju, miasta[kod_kraju]);
+        wynik &lt;&lt; kod_kraju &lt;&lt; &quot; &quot; &lt;&lt; miasta[kod_kraju] &lt;&lt; &quot;\n&quot;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var miasta = new LinkedHashMap&lt;String, Integer&gt;();  // kod kraju -&gt; liczba miast (w kolejności z pliku)
+
+        for (var linia : Files.readAllLines(Path.of(&quot;galerie.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            String kodKraju = linia.trim().split(&quot;\\s+&quot;)[0];
+            miasta.merge(kodKraju, 1, Integer::sum);
+        }
+
+        try (var wynik = new PrintWriter(&quot;wynik4_1.txt&quot;)) {
+            for (var e : miasta.entrySet()) {
+                System.out.println(e.getKey() + &quot; &quot; + e.getValue());
+                wynik.print(e.getKey() + &quot; &quot; + e.getValue() + &quot;\n&quot;);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> GB 5, D 15, E 6, I 6, F 2, RO 1, A 1, H 1, BG 1, CZ 1, B 1, S 1, HR 1, NL 2, LV 1, GR 1, LT 1, FIN 1, DK 1, IRL 1</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>galerie.txt</code> (kraj, miasto, 70 par wymiarów lokali; zera oznaczają brak lokalu).</p><ul><li><strong>a)</strong> Dla każdej galerii oblicz łączną powierzchnię (sumę powierzchni lokali) i liczbę lokali; zapisz w <code>wynik4_2a.txt</code> wiersze: miasto, powierzchnia, liczba lokali.</li><li><strong>b)</strong> Podaj miasto z galerią o największej i miasto z galerią o najmniejszej powierzchni całkowitej (każde jest jedno) wraz z tymi powierzchniami; zapisz w <code>wynik4_2b.txt</code>.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">galerie = []  # (miasto, powierzchnia, liczba lokali)
 
 with open(&quot;galerie.txt&quot;) as file:
     for line in file:
@@ -107,7 +247,105 @@ najmniejsza = min(galerie, key=lambda g: g[1])
 with open(&quot;wynik4_2b.txt&quot;, &quot;w&quot;) as wynik:
     for miasto, powierzchnia, lokale in [najwieksza, najmniejsza]:
         print(miasto, powierzchnia)
-        wynik.write(f&quot;{miasto} {powierzchnia}\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) Londyn 3628 58, Berlin 3777 59, Madryt 2217 34, Rzym 3678 51, … , Duisburg 3948 61; b) Essen 4760, Wilno 1620</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">rodzaje = []  # (miasto, liczba różnych rodzajów lokali)
+        wynik.write(f&quot;{miasto} {powierzchnia}\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+struct Galeria {
+    std::string miasto;
+    int powierzchnia;
+    int lokale;
+};
+
+int main() {
+    std::vector&lt;Galeria&gt; galerie;
+
+    std::ifstream plik(&quot;galerie.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::istringstream ss(linia);
+        std::string kod_kraju, miasto;
+        if (!(ss &gt;&gt; kod_kraju &gt;&gt; miasto)) continue;
+        int powierzchnia = 0;
+        int lokale = 0;
+        int a, b;
+        while (ss &gt;&gt; a &gt;&gt; b) {
+            if (a != 0) {  // zera uzupełniają wiersz do 70 par
+                powierzchnia += a * b;
+                lokale++;
+            }
+        }
+        galerie.push_back({miasto, powierzchnia, lokale});
+    }
+
+    // a)
+    std::ofstream wynik_a(&quot;wynik4_2a.txt&quot;);
+    for (auto&amp; [miasto, powierzchnia, lokale] : galerie) {
+        std::println(&quot;{} {} {}&quot;, miasto, powierzchnia, lokale);
+        wynik_a &lt;&lt; miasto &lt;&lt; &quot; &quot; &lt;&lt; powierzchnia &lt;&lt; &quot; &quot; &lt;&lt; lokale &lt;&lt; &quot;\n&quot;;
+    }
+
+    // b) max_element / min_element zwracają pierwszy największy / najmniejszy element
+    auto po_powierzchni = [](const Galeria&amp; x, const Galeria&amp; y) { return x.powierzchnia &lt; y.powierzchnia; };
+    Galeria najwieksza = *std::max_element(galerie.begin(), galerie.end(), po_powierzchni);
+    Galeria najmniejsza = *std::min_element(galerie.begin(), galerie.end(), po_powierzchni);
+    std::ofstream wynik_b(&quot;wynik4_2b.txt&quot;);
+    for (auto&amp; g : {najwieksza, najmniejsza}) {
+        std::println(&quot;{} {}&quot;, g.miasto, g.powierzchnia);
+        wynik_b &lt;&lt; g.miasto &lt;&lt; &quot; &quot; &lt;&lt; g.powierzchnia &lt;&lt; &quot;\n&quot;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    record Galeria(String miasto, int powierzchnia, int lokale) {}
+
+    public static void main(String[] args) throws Exception {
+        var galerie = new ArrayList&lt;Galeria&gt;();
+
+        for (var linia : Files.readAllLines(Path.of(&quot;galerie.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            var dane = linia.trim().split(&quot;\\s+&quot;);
+            String miasto = dane[1];
+            int powierzchnia = 0;
+            int lokale = 0;
+            for (int i = 2; i + 1 &lt; dane.length; i += 2) {
+                int a = Integer.parseInt(dane[i]);
+                int b = Integer.parseInt(dane[i + 1]);
+                if (a != 0) {  // zera uzupełniają wiersz do 70 par
+                    powierzchnia += a * b;
+                    lokale++;
+                }
+            }
+            galerie.add(new Galeria(miasto, powierzchnia, lokale));
+        }
+
+        // a)
+        try (var wynik = new PrintWriter(&quot;wynik4_2a.txt&quot;)) {
+            for (var g : galerie) {
+                System.out.println(g.miasto() + &quot; &quot; + g.powierzchnia() + &quot; &quot; + g.lokale());
+                wynik.print(g.miasto() + &quot; &quot; + g.powierzchnia() + &quot; &quot; + g.lokale() + &quot;\n&quot;);
+            }
+        }
+
+        // b) przy remisie zostaje pierwsza galeria (jak max/min w Pythonie)
+        Galeria najwieksza = galerie.get(0), najmniejsza = galerie.get(0);
+        for (var g : galerie) {
+            if (g.powierzchnia() &gt; najwieksza.powierzchnia()) najwieksza = g;
+            if (g.powierzchnia() &lt; najmniejsza.powierzchnia()) najmniejsza = g;
+        }
+        try (var wynik = new PrintWriter(&quot;wynik4_2b.txt&quot;)) {
+            for (var g : List.of(najwieksza, najmniejsza)) {
+                System.out.println(g.miasto() + &quot; &quot; + g.powierzchnia());
+                wynik.print(g.miasto() + &quot; &quot; + g.powierzchnia() + &quot;\n&quot;);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) Londyn 3628 58, Berlin 3777 59, Madryt 2217 34, Rzym 3678 51, … , Duisburg 3948 61; b) Essen 4760, Wilno 1620</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>galerie.txt</code>. Dwa lokale są tego samego rodzaju, gdy mają równą powierzchnię.</p><p>Podaj miasto z galerią o największej liczbie różnych rodzajów lokali oraz miasto z galerią o najmniejszej takiej liczbie (każde jest jedno), wraz z tymi liczbami. Wynik zapisz w <code>wynik4_3.txt</code> (dwa wiersze: miasto i liczba rodzajów).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">rodzaje = []  # (miasto, liczba różnych rodzajów lokali)
 
 with open(&quot;galerie.txt&quot;) as file:
     for line in file:
@@ -126,7 +364,77 @@ najmniej = min(rodzaje, key=lambda r: r[1])
 with open(&quot;wynik4_3.txt&quot;, &quot;w&quot;) as wynik:
     for miasto, ile in [najwiecej, najmniej]:
         print(miasto, ile)
-        wynik.write(f&quot;{miasto} {ile}\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> Berlin 35, Kolonia 18</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
+        wynik.write(f&quot;{miasto} {ile}\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; rodzaje;  // (miasto, liczba różnych rodzajów lokali)
+
+    std::ifstream plik(&quot;galerie.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::istringstream ss(linia);
+        std::string kod_kraju, miasto;
+        if (!(ss &gt;&gt; kod_kraju &gt;&gt; miasto)) continue;
+        std::set&lt;int&gt; powierzchnie;
+        int a, b;
+        while (ss &gt;&gt; a &gt;&gt; b)
+            if (a != 0) powierzchnie.insert(a * b);
+        rodzaje.push_back({miasto, (int)powierzchnie.size()});
+    }
+
+    auto po_liczbie = [](const auto&amp; x, const auto&amp; y) { return x.second &lt; y.second; };
+    auto najwiecej = *std::max_element(rodzaje.begin(), rodzaje.end(), po_liczbie);
+    auto najmniej = *std::min_element(rodzaje.begin(), rodzaje.end(), po_liczbie);
+
+    std::ofstream wynik(&quot;wynik4_3.txt&quot;);
+    for (auto&amp; [miasto, ile] : {najwiecej, najmniej}) {
+        std::println(&quot;{} {}&quot;, miasto, ile);
+        wynik &lt;&lt; miasto &lt;&lt; &quot; &quot; &lt;&lt; ile &lt;&lt; &quot;\n&quot;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    record Rodzaje(String miasto, int ile) {}
+
+    public static void main(String[] args) throws Exception {
+        var rodzaje = new ArrayList&lt;Rodzaje&gt;();  // (miasto, liczba różnych rodzajów lokali)
+
+        for (var linia : Files.readAllLines(Path.of(&quot;galerie.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            var dane = linia.trim().split(&quot;\\s+&quot;);
+            var powierzchnie = new HashSet&lt;Integer&gt;();
+            for (int i = 2; i + 1 &lt; dane.length; i += 2) {
+                int a = Integer.parseInt(dane[i]);
+                int b = Integer.parseInt(dane[i + 1]);
+                if (a != 0) powierzchnie.add(a * b);
+            }
+            rodzaje.add(new Rodzaje(dane[1], powierzchnie.size()));
+        }
+
+        // przy remisie zostaje pierwsze miasto (jak max/min w Pythonie)
+        Rodzaje najwiecej = rodzaje.get(0), najmniej = rodzaje.get(0);
+        for (var r : rodzaje) {
+            if (r.ile() &gt; najwiecej.ile()) najwiecej = r;
+            if (r.ile() &lt; najmniej.ile()) najmniej = r;
+        }
+
+        try (var wynik = new PrintWriter(&quot;wynik4_3.txt&quot;)) {
+            for (var r : List.of(najwiecej, najmniej)) {
+                System.out.println(r.miasto() + &quot; &quot; + r.ile());
+                wynik.print(r.miasto() + &quot; &quot; + r.ile() + &quot;\n&quot;);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> Berlin 35, Kolonia 18</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-1" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-1">5.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>telefony.txt</code> (2148 wierszy) opisuje połączenia firmy z lipca 2017: numer, data, godzina rozpoczęcia i zakończenia (<code>gg:mm:ss</code>), oddzielone spacjami. Numery 7-cyfrowe to stacjonarne, 8-cyfrowe — komórkowe, 10-cyfrowe i dłuższe — zagraniczne. Odpowiedzi zapisz w <code>wyniki5.txt</code>, poprzedzając je numerem zadania.</p><p>Podaj trzy numery, pod które wykonano najwięcej połączeń, oraz liczby tych połączeń.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
 
 with open(&quot;telefony.txt&quot;) as file:
     file.readline()  # nagłówek
@@ -135,7 +443,52 @@ with open(&quot;telefony.txt&quot;) as file:
         polaczenia[numer] = polaczenia.get(numer, 0) + 1
 
 for numer, ile in sorted(polaczenia.items(), key=lambda x: x[1], reverse=True)[:3]:
-    print(numer, ile)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4546455 – 8, 3505978 – 7, 4657345 – 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">stacjonarne = {}
+    print(numer, ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; polaczenia;
+    std::vector&lt;std::string&gt; numery;  // numery w kolejności pierwszego wystąpienia
+
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);  // nagłówek
+    std::string numer, data, poczatek, koniec;
+    while (plik &gt;&gt; numer &gt;&gt; data &gt;&gt; poczatek &gt;&gt; koniec) {
+        if (polaczenia[numer] == 0) numery.push_back(numer);
+        polaczenia[numer]++;
+    }
+
+    // stable_sort zachowuje kolejność numerów o tej samej liczbie połączeń (jak sorted w Pythonie)
+    std::stable_sort(numery.begin(), numery.end(),
+                     [&amp;](const std::string&amp; a, const std::string&amp; b) { return polaczenia[a] &gt; polaczenia[b]; });
+    for (int i = 0; i &lt; 3 &amp;&amp; i &lt; (int)numery.size(); i++)
+        std::println(&quot;{} {}&quot;, numery[i], polaczenia[numery[i]]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var polaczenia = new LinkedHashMap&lt;String, Integer&gt;();
+
+        var linie = Files.readAllLines(Path.of(&quot;telefony.txt&quot;));
+        for (var linia : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            if (linia.isBlank()) continue;
+            String numer = linia.trim().split(&quot;\\s+&quot;)[0];
+            polaczenia.merge(numer, 1, Integer::sum);
+        }
+
+        // sortowanie w Javie jest stabilne - remisy zostają w kolejności z pliku (jak w Pythonie)
+        var numery = new ArrayList&lt;&gt;(polaczenia.keySet());
+        numery.sort((a, b) -&gt; polaczenia.get(b) - polaczenia.get(a));
+        for (var numer : numery.subList(0, Math.min(3, numery.size())))
+            System.out.println(numer + &quot; &quot; + polaczenia.get(numer));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4546455 – 8, 3505978 – 7, 4657345 – 6</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%205.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%235-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-2" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-2">5.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>telefony.txt</code> (numer, data, początek, koniec połączenia).</p><p>Utwórz zestawienie liczby połączeń do telefonów stacjonarnych i osobno komórkowych w poszczególnych dniach. Na jego podstawie wykonaj czytelny wykres kolumnowy (tytuł, opisy osi, legenda).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">stacjonarne = {}
 komorkowe = {}
 
 with open(&quot;telefony.txt&quot;) as file:
@@ -152,7 +505,64 @@ with open(&quot;telefony.txt&quot;) as file:
 
 for data in stacjonarne:  # dni są w pliku w kolejności chronologicznej
     print(data, komorkowe[data], stacjonarne[data])
-# na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3-07-2017: komórkowe 27, stacjonarne 67; 4-07-2017: 23, 68; 5-07-2017: 24, 79; … ; 31-07-2017: 23, 82 (łącznie 512 i 1524) (+ wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+# na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; stacjonarne;
+    std::map&lt;std::string, int&gt; komorkowe;
+    std::vector&lt;std::string&gt; dni;  // dni w kolejności z pliku
+
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);
+    std::string numer, data, poczatek, koniec;
+    while (plik &gt;&gt; numer &gt;&gt; data &gt;&gt; poczatek &gt;&gt; koniec) {
+        if (!stacjonarne.contains(data)) {
+            stacjonarne[data] = 0;
+            komorkowe[data] = 0;
+            dni.push_back(data);
+        }
+        if (numer.size() == 7)
+            stacjonarne[data]++;
+        else if (numer.size() == 8)
+            komorkowe[data]++;
+    }
+
+    for (auto&amp; data : dni)  // dni są w pliku w kolejności chronologicznej
+        std::println(&quot;{} {} {}&quot;, data, komorkowe[data], stacjonarne[data]);
+    // na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var stacjonarne = new LinkedHashMap&lt;String, Integer&gt;();  // pamięta kolejność dni z pliku
+        var komorkowe = new HashMap&lt;String, Integer&gt;();
+
+        var linie = Files.readAllLines(Path.of(&quot;telefony.txt&quot;));
+        for (var linia : linie.subList(1, linie.size())) {
+            if (linia.isBlank()) continue;
+            var dane = linia.trim().split(&quot;\\s+&quot;);
+            String numer = dane[0], data = dane[1];
+            if (!stacjonarne.containsKey(data)) {
+                stacjonarne.put(data, 0);
+                komorkowe.put(data, 0);
+            }
+            if (numer.length() == 7)
+                stacjonarne.merge(data, 1, Integer::sum);
+            else if (numer.length() == 8)
+                komorkowe.merge(data, 1, Integer::sum);
+        }
+
+        for (var data : stacjonarne.keySet())  // dni są w pliku w kolejności chronologicznej
+            System.out.println(data + &quot; &quot; + komorkowe.get(data) + &quot; &quot; + stacjonarne.get(data));
+        // na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3-07-2017: komórkowe 27, stacjonarne 67; 4-07-2017: 23, 68; 5-07-2017: 24, 79; … ; 31-07-2017: 23, 82 (łącznie 512 i 1524) (+ wykres kolumnowy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%205.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%235-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-3" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-3">5.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>telefony.txt</code>.</p><p>Podaj liczbę połączeń do numerów stacjonarnych zaczynających się od <code>12</code> oraz łączny czas ich trwania zaokrąglony w górę do pełnych minut.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 
 
 def sekundy(czas):
@@ -171,7 +581,60 @@ with open(&quot;telefony.txt&quot;) as file:
             ile += 1
             czas += sekundy(koniec) - sekundy(poczatek)
 
-print(ile, math.ceil(czas / 60))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 21 połączeń, 192 minuty</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
+print(ile, math.ceil(czas / 60))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int sekundy(const std::string&amp; czas) {
+    // czas w formacie gg:mm:ss
+    int g = std::stoi(czas.substr(0, 2));
+    int m = std::stoi(czas.substr(3, 2));
+    int s = std::stoi(czas.substr(6, 2));
+    return g * 3600 + m * 60 + s;
+}
+
+int main() {
+    int ile = 0;
+    int czas = 0;
+
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);
+    std::string numer, data, poczatek, koniec;
+    while (plik &gt;&gt; numer &gt;&gt; data &gt;&gt; poczatek &gt;&gt; koniec) {
+        if (numer.size() == 7 &amp;&amp; numer.starts_with(&quot;12&quot;)) {
+            ile++;
+            czas += sekundy(koniec) - sekundy(poczatek);
+        }
+    }
+
+    std::println(&quot;{} {}&quot;, ile, (czas + 59) / 60);  // zaokrąglenie w górę do pełnych minut
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    static int sekundy(String czas) {
+        var gms = czas.split(&quot;:&quot;);
+        return Integer.parseInt(gms[0]) * 3600 + Integer.parseInt(gms[1]) * 60 + Integer.parseInt(gms[2]);
+    }
+
+    public static void main(String[] args) throws Exception {
+        int ile = 0;
+        int czas = 0;
+
+        var linie = Files.readAllLines(Path.of(&quot;telefony.txt&quot;));
+        for (var linia : linie.subList(1, linie.size())) {
+            if (linia.isBlank()) continue;
+            var dane = linia.trim().split(&quot;\\s+&quot;);
+            String numer = dane[0], poczatek = dane[2], koniec = dane[3];
+            if (numer.length() == 7 &amp;&amp; numer.startsWith(&quot;12&quot;)) {
+                ile++;
+                czas += sekundy(koniec) - sekundy(poczatek);
+            }
+        }
+
+        System.out.println(ile + &quot; &quot; + (czas + 59) / 60);  // zaokrąglenie w górę do pełnych minut
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 21 połączeń, 192 minuty</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%205.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%235-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5-4" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5-4">5.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>telefony.txt</code>. Zasady rachunku:</p><ul><li>abonament 50 zł obejmuje pierwsze 800 minut połączeń krajowych (stacjonarne + komórkowe łącznie);</li><li>po wyczerpaniu limitu minuty rozlicza się w pakietach po 100: każdy rozpoczęty pakiet do stacjonarnych kosztuje 5 zł, do komórkowych 6 zł;</li><li>połączenia zagraniczne: 1 zł za każdą rozpoczętą minutę rozmowy (np. 2:02 → 3 zł).</li></ul><p>Podaj łączną kwotę rachunku oraz osobno: abonament i koszty połączeń stacjonarnych, komórkowych i zagranicznych.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">import math
 
 
 def sekundy(czas):
@@ -210,7 +673,107 @@ print(&quot;abonament&quot;, ABONAMENT)
 print(&quot;stacjonarne&quot;, stacjonarne_zl)
 print(&quot;komórkowe&quot;, komorkowe_zl)
 print(&quot;zagraniczne&quot;, zagraniczne_zl)
-print(&quot;suma&quot;, ABONAMENT + stacjonarne_zl + komorkowe_zl + zagraniczne_zl)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> abonament 50 zł, stacjonarne 610 zł, komórkowe 240 zł, zagraniczne 967 zł, razem 1867 zł</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;suma&quot;, ABONAMENT + stacjonarne_zl + komorkowe_zl + zagraniczne_zl)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int sekundy(const std::string&amp; czas) {
+    // czas w formacie gg:mm:ss
+    int g = std::stoi(czas.substr(0, 2));
+    int m = std::stoi(czas.substr(3, 2));
+    int s = std::stoi(czas.substr(6, 2));
+    return g * 3600 + m * 60 + s;
+}
+
+// dzielenie z zaokrągleniem w górę (dla liczb nieujemnych)
+int sufit(int a, int b) { return (a + b - 1) / b; }
+
+int main() {
+    const int ABONAMENT = 50;
+    const int LIMIT = 800 * 60;  // w sekundach
+
+    int wykorzystane = 0;    // sekundy rozmów krajowych wliczone w abonament
+    int stacjonarne = 0;     // sekundy rozmów ponad limit
+    int komorkowe = 0;
+    int zagraniczne_zl = 0;
+
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string naglowek;
+    std::getline(plik, naglowek);
+    std::string numer, data, poczatek, koniec;
+    while (plik &gt;&gt; numer &gt;&gt; data &gt;&gt; poczatek &gt;&gt; koniec) {  // połączenia są zapisane chronologicznie
+        int czas = sekundy(koniec) - sekundy(poczatek);
+        if (numer.size() &gt;= 10) {
+            zagraniczne_zl += sufit(czas, 60);  // 1 zł za każdą rozpoczętą minutę
+            continue;
+        }
+        int z_abonamentu = std::min(czas, LIMIT - wykorzystane);
+        wykorzystane += z_abonamentu;
+        if (numer.size() == 7)
+            stacjonarne += czas - z_abonamentu;
+        else
+            komorkowe += czas - z_abonamentu;
+    }
+
+    // każdy rozpoczęty pakiet 100 minut
+    int stacjonarne_zl = sufit(stacjonarne, 6000) * 5;
+    int komorkowe_zl = sufit(komorkowe, 6000) * 6;
+
+    std::println(&quot;abonament {}&quot;, ABONAMENT);
+    std::println(&quot;stacjonarne {}&quot;, stacjonarne_zl);
+    std::println(&quot;komórkowe {}&quot;, komorkowe_zl);
+    std::println(&quot;zagraniczne {}&quot;, zagraniczne_zl);
+    std::println(&quot;suma {}&quot;, ABONAMENT + stacjonarne_zl + komorkowe_zl + zagraniczne_zl);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    static int sekundy(String czas) {
+        var gms = czas.split(&quot;:&quot;);
+        return Integer.parseInt(gms[0]) * 3600 + Integer.parseInt(gms[1]) * 60 + Integer.parseInt(gms[2]);
+    }
+
+    // dzielenie z zaokrągleniem w górę (dla liczb nieujemnych)
+    static int sufit(int a, int b) { return (a + b - 1) / b; }
+
+    public static void main(String[] args) throws Exception {
+        final int ABONAMENT = 50;
+        final int LIMIT = 800 * 60;  // w sekundach
+
+        int wykorzystane = 0;    // sekundy rozmów krajowych wliczone w abonament
+        int stacjonarne = 0;     // sekundy rozmów ponad limit
+        int komorkowe = 0;
+        int zagraniczneZl = 0;
+
+        var linie = Files.readAllLines(Path.of(&quot;telefony.txt&quot;));
+        for (var linia : linie.subList(1, linie.size())) {  // połączenia są zapisane chronologicznie
+            if (linia.isBlank()) continue;
+            var dane = linia.trim().split(&quot;\\s+&quot;);
+            String numer = dane[0];
+            int czas = sekundy(dane[3]) - sekundy(dane[2]);
+            if (numer.length() &gt;= 10) {
+                zagraniczneZl += sufit(czas, 60);  // 1 zł za każdą rozpoczętą minutę
+                continue;
+            }
+            int zAbonamentu = Math.min(czas, LIMIT - wykorzystane);
+            wykorzystane += zAbonamentu;
+            if (numer.length() == 7)
+                stacjonarne += czas - zAbonamentu;
+            else
+                komorkowe += czas - zAbonamentu;
+        }
+
+        // każdy rozpoczęty pakiet 100 minut
+        int stacjonarneZl = sufit(stacjonarne, 6000) * 5;
+        int komorkoweZl = sufit(komorkowe, 6000) * 6;
+
+        System.out.println(&quot;abonament &quot; + ABONAMENT);
+        System.out.println(&quot;stacjonarne &quot; + stacjonarneZl);
+        System.out.println(&quot;komórkowe &quot; + komorkoweZl);
+        System.out.println(&quot;zagraniczne &quot; + zagraniczneZl);
+        System.out.println(&quot;suma &quot; + (ABONAMENT + stacjonarneZl + komorkoweZl + zagraniczneZl));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> abonament 50 zł, stacjonarne 610 zł, komórkowe 240 zł, zagraniczne 967 zł, razem 1867 zł</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20marzec%20%E2%80%94%205.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-marzec-pr.html%235-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_marzec_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

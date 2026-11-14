@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-2-2-2-3-2-4-i-2-5">2.1, 2.2, 2.3, 2.4 i 2.5</a></li><li><a href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></li><li><a href="#5">5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2023 — maj, poziom rozszerzony (formuła 2023)</span></nav>
-<h1 class="page-title">Matura 2023 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># biblioteczka jako słownik: (półka, przegródka) -&gt; numer książki
+<h1 class="page-title">Matura 2023 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Biblioteczka):</strong> Półki są numerowane od 0 (najwyższa); półka i ma 2ⁱ przegródek numerowanych 1..2ⁱ, a B[i, j] to j-ta przegródka na i-tej półce (jedna książka na przegródkę). Adam wstawia książkę, zaczynając od B[0, 1]: jeśli przegródka jest pusta, kładzie ją tam; w przeciwnym razie, gdy numer wstawianej książki jest mniejszy od numeru stojącej, próbuje B[i+1, 2j−1], a gdy większy – B[i+1, 2j]. Np. po wstawieniu 10, 2, 15, 13, 1, 5, 25 półka 0 to [10], półka 1 to [2, 15], półka 2 to [1, 5, 13, 25].</p><ul><li><strong>1.1</strong> — Podaj zawartość biblioteczki po wstawieniu (do pustej) kolejno książek 14, 18, 12, 9, 20, 15, 17.</li><li><strong>1.2</strong> — Uzupełnij tabelę: ile minimalnie, a ile maksymalnie półek musi mieć biblioteczka, by zmieścić n książek, tak aby na ostatniej półce była co najmniej jedna książka – dla n = 4, 7, 16, 32 oraz n = 2ᵏ − 1 (k &gt; 0). Przykłady: n=1 → 1 i 1; n=2 → 2 i 2; n=3 → 2 i 3.</li><li><strong>1.3</strong> — Algorytm <code>A(i, j)</code> (start: <code>A(0, 1)</code>) wypisuje numer książki z B[i, j], a następnie, jeśli niepuste, wywołuje <code>A(i+1, 2j−1)</code> i <code>A(i+1, 2j)</code> (dla przykładu wyżej wypisze 10, 2, 1, 5, 15, 13, 25). Podaj, co wypisze dla dwóch biblioteczek z arkusza: a) półki [9], [2, 12], [10, 14], [13, 15]; b) [10], [8, 15], [4, 12], [6, 13] (rozmieszczenie w przegródkach zgodne z regułą wstawiania).</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># biblioteczka jako słownik: (półka, przegródka) -&gt; numer książki
 def wstaw(B, ksiazka):
     i, j = 0, 1
     while (i, j) in B:
@@ -77,8 +77,121 @@ for n in [1, 3, 4, 7, 16, 31, 32]:
 a = {(0, 1): 9, (1, 1): 2, (1, 2): 12, (2, 3): 10, (2, 4): 14, (3, 7): 13, (3, 8): 15}
 b = {(0, 1): 10, (1, 1): 8, (1, 2): 15, (2, 1): 4, (2, 3): 12, (3, 2): 6, (3, 6): 13}
 print(A(a, 0, 1, []))
-print(A(b, 0, 1, []))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: półka 0: 14; półka 1: 12, 18; półka 2: B[2,1] = 9, B[2,3] = 15, B[2,4] = 20; półka 3: B[3,6] = 17. 1.2 (min, max): n = 7: 3, 7; n = 16: 5, 16; n = 31: 5, 31; n = 32: 6, 32; n = 2^k − 1: k, 2^k − 1. 1.3: a) 9, 2, 12, 10, 14, 13, 15; b) 10, 8, 4, 6, 15, 12, 13.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-2-4-i-2-5" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-2-4-i-2-5">2.1, 2.2, 2.3, 2.4 i 2.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · 2.1 - liczba bloków bez funkcji wbudowanych</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 2.1 - liczba bloków bez funkcji wbudowanych
-def bloki(n):
+print(A(b, 0, 1, []))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// biblioteczka jako słownik: (półka, przegródka) -&gt; numer książki
+using Biblioteczka = std::map&lt;std::pair&lt;int, int&gt;, int&gt;;
+
+void wstaw(Biblioteczka&amp; B, int ksiazka) {
+    int i = 0, j = 1;
+    while (B.contains({i, j})) {
+        if (ksiazka &lt; B[{i, j}])
+            j = 2 * j - 1;
+        else
+            j = 2 * j;
+        i = i + 1;
+    }
+    B[{i, j}] = ksiazka;
+}
+
+std::vector&lt;int&gt;&amp; A(Biblioteczka&amp; B, int i, int j, std::vector&lt;int&gt;&amp; wynik) {
+    wynik.push_back(B[{i, j}]);
+    if (B.contains({i + 1, 2 * j - 1})) A(B, i + 1, 2 * j - 1, wynik);
+    if (B.contains({i + 1, 2 * j})) A(B, i + 1, 2 * j, wynik);
+    return wynik;
+}
+
+int main() {
+    // 1.1
+    Biblioteczka B;
+    for (int k : {14, 18, 12, 9, 20, 15, 17}) wstaw(B, k);
+    for (int i = 0; i &lt; 5; i++) {
+        std::vector&lt;std::pair&lt;int, int&gt;&gt; polka;  // (przegródka, książka)
+        for (int j = 1; j &lt;= (1 &lt;&lt; i); j++)
+            if (B.contains({i, j})) polka.push_back({j, B[{i, j}]});
+        std::println(&quot;{} {}&quot;, i, polka);
+    }
+
+    // 1.2 - minimum: półki zapełnione do końca (2^0 + 2^1 + ... &gt;= n), maksimum: każda książka na innej półce
+    for (int n : {1, 3, 4, 7, 16, 31, 32}) {
+        int polki = 0;
+        int miejsca = 0;
+        while (miejsca &lt; n) {
+            miejsca += 1 &lt;&lt; polki;
+            polki++;
+        }
+        std::println(&quot;{} {} {}&quot;, n, polki, n);
+    }
+
+    // 1.3
+    Biblioteczka a = {{{0, 1}, 9}, {{1, 1}, 2}, {{1, 2}, 12}, {{2, 3}, 10}, {{2, 4}, 14}, {{3, 7}, 13}, {{3, 8}, 15}};
+    Biblioteczka b = {{{0, 1}, 10}, {{1, 1}, 8}, {{1, 2}, 15}, {{2, 1}, 4}, {{2, 3}, 12}, {{3, 2}, 6}, {{3, 6}, 13}};
+    std::vector&lt;int&gt; wynik_a, wynik_b;
+    std::println(&quot;{}&quot;, A(a, 0, 1, wynik_a));
+    std::println(&quot;{}&quot;, A(b, 0, 1, wynik_b));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    // biblioteczka jako słownik: (półka, przegródka) -&gt; numer książki
+    record Miejsce(int i, int j) {}
+
+    static void wstaw(Map&lt;Miejsce, Integer&gt; B, int ksiazka) {
+        int i = 0, j = 1;
+        while (B.containsKey(new Miejsce(i, j))) {
+            if (ksiazka &lt; B.get(new Miejsce(i, j)))
+                j = 2 * j - 1;
+            else
+                j = 2 * j;
+            i = i + 1;
+        }
+        B.put(new Miejsce(i, j), ksiazka);
+    }
+
+    static List&lt;Integer&gt; A(Map&lt;Miejsce, Integer&gt; B, int i, int j, List&lt;Integer&gt; wynik) {
+        wynik.add(B.get(new Miejsce(i, j)));
+        if (B.containsKey(new Miejsce(i + 1, 2 * j - 1))) A(B, i + 1, 2 * j - 1, wynik);
+        if (B.containsKey(new Miejsce(i + 1, 2 * j))) A(B, i + 1, 2 * j, wynik);
+        return wynik;
+    }
+
+    static Map&lt;Miejsce, Integer&gt; biblioteczka(int[][] dane) {
+        var B = new HashMap&lt;Miejsce, Integer&gt;();
+        for (var d : dane) B.put(new Miejsce(d[0], d[1]), d[2]);
+        return B;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        var B = new HashMap&lt;Miejsce, Integer&gt;();
+        for (int k : new int[] {14, 18, 12, 9, 20, 15, 17}) wstaw(B, k);
+        for (int i = 0; i &lt; 5; i++) {
+            var polka = new ArrayList&lt;String&gt;();  // &quot;(przegródka, książka)&quot;
+            for (int j = 1; j &lt;= (1 &lt;&lt; i); j++)
+                if (B.containsKey(new Miejsce(i, j))) polka.add(&quot;(&quot; + j + &quot;, &quot; + B.get(new Miejsce(i, j)) + &quot;)&quot;);
+            System.out.println(i + &quot; &quot; + polka);
+        }
+
+        // 1.2 - minimum: półki zapełnione do końca (2^0 + 2^1 + ... &gt;= n), maksimum: każda książka na innej półce
+        for (int n : new int[] {1, 3, 4, 7, 16, 31, 32}) {
+            int polki = 0;
+            int miejsca = 0;
+            while (miejsca &lt; n) {
+                miejsca += 1 &lt;&lt; polki;
+                polki++;
+            }
+            System.out.println(n + &quot; &quot; + polki + &quot; &quot; + n);
+        }
+
+        // 1.3
+        var a = biblioteczka(new int[][] {{0, 1, 9}, {1, 1, 2}, {1, 2, 12}, {2, 3, 10}, {2, 4, 14}, {3, 7, 13}, {3, 8, 15}});
+        var b = biblioteczka(new int[][] {{0, 1, 10}, {1, 1, 8}, {1, 2, 15}, {2, 1, 4}, {2, 3, 12}, {3, 2, 6}, {3, 6, 13}});
+        System.out.println(A(a, 0, 1, new ArrayList&lt;&gt;()));
+        System.out.println(A(b, 0, 1, new ArrayList&lt;&gt;()));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: półka 0: 14; półka 1: 12, 18; półka 2: B[2,1] = 9, B[2,3] = 15, B[2,4] = 20; półka 3: B[3,6] = 17. 1.2 (min, max): n = 7: 3, 7; n = 16: 5, 16; n = 31: 5, 31; n = 32: 6, 32; n = 2^k − 1: k, 2^k − 1. 1.3: a) 9, 2, 12, 10, 14, 13, 15; b) 10, 8, 4, 6, 15, 12, 13.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-2-4-i-2-5" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-2-4-i-2-5">2.1, 2.2, 2.3, 2.4 i 2.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Liczby binarne):</strong> Blok w zapisie binarnym to maksymalny (nierozszerzalny) niepusty ciąg kolejnych jednakowych cyfr, np. 111110000110111 ma 5 bloków.</p><ul><li><strong>2.1</strong> — Zapisz algorytm, który dla dodatniej liczby n obliczy liczbę bloków w jej zapisie binarnym (np. 67 = 1000011 → 3, 245 = 11110101 → 5). Wolno używać tylko podstawowych operacji arytmetycznych (w tym <code>div</code>, <code>mod</code>), porównań i instrukcji sterujących – bez funkcji wbudowanych i konwersji systemów.</li></ul><p>Plik <code>bin.txt</code> zawiera 100 wierszy z zapisami binarnymi liczb dodatnich (do 20 cyfr). Odpowiedzi do 2.2 i 2.3 zapisz w <code>wyniki2.txt</code> z numerami zadań (do testów: <code>bin_przyklad.txt</code>).</p><ul><li><strong>2.2</strong> — Podaj, ile liczb w pliku składa się z co najwyżej dwóch bloków.</li><li><strong>2.3</strong> — Wypisz największą liczbę z pliku (w zapisie binarnym; dla przykładu <code>10001111110111100000</code>).</li><li><strong>2.4</strong> — Operacja XOR działa bitowo (1 dla różnych bitów, krótszy zapis uzupełniamy zerami z lewej), np. 4 XOR 7 = 3. Oblicz (123₁₀ XOR 101101₂) XOR 2D₁₆ i podaj wynik dziesiętnie.</li><li><strong>2.5</strong> — Dla każdej liczby p z <code>bin.txt</code> oblicz <code>p XOR (p div 2)</code> i zapisz wyniki binarnie do <code>wyniki2_5.txt</code>, każdy w osobnym wierszu, w kolejności z pliku (wynik dla przykładu: <code>odp_bin_przyklad.txt</code>).</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · 2.1 - liczba bloków bez funkcji wbudowanych</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def bloki(n):
     b = 1
     poprzednia = n % 2
     n = n // 2
@@ -126,7 +239,139 @@ print(&quot;2.4&quot;, (123 ^ 0b101101) ^ 0x2D)
 with open(&quot;wyniki2_5.txt&quot;, &quot;w&quot;) as wyniki:
     for x in liczby:
         p = na_dziesietny(x)
-        wyniki.write(na_binarny(p ^ (p // 2)) + &quot;\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: funkcja <code>bloki</code> (dla 67 → 3, dla 245 → 5). 2.2: 10. 2.3: 1110100011100011100. 2.4: 123. 2.5: plik <code>wyniki2_5.txt</code>: 1001011000, 1111000001, 1110001000, 1101100001111010, … (100 wierszy).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-3-3-i-3-4" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;pi.txt&quot;) as file:
+        wyniki.write(na_binarny(p ^ (p // 2)) + &quot;\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// 2.1 - liczba bloków bez funkcji wbudowanych
+int bloki(long long n) {
+    int b = 1;
+    long long poprzednia = n % 2;
+    n = n / 2;
+    while (n &gt; 0) {
+        long long cyfra = n % 2;
+        if (cyfra != poprzednia) {
+            b++;
+            poprzednia = cyfra;
+        }
+        n = n / 2;
+    }
+    return b;
+}
+
+long long na_dziesietny(const std::string&amp; napis) {
+    long long liczba = 0;
+    for (char c : napis) liczba = liczba * 2 + (c - &#x27;0&#x27;);
+    return liczba;
+}
+
+std::string na_binarny(long long n) {
+    if (n == 0) return &quot;0&quot;;
+    std::string wynik;
+    while (n &gt; 0) {
+        wynik = std::to_string(n % 2) + wynik;
+        n = n / 2;
+    }
+    return wynik;
+}
+
+int main() {
+    std::println(&quot;2.1 {} {}&quot;, bloki(67), bloki(245));
+
+    std::vector&lt;std::string&gt; liczby;
+    std::ifstream plik(&quot;bin.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) liczby.push_back(linia);
+
+    // 2.2
+    int ile = 0;
+    for (auto&amp; x : liczby)
+        if (bloki(na_dziesietny(x)) &lt;= 2) ile++;
+    std::println(&quot;2.2 {}&quot;, ile);
+
+    // 2.3
+    long long najwieksza = 0;
+    for (auto&amp; x : liczby) najwieksza = std::max(najwieksza, na_dziesietny(x));
+    std::println(&quot;2.3 {}&quot;, na_binarny(najwieksza));
+
+    // 2.4
+    std::println(&quot;2.4 {}&quot;, (123 ^ 0b101101) ^ 0x2D);
+
+    // 2.5
+    std::ofstream wyniki(&quot;wyniki2_5.txt&quot;);
+    for (auto&amp; x : liczby) {
+        long long p = na_dziesietny(x);
+        wyniki &lt;&lt; na_binarny(p ^ (p / 2)) &lt;&lt; &quot;\n&quot;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    // 2.1 - liczba bloków bez funkcji wbudowanych
+    static int bloki(long n) {
+        int b = 1;
+        long poprzednia = n % 2;
+        n = n / 2;
+        while (n &gt; 0) {
+            long cyfra = n % 2;
+            if (cyfra != poprzednia) {
+                b++;
+                poprzednia = cyfra;
+            }
+            n = n / 2;
+        }
+        return b;
+    }
+
+    static long naDziesietny(String napis) {
+        long liczba = 0;
+        for (char c : napis.toCharArray()) liczba = liczba * 2 + (c - &#x27;0&#x27;);
+        return liczba;
+    }
+
+    static String naBinarny(long n) {
+        if (n == 0) return &quot;0&quot;;
+        String wynik = &quot;&quot;;
+        while (n &gt; 0) {
+            wynik = (n % 2) + wynik;
+            n = n / 2;
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(&quot;2.1 &quot; + bloki(67) + &quot; &quot; + bloki(245));
+
+        var liczby = new ArrayList&lt;String&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;bin.txt&quot;)))
+            if (!linia.isBlank()) liczby.add(linia.strip());
+
+        // 2.2
+        int ile = 0;
+        for (var x : liczby)
+            if (bloki(naDziesietny(x)) &lt;= 2) ile++;
+        System.out.println(&quot;2.2 &quot; + ile);
+
+        // 2.3
+        long najwieksza = 0;
+        for (var x : liczby) najwieksza = Math.max(najwieksza, naDziesietny(x));
+        System.out.println(&quot;2.3 &quot; + naBinarny(najwieksza));
+
+        // 2.4
+        System.out.println(&quot;2.4 &quot; + ((123 ^ 0b101101) ^ 0x2D));
+
+        // 2.5
+        try (var wyniki = new PrintWriter(&quot;wyniki2_5.txt&quot;)) {
+            for (var x : liczby) {
+                long p = naDziesietny(x);
+                wyniki.print(naBinarny(p ^ (p / 2)) + &quot;\n&quot;);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: funkcja <code>bloki</code> (dla 67 → 3, dla 245 → 5). 2.2: 10. 2.3: 1110100011100011100. 2.4: 123. 2.5: plik <code>wyniki2_5.txt</code>: 1001011000, 1111000001, 1110001000, 1101100001111010, … (100 wierszy).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%2C%202.2%2C%202.3%2C%202.4%20i%202.5&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj.html%232-1-2-2-2-3-2-4-i-2-5" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-3-3-i-3-4" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Liczba π):</strong> Plik <code>pi.txt</code> zawiera 10 000 wierszy – po jednej cyfrze rozwinięcia π po przecinku (1, 4, 1, 5, 9, …). Odpowiedzi zapisz w <code>wyniki3.txt</code> z numerami zadań (do testów: <code>pi_przyklad.txt</code> – pierwsze 100 wierszy).</p><ul><li><strong>3.1</strong> — Fragment 2-cyfrowy to dwie kolejne cyfry z pliku (jest ich 9999). Podaj, ile fragmentów jest zapisem liczby większej od 90 (dla przykładu: 13).</li><li><strong>3.2</strong> — Spośród 100 możliwych fragmentów 00–99 znajdź ten, który występuje najrzadziej, i ten, który występuje najczęściej, podając je z liczbą wystąpień; przy remisie wybierz fragment o mniejszej wartości (dla przykładu: <code>00 0</code> i <code>62 4</code>).</li></ul><p>Ciąg co najmniej 4-elementowy jest rosnąco-malejący, jeśli dla pewnego k ∈ {2, …, n−2} zachodzi a₁ &lt; … &lt; aₖ oraz aₖ₊₁ &gt; … &gt; aₙ (np. (2,5,7,9,8,3,1) i (5,9,9,4,1) są takie, a (1,2,3,4) czy (5,5,3,2,1) – nie).</p><ul><li><strong>3.3</strong> — Podaj, ile jest rosnąco-malejących ciągów złożonych z dokładnie sześciu kolejnych cyfr pliku (dla przykładu: 3).</li><li><strong>3.4</strong> — Znajdź najdłuższy rosnąco-malejący ciąg kolejnych cyfr (jest jedyny) i podaj w dwóch wierszach: pozycję (numer wiersza) jego początku oraz sam ciąg cyfr bez spacji (dla przykładu: <code>77</code> i <code>0899862</code>).</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;pi.txt&quot;) as file:
     cyfry = [int(linia) for linia in file if linia.strip()]
 
 # 3.1
@@ -168,7 +413,144 @@ for i in range(len(cyfry)):
                 najlepszy_start = i
                 najlepsza_dlugosc = dlugosc
 print(&quot;3.4&quot;, najlepszy_start + 1)
-print(&quot;&quot;.join(str(c) for c in cyfry[najlepszy_start:najlepszy_start + najlepsza_dlugosc]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 902. 3.2: <code>88 80</code> (najrzadszy), <code>65 124</code> (najczęstszy). 3.3: 214. 3.4: pozycja 2781, ciąg 014576540.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_dziesietny(napis, podstawa):
+print(&quot;&quot;.join(str(c) for c in cyfry[najlepszy_start:najlepszy_start + najlepsza_dlugosc]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+bool rosnaco_malejacy(const std::vector&lt;int&gt;&amp; c) {
+    int n = c.size();
+    if (n &lt; 4) return false;
+    for (int k = 2; k &lt; n - 1; k++) {  // a1..ak rosnący, a(k+1)..an malejący
+        bool rosnie = true, maleje = true;
+        for (int i = 0; i &lt; k - 1; i++)
+            if (!(c[i] &lt; c[i + 1])) rosnie = false;
+        for (int i = k; i &lt; n - 1; i++)
+            if (!(c[i] &gt; c[i + 1])) maleje = false;
+        if (rosnie &amp;&amp; maleje) return true;
+    }
+    return false;
+}
+
+// fragment cyfry[od .. od + dlugosc - 1]
+std::vector&lt;int&gt; wycinek(const std::vector&lt;int&gt;&amp; cyfry, int od, int dlugosc) {
+    return std::vector&lt;int&gt;(cyfry.begin() + od, cyfry.begin() + od + dlugosc);
+}
+
+int main() {
+    std::vector&lt;int&gt; cyfry;
+    std::ifstream plik(&quot;pi.txt&quot;);
+    int c;
+    while (plik &gt;&gt; c) cyfry.push_back(c);
+    int n = cyfry.size();
+
+    // 3.1
+    std::vector&lt;int&gt; fragmenty;
+    for (int i = 0; i &lt; n - 1; i++) fragmenty.push_back(cyfry[i] * 10 + cyfry[i + 1]);
+    int ponad90 = 0;
+    for (int f : fragmenty)
+        if (f &gt; 90) ponad90++;
+    std::println(&quot;3.1 {}&quot;, ponad90);
+
+    // 3.2
+    std::vector&lt;int&gt; ile(100, 0);
+    for (int f : fragmenty) ile[f]++;
+    // min_element / max_element zwracają pierwszy, czyli najmniejszy fragment
+    int najrzadszy = std::min_element(ile.begin(), ile.end()) - ile.begin();
+    int najczestszy = std::max_element(ile.begin(), ile.end()) - ile.begin();
+    std::println(&quot;3.2 {:02d} {}&quot;, najrzadszy, ile[najrzadszy]);
+    std::println(&quot;3.2 {:02d} {}&quot;, najczestszy, ile[najczestszy]);
+
+    // 3.3
+    int szostki = 0;
+    for (int i = 0; i &lt; n - 5; i++)
+        if (rosnaco_malejacy(wycinek(cyfry, i, 6))) szostki++;
+    std::println(&quot;3.3 {}&quot;, szostki);
+
+    // 3.4 - ciąg rosnąco-malejący cyfr ma najwyżej 20 elementów (10 rosnących + 10 malejących)
+    int najlepszy_start = 0;
+    int najlepsza_dlugosc = 0;
+    for (int i = 0; i &lt; n; i++) {
+        for (int dlugosc = 4; dlugosc &lt;= 20; dlugosc++) {
+            if (i + dlugosc &lt;= n &amp;&amp; dlugosc &gt; najlepsza_dlugosc) {
+                if (rosnaco_malejacy(wycinek(cyfry, i, dlugosc))) {
+                    najlepszy_start = i;
+                    najlepsza_dlugosc = dlugosc;
+                }
+            }
+        }
+    }
+    std::println(&quot;3.4 {}&quot;, najlepszy_start + 1);
+    for (int i = najlepszy_start; i &lt; najlepszy_start + najlepsza_dlugosc; i++) std::print(&quot;{}&quot;, cyfry[i]);
+    std::println();
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static boolean rosnacoMalejacy(List&lt;Integer&gt; c) {
+        int n = c.size();
+        if (n &lt; 4) return false;
+        for (int k = 2; k &lt; n - 1; k++) {  // a1..ak rosnący, a(k+1)..an malejący
+            boolean rosnie = true, maleje = true;
+            for (int i = 0; i &lt; k - 1; i++)
+                if (!(c.get(i) &lt; c.get(i + 1))) rosnie = false;
+            for (int i = k; i &lt; n - 1; i++)
+                if (!(c.get(i) &gt; c.get(i + 1))) maleje = false;
+            if (rosnie &amp;&amp; maleje) return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var cyfry = new ArrayList&lt;Integer&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;pi.txt&quot;)))
+            if (!linia.isBlank()) cyfry.add(Integer.parseInt(linia.trim()));
+        int n = cyfry.size();
+
+        // 3.1
+        var fragmenty = new ArrayList&lt;Integer&gt;();
+        for (int i = 0; i &lt; n - 1; i++) fragmenty.add(cyfry.get(i) * 10 + cyfry.get(i + 1));
+        int ponad90 = 0;
+        for (int f : fragmenty)
+            if (f &gt; 90) ponad90++;
+        System.out.println(&quot;3.1 &quot; + ponad90);
+
+        // 3.2
+        int[] ile = new int[100];
+        for (int f : fragmenty) ile[f]++;
+        int najrzadszy = 0, najczestszy = 0;  // przy remisie zostaje pierwszy, czyli najmniejszy fragment
+        for (int f = 0; f &lt; 100; f++) {
+            if (ile[f] &lt; ile[najrzadszy]) najrzadszy = f;
+            if (ile[f] &gt; ile[najczestszy]) najczestszy = f;
+        }
+        System.out.println(&quot;3.2 &quot; + String.format(&quot;%02d&quot;, najrzadszy) + &quot; &quot; + ile[najrzadszy]);
+        System.out.println(&quot;3.2 &quot; + String.format(&quot;%02d&quot;, najczestszy) + &quot; &quot; + ile[najczestszy]);
+
+        // 3.3
+        int szostki = 0;
+        for (int i = 0; i &lt; n - 5; i++)
+            if (rosnacoMalejacy(cyfry.subList(i, i + 6))) szostki++;
+        System.out.println(&quot;3.3 &quot; + szostki);
+
+        // 3.4 - ciąg rosnąco-malejący cyfr ma najwyżej 20 elementów (10 rosnących + 10 malejących)
+        int najlepszyStart = 0;
+        int najlepszaDlugosc = 0;
+        for (int i = 0; i &lt; n; i++) {
+            for (int dlugosc = 4; dlugosc &lt;= 20; dlugosc++) {
+                if (i + dlugosc &lt;= n &amp;&amp; dlugosc &gt; najlepszaDlugosc) {
+                    if (rosnacoMalejacy(cyfry.subList(i, i + dlugosc))) {
+                        najlepszyStart = i;
+                        najlepszaDlugosc = dlugosc;
+                    }
+                }
+            }
+        }
+        System.out.println(&quot;3.4 &quot; + (najlepszyStart + 1));
+        var ciag = new StringBuilder();
+        for (int c : cyfry.subList(najlepszyStart, najlepszyStart + najlepszaDlugosc)) ciag.append(c);
+        System.out.println(ciag);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 902. 3.2: <code>88 80</code> (najrzadszy), <code>65 124</code> (najczęstszy). 3.3: 214. 3.4: pozycja 2781, ciąg 014576540.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1%2C%203.2%2C%203.3%20i%203.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj.html%233-1-3-2-3-3-i-3-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Liczby zapisano w systemach o podstawach 3, 5 i 6. Wstaw w miejsce kropek znak <code>&lt;</code>, <code>&gt;</code> lub <code>=</code>: (2011)₃ … (134)₆ (w arkuszu uzupełnione jako przykład: <code>=</code>), (134)₅ … (134)₆, (2222)₃ … (1111)₆.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_dziesietny(napis, podstawa):
     liczba = 0
     for c in napis:
         liczba = liczba * podstawa + int(c)
@@ -177,7 +559,39 @@ print(&quot;&quot;.join(str(c) for c in cyfry[najlepszy_start:najlepszy_start + 
 
 for (x, px), (y, py) in [((&quot;2011&quot;, 3), (&quot;134&quot;, 6)), ((&quot;134&quot;, 5), (&quot;134&quot;, 6)), ((&quot;2222&quot;, 3), (&quot;1111&quot;, 6))]:
     a, b = na_dziesietny(x, px), na_dziesietny(y, py)
-    print(a, &quot;&lt;&quot; if a &lt; b else (&quot;&gt;&quot; if a &gt; b else &quot;=&quot;), b)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (2011)₃ = (134)₆ (58 = 58), (134)₅ &lt; (134)₆ (44 &lt; 58), (2222)₃ &lt; (1111)₆ (80 &lt; 259).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(a, &quot;&lt;&quot; if a &lt; b else (&quot;&gt;&quot; if a &gt; b else &quot;=&quot;), b)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+long long na_dziesietny(const std::string&amp; napis, int podstawa) {
+    long long liczba = 0;
+    for (char c : napis) liczba = liczba * podstawa + (c - &#x27;0&#x27;);
+    return liczba;
+}
+
+int main() {
+    struct Para { std::string x; int px; std::string y; int py; };
+    Para pary[] = {{&quot;2011&quot;, 3, &quot;134&quot;, 6}, {&quot;134&quot;, 5, &quot;134&quot;, 6}, {&quot;2222&quot;, 3, &quot;1111&quot;, 6}};
+    for (auto&amp; [x, px, y, py] : pary) {
+        long long a = na_dziesietny(x, px), b = na_dziesietny(y, py);
+        std::println(&quot;{} {} {}&quot;, a, a &lt; b ? &quot;&lt;&quot; : (a &gt; b ? &quot;&gt;&quot; : &quot;=&quot;), b);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long naDziesietny(String napis, int podstawa) {
+        long liczba = 0;
+        for (char c : napis.toCharArray()) liczba = liczba * podstawa + (c - &#x27;0&#x27;);
+        return liczba;
+    }
+
+    record Para(String x, int px, String y, int py) {}
+
+    public static void main(String[] args) throws Exception {
+        Para[] pary = {new Para(&quot;2011&quot;, 3, &quot;134&quot;, 6), new Para(&quot;134&quot;, 5, &quot;134&quot;, 6), new Para(&quot;2222&quot;, 3, &quot;1111&quot;, 6)};
+        for (var p : pary) {
+            long a = naDziesietny(p.x(), p.px()), b = naDziesietny(p.y(), p.py());
+            System.out.println(a + &quot; &quot; + (a &lt; b ? &quot;&lt;&quot; : (a &gt; b ? &quot;&gt;&quot; : &quot;=&quot;)) + &quot; &quot; + b);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (2011)₃ = (134)₆ (58 = 58), (134)₅ &lt; (134)₆ (44 &lt; 58), (2222)₃ &lt; (1111)₆ (80 &lt; 259).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%205&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-maj.html%235" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

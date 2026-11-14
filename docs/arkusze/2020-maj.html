@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li><li><a href="#6">6</a></li><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li><li><a href="#6-4">6.4</a></li><li><a href="#6-5">6.5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2020 — czerwiec (termin główny), poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2020 — czerwiec (termin główny), poziom rozszerzony</h1><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2020_maj" target="_blank" rel="noopener">PLIKI</a></p><p>Termin główny 2020 (egzamin odbył się w czerwcu 2020).</p><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_k_podobne(n, A, B, k):
+<h1 class="page-title">Matura 2020 — czerwiec (termin główny), poziom rozszerzony</h1><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2020_maj" target="_blank" rel="noopener">PLIKI</a></p><p>Termin główny 2020 (egzamin odbył się w czerwcu 2020).</p><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (podobne tablice). Dla dodatniej liczby <code>n</code> i tablic liczb całkowitych <code>A[1..n]</code>, <code>B[1..n]</code> oraz liczby całkowitej <code>0 ≤ k &lt; n</code> tablice są k-podobne, gdy <code>A[1..k] = B[n-k+1..n]</code> oraz <code>A[k+1..n] = B[1..n-k]</code> (czyli <code>B</code> powstaje z <code>A</code> przez przesunięcie cykliczne; dla <code>k = 0</code> pierwszy warunek jest zawsze prawdziwy). Liczbę <code>k</code> nazywamy świadectwem podobieństwa.</p><ul><li>1.1 — uzupełnij tabelę: czy tablice <code>[1, 2, 3, 4, 5]</code> i <code>[3, 4, 5, 1, 2]</code> są 2-podobne; dla jakiego <code>k</code> tablice <code>[1,1,1,1,3,1,1,1,1]</code> i <code>[3,1,1,1,1,1,1,1,1]</code> są k-podobne; czy tablice <code>[4, 2, 4, 4, 2, 6]</code> i <code>[4, 4, 2, 6, 4, 2]</code> są 1-podobne (np. <code>[4, 7, 1, 4, 5]</code> i <code>[1, 4, 5, 4, 7]</code> są 2-podobne).</li><li>1.2 — napisz funkcję <code>czy_k_podobne(n, A, B, k)</code> zwracającą PRAWDA, gdy tablice są k-podobne, i FAŁSZ w przeciwnym razie. Wolno używać tylko operacji arytmetycznych (w tym div i mod), odwołań do elementów tablicy, porównań, instrukcji sterujących, przypisań i własnych funkcji.</li><li>1.3 — napisz funkcję <code>czy_podobne(n, A, B)</code> zwracającą PRAWDA, gdy istnieje <code>k</code> (<code>0 ≤ k &lt; n</code>), dla którego tablice są k-podobne, i FAŁSZ w przeciwnym razie (możesz użyć funkcji <code>czy_k_podobne</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_k_podobne(n, A, B, k):
     # A[1..k] = B[n-k+1..n] (tutaj tablice są indeksowane od 0)
     for i in range(k):
         if A[i] != B[n - k + i]:
@@ -64,7 +64,94 @@ A = [1, 1, 1, 1, 3, 1, 1, 1, 1]
 B = [3, 1, 1, 1, 1, 1, 1, 1, 1]
 print([k for k in range(9) if czy_k_podobne(9, A, B, k)])
 # 1.3
-print(czy_podobne(5, [3, 6, 5, 1, 8], [5, 1, 8, 3, 6]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: wiersz 5. PRAWDA, wiersz 6. k = 4, wiersz 7. FAŁSZ; 1.2 i 1.3: funkcje w kodzie</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynik = []
+print(czy_podobne(5, [3, 6, 5, 1, 8], [5, 1, 8, 3, 6]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+bool czy_k_podobne(int n, const std::vector&lt;int&gt;&amp; A, const std::vector&lt;int&gt;&amp; B, int k) {
+    // A[1..k] = B[n-k+1..n] (tutaj tablice są indeksowane od 0)
+    for (int i = 0; i &lt; k; i++)
+        if (A[i] != B[n - k + i])
+            return false;
+    // A[k+1..n] = B[1..n-k]
+    for (int i = 0; i &lt; n - k; i++)
+        if (B[i] != A[k + i])
+            return false;
+    return true;
+}
+
+bool czy_podobne(int n, const std::vector&lt;int&gt;&amp; A, const std::vector&lt;int&gt;&amp; B) {
+    for (int k = 0; k &lt; n; k++)
+        if (czy_k_podobne(n, A, B, k))
+            return true;
+    return false;
+}
+
+// wartość logiczna wypisana jak w Pythonie
+const char* napis(bool b) {
+    return b ? &quot;True&quot; : &quot;False&quot;;
+}
+
+int main() {
+    // 1.1 - wiersze 5. i 7. tabeli
+    std::println(&quot;{}&quot;, napis(czy_k_podobne(5, {1, 2, 3, 4, 5}, {3, 4, 5, 1, 2}, 2)));
+    std::println(&quot;{}&quot;, napis(czy_k_podobne(6, {4, 2, 4, 4, 2, 6}, {4, 4, 2, 6, 4, 2}, 1)));
+    // 1.1 - wiersz 6. tabeli: szukamy k
+    std::vector&lt;int&gt; A = {1, 1, 1, 1, 3, 1, 1, 1, 1};
+    std::vector&lt;int&gt; B = {3, 1, 1, 1, 1, 1, 1, 1, 1};
+    std::vector&lt;int&gt; pasujace;
+    for (int k = 0; k &lt; 9; k++)
+        if (czy_k_podobne(9, A, B, k))
+            pasujace.push_back(k);
+    std::println(&quot;{}&quot;, pasujace);
+    // 1.3
+    std::println(&quot;{}&quot;, napis(czy_podobne(5, {3, 6, 5, 1, 8}, {5, 1, 8, 3, 6})));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+
+public class Zadanie {
+    static boolean czyKPodobne(int n, int[] A, int[] B, int k) {
+        // A[1..k] = B[n-k+1..n] (tutaj tablice są indeksowane od 0)
+        for (int i = 0; i &lt; k; i++)
+            if (A[i] != B[n - k + i])
+                return false;
+        // A[k+1..n] = B[1..n-k]
+        for (int i = 0; i &lt; n - k; i++)
+            if (B[i] != A[k + i])
+                return false;
+        return true;
+    }
+
+    static boolean czyPodobne(int n, int[] A, int[] B) {
+        for (int k = 0; k &lt; n; k++)
+            if (czyKPodobne(n, A, B, k))
+                return true;
+        return false;
+    }
+
+    // wartość logiczna wypisana jak w Pythonie
+    static String napis(boolean b) {
+        return b ? &quot;True&quot; : &quot;False&quot;;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1 - wiersze 5. i 7. tabeli
+        System.out.println(napis(czyKPodobne(5, new int[]{1, 2, 3, 4, 5}, new int[]{3, 4, 5, 1, 2}, 2)));
+        System.out.println(napis(czyKPodobne(6, new int[]{4, 2, 4, 4, 2, 6}, new int[]{4, 4, 2, 6, 4, 2}, 1)));
+        // 1.1 - wiersz 6. tabeli: szukamy k
+        int[] A = {1, 1, 1, 1, 3, 1, 1, 1, 1};
+        int[] B = {3, 1, 1, 1, 1, 1, 1, 1, 1};
+        var pasujace = new ArrayList&lt;Integer&gt;();
+        for (int k = 0; k &lt; 9; k++)
+            if (czyKPodobne(9, A, B, k))
+                pasujace.add(k);
+        System.out.println(pasujace);
+        // 1.3
+        System.out.println(napis(czyPodobne(5, new int[]{3, 6, 5, 1, 8}, new int[]{5, 1, 8, 3, 6})));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: wiersz 5. PRAWDA, wiersz 6. k = 4, wiersz 7. FAŁSZ; 1.2 i 1.3: funkcje w kodzie</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (symetryczny ciąg). Procedura dla nieujemnych liczb całkowitych <code>a</code> i <code>b</code> wypisuje ciąg liczb:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">sym(a, b)
+    jeżeli a ≠ 0
+        sym(a − 1, b + 1)
+        wypisz a * b
+        sym(a − 1, b + 1)</code></pre></div></div></div><p>Przykład: <code>sym(3, 1)</code> wypisuje <code>3 4 3 3 3 4 3</code>.</p><ul><li>2.1 — podaj ciągi wypisane przez <code>sym(3, 3)</code> i <code>sym(4, 1)</code>.</li><li>2.2 — podaj długość ciągu wypisanego przez <code>sym(5, 1)</code>, <code>sym(6, 6)</code> i <code>sym(10, 2020)</code> (dla porównania: <code>sym(3, 2)</code> daje 7 liczb, <code>sym(4, 4)</code> — 15).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wynik = []
 
 
 def sym(a, b):
@@ -85,7 +172,74 @@ for a, b in [(3, 2), (4, 4), (5, 1), (6, 6)]:
     wynik = []
     sym(a, b)
     print(a, b, len(wynik), 2 ** a - 1)
-print(10, 2020, 2 ** 10 - 1)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: sym(3,3) = 5 8 5 9 5 8 5, sym(4,1) = 4 6 4 6 4 6 4 4 4 6 4 6 4 6 4; 2.2: 7, 15, 31, 63, 1023</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
+print(10, 2020, 2 ** 10 - 1)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;long long&gt; wynik;
+
+void sym(int a, long long b) {
+    if (a != 0) {
+        sym(a - 1, b + 1);
+        wynik.push_back(a * b);
+        sym(a - 1, b + 1);
+    }
+}
+
+int main() {
+    // 2.1
+    for (auto [a, b] : {std::pair{3, 3}, std::pair{4, 1}}) {
+        wynik.clear();
+        sym(a, b);
+        std::print(&quot;{} {}&quot;, a, b);
+        for (long long x : wynik)
+            std::print(&quot; {}&quot;, x);
+        std::println();
+    }
+
+    // 2.2 - długość ciągu nie zależy od b i wynosi 2^a - 1
+    for (auto [a, b] : {std::pair{3, 2}, std::pair{4, 4}, std::pair{5, 1}, std::pair{6, 6}}) {
+        wynik.clear();
+        sym(a, b);
+        std::println(&quot;{} {} {} {}&quot;, a, b, wynik.size(), (1 &lt;&lt; a) - 1);
+    }
+    std::println(&quot;{} {} {}&quot;, 10, 2020, (1 &lt;&lt; 10) - 1);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static List&lt;Long&gt; wynik = new ArrayList&lt;&gt;();
+
+    static void sym(int a, long b) {
+        if (a != 0) {
+            sym(a - 1, b + 1);
+            wynik.add(a * b);
+            sym(a - 1, b + 1);
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        for (int[] para : new int[][]{{3, 3}, {4, 1}}) {
+            int a = para[0], b = para[1];
+            wynik.clear();
+            sym(a, b);
+            var linia = new StringBuilder(a + &quot; &quot; + b);
+            for (long x : wynik)
+                linia.append(&quot; &quot;).append(x);
+            System.out.println(linia);
+        }
+
+        // 2.2 - długość ciągu nie zależy od b i wynosi 2^a - 1
+        for (int[] para : new int[][]{{3, 2}, {4, 4}, {5, 1}, {6, 6}}) {
+            int a = para[0], b = para[1];
+            wynik.clear();
+            sym(a, b);
+            System.out.println(a + &quot; &quot; + b + &quot; &quot; + wynik.size() + &quot; &quot; + ((1 &lt;&lt; a) - 1));
+        }
+        System.out.println(10 + &quot; &quot; + 2020 + &quot; &quot; + ((1 &lt;&lt; 10) - 1));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: sym(3,3) = 5 8 5 9 5 8 5, sym(4,1) = 4 6 4 6 4 6 4 4 4 6 4 6 4 6 4; 2.2: 7, 15, 31, 63, 1023</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (pary). Plik <code>pary.txt</code> zawiera 100 wierszy; w każdym liczba całkowita z przedziału [3, 100] i słowo z małych liter alfabetu angielskiego o długości od 1 do 50, oddzielone spacją. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając je numerem zadania (dane przykładowe: <code>przyklad.txt</code>, odpowiedzi: <code>odp_przyklad.txt</code>).</p><p>Każdą liczbę parzystą z pliku przedstaw jako sumę dwóch liczb pierwszych (mocna hipoteza Goldbacha). W osobnych wierszach, w kolejności z pliku, wypisz liczbę i oba składniki w kolejności niemalejącej, oddzielone spacjami; gdy rozkładów jest kilka, wybierz składniki o największej różnicy (dla 20: <code>20 3 17</code>).</p><p>Dla danych przykładowych: <code>24 5 19</code>, <code>6 3 3</code>, <code>6 3 3</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(x):
     if x &lt; 2:
         return False
     i = 2
@@ -104,7 +258,70 @@ with open(&quot;pary.txt&quot;) as file:
             for p in range(3, liczba // 2 + 1, 2):
                 if czy_pierwsza(p) and czy_pierwsza(liczba - p):
                     print(liczba, p, liczba - p)
-                    break</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 68 7 61, 24 5 19, 48 5 43, 12 5 7, 42 5 37, 66 5 61, … , 58 5 53 (28 wierszy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;pary.txt&quot;) as file:
+                    break</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+bool czy_pierwsza(long long x) {
+    if (x &lt; 2)
+        return false;
+    long long i = 2;
+    while (i * i &lt;= x) {
+        if (x % i == 0)
+            return false;
+        i++;
+    }
+    return true;
+}
+
+int main() {
+    std::ifstream plik(&quot;pary.txt&quot;);
+    long long liczba;
+    std::string slowo;
+    while (plik &gt;&gt; liczba &gt;&gt; slowo) {
+        if (liczba &gt; 4 &amp;&amp; liczba % 2 == 0) {
+            // najmniejszy pierwszy składnik daje największą różnicę składników
+            for (long long p = 3; p &lt;= liczba / 2; p += 2) {
+                if (czy_pierwsza(p) &amp;&amp; czy_pierwsza(liczba - p)) {
+                    std::println(&quot;{} {} {}&quot;, liczba, p, liczba - p);
+                    break;
+                }
+            }
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static boolean czyPierwsza(long x) {
+        if (x &lt; 2)
+            return false;
+        long i = 2;
+        while (i * i &lt;= x) {
+            if (x % i == 0)
+                return false;
+            i++;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (String line : Files.readAllLines(Path.of(&quot;pary.txt&quot;))) {
+            if (line.isBlank())
+                continue;
+            long liczba = Long.parseLong(line.trim().split(&quot;\\s+&quot;)[0]);
+            if (liczba &gt; 4 &amp;&amp; liczba % 2 == 0) {
+                // najmniejszy pierwszy składnik daje największą różnicę składników
+                for (long p = 3; p &lt;= liczba / 2; p += 2) {
+                    if (czyPierwsza(p) &amp;&amp; czyPierwsza(liczba - p)) {
+                        System.out.println(liczba + &quot; &quot; + p + &quot; &quot; + (liczba - p));
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 68 7 61, 24 5 19, 48 5 43, 12 5 7, 42 5 37, 66 5 61, … , 58 5 53 (28 wierszy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pary.txt</code> (100 par: liczba i słowo z małych liter).</p><p>Dla każdego słowa, w kolejności z pliku, znajdź najdłuższy spójny fragment złożony z identycznych liter i wypisz ten fragment oraz jego długość, oddzielone spacją, po jednej parze w wierszu. Przy remisie podaj pierwszy fragment.</p><p>Przykład: dla <code>zxyzzzz</code> wynikiem jest <code>zzzz 4</code>, a dla <code>kkkabbb</code> — <code>kkk 3</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;pary.txt&quot;) as file:
     for line in file:
         slowo = line.split()[1]
         najdluzszy = slowo[0]
@@ -116,7 +333,50 @@ with open(&quot;pary.txt&quot;) as file:
                 fragment = slowo[i]
             if len(fragment) &gt; len(najdluzszy):
                 najdluzszy = fragment
-        print(najdluzszy, len(najdluzszy))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> d 1, tt 2, a 1, lllllll 7, ooooo 5, wwwwww 6, aaaaaaaaaaa 11, … (100 wierszy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">pary = []
+        print(najdluzszy, len(najdluzszy))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;pary.txt&quot;);
+    long long liczba;
+    std::string slowo;
+    while (plik &gt;&gt; liczba &gt;&gt; slowo) {
+        std::string najdluzszy(1, slowo[0]);
+        std::string fragment(1, slowo[0]);
+        for (size_t i = 1; i &lt; slowo.size(); i++) {
+            if (slowo[i] == slowo[i - 1])
+                fragment += slowo[i];
+            else
+                fragment = std::string(1, slowo[i]);
+            if (fragment.size() &gt; najdluzszy.size())
+                najdluzszy = fragment;
+        }
+        std::println(&quot;{} {}&quot;, najdluzszy, najdluzszy.size());
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        for (String line : Files.readAllLines(Path.of(&quot;pary.txt&quot;))) {
+            if (line.isBlank())
+                continue;
+            String slowo = line.trim().split(&quot;\\s+&quot;)[1];
+            String najdluzszy = slowo.substring(0, 1);
+            String fragment = slowo.substring(0, 1);
+            for (int i = 1; i &lt; slowo.length(); i++) {
+                if (slowo.charAt(i) == slowo.charAt(i - 1))
+                    fragment += slowo.charAt(i);
+                else
+                    fragment = String.valueOf(slowo.charAt(i));
+                if (fragment.length() &gt; najdluzszy.length())
+                    najdluzszy = fragment;
+            }
+            System.out.println(najdluzszy + &quot; &quot; + najdluzszy.length());
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> d 1, tt 2, a 1, lllllll 7, ooooo 5, wwwwww 6, aaaaaaaaaaa 11, … (100 wierszy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>pary.txt</code> (100 par: liczba i słowo z małych liter).</p><p>Para <code>(liczba1, słowo1)</code> jest mniejsza od <code>(liczba2, słowo2)</code>, gdy <code>liczba1 &lt; liczba2</code> albo liczby są równe, a <code>słowo1</code> jest leksykograficznie mniejsze (np. <code>(1, bbbb) &lt; (2, aaa)</code>, <code>(3, aaa) &lt; (3, ab)</code>). Spośród par, w których liczba jest równa długości słowa, wypisz najmniejszą (jest jedna taka).</p><p>Dla danych przykładowych: <code>6 abbbbc</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">pary = []
 
 with open(&quot;pary.txt&quot;) as file:
     for line in file:
@@ -127,7 +387,53 @@ with open(&quot;pary.txt&quot;) as file:
 
 # krotki porównują się najpierw po liczbie, a przy równości - po słowie
 liczba, slowo = min(pary)
-print(liczba, slowo)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3 asd</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6">6</a></h2></div></header><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2020_maj/2020_maj_zad.6.xlsx?raw=true" target="_blank" rel="noopener">Pobierz plik Excel</a></p><ul><li><a href="https://www.youtube.com/watch?v=hmjoEGo8ygk&amp;ab_channel=KonradBuzak" target="_blank" rel="noopener">Wyjaśnienie 6.* (Konrad Buzak)</a></li><li><a href="https://www.youtube.com/watch?v=01JBCwImCJs&amp;ab_channel=TomaszStypu%C5%82a" target="_blank" rel="noopener">Wyjaśnienie 6.* (Tomasz Stypuła)</a></li></ul><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile_razy = {}
+print(liczba, slowo)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::pair&lt;long long, std::string&gt;&gt; pary;
+
+    std::ifstream plik(&quot;pary.txt&quot;);
+    long long liczba;
+    std::string slowo;
+    while (plik &gt;&gt; liczba &gt;&gt; slowo)
+        if (liczba == (long long)slowo.size())
+            pary.push_back({liczba, slowo});
+
+    // pary porównują się najpierw po liczbie, a przy równości - po słowie
+    auto [najmniejsza, jej_slowo] = std::ranges::min(pary);
+    std::println(&quot;{} {}&quot;, najmniejsza, jej_slowo);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        long najmniejsza = -1;
+        String jejSlowo = &quot;&quot;;
+
+        for (String line : Files.readAllLines(Path.of(&quot;pary.txt&quot;))) {
+            if (line.isBlank())
+                continue;
+            String[] czesci = line.trim().split(&quot;\\s+&quot;);
+            long liczba = Long.parseLong(czesci[0]);
+            String slowo = czesci[1];
+            if (liczba == slowo.length()) {
+                // porównujemy najpierw po liczbie, a przy równości - po słowie
+                if (najmniejsza == -1 || liczba &lt; najmniejsza
+                        || (liczba == najmniejsza &amp;&amp; slowo.compareTo(jejSlowo) &lt; 0)) {
+                    najmniejsza = liczba;
+                    jejSlowo = slowo;
+                }
+            }
+        }
+
+        System.out.println(najmniejsza + &quot; &quot; + jejSlowo);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3 asd</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6">6</a></h2></div></header><p class="links"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/tree/master/dzialy/zadania_arkusze/2020_maj/2020_maj_zad.6.xlsx?raw=true" target="_blank" rel="noopener">Pobierz plik Excel</a></p><ul><li><a href="https://www.youtube.com/watch?v=hmjoEGo8ygk&amp;ab_channel=KonradBuzak" target="_blank" rel="noopener">Wyjaśnienie 6.* (Konrad Buzak)</a></li><li><a href="https://www.youtube.com/watch?v=01JBCwImCJs&amp;ab_channel=TomaszStypu%C5%82a" target="_blank" rel="noopener">Wyjaśnienie 6.* (Tomasz Stypuła)</a></li></ul><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%206&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%236" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 6 (statek). Statek „Kormoran” pływał między dziesięcioma portami Morza Śródziemnego, przewożąc pięć rodzajów towarów (T1–T5); z portu wypływał zawsze tego samego dnia, w którym do niego przypłynął. Plik <code>statek.txt</code> zawiera dane o kursach od 2016-01-01 do 2018-12-18; w każdym wierszu, oddzielone tabulatorem: data pobytu w porcie (<code>rrrr-mm-dd</code>), nazwa portu, rodzaj towaru, <code>Z</code> (załadunek) lub <code>W</code> (wyładunek), masa towaru w tonach i cena za tonę w talarach (np. <code>2016-01-01    Algier    T4    Z    32    50</code>). Odpowiedzi zapisz w pliku <code>wyniki6.txt</code>, poprzedzając je numerem zadania.</p><p>Podaj, który towar był ładowany na statek najwięcej razy, oraz łączną masę tych załadunków.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile_razy = {}
 masa = {}
 
 with open(&quot;statek.txt&quot;) as file:
@@ -139,7 +445,80 @@ with open(&quot;statek.txt&quot;) as file:
             masa[towar] = masa.get(towar, 0) + int(tony)
 
 towar = max(ile_razy, key=ile_razy.get)
-print(towar, masa[towar])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> T4, 905 ton</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
+print(towar, masa[towar])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz po tabulatorach
+std::vector&lt;std::string&gt; podziel(const std::string&amp; wiersz) {
+    std::vector&lt;std::string&gt; czesci;
+    std::stringstream ss(wiersz);
+    std::string czesc;
+    while (std::getline(ss, czesc, &#x27;\t&#x27;))
+        czesci.push_back(czesc);
+    return czesci;
+}
+
+int main() {
+    std::map&lt;std::string, int&gt; ile_razy;
+    std::map&lt;std::string, long long&gt; masa;
+    std::vector&lt;std::string&gt; kolejnosc;  // towary w kolejności pojawienia się (jak słownik w Pythonie)
+
+    std::ifstream plik(&quot;statek.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+            linia.pop_back();
+        if (linia.empty())
+            continue;
+        auto czesci = podziel(linia);  // data, port, towar, zw, tony, cena
+        std::string towar = czesci[2], zw = czesci[3];
+        if (zw == &quot;Z&quot;) {
+            if (!ile_razy.contains(towar))
+                kolejnosc.push_back(towar);
+            ile_razy[towar]++;
+            masa[towar] += std::stoll(czesci[4]);
+        }
+    }
+
+    std::string towar = kolejnosc[0];
+    for (const auto&amp; t : kolejnosc)
+        if (ile_razy[t] &gt; ile_razy[towar])
+            towar = t;
+    std::println(&quot;{} {}&quot;, towar, masa[towar]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var ileRazy = new LinkedHashMap&lt;String, Integer&gt;();  // pamięta kolejność dodawania, jak słownik w Pythonie
+        var masa = new HashMap&lt;String, Long&gt;();
+
+        var linie = Files.readAllLines(Path.of(&quot;statek.txt&quot;));
+        for (String line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            if (line.isBlank())
+                continue;
+            String[] czesci = line.split(&quot;\t&quot;);  // data, port, towar, zw, tony, cena
+            String towar = czesci[2], zw = czesci[3];
+            if (zw.equals(&quot;Z&quot;)) {
+                ileRazy.merge(towar, 1, Integer::sum);
+                masa.merge(towar, Long.parseLong(czesci[4]), Long::sum);
+            }
+        }
+
+        String towar = null;
+        for (String t : ileRazy.keySet())
+            if (towar == null || ileRazy.get(t) &gt; ileRazy.get(towar))
+                towar = t;
+        System.out.println(towar + &quot; &quot; + masa.get(towar));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> T4, 905 ton</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%236-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>statek.txt</code> (data, port, towar, Z/W, tony, cena za tonę).</p><p>Podaj, ile było kursów, podczas których statek spędził na morzu, bez zawijania do portu, więcej niż 20 pełnych dni. Przykład: wypłynięcie 2016-01-10 i przypłynięcie 2016-01-16 to 5 pełnych dni na morzu (11–15 stycznia).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date
 
 with open(&quot;statek.txt&quot;) as file:
     file.readline()
@@ -155,7 +534,71 @@ for i in range(1, len(daty)):
     if pelne_dni_na_morzu &gt; 20:
         ile += 1
 
-print(ile)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 22</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;statek.txt&quot;) as file:
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;chrono&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using namespace std::chrono;
+
+// zamienia napis &quot;rrrr-mm-dd&quot; na datę
+sys_days na_date(const std::string&amp; tekst) {
+    int r = std::stoi(tekst.substr(0, 4));
+    unsigned m = std::stoi(tekst.substr(5, 2));
+    unsigned d = std::stoi(tekst.substr(8, 2));
+    return year{r} / month{m} / day{d};
+}
+
+int main() {
+    std::ifstream plik(&quot;statek.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    std::vector&lt;sys_days&gt; daty;
+    while (std::getline(plik, linia)) {
+        if (linia.size() &lt; 10)
+            continue;
+        sys_days data = na_date(linia.substr(0, 10));
+        if (daty.empty() || daty.back() != data)
+            daty.push_back(data);
+    }
+
+    int ile = 0;
+    for (size_t i = 1; i &lt; daty.size(); i++) {
+        long long pelne_dni_na_morzu = (daty[i] - daty[i - 1]).count() - 1;
+        if (pelne_dni_na_morzu &gt; 20)
+            ile++;
+    }
+
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var linie = Files.readAllLines(Path.of(&quot;statek.txt&quot;));
+        var daty = new ArrayList&lt;LocalDate&gt;();
+        for (String line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            if (line.isBlank())
+                continue;
+            var data = LocalDate.parse(line.split(&quot;\t&quot;)[0]);
+            if (daty.isEmpty() || !daty.getLast().equals(data))
+                daty.add(data);
+        }
+
+        int ile = 0;
+        for (int i = 1; i &lt; daty.size(); i++) {
+            long pelneDniNaMorzu = ChronoUnit.DAYS.between(daty.get(i - 1), daty.get(i)) - 1;
+            if (pelneDniNaMorzu &gt; 20)
+                ile++;
+        }
+
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 22</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%236-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>statek.txt</code> (data, port, towar, Z/W, tony, cena za tonę).</p><p>W dniach 2016-02-01 i 2018-08-01 statek był na morzu. Dla każdego z tych dni podaj rodzaj i liczbę ton towaru, którego było na statku najwięcej, oraz towaru, którego było najmniej (towar jest na statku, gdy jego masa jest większa od 0).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;statek.txt&quot;) as file:
     file.readline()
     dane = [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file]
 
@@ -170,7 +613,101 @@ for dzien in [&quot;2016-02-01&quot;, &quot;2018-08-01&quot;]:
     na_statku = {t: ile for t, ile in ladunek.items() if ile &gt; 0}
     maks = max(na_statku, key=na_statku.get)
     mini = min(na_statku, key=na_statku.get)
-    print(dzien, &quot;max:&quot;, maks, na_statku[maks], &quot;min:&quot;, mini, na_statku[mini])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2016-02-01: max T2 48, min T4 24; 2018-08-01: max T5 125, min T1 3</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-4">6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zaladunek = {}
+    print(dzien, &quot;max:&quot;, maks, na_statku[maks], &quot;min:&quot;, mini, na_statku[mini])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz po tabulatorach
+std::vector&lt;std::string&gt; podziel(const std::string&amp; wiersz) {
+    std::vector&lt;std::string&gt; czesci;
+    std::stringstream ss(wiersz);
+    std::string czesc;
+    while (std::getline(ss, czesc, &#x27;\t&#x27;))
+        czesci.push_back(czesc);
+    return czesci;
+}
+
+int main() {
+    std::ifstream plik(&quot;statek.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    std::vector&lt;std::vector&lt;std::string&gt;&gt; dane;
+    while (std::getline(plik, linia)) {
+        if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+            linia.pop_back();
+        if (!linia.empty())
+            dane.push_back(podziel(linia));
+    }
+
+    for (std::string dzien : {&quot;2016-02-01&quot;, &quot;2018-08-01&quot;}) {
+        // towar -&gt; ładunek; wektor par zachowuje kolejność pojawienia się towarów (jak słownik w Pythonie)
+        std::vector&lt;std::pair&lt;std::string, long long&gt;&gt; ladunek;
+        for (const auto&amp; d : dane) {
+            const std::string &amp;data = d[0], &amp;towar = d[2], &amp;zw = d[3];
+            if (data &lt; dzien) {  // daty w formacie rrrr-mm-dd można porównywać jak napisy
+                long long tony = std::stoll(d[4]);
+                size_t k = 0;
+                while (k &lt; ladunek.size() &amp;&amp; ladunek[k].first != towar)
+                    k++;
+                if (k == ladunek.size())
+                    ladunek.push_back({towar, 0});
+                ladunek[k].second += zw == &quot;Z&quot; ? tony : -tony;
+            }
+        }
+        std::vector&lt;std::pair&lt;std::string, long long&gt;&gt; na_statku;
+        for (const auto&amp; [t, ile] : ladunek)
+            if (ile &gt; 0)
+                na_statku.push_back({t, ile});
+        auto maks = na_statku[0], mini = na_statku[0];
+        for (const auto&amp; p : na_statku) {
+            if (p.second &gt; maks.second)
+                maks = p;
+            if (p.second &lt; mini.second)
+                mini = p;
+        }
+        std::println(&quot;{} max: {} {} min: {} {}&quot;, dzien, maks.first, maks.second, mini.first, mini.second);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var linie = Files.readAllLines(Path.of(&quot;statek.txt&quot;));
+        var dane = new ArrayList&lt;String[]&gt;();
+        for (String line : linie.subList(1, linie.size()))  // pomijamy nagłówek
+            if (!line.isBlank())
+                dane.add(line.split(&quot;\t&quot;));
+
+        for (String dzien : new String[]{&quot;2016-02-01&quot;, &quot;2018-08-01&quot;}) {
+            var ladunek = new LinkedHashMap&lt;String, Long&gt;();  // pamięta kolejność dodawania, jak słownik w Pythonie
+            for (String[] d : dane) {
+                String data = d[0], towar = d[2], zw = d[3];
+                if (data.compareTo(dzien) &lt; 0) {  // daty w formacie rrrr-mm-dd można porównywać jak napisy
+                    long tony = Long.parseLong(d[4]);
+                    ladunek.merge(towar, zw.equals(&quot;Z&quot;) ? tony : -tony, Long::sum);
+                }
+            }
+            var naStatku = new LinkedHashMap&lt;String, Long&gt;();
+            for (var e : ladunek.entrySet())
+                if (e.getValue() &gt; 0)
+                    naStatku.put(e.getKey(), e.getValue());
+            String maks = null, mini = null;
+            for (String t : naStatku.keySet()) {
+                if (maks == null || naStatku.get(t) &gt; naStatku.get(maks))
+                    maks = t;
+                if (mini == null || naStatku.get(t) &lt; naStatku.get(mini))
+                    mini = t;
+            }
+            System.out.println(dzien + &quot; max: &quot; + maks + &quot; &quot; + naStatku.get(maks)
+                    + &quot; min: &quot; + mini + &quot; &quot; + naStatku.get(mini));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2016-02-01: max T2 48, min T4 24; 2018-08-01: max T5 125, min T1 3</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%236-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-4">6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>statek.txt</code> (data, port, towar, Z/W, tony, cena za tonę).</p><p>Wykonaj wykres kolumnowy pokazujący, ile ton towaru T5 załadowano i ile wyładowano w każdym miesiącu od stycznia 2016 do grudnia 2018 (do 18.12.2018) — dla każdego miesiąca dwie kolumny. Opisz obie osie (oś pozioma w formacie <code>rrrr-mm</code>) i nadaj wykresowi tytuł.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">zaladunek = {}
 wyladunek = {}
 
 with open(&quot;statek.txt&quot;) as file:
@@ -188,7 +725,80 @@ with open(&quot;statek.txt&quot;) as file:
 
 for miesiac in sorted(zaladunek):
     print(miesiac, zaladunek[miesiac], wyladunek[miesiac])
-# na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2016-01 Z 76 W 32, 2016-02 Z 8 W 0, 2016-03 Z 0 W 50, 2016-04 Z 68 W 0, … , 2018-12 Z 0 W 4 (+ wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-5" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-5">6.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;statek.txt&quot;) as file:
+# na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz po tabulatorach
+std::vector&lt;std::string&gt; podziel(const std::string&amp; wiersz) {
+    std::vector&lt;std::string&gt; czesci;
+    std::stringstream ss(wiersz);
+    std::string czesc;
+    while (std::getline(ss, czesc, &#x27;\t&#x27;))
+        czesci.push_back(czesc);
+    return czesci;
+}
+
+int main() {
+    std::map&lt;std::string, long long&gt; zaladunek;  // std::map trzyma klucze posortowane
+    std::map&lt;std::string, long long&gt; wyladunek;
+
+    std::ifstream plik(&quot;statek.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    while (std::getline(plik, linia)) {
+        if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+            linia.pop_back();
+        if (linia.empty())
+            continue;
+        auto czesci = podziel(linia);  // data, port, towar, zw, tony, cena
+        std::string miesiac = czesci[0].substr(0, 7);
+        zaladunek[miesiac] += 0;  // jak setdefault - miesiąc pojawia się w zestawieniu
+        wyladunek[miesiac] += 0;
+        if (czesci[2] == &quot;T5&quot;) {
+            if (czesci[3] == &quot;Z&quot;)
+                zaladunek[miesiac] += std::stoll(czesci[4]);
+            else
+                wyladunek[miesiac] += std::stoll(czesci[4]);
+        }
+    }
+
+    for (const auto&amp; [miesiac, z] : zaladunek)
+        std::println(&quot;{} {} {}&quot;, miesiac, z, wyladunek[miesiac]);
+    // na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.TreeMap;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var zaladunek = new TreeMap&lt;String, Long&gt;();  // TreeMap trzyma klucze posortowane
+        var wyladunek = new TreeMap&lt;String, Long&gt;();
+
+        var linie = Files.readAllLines(Path.of(&quot;statek.txt&quot;));
+        for (String line : linie.subList(1, linie.size())) {  // pomijamy nagłówek
+            if (line.isBlank())
+                continue;
+            String[] czesci = line.split(&quot;\t&quot;);  // data, port, towar, zw, tony, cena
+            String miesiac = czesci[0].substring(0, 7);
+            zaladunek.putIfAbsent(miesiac, 0L);
+            wyladunek.putIfAbsent(miesiac, 0L);
+            if (czesci[2].equals(&quot;T5&quot;)) {
+                if (czesci[3].equals(&quot;Z&quot;))
+                    zaladunek.merge(miesiac, Long.parseLong(czesci[4]), Long::sum);
+                else
+                    wyladunek.merge(miesiac, Long.parseLong(czesci[4]), Long::sum);
+            }
+        }
+
+        for (String miesiac : zaladunek.keySet())
+            System.out.println(miesiac + &quot; &quot; + zaladunek.get(miesiac) + &quot; &quot; + wyladunek.get(miesiac));
+        // na podstawie zestawienia należy jeszcze wykonać wykres kolumnowy
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2016-01 Z 76 W 32, 2016-02 Z 8 W 0, 2016-03 Z 0 W 50, 2016-04 Z 68 W 0, … , 2018-12 Z 0 W 4 (+ wykres kolumnowy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%236-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-5" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-5">6.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>statek.txt</code> (data, port, towar, Z/W, tony, cena za tonę). Przy załadunku kapitan płacił za towar (tony × cena), a przy wyładunku otrzymywał zapłatę.</p><ul><li>a) Przyjmij, że przed pierwszym rejsem kapitan miał 500 000 talarów. Podaj stan kasy 18 grudnia 2018 r. po wszystkich transakcjach oraz dzień, w którym stan kasy po wypłynięciu z portu był największy, wraz z tym stanem.</li><li>b) Podaj, ile najmniej talarów musiał mieć kapitan przed pierwszym rejsem, aby każdego dnia móc zapłacić za wszystkie załadunki.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;statek.txt&quot;) as file:
     file.readline()
     dane = [line.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for line in file]
 
@@ -214,7 +824,106 @@ for i in range(len(dane)):
             dzien = data
 
 print(&quot;a)&quot;, kasa, dzien, najwiecej)
-print(&quot;b)&quot;, -najmniejsza_zmiana)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 545 844 talary, największy stan kasy 2018-10-08: 550 079; b) 6399 talarów</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;b)&quot;, -najmniejsza_zmiana)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// dzieli wiersz po tabulatorach
+std::vector&lt;std::string&gt; podziel(const std::string&amp; wiersz) {
+    std::vector&lt;std::string&gt; czesci;
+    std::stringstream ss(wiersz);
+    std::string czesc;
+    while (std::getline(ss, czesc, &#x27;\t&#x27;))
+        czesci.push_back(czesc);
+    return czesci;
+}
+
+int main() {
+    std::ifstream plik(&quot;statek.txt&quot;);
+    std::string linia;
+    std::getline(plik, linia);  // nagłówek
+    std::vector&lt;std::vector&lt;std::string&gt;&gt; dane;
+    while (std::getline(plik, linia)) {
+        if (!linia.empty() &amp;&amp; linia.back() == &#x27;\r&#x27;)
+            linia.pop_back();
+        if (!linia.empty())
+            dane.push_back(podziel(linia));
+    }
+
+    long long kasa = 500000;
+    long long zmiana = 0;  // zmiana kasy względem stanu początkowego
+    long long najmniejsza_zmiana = 0;
+    long long najwiecej = 0;
+    std::string dzien;
+
+    for (size_t i = 0; i &lt; dane.size(); i++) {
+        const std::string &amp;data = dane[i][0], &amp;zw = dane[i][3];
+        long long wartosc = std::stoll(dane[i][4]) * std::stoll(dane[i][5]);
+        if (zw == &quot;Z&quot;) {
+            kasa -= wartosc;  // kapitan płaci za załadunek
+            zmiana -= wartosc;
+        } else {
+            kasa += wartosc;  // kapitan dostaje zapłatę za wyładunek
+            zmiana += wartosc;
+        }
+        najmniejsza_zmiana = std::min(najmniejsza_zmiana, zmiana);
+        // stan kasy po wypłynięciu z portu = po ostatniej transakcji danego dnia
+        if (i == dane.size() - 1 || dane[i + 1][0] != data) {
+            if (kasa &gt; najwiecej) {
+                najwiecej = kasa;
+                dzien = data;
+            }
+        }
+    }
+
+    std::println(&quot;a) {} {} {}&quot;, kasa, dzien, najwiecej);
+    std::println(&quot;b) {}&quot;, -najmniejsza_zmiana);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var linie = Files.readAllLines(Path.of(&quot;statek.txt&quot;));
+        var dane = new ArrayList&lt;String[]&gt;();
+        for (String line : linie.subList(1, linie.size()))  // pomijamy nagłówek
+            if (!line.isBlank())
+                dane.add(line.split(&quot;\t&quot;));
+
+        long kasa = 500000;
+        long zmiana = 0;  // zmiana kasy względem stanu początkowego
+        long najmniejszaZmiana = 0;
+        long najwiecej = 0;
+        String dzien = &quot;&quot;;
+
+        for (int i = 0; i &lt; dane.size(); i++) {
+            String[] d = dane.get(i);
+            String data = d[0], zw = d[3];
+            long wartosc = Long.parseLong(d[4]) * Long.parseLong(d[5]);
+            if (zw.equals(&quot;Z&quot;)) {
+                kasa -= wartosc;  // kapitan płaci za załadunek
+                zmiana -= wartosc;
+            } else {
+                kasa += wartosc;  // kapitan dostaje zapłatę za wyładunek
+                zmiana += wartosc;
+            }
+            najmniejszaZmiana = Math.min(najmniejszaZmiana, zmiana);
+            // stan kasy po wypłynięciu z portu = po ostatniej transakcji danego dnia
+            if (i == dane.size() - 1 || !dane.get(i + 1)[0].equals(data)) {
+                if (kasa &gt; najwiecej) {
+                    najwiecej = kasa;
+                    dzien = data;
+                }
+            }
+        }
+
+        System.out.println(&quot;a) &quot; + kasa + &quot; &quot; + dzien + &quot; &quot; + najwiecej);
+        System.out.println(&quot;b) &quot; + (-najmniejszaZmiana));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 545 844 talary, największy stan kasy 2018-10-08: 550 079; b) 6399 talarów</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%E2%80%94%206.5&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-maj.html%236-5" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_maj/2020_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

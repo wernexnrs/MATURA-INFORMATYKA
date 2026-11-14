@@ -37,8 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#6-1">6.1</a></li><li><a href="#6-2">6.2</a></li><li><a href="#6-3">6.3</a></li><li><a href="#6-4">6.4</a></li><li><a href="#6-5">6.5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura próbna 2021 — kwiecień</span></nav>
-<h1 class="page-title">Matura próbna 2021 — kwiecień</h1><blockquote class="callout">Rozwiązanie nieprzetestowane na danych CKE.</blockquote><p>W pliku <code>liczby.txt</code> każdy wiersz zawiera jedną liczbę zapisaną w systemie pozycyjnym, a ostatnia cyfra wiersza oznacza podstawę tego systemu (np. <code>10112</code> to liczba <code>1011</code> w systemie dwójkowym). Treść podpunktów odtworzono na podstawie wcześniejszego rozwiązania z repozytorium.</p><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · ile liczb jest zapisanych w systemie szóstkowym</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># ile liczb jest zapisanych w systemie szóstkowym
-ile = 0
+<h1 class="page-title">Matura próbna 2021 — kwiecień</h1><blockquote class="callout"><p>Rozwiązanie nieprzetestowane na danych CKE.</p></blockquote><p>W pliku <code>liczby.txt</code> każdy wiersz zawiera jedną liczbę zapisaną w systemie pozycyjnym, a ostatnia cyfra wiersza oznacza podstawę tego systemu (np. <code>10112</code> to liczba <code>1011</code> w systemie dwójkowym). Treść podpunktów odtworzono na podstawie wcześniejszego rozwiązania z repozytorium.</p><section class="card tinted" id="6-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1">6.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p><em>(Rekonstrukcja — brak oficjalnego arkusza; treść odtworzona na podstawie opisu i kodu rozwiązania.)</em> Plik <code>liczby.txt</code>: w każdym wierszu liczba zapisana w systemie pozycyjnym, a ostatnia cyfra wiersza to podstawa tego systemu (np. <code>10112</code> oznacza <code>1011</code> w systemie dwójkowym).</p><p>Podaj, ile liczb w pliku jest zapisanych w systemie szóstkowym.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · ile liczb jest zapisanych w systemie szóstkowym</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = 0
 
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
@@ -46,7 +45,36 @@ with open(&quot;liczby.txt&quot;) as file:
         if line[-1] == &quot;6&quot;:
             ile += 1
 
-print(ile)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># ile liczb zapisanych w systemie siódemkowym nie zawiera cyfry 6
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    // ile liczb jest zapisanych w systemie szóstkowym
+    int ile = 0;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        if (linia.back() == &#x27;6&#x27;) ile++;
+    }
+
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // ile liczb jest zapisanych w systemie szóstkowym
+        int ile = 0;
+
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            linia = linia.strip();
+            if (linia.endsWith(&quot;6&quot;)) ile++;
+        }
+
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_kwiecen/2021_kwiecien.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%206.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-kwiecien.html%236-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-2">6.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p><em>(Rekonstrukcja — brak oficjalnego arkusza; treść odtworzona na podstawie opisu i kodu rozwiązania.)</em> Dane z pliku <code>liczby.txt</code> (ostatnia cyfra wiersza to podstawa systemu).</p><p>Podaj, ile liczb zapisanych w systemie siódemkowym nie zawiera w zapisie cyfry 6.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># ile liczb zapisanych w systemie siódemkowym nie zawiera cyfry 6
 ile = 0
 
 with open(&quot;liczby.txt&quot;) as file:
@@ -56,7 +84,40 @@ with open(&quot;liczby.txt&quot;) as file:
         if podstawa == &quot;7&quot; and &quot;6&quot; not in cyfry:
             ile += 1
 
-print(ile)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># ile liczb zapisanych w systemie dwójkowym jest nieparzystych
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    // ile liczb zapisanych w systemie siódemkowym nie zawiera cyfry 6
+    int ile = 0;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        std::string cyfry = linia.substr(0, linia.size() - 1);
+        char podstawa = linia.back();
+        if (podstawa == &#x27;7&#x27; &amp;&amp; !cyfry.contains(&#x27;6&#x27;)) ile++;
+    }
+
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // ile liczb zapisanych w systemie siódemkowym nie zawiera cyfry 6
+        int ile = 0;
+
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            linia = linia.strip();
+            String cyfry = linia.substring(0, linia.length() - 1);
+            char podstawa = linia.charAt(linia.length() - 1);
+            if (podstawa == &#x27;7&#x27; &amp;&amp; !cyfry.contains(&quot;6&quot;)) ile++;
+        }
+
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_kwiecen/2021_kwiecien.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%206.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-kwiecien.html%236-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-3">6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p><em>(Rekonstrukcja — brak oficjalnego arkusza; treść odtworzona na podstawie opisu i kodu rozwiązania.)</em> Dane z pliku <code>liczby.txt</code> (ostatnia cyfra wiersza to podstawa systemu).</p><p>Podaj, ile liczb zapisanych w systemie dwójkowym jest nieparzystych.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># ile liczb zapisanych w systemie dwójkowym jest nieparzystych
 ile = 0
 
 with open(&quot;liczby.txt&quot;) as file:
@@ -66,7 +127,42 @@ with open(&quot;liczby.txt&quot;) as file:
         if podstawa == &quot;2&quot; and int(cyfry, 2) % 2 == 1:
             ile += 1
 
-print(ile)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-4">6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># suma (dziesiętnie) wszystkich liczb zapisanych w systemie czwórkowym
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    // ile liczb zapisanych w systemie dwójkowym jest nieparzystych
+    int ile = 0;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        std::string cyfry = linia.substr(0, linia.size() - 1);
+        char podstawa = linia.back();
+        // liczba dwójkowa jest nieparzysta, gdy jej ostatnia cyfra to 1
+        if (podstawa == &#x27;2&#x27; &amp;&amp; cyfry.back() == &#x27;1&#x27;) ile++;
+    }
+
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // ile liczb zapisanych w systemie dwójkowym jest nieparzystych
+        int ile = 0;
+
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            linia = linia.strip();
+            String cyfry = linia.substring(0, linia.length() - 1);
+            char podstawa = linia.charAt(linia.length() - 1);
+            // liczba dwójkowa jest nieparzysta, gdy jej ostatnia cyfra to 1
+            if (podstawa == &#x27;2&#x27; &amp;&amp; cyfry.endsWith(&quot;1&quot;)) ile++;
+        }
+
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_kwiecen/2021_kwiecien.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%206.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-kwiecien.html%236-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-4">6.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p><em>(Rekonstrukcja — brak oficjalnego arkusza; treść odtworzona na podstawie opisu i kodu rozwiązania.)</em> Dane z pliku <code>liczby.txt</code> (ostatnia cyfra wiersza to podstawa systemu).</p><p>Podaj sumę (w systemie dziesiętnym) wszystkich liczb zapisanych w systemie czwórkowym.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># suma (dziesiętnie) wszystkich liczb zapisanych w systemie czwórkowym
 suma = 0
 
 with open(&quot;liczby.txt&quot;) as file:
@@ -76,7 +172,40 @@ with open(&quot;liczby.txt&quot;) as file:
         if podstawa == &quot;4&quot;:
             suma += int(cyfry, 4)
 
-print(suma)</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-5" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-5">6.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># największa i najmniejsza liczba w pliku (zapis z pliku i wartość dziesiętna)
+print(suma)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    // suma (dziesiętnie) wszystkich liczb zapisanych w systemie czwórkowym
+    long long suma = 0;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        std::string cyfry = linia.substr(0, linia.size() - 1);
+        char podstawa = linia.back();
+        if (podstawa == &#x27;4&#x27;) suma += std::stoll(cyfry, nullptr, 4);
+    }
+
+    std::println(&quot;{}&quot;, suma);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // suma (dziesiętnie) wszystkich liczb zapisanych w systemie czwórkowym
+        long suma = 0;
+
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            linia = linia.strip();
+            String cyfry = linia.substring(0, linia.length() - 1);
+            char podstawa = linia.charAt(linia.length() - 1);
+            if (podstawa == &#x27;4&#x27;) suma += Long.parseLong(cyfry, 4);
+        }
+
+        System.out.println(suma);
+    }
+}</code></pre></div></div></div><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_kwiecen/2021_kwiecien.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%206.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-kwiecien.html%236-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-5" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-5">6.5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p><em>(Rekonstrukcja — brak oficjalnego arkusza; treść odtworzona na podstawie opisu i kodu rozwiązania.)</em> Dane z pliku <code>liczby.txt</code> (ostatnia cyfra wiersza to podstawa systemu).</p><p>Podaj największą i najmniejszą liczbę z pliku — w postaci zapisanej w pliku oraz jej wartość dziesiętną.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># największa i najmniejsza liczba w pliku (zapis z pliku i wartość dziesiętna)
 liczby = []
 
 with open(&quot;liczby.txt&quot;) as file:
@@ -88,7 +217,54 @@ with open(&quot;liczby.txt&quot;) as file:
 najwieksza = max(liczby)
 najmniejsza = min(liczby)
 print(najwieksza[1], najwieksza[0])
-print(najmniejsza[1], najmniejsza[0])</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_kwiecen/2021_kwiecien.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(najmniejsza[1], najmniejsza[0])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    // największa i najmniejsza liczba w pliku (zapis z pliku i wartość dziesiętna)
+    std::vector&lt;std::pair&lt;long long, std::string&gt;&gt; liczby;
+
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) {
+        std::string cyfry = linia.substr(0, linia.size() - 1);
+        int podstawa = linia.back() - &#x27;0&#x27;;
+        liczby.push_back({std::stoll(cyfry, nullptr, podstawa), linia});
+    }
+
+    auto najwieksza = *std::max_element(liczby.begin(), liczby.end());
+    auto najmniejsza = *std::min_element(liczby.begin(), liczby.end());
+    std::println(&quot;{} {}&quot;, najwieksza.second, najwieksza.first);
+    std::println(&quot;{} {}&quot;, najmniejsza.second, najmniejsza.first);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    record Liczba(long wartosc, String zapis) {}
+
+    public static void main(String[] args) throws Exception {
+        // największa i najmniejsza liczba w pliku (zapis z pliku i wartość dziesiętna)
+        var liczby = new ArrayList&lt;Liczba&gt;();
+
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;))) {
+            linia = linia.strip();
+            String cyfry = linia.substring(0, linia.length() - 1);
+            int podstawa = linia.charAt(linia.length() - 1) - &#x27;0&#x27;;
+            liczby.add(new Liczba(Long.parseLong(cyfry, podstawa), linia));
+        }
+
+        // porównujemy najpierw wartość, potem zapis (jak krotki w Pythonie)
+        var porownanie = Comparator.comparingLong(Liczba::wartosc).thenComparing(Liczba::zapis);
+        var najwieksza = Collections.max(liczby, porownanie);
+        var najmniejsza = Collections.min(liczby, porownanie);
+        System.out.println(najwieksza.zapis() + &quot; &quot; + najwieksza.wartosc());
+        System.out.println(najmniejsza.zapis() + &quot; &quot; + najmniejsza.wartosc());
+    }
+}</code></pre></div></div></div><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2021_kwiecen/2021_kwiecien.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202021%20%E2%80%94%20kwiecie%C5%84%20%E2%80%94%206.5&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2021-kwiecien.html%236-5" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2021_kwiecen/2021_kwiecien.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

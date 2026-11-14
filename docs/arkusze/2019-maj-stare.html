@@ -37,7 +37,11 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-3">1.1 i 1.3</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2019 — maj, poziom rozszerzony (stara formuła)</span></nav>
-<h1 class="page-title">Matura 2019 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-3">1.1 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def oblicz_C(A):
+<h1 class="page-title">Matura 2019 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2019-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-3">1.1 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (dwie tablice). Dla dodatniej liczby całkowitej <code>n</code> i tablicy liczb całkowitych <code>A[1..n]</code> algorytm oblicza tablicę <code>C[1..n]</code>:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">dla i = 1, 2, ..., n:
+    C[i] = 1
+    dla j = 1, 2, ..., i-1:
+        jeśli A[j] &lt; A[i] oraz C[j] + 1 &gt; C[i]:
+            C[i] = C[j] + 1</code></pre></div></div></div><ul><li>1.1 — podaj zawartość tablicy <code>C</code> dla tablic <code>A</code>: <code>[1,2,3,4]</code>, <code>[1,3,2,5]</code>, <code>[3,5,1,4,6,7,2,10,9,11]</code>, <code>[3,1,4,2,6,5,7]</code> (dla przykładu: <code>[4,2,3,1,5]</code> → <code>[1,1,2,1,3]</code>, <code>[3,3,3,3]</code> → <code>[1,1,1,1]</code>).</li><li>1.3 — podaj przykładową ośmioelementową tablicę <code>A</code>, dla której w tablicy <code>C</code> co najmniej raz pojawi się liczba 6, ale nie pojawi się liczba 7.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def oblicz_C(A):
     n = len(A)
     C = [0] * n
     for i in range(n):
@@ -56,7 +60,62 @@ for A in [[4, 2, 3, 1, 5], [3, 3, 3, 3], [1, 2, 3, 4], [1, 3, 2, 5],
 # 1.3 - C[i] to długość najdłuższego rosnącego podciągu kończącego się na A[i],
 # więc potrzebny jest rosnący podciąg długości 6, ale nie 7
 A = [1, 2, 3, 4, 5, 6, 1, 1]
-print(A, oblicz_C(A), max(oblicz_C(A)))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: [1,2,3,4] → [1,2,3,4], [1,3,2,5] → [1,2,2,3], [3,5,1,4,6,7,2,10,9,11] → [1,2,1,2,3,4,2,5,5,6], [3,1,4,2,6,5,7] → [1,1,2,2,3,3,4]. 1.3: np. [1,2,3,4,5,6,1,1] (rosnący podciąg długości 6, brak rosnącego podciągu długości 7).</p><blockquote class="callout">W kluczu w wierszu trzecim tablicy A wpisano omyłkowo [6,5,1,4,6,7,2,10,9,11] zamiast [3,5,1,4,6,7,2,10,9,11] z arkusza; podana tablica C ([1,2,1,2,3,4,2,5,5,6]) odpowiada tablicy z arkusza.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pot(a, k):
+print(A, oblicz_C(A), max(oblicz_C(A)))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; oblicz_C(const std::vector&lt;int&gt;&amp; A) {
+    int n = A.size();
+    std::vector&lt;int&gt; C(n, 0);
+    for (int i = 0; i &lt; n; i++) {
+        C[i] = 1;
+        for (int j = 0; j &lt; i; j++)
+            if (A[j] &lt; A[i] &amp;&amp; C[j] + 1 &gt; C[i])
+                C[i] = C[j] + 1;
+    }
+    return C;
+}
+
+int main() {
+    // 1.1
+    std::vector&lt;std::vector&lt;int&gt;&gt; tablice = {{4, 2, 3, 1, 5}, {3, 3, 3, 3}, {1, 2, 3, 4}, {1, 3, 2, 5},
+                                             {3, 5, 1, 4, 6, 7, 2, 10, 9, 11}, {3, 1, 4, 2, 6, 5, 7}};
+    for (const auto&amp; A : tablice)
+        std::println(&quot;{} {}&quot;, A, oblicz_C(A));
+
+    // 1.3 - C[i] to długość najdłuższego rosnącego podciągu kończącego się na A[i],
+    // więc potrzebny jest rosnący podciąg długości 6, ale nie 7
+    std::vector&lt;int&gt; A = {1, 2, 3, 4, 5, 6, 1, 1};
+    std::println(&quot;{} {} {}&quot;, A, oblicz_C(A), std::ranges::max(oblicz_C(A)));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.Arrays;
+
+public class Zadanie {
+    static int[] obliczC(int[] A) {
+        int n = A.length;
+        int[] C = new int[n];
+        for (int i = 0; i &lt; n; i++) {
+            C[i] = 1;
+            for (int j = 0; j &lt; i; j++)
+                if (A[j] &lt; A[i] &amp;&amp; C[j] + 1 &gt; C[i])
+                    C[i] = C[j] + 1;
+        }
+        return C;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        int[][] tablice = {{4, 2, 3, 1, 5}, {3, 3, 3, 3}, {1, 2, 3, 4}, {1, 3, 2, 5},
+                           {3, 5, 1, 4, 6, 7, 2, 10, 9, 11}, {3, 1, 4, 2, 6, 5, 7}};
+        for (int[] A : tablice)
+            System.out.println(Arrays.toString(A) + &quot; &quot; + Arrays.toString(obliczC(A)));
+
+        // 1.3 - C[i] to długość najdłuższego rosnącego podciągu kończącego się na A[i],
+        // więc potrzebny jest rosnący podciąg długości 6, ale nie 7
+        int[] A = {1, 2, 3, 4, 5, 6, 1, 1};
+        int[] C = obliczC(A);
+        System.out.println(Arrays.toString(A) + &quot; &quot; + Arrays.toString(C) + &quot; &quot; + Arrays.stream(C).max().getAsInt());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: [1,2,3,4] → [1,2,3,4], [1,3,2,5] → [1,2,2,3], [3,5,1,4,6,7,2,10,9,11] → [1,2,1,2,3,4,2,5,5,6], [3,1,4,2,6,5,7] → [1,1,2,2,3,3,4]. 1.3: np. [1,2,3,4,5,6,1,1] (rosnący podciąg długości 6, brak rosnącego podciągu długości 7).</p><blockquote class="callout"><p>W kluczu w wierszu trzecim tablicy A wpisano omyłkowo [6,5,1,4,6,7,2,10,9,11] zamiast [3,5,1,4,6,7,2,10,9,11] z arkusza; podana tablica C ([1,2,1,2,3,4,2,5,5,6]) odpowiada tablicy z arkusza.</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2019_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202019%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%201.1%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2019-maj-stare.html%231-1-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (test pierwszości). We wszystkich podpunktach wolno używać tylko dodawania, odejmowania, mnożenia, dzielenia, dzielenia całkowitego, reszty z dzielenia oraz własnych funkcji (i funkcji z wcześniejszych podpunktów).</p><ul><li>2.1 — napisz funkcję <code>pot(a, k)</code>, której wynikiem jest <code>a^k mod k</code> dla liczb naturalnych <code>2 ≤ a &lt; k</code>.</li><li>2.2 — test Fermata: liczba całkowita <code>k &gt; 2</code> jest prawdopodobnie pierwsza, jeśli dla każdego całkowitego <code>a</code>, <code>2 ≤ a &lt; k</code>, zachodzi <code>a^k mod k = a</code>. Napisz funkcję <code>testF(k)</code> zwracającą 1, gdy <code>k</code> jest prawdopodobnie pierwsza, i 0 w przeciwnym razie (możesz użyć <code>pot</code>).</li><li>2.3 — liczby Carmichaela to liczby złożone, które są prawdopodobnie pierwsze. Napisz funkcję <code>czyLC(k)</code> (<code>k &gt; 2</code>) zwracającą 1, gdy <code>k</code> jest liczbą Carmichaela, i 0 w przeciwnym razie (możesz użyć <code>testF</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pot(a, k):
     # a^k mod k - po każdym mnożeniu bierzemy resztę, żeby liczby nie rosły
     p = 1
     for i in range(k):
@@ -90,7 +149,96 @@ def czyLC(k):
 
 
 print(pot(3, 7), testF(7), testF(9))
-print([k for k in range(3, 3000) if czyLC(k) == 1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> funkcje <code>pot</code>, <code>testF</code> i <code>czyLC</code>; sprawdzenie: pot(3, 7) = 3, testF(7) = 1, testF(9) = 0, liczby Carmichaela &lt; 3000: 561, 1105, 1729, 2465, 2821.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">mapy = []
+print([k for k in range(3, 3000) if czyLC(k) == 1])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+long long pot(long long a, long long k) {
+    // a^k mod k - po każdym mnożeniu bierzemy resztę, żeby liczby nie rosły
+    long long p = 1;
+    for (long long i = 0; i &lt; k; i++)
+        p = p * a % k;
+    return p;
+}
+
+int testF(long long k) {
+    for (long long a = 2; a &lt; k; a++)
+        if (pot(a, k) != a)
+            return 0;
+    return 1;
+}
+
+int czy_pierwsza(long long k) {
+    if (k &lt; 2)
+        return 0;
+    long long d = 2;
+    while (d * d &lt;= k) {
+        if (k % d == 0)
+            return 0;
+        d++;
+    }
+    return 1;
+}
+
+int czyLC(long long k) {
+    // liczba Carmichaela = złożona, ale przechodzi test Fermata
+    if (testF(k) == 1 &amp;&amp; czy_pierwsza(k) == 0)
+        return 1;
+    return 0;
+}
+
+int main() {
+    std::println(&quot;{} {} {}&quot;, pot(3, 7), testF(7), testF(9));
+    std::vector&lt;int&gt; carmichael;
+    for (int k = 3; k &lt; 3000; k++)
+        if (czyLC(k) == 1)
+            carmichael.push_back(k);
+    std::println(&quot;{}&quot;, carmichael);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+
+public class Zadanie {
+    static long pot(long a, long k) {
+        // a^k mod k - po każdym mnożeniu bierzemy resztę, żeby liczby nie rosły
+        long p = 1;
+        for (long i = 0; i &lt; k; i++)
+            p = p * a % k;
+        return p;
+    }
+
+    static int testF(long k) {
+        for (long a = 2; a &lt; k; a++)
+            if (pot(a, k) != a)
+                return 0;
+        return 1;
+    }
+
+    static int czyPierwsza(long k) {
+        if (k &lt; 2)
+            return 0;
+        long d = 2;
+        while (d * d &lt;= k) {
+            if (k % d == 0)
+                return 0;
+            d++;
+        }
+        return 1;
+    }
+
+    static int czyLC(long k) {
+        // liczba Carmichaela = złożona, ale przechodzi test Fermata
+        if (testF(k) == 1 &amp;&amp; czyPierwsza(k) == 0)
+            return 1;
+        return 0;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(pot(3, 7) + &quot; &quot; + testF(7) + &quot; &quot; + testF(9));
+        var carmichael = new ArrayList&lt;Integer&gt;();
+        for (int k = 3; k &lt; 3000; k++)
+            if (czyLC(k) == 1)
+                carmichael.add(k);
+        System.out.println(carmichael);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> funkcje <code>pot</code>, <code>testF</code> i <code>czyLC</code>; sprawdzenie: pot(3, 7) = 3, testF(7) = 1, testF(9) = 0, liczby Carmichaela &lt; 3000: 561, 1105, 1729, 2465, 2821.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2019_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202019%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2019-maj-stare.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (działki). Plik <code>dzialki.txt</code> zawiera 50 map kwadratowych działek 30×30; każda mapa to 30 wierszy po 30 znaków, a po każdej mapie jest jeden pusty wiersz. Działki numerujemy w kolejności z pliku. Znak <code>.</code> oznacza pole puste, <code>*</code> — pole porośnięte trawą, <code>X</code> — przeszkodę terenową. Odpowiedzi zapisz w pliku <code>wynik4.txt</code>, poprzedzając je numerem zadania (dane przykładowe: <code>przyklad.txt</code>, 5 map).</p><ul><li>4.1 — podaj, ile działek ma co najmniej 70% powierzchni porośniętej trawą (dla przykładu: 1).</li><li>4.2 — są dwie działki, których mapy są identyczne po obróceniu jednej z nich o 180°. Podaj ich numery (dla przykładu: 2 i 3).</li><li>4.3 — w lewym górnym (północno-zachodnim) rogu działki trzeba wytyczyć kwadratowy plac bez przeszkód (tylko pola <code>.</code> i <code>*</code>). Znajdź działkę, na której zmieści się taki plac o największej powierzchni; podaj jej numer i długość boku placu, a jeśli takich działek jest kilka — numery wszystkich (dla przykładu: działka 4, bok 7).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">mapy = []
 with open(&quot;dzialki.txt&quot;) as file:
     wiersze = [line.strip() for line in file if line.strip() != &quot;&quot;]
 for m in range(len(wiersze) // 30):
@@ -142,7 +290,151 @@ print(&quot;4.3&quot;, najwiekszy, end=&quot; &quot;)
 for i in range(len(mapy)):
     if boki[i] == najwiekszy:
         print(i + 1, end=&quot; &quot;)
-print()</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 5; 4.2: działki 14 i 39; 4.3: bok 12, działki 28, 32, 45</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print()</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using Mapa = std::vector&lt;std::string&gt;;
+
+// 4.2 - obrót o 180 stopni: odwracamy kolejność wierszy i każdy wiersz
+Mapa obrot(const Mapa&amp; mapa) {
+    Mapa wynik;
+    for (int i = mapa.size() - 1; i &gt;= 0; i--)
+        wynik.push_back(std::string(mapa[i].rbegin(), mapa[i].rend()));
+    return wynik;
+}
+
+// 4.3
+int najwiekszy_plac(const Mapa&amp; mapa) {
+    int bok = 0;
+    // kwadrat o boku bok + 1 mieści się, gdy w wierszach i kolumnach 0..bok nie ma X
+    while (bok &lt; 30) {
+        bool dobry = true;
+        for (int i = 0; i &lt;= bok; i++)
+            for (int j = 0; j &lt;= bok; j++)
+                if (mapa[i][j] == &#x27;X&#x27;)
+                    dobry = false;
+        if (!dobry)
+            break;
+        bok++;
+    }
+    return bok;
+}
+
+int main() {
+    std::ifstream plik(&quot;dzialki.txt&quot;);
+    std::vector&lt;std::string&gt; wiersze;
+    std::string wiersz;
+    while (plik &gt;&gt; wiersz)  // &gt;&gt; pomija puste wiersze między mapami
+        wiersze.push_back(wiersz);
+
+    std::vector&lt;Mapa&gt; mapy;
+    for (size_t m = 0; m &lt; wiersze.size() / 30; m++)
+        mapy.push_back(Mapa(wiersze.begin() + 30 * m, wiersze.begin() + 30 * m + 30));
+
+    // 4.1
+    int ile = 0;
+    for (const auto&amp; mapa : mapy) {
+        int trawa = 0;
+        for (const auto&amp; w : mapa)
+            trawa += std::ranges::count(w, &#x27;*&#x27;);
+        if (trawa &gt;= 0.7 * 30 * 30)
+            ile++;
+    }
+    std::println(&quot;4.1 {}&quot;, ile);
+
+    // 4.2
+    std::print(&quot;4.2 &quot;);
+    for (size_t i = 0; i &lt; mapy.size(); i++)
+        for (size_t j = i + 1; j &lt; mapy.size(); j++)
+            if (obrot(mapy[i]) == mapy[j])
+                std::print(&quot;{} {} &quot;, i + 1, j + 1);
+    std::println();
+
+    // 4.3
+    std::vector&lt;int&gt; boki;
+    for (const auto&amp; mapa : mapy)
+        boki.push_back(najwiekszy_plac(mapa));
+    int najwiekszy = std::ranges::max(boki);
+    std::print(&quot;4.3 {} &quot;, najwiekszy);
+    for (size_t i = 0; i &lt; mapy.size(); i++)
+        if (boki[i] == najwiekszy)
+            std::print(&quot;{} &quot;, i + 1);
+    std::println();
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    // 4.2 - obrót o 180 stopni: odwracamy kolejność wierszy i każdy wiersz
+    static List&lt;String&gt; obrot(List&lt;String&gt; mapa) {
+        var wynik = new ArrayList&lt;String&gt;();
+        for (int i = mapa.size() - 1; i &gt;= 0; i--)
+            wynik.add(new StringBuilder(mapa.get(i)).reverse().toString());
+        return wynik;
+    }
+
+    // 4.3
+    static int najwiekszyPlac(List&lt;String&gt; mapa) {
+        int bok = 0;
+        // kwadrat o boku bok + 1 mieści się, gdy w wierszach i kolumnach 0..bok nie ma X
+        while (bok &lt; 30) {
+            boolean dobry = true;
+            for (int i = 0; i &lt;= bok; i++)
+                for (int j = 0; j &lt;= bok; j++)
+                    if (mapa.get(i).charAt(j) == &#x27;X&#x27;)
+                        dobry = false;
+            if (!dobry)
+                break;
+            bok++;
+        }
+        return bok;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var wiersze = new ArrayList&lt;String&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;dzialki.txt&quot;)))
+            if (!line.strip().isEmpty())
+                wiersze.add(line.strip());
+
+        var mapy = new ArrayList&lt;List&lt;String&gt;&gt;();
+        for (int m = 0; m &lt; wiersze.size() / 30; m++)
+            mapy.add(wiersze.subList(30 * m, 30 * m + 30));
+
+        // 4.1
+        int ile = 0;
+        for (var mapa : mapy) {
+            int trawa = 0;
+            for (String w : mapa)
+                trawa += (int) w.chars().filter(c -&gt; c == &#x27;*&#x27;).count();
+            if (trawa &gt;= 0.7 * 30 * 30)
+                ile++;
+        }
+        System.out.println(&quot;4.1 &quot; + ile);
+
+        // 4.2
+        System.out.print(&quot;4.2 &quot;);
+        for (int i = 0; i &lt; mapy.size(); i++)
+            for (int j = i + 1; j &lt; mapy.size(); j++)
+                if (obrot(mapy.get(i)).equals(mapy.get(j)))
+                    System.out.print((i + 1) + &quot; &quot; + (j + 1) + &quot; &quot;);
+        System.out.println();
+
+        // 4.3
+        var boki = new ArrayList&lt;Integer&gt;();
+        for (var mapa : mapy)
+            boki.add(najwiekszyPlac(mapa));
+        int najwiekszy = boki.stream().mapToInt(Integer::intValue).max().getAsInt();
+        System.out.print(&quot;4.3 &quot; + najwiekszy + &quot; &quot;);
+        for (int i = 0; i &lt; mapy.size(); i++)
+            if (boki.get(i) == najwiekszy)
+                System.out.print((i + 1) + &quot; &quot;);
+        System.out.println();
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 5; 4.2: działki 14 i 39; 4.3: bok 12, działki 28, 32, 45</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2019_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202019%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.1%2C%204.2%20i%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2019-maj-stare.html%234-1-4-2-i-4-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2019_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

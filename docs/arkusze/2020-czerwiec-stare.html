@@ -37,7 +37,18 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2">4.2</a></li><li><a href="#4-3">4.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2020 — czerwiec (termin główny), poziom rozszerzony (stara formuła)</span></nav>
-<h1 class="page-title">Matura 2020 — czerwiec (termin główny), poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(A):
+<h1 class="page-title">Matura 2020 — czerwiec (termin główny), poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (algorytm). Dane: dodatnia parzysta liczba całkowita <code>n</code> i tablica <code>A[0..n-1]</code>.</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">i ← 0
+dopóki i &lt; n-1 wykonuj
+    (*) jeżeli A[i] &gt; A[i+1]
+            zamień A[i] z A[i+1]
+    i ← i + 2
+i ← 0
+x ← A[i]
+y ← A[i+1]
+dopóki i &lt; n-3 wykonuj
+    (*) jeżeli A[i+2] &lt; x wykonuj x ← A[i+2]
+    (*) jeżeli A[i+3] &gt; y wykonuj y ← A[i+3]
+    i ← i + 2</code></pre></div></div></div><ul><li>1.1 — podaj wartości <code>x</code> i <code>y</code> po wykonaniu algorytmu dla <code>A = [5, 8, 10, 14, 20, 12, 19, 23, 38, 30]</code>.</li><li>1.2 — rozstrzygnij, czy po wykonaniu algorytmu <code>x</code> (podpunkt a) oraz <code>y</code> (podpunkt b) jest najmniejszą czy największą liczbą w tablicy <code>A</code>.</li><li>1.3 — wskaż łączną liczbę porównań w wierszach oznaczonych (*): A. <code>n</code>, B. <code>2n</code>, C. <code>3n/2</code>, D. <code>3n/2 − 2</code>.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(A):
     # zwraca x, y oraz liczbę porównań w wierszach (*)
     A = A[:]
     n = len(A)
@@ -66,7 +77,81 @@
 A = [5, 8, 10, 14, 20, 12, 19, 23, 38, 30]
 x, y, porownania = algorytm(A)
 print(x, y)
-print(porownania, 3 * len(A) // 2 - 2)  # n/2 + 2*(n/2 - 1) = 3n/2 - 2</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: x = 5, y = 38. 1.2: a) A (najmniejsza liczba), b) B (największa liczba). 1.3: D (3n/2 − 2)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def kod_bcd(L):
+print(porownania, 3 * len(A) // 2 - 2)  # n/2 + 2*(n/2 - 1) = 3n/2 - 2</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;tuple&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// zwraca x, y oraz liczbę porównań w wierszach (*)
+std::tuple&lt;int, int, int&gt; algorytm(std::vector&lt;int&gt; A) {  // kopia tablicy, jak A[:] w Pythonie
+    int n = A.size();
+    int porownania = 0;
+    // w każdej parze (A[i], A[i+1]) mniejszy element trafia na lewo
+    int i = 0;
+    while (i &lt; n - 1) {
+        porownania++;
+        if (A[i] &gt; A[i + 1])
+            std::swap(A[i], A[i + 1]);
+        i = i + 2;
+    }
+    // x - minimum z lewych elementów par, y - maksimum z prawych
+    i = 0;
+    int x = A[i];
+    int y = A[i + 1];
+    while (i &lt; n - 3) {
+        porownania += 2;
+        if (A[i + 2] &lt; x)
+            x = A[i + 2];
+        if (A[i + 3] &gt; y)
+            y = A[i + 3];
+        i = i + 2;
+    }
+    return {x, y, porownania};
+}
+
+int main() {
+    std::vector&lt;int&gt; A = {5, 8, 10, 14, 20, 12, 19, 23, 38, 30};
+    auto [x, y, porownania] = algorytm(A);
+    std::println(&quot;{} {}&quot;, x, y);
+    int n = A.size();
+    std::println(&quot;{} {}&quot;, porownania, 3 * n / 2 - 2);  // n/2 + 2*(n/2 - 1) = 3n/2 - 2
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // zwraca x, y oraz liczbę porównań w wierszach (*)
+    static int[] algorytm(int[] tablica) {
+        int[] A = tablica.clone();
+        int n = A.length;
+        int porownania = 0;
+        // w każdej parze (A[i], A[i+1]) mniejszy element trafia na lewo
+        int i = 0;
+        while (i &lt; n - 1) {
+            porownania++;
+            if (A[i] &gt; A[i + 1]) {
+                int t = A[i]; A[i] = A[i + 1]; A[i + 1] = t;
+            }
+            i = i + 2;
+        }
+        // x - minimum z lewych elementów par, y - maksimum z prawych
+        i = 0;
+        int x = A[i];
+        int y = A[i + 1];
+        while (i &lt; n - 3) {
+            porownania += 2;
+            if (A[i + 2] &lt; x)
+                x = A[i + 2];
+            if (A[i + 3] &gt; y)
+                y = A[i + 3];
+            i = i + 2;
+        }
+        return new int[]{x, y, porownania};
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[] A = {5, 8, 10, 14, 20, 12, 19, 23, 38, 30};
+        int[] wynik = algorytm(A);
+        System.out.println(wynik[0] + &quot; &quot; + wynik[1]);
+        System.out.println(wynik[2] + &quot; &quot; + (3 * A.length / 2 - 2));  // n/2 + 2*(n/2 - 1) = 3n/2 - 2
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: x = 5, y = 38. 1.2: a) A (najmniejsza liczba), b) B (największa liczba). 1.3: D (3n/2 − 2)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_czerwiec_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-czerwiec-stare.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (BCD). Kod BCD nieujemnej liczby całkowitej <code>L</code> powstaje przez zamianę każdej cyfry dziesiętnej <code>L</code> na jej czterobitowy kod binarny, np. <code>3768 → 0011 0111 0110 1000</code>.</p><ul><li>2.1 — uzupełnij tabelę: podaj kod BCD i liczbę jedynek dla 259 oraz 15893, a także liczby dziesiętne odpowiadające kodom <code>0010000000010111</code> (5 jedynek) i <code>00100011010101110100</code> (9 jedynek).</li><li>2.2 — napisz algorytm, który dla dodatniej liczby całkowitej <code>L</code> poda <code>w</code> — liczbę jedynek w kodzie BCD liczby <code>L</code>. Wolno używać tylko operacji arytmetycznych (w tym div i mod), odwołań do elementów tablicy, porównań, instrukcji sterujących, przypisań i własnych funkcji.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def kod_bcd(L):
     # każda cyfra dziesiętna -&gt; 4 bity
     kod = &quot;&quot;
     for cyfra in str(L):
@@ -98,7 +183,88 @@ def jedynki_bcd(L):
 for L in [259, 15893]:
     print(L, kod_bcd(L), jedynki_bcd(L))
 for kod in [&quot;0010000000010111&quot;, &quot;00100011010101110100&quot;]:
-    print(z_bcd(kod), kod, kod.count(&quot;1&quot;))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 259 — 001001011001, 5 jedynek; 2017 — 0010000000010111; 23574 — 00100011010101110100; 15893 — 00010101100010010011, 8 jedynek. 2.2: algorytm <code>jedynki_bcd</code> powyżej</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
+    print(z_bcd(kod), kod, kod.count(&quot;1&quot;))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;bitset&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string kod_bcd(long long L) {
+    // każda cyfra dziesiętna -&gt; 4 bity
+    std::string kod = &quot;&quot;;
+    for (char cyfra : std::to_string(L))
+        kod += std::bitset&lt;4&gt;(cyfra - &#x27;0&#x27;).to_string();
+    return kod;
+}
+
+long long z_bcd(const std::string&amp; kod) {
+    std::string liczba = &quot;&quot;;
+    for (size_t i = 0; i &lt; kod.size(); i += 4)
+        liczba += std::to_string(std::stoi(kod.substr(i, 4), nullptr, 2));
+    return std::stoll(liczba);
+}
+
+int jedynki_bcd(long long L) {
+    // 2.2 - tylko operacje arytmetyczne
+    int w = 0;
+    while (L &gt; 0) {
+        long long cyfra = L % 10;
+        while (cyfra &gt; 0) {
+            if (cyfra % 2 == 1)
+                w++;
+            cyfra = cyfra / 2;
+        }
+        L = L / 10;
+    }
+    return w;
+}
+
+int main() {
+    // 2.1
+    for (long long L : {259, 15893})
+        std::println(&quot;{} {} {}&quot;, L, kod_bcd(L), jedynki_bcd(L));
+    for (std::string kod : {&quot;0010000000010111&quot;, &quot;00100011010101110100&quot;})
+        std::println(&quot;{} {} {}&quot;, z_bcd(kod), kod, std::ranges::count(kod, &#x27;1&#x27;));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String kodBcd(long L) {
+        // każda cyfra dziesiętna -&gt; 4 bity
+        var kod = new StringBuilder();
+        for (char cyfra : String.valueOf(L).toCharArray()) {
+            String bity = Integer.toBinaryString(cyfra - &#x27;0&#x27;);
+            kod.append(&quot;0&quot;.repeat(4 - bity.length())).append(bity);
+        }
+        return kod.toString();
+    }
+
+    static long zBcd(String kod) {
+        var liczba = new StringBuilder();
+        for (int i = 0; i &lt; kod.length(); i += 4)
+            liczba.append(Integer.parseInt(kod.substring(i, i + 4), 2));
+        return Long.parseLong(liczba.toString());
+    }
+
+    static int jedynkiBcd(long L) {
+        // 2.2 - tylko operacje arytmetyczne
+        int w = 0;
+        while (L &gt; 0) {
+            long cyfra = L % 10;
+            while (cyfra &gt; 0) {
+                if (cyfra % 2 == 1)
+                    w++;
+                cyfra = cyfra / 2;
+            }
+            L = L / 10;
+        }
+        return w;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        for (long L : new long[]{259, 15893})
+            System.out.println(L + &quot; &quot; + kodBcd(L) + &quot; &quot; + jedynkiBcd(L));
+        for (String kod : new String[]{&quot;0010000000010111&quot;, &quot;00100011010101110100&quot;})
+            System.out.println(zBcd(kod) + &quot; &quot; + kod + &quot; &quot; + kod.chars().filter(c -&gt; c == &#x27;1&#x27;).count());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 259 — 001001011001, 5 jedynek; 2017 — 0010000000010111; 23574 — 00100011010101110100; 15893 — 00010101100010010011, 8 jedynek. 2.2: algorytm <code>jedynki_bcd</code> powyżej</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_czerwiec_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-czerwiec-stare.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (własności liczb). Plik <code>dane.txt</code> zawiera 5000 różnych liczb całkowitych z zakresu [100, 100 000], po jednej w wierszu (dane przykładowe: <code>dane_przyklad.txt</code>, 500 liczb).</p><p>Podaj, ile liczb z pliku jest pierwszych, oraz największą i najmniejszą z nich. Wynik zapisz w pliku <code>wyniki4_1.txt</code>.</p><p>Dla danych przykładowych: 47 liczb pierwszych, największa 97501, najmniejsza 1669.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
     if n &lt; 2:
         return False
     i = 2
@@ -119,7 +285,71 @@ with open(&quot;dane.txt&quot;) as file:
 with open(&quot;wyniki4_1.txt&quot;, &quot;w&quot;) as wynik:
     print(&quot;Liczba liczb pierwszych:&quot;, len(pierwsze), file=wynik)
     print(&quot;Największa liczba:&quot;, max(pierwsze), file=wynik)
-    print(&quot;Najmniejsza liczba:&quot;, min(pierwsze), file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> liczb pierwszych: 501; największa: 99767; najmniejsza: 311</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+    print(&quot;Najmniejsza liczba:&quot;, min(pierwsze), file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+bool czy_pierwsza(long long n) {
+    if (n &lt; 2)
+        return false;
+    long long i = 2;
+    while (i * i &lt;= n) {
+        if (n % i == 0)
+            return false;
+        i++;
+    }
+    return true;
+}
+
+int main() {
+    std::vector&lt;long long&gt; pierwsze;
+    std::ifstream plik(&quot;dane.txt&quot;);
+    long long liczba;
+    while (plik &gt;&gt; liczba)
+        if (czy_pierwsza(liczba))
+            pierwsze.push_back(liczba);
+
+    std::ofstream wynik(&quot;wyniki4_1.txt&quot;);
+    std::println(wynik, &quot;Liczba liczb pierwszych: {}&quot;, pierwsze.size());
+    std::println(wynik, &quot;Największa liczba: {}&quot;, std::ranges::max(pierwsze));
+    std::println(wynik, &quot;Najmniejsza liczba: {}&quot;, std::ranges::min(pierwsze));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Zadanie {
+    static boolean czyPierwsza(long n) {
+        if (n &lt; 2)
+            return false;
+        long i = 2;
+        while (i * i &lt;= n) {
+            if (n % i == 0)
+                return false;
+            i++;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var pierwsze = new ArrayList&lt;Long&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            if (line.isBlank())
+                continue;
+            long liczba = Long.parseLong(line.trim());
+            if (czyPierwsza(liczba))
+                pierwsze.add(liczba);
+        }
+
+        try (var wynik = new PrintWriter(&quot;wyniki4_1.txt&quot;, &quot;UTF-8&quot;)) {
+            wynik.println(&quot;Liczba liczb pierwszych: &quot; + pierwsze.size());
+            wynik.println(&quot;Największa liczba: &quot; + Collections.max(pierwsze));
+            wynik.println(&quot;Najmniejsza liczba: &quot; + Collections.min(pierwsze));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> liczb pierwszych: 501; największa: 99767; najmniejsza: 311</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_czerwiec_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-czerwiec-stare.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2">4.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>dane.txt</code> (5000 różnych liczb z zakresu [100, 100 000]).</p><p>Liczba jest palindromiczna, jeśli jej zapis binarny (zaczynający się od 1) jest palindromem, np. 107 = <code>1101011₂</code>. Liczba jest prawie palindromiczna, jeśli jej zapis binarny poprzedzony jednym lub kilkoma zerami jest palindromem, np. 238 = <code>11101110₂</code> (<code>011101110</code> jest palindromem) albo 476 = <code>111011100₂</code> (<code>00111011100</code>).</p><p>Podaj łączną liczbę liczb palindromicznych i prawie palindromicznych w pliku. Wynik zapisz w pliku <code>wyniki4_2.txt</code> (dla danych przykładowych: 10).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 with open(&quot;dane.txt&quot;) as file:
     for line in file:
         zapis = bin(int(line))[2:]
@@ -129,7 +359,59 @@ with open(&quot;dane.txt&quot;) as file:
             licznik += 1
 
 with open(&quot;wyniki4_2.txt&quot;, &quot;w&quot;) as wynik:
-    print(licznik, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 107</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = {}  # zbiór cyfr liczby (jako napis) -&gt; ile liczb ma dokładnie te cyfry
+    print(licznik, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+// zapis binarny liczby (bez wiodących zer), jak bin(n)[2:] w Pythonie
+std::string binarnie(long long n) {
+    if (n == 0)
+        return &quot;0&quot;;
+    std::string zapis = &quot;&quot;;
+    while (n &gt; 0) {
+        zapis = char(&#x27;0&#x27; + n % 2) + zapis;
+        n /= 2;
+    }
+    return zapis;
+}
+
+int main() {
+    int licznik = 0;
+    std::ifstream plik(&quot;dane.txt&quot;);
+    long long liczba;
+    while (plik &gt;&gt; liczba) {
+        std::string zapis = binarnie(liczba);
+        // dopisanie zer z przodu = usunięcie zer z końca zapisu
+        while (!zapis.empty() &amp;&amp; zapis.back() == &#x27;0&#x27;)
+            zapis.pop_back();
+        if (zapis == std::string(zapis.rbegin(), zapis.rend()))
+            licznik++;
+    }
+
+    std::ofstream wynik(&quot;wyniki4_2.txt&quot;);
+    std::println(wynik, &quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (String line : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            if (line.isBlank())
+                continue;
+            String zapis = Long.toBinaryString(Long.parseLong(line.trim()));
+            // dopisanie zer z przodu = usunięcie zer z końca zapisu
+            zapis = zapis.replaceAll(&quot;0+$&quot;, &quot;&quot;);
+            if (zapis.equals(new StringBuilder(zapis).reverse().toString()))
+                licznik++;
+        }
+
+        try (var wynik = new PrintWriter(&quot;wyniki4_2.txt&quot;, &quot;UTF-8&quot;)) {
+            wynik.println(licznik);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 107</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_czerwiec_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-czerwiec-stare.html%234-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-3">4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane z pliku <code>dane.txt</code> (5000 różnych liczb z zakresu [100, 100 000]).</p><p>Podaj, ile różnych par liczb z pliku ma w zapisie dziesiętnym ten sam zbiór cyfr (liczby mogą mieć różną długość), np. 178 i 817, 1037 i 30071, 10122 i 120. Pary (a, b) i (b, a) liczymy jako jedną. Wynik zapisz w pliku <code>wyniki4_3.txt</code> (dla danych przykładowych: 240).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = {}  # zbiór cyfr liczby (jako napis) -&gt; ile liczb ma dokładnie te cyfry
 with open(&quot;dane.txt&quot;) as file:
     for line in file:
         cyfry = &quot;&quot;.join(sorted(set(line.strip())))
@@ -141,7 +423,60 @@ for k in ile.values():
     pary += k * (k - 1) // 2
 
 with open(&quot;wyniki4_3.txt&quot;, &quot;w&quot;) as wynik:
-    print(pary, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 23515</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(pary, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::map&lt;std::string, long long&gt; ile;  // zbiór cyfr liczby (jako napis) -&gt; ile liczb ma dokładnie te cyfry
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string liczba;
+    while (plik &gt;&gt; liczba) {
+        std::set&lt;char&gt; zbior(liczba.begin(), liczba.end());  // std::set trzyma cyfry posortowane
+        std::string cyfry(zbior.begin(), zbior.end());
+        ile[cyfry]++;
+    }
+
+    // z k liczb o tym samym zbiorze cyfr można utworzyć k*(k-1)/2 par
+    long long pary = 0;
+    for (const auto&amp; [cyfry, k] : ile)
+        pary += k * (k - 1) / 2;
+
+    std::ofstream wynik(&quot;wyniki4_3.txt&quot;);
+    std::println(wynik, &quot;{}&quot;, pary);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.TreeSet;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var ile = new HashMap&lt;String, Long&gt;();  // zbiór cyfr liczby (jako napis) -&gt; ile liczb ma dokładnie te cyfry
+        for (String line : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            if (line.isBlank())
+                continue;
+            var zbior = new TreeSet&lt;Character&gt;();  // TreeSet trzyma cyfry posortowane
+            for (char c : line.strip().toCharArray())
+                zbior.add(c);
+            var cyfry = new StringBuilder();
+            for (char c : zbior)
+                cyfry.append(c);
+            ile.merge(cyfry.toString(), 1L, Long::sum);
+        }
+
+        // z k liczb o tym samym zbiorze cyfr można utworzyć k*(k-1)/2 par
+        long pary = 0;
+        for (long k : ile.values())
+            pary += k * (k - 1) / 2;
+
+        try (var wynik = new PrintWriter(&quot;wyniki4_3.txt&quot;, &quot;UTF-8&quot;)) {
+            wynik.println(pary);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 23515</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_czerwiec_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20czerwiec%20%28termin%20g%C5%82%C3%B3wny%29%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-czerwiec-stare.html%234-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_czerwiec_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

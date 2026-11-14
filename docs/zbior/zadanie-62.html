@@ -37,13 +37,47 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#62-1">62.1</a></li><li><a href="#62-2">62.2</a></li><li><a href="#62-3">62.3</a></li><li><a href="#62-4">62.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 62. Liczby ósemkowe</span></nav>
-<h1 class="page-title">Zadanie 62. Liczby ósemkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="62-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-1">62.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
+<h1 class="page-title">Zadanie 62. Liczby ósemkowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="62-1" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-1">62.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby1.txt</code> zawiera 1000 liczb całkowitych dodatnich zapisanych ósemkowo (co najwyżej sześciocyfrowych), a plik <code>liczby2.txt</code> — 1000 liczb całkowitych dodatnich zapisanych dziesiętnie (co najwyżej sześciocyfrowych); w obu plikach każda liczba jest w osobnym wierszu. Rozwiązania zapisz w pliku <code>wyniki.txt</code>.</p><p>Znajdź w pliku <code>liczby1.txt</code> najmniejszą i największą liczbę. Podaj je w zapisie ósemkowym.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
 
 with open(&quot;liczby1.txt&quot;) as file:
     for line in file:
         liczby.append(int(line, 8))
 
-print(&quot;min:&quot;, oct(min(liczby))[2:], &quot;max:&quot;, oct(max(liczby))[2:])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> najmniejsza: 1002, największa: 777044</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-2">62.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
+print(&quot;min:&quot;, oct(min(liczby))[2:], &quot;max:&quot;, oct(max(liczby))[2:])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; liczby;
+
+    std::ifstream plik(&quot;liczby1.txt&quot;);
+    std::string wiersz;
+    while (plik &gt;&gt; wiersz) {
+        liczby.push_back(std::stoi(wiersz, nullptr, 8));  // zapis ósemkowy
+    }
+
+    // {:o} - zapis ósemkowy, jak oct(...)[2:] w Pythonie
+    std::println(&quot;min: {:o} max: {:o}&quot;, std::ranges::min(liczby), std::ranges::max(liczby));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; liczby = new ArrayList&lt;&gt;();
+
+        for (String wiersz : Files.readAllLines(Path.of(&quot;liczby1.txt&quot;))) {
+            liczby.add(Integer.parseInt(wiersz.trim(), 8));  // zapis ósemkowy
+        }
+
+        System.out.println(&quot;min: &quot; + Integer.toOctalString(Collections.min(liczby))
+                + &quot; max: &quot; + Integer.toOctalString(Collections.max(liczby)));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> najmniejsza: 1002, największa: 777044</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2062.%20Liczby%20%C3%B3semkowe%20%E2%80%94%2062.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-62.html%2362-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-2" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-2">62.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 62.1 (pliki <code>liczby1.txt</code> i <code>liczby2.txt</code>).</p><p>Znajdź najdłuższy niemalejący ciąg liczb stojących w kolejnych wierszach pliku <code>liczby2.txt</code>. Podaj jego pierwszy element i liczbę elementów (można założyć, że taki ciąg jest jeden).</p><p>Przykład: dla danych 23156, 1231, 1345, 1456, 1456, 897 najdłuższy ciąg zaczyna się od 1231 i ma 4 elementy.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
 
 with open(&quot;liczby2.txt&quot;) as file:
     for line in file:
@@ -64,7 +98,72 @@ for i in range(1, len(liczby)):
         najdluzszy = dlugosc
         najlepszy_poczatek = poczatek
 
-print(liczby[najlepszy_poczatek], najdluzszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> pierwszy element: 639, liczba elementów: 6</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-3">62.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">rowne = 0
+print(liczby[najlepszy_poczatek], najdluzszy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; liczby;
+
+    std::ifstream plik(&quot;liczby2.txt&quot;);
+    int x;
+    while (plik &gt;&gt; x) {
+        liczby.push_back(x);
+    }
+
+    int dlugosc = 1;
+    int poczatek = 0;
+    int najdluzszy = 1;
+    int najlepszy_poczatek = 0;
+
+    for (int i = 1; i &lt; (int)liczby.size(); i++) {
+        if (liczby[i] &gt;= liczby[i - 1]) {
+            dlugosc += 1;
+        } else {
+            dlugosc = 1;
+            poczatek = i;
+        }
+        if (dlugosc &gt; najdluzszy) {
+            najdluzszy = dlugosc;
+            najlepszy_poczatek = poczatek;
+        }
+    }
+
+    std::println(&quot;{} {}&quot;, liczby[najlepszy_poczatek], najdluzszy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; liczby = new ArrayList&lt;&gt;();
+
+        for (String wiersz : Files.readAllLines(Path.of(&quot;liczby2.txt&quot;))) {
+            liczby.add(Integer.parseInt(wiersz.trim()));
+        }
+
+        int dlugosc = 1;
+        int poczatek = 0;
+        int najdluzszy = 1;
+        int najlepszyPoczatek = 0;
+
+        for (int i = 1; i &lt; liczby.size(); i++) {
+            if (liczby.get(i) &gt;= liczby.get(i - 1)) {
+                dlugosc += 1;
+            } else {
+                dlugosc = 1;
+                poczatek = i;
+            }
+            if (dlugosc &gt; najdluzszy) {
+                najdluzszy = dlugosc;
+                najlepszyPoczatek = poczatek;
+            }
+        }
+
+        System.out.println(liczby.get(najlepszyPoczatek) + &quot; &quot; + najdluzszy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> pierwszy element: 639, liczba elementów: 6</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2062.%20Liczby%20%C3%B3semkowe%20%E2%80%94%2062.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-62.html%2362-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-3">62.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 62.1.</p><p>Porównaj wartości liczb z wierszy o tych samych numerach w plikach <code>liczby1.txt</code> (ósemkowo) i <code>liczby2.txt</code> (dziesiętnie). Podaj, w ilu wierszach:</p><ul><li>a) obie liczby mają tę samą wartość,</li><li>b) liczba z <code>liczby1.txt</code> jest większa od liczby z <code>liczby2.txt</code>.</li></ul><p>Przykład: dla par (11456₈, 1302), (22666₈, 9654), (546₈, 499) odpowiedź a) to 1 (22666₈ = 9654), a b) to 1 (11456₈ &gt; 1302).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">rowne = 0
 wieksze = 0
 
 with open(&quot;liczby1.txt&quot;) as file1:
@@ -78,7 +177,56 @@ with open(&quot;liczby1.txt&quot;) as file1:
                 wieksze += 1
 
 print(&quot;a)&quot;, rowne)
-print(&quot;b)&quot;, wieksze)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 160, b) 357</p><blockquote class="callout">W pliku <code>wyniki.txt</code> z oficjalnych rozwiązań CKE w podpunkcie a) jest 639, ale algorytm wzorcowy CKE (<code>zadanie 3.cc</code>, taki sam jak powyżej) daje na tych danych 160 – liczba 639 to omyłkowo przepisany wynik zadania 62.2.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-4">62.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dziesietnie = 0
+print(&quot;b)&quot;, wieksze)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int rowne = 0;
+    int wieksze = 0;
+
+    std::ifstream plik1(&quot;liczby1.txt&quot;);
+    std::ifstream plik2(&quot;liczby2.txt&quot;);
+    std::string napis_x, napis_y;
+    // czytamy parami, dopóki oba pliki mają dane (jak zip w Pythonie)
+    while (plik1 &gt;&gt; napis_x &amp;&amp; plik2 &gt;&gt; napis_y) {
+        int x = std::stoi(napis_x, nullptr, 8);  // liczby1.txt - zapis ósemkowy
+        int y = std::stoi(napis_y);              // liczby2.txt - zapis dziesiętny
+        if (x == y) {
+            rowne += 1;
+        } else if (x &gt; y) {
+            wieksze += 1;
+        }
+    }
+
+    std::println(&quot;a) {}&quot;, rowne);
+    std::println(&quot;b) {}&quot;, wieksze);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int rowne = 0;
+        int wieksze = 0;
+
+        List&lt;String&gt; plik1 = Files.readAllLines(Path.of(&quot;liczby1.txt&quot;));
+        List&lt;String&gt; plik2 = Files.readAllLines(Path.of(&quot;liczby2.txt&quot;));
+        // czytamy parami, dopóki oba pliki mają dane (jak zip w Pythonie)
+        for (int i = 0; i &lt; Math.min(plik1.size(), plik2.size()); i++) {
+            int x = Integer.parseInt(plik1.get(i).trim(), 8);  // liczby1.txt - zapis ósemkowy
+            int y = Integer.parseInt(plik2.get(i).trim());     // liczby2.txt - zapis dziesiętny
+            if (x == y) {
+                rowne += 1;
+            } else if (x &gt; y) {
+                wieksze += 1;
+            }
+        }
+
+        System.out.println(&quot;a) &quot; + rowne);
+        System.out.println(&quot;b) &quot; + wieksze);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 160, b) 357</p><blockquote class="callout"><p>W pliku <code>wyniki.txt</code> z oficjalnych rozwiązań CKE w podpunkcie a) jest 639, ale algorytm wzorcowy CKE (<code>zadanie 3.cc</code>, taki sam jak powyżej) daje na tych danych 160 – liczba 639 to omyłkowo przepisany wynik zadania 62.2.</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2062.%20Liczby%20%C3%B3semkowe%20%E2%80%94%2062.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-62.html%2362-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="62-4" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#62-4">62.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 62.1.</p><p>Podaj, ile razy cyfra 6 występuje w zapisie dziesiętnym wszystkich liczb z pliku <code>liczby2.txt</code> oraz ile razy wystąpiłaby, gdyby te same liczby zapisać w systemie ósemkowym.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dziesietnie = 0
 osemkowo = 0
 
 with open(&quot;liczby2.txt&quot;) as file:
@@ -88,7 +236,53 @@ with open(&quot;liczby2.txt&quot;) as file:
         osemkowo += oct(liczba)[2:].count(&quot;6&quot;)
 
 print(&quot;dziesiętnie:&quot;, dziesietnie)
-print(&quot;ósemkowo:&quot;, osemkowo)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> w zapisie dziesiętnym: 411, w zapisie ósemkowym: 625</p><blockquote class="callout">W pliku <code>wyniki.txt</code> CKE wartości są zamienione miejscami (dziesiętnie 625, ósemkowo 411) – program wzorcowy CKE (<code>zadanie 4.cc</code>) wypisuje najpierw wynik ósemkowy, a potem dziesiętny.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;ósemkowo:&quot;, osemkowo)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int dziesietnie = 0;
+    int osemkowo = 0;
+
+    std::ifstream plik(&quot;liczby2.txt&quot;);
+    int liczba;
+    while (plik &gt;&gt; liczba) {
+        dziesietnie += std::ranges::count(std::to_string(liczba), &#x27;6&#x27;);
+        osemkowo += std::ranges::count(std::format(&quot;{:o}&quot;, liczba), &#x27;6&#x27;);
+    }
+
+    std::println(&quot;dziesiętnie: {}&quot;, dziesietnie);
+    std::println(&quot;ósemkowo: {}&quot;, osemkowo);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static int ileSzostek(String s) {
+        int wynik = 0;
+        for (char c : s.toCharArray()) {
+            if (c == &#x27;6&#x27;) {
+                wynik++;
+            }
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int dziesietnie = 0;
+        int osemkowo = 0;
+
+        for (String wiersz : Files.readAllLines(Path.of(&quot;liczby2.txt&quot;))) {
+            int liczba = Integer.parseInt(wiersz.trim());
+            dziesietnie += ileSzostek(String.valueOf(liczba));
+            osemkowo += ileSzostek(Integer.toOctalString(liczba));
+        }
+
+        System.out.println(&quot;dziesiętnie: &quot; + dziesietnie);
+        System.out.println(&quot;ósemkowo: &quot; + osemkowo);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> w zapisie dziesiętnym: 411, w zapisie ósemkowym: 625</p><blockquote class="callout"><p>W pliku <code>wyniki.txt</code> CKE wartości są zamienione miejscami (dziesiętnie 625, ósemkowo 411) – program wzorcowy CKE (<code>zadanie 4.cc</code>) wypisuje najpierw wynik ósemkowy, a potem dziesiętny.</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2062.%20Liczby%20%C3%B3semkowe%20%E2%80%94%2062.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-62.html%2362-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/62.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

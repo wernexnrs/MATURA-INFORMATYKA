@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></li><li><a href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura próbna 2022 — grudzień (formuła 2023)</span></nav>
-<h1 class="page-title">Matura próbna 2022 — grudzień (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;mecz.txt&quot;) as file:
+<h1 class="page-title">Matura próbna 2022 — grudzień (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2022-grudzien-probna-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Kosmiczny mecz):</strong> Plik <code>mecz.txt</code> zawiera jeden wiersz – napis z 10 000 znaków <code>A</code> i <code>B</code> opisujący wyniki kolejnych rozgrywek meczu (znak oznacza drużynę, która wygrała daną rozgrywkę i zdobyła punkt). Odpowiedzi zapisz w pliku <code>wyniki1.txt</code>, poprzedzając każdą numerem zadania (plik <code>mecz_przyklad.txt</code> służy do testów).</p><ul><li><strong>1.1</strong> — Policz, ile razy rozgrywkę wygrała inna drużyna niż poprzednią (dwa kolejne znaki są różne). Przykład: dla <code>ABBBABA</code> odpowiedź to 4; dla pliku przykładowego – 1798.</li><li><strong>1.2</strong> — Pierwszy set trwa do pierwszej rozgrywki, po której jedna z drużyn ma co najmniej 1000 punktów, a przeciwna co najmniej 3 punkty mniej (np. 1000:500, 997:1000, 1500:1497 kończą seta; 999:1000 czy 1500:1500 nie). Podaj zwycięzcę pierwszego seta i wynik w tym momencie (punkty A : punkty B). Dla pliku przykładowego: <code>A 1000:5</code>.</li><li><strong>1.3</strong> — Dobra passa to co najmniej 10 wygranych z rzędu jednej drużyny (maksymalny ciąg – zaczyna się na początku meczu lub po przegranej i kończy z końcem meczu lub przed przegraną). Podaj łączną liczbę dobrych pass obu drużyn oraz długość najdłuższej passy i drużynę, która ją osiągnęła (jest jedna taka). Przykład: w <code>BBBBBBBBBBAABBAAAAAAAAAAABA</code> są 2 dobre passy, najdłuższa ma długość 11 (drużyna A).</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;mecz.txt&quot;) as file:
     mecz = file.readline().strip()
 
 # 1.1
@@ -78,7 +78,110 @@ for i in range(1, len(mecz) + 1):
                 najdluzsza = dlugosc
                 druzyna = mecz[i - 1]
         dlugosc = 1
-print(&quot;1.3&quot;, dobre_passy, druzyna, najdluzsza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 5030; 1.2: B 1001:1004; 1.3: 6 B 15</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">strzalki = []
+print(&quot;1.3&quot;, dobre_passy, druzyna, najdluzsza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;mecz.txt&quot;);
+    std::string mecz;
+    plik &gt;&gt; mecz;
+
+    // 1.1
+    int zmiany = 0;
+    for (size_t i = 1; i &lt; mecz.size(); i++)
+        if (mecz[i] != mecz[i - 1]) zmiany++;
+    std::println(&quot;1.1 {}&quot;, zmiany);
+
+    // 1.2
+    int punkty_a = 0;
+    int punkty_b = 0;
+    for (char znak : mecz) {
+        if (znak == &#x27;A&#x27;)
+            punkty_a++;
+        else
+            punkty_b++;
+        if ((punkty_a &gt;= 1000 || punkty_b &gt;= 1000) &amp;&amp; std::abs(punkty_a - punkty_b) &gt;= 3) break;
+    }
+    if (punkty_a &gt; punkty_b)
+        std::println(&quot;1.2 A {}:{}&quot;, punkty_a, punkty_b);
+    else
+        std::println(&quot;1.2 B {}:{}&quot;, punkty_a, punkty_b);
+
+    // 1.3 - dzielimy mecz na maksymalne bloki jednakowych znaków
+    int dobre_passy = 0;
+    int najdluzsza = 0;
+    char druzyna = &#x27; &#x27;;
+    int dlugosc = 1;
+    for (size_t i = 1; i &lt;= mecz.size(); i++) {
+        if (i &lt; mecz.size() &amp;&amp; mecz[i] == mecz[i - 1]) {
+            dlugosc++;
+        } else {
+            // koniec bloku mecz[i - dlugosc .. i - 1]
+            if (dlugosc &gt;= 10) {
+                dobre_passy++;
+                if (dlugosc &gt; najdluzsza) {
+                    najdluzsza = dlugosc;
+                    druzyna = mecz[i - 1];
+                }
+            }
+            dlugosc = 1;
+        }
+    }
+    std::println(&quot;1.3 {} {} {}&quot;, dobre_passy, druzyna, najdluzsza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String mecz = Files.readAllLines(Path.of(&quot;mecz.txt&quot;)).get(0).strip();
+
+        // 1.1
+        int zmiany = 0;
+        for (int i = 1; i &lt; mecz.length(); i++)
+            if (mecz.charAt(i) != mecz.charAt(i - 1)) zmiany++;
+        System.out.println(&quot;1.1 &quot; + zmiany);
+
+        // 1.2
+        int punktyA = 0;
+        int punktyB = 0;
+        for (char znak : mecz.toCharArray()) {
+            if (znak == &#x27;A&#x27;)
+                punktyA++;
+            else
+                punktyB++;
+            if ((punktyA &gt;= 1000 || punktyB &gt;= 1000) &amp;&amp; Math.abs(punktyA - punktyB) &gt;= 3) break;
+        }
+        if (punktyA &gt; punktyB)
+            System.out.println(&quot;1.2 A &quot; + punktyA + &quot;:&quot; + punktyB);
+        else
+            System.out.println(&quot;1.2 B &quot; + punktyA + &quot;:&quot; + punktyB);
+
+        // 1.3 - dzielimy mecz na maksymalne bloki jednakowych znaków
+        int dobrePassy = 0;
+        int najdluzsza = 0;
+        char druzyna = &#x27; &#x27;;
+        int dlugosc = 1;
+        for (int i = 1; i &lt;= mecz.length(); i++) {
+            if (i &lt; mecz.length() &amp;&amp; mecz.charAt(i) == mecz.charAt(i - 1)) {
+                dlugosc++;
+            } else {
+                // koniec bloku mecz[i - dlugosc .. i - 1]
+                if (dlugosc &gt;= 10) {
+                    dobrePassy++;
+                    if (dlugosc &gt; najdluzsza) {
+                        najdluzsza = dlugosc;
+                        druzyna = mecz.charAt(i - 1);
+                    }
+                }
+                dlugosc = 1;
+            }
+        }
+        System.out.println(&quot;1.3 &quot; + dobrePassy + &quot; &quot; + druzyna + &quot; &quot; + najdluzsza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 5030; 1.2: B 1001:1004; 1.3: 6 B 15</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202022%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-grudzien-pr.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Strzałki):</strong> Dla dodatniego N rysujemy punkty o numerach 1..N. Funkcja <code>strzałka(x, y)</code> rysuje strzałkę z punktu x do y, a rekurencyjna funkcja <code>rysuj(x)</code> działa tak:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">funkcja rysuj(x)
+  jeżeli 2*x ≤ N:     strzałka(x, 2*x);     rysuj(2*x)
+  jeżeli 2*x+1 ≤ N:   strzałka(x, 2*x+1);   rysuj(2*x+1)</code></pre></div></div></div><ul><li><strong>2.1</strong> — Dla N = 10 narysuj punkty 1..10 i strzałki powstałe po wywołaniu <code>rysuj(1)</code>.</li><li><strong>2.2</strong> — Podaj, ile strzałek zostanie narysowanych po wywołaniu <code>rysuj(1)</code>: a) dla N = 20, b) dla dowolnego N.</li><li><strong>2.3</strong> — Dla N = 2047 podaj, po ilu strzałkach (zgodnie z ich zwrotem) trzeba przejść z punktu 1 do punktu N (dla N = 5 z punktu 1 do 5 – po dwóch).</li><li><strong>2.4</strong> — Plik <code>pary.txt</code> zawiera 1000 par liczb całkowitych z zakresu [1, 100 000] (w wierszu, oddzielone spacją; druga liczba jest większa od pierwszej). Napisz program, który wypisze te pary (x, y), dla których z punktu x da się dojść do punktu y po jednej lub kilku strzałkach zgodnie z ich zwrotami (np. z 1 do 4 – tak, z 3 do 5 – nie). Wynik zapisz w <code>wyniki2.txt</code>.</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">strzalki = []
 
 
 def rysuj(x, N):
@@ -120,7 +223,110 @@ with open(&quot;pary.txt&quot;) as file:
     for line in file:
         x, y = map(int, line.split())
         if osiagalny(x, y):
-            print(x, y)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: strzałki 1→2, 1→3, 2→4, 2→5, 3→6, 3→7, 4→8, 4→9, 5→10; 2.2: a) 19, b) N − 1; 2.3: 10; 2.4: 47 3044, 7650 61204, 1 245, 7 63669, 9125 18250, 5 43246</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-3-3-i-3-4" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 3.1 - sito Eratostenesa (luki: N (wystarczy pierwiastek z N), PRAWDA, i * i, FAŁSZ, j + i)
+            print(x, y)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::pair&lt;int, int&gt;&gt; strzalki;
+
+void rysuj(int x, int N) {
+    if (2 * x &lt;= N) {
+        strzalki.push_back({x, 2 * x});
+        rysuj(2 * x, N);
+    }
+    if (2 * x + 1 &lt;= N) {
+        strzalki.push_back({x, 2 * x + 1});
+        rysuj(2 * x + 1, N);
+    }
+}
+
+// 2.4 - z x da się dojść do y, gdy dzieląc y przez 2 (całkowicie) dojdziemy do x
+bool osiagalny(long long x, long long y) {
+    while (y &gt; x) y /= 2;
+    return x == y;
+}
+
+int main() {
+    // 2.1 - lista strzałek dla N = 10 (punkt x łączy się z 2x i 2x+1 - drzewo binarne)
+    rysuj(1, 10);
+    std::println(&quot;2.1 {}&quot;, strzalki);  // format [(1, 2), (2, 4), ...] jak w Pythonie
+
+    // 2.2 - każdy punkt poza 1 ma dokładnie jedną strzałkę wchodzącą (od x // 2)
+    strzalki.clear();
+    rysuj(1, 20);
+    std::println(&quot;2.2 {} ogólnie N - 1&quot;, strzalki.size());
+
+    // 2.3 - idąc od N do 1 przechodzimy do N // 2
+    int N = 2047;
+    int kroki = 0;
+    while (N &gt; 1) {
+        N /= 2;
+        kroki++;
+    }
+    std::println(&quot;2.3 {}&quot;, kroki);
+
+    std::println(&quot;2.4&quot;);
+    std::ifstream plik(&quot;pary.txt&quot;);
+    long long x, y;
+    while (plik &gt;&gt; x &gt;&gt; y)
+        if (osiagalny(x, y)) std::println(&quot;{} {}&quot;, x, y);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static List&lt;String&gt; strzalki = new ArrayList&lt;&gt;();  // strzałki zapisane jako &quot;(x, y)&quot;
+
+    static void rysuj(int x, int N) {
+        if (2 * x &lt;= N) {
+            strzalki.add(&quot;(&quot; + x + &quot;, &quot; + 2 * x + &quot;)&quot;);
+            rysuj(2 * x, N);
+        }
+        if (2 * x + 1 &lt;= N) {
+            strzalki.add(&quot;(&quot; + x + &quot;, &quot; + (2 * x + 1) + &quot;)&quot;);
+            rysuj(2 * x + 1, N);
+        }
+    }
+
+    // 2.4 - z x da się dojść do y, gdy dzieląc y przez 2 (całkowicie) dojdziemy do x
+    static boolean osiagalny(long x, long y) {
+        while (y &gt; x) y /= 2;
+        return x == y;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1 - lista strzałek dla N = 10 (punkt x łączy się z 2x i 2x+1 - drzewo binarne)
+        rysuj(1, 10);
+        System.out.println(&quot;2.1 &quot; + strzalki);  // format [(1, 2), (2, 4), ...] jak w Pythonie
+
+        // 2.2 - każdy punkt poza 1 ma dokładnie jedną strzałkę wchodzącą (od x // 2)
+        strzalki.clear();
+        rysuj(1, 20);
+        System.out.println(&quot;2.2 &quot; + strzalki.size() + &quot; ogólnie N - 1&quot;);
+
+        // 2.3 - idąc od N do 1 przechodzimy do N // 2
+        int N = 2047;
+        int kroki = 0;
+        while (N &gt; 1) {
+            N /= 2;
+            kroki++;
+        }
+        System.out.println(&quot;2.3 &quot; + kroki);
+
+        System.out.println(&quot;2.4&quot;);
+        for (var linia : Files.readAllLines(Path.of(&quot;pary.txt&quot;))) {
+            if (linia.isBlank()) continue;
+            var xy = linia.trim().split(&quot;\\s+&quot;);
+            long x = Long.parseLong(xy[0]), y = Long.parseLong(xy[1]);
+            if (osiagalny(x, y)) System.out.println(x + &quot; &quot; + y);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: strzałki 1→2, 1→3, 2→4, 2→5, 3→6, 3→7, 4→8, 4→9, 5→10; 2.2: a) 19, b) N − 1; 2.3: 10; 2.4: 47 3044, 7650 61204, 1 245, 7 63669, 9125 18250, 5 43246</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202022%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%2C%202.2%2C%202.3%20i%202.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-grudzien-pr.html%232-1-2-2-2-3-i-2-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-3-3-i-3-4" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Liczby):</strong></p><ul><li><strong>3.1</strong> — Uzupełnij luki w algorytmie sita Eratostenesa, który dla N &gt; 1 wypełnia tablicę logiczną <code>SITO[1..N]</code> (PRAWDA dla liczb pierwszych, FAŁSZ dla złożonych):</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">SITO[1] ← FAŁSZ
+dla i = 2, ..., N:  SITO[i] ← PRAWDA
+dla i = 2, 3, ..., ____
+  jeżeli SITO[i] = ____
+    j ← ____
+    dopóki j ≤ N:  SITO[j] ← ____;  j ← ____</code></pre></div></div></div><p>Plik <code>liczby.txt</code> zawiera 100 liczb parzystych z zakresu [4, 1 000 000], po jednej w wierszu. Odpowiedzi do 3.2–3.4 zapisz w <code>wyniki3.txt</code> z numerem zadania (do testów: <code>liczby_przyklad.txt</code>).</p><ul><li><strong>3.2</strong> — Podaj, dla ilu liczb x z pliku liczba x − 1 jest pierwsza.</li><li><strong>3.3</strong> — Dla każdej liczby wyznacz, na ile sposobów da się ją zapisać jako sumę dwóch liczb pierwszych (rozkłady różniące się tylko kolejnością składników są takie same, np. 22 = 19 + 3 = 17 + 5 = 11 + 11). Podaj liczbę o największej liczbie rozkładów wraz z tą liczbą oraz liczbę o najmniejszej liczbie rozkładów wraz z tą liczbą. Dla pliku przykładowego: <code>996 37 4 1</code>.</li><li><strong>3.4</strong> — Zapisz każdą liczbę w systemie szesnastkowym i dla każdej cyfry 0–F podaj, ile razy łącznie występuje we wszystkich tych zapisach (w formacie <code>cyfra:liczba</code>, np. <code>0:2</code>, <code>1:3</code>, …).</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 3.1 - sito Eratostenesa (luki: N (wystarczy pierwiastek z N), PRAWDA, i * i, FAŁSZ, j + i)
 def sito(N):
     SITO = [True] * (N + 1)
     SITO[0] = False
@@ -173,7 +379,129 @@ for x in liczby:
         x //= 16
 print(&quot;3.4&quot;)
 for i in range(16):
-    print(cyfry[i] + &quot;:&quot; + str(ile_cyfr[i]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: luki kolejno: N (wystarczy √N), PRAWDA, i * i, FAŁSZ, j + i; 3.2: 21; 3.3: 910620 9932 18676 195; 3.4: 0:32, 1:26, 2:37, 3:31, 4:43, 5:25, 6:28, 7:23, 8:38, 9:28, A:45, B:33, C:29, D:23, E:44, F:10</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2022_grudzien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(cyfry[i] + &quot;:&quot; + str(ile_cyfr[i]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// 3.1 - sito Eratostenesa (luki: N (wystarczy pierwiastek z N), PRAWDA, i * i, FAŁSZ, j + i)
+std::vector&lt;bool&gt; sito(int N) {
+    std::vector&lt;bool&gt; SITO(N + 1, true);
+    SITO[0] = false;
+    SITO[1] = false;
+    for (long long i = 2; i * i &lt;= N; i++) {
+        if (SITO[i]) {
+            for (long long j = i * i; j &lt;= N; j += i) SITO[j] = false;
+        }
+    }
+    return SITO;
+}
+
+int main() {
+    std::vector&lt;int&gt; liczby;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    int x;
+    while (plik &gt;&gt; x) liczby.push_back(x);
+
+    std::vector&lt;bool&gt; SITO = sito(1000000);
+
+    // 3.2
+    int ile = 0;
+    for (int x : liczby)
+        if (SITO[x - 1]) ile++;
+    std::println(&quot;3.2 {}&quot;, ile);
+
+    // 3.3 - rozkład x = p + (x - p), p &lt;= x - p
+    int najwiecej = -1, liczba_max = 0;
+    int najmniej = 1000000000, liczba_min = 0;
+    for (int x : liczby) {
+        int rozklady = 0;
+        for (int p = 2; p &lt;= x / 2; p++)
+            if (SITO[p] &amp;&amp; SITO[x - p]) rozklady++;
+        if (rozklady &gt; najwiecej) {
+            najwiecej = rozklady;
+            liczba_max = x;
+        }
+        if (rozklady &lt; najmniej) {
+            najmniej = rozklady;
+            liczba_min = x;
+        }
+    }
+    std::println(&quot;3.3 {} {} {} {}&quot;, liczba_max, najwiecej, liczba_min, najmniej);
+
+    // 3.4
+    std::string cyfry = &quot;0123456789ABCDEF&quot;;
+    std::vector&lt;int&gt; ile_cyfr(16, 0);
+    for (int x : liczby) {
+        while (x &gt; 0) {
+            ile_cyfr[x % 16]++;
+            x /= 16;
+        }
+    }
+    std::println(&quot;3.4&quot;);
+    for (int i = 0; i &lt; 16; i++) std::println(&quot;{}:{}&quot;, cyfry[i], ile_cyfr[i]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    // 3.1 - sito Eratostenesa (luki: N (wystarczy pierwiastek z N), PRAWDA, i * i, FAŁSZ, j + i)
+    static boolean[] sito(int N) {
+        boolean[] SITO = new boolean[N + 1];
+        Arrays.fill(SITO, true);
+        SITO[0] = false;
+        SITO[1] = false;
+        for (long i = 2; i * i &lt;= N; i++) {
+            if (SITO[(int) i]) {
+                for (long j = i * i; j &lt;= N; j += i) SITO[(int) j] = false;
+            }
+        }
+        return SITO;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;Integer&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;)))
+            if (!linia.isBlank()) liczby.add(Integer.parseInt(linia.trim()));
+
+        boolean[] SITO = sito(1000000);
+
+        // 3.2
+        int ile = 0;
+        for (int x : liczby)
+            if (SITO[x - 1]) ile++;
+        System.out.println(&quot;3.2 &quot; + ile);
+
+        // 3.3 - rozkład x = p + (x - p), p &lt;= x - p
+        int najwiecej = -1, liczbaMax = 0;
+        int najmniej = 1000000000, liczbaMin = 0;
+        for (int x : liczby) {
+            int rozklady = 0;
+            for (int p = 2; p &lt;= x / 2; p++)
+                if (SITO[p] &amp;&amp; SITO[x - p]) rozklady++;
+            if (rozklady &gt; najwiecej) {
+                najwiecej = rozklady;
+                liczbaMax = x;
+            }
+            if (rozklady &lt; najmniej) {
+                najmniej = rozklady;
+                liczbaMin = x;
+            }
+        }
+        System.out.println(&quot;3.3 &quot; + liczbaMax + &quot; &quot; + najwiecej + &quot; &quot; + liczbaMin + &quot; &quot; + najmniej);
+
+        // 3.4
+        String cyfry = &quot;0123456789ABCDEF&quot;;
+        int[] ileCyfr = new int[16];
+        for (int x : liczby) {
+            while (x &gt; 0) {
+                ileCyfr[x % 16]++;
+                x /= 16;
+            }
+        }
+        System.out.println(&quot;3.4&quot;);
+        for (int i = 0; i &lt; 16; i++) System.out.println(cyfry.charAt(i) + &quot;:&quot; + ileCyfr[i]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: luki kolejno: N (wystarczy √N), PRAWDA, i * i, FAŁSZ, j + i; 3.2: 21; 3.3: 910620 9932 18676 195; 3.4: 0:32, 1:26, 2:37, 3:31, 4:43, 5:25, 6:28, 7:23, 8:38, 9:28, A:45, B:33, C:29, D:23, E:44, F:10</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_grudzien_pr.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%20pr%C3%B3bna%202022%20%E2%80%94%20grudzie%C5%84%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1%2C%203.2%2C%203.3%20i%203.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-grudzien-pr.html%233-1-3-2-3-3-i-3-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2022_grudzien_pr.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

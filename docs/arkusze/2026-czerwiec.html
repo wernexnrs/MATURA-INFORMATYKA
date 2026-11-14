@@ -37,7 +37,15 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#3-1">3.1</a></li><li><a href="#3-2">3.2</a></li><li><a href="#3-3">3.3</a></li><li><a href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></li><li><a href="#5">5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2026 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2023)</span></nav>
-<h1 class="page-title">Matura 2026 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfr(tekst, k):
+<h1 class="page-title">Matura 2026 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Algorytm Szyfr szyfruje tekst jawny T[1..n] (n znaków) kluczem k (dodatnia liczba całkowita) i zapisuje szyfrogram w tablicy S[1..n]:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">a ← n div k
+c ← n − a
+dla i = 1, 2, ..., n wykonuj
+    jeżeli i mod k = 0
+        b ← i div k
+        S[n − a + b] ← T[i]
+    w przeciwnym razie
+        S[c] ← T[i]
+        c ← c − 1</code></pre></div></div></div><ul><li>1.1 — Podaj szyfrogram dla tekstu <code>defragmentacja</code> z kluczem k = 3 oraz dla tekstu <code>tropikalny</code> z kluczem k = 5.</li><li>1.2 — Podaj wartość klucza k, dla której szyfrogram jest zawsze identyczny z tekstem jawnym.</li><li>1.3 — Podaj wartość klucza k, dla której (przy każdym n) szyfrogram jest zawsze tekstem jawnym zapisanym od końca (np. <code>serwer</code> → <code>rewres</code>); wartość może zależeć od n.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfr(tekst, k):
     # tablice T i S indeksowane od 1, jak w treści (pozycja 0 nieużywana)
     n = len(tekst)
     T = [&quot;&quot;] + list(tekst)
@@ -63,7 +71,73 @@ print(szyfr(&quot;serwer&quot;, 1))
 
 # 1.3 - dla k &gt; n (np. k = n + 1) warunek i mod k = 0 nigdy nie zachodzi,
 # więc znaki są wpisywane od końca
-print(szyfr(&quot;serwer&quot;, len(&quot;serwer&quot;) + 1))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: defragmentacja, k = 3 → ajatemaredfgnc; tropikalny, k = 5 → nlakportiy. 1.2: k = 1. 1.3: k = n + 1 (dowolne k &gt; n).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najwieksze_k(T):
+print(szyfr(&quot;serwer&quot;, len(&quot;serwer&quot;) + 1))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+std::string szyfr(const std::string&amp; tekst, int k) {
+    // tablice T i S indeksowane od 1, jak w treści (pozycja 0 nieużywana)
+    int n = tekst.size();
+    std::string T = &quot; &quot; + tekst;
+    std::string S(n + 1, &#x27; &#x27;);
+    int a = n / k;
+    int c = n - a;
+    for (int i = 1; i &lt;= n; i++) {
+        if (i % k == 0) {
+            int b = i / k;
+            S[n - a + b] = T[i];
+        } else {
+            S[c] = T[i];
+            c = c - 1;
+        }
+    }
+    return S.substr(1);
+}
+
+int main() {
+    // 1.1
+    std::println(&quot;{}&quot;, szyfr(&quot;defragmentacja&quot;, 3));
+    std::println(&quot;{}&quot;, szyfr(&quot;tropikalny&quot;, 5));
+
+    // 1.2 - dla k = 1 każdy znak trafia na swoje miejsce
+    std::println(&quot;{}&quot;, szyfr(&quot;serwer&quot;, 1));
+
+    // 1.3 - dla k &gt; n (np. k = n + 1) warunek i mod k = 0 nigdy nie zachodzi,
+    // więc znaki są wpisywane od końca
+    std::println(&quot;{}&quot;, szyfr(&quot;serwer&quot;, std::string(&quot;serwer&quot;).size() + 1));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String szyfr(String tekst, int k) {
+        // tablice T i S indeksowane od 1, jak w treści (pozycja 0 nieużywana)
+        int n = tekst.length();
+        char[] T = (&quot; &quot; + tekst).toCharArray();
+        char[] S = new char[n + 1];
+        int a = n / k;
+        int c = n - a;
+        for (int i = 1; i &lt;= n; i++) {
+            if (i % k == 0) {
+                int b = i / k;
+                S[n - a + b] = T[i];
+            } else {
+                S[c] = T[i];
+                c = c - 1;
+            }
+        }
+        return new String(S, 1, n);
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        System.out.println(szyfr(&quot;defragmentacja&quot;, 3));
+        System.out.println(szyfr(&quot;tropikalny&quot;, 5));
+
+        // 1.2 - dla k = 1 każdy znak trafia na swoje miejsce
+        System.out.println(szyfr(&quot;serwer&quot;, 1));
+
+        // 1.3 - dla k &gt; n (np. k = n + 1) warunek i mod k = 0 nigdy nie zachodzi,
+        // więc znaki są wpisywane od końca
+        System.out.println(szyfr(&quot;serwer&quot;, &quot;serwer&quot;.length() + 1));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: defragmentacja, k = 3 → ajatemaredfgnc; tropikalny, k = 5 → nlakportiy. 1.2: k = 1. 1.3: k = n + 1 (dowolne k &gt; n).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest liczba n &gt; 1 i tablica liczb całkowitych T[1..n]. Dla 1 ≤ k &lt; n tablica T jest k-podobna, gdy T[1..k] = T[n − k + 1..n] (początkowe k elementów jest równe końcowym k elementom); ponadto każda tablica jest 0-podobna. Przykład: [1,2,1,1,2,1,1] jest 0-, 1- i 4-podobna; [1,2,2] jest tylko 0-podobna; [2,2,2] jest 0-, 1- i 2-podobna (ale nie 3-podobna, bo k &lt; n).</p><ul><li>2.1 — Dla tablic [1,2,3,4] oraz [3,5,3,5,3,5,3,5,3,5] podaj największe k, dla którego tablica jest k-podobna.</li><li>2.2 — Zapisz (w pseudokodzie lub wybranym języku) algorytm, który dla n &gt; 1 i tablicy T[1..n] wyznacza największe k, dla którego T jest k-podobna.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najwieksze_k(T):
     # T indeksowana od 0; sprawdzamy kolejne k od n - 1 w dół
     n = len(T)
     k = n - 1
@@ -80,7 +154,58 @@ print(szyfr(&quot;serwer&quot;, len(&quot;serwer&quot;) + 1))</code></pre></div>
 
 print(najwieksze_k([1, 2, 1, 1, 2, 1, 1]))  # przykład z treści: 4
 print(najwieksze_k([1, 2, 3, 4]))
-print(najwieksze_k([3, 5, 3, 5, 3, 5, 3, 5, 3, 5]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: [1,2,3,4] → 0, [3,5,3,5,3,5,3,5,3,5] → 8. 2.2: funkcja <code>najwieksze_k</code> powyżej.</p><blockquote class="callout">W zasadach oceniania w pierwszym wierszu tabeli do 2.1 wpisano tablicę [1,2,3,2,4] zamiast [1,2,3,4] z arkusza — wynik (0) jest dla obu taki sam.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1">3.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
+print(najwieksze_k([3, 5, 3, 5, 3, 5, 3, 5, 3, 5]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int najwieksze_k(const std::vector&lt;int&gt;&amp; T) {
+    // T indeksowana od 0; sprawdzamy kolejne k od n - 1 w dół
+    int n = T.size();
+    int k = n - 1;
+    while (k &gt; 0) {
+        bool jest = true;
+        for (int i = 0; i &lt; k; i++) {
+            if (T[i] != T[n - k + i]) {
+                jest = false;
+            }
+        }
+        if (jest) {
+            return k;
+        }
+        k = k - 1;
+    }
+    return 0;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, najwieksze_k({1, 2, 1, 1, 2, 1, 1}));  // przykład z treści: 4
+    std::println(&quot;{}&quot;, najwieksze_k({1, 2, 3, 4}));
+    std::println(&quot;{}&quot;, najwieksze_k({3, 5, 3, 5, 3, 5, 3, 5, 3, 5}));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int najwiekszeK(int[] T) {
+        // T indeksowana od 0; sprawdzamy kolejne k od n - 1 w dół
+        int n = T.length;
+        int k = n - 1;
+        while (k &gt; 0) {
+            boolean jest = true;
+            for (int i = 0; i &lt; k; i++) {
+                if (T[i] != T[n - k + i]) {
+                    jest = false;
+                }
+            }
+            if (jest) {
+                return k;
+            }
+            k = k - 1;
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(najwiekszeK(new int[]{1, 2, 1, 1, 2, 1, 1}));  // przykład z treści: 4
+        System.out.println(najwiekszeK(new int[]{1, 2, 3, 4}));
+        System.out.println(najwiekszeK(new int[]{3, 5, 3, 5, 3, 5, 3, 5, 3, 5}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: [1,2,3,4] → 0, [3,5,3,5,3,5,3,5,3,5] → 8. 2.2: funkcja <code>najwieksze_k</code> powyżej.</p><blockquote class="callout"><p>W zasadach oceniania w pierwszym wierszu tabeli do 2.1 wpisano tablicę [1,2,3,2,4] zamiast [1,2,3,4] z arkusza — wynik (0) jest dla obu taki sam.</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1">3.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Np-para to dwa kolejne znaki napisu, z których pierwszy stoi na pozycji nieparzystej, a drugi na parzystej (pozycje od 1): napis dzielimy na pary znaków 1–2, 3–4, 5–6… (np. w <code>MATURA</code> np-pary to MA, TU, RA). Plik <code>dane.txt</code> zawiera jeden napis parzystej długości złożony z wielkich liter alfabetu angielskiego. Odpowiedzi zapisz w pliku <code>wyniki3.txt</code>, poprzedzając każdą numerem zadania. Plik <code>dane_przyklad.txt</code> służy do testów.</p><p>Podaj, ile razy zdarza się, że dwie bezpośrednio po sobie następujące np-pary są takie same. Przykład: dla <code>CABABC</code> wynik to 0, dla <code>ABABAB</code> — 2 (dwukrotnie AB, AB; pary BA nie są np-parami); dla pliku przykładowego — 2.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
     napis = file.readline().strip()
 
 pary = [napis[i:i + 2] for i in range(0, len(napis), 2)]
@@ -89,7 +214,51 @@ for i in range(len(pary) - 1):
     if pary[i] == pary[i + 1]:
         licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 17</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-2">3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(liczba):
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string napis;
+    plik &gt;&gt; napis;  // wczytanie słowa pomija biały znak (także &#x27;\r&#x27;) - jak strip()
+
+    std::vector&lt;std::string&gt; pary;
+    for (size_t i = 0; i &lt; napis.size(); i += 2) {
+        pary.push_back(napis.substr(i, 2));
+    }
+    int licznik = 0;
+    for (size_t i = 0; i + 1 &lt; pary.size(); i++) {
+        if (pary[i] == pary[i + 1]) {
+            licznik += 1;
+        }
+    }
+
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String napis = Files.readAllLines(Path.of(&quot;dane.txt&quot;)).get(0).strip();
+
+        List&lt;String&gt; pary = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; napis.length(); i += 2) {
+            pary.add(napis.substring(i, Math.min(i + 2, napis.length())));
+        }
+        int licznik = 0;
+        for (int i = 0; i &lt; pary.size() - 1; i++) {
+            if (pary.get(i).equals(pary.get(i + 1))) {
+                licznik += 1;
+            }
+        }
+
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 17</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec.html%233-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-2">3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 3.1 (napis w pliku <code>dane.txt</code>, np-pary to znaki z pozycji 1–2, 3–4, …).</p><p>Fragment napisu złożony z całych, kolejnych np-par jest parzyście pierwszy, jeśli suma kodów ASCII wszystkich jego znaków jest liczbą pierwszą. Podaj najdłuższy parzyście pierwszy fragment napisu z pliku (jest jeden taki). Przykład: w <code>NEWSROOM</code> fragment NEWS ma sumę 317 (liczba pierwsza), a najdłuższy taki fragment to WSROOM (suma 487); dla pliku przykładowego wynik to <code>FORMYKINRMRMATYKYKATYKATFO</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(liczba):
     if liczba &lt; 2:
         return False
     d = 2
@@ -111,7 +280,76 @@ for poczatek in range(0, len(napis), 2):  # fragment zaczyna się od początku n
         if czy_pierwsza(suma) and koniec + 2 - poczatek &gt; len(najdluzszy):
             najdluzszy = napis[poczatek:koniec + 2]
 
-print(najdluzszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> INRZWZASEKYPYPYIEKDLEKODASINWNWNUPJNINEKYPDLUZASJNINYPUPWZRZ… (napis długości 544, zgodny z kluczem w całości)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-3">3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
+print(najdluzszy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+bool czy_pierwsza(int liczba) {
+    if (liczba &lt; 2) {
+        return false;
+    }
+    int d = 2;
+    while (d * d &lt;= liczba) {
+        if (liczba % d == 0) {
+            return false;
+        }
+        d += 1;
+    }
+    return true;
+}
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string napis;
+    plik &gt;&gt; napis;
+
+    std::string najdluzszy = &quot;&quot;;
+    for (size_t poczatek = 0; poczatek &lt; napis.size(); poczatek += 2) {  // fragment zaczyna się od początku np-pary
+        int suma = 0;
+        for (size_t koniec = poczatek; koniec &lt; napis.size(); koniec += 2) {
+            suma += napis[koniec] + napis[koniec + 1];  // kody ASCII liter
+            if (czy_pierwsza(suma) &amp;&amp; koniec + 2 - poczatek &gt; najdluzszy.size()) {
+                najdluzszy = napis.substr(poczatek, koniec + 2 - poczatek);
+            }
+        }
+    }
+
+    std::println(&quot;{}&quot;, najdluzszy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static boolean czyPierwsza(int liczba) {
+        if (liczba &lt; 2) {
+            return false;
+        }
+        int d = 2;
+        while (d * d &lt;= liczba) {
+            if (liczba % d == 0) {
+                return false;
+            }
+            d += 1;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        String napis = Files.readAllLines(Path.of(&quot;dane.txt&quot;)).get(0).strip();
+
+        String najdluzszy = &quot;&quot;;
+        for (int poczatek = 0; poczatek &lt; napis.length(); poczatek += 2) {  // fragment zaczyna się od początku np-pary
+            int suma = 0;
+            for (int koniec = poczatek; koniec &lt; napis.length(); koniec += 2) {
+                suma += napis.charAt(koniec) + napis.charAt(koniec + 1);  // kody ASCII liter
+                if (czyPierwsza(suma) &amp;&amp; koniec + 2 - poczatek &gt; najdluzszy.length()) {
+                    najdluzszy = napis.substring(poczatek, koniec + 2);
+                }
+            }
+        }
+
+        System.out.println(najdluzszy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> INRZWZASEKYPYPYIEKDLEKODASINWNWNUPJNINEKYPDLUZASJNINYPUPWZRZ… (napis długości 544, zgodny z kluczem w całości)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec.html%233-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-3">3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 3.1.</p><p>Dla każdej różnej np-pary policz, ile razy występuje w napisie. Ustaw np-pary rosnąco według liczby wystąpień (żadne dwie nie mają tej samej liczby wystąpień; każdą parę zapisujemy raz) i podaj napis powstały z ich połączenia. Przykład: <code>RAPARA</code> → PA (1), RA (2) → <code>PARA</code>; <code>ABCABABACABA</code> → AB (1), CA (2), BA (3) → <code>ABCABA</code>; dla pliku przykładowego: <code>INFORMATYK</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
     napis = file.readline().strip()
 
 ile = {}
@@ -120,7 +358,61 @@ for i in range(0, len(napis), 2):
     ile[para] = ile.get(para, 0) + 1
 
 pary = sorted(ile, key=lambda para: ile[para])
-print(&quot;&quot;.join(pary))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> BYLTOZIELONYUPRAWNYIURODZAJNYPASWZDLUZRZEKINIL</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miasta = []  # (x, y, wielkosc); miasto nr i ma indeks i - 1
+print(&quot;&quot;.join(pary))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string napis;
+    plik &gt;&gt; napis;
+
+    // pary w kolejności pierwszego wystąpienia (jak klucze słownika w Pythonie)
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; ile;
+    for (size_t i = 0; i &lt; napis.size(); i += 2) {
+        std::string para = napis.substr(i, 2);
+        auto it = std::ranges::find(ile, para, &amp;std::pair&lt;std::string, int&gt;::first);
+        if (it == ile.end()) {
+            ile.push_back({para, 1});
+        } else {
+            it-&gt;second += 1;
+        }
+    }
+
+    // sortowanie stabilne - przy równej liczbie wystąpień zostaje kolejność pierwszego wystąpienia
+    std::ranges::stable_sort(ile, {}, &amp;std::pair&lt;std::string, int&gt;::second);
+    std::string wynik = &quot;&quot;;
+    for (const auto&amp; [para, liczba] : ile) {
+        wynik += para;
+    }
+    std::println(&quot;{}&quot;, wynik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        String napis = Files.readAllLines(Path.of(&quot;dane.txt&quot;)).get(0).strip();
+
+        // LinkedHashMap pamięta kolejność dodawania - jak słownik w Pythonie
+        Map&lt;String, Integer&gt; ile = new LinkedHashMap&lt;&gt;();
+        for (int i = 0; i &lt; napis.length(); i += 2) {
+            String para = napis.substring(i, i + 2);
+            ile.put(para, ile.getOrDefault(para, 0) + 1);
+        }
+
+        // List.sort jest stabilne - przy remisie zostaje kolejność pierwszego wystąpienia
+        List&lt;String&gt; pary = new ArrayList&lt;&gt;(ile.keySet());
+        pary.sort((p1, p2) -&gt; Integer.compare(ile.get(p1), ile.get(p2)));
+        System.out.println(String.join(&quot;&quot;, pary));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> BYLTOZIELONYUPRAWNYIURODZAJNYPASWZDLUZRZEKINIL</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec.html%233-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Miasta leżą w punktach o współrzędnych całkowitych; drogi biegną tylko w kierunkach północ–południe i wschód–zachód, więc odległość miast (x1, y1) i (x2, y2) to d = |x1 − x2| + |y1 − y2|. Plik <code>mapa.txt</code> zawiera dane 1000 miast; i-ty wiersz opisuje miasto nr i: wspX i wspY (liczby całkowite z [−250, 250]) oraz liczbę mieszkańców w tysiącach (od 1 do 50000), oddzielone spacjami. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. Plik <code>mapa_przyklad.txt</code> (50 miast) służy do testów.</p><ul><li>4.1 — Podaj numer miasta o największej liczbie mieszkańców i tę liczbę (w tysiącach); jest jedno takie miasto (dla pliku przykładowego: <code>10 48967</code>).</li><li>4.2 — Podaj najmniejszą odległość między dwoma miastami oraz wszystkie pary numerów miast (każdą parę raz, w osobnym wierszu), które dzieli ta odległość (dla pliku przykładowego: 7, pary 14 15 oraz 27 32).</li><li>4.3 — Aglomeracja to największy kwadrat o lewym dolnym rogu w (0, 0), prawym górnym rogu o dodatnich współrzędnych całkowitych i bokach równoległych do osi, którego gęstość zaludnienia jest większa od 2. Gęstość to suma mieszkańców miast leżących ściśle wewnątrz kwadratu (bez brzegów) podzielona przez jego pole. Podaj długość boku aglomeracji i łączną liczbę jej mieszkańców (dla pliku przykładowego: <code>94 17674</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">miasta = []  # (x, y, wielkosc); miasto nr i ma indeks i - 1
 with open(&quot;mapa.txt&quot;) as file:
     for linia in file:
         x, y, wielkosc = map(int, linia.split())
@@ -159,7 +451,136 @@ for bok in range(1, 501):
     if ludnosc / (bok * bok) &gt; 2:
         najwiekszy_bok = bok
         najwieksza_ludnosc = ludnosc
-print(&quot;4.3&quot;, najwiekszy_bok, najwieksza_ludnosc)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 254 2483; 4.2: odległość 2, pary: 30 170, 120 176, 422 637, 426 599, 737 778; 4.3: 114 26078.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_system(liczba, podstawa):
+print(&quot;4.3&quot;, najwiekszy_bok, najwieksza_ludnosc)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+struct Miasto {
+    int x, y, wielkosc;
+};
+
+int main() {
+    std::vector&lt;Miasto&gt; miasta;  // miasto nr i ma indeks i - 1
+    std::ifstream plik(&quot;mapa.txt&quot;);
+    int x, y, wielkosc;
+    while (plik &gt;&gt; x &gt;&gt; y &gt;&gt; wielkosc) {
+        miasta.push_back({x, y, wielkosc});
+    }
+    int n = miasta.size();
+
+    // 4.1
+    int numer = 0;
+    for (int i = 0; i &lt; n; i++) {
+        if (miasta[i].wielkosc &gt; miasta[numer].wielkosc) {
+            numer = i;
+        }
+    }
+    std::println(&quot;4.1 {} {}&quot;, numer + 1, miasta[numer].wielkosc);
+
+    // 4.2
+    int najmniejsza = 1000000000;
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; pary;
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = i + 1; j &lt; n; j++) {
+            int d = std::abs(miasta[i].x - miasta[j].x) + std::abs(miasta[i].y - miasta[j].y);
+            if (d &lt; najmniejsza) {
+                najmniejsza = d;
+                pary = {{i + 1, j + 1}};
+            } else if (d == najmniejsza) {
+                pary.push_back({i + 1, j + 1});
+            }
+        }
+    }
+    std::println(&quot;4.2 {}&quot;, najmniejsza);
+    for (auto [a, b] : pary) {
+        std::println(&quot;{} {}&quot;, a, b);
+    }
+
+    // 4.3 - kwadrat (0,0)-(bok,bok), liczymy tylko miasta leżące wewnątrz
+    int najwiekszy_bok = 0;
+    int najwieksza_ludnosc = 0;
+    for (int bok = 1; bok &lt;= 500; bok++) {
+        int ludnosc = 0;
+        for (const Miasto&amp; m : miasta) {
+            if (0 &lt; m.x &amp;&amp; m.x &lt; bok &amp;&amp; 0 &lt; m.y &amp;&amp; m.y &lt; bok) {
+                ludnosc += m.wielkosc;
+            }
+        }
+        if ((double)ludnosc / (bok * bok) &gt; 2) {
+            najwiekszy_bok = bok;
+            najwieksza_ludnosc = ludnosc;
+        }
+    }
+    std::println(&quot;4.3 {} {}&quot;, najwiekszy_bok, najwieksza_ludnosc);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    record Miasto(int x, int y, int wielkosc) {}
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Miasto&gt; miasta = new ArrayList&lt;&gt;();  // miasto nr i ma indeks i - 1
+        for (String linia : Files.readAllLines(Path.of(&quot;mapa.txt&quot;))) {
+            if (linia.isBlank()) {
+                continue;
+            }
+            String[] t = linia.trim().split(&quot;\\s+&quot;);
+            miasta.add(new Miasto(Integer.parseInt(t[0]), Integer.parseInt(t[1]), Integer.parseInt(t[2])));
+        }
+        int n = miasta.size();
+
+        // 4.1
+        int numer = 0;
+        for (int i = 0; i &lt; n; i++) {
+            if (miasta.get(i).wielkosc() &gt; miasta.get(numer).wielkosc()) {
+                numer = i;
+            }
+        }
+        System.out.println(&quot;4.1 &quot; + (numer + 1) + &quot; &quot; + miasta.get(numer).wielkosc());
+
+        // 4.2
+        int najmniejsza = 1000000000;
+        List&lt;int[]&gt; pary = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; n; i++) {
+            for (int j = i + 1; j &lt; n; j++) {
+                Miasto a = miasta.get(i), b = miasta.get(j);
+                int d = Math.abs(a.x() - b.x()) + Math.abs(a.y() - b.y());
+                if (d &lt; najmniejsza) {
+                    najmniejsza = d;
+                    pary.clear();
+                    pary.add(new int[]{i + 1, j + 1});
+                } else if (d == najmniejsza) {
+                    pary.add(new int[]{i + 1, j + 1});
+                }
+            }
+        }
+        System.out.println(&quot;4.2 &quot; + najmniejsza);
+        for (int[] p : pary) {
+            System.out.println(p[0] + &quot; &quot; + p[1]);
+        }
+
+        // 4.3 - kwadrat (0,0)-(bok,bok), liczymy tylko miasta leżące wewnątrz
+        int najwiekszyBok = 0;
+        int najwiekszaLudnosc = 0;
+        for (int bok = 1; bok &lt;= 500; bok++) {
+            int ludnosc = 0;
+            for (Miasto m : miasta) {
+                if (0 &lt; m.x() &amp;&amp; m.x() &lt; bok &amp;&amp; 0 &lt; m.y() &amp;&amp; m.y() &lt; bok) {
+                    ludnosc += m.wielkosc();
+                }
+            }
+            if ((double) ludnosc / (bok * bok) &gt; 2) {
+                najwiekszyBok = bok;
+                najwiekszaLudnosc = ludnosc;
+            }
+        }
+        System.out.println(&quot;4.3 &quot; + najwiekszyBok + &quot; &quot; + najwiekszaLudnosc);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 254 2483; 4.2: odległość 2, pary: 30 170, 120 176, 422 637, 426 599, 737 778; 4.3: 114 26078.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%204.1%2C%204.2%20i%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec.html%234-1-4-2-i-4-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Uzupełnij brakujące liczby tak, aby obie równości były prawdziwe: 1251₆ + …₆ = 500₁₀ = …₃ − 110102₃ (pierwsza luka w systemie szóstkowym, druga w trójkowym).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_system(liczba, podstawa):
     cyfry = &quot;&quot;
     while liczba &gt; 0:
         cyfry = str(liczba % podstawa) + cyfry
@@ -170,7 +591,42 @@ print(&quot;4.3&quot;, najwiekszy_bok, najwieksza_ludnosc)</code></pre></div><p 
 # 1251(6) + x(6) = 500(10) = y(3) - 110102(3)
 x = 500 - int(&quot;1251&quot;, 6)
 y = 500 + int(&quot;110102&quot;, 3)
-print(na_system(x, 6), na_system(y, 3))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (1251)₆ + (501)₆ = (500)₁₀ = (1010221)₃ − (110102)₃</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(na_system(x, 6), na_system(y, 3))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string na_system(int liczba, int podstawa) {
+    std::string cyfry = &quot;&quot;;
+    while (liczba &gt; 0) {
+        cyfry = std::to_string(liczba % podstawa) + cyfry;
+        liczba /= podstawa;
+    }
+    return cyfry;
+}
+
+int main() {
+    // 1251(6) + x(6) = 500(10) = y(3) - 110102(3)
+    // std::stoi(napis, nullptr, podstawa) działa jak int(napis, podstawa) w Pythonie
+    int x = 500 - std::stoi(&quot;1251&quot;, nullptr, 6);
+    int y = 500 + std::stoi(&quot;110102&quot;, nullptr, 3);
+    std::println(&quot;{} {}&quot;, na_system(x, 6), na_system(y, 3));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String naSystem(int liczba, int podstawa) {
+        String cyfry = &quot;&quot;;
+        while (liczba &gt; 0) {
+            cyfry = (liczba % podstawa) + cyfry;
+            liczba /= podstawa;
+        }
+        return cyfry;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1251(6) + x(6) = 500(10) = y(3) - 110102(3)
+        // Integer.parseInt(napis, podstawa) działa jak int(napis, podstawa) w Pythonie
+        int x = 500 - Integer.parseInt(&quot;1251&quot;, 6);
+        int y = 500 + Integer.parseInt(&quot;110102&quot;, 3);
+        System.out.println(naSystem(x, 6) + &quot; &quot; + naSystem(y, 3));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (1251)₆ + (501)₆ = (500)₁₀ = (1010221)₃ − (110102)₃</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%205&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec.html%235" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2026_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

@@ -37,7 +37,15 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2026 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2026 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfr(T, k):
+<h1 class="page-title">Matura 2026 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2026-czerwiec-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Algorytm Szyfr szyfruje tekst jawny T[1..n] (n znaków) kluczem k (dodatnia liczba całkowita) i zapisuje szyfrogram w tablicy S[1..n]:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">a ← n div k
+c ← n − a
+dla i = 1, 2, ..., n wykonuj
+    jeżeli i mod k = 0
+        b ← i div k
+        S[n − a + b] ← T[i]
+    w przeciwnym razie
+        S[c] ← T[i]
+        c ← c − 1</code></pre></div></div></div><ul><li>1.1 — Podaj szyfrogramy dla tekstów: <code>korporacja</code> z kluczem k = 6, <code>tropikalny</code> z k = 5 oraz <code>defragmentacja</code> z k = 3.</li><li>1.2 — Podaj wartość klucza k, dla której szyfrogram jest zawsze identyczny z tekstem jawnym.</li><li>1.3 — Podaj wartość klucza k, dla której (przy każdym n) szyfrogram jest zawsze tekstem jawnym zapisanym od końca (np. <code>serwer</code> → <code>rewres</code>); wartość może zależeć od n.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def szyfr(T, k):
     n = len(T)
     S = [&quot;&quot;] * (n + 1)              # indeksy 1..n
     a = n // k
@@ -58,8 +66,71 @@ for tekst, k in [(&quot;korporacja&quot;, 6), (&quot;tropikalny&quot;, 5), (&quo
 
 # 1.2 i 1.3 - szyfrogramy słowa &quot;serwer&quot; (n = 6) dla różnych kluczy
 for k in range(1, 9):
-    print(k, szyfr(&quot;serwer&quot;, k))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: korporacja (k = 6) → ajcaoprokr; tropikalny (k = 5) → nlakportiy; defragmentacja (k = 3) → ajatemaredfgnc. 1.2: k = 1. 1.3: k = n + 1 (lub dowolne k &gt; n).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · 2.2</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 2.2
-def najwieksze_k(T):
+    print(k, szyfr(&quot;serwer&quot;, k))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::string szyfr(const std::string&amp; T, int k) {
+    int n = T.size();
+    std::string S(n + 1, &#x27; &#x27;);      // indeksy 1..n
+    int a = n / k;
+    int c = n - a;
+    for (int i = 1; i &lt;= n; i++) {
+        if (i % k == 0) {
+            int b = i / k;
+            S[n - a + b] = T[i - 1];
+        } else {
+            S[c] = T[i - 1];
+            c = c - 1;
+        }
+    }
+    return S.substr(1);
+}
+
+int main() {
+    // 1.1
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; dane = {{&quot;korporacja&quot;, 6}, {&quot;tropikalny&quot;, 5}, {&quot;defragmentacja&quot;, 3}};
+    for (const auto&amp; [tekst, k] : dane) {
+        std::println(&quot;{} {} {}&quot;, tekst, k, szyfr(tekst, k));
+    }
+
+    // 1.2 i 1.3 - szyfrogramy słowa &quot;serwer&quot; (n = 6) dla różnych kluczy
+    for (int k = 1; k &lt; 9; k++) {
+        std::println(&quot;{} {}&quot;, k, szyfr(&quot;serwer&quot;, k));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String szyfr(String T, int k) {
+        int n = T.length();
+        char[] S = new char[n + 1];     // indeksy 1..n
+        int a = n / k;
+        int c = n - a;
+        for (int i = 1; i &lt;= n; i++) {
+            if (i % k == 0) {
+                int b = i / k;
+                S[n - a + b] = T.charAt(i - 1);
+            } else {
+                S[c] = T.charAt(i - 1);
+                c = c - 1;
+            }
+        }
+        return new String(S, 1, n);
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        String[] teksty = {&quot;korporacja&quot;, &quot;tropikalny&quot;, &quot;defragmentacja&quot;};
+        int[] klucze = {6, 5, 3};
+        for (int j = 0; j &lt; teksty.length; j++) {
+            System.out.println(teksty[j] + &quot; &quot; + klucze[j] + &quot; &quot; + szyfr(teksty[j], klucze[j]));
+        }
+
+        // 1.2 i 1.3 - szyfrogramy słowa &quot;serwer&quot; (n = 6) dla różnych kluczy
+        for (int k = 1; k &lt; 9; k++) {
+            System.out.println(k + &quot; &quot; + szyfr(&quot;serwer&quot;, k));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: korporacja (k = 6) → ajcaoprokr; tropikalny (k = 5) → nlakportiy; defragmentacja (k = 3) → ajatemaredfgnc. 1.2: k = 1. 1.3: k = n + 1 (lub dowolne k &gt; n).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec-f2015.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest liczba n &gt; 1 i tablica liczb całkowitych T[1..n]. Dla 1 ≤ k &lt; n tablica T jest k-podobna, gdy T[1..k] = T[n − k + 1..n] (początkowe k elementów jest równe końcowym k elementom); ponadto każda tablica jest 0-podobna. Przykład: [1,2,1,1,2,1,1] jest 0-, 1- i 4-podobna; [1,2,2] jest tylko 0-podobna; [2,2,2] jest 0-, 1- i 2-podobna (ale nie 3-podobna, bo k &lt; n).</p><ul><li>2.1 — Dla tablic [1,2,3,4], [1,3,4,1,1,3,4,1] oraz [3,5,3,5,3,5,3,5,3,5] podaj największe k, dla którego tablica jest k-podobna.</li><li>2.2 — Zapisz (w pseudokodzie lub wybranym języku) algorytm, który dla n &gt; 1 i tablicy T[1..n] wyznacza największe k, dla którego T jest k-podobna. Wolno używać tylko operatorów arytmetycznych i logicznych, porównań, odwołań do pojedynczych elementów tablicy, instrukcji sterujących i własnych funkcji — bez funkcji wbudowanych, w szczególności bez pobierania fragmentu tablicy (wycinków list).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · 2.2</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najwieksze_k(T):
     n = len(T)
     k = n - 1
     while k &gt; 0:
@@ -75,7 +146,65 @@ def najwieksze_k(T):
 
 # 2.1
 for T in [[1, 2, 3, 4], [1, 3, 4, 1, 1, 3, 4, 1], [3, 5, 3, 5, 3, 5, 3, 5, 3, 5]]:
-    print(T, najwieksze_k(T))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 0, 4, 8. 2.2: funkcja <code>najwieksze_k</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
+    print(T, najwieksze_k(T))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+// 2.2
+int najwieksze_k(const std::vector&lt;int&gt;&amp; T) {
+    int n = T.size();
+    int k = n - 1;
+    while (k &gt; 0) {
+        bool jest = true;
+        for (int i = 0; i &lt; k; i++) {       // porównujemy T[1..k] z T[n-k+1..n]
+            if (T[i] != T[n - k + i]) {
+                jest = false;
+            }
+        }
+        if (jest) {
+            return k;
+        }
+        k -= 1;
+    }
+    return 0;
+}
+
+int main() {
+    // 2.1 (wektor wypisuje się jak lista w Pythonie)
+    std::vector&lt;std::vector&lt;int&gt;&gt; tablice = {{1, 2, 3, 4}, {1, 3, 4, 1, 1, 3, 4, 1}, {3, 5, 3, 5, 3, 5, 3, 5, 3, 5}};
+    for (const auto&amp; T : tablice) {
+        std::println(&quot;{} {}&quot;, T, najwieksze_k(T));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.List;
+
+public class Zadanie {
+    // 2.2
+    static int najwiekszeK(List&lt;Integer&gt; T) {
+        int n = T.size();
+        int k = n - 1;
+        while (k &gt; 0) {
+            boolean jest = true;
+            for (int i = 0; i &lt; k; i++) {       // porównujemy T[1..k] z T[n-k+1..n]
+                if (!T.get(i).equals(T.get(n - k + i))) {
+                    jest = false;
+                }
+            }
+            if (jest) {
+                return k;
+            }
+            k -= 1;
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1 (lista wypisuje się jak w Pythonie)
+        List&lt;List&lt;Integer&gt;&gt; tablice = List.of(List.of(1, 2, 3, 4), List.of(1, 3, 4, 1, 1, 3, 4, 1),
+                List.of(3, 5, 3, 5, 3, 5, 3, 5, 3, 5));
+        for (List&lt;Integer&gt; T : tablice) {
+            System.out.println(T + &quot; &quot; + najwiekszeK(T));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 0, 4, 8. 2.2: funkcja <code>najwieksze_k</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec-f2015.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Np-para to dwa kolejne znaki napisu, z których pierwszy stoi na pozycji nieparzystej, a drugi na parzystej (pozycje od 1): napis dzielimy na pary znaków 1–2, 3–4, 5–6… (np. w <code>MATURA</code> np-pary to MA, TU, RA). Plik <code>dane.txt</code> zawiera jeden napis parzystej długości złożony z wielkich liter alfabetu angielskiego. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. Plik <code>dane_przyklad.txt</code> służy do testów. Para lub fragment złożony z całych np-par jest parzyście pierwszy, jeśli suma kodów ASCII jego znaków jest liczbą pierwszą (np. WIRY: 87 + 73 + 82 + 89 = 331).</p><ul><li>4.1 — Podaj, ile razy dwie bezpośrednio po sobie następujące np-pary są takie same (dla <code>CABABC</code> — 0, dla <code>ABABAB</code> — 2).</li><li>4.2 — Wypisz wszystkie różne parzyście pierwsze np-pary z pliku (dla pliku przykładowego: <code>FO IN AT</code>).</li><li>4.3 — Znajdź najdłuższy parzyście pierwszy fragment złożony z np-par i podaj go wraz z sumą kodów ASCII jego znaków (np. w <code>NEWSROOM</code> jest to WSROOM, suma 487; dla pliku przykładowego: <code>FORMYKINRMRMATYKYKATYKATFO 2029</code>).</li><li>4.4 — Dla każdej różnej np-pary policz liczbę jej wystąpień, ustaw np-pary rosnąco według tej liczby (liczby wystąpień są różne, każdą parę zapisujemy raz) i podaj powstały napis oraz największą i najmniejszą liczbę wystąpień (np. <code>RAPARA</code> → <code>PARA</code>; dla pliku przykładowego: <code>INFORMATYK 5 1</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;dane.txt&quot;) as file:
     napis = file.read().strip()
 
 pary = [napis[i:i + 2] for i in range(0, len(napis), 2)]      # kolejne np-pary
@@ -128,7 +257,183 @@ for para in pary:
 kolejnosc = sorted(licznik, key=lambda para: licznik[para])
 print(&quot;4.4&quot;, &quot;&quot;.join(kolejnosc), licznik[kolejnosc[-1]], licznik[kolejnosc[0]], file=wynik)
 
-wynik.close()</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 17. 4.2: IN IL NY UR. 4.3: fragment INRZWZASEKYPYPYIEKDLEKODASINWNWNUP… (272 np-pary, kończy się …JNRAINYIRAWZODNY), suma kodów 42923. 4.4: BYLTOZIELONYUPRAWNYIURODZAJNYPASWZDLUZRZEKINIL, najwięcej wystąpień 23, najmniej 1.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2026_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+wynik.close()</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+bool pierwsza(int x) {
+    if (x &lt; 2) {
+        return false;
+    }
+    int d = 2;
+    while (d * d &lt;= x) {
+        if (x % d == 0) {
+            return false;
+        }
+        d += 1;
+    }
+    return true;
+}
+
+int suma_kodow(const std::string&amp; tekst) {
+    int suma = 0;
+    for (char c : tekst) {
+        suma += c;  // kod ASCII znaku
+    }
+    return suma;
+}
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::string napis;
+    plik &gt;&gt; napis;  // wczytanie słowa pomija białe znaki - jak strip()
+
+    std::vector&lt;std::string&gt; pary;      // kolejne np-pary
+    for (size_t i = 0; i &lt; napis.size(); i += 2) {
+        pary.push_back(napis.substr(i, 2));
+    }
+    std::ofstream wynik(&quot;wyniki4.txt&quot;);
+
+    // 4.1
+    int ile = 0;
+    for (size_t i = 1; i &lt; pary.size(); i++) {
+        if (pary[i] == pary[i - 1]) {
+            ile += 1;
+        }
+    }
+    std::println(wynik, &quot;4.1 {}&quot;, ile);
+
+    // 4.2
+    std::vector&lt;std::string&gt; wypisane;
+    for (const std::string&amp; para : pary) {
+        if (pierwsza(suma_kodow(para)) &amp;&amp; std::ranges::find(wypisane, para) == wypisane.end()) {
+            wypisane.push_back(para);
+        }
+    }
+    std::print(wynik, &quot;4.2&quot;);
+    for (const std::string&amp; para : wypisane) {
+        std::print(wynik, &quot; {}&quot;, para);
+    }
+    std::println(wynik);
+
+    // 4.3 - sprawdzamy wszystkie fragmenty pary[p..q]
+    std::string najlepszy = &quot;&quot;;
+    for (size_t p = 0; p &lt; pary.size(); p++) {
+        int suma = 0;
+        for (size_t q = p; q &lt; pary.size(); q++) {
+            suma += suma_kodow(pary[q]);
+            if (pierwsza(suma) &amp;&amp; 2 * (q - p + 1) &gt; najlepszy.size()) {
+                najlepszy = napis.substr(2 * p, 2 * (q - p + 1));  // sklejone pary[p..q]
+            }
+        }
+    }
+    std::println(wynik, &quot;4.3 {} {}&quot;, najlepszy, suma_kodow(najlepszy));
+
+    // 4.4 - pary w kolejności pierwszego wystąpienia (jak klucze słownika w Pythonie)
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; licznik;
+    for (const std::string&amp; para : pary) {
+        auto it = std::ranges::find(licznik, para, &amp;std::pair&lt;std::string, int&gt;::first);
+        if (it == licznik.end()) {
+            licznik.push_back({para, 1});
+        } else {
+            it-&gt;second += 1;
+        }
+    }
+    // sortowanie stabilne - przy remisie zostaje kolejność pierwszego wystąpienia
+    std::ranges::stable_sort(licznik, {}, &amp;std::pair&lt;std::string, int&gt;::second);
+    std::string kolejnosc = &quot;&quot;;
+    for (const auto&amp; [para, liczba] : licznik) {
+        kolejnosc += para;
+    }
+    std::println(wynik, &quot;4.4 {} {} {}&quot;, kolejnosc, licznik.back().second, licznik.front().second);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zadanie {
+    static boolean pierwsza(int x) {
+        if (x &lt; 2) {
+            return false;
+        }
+        int d = 2;
+        while (d * d &lt;= x) {
+            if (x % d == 0) {
+                return false;
+            }
+            d += 1;
+        }
+        return true;
+    }
+
+    static int sumaKodow(String tekst) {
+        int suma = 0;
+        for (char c : tekst.toCharArray()) {
+            suma += c;  // kod ASCII znaku
+        }
+        return suma;
+    }
+
+    public static void main(String[] args) throws Exception {
+        String napis = Files.readString(Path.of(&quot;dane.txt&quot;)).strip();
+
+        List&lt;String&gt; pary = new ArrayList&lt;&gt;();      // kolejne np-pary
+        for (int i = 0; i &lt; napis.length(); i += 2) {
+            pary.add(napis.substring(i, Math.min(i + 2, napis.length())));
+        }
+        PrintWriter wynik = new PrintWriter(&quot;wyniki4.txt&quot;);
+
+        // 4.1
+        int ile = 0;
+        for (int i = 1; i &lt; pary.size(); i++) {
+            if (pary.get(i).equals(pary.get(i - 1))) {
+                ile += 1;
+            }
+        }
+        wynik.println(&quot;4.1 &quot; + ile);
+
+        // 4.2
+        List&lt;String&gt; wypisane = new ArrayList&lt;&gt;();
+        for (String para : pary) {
+            if (pierwsza(sumaKodow(para)) &amp;&amp; !wypisane.contains(para)) {
+                wypisane.add(para);
+            }
+        }
+        wynik.println(&quot;4.2 &quot; + String.join(&quot; &quot;, wypisane));
+
+        // 4.3 - sprawdzamy wszystkie fragmenty pary[p..q]
+        String najlepszy = &quot;&quot;;
+        for (int p = 0; p &lt; pary.size(); p++) {
+            int suma = 0;
+            for (int q = p; q &lt; pary.size(); q++) {
+                suma += sumaKodow(pary.get(q));
+                if (pierwsza(suma) &amp;&amp; 2 * (q - p + 1) &gt; najlepszy.length()) {
+                    najlepszy = String.join(&quot;&quot;, pary.subList(p, q + 1));
+                }
+            }
+        }
+        wynik.println(&quot;4.3 &quot; + najlepszy + &quot; &quot; + sumaKodow(najlepszy));
+
+        // 4.4 - LinkedHashMap pamięta kolejność dodawania (jak słownik w Pythonie)
+        Map&lt;String, Integer&gt; licznik = new LinkedHashMap&lt;&gt;();
+        for (String para : pary) {
+            licznik.put(para, licznik.getOrDefault(para, 0) + 1);
+        }
+        // List.sort jest stabilne - przy remisie zostaje kolejność pierwszego wystąpienia
+        List&lt;String&gt; kolejnosc = new ArrayList&lt;&gt;(licznik.keySet());
+        kolejnosc.sort((p1, p2) -&gt; Integer.compare(licznik.get(p1), licznik.get(p2)));
+        wynik.println(&quot;4.4 &quot; + String.join(&quot;&quot;, kolejnosc) + &quot; &quot; + licznik.get(kolejnosc.get(kolejnosc.size() - 1))
+                + &quot; &quot; + licznik.get(kolejnosc.get(0)));
+
+        wynik.close();
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 17. 4.2: IN IL NY UR. 4.3: fragment INRZWZASEKYPYPYIEKDLEKODASINWNWNUP… (272 np-pary, kończy się …JNRAINYIRAWZODNY), suma kodów 42923. 4.4: BYLTOZIELONYUPRAWNYIURODZAJNYPASWZDLUZRZEKINIL, najwięcej wystąpień 23, najmniej 1.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_czerwiec_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-czerwiec-f2015.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2026_czerwiec_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

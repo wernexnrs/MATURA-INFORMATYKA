@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#58-1">58.1</a></li><li><a href="#58-2">58.2</a></li><li><a href="#58-3">58.3</a></li><li><a href="#58-4">58.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Zadanie 58. Systemy liczbowe</span></nav>
-<h1 class="page-title">Zadanie 58. Systemy liczbowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="58-1" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-1">58.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
+<h1 class="page-title">Zadanie 58. Systemy liczbowe</h1><p class="links"><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/Matura_Zbi%C3%B3r_zada%C5%84_Informatyka.pdf" target="_blank" rel="noopener">ZBIÓR ZADAŃ</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-dane.zip" target="_blank" rel="noopener">DANE</a><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Materialy/Zbiory_zadan/inf-pr-rozwiazania.zip" target="_blank" rel="noopener">ROZWIĄZANIA</a></p><section class="card tinted" id="58-1" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-1">58.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Trzy stacje pogodowe S1, S2, S3 codziennie w południe zapisują stan zegara (liczbę godzin od uruchomienia stacji) i temperaturę. Stacja S1 zapisuje wartości w systemie dwójkowym, S2 — czwórkowym, S3 — ósemkowym; temperatury ujemne poprzedza znak „-”. Pliki <code>dane_systemy1.txt</code>, <code>dane_systemy2.txt</code>, <code>dane_systemy3.txt</code> zawierają po 1095 kolejnych pomiarów: w każdym wierszu stan zegara i temperatura, oddzielone spacją (np. zegar 36 i temperatura -7 to w S1 <code>100100 -111</code>, w S2 <code>210 -13</code>, w S3 <code>44 -7</code>). Odpowiedzi zapisz w pliku <code>wyniki_systemy.txt</code>, każdą w osobnym wierszu, poprzedzoną numerem zadania.</p><p>Dla każdej stacji podaj najniższą zarejestrowaną temperaturę. Wszystkie trzy wyniki zapisz w systemie dwójkowym.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
     zegary = []
     temperatury = []
     with open(nazwa) as file:
@@ -58,7 +58,77 @@ stacje = [(&quot;dane_systemy1.txt&quot;, 2), (&quot;dane_systemy2.txt&quot;, 4)
 
 for i in range(3):
     zegary, temperatury = wczytaj(stacje[i][0], stacje[i][1])
-    print(&quot;S&quot; + str(i + 1), na_dwojkowy(min(temperatury)))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> S1: -1011, S2: -1001100, S3: -1001011</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-2">58.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
+    print(&quot;S&quot; + str(i + 1), na_dwojkowy(min(temperatury)))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;format&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// std::stoi(napis, nullptr, podstawa) działa jak int(napis, podstawa) w Pythonie (obsługuje znak &quot;-&quot;)
+void wczytaj(const std::string&amp; nazwa, int podstawa, std::vector&lt;int&gt;&amp; zegary, std::vector&lt;int&gt;&amp; temperatury) {
+    std::ifstream plik(nazwa);
+    std::string zegar, temperatura;
+    while (plik &gt;&gt; zegar &gt;&gt; temperatura) {
+        zegary.push_back(std::stoi(zegar, nullptr, podstawa));
+        temperatury.push_back(std::stoi(temperatura, nullptr, podstawa));
+    }
+}
+
+std::string na_dwojkowy(int x) {
+    if (x &lt; 0) {
+        return &quot;-&quot; + na_dwojkowy(-x);
+    }
+    return std::format(&quot;{:b}&quot;, x);
+}
+
+int main() {
+    std::vector&lt;std::pair&lt;std::string, int&gt;&gt; stacje = {{&quot;dane_systemy1.txt&quot;, 2}, {&quot;dane_systemy2.txt&quot;, 4}, {&quot;dane_systemy3.txt&quot;, 8}};
+
+    for (int i = 0; i &lt; 3; i++) {
+        std::vector&lt;int&gt; zegary, temperatury;
+        wczytaj(stacje[i].first, stacje[i].second, zegary, temperatury);
+        std::println(&quot;S{} {}&quot;, i + 1, na_dwojkowy(std::ranges::min(temperatury)));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Zadanie {
+    // Integer.parseInt(napis, podstawa) działa jak int(napis, podstawa) w Pythonie (obsługuje znak &quot;-&quot;)
+    static void wczytaj(String nazwa, int podstawa, List&lt;Integer&gt; zegary, List&lt;Integer&gt; temperatury) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(nazwa))) {
+            if (linia.isBlank()) {
+                continue;
+            }
+            String[] t = linia.trim().split(&quot;\\s+&quot;);
+            zegary.add(Integer.parseInt(t[0], podstawa));
+            temperatury.add(Integer.parseInt(t[1], podstawa));
+        }
+    }
+
+    static String naDwojkowy(int x) {
+        if (x &lt; 0) {
+            return &quot;-&quot; + Integer.toBinaryString(-x);
+        }
+        return Integer.toBinaryString(x);
+    }
+
+    public static void main(String[] args) throws Exception {
+        String[] nazwy = {&quot;dane_systemy1.txt&quot;, &quot;dane_systemy2.txt&quot;, &quot;dane_systemy3.txt&quot;};
+        int[] podstawy = {2, 4, 8};
+
+        for (int i = 0; i &lt; 3; i++) {
+            List&lt;Integer&gt; zegary = new ArrayList&lt;&gt;();
+            List&lt;Integer&gt; temperatury = new ArrayList&lt;&gt;();
+            wczytaj(nazwy[i], podstawy[i], zegary, temperatury);
+            System.out.println(&quot;S&quot; + (i + 1) + &quot; &quot; + naDwojkowy(Collections.min(temperatury)));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> S1: -1011, S2: -1001100, S3: -1001011</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2058.%20Systemy%20liczbowe%20%E2%80%94%2058.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-58.html%2358-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-2">58.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 58.1 (pomiary ze stacji S1, S2, S3 w systemach o podstawach 2, 4 i 8).</p><p>Pomiary powinny odbywać się co 24 godziny, zatem poprawne stany zegara (dziesiętnie) w kolejnych pomiarach to 12, 36, 60, … (12 + 24·i). Podaj liczbę pomiarów, w których stan zegara był niepoprawny jednocześnie we wszystkich trzech stacjach.</p><p>Przykład: jeśli w S1 kolejne stany zegara to <code>1100</code>, <code>100100</code>, <code>111101</code> (12, 36, 61), to niepoprawny jest tylko trzeci.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
     zegary = []
     temperatury = []
     with open(nazwa) as file:
@@ -79,7 +149,71 @@ for i in range(len(z1)):
     if z1[i] != stan and z2[i] != stan and z3[i] != stan:
         count += 1
 
-print(count)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 182</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-3">58.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
+print(count)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+void wczytaj(const std::string&amp; nazwa, int podstawa, std::vector&lt;int&gt;&amp; zegary, std::vector&lt;int&gt;&amp; temperatury) {
+    std::ifstream plik(nazwa);
+    std::string zegar, temperatura;
+    while (plik &gt;&gt; zegar &gt;&gt; temperatura) {
+        zegary.push_back(std::stoi(zegar, nullptr, podstawa));
+        temperatury.push_back(std::stoi(temperatura, nullptr, podstawa));
+    }
+}
+
+int main() {
+    std::vector&lt;int&gt; z1, t1, z2, t2, z3, t3;
+    wczytaj(&quot;dane_systemy1.txt&quot;, 2, z1, t1);
+    wczytaj(&quot;dane_systemy2.txt&quot;, 4, z2, t2);
+    wczytaj(&quot;dane_systemy3.txt&quot;, 8, z3, t3);
+
+    int count = 0;
+    for (size_t i = 0; i &lt; z1.size(); i++) {
+        int stan = 12 + 24 * i;
+        if (z1[i] != stan &amp;&amp; z2[i] != stan &amp;&amp; z3[i] != stan) {
+            count += 1;
+        }
+    }
+
+    std::println(&quot;{}&quot;, count);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static void wczytaj(String nazwa, int podstawa, List&lt;Integer&gt; zegary, List&lt;Integer&gt; temperatury) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(nazwa))) {
+            if (linia.isBlank()) {
+                continue;
+            }
+            String[] t = linia.trim().split(&quot;\\s+&quot;);
+            zegary.add(Integer.parseInt(t[0], podstawa));
+            temperatury.add(Integer.parseInt(t[1], podstawa));
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; z1 = new ArrayList&lt;&gt;(), t1 = new ArrayList&lt;&gt;();
+        List&lt;Integer&gt; z2 = new ArrayList&lt;&gt;(), t2 = new ArrayList&lt;&gt;();
+        List&lt;Integer&gt; z3 = new ArrayList&lt;&gt;(), t3 = new ArrayList&lt;&gt;();
+        wczytaj(&quot;dane_systemy1.txt&quot;, 2, z1, t1);
+        wczytaj(&quot;dane_systemy2.txt&quot;, 4, z2, t2);
+        wczytaj(&quot;dane_systemy3.txt&quot;, 8, z3, t3);
+
+        int count = 0;
+        for (int i = 0; i &lt; z1.size(); i++) {
+            int stan = 12 + 24 * i;
+            if (z1.get(i) != stan &amp;&amp; z2.get(i) != stan &amp;&amp; z3.get(i) != stan) {
+                count += 1;
+            }
+        }
+
+        System.out.println(count);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 182</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2058.%20Systemy%20liczbowe%20%E2%80%94%2058.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-58.html%2358-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-3">58.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 58.1.</p><p>Rekordem temperatury w danej stacji jest pomiar większy od wszystkich wcześniejszych pomiarów w tej stacji (pierwszy pomiar także jest rekordem). Dzień rekordowy to dzień, w którym w co najmniej jednej stacji padł rekord. Podaj liczbę dni rekordowych.</p><p>Przykład: dla pomiarów (dziesiętnie) S1: 1, 2, 1, 0, 1; S2: 0, 1, -1, -2, 2; S3: -1, -1, -1, 0, 1 dni rekordowe są 3.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def wczytaj(nazwa, podstawa):
     zegary = []
     temperatury = []
     with open(nazwa) as file:
@@ -111,7 +245,99 @@ for i in range(1, len(t1)):
     if rekord:
         dni += 1
 
-print(dni)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 42</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-4">58.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">temperatury = []
+print(dni)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+void wczytaj(const std::string&amp; nazwa, int podstawa, std::vector&lt;int&gt;&amp; zegary, std::vector&lt;int&gt;&amp; temperatury) {
+    std::ifstream plik(nazwa);
+    std::string zegar, temperatura;
+    while (plik &gt;&gt; zegar &gt;&gt; temperatura) {
+        zegary.push_back(std::stoi(zegar, nullptr, podstawa));
+        temperatury.push_back(std::stoi(temperatura, nullptr, podstawa));
+    }
+}
+
+int main() {
+    std::vector&lt;int&gt; z1, t1, z2, t2, z3, t3;
+    wczytaj(&quot;dane_systemy1.txt&quot;, 2, z1, t1);
+    wczytaj(&quot;dane_systemy2.txt&quot;, 4, z2, t2);
+    wczytaj(&quot;dane_systemy3.txt&quot;, 8, z3, t3);
+
+    int max1 = t1[0], max2 = t2[0], max3 = t3[0];
+    int dni = 1;  // pierwszy pomiar jest zawsze rekordem
+
+    for (size_t i = 1; i &lt; t1.size(); i++) {
+        bool rekord = false;
+        if (t1[i] &gt; max1) {
+            max1 = t1[i];
+            rekord = true;
+        }
+        if (t2[i] &gt; max2) {
+            max2 = t2[i];
+            rekord = true;
+        }
+        if (t3[i] &gt; max3) {
+            max3 = t3[i];
+            rekord = true;
+        }
+        if (rekord) {
+            dni += 1;
+        }
+    }
+
+    std::println(&quot;{}&quot;, dni);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static void wczytaj(String nazwa, int podstawa, List&lt;Integer&gt; zegary, List&lt;Integer&gt; temperatury) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(nazwa))) {
+            if (linia.isBlank()) {
+                continue;
+            }
+            String[] t = linia.trim().split(&quot;\\s+&quot;);
+            zegary.add(Integer.parseInt(t[0], podstawa));
+            temperatury.add(Integer.parseInt(t[1], podstawa));
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; z1 = new ArrayList&lt;&gt;(), t1 = new ArrayList&lt;&gt;();
+        List&lt;Integer&gt; z2 = new ArrayList&lt;&gt;(), t2 = new ArrayList&lt;&gt;();
+        List&lt;Integer&gt; z3 = new ArrayList&lt;&gt;(), t3 = new ArrayList&lt;&gt;();
+        wczytaj(&quot;dane_systemy1.txt&quot;, 2, z1, t1);
+        wczytaj(&quot;dane_systemy2.txt&quot;, 4, z2, t2);
+        wczytaj(&quot;dane_systemy3.txt&quot;, 8, z3, t3);
+
+        int max1 = t1.get(0), max2 = t2.get(0), max3 = t3.get(0);
+        int dni = 1;  // pierwszy pomiar jest zawsze rekordem
+
+        for (int i = 1; i &lt; t1.size(); i++) {
+            boolean rekord = false;
+            if (t1.get(i) &gt; max1) {
+                max1 = t1.get(i);
+                rekord = true;
+            }
+            if (t2.get(i) &gt; max2) {
+                max2 = t2.get(i);
+                rekord = true;
+            }
+            if (t3.get(i) &gt; max3) {
+                max3 = t3.get(i);
+                rekord = true;
+            }
+            if (rekord) {
+                dni += 1;
+            }
+        }
+
+        System.out.println(dni);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 42</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2058.%20Systemy%20liczbowe%20%E2%80%94%2058.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-58.html%2358-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="58-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#58-4">58.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 58.1; dotyczy tylko stacji S1 (kolejne temperatury t1, t2, t3, …).</p><p>Skokiem temperatury między i-tym a j-tym pomiarem nazywamy zaokrąglenie w górę do liczby całkowitej wartości (t_i − t_j)² / |i − j|. Podaj w systemie dziesiętnym największy skok temperatury w stacji S1.</p><p>Przykład: dla temperatur 3, 5, 4, 7 skoki wynoszą 4, 1, 6, 1, 2, 9 — największy to 9.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">temperatury = []
 
 with open(&quot;dane_systemy1.txt&quot;) as file:
     for line in file:
@@ -126,7 +352,66 @@ for i in range(len(temperatury)):
         if skok &gt; najwiekszy:
             najwiekszy = skok
 
-print(najwiekszy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 25</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(najwiekszy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;long long&gt; temperatury;
+
+    std::ifstream plik(&quot;dane_systemy1.txt&quot;);
+    std::string zegar, temperatura;
+    while (plik &gt;&gt; zegar &gt;&gt; temperatura) {
+        temperatury.push_back(std::stoi(temperatura, nullptr, 2));
+    }
+
+    long long najwiekszy = 0;
+    for (size_t i = 0; i &lt; temperatury.size(); i++) {
+        for (size_t j = i + 1; j &lt; temperatury.size(); j++) {
+            long long r = (temperatury[i] - temperatury[j]) * (temperatury[i] - temperatury[j]);
+            long long odstep = j - i;
+            long long skok = (r + odstep - 1) / odstep;  // zaokrąglenie w górę
+            if (skok &gt; najwiekszy) {
+                najwiekszy = skok;
+            }
+        }
+    }
+
+    std::println(&quot;{}&quot;, najwiekszy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;Long&gt; temperatury = new ArrayList&lt;&gt;();
+
+        for (String linia : Files.readAllLines(Path.of(&quot;dane_systemy1.txt&quot;))) {
+            if (linia.isBlank()) {
+                continue;
+            }
+            String[] t = linia.trim().split(&quot;\\s+&quot;);
+            temperatury.add(Long.parseLong(t[1], 2));
+        }
+
+        long najwiekszy = 0;
+        for (int i = 0; i &lt; temperatury.size(); i++) {
+            for (int j = i + 1; j &lt; temperatury.size(); j++) {
+                long roznica = temperatury.get(i) - temperatury.get(j);
+                long r = roznica * roznica;
+                long odstep = j - i;
+                long skok = (r + odstep - 1) / odstep;  // zaokrąglenie w górę
+                if (skok &gt; najwiekszy) {
+                    najwiekszy = skok;
+                }
+            }
+        }
+
+        System.out.println(najwiekszy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 25</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Zadanie%2058.%20Systemy%20liczbowe%20%E2%80%94%2058.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/zbior/zadanie-58.html%2358-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_zbior/58.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

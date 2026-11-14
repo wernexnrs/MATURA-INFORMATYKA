@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title" style="--c:var(--g1)">Część I</p><ul style="--c:var(--g1)"><li><a href="#2a">2a</a></li><li><a href="#2b">2b</a></li><li><a href="#2c">2c</a></li><li><a href="#3-1-3-3">3.1 - 3.3</a></li><li><a href="#3-6">3.6</a></li></ul><p class="side-title" style="--c:var(--g2)">Część II</p><ul style="--c:var(--g2)"><li><a href="#5a">5a</a></li><li><a href="#5b">5b</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li><li><a href="#6d">6d</a></li><li><a href="#6e">6e</a></li><li><a href="#6f">6f</a></li><li><a href="#6g">6g</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2007 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2007 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI I</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-odpowiedzi-2.pdf" target="_blank" rel="noopener">ODPOWIEDZI II</a></p><p>Przykładowe wyniki CKE do części II znajdują się w folderze <code>Wyniki</code> w paczce z danymi. Pliki <code>dane_k.txt</code>, <code>zain_wyk.txt</code> i <code>wojew.txt</code> są zapisane w kodowaniu UTF-16 i mają wiersz nagłówka.</p><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
+<h1 class="page-title">Matura 2007 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI I</a><a href="https://arkusze.pl/maturalne/informatyka-2007-maj-matura-rozszerzona-odpowiedzi-2.pdf" target="_blank" rel="noopener">ODPOWIEDZI II</a></p><p>Przykładowe wyniki CKE do części II znajdują się w folderze <code>Wyniki</code> w paczce z danymi. Pliki <code>dane_k.txt</code>, <code>zain_wyk.txt</code> i <code>wojew.txt</code> są zapisane w kodowaniu UTF-16 i mają wiersz nagłówka.</p><section class="card tinted" id="2a" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#2a">2a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (hetman). Hetman atakuje wszystkie pola w swojej kolumnie, wierszu i na obu przekątnych przechodzących przez jego pole (np. na szachownicy 8×8 z pola (2,6) atakuje 7+7+6+3 = 23 pola).</p><p>Wypełnij tabelę 5×5, wpisując w każde pole liczbę pól atakowanych przez hetmana stojącego na tym polu (np. z pola (1,1) hetman atakuje 12 pól).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
     # wiersz i kolumna: 2*(n-1) pól, do tego cztery kierunki po przekątnych
     return (2 * (n - 1) + min(x - 1, y - 1) + min(x - 1, n - y)
             + min(n - x, y - 1) + min(n - x, n - y))
@@ -45,13 +45,70 @@
 
 n = 5
 for y in range(n, 0, -1):
-    print(y, *[atakowane(n, x, y) for x in range(1, n + 1)])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> brzeg planszy: 12, pola (2..4, 2..4) bez środka: 14, środek (3,3): 16</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#2b">2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
+    print(y, *[atakowane(n, x, y) for x in range(1, n + 1)])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;print&gt;
+
+int atakowane(int n, int x, int y) {
+    // wiersz i kolumna: 2*(n-1) pól, do tego cztery kierunki po przekątnych
+    return 2 * (n - 1) + std::min(x - 1, y - 1) + std::min(x - 1, n - y)
+           + std::min(n - x, y - 1) + std::min(n - x, n - y);
+}
+
+int main() {
+    int n = 5;
+    for (int y = n; y &gt; 0; y--) {
+        std::print(&quot;{}&quot;, y);
+        for (int x = 1; x &lt;= n; x++)
+            std::print(&quot; {}&quot;, atakowane(n, x, y));
+        std::println();
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int atakowane(int n, int x, int y) {
+        // wiersz i kolumna: 2*(n-1) pól, do tego cztery kierunki po przekątnych
+        return 2 * (n - 1) + Math.min(x - 1, y - 1) + Math.min(x - 1, n - y)
+                + Math.min(n - x, y - 1) + Math.min(n - x, n - y);
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        for (int y = n; y &gt; 0; y--) {
+            var wiersz = new StringBuilder(String.valueOf(y));
+            for (int x = 1; x &lt;= n; x++)
+                wiersz.append(&quot; &quot;).append(atakowane(n, x, y));
+            System.out.println(wiersz);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> brzeg planszy: 12, pola (2..4, 2..4) bez środka: 14, środek (3,3): 16</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%232a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2b" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#2b">2b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla szachownicy 32×32 podaj liczbę pól atakowanych przez hetmana (kolumna, wiersz, obie przekątne) stojącego na polach: (2,2), (5,4), (20,18), (25,30).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
     return (2 * (n - 1) + min(x - 1, y - 1) + min(x - 1, n - y)
             + min(n - x, y - 1) + min(n - x, n - y))
 
 
 for x, y in [(2, 2), (5, 4), (20, 18), (25, 30)]:
-    print((x, y), atakowane(32, x, y))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (2,2): 95, (5,4): 99, (20,18): 117, (25,30): 97</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
+    print((x, y), atakowane(32, x, y))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;print&gt;
+#include &lt;utility&gt;
+
+int atakowane(int n, int x, int y) {
+    return 2 * (n - 1) + std::min(x - 1, y - 1) + std::min(x - 1, n - y)
+           + std::min(n - x, y - 1) + std::min(n - x, n - y);
+}
+
+int main() {
+    std::pair&lt;int, int&gt; pola[] = {{2, 2}, {5, 4}, {20, 18}, {25, 30}};
+    for (auto [x, y] : pola)
+        std::println(&quot;({}, {}) {}&quot;, x, y, atakowane(32, x, y));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int atakowane(int n, int x, int y) {
+        return 2 * (n - 1) + Math.min(x - 1, y - 1) + Math.min(x - 1, n - y)
+                + Math.min(n - x, y - 1) + Math.min(n - x, n - y);
+    }
+
+    public static void main(String[] args) {
+        int[][] pola = {{2, 2}, {5, 4}, {20, 18}, {25, 30}};
+        for (int[] p : pola)
+            System.out.println(&quot;(&quot; + p[0] + &quot;, &quot; + p[1] + &quot;) &quot; + atakowane(32, p[0], p[1]));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (2,2): 95, (5,4): 99, (20,18): 117, (25,30): 97</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%232b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#2c">2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Podaj specyfikację i algorytm, który dla dowolnej dodatniej liczby całkowitej n ≤ 50 i położenia hetmana (x, y) na szachownicy n×n (1 ≤ x, y ≤ n) obliczy liczbę pól atakowanych przez tego hetmana.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def atakowane(n, x, y):
     # Dane: n &lt;= 50 - rozmiar szachownicy, x, y - położenie hetmana (1 &lt;= x, y &lt;= n)
     # Wynik: liczba pól atakowanych przez hetmana
     wynik = 0
@@ -66,7 +123,57 @@ for x, y in [(2, 2), (5, 4), (20, 18), (25, 30)]:
     return wynik
 
 
-print(atakowane(8, 2, 6), atakowane(5, 1, 1), atakowane(32, 20, 18))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> wynik = 2(n−1) + min(x−1, y−1) + min(x−1, n−y) + min(n−x, y−1) + min(n−x, n−y)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#3-1-3-3">3.1 - 3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+print(atakowane(8, 2, 6), atakowane(5, 1, 1), atakowane(32, 20, 18))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int atakowane(int n, int x, int y) {
+    // Dane: n &lt;= 50 - rozmiar szachownicy, x, y - położenie hetmana (1 &lt;= x, y &lt;= n)
+    // Wynik: liczba pól atakowanych przez hetmana
+    int wynik = 0;
+    int kierunki[8][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
+    for (auto&amp; [dx, dy] : kierunki) {
+        int i = x + dx;
+        int j = y + dy;
+        while (1 &lt;= i &amp;&amp; i &lt;= n &amp;&amp; 1 &lt;= j &amp;&amp; j &lt;= n) {
+            wynik++;
+            i += dx;
+            j += dy;
+        }
+    }
+    return wynik;
+}
+
+int main() {
+    std::println(&quot;{} {} {}&quot;, atakowane(8, 2, 6), atakowane(5, 1, 1), atakowane(32, 20, 18));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int atakowane(int n, int x, int y) {
+        // Dane: n &lt;= 50 - rozmiar szachownicy, x, y - położenie hetmana (1 &lt;= x, y &lt;= n)
+        // Wynik: liczba pól atakowanych przez hetmana
+        int wynik = 0;
+        int[][] kierunki = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
+        for (int[] k : kierunki) {
+            int dx = k[0], dy = k[1];
+            int i = x + dx;
+            int j = y + dy;
+            while (1 &lt;= i &amp;&amp; i &lt;= n &amp;&amp; 1 &lt;= j &amp;&amp; j &lt;= n) {
+                wynik++;
+                i += dx;
+                j += dy;
+            }
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(atakowane(8, 2, 6) + &quot; &quot; + atakowane(5, 1, 1) + &quot; &quot; + atakowane(32, 20, 18));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> wynik = 2(n−1) + min(x−1, y−1) + min(x−1, n−y) + min(n−x, y−1) + min(n−x, n−y)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%202c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%232c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#3-1-3-3">3.1 - 3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 3. Dany jest algorytm (n — dodatnia liczba całkowita):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">p1 ← 1
+suma ← 0
+dla k = 1..n wykonuj
+    p1 ← p1 * n
+    p2 ← 1
+    dla i = 1..n wykonuj
+        p2 ← p2 * k
+    suma ← suma + p1 + p2</code></pre></div></div></div><ul><li>3.1 — podaj wartość zmiennej <code>p1</code> po wykonaniu algorytmu dla n = 3;</li><li>3.2 — podaj wartość zmiennej <code>p2</code> po wykonaniu algorytmu dla n = 3;</li><li>3.3 — podaj wartość zmiennej <code>suma</code> po wykonaniu algorytmu dla n = 3.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
     p1 = 1
     suma = 0
     for k in range(1, n + 1):
@@ -78,7 +185,42 @@ print(atakowane(8, 2, 6), atakowane(5, 1, 1), atakowane(32, 20, 18))</code></pre
     return p1, p2, suma
 
 
-print(algorytm(3))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> p1 = 27, p2 = 27, suma = 75; 3.4: suma = Σ(n^k + k^n) (odp. d); 3.5: n² + 3n (odp. b)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-6" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#3-6">3.6</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
+print(algorytm(3))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;tuple&gt;
+
+std::tuple&lt;long long, long long, long long&gt; algorytm(int n) {
+    long long p1 = 1, p2 = 1, suma = 0;
+    for (int k = 1; k &lt;= n; k++) {
+        p1 = p1 * n;
+        p2 = 1;
+        for (int i = 1; i &lt;= n; i++)
+            p2 = p2 * k;
+        suma = suma + p1 + p2;
+    }
+    return {p1, p2, suma};
+}
+
+int main() {
+    auto [p1, p2, suma] = algorytm(3);
+    std::println(&quot;({}, {}, {})&quot;, p1, p2, suma);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long[] algorytm(int n) {
+        long p1 = 1, p2 = 1, suma = 0;
+        for (int k = 1; k &lt;= n; k++) {
+            p1 = p1 * n;
+            p2 = 1;
+            for (int i = 1; i &lt;= n; i++)
+                p2 = p2 * k;
+            suma = suma + p1 + p2;
+        }
+        return new long[]{p1, p2, suma};
+    }
+
+    public static void main(String[] args) {
+        long[] w = algorytm(3);
+        System.out.println(&quot;(&quot; + w[0] + &quot;, &quot; + w[1] + &quot;, &quot; + w[2] + &quot;)&quot;);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> p1 = 27, p2 = 27, suma = 75; 3.4: suma = Σ(n^k + k^n) (odp. d); 3.5: n² + 3n (odp. b)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%203.1%20-%203.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%233-1-3-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-6" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część I</p><h2><a class="self" href="#3-6">3.6</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W algorytmie z zadania 3 (pętla zewnętrzna k = 1..n, w niej <code>p1 ← p1*n</code>, <code>p2 ← 1</code>, pętla wewnętrzna <code>dla i = 1..n: p2 ← p2*k</code> w wierszach 6–7, na końcu <code>suma ← suma + p1 + p2</code>) zmień wiersze 6 i 7 tak, aby po wykonaniu algorytmu wartością <code>suma</code> było Σ (nᵏ + k!) dla k = 1..n, gdzie k! = 1·2·…·k.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(n):
     p1 = 1
     suma = 0
     for k in range(1, n + 1):
@@ -90,7 +232,39 @@ print(algorytm(3))</code></pre></div><p class="answer"><strong>Odpowiedź:</stro
     return suma
 
 
-print(algorytm(3))  # (3 + 1!) + (9 + 2!) + (27 + 3!) = 48</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 6: dla i ← 1..k wykonuj, 7: p2 ← p2 * i</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
+print(algorytm(3))  # (3 + 1!) + (9 + 2!) + (27 + 3!) = 48</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+long long algorytm(int n) {
+    long long p1 = 1, suma = 0;
+    for (int k = 1; k &lt;= n; k++) {
+        p1 = p1 * n;
+        long long p2 = 1;
+        for (int i = 1; i &lt;= k; i++) // wiersz 6: dla i = 1..k
+            p2 = p2 * i;             // wiersz 7: p2 = p2 * i
+        suma = suma + p1 + p2;
+    }
+    return suma;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, algorytm(3)); // (3 + 1!) + (9 + 2!) + (27 + 3!) = 48
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long algorytm(int n) {
+        long p1 = 1, suma = 0;
+        for (int k = 1; k &lt;= n; k++) {
+            p1 = p1 * n;
+            long p2 = 1;
+            for (int i = 1; i &lt;= k; i++) // wiersz 6: dla i = 1..k
+                p2 = p2 * i;             // wiersz 7: p2 = p2 * i
+            suma = suma + p1 + p2;
+        }
+        return suma;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(algorytm(3)); // (3 + 1!) + (9 + 2!) + (27 + 3!) = 48
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 6: dla i ← 1..k wykonuj, 7: p2 ← p2 * i</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%203.6&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%233-6" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5a" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#5a">5a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 5. Liczba „super pierwsza” to liczba pierwsza, której suma cyfr też jest liczbą pierwszą. Liczba „super B pierwsza” dodatkowo ma pierwszą sumę cyfr w zapisie binarnym.</p><p>Dla przedziałów 1) ⟨2, 1000⟩, 2) ⟨100, 10000⟩, 3) ⟨1000, 100000⟩ policz, ile jest w nich liczb „super B pierwszych”. Wszystkie takie liczby z przedziałów 1, 2, 3 zapisz odpowiednio w plikach <code>1.txt</code>, <code>2.txt</code>, <code>3.txt</code> (po jednej w wierszu).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
     if n &lt; 2:
         return False
     i = 2
@@ -120,7 +294,86 @@ for nr in range(len(przedzialy)):
     with open(str(nr + 1) + &quot;.txt&quot;, &quot;w&quot;) as wyjscie:
         for n in liczby:
             wyjscie.write(str(n) + &quot;\n&quot;)
-    print(nr + 1, len(liczby))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> &lt;2,1000&gt;: 50, &lt;100,10000&gt;: 249, &lt;1000,100000&gt;: 1262</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
+    print(nr + 1, len(liczby))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;bit&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+bool czy_pierwsza(int n) {
+    if (n &lt; 2) return false;
+    for (int i = 2; i * i &lt;= n; i++)
+        if (n % i == 0) return false;
+    return true;
+}
+
+int suma_cyfr(int n) {
+    int suma = 0;
+    while (n &gt; 0) {
+        suma += n % 10;
+        n /= 10;
+    }
+    return suma;
+}
+
+bool super_b_pierwsza(int n) {
+    // std::popcount - liczba jedynek w zapisie binarnym
+    return czy_pierwsza(n) &amp;&amp; czy_pierwsza(suma_cyfr(n)) &amp;&amp; czy_pierwsza(std::popcount((unsigned)n));
+}
+
+int main() {
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; przedzialy = {{2, 1000}, {100, 10000}, {1000, 100000}};
+    for (size_t nr = 0; nr &lt; przedzialy.size(); nr++) {
+        auto [a, b] = przedzialy[nr];
+        std::vector&lt;int&gt; liczby;
+        for (int n = a; n &lt;= b; n++)
+            if (super_b_pierwsza(n)) liczby.push_back(n);
+        std::ofstream wyjscie(std::to_string(nr + 1) + &quot;.txt&quot;);
+        for (int n : liczby)
+            wyjscie &lt;&lt; n &lt;&lt; &quot;\n&quot;;
+        std::println(&quot;{} {}&quot;, nr + 1, liczby.size());
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.util.*;
+
+public class Zadanie {
+    static boolean czyPierwsza(int n) {
+        if (n &lt; 2) return false;
+        for (int i = 2; i * i &lt;= n; i++)
+            if (n % i == 0) return false;
+        return true;
+    }
+
+    static int sumaCyfr(int n) {
+        int suma = 0;
+        while (n &gt; 0) {
+            suma += n % 10;
+            n /= 10;
+        }
+        return suma;
+    }
+
+    static boolean superBPierwsza(int n) {
+        // Integer.bitCount - liczba jedynek w zapisie binarnym
+        return czyPierwsza(n) &amp;&amp; czyPierwsza(sumaCyfr(n)) &amp;&amp; czyPierwsza(Integer.bitCount(n));
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[][] przedzialy = {{2, 1000}, {100, 10000}, {1000, 100000}};
+        for (int nr = 0; nr &lt; przedzialy.length; nr++) {
+            int a = przedzialy[nr][0], b = przedzialy[nr][1];
+            var liczby = new ArrayList&lt;Integer&gt;();
+            for (int n = a; n &lt;= b; n++)
+                if (superBPierwsza(n)) liczby.add(n);
+            try (var wyjscie = new PrintWriter((nr + 1) + &quot;.txt&quot;)) {
+                for (int n : liczby)
+                    wyjscie.println(n);
+            }
+            System.out.println((nr + 1) + &quot; &quot; + liczby.size());
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> &lt;2,1000&gt;: 50, &lt;100,10000&gt;: 249, &lt;1000,100000&gt;: 1262</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%235a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5b" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#5b">5b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Korzystając z definicji z zadania 5, odpowiedz:</p><ul><li>ile liczb z przedziału ⟨100, 10000⟩ ma sumę cyfr będącą liczbą pierwszą?</li><li>czy suma wszystkich liczb „super B pierwszych” z przedziału ⟨100, 10000⟩ jest liczbą pierwszą?</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_pierwsza(n):
     if n &lt; 2:
         return False
     i = 2
@@ -148,27 +401,166 @@ for n in range(100, 10001):
             suma_super += n
 
 print(ile)
-print(suma_super, &quot;TAK&quot; if czy_pierwsza(suma_super) else &quot;NIE&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2973; NIE</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = 0
+print(suma_super, &quot;TAK&quot; if czy_pierwsza(suma_super) else &quot;NIE&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;bit&gt;
+#include &lt;print&gt;
+
+bool czy_pierwsza(long long n) {
+    if (n &lt; 2) return false;
+    for (long long i = 2; i * i &lt;= n; i++)
+        if (n % i == 0) return false;
+    return true;
+}
+
+int suma_cyfr(int n) {
+    int suma = 0;
+    while (n &gt; 0) {
+        suma += n % 10;
+        n /= 10;
+    }
+    return suma;
+}
+
+int main() {
+    int ile = 0;
+    long long suma_super = 0;
+    for (int n = 100; n &lt;= 10000; n++) {
+        if (czy_pierwsza(suma_cyfr(n))) {
+            ile++;
+            if (czy_pierwsza(n) &amp;&amp; czy_pierwsza(std::popcount((unsigned)n)))
+                suma_super += n;
+        }
+    }
+    std::println(&quot;{}&quot;, ile);
+    std::println(&quot;{} {}&quot;, suma_super, czy_pierwsza(suma_super) ? &quot;TAK&quot; : &quot;NIE&quot;);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static boolean czyPierwsza(long n) {
+        if (n &lt; 2) return false;
+        for (long i = 2; i * i &lt;= n; i++)
+            if (n % i == 0) return false;
+        return true;
+    }
+
+    static int sumaCyfr(int n) {
+        int suma = 0;
+        while (n &gt; 0) {
+            suma += n % 10;
+            n /= 10;
+        }
+        return suma;
+    }
+
+    public static void main(String[] args) {
+        int ile = 0;
+        long sumaSuper = 0;
+        for (int n = 100; n &lt;= 10000; n++) {
+            if (czyPierwsza(sumaCyfr(n))) {
+                ile++;
+                if (czyPierwsza(n) &amp;&amp; czyPierwsza(Integer.bitCount(n)))
+                    sumaSuper += n;
+            }
+        }
+        System.out.println(ile);
+        System.out.println(sumaSuper + &quot; &quot; + (czyPierwsza(sumaSuper) ? &quot;TAK&quot; : &quot;NIE&quot;));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2973; NIE</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%205b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%235b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 6. Plik <code>telefony.txt</code> zawiera 1000 zarejestrowanych połączeń — numerów telefonów (po jednym w wierszu), które mogą się powtarzać. Odpowiedzi do punktów a)–g) zapisz w pliku <code>zad_6.txt</code>, poprzedzając je oznaczeniem punktu.</p><p>Ile razy telefonowano z numeru 504 669 045?</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">ile = 0
 with open(&quot;telefony.txt&quot;) as file:
     for linia in file:
         if linia.strip() == &quot;504669045&quot;:
             ile += 1
 
-print(ile)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 30 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int ile = 0;
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string numer;
+    while (plik &gt;&gt; numer)
+        if (numer == &quot;504669045&quot;) ile++;
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int ile = 0;
+        for (String linia : Files.readAllLines(Path.of(&quot;telefony.txt&quot;)))
+            if (linia.strip().equals(&quot;504669045&quot;)) ile++;
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 30 razy</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%236a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie pliku <code>telefony.txt</code> (1000 połączeń) podaj, z którego numeru telefonowano najczęściej i ile razy. Odpowiedź zapisz w <code>zad_6.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
 with open(&quot;telefony.txt&quot;) as file:
     for linia in file:
         numer = linia.strip()
         polaczenia[numer] = polaczenia.get(numer, 0) + 1
 
 najczestszy = max(polaczenia, key=polaczenia.get)
-print(najczestszy, polaczenia[najczestszy])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 770 309 737 — 49 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+print(najczestszy, polaczenia[najczestszy])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; polaczenia;
+    std::vector&lt;std::string&gt; kolejnosc; // numery w kolejności pierwszego wystąpienia
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string numer;
+    while (plik &gt;&gt; numer) {
+        if (polaczenia[numer] == 0) kolejnosc.push_back(numer);
+        polaczenia[numer]++;
+    }
+
+    std::string najczestszy = kolejnosc[0];
+    for (const auto&amp; n : kolejnosc)
+        if (polaczenia[n] &gt; polaczenia[najczestszy]) najczestszy = n;
+    std::println(&quot;{} {}&quot;, najczestszy, polaczenia[najczestszy]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var polaczenia = new LinkedHashMap&lt;String, Integer&gt;(); // pamięta kolejność wstawiania
+        for (String linia : Files.readAllLines(Path.of(&quot;telefony.txt&quot;)))
+            polaczenia.merge(linia.strip(), 1, Integer::sum);
+
+        String najczestszy = null;
+        for (String numer : polaczenia.keySet())
+            if (najczestszy == null || polaczenia.get(numer) &gt; polaczenia.get(najczestszy)) najczestszy = numer;
+        System.out.println(najczestszy + &quot; &quot; + polaczenia.get(najczestszy));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 770 309 737 — 49 razy</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%236b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Ile numerów telefonów z pliku <code>telefony.txt</code> pochodzi z grupy numeracyjnej zaczynającej się od 511? Odpowiedź zapisz w <code>zad_6.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
 with open(&quot;telefony.txt&quot;) as file:
     for linia in file:
         numer = linia.strip()
         if numer.startswith(&quot;511&quot;):
             numery.add(numer)
 
-print(len(numery))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 51 numerów</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6d" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6d">6d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+print(len(numery))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::set&lt;std::string&gt; numery;
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string numer;
+    while (plik &gt;&gt; numer)
+        if (numer.starts_with(&quot;511&quot;)) numery.insert(numer);
+    std::println(&quot;{}&quot;, numery.size());
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var numery = new HashSet&lt;String&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;telefony.txt&quot;))) {
+            String numer = linia.strip();
+            if (numer.startsWith(&quot;511&quot;)) numery.add(numer);
+        }
+        System.out.println(numery.size());
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 51 numerów</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%236c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6d" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6d">6d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>I nagroda będzie losowana spośród osób, w których numerze telefonu suma cyfr parzystych jest większa od 42. Ile osób (numerów z pliku <code>telefony.txt</code>) weźmie udział w losowaniu? Odpowiedź zapisz w <code>zad_6.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
 with open(&quot;telefony.txt&quot;) as file:
     for linia in file:
         numery.add(linia.strip())
@@ -182,7 +574,48 @@ for numer in numery:
     if suma &gt; 42:
         ile += 1
 
-print(ile)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3 osoby</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6e" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6e">6e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::set&lt;std::string&gt; numery;
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string numer;
+    while (plik &gt;&gt; numer) numery.insert(numer);
+
+    int ile = 0;
+    for (const auto&amp; n : numery) {
+        int suma = 0;
+        for (char znak : n) {
+            int cyfra = znak - &#x27;0&#x27;;
+            if (cyfra % 2 == 0) suma += cyfra;
+        }
+        if (suma &gt; 42) ile++;
+    }
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var numery = new HashSet&lt;String&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;telefony.txt&quot;)))
+            numery.add(linia.strip());
+
+        int ile = 0;
+        for (String numer : numery) {
+            int suma = 0;
+            for (char znak : numer.toCharArray()) {
+                int cyfra = znak - &#x27;0&#x27;;
+                if (cyfra % 2 == 0) suma += cyfra;
+            }
+            if (suma &gt; 42) ile++;
+        }
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3 osoby</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%236d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6e" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6e">6e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>II nagroda będzie losowana spośród osób, w których numerze telefonu występują co najmniej cztery cyfry 1. Ile osób (numerów z pliku <code>telefony.txt</code>) weźmie udział w losowaniu? Odpowiedź zapisz w <code>zad_6.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
 with open(&quot;telefony.txt&quot;) as file:
     for linia in file:
         numery.add(linia.strip())
@@ -192,7 +625,37 @@ for numer in numery:
     if numer.count(&quot;1&quot;) &gt;= 4:
         ile += 1
 
-print(ile)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 8 osób</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6f" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6f">6f</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::set&lt;std::string&gt; numery;
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string numer;
+    while (plik &gt;&gt; numer) numery.insert(numer);
+
+    int ile = 0;
+    for (const auto&amp; n : numery)
+        if (std::count(n.begin(), n.end(), &#x27;1&#x27;) &gt;= 4) ile++;
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var numery = new HashSet&lt;String&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;telefony.txt&quot;)))
+            numery.add(linia.strip());
+
+        int ile = 0;
+        for (String numer : numery)
+            if (numer.chars().filter(c -&gt; c == &#x27;1&#x27;).count() &gt;= 4) ile++;
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 8 osób</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206e&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%236e" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6f" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6f">6f</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>III nagroda będzie losowana spośród osób, w których numerze telefonu ostatnią cyfrą jest 2, a mediana wszystkich cyfr numeru jest podzielna przez 3. Ile osób (numerów z pliku <code>telefony.txt</code>) weźmie udział w losowaniu? Odpowiedź zapisz w <code>zad_6.txt</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">numery = set()
 with open(&quot;telefony.txt&quot;) as file:
     for linia in file:
         numery.add(linia.strip())
@@ -204,7 +667,45 @@ for numer in numery:
     if numer[-1] == &quot;2&quot; and mediana % 3 == 0:
         ile += 1
 
-print(ile)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 15 osób</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6g" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6g">6g</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
+print(ile)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::set&lt;std::string&gt; numery;
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string numer;
+    while (plik &gt;&gt; numer) numery.insert(numer);
+
+    int ile = 0;
+    for (const auto&amp; n : numery) {
+        std::string cyfry = n;
+        std::sort(cyfry.begin(), cyfry.end());
+        int mediana = cyfry[cyfry.size() / 2] - &#x27;0&#x27;; // numer ma 9 cyfr, więc mediana to środkowa cyfra
+        if (n.back() == &#x27;2&#x27; &amp;&amp; mediana % 3 == 0) ile++;
+    }
+    std::println(&quot;{}&quot;, ile);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var numery = new HashSet&lt;String&gt;();
+        for (String linia : Files.readAllLines(Path.of(&quot;telefony.txt&quot;)))
+            numery.add(linia.strip());
+
+        int ile = 0;
+        for (String numer : numery) {
+            char[] cyfry = numer.toCharArray();
+            Arrays.sort(cyfry);
+            int mediana = cyfry[cyfry.length / 2] - &#x27;0&#x27;; // numer ma 9 cyfr, więc mediana to środkowa cyfra
+            if (numer.endsWith(&quot;2&quot;) &amp;&amp; mediana % 3 == 0) ile++;
+        }
+        System.out.println(ile);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 15 osób</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206f&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%236f" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6g" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Część II</p><h2><a class="self" href="#6g">6g</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Na podstawie pliku <code>telefony.txt</code> utwórz zestawienie: w pierwszej kolumnie numery, z których dzwoniono co najmniej 2 razy, w drugiej — liczba połączeń z danego numeru (zapisz w <code>zad_6.txt</code>). W punkcie h) wykonaj do tego zestawienia wykres kolumnowy z czytelnie opisanymi osiami.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">polaczenia = {}
 with open(&quot;telefony.txt&quot;) as file:
     for linia in file:
         numer = linia.strip()
@@ -212,7 +713,45 @@ with open(&quot;telefony.txt&quot;) as file:
 
 for numer in sorted(polaczenia, key=polaczenia.get, reverse=True):
     if polaczenia[numer] &gt;= 2:
-        print(numer, polaczenia[numer], sep=&quot;\t&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 770309737 49, 728257806 45, 527231153 39, 623337579 31, 504669045 30, 696946597 20</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+        print(numer, polaczenia[numer], sep=&quot;\t&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; polaczenia;
+    std::vector&lt;std::string&gt; numery; // w kolejności pierwszego wystąpienia
+    std::ifstream plik(&quot;telefony.txt&quot;);
+    std::string numer;
+    while (plik &gt;&gt; numer) {
+        if (polaczenia[numer] == 0) numery.push_back(numer);
+        polaczenia[numer]++;
+    }
+
+    // sortowanie stabilne malejąco po liczbie połączeń (jak sorted w Pythonie)
+    std::stable_sort(numery.begin(), numery.end(), [&amp;](const std::string&amp; a, const std::string&amp; b) {
+        return polaczenia[a] &gt; polaczenia[b];
+    });
+    for (const auto&amp; n : numery)
+        if (polaczenia[n] &gt;= 2) std::println(&quot;{}\t{}&quot;, n, polaczenia[n]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var polaczenia = new LinkedHashMap&lt;String, Integer&gt;(); // pamięta kolejność wstawiania
+        for (String linia : Files.readAllLines(Path.of(&quot;telefony.txt&quot;)))
+            polaczenia.merge(linia.strip(), 1, Integer::sum);
+
+        // List.sort jest stabilne - jak sorted w Pythonie
+        var numery = new ArrayList&lt;&gt;(polaczenia.keySet());
+        numery.sort((a, b) -&gt; polaczenia.get(b) - polaczenia.get(a));
+        for (String numer : numery)
+            if (polaczenia.get(numer) &gt;= 2) System.out.println(numer + &quot;\t&quot; + polaczenia.get(numer));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 770309737 49, 728257806 45, 527231153 39, 623337579 31, 504669045 30, 696946597 20</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202007%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206g&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2007-maj.html%236g" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2007_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

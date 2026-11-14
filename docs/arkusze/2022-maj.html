@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2022 — maj, poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2022 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def do_podmiany(A):
+<h1 class="page-title">Matura 2022 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (n-permutacja):</strong> n-permutacją nazywamy n-elementowy ciąg liczb całkowitych zawierający każdą z liczb 1, 2, …, n dokładnie raz, np. (4,2,1,3) jest 4-permutacją, a (1,3,1,2) czy (2,3,4,5) nie są. W ciągu, który nie jest n-permutacją, można podmienić niektóre elementy, aby nią był – np. w (1,3,1) wystarczy zmienić jedną jedynkę na 2.</p><ul><li><strong>1.1</strong> — Dla podanych ciągów wpisz najmniejszą liczbę elementów do podmiany (0, jeśli ciąg już jest n-permutacją): n=4 (1,4,2,5); n=5 (2,2,2,2,2); n=4 (4,2,3,1); n=6 (5,4,1,5,6,8); n=6 (8,4,9,6,5,7). Przykład: n=3 (1,3,1) → 1.</li><li><strong>1.2</strong> — Zapisz algorytm, który dla tablicy <code>A[1..n]</code> dodatnich liczb całkowitych obliczy minimalną liczbę <code>k</code> elementów do podmiany, aby powstała n-permutacja. Wolno używać tylko instrukcji sterujących, podstawowych operatorów arytmetycznych (w tym <code>div</code>, <code>mod</code>), logicznych, porównań, odwołań do elementów tablicy i przypisań – bez funkcji wbudowanych.</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def do_podmiany(A):
     n = len(A)
     wystapienia = [0] * (n + 1)   # wystapienia[x] - ile razy liczba x (1..n) jest w A
     k = 0
@@ -53,7 +53,57 @@
 
 
 for A in [[1, 3, 1], [1, 4, 2, 5], [2, 2, 2, 2, 2], [4, 2, 3, 1], [5, 4, 1, 5, 6, 8], [8, 4, 9, 6, 5, 7]]:
-    print(A, do_podmiany(A))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (1,3,1) → 1, (1,4,2,5) → 1, (2,2,2,2,2) → 4, (4,2,3,1) → 0, (5,4,1,5,6,8) → 2, (8,4,9,6,5,7) → 3. 1.2: do podmiany są liczby spoza [1, n] oraz wszystkie powtórzenia (poza jednym wystąpieniem) liczb z [1, n] — funkcja <code>do_podmiany</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(s):
+    print(A, do_podmiany(A))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int do_podmiany(const std::vector&lt;int&gt;&amp; A) {
+    int n = A.size();
+    std::vector&lt;int&gt; wystapienia(n + 1, 0);  // wystapienia[x] - ile razy liczba x (1..n) jest w A
+    int k = 0;
+    for (int x : A) {
+        if (1 &lt;= x &amp;&amp; x &lt;= n)
+            wystapienia[x]++;
+        else
+            k++;  // liczba spoza [1, n] na pewno do podmiany
+    }
+    for (int x = 1; x &lt;= n; x++)
+        if (wystapienia[x] &gt; 1) k += wystapienia[x] - 1;  // wszystkie powtórzenia poza jednym
+    return k;
+}
+
+int main() {
+    std::vector&lt;std::vector&lt;int&gt;&gt; tablice = {{1, 3, 1}, {1, 4, 2, 5}, {2, 2, 2, 2, 2},
+                                             {4, 2, 3, 1}, {5, 4, 1, 5, 6, 8}, {8, 4, 9, 6, 5, 7}};
+    for (auto&amp; A : tablice) std::println(&quot;{} {}&quot;, A, do_podmiany(A));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int doPodmiany(int[] A) {
+        int n = A.length;
+        int[] wystapienia = new int[n + 1];  // wystapienia[x] - ile razy liczba x (1..n) jest w A
+        int k = 0;
+        for (int x : A) {
+            if (1 &lt;= x &amp;&amp; x &lt;= n)
+                wystapienia[x]++;
+            else
+                k++;  // liczba spoza [1, n] na pewno do podmiany
+        }
+        for (int x = 1; x &lt;= n; x++)
+            if (wystapienia[x] &gt; 1) k += wystapienia[x] - 1;  // wszystkie powtórzenia poza jednym
+        return k;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[][] tablice = {{1, 3, 1}, {1, 4, 2, 5}, {2, 2, 2, 2, 2},
+                           {4, 2, 3, 1}, {5, 4, 1, 5, 6, 8}, {8, 4, 9, 6, 5, 7}};
+        for (var A : tablice) System.out.println(Arrays.toString(A) + &quot; &quot; + doPodmiany(A));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: (1,3,1) → 1, (1,4,2,5) → 1, (2,2,2,2,2) → 4, (4,2,3,1) → 0, (5,4,1,5,6,8) → 2, (8,4,9,6,5,7) → 3. 1.2: do podmiany są liczby spoza [1, n] oraz wszystkie powtórzenia (poza jednym wystąpieniem) liczb z [1, n] — funkcja <code>do_podmiany</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202022%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-maj.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla słowa <code>s</code> długości n złożonego z liter <code>a</code> i <code>b</code> wykonujemy algorytm, którego wynikiem jest <code>k</code>:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">A[0] ← 0
+dla i = 1..n:   jeżeli s[i] = &#x27;a&#x27; to A[i] ← A[i-1] + 1, w p.p. A[i] ← A[i-1]
+B[n+1] ← 0
+dla j = n..1:   jeżeli s[j] = &#x27;b&#x27; to B[j] ← B[j+1] + 1, w p.p. B[j] ← B[j+1]
+k ← 1
+dla i = 0..n:   jeżeli A[i] + B[i+1] &gt; k to k ← A[i] + B[i+1]</code></pre></div></div></div><ul><li><strong>2.1</strong> — Podaj wynik k dla słów <code>aababb</code> (n=6) i <code>baabbaaab</code> (n=9). Przykłady: <code>aabab</code> → 4, <code>ab</code> → 2, <code>aaa</code> → 3.</li><li><strong>2.2</strong> — Podaj przykłady dziesięcioliterowych słów, dla których k = 10 oraz k = 5.</li><li><strong>2.3</strong> — Zapis aᵐ (bᵐ) oznacza literę a (b) powtórzoną m razy. Podaj wynik k dla słowa a³⁰⁰b⁵⁵⁰a³⁰⁰b⁷a²⁸⁰b¹¹⁰.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def algorytm(s):
     n = len(s)
     s = &quot; &quot; + s                   # indeksowanie od 1 jak w treści
     A = [0] * (n + 2)
@@ -84,7 +134,84 @@ print(&quot;aaaaabbbbb&quot;, algorytm(&quot;aaaaabbbbb&quot;))
 print(&quot;bbbbbaaaaa&quot;, algorytm(&quot;bbbbbaaaaa&quot;))
 
 # 2.3
-print(algorytm(&quot;a&quot; * 300 + &quot;b&quot; * 550 + &quot;a&quot; * 300 + &quot;b&quot; * 7 + &quot;a&quot; * 280 + &quot;b&quot; * 110))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: aababb → 5, baabbaaab → 6. 2.2: k = 10 np. aaaaabbbbb (wszystkie a przed wszystkimi b), k = 5 np. bbbbbaaaaa. 2.3: k = 990</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
+print(algorytm(&quot;a&quot; * 300 + &quot;b&quot; * 550 + &quot;a&quot; * 300 + &quot;b&quot; * 7 + &quot;a&quot; * 280 + &quot;b&quot; * 110))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int algorytm(std::string s) {
+    int n = s.size();
+    s = &quot; &quot; + s;  // indeksowanie od 1 jak w treści
+    std::vector&lt;int&gt; A(n + 2, 0);
+    for (int i = 1; i &lt;= n; i++) {
+        if (s[i] == &#x27;a&#x27;)
+            A[i] = A[i - 1] + 1;
+        else
+            A[i] = A[i - 1];
+    }
+    std::vector&lt;int&gt; B(n + 2, 0);
+    for (int j = n; j &gt;= 1; j--) {
+        if (s[j] == &#x27;b&#x27;)
+            B[j] = B[j + 1] + 1;
+        else
+            B[j] = B[j + 1];
+    }
+    int k = 1;
+    for (int i = 0; i &lt;= n; i++)
+        if (A[i] + B[i + 1] &gt; k) k = A[i] + B[i + 1];
+    return k;
+}
+
+int main() {
+    // 2.1
+    for (std::string s : {&quot;aabab&quot;, &quot;ab&quot;, &quot;aaa&quot;, &quot;aababb&quot;, &quot;baabbaaab&quot;})
+        std::println(&quot;{} {}&quot;, s, algorytm(s));
+
+    // 2.2 - k = najdłuższy podciąg postaci a...ab...b; szukamy przykładów
+    std::println(&quot;aaaaabbbbb {}&quot;, algorytm(&quot;aaaaabbbbb&quot;));
+    std::println(&quot;bbbbbaaaaa {}&quot;, algorytm(&quot;bbbbbaaaaa&quot;));
+
+    // 2.3
+    std::string s = std::string(300, &#x27;a&#x27;) + std::string(550, &#x27;b&#x27;) + std::string(300, &#x27;a&#x27;) +
+                    std::string(7, &#x27;b&#x27;) + std::string(280, &#x27;a&#x27;) + std::string(110, &#x27;b&#x27;);
+    std::println(&quot;{}&quot;, algorytm(s));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int algorytm(String s) {
+        int n = s.length();
+        s = &quot; &quot; + s;  // indeksowanie od 1 jak w treści
+        int[] A = new int[n + 2];
+        for (int i = 1; i &lt;= n; i++) {
+            if (s.charAt(i) == &#x27;a&#x27;)
+                A[i] = A[i - 1] + 1;
+            else
+                A[i] = A[i - 1];
+        }
+        int[] B = new int[n + 2];
+        for (int j = n; j &gt;= 1; j--) {
+            if (s.charAt(j) == &#x27;b&#x27;)
+                B[j] = B[j + 1] + 1;
+            else
+                B[j] = B[j + 1];
+        }
+        int k = 1;
+        for (int i = 0; i &lt;= n; i++)
+            if (A[i] + B[i + 1] &gt; k) k = A[i] + B[i + 1];
+        return k;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        for (String s : new String[] {&quot;aabab&quot;, &quot;ab&quot;, &quot;aaa&quot;, &quot;aababb&quot;, &quot;baabbaaab&quot;})
+            System.out.println(s + &quot; &quot; + algorytm(s));
+
+        // 2.2 - k = najdłuższy podciąg postaci a...ab...b; szukamy przykładów
+        System.out.println(&quot;aaaaabbbbb &quot; + algorytm(&quot;aaaaabbbbb&quot;));
+        System.out.println(&quot;bbbbbaaaaa &quot; + algorytm(&quot;bbbbbaaaaa&quot;));
+
+        // 2.3
+        String s = &quot;a&quot;.repeat(300) + &quot;b&quot;.repeat(550) + &quot;a&quot;.repeat(300) + &quot;b&quot;.repeat(7) + &quot;a&quot;.repeat(280) + &quot;b&quot;.repeat(110);
+        System.out.println(algorytm(s));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: aababb → 5, baabbaaab → 6. 2.2: k = 10 np. aaaaabbbbb (wszystkie a przed wszystkimi b), k = 5 np. bbbbbaaaaa. 2.3: k = 990</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202022%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-maj.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Liczby):</strong> Plik <code>liczby.txt</code> zawiera 200 różnych liczb całkowitych z zakresu [10, 100000], każda w osobnym wierszu. Odpowiedzi zapisz w <code>wyniki4.txt</code>, poprzedzając je numerem zadania (do testów: <code>przyklad.txt</code>).</p><ul><li><strong>4.1</strong> — Podaj, ile liczb ma taką samą pierwszą i ostatnią cyfrę, oraz pierwszą taką liczbę w pliku. Dla pliku przykładowego: <code>26 626</code>.</li><li><strong>4.2</strong> — Znajdź liczbę o największej liczbie czynników pierwszych (licząc z powtórzeniami) i podaj ją wraz z tą liczbą czynników, a także liczbę o największej liczbie różnych czynników pierwszych wraz z ich liczbą. Np. 420 = 2·2·3·5·7 ma 5 czynników, w tym 4 różne. Dla pliku przykładowego: <code>144 6 210 4</code>.</li><li><strong>4.3</strong> — Trójka (x, y, z) jest dobra, gdy x dzieli y, y dzieli z i liczby są różne; analogicznie dobra piątka (u, w, x, y, z) – każda kolejna liczba jest podzielna przez poprzednią, wszystkie różne. Liczby mogą stać w pliku w dowolnych miejscach. a) Podaj liczbę dobrych trójek i zapisz je wszystkie do pliku <code>trojki.txt</code> (każdą w osobnym wierszu); b) podaj liczbę dobrych piątek. Dla pliku przykładowego: a) 10, b) 1 (np. trójka <code>13 26 52</code>).</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
         liczby.append(int(line))
@@ -154,7 +281,177 @@ def lancuchy(ostatnia, dlugosc):
 piatki = 0
 for u in liczby:
     piatki += lancuchy(u, 1)
-print(&quot;4.3&quot;, trojki, piatki)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 18 93639; 4.2: 99792 10 (także 20992 i 56064 mają 10 czynników), 62790 6; 4.3: a) 27 dobrych trójek (np. 955 8595 42975, 232 13688 27376, 13594 27188 81564, …), b) 2 dobre piątki</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2022_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;4.3&quot;, trojki, piatki)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;long long&gt; liczby;
+
+// 4.2 - zwraca (liczba wszystkich czynników pierwszych, liczba różnych czynników)
+std::pair&lt;int, int&gt; czynniki(long long x) {
+    int wszystkie = 0;
+    int rozne = 0;
+    for (long long d = 2; d * d &lt;= x; d++) {
+        if (x % d == 0) {
+            rozne++;
+            while (x % d == 0) {
+                x /= d;
+                wszystkie++;
+            }
+        }
+    }
+    if (x &gt; 1) {
+        wszystkie++;
+        rozne++;
+    }
+    return {wszystkie, rozne};
+}
+
+// dobre piątki - liczymy rekurencyjnie łańcuchy podzielności długości 5
+long long lancuchy(long long ostatnia, int dlugosc) {
+    if (dlugosc == 5) return 1;
+    long long wynik = 0;
+    for (long long nastepna : liczby)
+        if (nastepna != ostatnia &amp;&amp; nastepna % ostatnia == 0) wynik += lancuchy(nastepna, dlugosc + 1);
+    return wynik;
+}
+
+int main() {
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    long long a;
+    while (plik &gt;&gt; a) liczby.push_back(a);
+
+    // 4.1
+    int ile = 0;
+    long long pierwsza = 0;
+    for (long long x : liczby) {
+        std::string napis = std::to_string(x);
+        if (napis.front() == napis.back()) {
+            if (ile == 0) pierwsza = x;
+            ile++;
+        }
+    }
+    std::println(&quot;4.1 {} {}&quot;, ile, pierwsza);
+
+    // 4.2
+    int max_wsz = 0, max_roz = 0;
+    long long liczba_wsz = 0, liczba_roz = 0;
+    for (long long x : liczby) {
+        auto [wszystkie, rozne] = czynniki(x);
+        if (wszystkie &gt; max_wsz) {
+            max_wsz = wszystkie;
+            liczba_wsz = x;
+        }
+        if (rozne &gt; max_roz) {
+            max_roz = rozne;
+            liczba_roz = x;
+        }
+    }
+    std::println(&quot;4.2 {} {} {} {}&quot;, liczba_wsz, max_wsz, liczba_roz, max_roz);
+
+    // 4.3 - liczby w pliku są różne, więc wystarczy x | y, y | z i x != y != z
+    int trojki = 0;
+    std::ofstream wyjscie(&quot;trojki.txt&quot;);
+    for (long long x : liczby)
+        for (long long y : liczby)
+            if (y != x &amp;&amp; y % x == 0)
+                for (long long z : liczby)
+                    if (z != y &amp;&amp; z % y == 0) {
+                        trojki++;
+                        wyjscie &lt;&lt; x &lt;&lt; &quot; &quot; &lt;&lt; y &lt;&lt; &quot; &quot; &lt;&lt; z &lt;&lt; &quot;\n&quot;;
+                    }
+
+    long long piatki = 0;
+    for (long long u : liczby) piatki += lancuchy(u, 1);
+    std::println(&quot;4.3 {} {}&quot;, trojki, piatki);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static List&lt;Long&gt; liczby = new ArrayList&lt;&gt;();
+
+    // 4.2 - zwraca {liczba wszystkich czynników pierwszych, liczba różnych czynników}
+    static int[] czynniki(long x) {
+        int wszystkie = 0;
+        int rozne = 0;
+        for (long d = 2; d * d &lt;= x; d++) {
+            if (x % d == 0) {
+                rozne++;
+                while (x % d == 0) {
+                    x /= d;
+                    wszystkie++;
+                }
+            }
+        }
+        if (x &gt; 1) {
+            wszystkie++;
+            rozne++;
+        }
+        return new int[] {wszystkie, rozne};
+    }
+
+    // dobre piątki - liczymy rekurencyjnie łańcuchy podzielności długości 5
+    static long lancuchy(long ostatnia, int dlugosc) {
+        if (dlugosc == 5) return 1;
+        long wynik = 0;
+        for (long nastepna : liczby)
+            if (nastepna != ostatnia &amp;&amp; nastepna % ostatnia == 0) wynik += lancuchy(nastepna, dlugosc + 1);
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;)))
+            if (!linia.isBlank()) liczby.add(Long.parseLong(linia.trim()));
+
+        // 4.1
+        int ile = 0;
+        long pierwsza = 0;
+        for (long x : liczby) {
+            String napis = Long.toString(x);
+            if (napis.charAt(0) == napis.charAt(napis.length() - 1)) {
+                if (ile == 0) pierwsza = x;
+                ile++;
+            }
+        }
+        System.out.println(&quot;4.1 &quot; + ile + &quot; &quot; + pierwsza);
+
+        // 4.2
+        int maxWsz = 0, maxRoz = 0;
+        long liczbaWsz = 0, liczbaRoz = 0;
+        for (long x : liczby) {
+            int[] wr = czynniki(x);
+            if (wr[0] &gt; maxWsz) {
+                maxWsz = wr[0];
+                liczbaWsz = x;
+            }
+            if (wr[1] &gt; maxRoz) {
+                maxRoz = wr[1];
+                liczbaRoz = x;
+            }
+        }
+        System.out.println(&quot;4.2 &quot; + liczbaWsz + &quot; &quot; + maxWsz + &quot; &quot; + liczbaRoz + &quot; &quot; + maxRoz);
+
+        // 4.3 - liczby w pliku są różne, więc wystarczy x | y, y | z i x != y != z
+        int trojki = 0;
+        try (var wyjscie = new PrintWriter(&quot;trojki.txt&quot;)) {
+            for (long x : liczby)
+                for (long y : liczby)
+                    if (y != x &amp;&amp; y % x == 0)
+                        for (long z : liczby)
+                            if (z != y &amp;&amp; z % y == 0) {
+                                trojki++;
+                                wyjscie.println(x + &quot; &quot; + y + &quot; &quot; + z);
+                            }
+        }
+
+        long piatki = 0;
+        for (long u : liczby) piatki += lancuchy(u, 1);
+        System.out.println(&quot;4.3 &quot; + trojki + &quot; &quot; + piatki);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 18 93639; 4.2: 99792 10 (także 20992 i 56064 mają 10 czynników), 62790 6; 4.3: a) 27 dobrych trójek (np. 955 8595 42975, 232 13688 27376, 13594 27188 81564, …), b) 2 dobre piątki</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202022%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%20i%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-maj.html%234-1-4-2-i-4-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2022_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

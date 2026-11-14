@@ -37,7 +37,21 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-4">1.1, 1.2 i 1.4</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#6-1-6-2-i-6-3">6.1, 6.2 i 6.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2018 — maj, poziom rozszerzony (stara formuła)</span></nav>
-<h1 class="page-title">Matura 2018 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-4" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-4">1.1, 1.2 i 1.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def humor(n):
+<h1 class="page-title">Matura 2018 — maj, poziom rozszerzony (stara formuła)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2018-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-4" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-4">1.1, 1.2 i 1.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (humor liczb). Algorytm sprawdza, czy liczba całkowita dodatnia <code>n</code> jest „wesoła”, czy „smutna”: wielokrotnie zastępuje liczbę sumą kwadratów jej cyfr, zapisując kolejne wartości w tablicy <code>T</code>.</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">T[0] ← n
+i ← 0
+powtarzaj:
+    k ← T[i]
+    suma ← 0
+    dopóki k &gt; 0 wykonuj                 (*)
+        suma ← suma + (k mod 10)*(k mod 10)
+        k ← k div 10
+    jeżeli suma = 1
+        wypisz &quot;liczba wesoła&quot; i zakończ
+    dla j = 0, ..., i
+        jeżeli T[j] = suma
+            wypisz &quot;liczba smutna&quot; i zakończ
+    i ← i + 1
+    T[i] ← suma</code></pre></div></div></div><ul><li>1.1 — podaj, ile razy spełniony jest warunek <code>k &gt; 0</code> w wierszu (*) dla początkowych wartości <code>k</code> = 15, 5005 oraz dla dowolnej liczby całkowitej <code>x &gt; 0</code>.</li><li>1.2 — dla <code>n</code> = 7 i <code>n</code> = 145 podaj zawartość tablicy <code>T</code> i wynik działania algorytmu.</li><li>1.4 — uzupełnij brakujące trzy cyfry w liczbie <code>9 4 _ _ _</code> tak, aby powstała pięciocyfrowa liczba wesoła, i podaj zawartość tablicy <code>T</code> dla tej liczby.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def humor(n):
     # zwraca: liczbę wykonań pętli (*) dla k = n, tablicę T i wynik algorytmu
     T = [n]
     i = 0
@@ -79,7 +93,128 @@ for n in range(94000, 95000):
         print(n, T)
         break
 
-print(humor(94111))   # inny przykład: 81 + 16 + 1 + 1 + 1 = 100, a 1 + 0 + 0 = 1</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 15 → 2, 5005 → 4, x → liczba cyfr x, czyli ⌊log₁₀ x⌋ + 1. 1.2: n = 7: T = 7, 49, 97, 130, 10 – liczba wesoła; n = 145: T = 145, 42, 20, 4, 16, 37, 58, 89 – liczba smutna. 1.4: np. 94000 (T = [94000, 97, 130, 10]) albo 94111 (T = [94111, 100]).</p><blockquote class="callout">W kluczu przy 1.4 podano „94111, T=[100]” – według algorytmu T[0] = n, więc pełna zawartość tablicy to [94111, 100].</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_automorficzna(n):
+print(humor(94111))   # inny przykład: 81 + 16 + 1 + 1 + 1 = 100, a 1 + 0 + 0 = 1</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// zwraca: tablicę T i wynik algorytmu
+std::pair&lt;std::vector&lt;long long&gt;, std::string&gt; humor(long long n) {
+    std::vector&lt;long long&gt; T = {n};
+    int i = 0;
+    while (true) {
+        long long k = T[i];
+        long long suma = 0;
+        while (k &gt; 0) {
+            suma = suma + (k % 10) * (k % 10);
+            k = k / 10;
+        }
+        if (suma == 1)
+            return {T, &quot;liczba wesoła&quot;};
+        for (int j = 0; j &lt;= i; j++)
+            if (T[j] == suma)
+                return {T, &quot;liczba smutna&quot;};
+        i = i + 1;
+        T.push_back(suma);
+    }
+}
+
+int ile_obrotow(long long k) {
+    // ile razy warunek k &gt; 0 w wierszu (*) daje prawdę = liczba cyfr k
+    int ile = 0;
+    while (k &gt; 0) {
+        ile++;
+        k = k / 10;
+    }
+    return ile;
+}
+
+// wypisuje wynik humor(n) w postaci ([...], &#x27;napis&#x27;)
+void wypisz(const std::pair&lt;std::vector&lt;long long&gt;, std::string&gt;&amp; w) {
+    std::println(&quot;({}, &#x27;{}&#x27;)&quot;, w.first, w.second);
+}
+
+int main() {
+    // 1.1
+    std::println(&quot;{} {}&quot;, ile_obrotow(15), ile_obrotow(5005));
+
+    // 1.2
+    wypisz(humor(7));
+    wypisz(humor(145));
+
+    // 1.4 - szukamy cyfr a, b, c, dla których liczba 94abc jest wesoła
+    for (long long n = 94000; n &lt; 95000; n++) {
+        auto [T, wynik] = humor(n);
+        if (wynik == &quot;liczba wesoła&quot;) {
+            std::println(&quot;{} {}&quot;, n, T);
+            break;
+        }
+    }
+
+    wypisz(humor(94111));  // inny przykład: 81 + 16 + 1 + 1 + 1 = 100, a 1 + 0 + 0 = 1
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    // wynik algorytmu: tablica T i napis
+    record Wynik(List&lt;Long&gt; T, String opis) {
+        @Override
+        public String toString() {
+            return &quot;(&quot; + T + &quot;, &#x27;&quot; + opis + &quot;&#x27;)&quot;;
+        }
+    }
+
+    static Wynik humor(long n) {
+        var T = new ArrayList&lt;Long&gt;();
+        T.add(n);
+        int i = 0;
+        while (true) {
+            long k = T.get(i);
+            long suma = 0;
+            while (k &gt; 0) {
+                suma = suma + (k % 10) * (k % 10);
+                k = k / 10;
+            }
+            if (suma == 1)
+                return new Wynik(T, &quot;liczba wesoła&quot;);
+            for (int j = 0; j &lt;= i; j++)
+                if (T.get(j) == suma)
+                    return new Wynik(T, &quot;liczba smutna&quot;);
+            i = i + 1;
+            T.add(suma);
+        }
+    }
+
+    static int ileObrotow(long k) {
+        // ile razy warunek k &gt; 0 w wierszu (*) daje prawdę = liczba cyfr k
+        int ile = 0;
+        while (k &gt; 0) {
+            ile++;
+            k = k / 10;
+        }
+        return ile;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        System.out.println(ileObrotow(15) + &quot; &quot; + ileObrotow(5005));
+
+        // 1.2
+        System.out.println(humor(7));
+        System.out.println(humor(145));
+
+        // 1.4 - szukamy cyfr a, b, c, dla których liczba 94abc jest wesoła
+        for (long n = 94000; n &lt; 95000; n++) {
+            Wynik w = humor(n);
+            if (w.opis().equals(&quot;liczba wesoła&quot;)) {
+                System.out.println(n + &quot; &quot; + w.T());
+                break;
+            }
+        }
+
+        System.out.println(humor(94111));  // inny przykład: 81 + 16 + 1 + 1 + 1 = 100, a 1 + 0 + 0 = 1
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 15 → 2, 5005 → 4, x → liczba cyfr x, czyli ⌊log₁₀ x⌋ + 1. 1.2: n = 7: T = 7, 49, 97, 130, 10 – liczba wesoła; n = 145: T = 145, 42, 20, 4, 16, 37, 58, 89 – liczba smutna. 1.4: np. 94000 (T = [94000, 97, 130, 10]) albo 94111 (T = [94111, 100]).</p><blockquote class="callout"><p>W kluczu przy 1.4 podano „94111, T=[100]” – według algorytmu T[0] = n, więc pełna zawartość tablicy to [94111, 100].</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%201.1%2C%201.2%20i%201.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj-stare.html%231-1-1-2-i-1-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (liczba automorficzna). Liczba całkowita dodatnia <code>n</code> jest automorficzna, jeśli <code>n = n² mod 10^k</code>, gdzie <code>k</code> to liczba cyfr <code>n</code> w zapisie dziesiętnym (czyli kwadrat liczby kończy się nią samą).</p><ul><li>2.1 — oceń, które z liczb 5, 6, 11, 25, 36, 76 są automorficzne (dla 5 odpowiedź TAK jest podana).</li><li>2.2 — napisz algorytm, który dla danej liczby <code>n</code> odpowie „Tak”, jeśli jest automorficzna, lub „Nie” w przeciwnym razie. Wolno używać tylko dodawania, odejmowania, mnożenia, dzielenia całkowitego i reszty z dzielenia.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def czy_automorficzna(n):
     potega = 10                 # najmniejsza potęga 10 większa od n, czyli 10^k
     while potega &lt;= n:
         potega = potega * 10
@@ -95,7 +230,52 @@ n = int(input())
 if czy_automorficzna(n):
     print(&quot;Tak&quot;)
 else:
-    print(&quot;Nie&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 6 – TAK, 11 – NIE, 25 – TAK, 36 – NIE, 76 – TAK. 2.2: funkcja <code>czy_automorficzna</code> (10^k liczymy jako najmniejszą potęgę 10 większą od n).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1-6-2-i-6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1-6-2-i-6-3">6.1, 6.2 i 6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">pary = []
+    print(&quot;Nie&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;print&gt;
+
+bool czy_automorficzna(long long n) {
+    long long potega = 10;  // najmniejsza potęga 10 większa od n, czyli 10^k
+    while (potega &lt;= n)
+        potega = potega * 10;
+    return n * n % potega == n;
+}
+
+int main() {
+    // 2.1
+    for (int n : {5, 6, 11, 25, 36, 76})
+        std::println(&quot;{} {}&quot;, n, czy_automorficzna(n) ? &quot;TAK&quot; : &quot;NIE&quot;);
+
+    // 2.2
+    long long n;
+    std::cin &gt;&gt; n;
+    if (czy_automorficzna(n))
+        std::println(&quot;Tak&quot;);
+    else
+        std::println(&quot;Nie&quot;);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.Scanner;
+
+public class Zadanie {
+    static boolean czyAutomorficzna(long n) {
+        long potega = 10;  // najmniejsza potęga 10 większa od n, czyli 10^k
+        while (potega &lt;= n)
+            potega = potega * 10;
+        return n * n % potega == n;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1
+        for (int n : new int[]{5, 6, 11, 25, 36, 76})
+            System.out.println(n + &quot; &quot; + (czyAutomorficzna(n) ? &quot;TAK&quot; : &quot;NIE&quot;));
+
+        // 2.2
+        var sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        if (czyAutomorficzna(n))
+            System.out.println(&quot;Tak&quot;);
+        else
+            System.out.println(&quot;Nie&quot;);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 6 – TAK, 11 – NIE, 25 – TAK, 36 – NIE, 76 – TAK. 2.2: funkcja <code>czy_automorficzna</code> (10^k liczymy jako najmniejszą potęgę 10 większą od n).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj-stare.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6-1-6-2-i-6-3" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#6-1-6-2-i-6-3">6.1, 6.2 i 6.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 6 (słowa). Plik <code>slowa.txt</code> zawiera 1000 wierszy; w każdym dwa niepuste słowa z wielkich liter alfabetu angielskiego, oddzielone spacją (np. <code>ACUO KORNL</code>). Odpowiedzi zapisz w pliku <code>wyniki6.txt</code>, poprzedzając je numerem zadania.</p><ul><li>6.1 — podaj, ile słów w pliku (licząc oba słowa w wierszu) kończy się literą <code>A</code>.</li><li>6.2 — podaj liczbę wierszy, w których pierwsze słowo zawiera się (jako spójny fragment) w drugim. Np. <code>ADC</code> zawiera się w <code>ASWADCF</code> i w <code>ADC</code>, ale nie w <code>ASWADFC</code>.</li><li>6.3 — anagram to słowo powstałe z przestawienia wszystkich liter danego słowa (np. <code>MASLO</code> dla <code>SLOMA</code>). Podaj liczbę wierszy, w których pierwsze słowo jest anagramem drugiego, i wypisz te pary.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">pary = []
 with open(&quot;slowa.txt&quot;) as file:
     for line in file:
         pary.append(line.split())
@@ -123,7 +303,94 @@ for slowo1, slowo2 in pary:
         anagramy.append((slowo1, slowo2))
 print(&quot;6.3&quot;, len(anagramy))
 for slowo1, slowo2 in anagramy:
-    print(slowo1, slowo2)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 6.1: 71; 6.2: 234; 6.3: 38 par (AYE YEA, BRD RDB, BWRHQ BWRHQ, DANHC DANHC, DCCD CDDC, …)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(slowo1, slowo2)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; pary;
+    std::ifstream plik(&quot;slowa.txt&quot;);
+    std::string a, b;
+    while (plik &gt;&gt; a &gt;&gt; b)
+        pary.push_back({a, b});
+
+    // 6.1
+    int ile = 0;
+    for (const auto&amp; [slowo1, slowo2] : pary) {
+        if (slowo1.back() == &#x27;A&#x27;)
+            ile++;
+        if (slowo2.back() == &#x27;A&#x27;)
+            ile++;
+    }
+    std::println(&quot;6.1 {}&quot;, ile);
+
+    // 6.2
+    ile = 0;
+    for (const auto&amp; [slowo1, slowo2] : pary)
+        if (slowo2.find(slowo1) != std::string::npos)
+            ile++;
+    std::println(&quot;6.2 {}&quot;, ile);
+
+    // 6.3
+    std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; anagramy;
+    for (const auto&amp; [slowo1, slowo2] : pary) {
+        std::string s1 = slowo1, s2 = slowo2;
+        std::ranges::sort(s1);
+        std::ranges::sort(s2);
+        if (s1 == s2)
+            anagramy.push_back({slowo1, slowo2});
+    }
+    std::println(&quot;6.3 {}&quot;, anagramy.size());
+    for (const auto&amp; [slowo1, slowo2] : anagramy)
+        std::println(&quot;{} {}&quot;, slowo1, slowo2);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Zadanie {
+    static String posortuj(String s) {
+        char[] litery = s.toCharArray();
+        Arrays.sort(litery);
+        return new String(litery);
+    }
+
+    public static void main(String[] args) throws Exception {
+        var pary = new ArrayList&lt;String[]&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;slowa.txt&quot;)))
+            if (!line.isBlank())
+                pary.add(line.trim().split(&quot;\\s+&quot;));
+
+        // 6.1
+        int ile = 0;
+        for (String[] p : pary) {
+            if (p[0].endsWith(&quot;A&quot;))
+                ile++;
+            if (p[1].endsWith(&quot;A&quot;))
+                ile++;
+        }
+        System.out.println(&quot;6.1 &quot; + ile);
+
+        // 6.2
+        ile = 0;
+        for (String[] p : pary)
+            if (p[1].contains(p[0]))
+                ile++;
+        System.out.println(&quot;6.2 &quot; + ile);
+
+        // 6.3
+        var anagramy = new ArrayList&lt;String[]&gt;();
+        for (String[] p : pary)
+            if (posortuj(p[0]).equals(posortuj(p[1])))
+                anagramy.add(p);
+        System.out.println(&quot;6.3 &quot; + anagramy.size());
+        for (String[] p : anagramy)
+            System.out.println(p[0] + &quot; &quot; + p[1]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 6.1: 71; 6.2: 234; 6.3: 38 par (AYE YEA, BRD RDB, BWRHQ BWRHQ, DANHC DANHC, DCCD CDDC, …)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2018_maj_stare.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202018%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28stara%20formu%C5%82a%29%20%E2%80%94%206.1%2C%206.2%20i%206.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2018-maj-stare.html%236-1-6-2-i-6-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2018_maj_stare.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

@@ -37,8 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-i-1-2">1.1 i 1.2</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2024 — maj, poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2024 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python · 1.2</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># 1.2
-def najwiekszy_czynnik(n):
+<h1 class="page-title">Matura 2024 — maj, poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2024-maj-matura-stara-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-i-1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-i-1-2">1.1 i 1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Każdą liczbę całkowitą większą od 1 można rozłożyć na iloczyn czynników pierwszych (liczba pierwsza ma jeden czynnik — samą siebie), np. 120 = 2 · 2 · 2 · 3 · 5, więc największym czynnikiem pierwszym 120 jest 5.</p><ul><li>1.1 — Uzupełnij tabelę: dla liczb 32, 99 i 252 zapisz rozkład na czynniki pierwsze i największy czynnik pierwszy (przykłady: 120 → 5, 14 = 2 · 7 → 7).</li><li>1.2 — Zapisz (w pseudokodzie, liście kroków lub wybranym języku) funkcję <code>Największy_Czynnik(n)</code>, która dla liczby całkowitej n &gt; 1 wyznacza największy czynnik d w jej rozkładzie na czynniki pierwsze. Wolno używać tylko zmiennych całkowitych, podstawowych operacji arytmetycznych (w tym dzielenia całkowitego i reszty), porównań, instrukcji sterujących i własnych funkcji — bez funkcji wbudowanych.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python · 1.2</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najwiekszy_czynnik(n):
     d = 2
     while n &gt; 1:
         if n % d == 0:
@@ -62,7 +61,93 @@ def rozklad(n):
 
 # 1.1
 for n in [32, 99, 252]:
-    print(n, &quot; * &quot;.join(map(str, rozklad(n))), najwiekszy_czynnik(n))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 32 = 2 · 2 · 2 · 2 · 2, d = 2; 99 = 3 · 3 · 11, d = 11; 252 = 2 · 2 · 3 · 3 · 7, d = 7. 1.2: funkcja <code>najwiekszy_czynnik</code>.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+    print(n, &quot; * &quot;.join(map(str, rozklad(n))), najwiekszy_czynnik(n))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// 1.2
+int najwiekszy_czynnik(int n) {
+    int d = 2;
+    while (n &gt; 1) {
+        if (n % d == 0) {
+            n = n / d;
+        } else {
+            d = d + 1;
+        }
+    }
+    return d;
+}
+
+std::vector&lt;int&gt; rozklad(int n) {
+    std::vector&lt;int&gt; czynniki;
+    int d = 2;
+    while (n &gt; 1) {
+        if (n % d == 0) {
+            czynniki.push_back(d);
+            n /= d;
+        } else {
+            d += 1;
+        }
+    }
+    return czynniki;
+}
+
+int main() {
+    // 1.1
+    for (int n : {32, 99, 252}) {
+        std::string napis = &quot;&quot;;
+        for (int czynnik : rozklad(n)) {
+            if (!napis.empty()) {
+                napis += &quot; * &quot;;
+            }
+            napis += std::to_string(czynnik);
+        }
+        std::println(&quot;{} {} {}&quot;, n, napis, najwiekszy_czynnik(n));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    // 1.2
+    static int najwiekszyCzynnik(int n) {
+        int d = 2;
+        while (n &gt; 1) {
+            if (n % d == 0) {
+                n = n / d;
+            } else {
+                d = d + 1;
+            }
+        }
+        return d;
+    }
+
+    static List&lt;String&gt; rozklad(int n) {
+        List&lt;String&gt; czynniki = new ArrayList&lt;&gt;();
+        int d = 2;
+        while (n &gt; 1) {
+            if (n % d == 0) {
+                czynniki.add(String.valueOf(d));
+                n /= d;
+            } else {
+                d += 1;
+            }
+        }
+        return czynniki;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        for (int n : new int[]{32, 99, 252}) {
+            System.out.println(n + &quot; &quot; + String.join(&quot; * &quot;, rozklad(n)) + &quot; &quot; + najwiekszyCzynnik(n));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 32 = 2 · 2 · 2 · 2 · 2, d = 2; 99 = 3 · 3 · 11, d = 11; 252 = 2 · 2 · 3 · 3 · 7, d = 7. 1.2: funkcja <code>najwiekszy_czynnik</code>.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%20i%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj-f2015.html%231-1-i-1-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dana jest funkcja rekurencyjna fun(a, b) dla liczb całkowitych a i b, b ≥ 2:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">fun(a, b):
+    jeżeli a ≤ 2
+        jeżeli a = 2: wynikiem jest PRAWDA, zakończ
+        w przeciwnym przypadku: wynikiem jest FAŁSZ, zakończ
+    jeżeli a mod b = 0: wynikiem jest FAŁSZ, zakończ
+    jeżeli b * b &gt; a: wynikiem jest PRAWDA, zakończ
+    wynikiem jest fun(a, b + 1)</code></pre></div></div></div><ul><li>2.1 — Podaj wynik fun(a, 2) dla a = 1, 7, 16 i −4 (przykład: dla a = 0 wynikiem jest FAŁSZ).</li><li>2.2 — Podaj, ile razy zostanie wykonane wywołanie fun(a, b + 1) po wywołaniu fun(a, 2) dla a = 17 i a = 77 (samego wywołania fun(a, 2) nie liczymy; przykłady: a = 2 → 0, a = 35 → 3).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
 
 
 def fun(a, b):
@@ -85,7 +170,67 @@ for a in [1, 7, 16, -4]:
 for a in [17, 77]:
     wywolania = 0
     fun(a, 2)
-    print(a, wywolania)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 1 – FAŁSZ, 7 – PRAWDA, 16 – FAŁSZ, −4 – FAŁSZ (funkcja sprawdza, czy a jest liczbą pierwszą). 2.2: a = 17 → 3, a = 77 → 5.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;plansza.txt&quot;) as file:
+    print(a, wywolania)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int wywolania = 0;
+
+bool fun(int a, int b) {
+    if (a &lt;= 2) {
+        return a == 2;
+    }
+    if (a % b == 0) {
+        return false;
+    }
+    if (b * b &gt; a) {
+        return true;
+    }
+    wywolania += 1;
+    return fun(a, b + 1);
+}
+
+int main() {
+    // 2.1 (wypisujemy True/False jak Python)
+    for (int a : {1, 7, 16, -4}) {
+        std::println(&quot;{} {}&quot;, a, fun(a, 2) ? &quot;True&quot; : &quot;False&quot;);
+    }
+
+    // 2.2
+    for (int a : {17, 77}) {
+        wywolania = 0;
+        fun(a, 2);
+        std::println(&quot;{} {}&quot;, a, wywolania);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int wywolania = 0;
+
+    static boolean fun(int a, int b) {
+        if (a &lt;= 2) {
+            return a == 2;
+        }
+        if (a % b == 0) {
+            return false;
+        }
+        if (b * b &gt; a) {
+            return true;
+        }
+        wywolania += 1;
+        return fun(a, b + 1);
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1 (wypisujemy True/False jak Python)
+        for (int a : new int[]{1, 7, 16, -4}) {
+            System.out.println(a + &quot; &quot; + (fun(a, 2) ? &quot;True&quot; : &quot;False&quot;));
+        }
+
+        // 2.2
+        for (int a : new int[]{17, 77}) {
+            wywolania = 0;
+            fun(a, 2);
+            System.out.println(a + &quot; &quot; + wywolania);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 1 – FAŁSZ, 7 – PRAWDA, 16 – FAŁSZ, −4 – FAŁSZ (funkcja sprawdza, czy a jest liczbą pierwszą). 2.2: a = 17 → 3, a = 77 → 5.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj-f2015.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>plansza.txt</code> opisuje rozmieszczenie statków na planszy 100 × 100: 100 wierszy po 100 cyfr 0 lub 1 oddzielonych spacjami (1 — pole ze statkiem, 0 — pole puste). Jednomasztowiec to pojedyncza jedynka otoczona zewsząd zerami lub krawędzią planszy, a dwumasztowiec — dwie sąsiednie (w poziomie lub pionie) jedynki otoczone zerami lub krawędzią. Statki nie stykają się ani bokami, ani wierzchołkami. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. Plik <code>plansza_przyklad.txt</code> (plansza 10 × 10) służy do testów.</p><ul><li>4.1 — Podaj liczbę pól, na których można jeszcze postawić jednomasztowiec, tj. pól z zerem, które nie stykają się bokiem ani wierzchołkiem z żadnym polem zajętym przez statek (dla pliku przykładowego: 11).</li><li>4.2 — Podaj liczbę par jednomasztowców położonych symetrycznie względem przekątnej biegnącej od lewego górnego do prawego dolnego rogu; statków leżących na tej przekątnej nie liczymy (dla pliku przykładowego: 2).</li><li>4.3 — Podaj liczbę dwumasztowców na planszy (dla pliku przykładowego: 7).</li><li>4.4 — Podaj liczbę jednomasztowców i liczbę dwumasztowców, których co najmniej jedno pole leży na jednej z dwóch głównych przekątnych planszy (dla pliku przykładowego: 1 jednomasztowiec i 3 dwumasztowce).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;plansza.txt&quot;) as file:
     plansza = [linia.split() for linia in file if linia.strip()]
 
 n = len(plansza)
@@ -156,7 +301,227 @@ for (w1, k1), (w2, k2) in dwumasztowce:
         dwu += 1
 print(&quot;4.4&quot;, jedno, dwu, file=wynik)
 
-wynik.close()</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 9321. 4.2: 5. 4.3: 35. 4.4: 1 jednomasztowiec, 10 dwumasztowców.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_maj_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+wynik.close()</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+using Pole = std::pair&lt;int, int&gt;;
+
+std::vector&lt;std::vector&lt;std::string&gt;&gt; plansza;
+int n;
+
+std::string pole(int w, int k) {
+    // pole poza planszą traktujemy jak puste
+    if (0 &lt;= w &amp;&amp; w &lt; n &amp;&amp; 0 &lt;= k &amp;&amp; k &lt; n) {
+        return plansza[w][k];
+    }
+    return &quot;0&quot;;
+}
+
+bool sasiedzi_puste(int w, int k, const std::vector&lt;Pole&gt;&amp; pomin = {}) {
+    // czy wszystkie pola dookoła (w, k) - poza polami z listy pomin - są puste
+    for (int dw = -1; dw &lt;= 1; dw++) {
+        for (int dk = -1; dk &lt;= 1; dk++) {
+            bool pominiete = std::ranges::find(pomin, Pole{w + dw, k + dk}) != pomin.end();
+            if (!(dw == 0 &amp;&amp; dk == 0) &amp;&amp; !pominiete &amp;&amp; pole(w + dw, k + dk) == &quot;1&quot;) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+bool na_przekatnej(int w, int k) {
+    return w == k || w + k == n - 1;
+}
+
+int main() {
+    std::ifstream plik(&quot;plansza.txt&quot;);
+    std::string linia;
+    while (std::getline(plik, linia)) {
+        std::istringstream strumien(linia);
+        std::vector&lt;std::string&gt; wiersz;
+        std::string s;
+        while (strumien &gt;&gt; s) {
+            wiersz.push_back(s);
+        }
+        if (!wiersz.empty()) {
+            plansza.push_back(wiersz);
+        }
+    }
+    n = plansza.size();
+    std::ofstream wynik(&quot;wyniki4.txt&quot;);
+
+    // 4.1
+    int wolne = 0;
+    for (int w = 0; w &lt; n; w++) {
+        for (int k = 0; k &lt; n; k++) {
+            if (plansza[w][k] == &quot;0&quot; &amp;&amp; sasiedzi_puste(w, k)) {
+                wolne += 1;
+            }
+        }
+    }
+    std::println(wynik, &quot;4.1 {}&quot;, wolne);
+
+    // wyszukanie jednomasztowców i dwumasztowców
+    std::vector&lt;Pole&gt; jednomasztowce;
+    std::vector&lt;std::pair&lt;Pole, Pole&gt;&gt; dwumasztowce;
+    for (int w = 0; w &lt; n; w++) {
+        for (int k = 0; k &lt; n; k++) {
+            if (plansza[w][k] == &quot;1&quot;) {
+                if (sasiedzi_puste(w, k)) {
+                    jednomasztowce.push_back({w, k});
+                }
+                for (auto [dw, dk] : {Pole{0, 1}, Pole{1, 0}}) {  // drugi maszt na prawo albo poniżej
+                    int w2 = w + dw, k2 = k + dk;
+                    if (pole(w2, k2) == &quot;1&quot; &amp;&amp; sasiedzi_puste(w, k, {{w2, k2}})
+                            &amp;&amp; sasiedzi_puste(w2, k2, {{w, k}})) {
+                        dwumasztowce.push_back({{w, k}, {w2, k2}});
+                    }
+                }
+            }
+        }
+    }
+
+    // 4.2
+    int pary = 0;
+    for (auto [w, k] : jednomasztowce) {
+        if (w &lt; k &amp;&amp; std::ranges::find(jednomasztowce, Pole{k, w}) != jednomasztowce.end()) {
+            pary += 1;
+        }
+    }
+    std::println(wynik, &quot;4.2 {}&quot;, pary);
+
+    // 4.3
+    std::println(wynik, &quot;4.3 {}&quot;, dwumasztowce.size());
+
+    // 4.4
+    int jedno = 0;
+    for (auto [w, k] : jednomasztowce) {
+        if (na_przekatnej(w, k)) {
+            jedno += 1;
+        }
+    }
+    int dwu = 0;
+    for (auto [p1, p2] : dwumasztowce) {
+        if (na_przekatnej(p1.first, p1.second) || na_przekatnej(p2.first, p2.second)) {
+            dwu += 1;
+        }
+    }
+    std::println(wynik, &quot;4.4 {} {}&quot;, jedno, dwu);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static List&lt;String[]&gt; plansza = new ArrayList&lt;&gt;();
+    static int n;
+
+    // pole zapisujemy jako rekord (w, k) - equals działa po wartościach
+    record Pole(int w, int k) {}
+
+    static String pole(int w, int k) {
+        // pole poza planszą traktujemy jak puste
+        if (0 &lt;= w &amp;&amp; w &lt; n &amp;&amp; 0 &lt;= k &amp;&amp; k &lt; n) {
+            return plansza.get(w)[k];
+        }
+        return &quot;0&quot;;
+    }
+
+    static boolean sasiedziPuste(int w, int k, List&lt;Pole&gt; pomin) {
+        // czy wszystkie pola dookoła (w, k) - poza polami z listy pomin - są puste
+        for (int dw = -1; dw &lt;= 1; dw++) {
+            for (int dk = -1; dk &lt;= 1; dk++) {
+                if (!(dw == 0 &amp;&amp; dk == 0) &amp;&amp; !pomin.contains(new Pole(w + dw, k + dk))
+                        &amp;&amp; pole(w + dw, k + dk).equals(&quot;1&quot;)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    static boolean naPrzekatnej(int w, int k) {
+        return w == k || w + k == n - 1;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(&quot;plansza.txt&quot;))) {
+            if (!linia.isBlank()) {
+                plansza.add(linia.trim().split(&quot;\\s+&quot;));
+            }
+        }
+        n = plansza.size();
+        PrintWriter wynik = new PrintWriter(&quot;wyniki4.txt&quot;);
+
+        // 4.1
+        int wolne = 0;
+        for (int w = 0; w &lt; n; w++) {
+            for (int k = 0; k &lt; n; k++) {
+                if (plansza.get(w)[k].equals(&quot;0&quot;) &amp;&amp; sasiedziPuste(w, k, List.of())) {
+                    wolne += 1;
+                }
+            }
+        }
+        wynik.println(&quot;4.1 &quot; + wolne);
+
+        // wyszukanie jednomasztowców i dwumasztowców
+        List&lt;Pole&gt; jednomasztowce = new ArrayList&lt;&gt;();
+        List&lt;Pole[]&gt; dwumasztowce = new ArrayList&lt;&gt;();
+        int[][] kierunki = {{0, 1}, {1, 0}};  // drugi maszt na prawo albo poniżej
+        for (int w = 0; w &lt; n; w++) {
+            for (int k = 0; k &lt; n; k++) {
+                if (plansza.get(w)[k].equals(&quot;1&quot;)) {
+                    if (sasiedziPuste(w, k, List.of())) {
+                        jednomasztowce.add(new Pole(w, k));
+                    }
+                    for (int[] kierunek : kierunki) {
+                        int w2 = w + kierunek[0], k2 = k + kierunek[1];
+                        if (pole(w2, k2).equals(&quot;1&quot;) &amp;&amp; sasiedziPuste(w, k, List.of(new Pole(w2, k2)))
+                                &amp;&amp; sasiedziPuste(w2, k2, List.of(new Pole(w, k)))) {
+                            dwumasztowce.add(new Pole[]{new Pole(w, k), new Pole(w2, k2)});
+                        }
+                    }
+                }
+            }
+        }
+
+        // 4.2
+        int pary = 0;
+        for (Pole p : jednomasztowce) {
+            if (p.w() &lt; p.k() &amp;&amp; jednomasztowce.contains(new Pole(p.k(), p.w()))) {
+                pary += 1;
+            }
+        }
+        wynik.println(&quot;4.2 &quot; + pary);
+
+        // 4.3
+        wynik.println(&quot;4.3 &quot; + dwumasztowce.size());
+
+        // 4.4
+        int jedno = 0;
+        for (Pole p : jednomasztowce) {
+            if (naPrzekatnej(p.w(), p.k())) {
+                jedno += 1;
+            }
+        }
+        int dwu = 0;
+        for (Pole[] statek : dwumasztowce) {
+            if (naPrzekatnej(statek[0].w(), statek[0].k()) || naPrzekatnej(statek[1].w(), statek[1].k())) {
+                dwu += 1;
+            }
+        }
+        wynik.println(&quot;4.4 &quot; + jedno + &quot; &quot; + dwu);
+
+        wynik.close();
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 9321. 4.2: 5. 4.3: 35. 4.4: 1 jednomasztowiec, 10 dwumasztowców.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2024_maj_f2015.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202024%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2024-maj-f2015.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2024_maj_f2015.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

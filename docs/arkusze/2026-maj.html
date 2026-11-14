@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1">1.1</a></li><li><a href="#1-2">1.2</a></li><li><a href="#1-3">1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#3-1">3.1</a></li><li><a href="#3-2">3.2</a></li><li><a href="#3-3">3.3</a></li><li><a href="#4-1">4.1</a></li><li><a href="#4-2-4-3-i-4-4">4.2, 4.3 i 4.4</a></li><li><a href="#5">5</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2026 — maj, poziom rozszerzony (formuła 2023)</span></nav>
-<h1 class="page-title">Matura 2026 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2026-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2026-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2026-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def A(m, n, wywolania):
+<h1 class="page-title">Matura 2026 — maj, poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2026-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2026-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2026-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1">1.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dla dodatnich liczb całkowitych m, n funkcja A jest zdefiniowana rekurencyjnie:</p><ul><li>A(m, n) = m, gdy n = 1;</li><li>A(m, n) = A(2·m, n/2), gdy n &gt; 1 i n jest parzyste;</li><li>A(m, n) = 2·A(m, (n − 1)/2) + m, gdy n &gt; 1 i n jest nieparzyste.</li></ul><p>Przykład: obliczenie A(3, 9) wymaga trzech wywołań rekurencyjnych A(3, 4), A(6, 2), A(12, 1), bo A(3, 9) = 2·A(3, 4) + 3 = 2·A(6, 2) + 3 = 2·A(12, 1) + 3 = 27.</p><p>Uzupełnij tabelę: dla par (m, n) = (2⁵, 2⁵) oraz (10, 15) podaj liczbę wywołań rekurencyjnych funkcji A i wypisz te wywołania z argumentami, a dla (1, 2¹⁰⁰ + 1) podaj tylko liczbę wywołań rekurencyjnych.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def A(m, n, wywolania):
     # wywolania - lista, do której dopisujemy argumenty kolejnych wywołań rekurencyjnych
     if n == 1:
         return m
@@ -51,7 +51,97 @@
 for m, n in [(3, 9), (2 ** 5, 2 ** 5), (10, 15), (1, 2 ** 100 + 1)]:
     wywolania = []
     A(m, n, wywolania)
-    print(m, n, len(wywolania), wywolania if len(wywolania) &lt; 10 else &quot;&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (2⁵, 2⁵): 5 wywołań — A(2⁶, 2⁴), A(2⁷, 2³), A(2⁸, 2²), A(2⁹, 2¹), A(2¹⁰, 2⁰); (10, 15): 3 wywołania — A(10, 7), A(10, 3), A(10, 1); (1, 2¹⁰⁰ + 1): 100 wywołań.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def A(m, n):
+    print(m, n, len(wywolania), wywolania if len(wywolania) &lt; 10 else &quot;&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+// n = 2^100 + 1 nie mieści się w long long - używamy 128-bitowego typu GCC (__int128)
+using Liczba = __int128;
+
+std::string na_napis(Liczba x) {
+    if (x == 0) {
+        return &quot;0&quot;;
+    }
+    std::string s = &quot;&quot;;
+    while (x &gt; 0) {
+        s = char(&#x27;0&#x27; + int(x % 10)) + s;
+        x /= 10;
+    }
+    return s;
+}
+
+// wywolania - lista, do której dopisujemy argumenty kolejnych wywołań rekurencyjnych
+Liczba A(Liczba m, Liczba n, std::vector&lt;std::pair&lt;Liczba, Liczba&gt;&gt;&amp; wywolania) {
+    if (n == 1) {
+        return m;
+    }
+    if (n % 2 == 0) {
+        wywolania.push_back({2 * m, n / 2});
+        return A(2 * m, n / 2, wywolania);
+    }
+    wywolania.push_back({m, (n - 1) / 2});
+    return 2 * A(m, (n - 1) / 2, wywolania) + m;
+}
+
+int main() {
+    Liczba jeden = 1;
+    std::vector&lt;std::pair&lt;Liczba, Liczba&gt;&gt; dane = {{3, 9}, {32, 32}, {10, 15}, {1, (jeden &lt;&lt; 100) + 1}};
+    for (auto [m, n] : dane) {
+        std::vector&lt;std::pair&lt;Liczba, Liczba&gt;&gt; wywolania;
+        A(m, n, wywolania);
+        // lista par wypisana jak w Pythonie: [(3, 4), (6, 2)]
+        std::string lista = &quot;&quot;;
+        if (wywolania.size() &lt; 10) {
+            lista = &quot;[&quot;;
+            for (size_t i = 0; i &lt; wywolania.size(); i++) {
+                if (i &gt; 0) {
+                    lista += &quot;, &quot;;
+                }
+                lista += &quot;(&quot; + na_napis(wywolania[i].first) + &quot;, &quot; + na_napis(wywolania[i].second) + &quot;)&quot;;
+            }
+            lista += &quot;]&quot;;
+        }
+        std::println(&quot;{} {} {} {}&quot;, na_napis(m), na_napis(n), wywolania.size(), lista);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static final BigInteger DWA = BigInteger.TWO;
+
+    // wywolania - lista, do której dopisujemy argumenty kolejnych wywołań rekurencyjnych
+    // (n = 2^100 + 1 nie mieści się w long - używamy BigInteger)
+    static BigInteger A(BigInteger m, BigInteger n, List&lt;String&gt; wywolania) {
+        if (n.equals(BigInteger.ONE)) {
+            return m;
+        }
+        if (n.mod(DWA).signum() == 0) {
+            wywolania.add(&quot;(&quot; + m.multiply(DWA) + &quot;, &quot; + n.divide(DWA) + &quot;)&quot;);
+            return A(m.multiply(DWA), n.divide(DWA), wywolania);
+        }
+        BigInteger polowa = n.subtract(BigInteger.ONE).divide(DWA);
+        wywolania.add(&quot;(&quot; + m + &quot;, &quot; + polowa + &quot;)&quot;);
+        return A(m, polowa, wywolania).multiply(DWA).add(m);
+    }
+
+    public static void main(String[] args) throws Exception {
+        BigInteger[][] dane = {
+            {BigInteger.valueOf(3), BigInteger.valueOf(9)},
+            {BigInteger.valueOf(32), BigInteger.valueOf(32)},
+            {BigInteger.valueOf(10), BigInteger.valueOf(15)},
+            {BigInteger.ONE, DWA.pow(100).add(BigInteger.ONE)}
+        };
+        for (BigInteger[] para : dane) {
+            List&lt;String&gt; wywolania = new ArrayList&lt;&gt;();
+            A(para[0], para[1], wywolania);
+            // lista wypisana jak w Pythonie: [(3, 4), (6, 2)]
+            String lista = wywolania.size() &lt; 10 ? &quot;[&quot; + String.join(&quot;, &quot;, wywolania) + &quot;]&quot; : &quot;&quot;;
+            System.out.println(para[0] + &quot; &quot; + para[1] + &quot; &quot; + wywolania.size() + &quot; &quot; + lista);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (2⁵, 2⁵): 5 wywołań — A(2⁶, 2⁴), A(2⁷, 2³), A(2⁸, 2²), A(2⁹, 2¹), A(2¹⁰, 2⁰); (10, 15): 3 wywołania — A(10, 7), A(10, 3), A(10, 1); (1, 2¹⁰⁰ + 1): 100 wywołań.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%231-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-2" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-2">1.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Funkcja A(m, n) jest zdefiniowana w zadaniu 1.1.</p><p>Podaj wartości A(1, 777) oraz A(2·10⁶, 256·10⁶). Wynik można zapisać z użyciem mnożenia i potęgowania.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def A(m, n):
     if n == 1:
         return m
     if n % 2 == 0:
@@ -61,7 +151,39 @@ for m, n in [(3, 9), (2 ** 5, 2 ** 5), (10, 15), (1, 2 ** 100 + 1)]:
 
 # funkcja A liczy iloczyn m * n
 print(A(1, 777))
-print(A(2 * 10 ** 6, 256 * 10 ** 6))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> A(1, 777) = 777, A(2·10⁶, 256·10⁶) = 512·10¹² = 512 000 000 000 000 (funkcja oblicza m·n).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-3">1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def drugie_argumenty(n):
+print(A(2 * 10 ** 6, 256 * 10 ** 6))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+long long A(long long m, long long n) {
+    if (n == 1) {
+        return m;
+    }
+    if (n % 2 == 0) {
+        return A(2 * m, n / 2);
+    }
+    return 2 * A(m, (n - 1) / 2) + m;
+}
+
+int main() {
+    // funkcja A liczy iloczyn m * n (wynik 512 * 10^12 wymaga long long)
+    std::println(&quot;{}&quot;, A(1, 777));
+    std::println(&quot;{}&quot;, A(2&#x27;000&#x27;000, 256&#x27;000&#x27;000));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long A(long m, long n) {
+        if (n == 1) {
+            return m;
+        }
+        if (n % 2 == 0) {
+            return A(2 * m, n / 2);
+        }
+        return 2 * A(m, (n - 1) / 2) + m;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // funkcja A liczy iloczyn m * n (wynik 512 * 10^12 wymaga long)
+        System.out.println(A(1, 777));
+        System.out.println(A(2_000_000L, 256_000_000L));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> A(1, 777) = 777, A(2·10⁶, 256·10⁶) = 512·10¹² = 512 000 000 000 000 (funkcja oblicza m·n).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%231-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-3">1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Funkcja A(m, n) jest zdefiniowana w zadaniu 1.1; pierwszy argument nie ma tu znaczenia.</p><p>Dla n = 8, n = 2ᵏ oraz n = 2ᵏ − 1 podaj liczbę wywołań rekurencyjnych funkcji A oraz wyrażenie opisujące drugi argument w i-tym wywołaniu rekurencyjnym (dla i od 1 do liczby wywołań). Przykład dla n = 8: drugi argument w i-tym wywołaniu to 8/2ⁱ, czyli 2³⁻ⁱ.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def drugie_argumenty(n):
     # wartości drugiego argumentu w kolejnych wywołaniach rekurencyjnych
     wynik = []
     while n &gt; 1:
@@ -76,7 +198,57 @@ print(A(2 * 10 ** 6, 256 * 10 ** 6))</code></pre></div><p class="answer"><strong
 print(8, drugie_argumenty(8))
 for k in range(3, 7):
     print(&quot;n = 2^%d:&quot; % k, drugie_argumenty(2 ** k))
-    print(&quot;n = 2^%d - 1:&quot; % k, drugie_argumenty(2 ** k - 1))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> n = 8: 3 wywołania, i-te ma drugi argument 8/2ⁱ = 2³⁻ⁱ; n = 2ᵏ: k wywołań, drugi argument 2ᵏ⁻ⁱ; n = 2ᵏ − 1: k − 1 wywołań, drugi argument 2ᵏ⁻ⁱ − 1.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def przeniesienia(a, b):
+    print(&quot;n = 2^%d - 1:&quot; % k, drugie_argumenty(2 ** k - 1))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;int&gt; drugie_argumenty(int n) {
+    // wartości drugiego argumentu w kolejnych wywołaniach rekurencyjnych
+    std::vector&lt;int&gt; wynik;
+    while (n &gt; 1) {
+        if (n % 2 == 0) {
+            n = n / 2;
+        } else {
+            n = (n - 1) / 2;
+        }
+        wynik.push_back(n);
+    }
+    return wynik;
+}
+
+int main() {
+    // wektor wypisuje się jak lista w Pythonie: [4, 2, 1]
+    std::println(&quot;{} {}&quot;, 8, drugie_argumenty(8));
+    for (int k = 3; k &lt; 7; k++) {
+        std::println(&quot;n = 2^{}: {}&quot;, k, drugie_argumenty(1 &lt;&lt; k));
+        std::println(&quot;n = 2^{} - 1: {}&quot;, k, drugie_argumenty((1 &lt;&lt; k) - 1));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static List&lt;Integer&gt; drugieArgumenty(int n) {
+        // wartości drugiego argumentu w kolejnych wywołaniach rekurencyjnych
+        List&lt;Integer&gt; wynik = new ArrayList&lt;&gt;();
+        while (n &gt; 1) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else {
+                n = (n - 1) / 2;
+            }
+            wynik.add(n);
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // lista wypisuje się jak w Pythonie: [4, 2, 1]
+        System.out.println(8 + &quot; &quot; + drugieArgumenty(8));
+        for (int k = 3; k &lt; 7; k++) {
+            System.out.println(&quot;n = 2^&quot; + k + &quot;: &quot; + drugieArgumenty(1 &lt;&lt; k));
+            System.out.println(&quot;n = 2^&quot; + k + &quot; - 1: &quot; + drugieArgumenty((1 &lt;&lt; k) - 1));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> n = 8: 3 wywołania, i-te ma drugi argument 8/2ⁱ = 2³⁻ⁱ; n = 2ᵏ: k wywołań, drugi argument 2ᵏ⁻ⁱ; n = 2ᵏ − 1: k − 1 wywołań, drugi argument 2ᵏ⁻ⁱ − 1.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%231-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Rozważamy dodawanie pisemne dwóch liczb w systemie dziesiętnym i liczymy przeniesienia, np. przy dodawaniu 27732 + 72619 = 100351 występują 4 przeniesienia.</p><ul><li>2.1 — Podaj liczbę przeniesień przy dodawaniu par: 37932 + 12528 (przykład w tabeli: 3), 88765 + 11111 oraz 456789 + 222222.</li><li>2.2 — Zapisz (w pseudokodzie lub wybranym języku) algorytm, który dla dwóch dodatnich liczb całkowitych a i b o tej samej liczbie cyfr oblicza liczbę p przeniesień w trakcie ich dodawania pisemnego (dla 27732 i 72619 wynik to 4).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def przeniesienia(a, b):
     # a i b mają tyle samo cyfr; operujemy tylko na liczbach całkowitych
     w_pamieci = 0
     p = 0
@@ -94,7 +266,61 @@ for k in range(3, 7):
 
 print(przeniesienia(27732, 72619))  # przykład z treści: 4
 for a, b in [(37932, 12528), (88765, 11111), (456789, 222222)]:
-    print(a, b, przeniesienia(a, b))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 37932 + 12528 → 3, 88765 + 11111 → 0, 456789 + 222222 → 3. 2.2: funkcja <code>przeniesienia</code> powyżej.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1">3.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def f(slowo):
+    print(a, b, przeniesienia(a, b))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int przeniesienia(int a, int b) {
+    // a i b mają tyle samo cyfr; operujemy tylko na liczbach całkowitych
+    int w_pamieci = 0;
+    int p = 0;
+    while (a &gt; 0) {
+        int suma = a % 10 + b % 10 + w_pamieci;
+        if (suma &gt;= 10) {
+            w_pamieci = 1;
+            p += 1;
+        } else {
+            w_pamieci = 0;
+        }
+        a = a / 10;
+        b = b / 10;
+    }
+    return p;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, przeniesienia(27732, 72619));  // przykład z treści: 4
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; pary = {{37932, 12528}, {88765, 11111}, {456789, 222222}};
+    for (auto [a, b] : pary) {
+        std::println(&quot;{} {} {}&quot;, a, b, przeniesienia(a, b));
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int przeniesienia(int a, int b) {
+        // a i b mają tyle samo cyfr; operujemy tylko na liczbach całkowitych
+        int wPamieci = 0;
+        int p = 0;
+        while (a &gt; 0) {
+            int suma = a % 10 + b % 10 + wPamieci;
+            if (suma &gt;= 10) {
+                wPamieci = 1;
+                p += 1;
+            } else {
+                wPamieci = 0;
+            }
+            a = a / 10;
+            b = b / 10;
+        }
+        return p;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(przeniesienia(27732, 72619));  // przykład z treści: 4
+        int[][] pary = {{37932, 12528}, {88765, 11111}, {456789, 222222}};
+        for (int[] p : pary) {
+            System.out.println(p[0] + &quot; &quot; + p[1] + &quot; &quot; + przeniesienia(p[0], p[1]));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 37932 + 12528 → 3, 88765 + 11111 → 0, 456789 + 222222 → 3. 2.2: funkcja <code>przeniesienia</code> powyżej.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1">3.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>pary.txt</code> zawiera 500 wierszy; w każdym jest para słów z małych liter alfabetu angielskiego, oddzielonych pojedynczą spacją, każde o długości co najwyżej 50 (np. <code>bcba babb</code>, <code>abaa ccc</code>). Odpowiedzi zapisz w pliku <code>wyniki3.txt</code>, poprzedzając każdą numerem zadania. Plik <code>pary_przyklad.txt</code> (500 par) służy do testów.</p><p>Niech f(s) oznacza sumę kodów ASCII liter słowa s. Podaj parę słów s1, s2 z jednego wiersza, dla której |f(s1) − f(s2)| jest największe, oraz tę wartość (jest jedna taka para). Przykład: f(oko) = 329, f(pies) = 433, różnica 104; dla pliku przykładowego: <code>eddcd eededcddceeecededcc 1403</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def f(slowo):
     return sum(ord(znak) for znak in slowo)
 
 
@@ -107,7 +333,61 @@ with open(&quot;pary.txt&quot;) as file:
             najwieksza = roznica
             para = (s1, s2)
 
-print(para[0], para[1], najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> gpeeazeugmvsbzwsrxfplqdbakoxxe lhpbmoirdm 2206</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-2">3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">najwieksza = -1
+print(para[0], para[1], najwieksza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int f(const std::string&amp; slowo) {
+    int suma = 0;
+    for (char znak : slowo) {
+        suma += znak;  // kod ASCII litery
+    }
+    return suma;
+}
+
+int main() {
+    int najwieksza = -1;
+    std::string para1, para2;
+    std::ifstream plik(&quot;pary.txt&quot;);
+    std::string s1, s2;
+    while (plik &gt;&gt; s1 &gt;&gt; s2) {
+        int roznica = std::abs(f(s1) - f(s2));
+        if (roznica &gt; najwieksza) {
+            najwieksza = roznica;
+            para1 = s1;
+            para2 = s2;
+        }
+    }
+
+    std::println(&quot;{} {} {}&quot;, para1, para2, najwieksza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static int f(String slowo) {
+        int suma = 0;
+        for (char znak : slowo.toCharArray()) {
+            suma += znak;  // kod ASCII litery
+        }
+        return suma;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int najwieksza = -1;
+        String[] para = null;
+        for (String linia : Files.readAllLines(Path.of(&quot;pary.txt&quot;))) {
+            String[] s = linia.trim().split(&quot;\\s+&quot;);
+            int roznica = Math.abs(f(s[0]) - f(s[1]));
+            if (roznica &gt; najwieksza) {
+                najwieksza = roznica;
+                para = s;
+            }
+        }
+
+        System.out.println(para[0] + &quot; &quot; + para[1] + &quot; &quot; + najwieksza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> gpeeazeugmvsbzwsrxfplqdbakoxxe lhpbmoirdm 2206</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%233-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-2" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-2">3.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 3.1 (500 par słów w pliku <code>pary.txt</code>).</p><p>Wspólna liczba wystąpień litery x w słowach s1, s2 to W(x, s1, s2) = min(d(x, s1), d(x, s2)), gdzie d(x, s) to liczba wystąpień x w s. Podaj parę słów z jednego wiersza, dla której suma W po wszystkich literach jest największa, oraz tę sumę (jest jedna taka para). Przykład: dla <code>adabbcdde</code> i <code>aadabbbccdc</code> suma wynosi 2 + 2 + 1 + 2 = 7; dla pliku przykładowego: <code>ccccdcedddddecde ccdcdddecc 10</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">najwieksza = -1
 with open(&quot;pary.txt&quot;) as file:
     for linia in file:
         s1, s2 = linia.split()
@@ -118,7 +398,61 @@ with open(&quot;pary.txt&quot;) as file:
             najwieksza = suma
             para = (s1, s2)
 
-print(para[0], para[1], najwieksza)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> aacbcccaacacbcabac cccccaaaacaccbabcba 18</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-3">3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-kod">Kod</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdluzszy_prefiksosufiks(s1, s2):
+print(para[0], para[1], najwieksza)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    int najwieksza = -1;
+    std::string para1, para2;
+    std::ifstream plik(&quot;pary.txt&quot;);
+    std::string s1, s2;
+    while (plik &gt;&gt; s1 &gt;&gt; s2) {
+        int suma = 0;
+        for (char litera = &#x27;a&#x27;; litera &lt;= &#x27;z&#x27;; litera++) {
+            suma += std::min(std::ranges::count(s1, litera), std::ranges::count(s2, litera));
+        }
+        if (suma &gt; najwieksza) {
+            najwieksza = suma;
+            para1 = s1;
+            para2 = s2;
+        }
+    }
+
+    std::println(&quot;{} {} {}&quot;, para1, para2, najwieksza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static int ile(String s, char litera) {
+        int wynik = 0;
+        for (char c : s.toCharArray()) {
+            if (c == litera) {
+                wynik++;
+            }
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int najwieksza = -1;
+        String[] para = null;
+        for (String linia : Files.readAllLines(Path.of(&quot;pary.txt&quot;))) {
+            String[] s = linia.trim().split(&quot;\\s+&quot;);
+            int suma = 0;
+            for (char litera = &#x27;a&#x27;; litera &lt;= &#x27;z&#x27;; litera++) {
+                suma += Math.min(ile(s[0], litera), ile(s[1], litera));
+            }
+            if (suma &gt; najwieksza) {
+                najwieksza = suma;
+                para = s;
+            }
+        }
+
+        System.out.println(para[0] + &quot; &quot; + para[1] + &quot; &quot; + najwieksza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> aacbcccaacacbcabac cccccaaaacaccbabcba 18</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%233-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-3" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-3">3.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span><span class="lang lang-kod">Kod</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dane jak w zadaniu 3.1.</p><p>Prefiksosufiks pary słów s1, s2 to słowo, które jest początkiem s1 i końcem s2 albo początkiem s2 i końcem s1. Wypisz wszystkie pary z pliku, których najdłuższy prefiksosufiks ma co najmniej 5 liter, a przy każdej podaj długość tego najdłuższego prefiksosufiksu. Przykład: dla <code>aabbbca caacaab</code> najdłuższy prefiksosufiks to <code>aab</code> (3 litery) — para nie spełnia warunku; dla <code>abbaabaa baabaabba</code> jest to <code>baabaa</code> (6) — spełnia; dla pliku przykładowego: <code>ececdddeed dddeedd 6</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najdluzszy_prefiksosufiks(s1, s2):
     for dlugosc in range(min(len(s1), len(s2)), 0, -1):
         if s1[:dlugosc] == s2[-dlugosc:] or s2[:dlugosc] == s1[-dlugosc:]:
             return dlugosc
@@ -130,13 +464,61 @@ with open(&quot;pary.txt&quot;) as file:
         s1, s2 = linia.split()
         dlugosc = najdluzszy_prefiksosufiks(s1, s2)
         if dlugosc &gt;= 5:
-            print(s1, s2, dlugosc)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong></p><div class="code"><div class="code-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">bbbbaabbababbaaaa baaaaabaaabbbabab 5
+            print(s1, s2, dlugosc)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int najdluzszy_prefiksosufiks(const std::string&amp; s1, const std::string&amp; s2) {
+    for (int dlugosc = std::min(s1.size(), s2.size()); dlugosc &gt; 0; dlugosc--) {
+        // prefiks jednego słowa równy sufiksowi drugiego
+        if (s1.substr(0, dlugosc) == s2.substr(s2.size() - dlugosc)
+                || s2.substr(0, dlugosc) == s1.substr(s1.size() - dlugosc)) {
+            return dlugosc;
+        }
+    }
+    return 0;
+}
+
+int main() {
+    std::ifstream plik(&quot;pary.txt&quot;);
+    std::string s1, s2;
+    while (plik &gt;&gt; s1 &gt;&gt; s2) {
+        int dlugosc = najdluzszy_prefiksosufiks(s1, s2);
+        if (dlugosc &gt;= 5) {
+            std::println(&quot;{} {} {}&quot;, s1, s2, dlugosc);
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    static int najdluzszyPrefiksosufiks(String s1, String s2) {
+        for (int dlugosc = Math.min(s1.length(), s2.length()); dlugosc &gt; 0; dlugosc--) {
+            // prefiks jednego słowa równy sufiksowi drugiego
+            if (s2.endsWith(s1.substring(0, dlugosc)) || s1.endsWith(s2.substring(0, dlugosc))) {
+                return dlugosc;
+            }
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) throws Exception {
+        for (String linia : Files.readAllLines(Path.of(&quot;pary.txt&quot;))) {
+            String[] s = linia.trim().split(&quot;\\s+&quot;);
+            int dlugosc = najdluzszyPrefiksosufiks(s[0], s[1]);
+            if (dlugosc &gt;= 5) {
+                System.out.println(s[0] + &quot; &quot; + s[1] + &quot; &quot; + dlugosc);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong></p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">bbbbaabbababbaaaa baaaaabaaabbbabab 5
 aababbbababbbbbbaab bbbbaabbababababa 7
 aaaababaaaabbbb aabbbbbabbbaaaa 6
 bbbbabaaabbbabb aaababaabbbbbbba 5
 ccccabacbba acbbabcbcbcbaa 5
 caabbccabccc cabccccabbaac 6
-abaacabcccccabbbc abbbcbbbbbcabaca 5</code></pre></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># przykładowa hierarchia z Rysunku 1. (zapis jak w pliku: przełożony pracownika i)
+abaacabcccccabbbc abbbcbbbbbcabaca 5</code></pre></div></div></div><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%233-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1">4.1</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>W korporacji pracuje n osób o numerach 1..n. Pracownik 1 jest prezesem i nie ma przełożonego; każdy inny ma dokładnie jednego bezpośredniego przełożonego o mniejszym numerze. Przełożonymi pracownika są jego bezpośredni przełożony i wszyscy przełożeni tamtego; podwładni są zdefiniowani odwrotnie. W przykładowej hierarchii (rysunek w arkuszu) bezpośrednimi przełożonymi pracowników 2–8 są kolejno 1, 2, 1, 2, 2, 3, 4.</p><p>Dla każdego pracownika z przykładowej hierarchii podaj liczbę jego bezpośrednich podwładnych oraz liczbę wszystkich podwładnych.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python"># przykładowa hierarchia z Rysunku 1. (zapis jak w pliku: przełożony pracownika i)
 szef = [0, 1, 2, 1, 2, 2, 3, 4]
 n = len(szef)
 bezposredni = [0] * (n + 1)
@@ -149,7 +531,48 @@ for i in range(2, n + 1):
         p = szef[p - 1]
 
 for i in range(1, n + 1):
-    print(i, bezposredni[i], wszyscy[i])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1: 2 i 7; 2: 3 i 4; 3: 1 i 1; 4: 1 i 1; 5, 6, 7, 8: 0 i 0.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2-4-3-i-4-4">4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">szef = [0]  # szef[i] - bezpośredni przełożony pracownika i (indeks 0 nieużywany)
+    print(i, bezposredni[i], wszyscy[i])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    // przykładowa hierarchia z Rysunku 1. (zapis jak w pliku: przełożony pracownika i)
+    std::vector&lt;int&gt; szef = {0, 1, 2, 1, 2, 2, 3, 4};
+    int n = szef.size();
+    std::vector&lt;int&gt; bezposredni(n + 1, 0);
+    std::vector&lt;int&gt; wszyscy(n + 1, 0);
+    for (int i = 2; i &lt;= n; i++) {
+        bezposredni[szef[i - 1]] += 1;
+        int p = szef[i - 1];
+        while (p != 0) {  // każdy przełożony pracownika i ma go wśród podwładnych
+            wszyscy[p] += 1;
+            p = szef[p - 1];
+        }
+    }
+
+    for (int i = 1; i &lt;= n; i++) {
+        std::println(&quot;{} {} {}&quot;, i, bezposredni[i], wszyscy[i]);
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        // przykładowa hierarchia z Rysunku 1. (zapis jak w pliku: przełożony pracownika i)
+        int[] szef = {0, 1, 2, 1, 2, 2, 3, 4};
+        int n = szef.length;
+        int[] bezposredni = new int[n + 1];
+        int[] wszyscy = new int[n + 1];
+        for (int i = 2; i &lt;= n; i++) {
+            bezposredni[szef[i - 1]] += 1;
+            int p = szef[i - 1];
+            while (p != 0) {  // każdy przełożony pracownika i ma go wśród podwładnych
+                wszyscy[p] += 1;
+                p = szef[p - 1];
+            }
+        }
+
+        for (int i = 1; i &lt;= n; i++) {
+            System.out.println(i + &quot; &quot; + bezposredni[i] + &quot; &quot; + wszyscy[i]);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1: 2 i 7; 2: 3 i 4; 3: 1 i 1; 4: 1 i 1; 5, 6, 7, 8: 0 i 0.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%204.1&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%234-1" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-2-4-3-i-4-4">4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>korpo.txt</code> zawiera n = 50 000 liczb, po jednej w wierszu, opisujących strukturę korporacji z zadania 4.1: w pierwszym wierszu jest 0 (prezes nie ma przełożonego), a w i-tym wierszu (2 ≤ i ≤ 50 000) — numer bezpośredniego przełożonego pracownika i (dla przykładowej hierarchii: <code>0 1 2 1 2 2 3 4</code>). Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą numerem zadania. W pliku testowym <code>korpo_przyklad.txt</code> przełożonym pracowników 2 i 3 jest 1, a wszystkich pozostałych — 3.</p><ul><li>4.2 — Podaj, ilu pracowników nie jest przełożonym nikogo (dla pliku przykładowego: 49 998).</li><li>4.3 — Podaj numer pracownika mającego najwięcej bezpośrednich podwładnych oraz ich liczbę (dla pliku przykładowego: <code>3 49997</code>).</li><li>4.4 — Podaj największą liczbę przełożonych, jaką ma jeden pracownik, oraz liczbę pracowników mających tylu przełożonych (dla pliku przykładowego: <code>2 49997</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">szef = [0]  # szef[i] - bezpośredni przełożony pracownika i (indeks 0 nieużywany)
 with open(&quot;korpo.txt&quot;) as file:
     for linia in file:
         szef.append(int(linia))
@@ -181,7 +604,123 @@ for i in range(2, n + 1):
         glebokosc[q] = glebokosc[szef[q]] + 1
 
 najwiecej = max(glebokosc)
-print(&quot;4.4&quot;, najwiecej, glebokosc.count(najwiecej))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.2: 25113; 4.3: 2 19 (pracownik 2 ma 19 bezpośrednich podwładnych); 4.4: 22 2 (najwięcej przełożonych: 22, mają ich 2 osoby).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_system(liczba, podstawa):
+print(&quot;4.4&quot;, najwiecej, glebokosc.count(najwiecej))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; szef = {0};  // szef[i] - bezpośredni przełożony pracownika i (indeks 0 nieużywany)
+    std::ifstream plik(&quot;korpo.txt&quot;);
+    int x;
+    while (plik &gt;&gt; x) {
+        szef.push_back(x);
+    }
+    int n = szef.size() - 1;
+
+    // 4.2
+    std::vector&lt;int&gt; podwladni(n + 1, 0);
+    for (int i = 2; i &lt;= n; i++) {
+        podwladni[szef[i]] += 1;
+    }
+    std::println(&quot;4.2 {}&quot;, std::count(podwladni.begin() + 1, podwladni.end(), 0));
+
+    // 4.3
+    int numer = 1;
+    for (int i = 2; i &lt;= n; i++) {
+        if (podwladni[i] &gt; podwladni[numer]) {
+            numer = i;
+        }
+    }
+    std::println(&quot;4.3 {} {}&quot;, numer, podwladni[numer]);
+
+    // 4.4 - liczba przełożonych = głębokość pracownika w drzewie
+    std::vector&lt;int&gt; glebokosc(n + 1, -1);
+    glebokosc[1] = 0;
+    for (int i = 2; i &lt;= n; i++) {
+        std::vector&lt;int&gt; sciezka;
+        int p = i;
+        while (glebokosc[p] == -1) {
+            sciezka.push_back(p);
+            p = szef[p];
+        }
+        for (int j = sciezka.size() - 1; j &gt;= 0; j--) {
+            int q = sciezka[j];
+            glebokosc[q] = glebokosc[szef[q]] + 1;
+        }
+    }
+
+    int najwiecej = std::ranges::max(glebokosc);
+    std::println(&quot;4.4 {} {}&quot;, najwiecej, std::ranges::count(glebokosc, najwiecej));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        List&lt;Integer&gt; szef = new ArrayList&lt;&gt;();  // szef[i] - bezpośredni przełożony pracownika i (indeks 0 nieużywany)
+        szef.add(0);
+        for (String linia : Files.readAllLines(Path.of(&quot;korpo.txt&quot;))) {
+            if (!linia.isBlank()) {
+                szef.add(Integer.parseInt(linia.trim()));
+            }
+        }
+        int n = szef.size() - 1;
+
+        // 4.2
+        int[] podwladni = new int[n + 1];
+        for (int i = 2; i &lt;= n; i++) {
+            podwladni[szef.get(i)] += 1;
+        }
+        int bezPodwladnych = 0;
+        for (int i = 1; i &lt;= n; i++) {
+            if (podwladni[i] == 0) {
+                bezPodwladnych++;
+            }
+        }
+        System.out.println(&quot;4.2 &quot; + bezPodwladnych);
+
+        // 4.3
+        int numer = 1;
+        for (int i = 2; i &lt;= n; i++) {
+            if (podwladni[i] &gt; podwladni[numer]) {
+                numer = i;
+            }
+        }
+        System.out.println(&quot;4.3 &quot; + numer + &quot; &quot; + podwladni[numer]);
+
+        // 4.4 - liczba przełożonych = głębokość pracownika w drzewie
+        int[] glebokosc = new int[n + 1];
+        Arrays.fill(glebokosc, -1);
+        glebokosc[1] = 0;
+        for (int i = 2; i &lt;= n; i++) {
+            List&lt;Integer&gt; sciezka = new ArrayList&lt;&gt;();
+            int p = i;
+            while (glebokosc[p] == -1) {
+                sciezka.add(p);
+                p = szef.get(p);
+            }
+            for (int j = sciezka.size() - 1; j &gt;= 0; j--) {
+                int q = sciezka.get(j);
+                glebokosc[q] = glebokosc[szef.get(q)] + 1;
+            }
+        }
+
+        int najwiecej = -1;
+        for (int g : glebokosc) {
+            najwiecej = Math.max(najwiecej, g);
+        }
+        int ile = 0;
+        for (int g : glebokosc) {
+            if (g == najwiecej) {
+                ile++;
+            }
+        }
+        System.out.println(&quot;4.4 &quot; + najwiecej + &quot; &quot; + ile);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.2: 25113; 4.3: 2 19 (pracownik 2 ma 19 bezpośrednich podwładnych); 4.4: 22 2 (najwięcej przełożonych: 22, mają ich 2 osoby).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%234-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="5" style="--c:var(--g5)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#5">5</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Uzupełnij brakujące liczby tak, aby obie równości były prawdziwe: 1440₅ + …₅ = 427₁₀ = …₃ − 110002₃ (pierwsza luka w systemie piątkowym, druga w trójkowym).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_system(liczba, podstawa):
     cyfry = &quot;&quot;
     while liczba &gt; 0:
         cyfry = str(liczba % podstawa) + cyfry
@@ -192,7 +731,42 @@ print(&quot;4.4&quot;, najwiecej, glebokosc.count(najwiecej))</code></pre></div>
 # 1440(5) + x(5) = 427(10) = y(3) - 110002(3)
 x = 427 - int(&quot;1440&quot;, 5)
 y = 427 + int(&quot;110002&quot;, 3)
-print(na_system(x, 5), na_system(y, 3))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (1440)₅ + (1212)₅ = (427)₁₀ = (1000220)₃ − (110002)₃</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(na_system(x, 5), na_system(y, 3))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string na_system(int liczba, int podstawa) {
+    std::string cyfry = &quot;&quot;;
+    while (liczba &gt; 0) {
+        cyfry = std::to_string(liczba % podstawa) + cyfry;
+        liczba /= podstawa;
+    }
+    return cyfry;
+}
+
+int main() {
+    // 1440(5) + x(5) = 427(10) = y(3) - 110002(3)
+    // std::stoi(napis, nullptr, podstawa) działa jak int(napis, podstawa) w Pythonie
+    int x = 427 - std::stoi(&quot;1440&quot;, nullptr, 5);
+    int y = 427 + std::stoi(&quot;110002&quot;, nullptr, 3);
+    std::println(&quot;{} {}&quot;, na_system(x, 5), na_system(y, 3));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String naSystem(int liczba, int podstawa) {
+        String cyfry = &quot;&quot;;
+        while (liczba &gt; 0) {
+            cyfry = (liczba % podstawa) + cyfry;
+            liczba /= podstawa;
+        }
+        return cyfry;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1440(5) + x(5) = 427(10) = y(3) - 110002(3)
+        // Integer.parseInt(napis, podstawa) działa jak int(napis, podstawa) w Pythonie
+        int x = 427 - Integer.parseInt(&quot;1440&quot;, 5);
+        int y = 427 + Integer.parseInt(&quot;110002&quot;, 3);
+        System.out.println(naSystem(x, 5) + &quot; &quot; + naSystem(y, 3));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (1440)₅ + (1212)₅ = (427)₁₀ = (1000220)₃ − (110002)₃</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202026%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%205&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2026-maj.html%235" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2026_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

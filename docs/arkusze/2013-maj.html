@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><p class="side-title" style="--c:var(--g1)">Arkusz I</p><ul style="--c:var(--g1)"><li><a href="#1a">1a</a></li><li><a href="#1b-i-1c">1b i 1c</a></li></ul><p class="side-title" style="--c:var(--g2)">Arkusz II</p><ul style="--c:var(--g2)"><li><a href="#4a-4b-i-4c">4a, 4b i 4c</a></li><li><a href="#4d">4d</a></li><li><a href="#4e">4e</a></li><li><a href="#6a">6a</a></li><li><a href="#6b">6b</a></li><li><a href="#6c">6c</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2013 — maj, poziom rozszerzony</span></nav>
-<h1 class="page-title">Matura 2013 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_u1(x):
+<h1 class="page-title">Matura 2013 — maj, poziom rozszerzony</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ I</a><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ II</a><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2013-maj-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1a" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1a">1a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1. Liczba binarna. Kod uzupełnień do jedności (U1): liczbę nieujemną zapisujemy binarnie i dopisujemy na początku bit znaku 0; liczbę ujemną zapisujemy binarnie, negujemy każdy bit i dopisujemy na początku bit znaku 1. Przykład: <code>9 = 01001 (U1)</code>, <code>-9 = 10110 (U1)</code>, a <code>0 = 00 (U1)</code>.</p><p>Zapisz w kodzie U1 liczby dziesiętne <code>46</code> oraz <code>-46</code>.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_u1(x):
     binarnie = bin(abs(x))[2:]
     if x &gt;= 0:
         return &quot;0&quot; + binarnie
@@ -52,7 +52,48 @@
 
 
 print(na_u1(9), na_u1(-9))  # przykład z treści: 01001 10110
-print(na_u1(46), na_u1(-46))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 46 = 0101110 (U1), −46 = 1010001 (U1)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1b-i-1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b-i-1c">1b i 1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def z_u1(bin):
+print(na_u1(46), na_u1(-46))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;cstdlib&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+std::string na_u1(int x) {
+    std::string binarnie = &quot;&quot;;
+    int a = std::abs(x);
+    if (a == 0) binarnie = &quot;0&quot;;
+    while (a &gt; 0) {
+        binarnie = char(&#x27;0&#x27; + a % 2) + binarnie;
+        a /= 2;
+    }
+    if (x &gt;= 0) return &quot;0&quot; + binarnie;
+    // liczba ujemna: negacja bitów zapisu wartości bezwzględnej i bit znaku 1
+    std::string negacja = &quot;&quot;;
+    for (char bit : binarnie) {
+        if (bit == &#x27;0&#x27;) negacja += &quot;1&quot;;
+        else negacja += &quot;0&quot;;
+    }
+    return &quot;1&quot; + negacja;
+}
+
+int main() {
+    std::println(&quot;{} {}&quot;, na_u1(9), na_u1(-9));  // przykład z treści: 01001 10110
+    std::println(&quot;{} {}&quot;, na_u1(46), na_u1(-46));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static String naU1(int x) {
+        String binarnie = Integer.toBinaryString(Math.abs(x));
+        if (x &gt;= 0) return &quot;0&quot; + binarnie;
+        // liczba ujemna: negacja bitów zapisu wartości bezwzględnej i bit znaku 1
+        var negacja = new StringBuilder();
+        for (char bit : binarnie.toCharArray()) {
+            negacja.append(bit == &#x27;0&#x27; ? &#x27;1&#x27; : &#x27;0&#x27;);
+        }
+        return &quot;1&quot; + negacja;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(naU1(9) + &quot; &quot; + naU1(-9));  // przykład z treści: 01001 10110
+        System.out.println(naU1(46) + &quot; &quot; + naU1(-46));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 46 = 0101110 (U1), −46 = 1010001 (U1)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%231a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="1b-i-1c" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz I</p><h2><a class="self" href="#1b-i-1c">1b i 1c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Kod U1 jak w zadaniu 1a (bit znaku na początku; dla liczb ujemnych pozostałe bity są zanegowanym zapisem binarnym wartości bezwzględnej).</p><ul><li>1b — zamień liczby zapisane w U1: <code>0100111</code> oraz <code>1001101</code> na system dziesiętny.</li><li>1c — zapisz algorytm obliczający wartość liczby zapisanej w U1. Dane: <code>d</code> — długość zapisu (<code>d ≥ 1</code>), tablica <code>bin[1..d]</code> z bitami zapisu, gdzie <code>bin[1]</code> to bit znaku. Wynik: <code>x</code> — wartość liczby. Przykład: dla <code>d = 5</code> i <code>bin = 10110</code> wynikiem jest <code>x = -9</code>.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def z_u1(bin):
     # bin[0] to bit znaku (w zadaniu bin[1])
     d = len(bin)
     bity = list(bin)
@@ -71,7 +112,47 @@ print(na_u1(46), na_u1(-46))</code></pre></div><p class="answer"><strong>Odpowie
 
 
 print(z_u1(&quot;10110&quot;))  # przykład z treści: -9
-print(z_u1(&quot;0100111&quot;), z_u1(&quot;1001101&quot;))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 0100111 = 39, 1001101 = −50</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-4b-i-4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4a-4b-i-4c">4a, 4b i 4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
+print(z_u1(&quot;0100111&quot;), z_u1(&quot;1001101&quot;))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+int z_u1(std::string bity) {
+    // bity[0] to bit znaku (w zadaniu bin[1])
+    int d = bity.size();
+    if (bity[0] == &#x27;1&#x27;) {  // liczba ujemna - negujemy bity wartości
+        for (int i = 1; i &lt; d; i++) {
+            bity[i] = (bity[i] == &#x27;1&#x27;) ? &#x27;0&#x27; : &#x27;1&#x27;;
+        }
+    }
+    int x = 0;
+    for (int i = 1; i &lt; d; i++) x = x * 2 + (bity[i] - &#x27;0&#x27;);
+    if (bity[0] == &#x27;1&#x27;) x = -x;
+    return x;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, z_u1(&quot;10110&quot;));  // przykład z treści: -9
+    std::println(&quot;{} {}&quot;, z_u1(&quot;0100111&quot;), z_u1(&quot;1001101&quot;));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int zU1(String bin) {
+        // bity[0] to bit znaku (w zadaniu bin[1])
+        int d = bin.length();
+        char[] bity = bin.toCharArray();
+        if (bity[0] == &#x27;1&#x27;) {  // liczba ujemna - negujemy bity wartości
+            for (int i = 1; i &lt; d; i++) {
+                bity[i] = (bity[i] == &#x27;1&#x27;) ? &#x27;0&#x27; : &#x27;1&#x27;;
+            }
+        }
+        int x = 0;
+        for (int i = 1; i &lt; d; i++) x = x * 2 + (bity[i] - &#x27;0&#x27;);
+        if (bity[0] == &#x27;1&#x27;) x = -x;
+        return x;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(zU1(&quot;10110&quot;));  // przykład z treści: -9
+        System.out.println(zU1(&quot;0100111&quot;) + &quot; &quot; + zU1(&quot;1001101&quot;));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 0100111 = 39, 1001101 = −50</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%201b%20i%201c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%231b-i-1c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-4b-i-4c" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4a-4b-i-4c">4a, 4b i 4c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4. Rezerwat przyrody — żubry. W rezerwacie żyje 90 żubrów, dokarmianych od 1.12.2012 do 28.02.2013. Rano 1 grudnia 2012 (przed posiłkiem) w magazynie jest 100 t siana i 5 t żołędzi. Dopóki zapas siana wynosi co najmniej 50 t, żubry dostają codziennie rano wyłącznie siano (40 kg na żubra); w przeciwnym razie — aż do uzupełnienia siana do co najmniej 50 t — wyłącznie żołędzie (20 kg na żubra). W każdy piątek wieczorem (po posiłku) dowozi się 15 t siana, a w każdy wtorek wieczorem 4 t żołędzi. Odpowiedzi zapisz w pliku <code>wyniki4.txt</code>, poprzedzając każdą literą podpunktu.</p><ul><li>a) Podaj liczbę dostaw siana i liczbę dostaw żołędzi w całym okresie.</li><li>b) Podaj dzień, w którym żubry po raz pierwszy dostaną tylko żołędzie.</li><li>c) Podaj, ile razy w całym okresie żubry były karmione tylko sianem, a ile razy — tylko żołędziami.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
 
 zubry = 90
 siano, zoledzie = 100000, 5000  # w kg, 1 grudnia rano
@@ -99,7 +180,81 @@ while dzien &lt;= date(2013, 2, 28):
 
 print(&quot;a)&quot;, dostawy_siana, dostawy_zoledzi)
 print(&quot;b)&quot;, pierwszy_dzien_zoledzi)
-print(&quot;c)&quot;, karmienia_sianem, karmienia_zoledziami)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 12 dostaw siana, 13 dostaw żołędzi; b) 28.12.2012; c) sianem 64 razy, żołędziami 26 razy</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4d" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4d">4d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
+print(&quot;c)&quot;, karmienia_sianem, karmienia_zoledziami)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;chrono&gt;
+#include &lt;optional&gt;
+#include &lt;print&gt;
+using namespace std::chrono;
+
+int main() {
+    int zubry = 90;
+    int siano = 100000;  // w kg, 1 grudnia rano
+    [[maybe_unused]] int zoledzie = 5000;  // stan żołędzi nie jest tu wypisywany
+    sys_days dzien = 2012y / December / 1;
+    int dostawy_siana = 0, dostawy_zoledzi = 0;
+    int karmienia_sianem = 0, karmienia_zoledziami = 0;
+    std::optional&lt;sys_days&gt; pierwszy_dzien_zoledzi;
+
+    while (dzien &lt;= sys_days{2013y / February / 28}) {
+        if (siano &gt;= 50000) {
+            siano -= zubry * 40;
+            karmienia_sianem++;
+        } else {
+            zoledzie -= zubry * 20;
+            karmienia_zoledziami++;
+            if (!pierwszy_dzien_zoledzi) pierwszy_dzien_zoledzi = dzien;
+        }
+        weekday dzien_tygodnia{dzien};
+        if (dzien_tygodnia == Friday) {  // piątek wieczorem
+            siano += 15000;
+            dostawy_siana++;
+        }
+        if (dzien_tygodnia == Tuesday) {  // wtorek wieczorem
+            zoledzie += 4000;
+            dostawy_zoledzi++;
+        }
+        dzien += days{1};
+    }
+
+    std::println(&quot;a) {} {}&quot;, dostawy_siana, dostawy_zoledzi);
+    std::println(&quot;b) {}&quot;, year_month_day{*pierwszy_dzien_zoledzi});
+    std::println(&quot;c) {} {}&quot;, karmienia_sianem, karmienia_zoledziami);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.time.DayOfWeek;
+import java.time.LocalDate;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int zubry = 90;
+        int siano = 100000, zoledzie = 5000;  // w kg, 1 grudnia rano
+        var dzien = LocalDate.of(2012, 12, 1);
+        int dostawySiana = 0, dostawyZoledzi = 0;
+        int karmieniaSianem = 0, karmieniaZoledziami = 0;
+        LocalDate pierwszyDzienZoledzi = null;
+
+        while (!dzien.isAfter(LocalDate.of(2013, 2, 28))) {
+            if (siano &gt;= 50000) {
+                siano -= zubry * 40;
+                karmieniaSianem++;
+            } else {
+                zoledzie -= zubry * 20;
+                karmieniaZoledziami++;
+                if (pierwszyDzienZoledzi == null) pierwszyDzienZoledzi = dzien;
+            }
+            if (dzien.getDayOfWeek() == DayOfWeek.FRIDAY) {  // piątek wieczorem
+                siano += 15000;
+                dostawySiana++;
+            }
+            if (dzien.getDayOfWeek() == DayOfWeek.TUESDAY) {  // wtorek wieczorem
+                zoledzie += 4000;
+                dostawyZoledzi++;
+            }
+            dzien = dzien.plusDays(1);
+        }
+
+        System.out.println(&quot;a) &quot; + dostawySiana + &quot; &quot; + dostawyZoledzi);
+        System.out.println(&quot;b) &quot; + pierwszyDzienZoledzi);
+        System.out.println(&quot;c) &quot; + karmieniaSianem + &quot; &quot; + karmieniaZoledziami);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 12 dostaw siana, 13 dostaw żołędzi; b) 28.12.2012; c) sianem 64 razy, żołędziami 26 razy</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204a%2C%204b%20i%204c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%234a-4b-i-4c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4d" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4d">4d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Symulacja dokarmiania żubrów jak w zadaniu 4a. Zestaw poranne stany zapasów (tony siana i tony żołędzi) w dniach 31.12.2012, 31.01.2013 i 28.02.2013 i wykonaj do tego zestawienia czytelnie opisany wykres kolumnowy. Odpowiedź zapisz w <code>wyniki4.txt</code> (podpunkt d).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
 
 siano, zoledzie = 100000, 5000
 dzien = date(2012, 12, 1)
@@ -116,7 +271,60 @@ while dzien &lt;= date(2013, 2, 28):
         siano += 15000
     if dzien.weekday() == 1:
         zoledzie += 4000
-    dzien += timedelta(days=1)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 31.12.2012: siano 55,6 t, żołędzie 19,2 t; 31.01.2013: 47,2 t, 17,6 t; 28.02.2013: 49,6 t, 12 t (do tego wykres kolumnowy)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4e" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4e">4e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
+    dzien += timedelta(days=1)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;chrono&gt;
+#include &lt;format&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+using namespace std::chrono;
+
+// liczba rzeczywista wypisana tak jak w Pythonie (np. 12.0, a nie 12)
+std::string jak_python(double x) {
+    std::string s = std::format(&quot;{}&quot;, x);
+    if (s.find(&#x27;.&#x27;) == std::string::npos) s += &quot;.0&quot;;
+    return s;
+}
+
+int main() {
+    int siano = 100000, zoledzie = 5000;
+    sys_days dzien = 2012y / December / 1;
+    sys_days wybrane[] = {2012y / December / 31, 2013y / January / 31, 2013y / February / 28};
+
+    while (dzien &lt;= sys_days{2013y / February / 28}) {
+        for (sys_days d : wybrane) {
+            if (dzien == d) {  // stan rano, przed posiłkiem
+                std::println(&quot;{} {} {}&quot;, year_month_day{dzien}, jak_python(siano / 1000.0),
+                             jak_python(zoledzie / 1000.0));
+            }
+        }
+        if (siano &gt;= 50000) siano -= 90 * 40;
+        else zoledzie -= 90 * 20;
+        weekday dzien_tygodnia{dzien};
+        if (dzien_tygodnia == Friday) siano += 15000;
+        if (dzien_tygodnia == Tuesday) zoledzie += 4000;
+        dzien += days{1};
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.util.List;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int siano = 100000, zoledzie = 5000;
+        var dzien = LocalDate.of(2012, 12, 1);
+        var wybrane = List.of(LocalDate.of(2012, 12, 31), LocalDate.of(2013, 1, 31), LocalDate.of(2013, 2, 28));
+
+        while (!dzien.isAfter(LocalDate.of(2013, 2, 28))) {
+            if (wybrane.contains(dzien)) {  // stan rano, przed posiłkiem
+                System.out.println(dzien + &quot; &quot; + siano / 1000.0 + &quot; &quot; + zoledzie / 1000.0);
+            }
+            if (siano &gt;= 50000) siano -= 90 * 40;
+            else zoledzie -= 90 * 20;
+            if (dzien.getDayOfWeek() == DayOfWeek.FRIDAY) siano += 15000;
+            if (dzien.getDayOfWeek() == DayOfWeek.TUESDAY) zoledzie += 4000;
+            dzien = dzien.plusDays(1);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 31.12.2012: siano 55,6 t, żołędzie 19,2 t; 31.01.2013: 47,2 t, 17,6 t; 28.02.2013: 49,6 t, 12 t (do tego wykres kolumnowy)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%234d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4e" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#4e">4e</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><p class="note">Zadanie na arkusz kalkulacyjny — rozwiązanie w Pythonie.</p><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Symulacja dokarmiania żubrów jak w zadaniu 4a. Podaj największą liczbę żubrów, o jaką można powiększyć stado, aby nadal dało się je wyżywić opisanym sposobem w całym okresie od 1.12.2012 do 28.02.2013. Odpowiedź zapisz w <code>wyniki4.txt</code> (podpunkt e).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">from datetime import date, timedelta
 
 
 def czy_wystarczy(zubry):
@@ -140,7 +348,53 @@ def czy_wystarczy(zubry):
 zubry = 90
 while czy_wystarczy(zubry + 1):
     zubry += 1
-print(zubry - 90)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> o 5 żubrów</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+print(zubry - 90)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;chrono&gt;
+#include &lt;print&gt;
+using namespace std::chrono;
+
+bool czy_wystarczy(int zubry) {
+    int siano = 100000, zoledzie = 5000;
+    sys_days dzien = 2012y / December / 1;
+    while (dzien &lt;= sys_days{2013y / February / 28}) {
+        if (siano &gt;= 50000) siano -= zubry * 40;
+        else zoledzie -= zubry * 20;
+        if (siano &lt; 0 || zoledzie &lt; 0) return false;
+        weekday dzien_tygodnia{dzien};
+        if (dzien_tygodnia == Friday) siano += 15000;
+        if (dzien_tygodnia == Tuesday) zoledzie += 4000;
+        dzien += days{1};
+    }
+    return true;
+}
+
+int main() {
+    int zubry = 90;
+    while (czy_wystarczy(zubry + 1)) zubry++;
+    std::println(&quot;{}&quot;, zubry - 90);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.time.DayOfWeek;
+import java.time.LocalDate;
+
+public class Zadanie {
+    static boolean czyWystarczy(int zubry) {
+        int siano = 100000, zoledzie = 5000;
+        var dzien = LocalDate.of(2012, 12, 1);
+        while (!dzien.isAfter(LocalDate.of(2013, 2, 28))) {
+            if (siano &gt;= 50000) siano -= zubry * 40;
+            else zoledzie -= zubry * 20;
+            if (siano &lt; 0 || zoledzie &lt; 0) return false;
+            if (dzien.getDayOfWeek() == DayOfWeek.FRIDAY) siano += 15000;
+            if (dzien.getDayOfWeek() == DayOfWeek.TUESDAY) zoledzie += 4000;
+            dzien = dzien.plusDays(1);
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int zubry = 90;
+        while (czyWystarczy(zubry + 1)) zubry++;
+        System.out.println(zubry - 90);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> o 5 żubrów</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%204e&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%234e" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6a" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6a">6a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 6. Liczby. W pliku <code>dane.txt</code> znajduje się 5000 liczb całkowitych z przedziału od <code>10</code> do <code>2000000</code> zapisanych w systemie ósemkowym, po jednej w wierszu. Odpowiedzi zapisz w pliku <code>wyniki6.txt</code>, poprzedzając każdą literą podpunktu.</p><p>Podaj, ile liczb z pliku (w zapisie ósemkowym) ma pierwszą cyfrę równą ostatniej.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;dane.txt&quot;) as file:
     for line in file:
@@ -148,7 +402,31 @@ with open(&quot;dane.txt&quot;) as file:
         if liczba[0] == liczba[-1]:
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 447</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    int licznik = 0;
+    std::string liczba;  // zapis ósemkowy
+    while (plik &gt;&gt; liczba) {
+        if (liczba.front() == liczba.back()) licznik++;
+    }
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (String line : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            String liczba = line.strip();  // zapis ósemkowy
+            if (liczba.charAt(0) == liczba.charAt(liczba.length() - 1)) licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 447</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%236a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6b" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6b">6b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Liczby ósemkowe z pliku <code>dane.txt</code> jak w zadaniu 6a. Podaj, ile z nich po zamianie na system dziesiętny ma pierwszą cyfrę równą ostatniej.</p><p>Przykład: <code>203 (8) = 131 (10)</code> spełnia warunek, a <code>7123 (8) = 3667 (10)</code> — nie.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">licznik = 0
 
 with open(&quot;dane.txt&quot;) as file:
     for line in file:
@@ -156,7 +434,32 @@ with open(&quot;dane.txt&quot;) as file:
         if liczba[0] == liczba[-1]:
             licznik += 1
 
-print(licznik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 324</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
+print(licznik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    int licznik = 0;
+    std::string osemkowo;
+    while (plik &gt;&gt; osemkowo) {
+        std::string liczba = std::to_string(std::stoll(osemkowo, nullptr, 8));  // zapis dziesiętny
+        if (liczba.front() == liczba.back()) licznik++;
+    }
+    std::println(&quot;{}&quot;, licznik);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int licznik = 0;
+        for (String line : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            String liczba = Long.toString(Long.parseLong(line.strip(), 8));  // zapis dziesiętny
+            if (liczba.charAt(0) == liczba.charAt(liczba.length() - 1)) licznik++;
+        }
+        System.out.println(licznik);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 324</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%236b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="6c" style="--c:var(--g6)"><header class="card-head"><div class="head-text"><p class="eyebrow">Arkusz II</p><h2><a class="self" href="#6c">6c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Liczby ósemkowe z pliku <code>dane.txt</code> jak w zadaniu 6a. Podaj, ile liczb ma w zapisie ósemkowym cyfry niemalejące (każda kolejna cyfra, licząc od najbardziej znaczącej, nie jest mniejsza od poprzedniej), oraz podaj największą i najmniejszą liczbę z pliku spełniającą ten warunek.</p><p>Przykład: <code>12335 (8)</code> spełnia warunek.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
 
 with open(&quot;dane.txt&quot;) as file:
     for line in file:
@@ -170,7 +473,51 @@ with open(&quot;dane.txt&quot;) as file:
 
 print(len(liczby))
 print(oct(max(liczby))[2:], max(liczby))
-print(oct(min(liczby))[2:], min(liczby))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 49 liczb; największa 1133357₈ = 308975₁₀, najmniejsza 24₈ = 20₁₀</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(oct(min(liczby))[2:], min(liczby))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::ifstream plik(&quot;dane.txt&quot;);
+    std::vector&lt;long long&gt; liczby;
+    std::string liczba;
+    while (plik &gt;&gt; liczba) {
+        bool niemalejaca = true;
+        for (size_t i = 1; i &lt; liczba.size(); i++) {
+            if (liczba[i] &lt; liczba[i - 1]) niemalejaca = false;
+        }
+        if (niemalejaca) liczby.push_back(std::stoll(liczba, nullptr, 8));
+    }
+    long long najwieksza = std::ranges::max(liczby);
+    long long najmniejsza = std::ranges::min(liczby);
+    std::println(&quot;{}&quot;, liczby.size());
+    std::println(&quot;{:o} {}&quot;, najwieksza, najwieksza);
+    std::println(&quot;{:o} {}&quot;, najmniejsza, najmniejsza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;Long&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;dane.txt&quot;))) {
+            String liczba = line.strip();
+            boolean niemalejaca = true;
+            for (int i = 1; i &lt; liczba.length(); i++) {
+                if (liczba.charAt(i) &lt; liczba.charAt(i - 1)) niemalejaca = false;
+            }
+            if (niemalejaca) liczby.add(Long.parseLong(liczba, 8));
+        }
+        long najwieksza = Collections.max(liczby);
+        long najmniejsza = Collections.min(liczby);
+        System.out.println(liczby.size());
+        System.out.println(Long.toOctalString(najwieksza) + &quot; &quot; + najwieksza);
+        System.out.println(Long.toOctalString(najmniejsza) + &quot; &quot; + najmniejsza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 49 liczb; największa 1133357₈ = 308975₁₀, najmniejsza 24₈ = 20₁₀</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202013%20%E2%80%94%20maj%2C%20poziom%20rozszerzony%20%E2%80%94%206c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2013-maj.html%236c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2013_maj.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

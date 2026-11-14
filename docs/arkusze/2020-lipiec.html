@@ -37,7 +37,16 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-i-2-2">2.1 i 2.2</a></li><li><a href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2020 — lipiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2020 — lipiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">n = 10
+<h1 class="page-title">Matura 2020 — lipiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2020-lipiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 1 (analiza algorytmu). Dla liczby całkowitej <code>n &gt; 1</code> algorytm wypełnia tablice <code>P</code> i <code>S</code>:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">dla i = 1, 2, ..., n wykonuj
+    P[i] ← 1
+    S[i] ← 0
+dla j = 2, 3, ..., n wykonuj
+    jeżeli P[j] = 1
+        i ← j * j
+        dopóki i ≤ n wykonuj
+            P[i] ← 0
+            i ← i + j
+    S[j] ← S[j-1] + P[j]</code></pre></div></div></div><ul><li>1.1 — dla <code>n = 10</code> podaj wartości <code>P[1]</code>, …, <code>P[10]</code>.</li><li>1.2 — dla <code>n = 10</code> podaj wartości <code>S[1]</code>, …, <code>S[10]</code>.</li><li>1.3 — dokończ zdanie: dla <code>1 &lt; a ≤ b ≤ n</code> wartość <code>S[b] − S[a−1]</code> jest równa: A. liczbie dzielników pierwszych liczby <code>b − a</code>; B. liczbie liczb pierwszych w przedziale <code>[a, b]</code>; C. NWD liczb <code>a</code> i <code>b</code>; D. liczbie liczb pierwszych w przedziale <code>[a − 1, b]</code>.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">n = 10
 P = [0] * (n + 1)  # indeksy 1..n, jak w treści
 S = [0] * (n + 1)
 
@@ -60,7 +69,72 @@ print(S[1:])
 
 # 1.3 - S[b] - S[a - 1] = suma P[a..b], a &gt; 1, więc to liczba liczb pierwszych w [a, b]
 a, b = 3, 10
-print(S[b] - S[a - 1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: P = 1, 1, 1, 0, 1, 0, 1, 0, 0, 0; 1.2: S = 0, 1, 2, 2, 3, 3, 4, 4, 4, 4; 1.3: B (liczba liczb pierwszych w przedziale [a, b])</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozklad(p, q):
+print(S[b] - S[a - 1])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int main() {
+    int n = 10;
+    std::vector&lt;int&gt; P(n + 1, 0);  // indeksy 1..n, jak w treści
+    std::vector&lt;int&gt; S(n + 1, 0);
+
+    for (int i = 1; i &lt;= n; i++) {
+        P[i] = 1;
+        S[i] = 0;
+    }
+
+    // sito Eratostenesa: P[j] = 1 dla liczb pierwszych (oraz dla 1, której pętla nie rusza)
+    for (int j = 2; j &lt;= n; j++) {
+        if (P[j] == 1) {
+            int i = j * j;
+            while (i &lt;= n) {
+                P[i] = 0;
+                i = i + j;
+            }
+        }
+        // S[j] - ile liczb pierwszych jest w przedziale [2, j]
+        S[j] = S[j - 1] + P[j];
+    }
+
+    std::println(&quot;{}&quot;, std::vector&lt;int&gt;(P.begin() + 1, P.end()));
+    std::println(&quot;{}&quot;, std::vector&lt;int&gt;(S.begin() + 1, S.end()));
+
+    // 1.3 - S[b] - S[a - 1] = suma P[a..b], a &gt; 1, więc to liczba liczb pierwszych w [a, b]
+    int a = 3, b = 10;
+    std::println(&quot;{}&quot;, S[b] - S[a - 1]);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.Arrays;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int n = 10;
+        int[] P = new int[n + 1];  // indeksy 1..n, jak w treści
+        int[] S = new int[n + 1];
+
+        for (int i = 1; i &lt;= n; i++) {
+            P[i] = 1;
+            S[i] = 0;
+        }
+
+        // sito Eratostenesa: P[j] = 1 dla liczb pierwszych (oraz dla 1, której pętla nie rusza)
+        for (int j = 2; j &lt;= n; j++) {
+            if (P[j] == 1) {
+                int i = j * j;
+                while (i &lt;= n) {
+                    P[i] = 0;
+                    i = i + j;
+                }
+            }
+            // S[j] - ile liczb pierwszych jest w przedziale [2, j]
+            S[j] = S[j - 1] + P[j];
+        }
+
+        System.out.println(Arrays.toString(Arrays.copyOfRange(P, 1, n + 1)));
+        System.out.println(Arrays.toString(Arrays.copyOfRange(S, 1, n + 1)));
+
+        // 1.3 - S[b] - S[a - 1] = suma P[a..b], a &gt; 1, więc to liczba liczb pierwszych w [a, b]
+        int a = 3, b = 10;
+        System.out.println(S[b] - S[a - 1]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: P = 1, 1, 1, 0, 1, 0, 1, 0, 0, 0; 1.2: S = 0, 1, 2, 2, 3, 3, 4, 4, 4, 4; 1.3: B (liczba liczb pierwszych w przedziale [a, b])</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_lipiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20lipiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-lipiec.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-i-2-2" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-i-2-2">2.1 i 2.2</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 2 (ułamki egipskie). Ułamek egipski to ułamek postaci <code>1/m</code>, gdzie <code>m &gt; 1</code> jest całkowite. Każdą dodatnią liczbę wymierną <code>a &lt; 1</code> można przedstawić jako sumę ułamków egipskich o różnych mianownikach. Metoda rozkładu:</p><ol><li>Znajdź najmniejszą liczbę całkowitą <code>n</code> nie mniejszą od <code>1/a</code>; <code>1/n</code> jest największym ułamkiem egipskim w rozkładzie <code>a</code>.</li><li>Oblicz <code>r = a − 1/n</code>. Jeśli <code>r = 0</code>, rozkład jest gotowy; w przeciwnym razie tą samą metodą rozłóż <code>r</code> i dopisz jego składniki do rozkładu <code>a</code>.</li></ol><p>Przykład: <code>4/5 = 1/2 + 1/4 + 1/20</code>.</p><ul><li>2.1 — wyznacz tą metodą rozkłady liczb <code>8/15</code> i <code>5/6</code>.</li><li>2.2 — napisz algorytm, który dla liczby <code>a = p/q</code> (<code>p</code>, <code>q</code> całkowite dodatnie, <code>p &lt; q</code>) wypisze rosnący ciąg różnych mianowników <code>m1 &lt; m2 &lt; … &lt; mk</code> takich, że <code>p/q = 1/m1 + 1/m2 + … + 1/mk</code> (dla <code>p = 4</code>, <code>q = 5</code>: 2, 4, 20). Wolno używać tylko operacji arytmetycznych (w tym div i mod), porównań, wypisywania, instrukcji sterujących, przypisań, własnych funkcji oraz funkcji sufit.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def rozklad(p, q):
     # rozkład p/q (p &lt; q) na sumę ułamków egipskich - zwraca mianowniki
     mianowniki = []
     while p &gt; 0:
@@ -73,7 +147,51 @@ print(S[b] - S[a - 1])</code></pre></div><p class="answer"><strong>Odpowiedź:</
 
 print(rozklad(8, 15))
 print(rozklad(5, 6))
-print(rozklad(4, 5))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 8/15 = 1/2 + 1/30; 5/6 = 1/2 + 1/3. 2.2: algorytm powyżej (dla 4/5: 2, 4, 20)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">identyfikatory = []
+print(rozklad(4, 5))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;long long&gt; rozklad(long long p, long long q) {
+    // rozkład p/q (p &lt; q) na sumę ułamków egipskich - zwraca mianowniki
+    std::vector&lt;long long&gt; mianowniki;
+    while (p &gt; 0) {
+        long long m = (q + p - 1) / p;  // sufit z q/p - najmniejsze m, dla którego 1/m &lt;= p/q
+        mianowniki.push_back(m);
+        // p/q - 1/m = (p*m - q) / (q*m)
+        long long nowe_p = p * m - q;
+        q = q * m;
+        p = nowe_p;
+    }
+    return mianowniki;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, rozklad(8, 15));
+    std::println(&quot;{}&quot;, rozklad(5, 6));
+    std::println(&quot;{}&quot;, rozklad(4, 5));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+
+public class Zadanie {
+    static List&lt;Long&gt; rozklad(long p, long q) {
+        // rozkład p/q (p &lt; q) na sumę ułamków egipskich - zwraca mianowniki
+        var mianowniki = new ArrayList&lt;Long&gt;();
+        while (p &gt; 0) {
+            long m = (q + p - 1) / p;  // sufit z q/p - najmniejsze m, dla którego 1/m &lt;= p/q
+            mianowniki.add(m);
+            // p/q - 1/m = (p*m - q) / (q*m)
+            long noweP = p * m - q;
+            q = q * m;
+            p = noweP;
+        }
+        return mianowniki;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(rozklad(8, 15));
+        System.out.println(rozklad(5, 6));
+        System.out.println(rozklad(4, 5));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 8/15 = 1/2 + 1/30; 5/6 = 1/2 + 1/3. 2.2: algorytm powyżej (dla 4/5: 2, 4, 20)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_lipiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20lipiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%20i%202.2&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-lipiec.html%232-1-i-2-2" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-i-4-3" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-i-4-3">4.1, 4.2 i 4.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Zadanie 4 (dokumenty). Plik <code>identyfikator.txt</code> zawiera 200 wierszy; w każdym identyfikator dokumentu złożony z serii (trzy wielkie litery alfabetu łacińskiego) i sześciu cyfr, np. <code>CIS459437</code> (dane przykładowe: <code>identyfikator_przyklad.txt</code>, 20 wierszy). Wyniki zapisuj po jednym identyfikatorze w wierszu, w kolejności z pliku.</p><ul><li>4.1 — podaj identyfikatory o największej sumie cyfr części numerycznej; wynik zapisz w pliku <code>wyniki4_1.txt</code> (dla przykładu: <code>CHY728985</code>).</li><li>4.2 — podaj identyfikatory, których seria lub numer jest palindromem; wynik zapisz w pliku <code>wyniki4_2.txt</code> (dla przykładu: <code>KOK201272</code>, <code>PIP417543</code>, <code>MOS302203</code>).</li><li>4.3 — pierwsza cyfra numeru jest cyfrą kontrolną. Litery serii zamieniamy na liczby A=10, B=11, …, Z=35; wartości pozostałych ośmiu elementów (trzy litery i pięć cyfr po cyfrze kontrolnej) mnożymy kolejno przez wagi 7, 3, 1, 7, 3, 1, 7, 3, sumujemy i bierzemy resztę z dzielenia przez 10. Identyfikator jest poprawny, gdy wynik jest równy cyfrze kontrolnej (np. dla <code>CIS459437</code> suma wynosi 274, 274 mod 10 = 4). Podaj wszystkie niepoprawne identyfikatory; wynik zapisz w pliku <code>wyniki4_3.txt</code> (dla przykładu: <code>NHO307984</code>, <code>SEH422297</code>, <code>MOS302203</code>).</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">identyfikatory = []
 with open(&quot;identyfikator.txt&quot;) as file:
     for line in file:
         identyfikatory.append(line.strip())
@@ -120,7 +238,132 @@ def czy_poprawny(x):
 with open(&quot;wyniki4_3.txt&quot;, &quot;w&quot;) as wynik:
     for x in identyfikatory:
         if not czy_poprawny(x):
-            print(x, file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: GYJ959787, JOK786969 (suma cyfr 45). 4.2: MBF340043, JKJ452719, GFG148345, AXA231829, KIK866983, LOL695279. 4.3: LIK235378, MBF340043, HFG378931, KIJ511146, NUK840936, OKH427482, RTS278686</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_lipiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+            print(x, file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int suma_cyfr(const std::string&amp; liczba) {
+    int suma = 0;
+    for (char c : liczba)
+        suma += c - &#x27;0&#x27;;
+    return suma;
+}
+
+bool czy_palindrom(const std::string&amp; s) {
+    return s == std::string(s.rbegin(), s.rend());
+}
+
+const std::vector&lt;int&gt; wagi = {7, 3, 1, 7, 3, 1, 7, 3};
+
+bool czy_poprawny(const std::string&amp; x) {
+    // litery A..Z -&gt; 10..35, cyfra kontrolna x[3] pomijana
+    std::vector&lt;int&gt; wartosci;
+    for (int i = 0; i &lt; 3; i++)
+        wartosci.push_back(x[i] - &#x27;A&#x27; + 10);
+    for (size_t i = 4; i &lt; x.size(); i++)
+        wartosci.push_back(x[i] - &#x27;0&#x27;);
+    int suma = 0;
+    for (size_t i = 0; i &lt; wagi.size(); i++)
+        suma += wagi[i] * wartosci[i];
+    return suma % 10 == x[3] - &#x27;0&#x27;;
+}
+
+int main() {
+    std::vector&lt;std::string&gt; identyfikatory;
+    std::ifstream plik(&quot;identyfikator.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia)
+        identyfikatory.push_back(linia);
+
+    // 4.1
+    int najwieksza = 0;
+    for (const auto&amp; x : identyfikatory)
+        najwieksza = std::max(najwieksza, suma_cyfr(x.substr(3)));
+    std::ofstream wynik1(&quot;wyniki4_1.txt&quot;);
+    for (const auto&amp; x : identyfikatory)
+        if (suma_cyfr(x.substr(3)) == najwieksza)
+            std::println(wynik1, &quot;{}&quot;, x);
+
+    // 4.2
+    std::ofstream wynik2(&quot;wyniki4_2.txt&quot;);
+    for (const auto&amp; x : identyfikatory) {
+        std::string seria = x.substr(0, 3), numer = x.substr(3);
+        if (czy_palindrom(seria) || czy_palindrom(numer))
+            std::println(wynik2, &quot;{}&quot;, x);
+    }
+
+    // 4.3
+    std::ofstream wynik3(&quot;wyniki4_3.txt&quot;);
+    for (const auto&amp; x : identyfikatory)
+        if (!czy_poprawny(x))
+            std::println(wynik3, &quot;{}&quot;, x);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+
+public class Zadanie {
+    static int sumaCyfr(String liczba) {
+        int suma = 0;
+        for (char c : liczba.toCharArray())
+            suma += c - &#x27;0&#x27;;
+        return suma;
+    }
+
+    static boolean czyPalindrom(String s) {
+        return s.equals(new StringBuilder(s).reverse().toString());
+    }
+
+    static final int[] wagi = {7, 3, 1, 7, 3, 1, 7, 3};
+
+    static boolean czyPoprawny(String x) {
+        // litery A..Z -&gt; 10..35, cyfra kontrolna x[3] pomijana
+        var wartosci = new ArrayList&lt;Integer&gt;();
+        for (int i = 0; i &lt; 3; i++)
+            wartosci.add(x.charAt(i) - &#x27;A&#x27; + 10);
+        for (int i = 4; i &lt; x.length(); i++)
+            wartosci.add(x.charAt(i) - &#x27;0&#x27;);
+        int suma = 0;
+        for (int i = 0; i &lt; wagi.length; i++)
+            suma += wagi[i] * wartosci.get(i);
+        return suma % 10 == x.charAt(3) - &#x27;0&#x27;;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var identyfikatory = new ArrayList&lt;String&gt;();
+        for (String line : Files.readAllLines(Path.of(&quot;identyfikator.txt&quot;)))
+            if (!line.isBlank())
+                identyfikatory.add(line.strip());
+
+        // 4.1
+        int najwieksza = 0;
+        for (String x : identyfikatory)
+            najwieksza = Math.max(najwieksza, sumaCyfr(x.substring(3)));
+        try (var wynik = new PrintWriter(&quot;wyniki4_1.txt&quot;)) {
+            for (String x : identyfikatory)
+                if (sumaCyfr(x.substring(3)) == najwieksza)
+                    wynik.println(x);
+        }
+
+        // 4.2
+        try (var wynik = new PrintWriter(&quot;wyniki4_2.txt&quot;)) {
+            for (String x : identyfikatory) {
+                String seria = x.substring(0, 3), numer = x.substring(3);
+                if (czyPalindrom(seria) || czyPalindrom(numer))
+                    wynik.println(x);
+            }
+        }
+
+        // 4.3
+        try (var wynik = new PrintWriter(&quot;wyniki4_3.txt&quot;)) {
+            for (String x : identyfikatory)
+                if (!czyPoprawny(x))
+                    wynik.println(x);
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: GYJ959787, JOK786969 (suma cyfr 45). 4.2: MBF340043, JKJ452719, GFG148345, AXA231829, KIK866983, LOL695279. 4.3: LIK235378, MBF340043, HFG378931, KIJ511146, NUK840936, OKH427482, RTS278686</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2020_lipiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202020%20%E2%80%94%20lipiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%20i%204.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2020-lipiec.html%234-1-4-2-i-4-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2020_lipiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

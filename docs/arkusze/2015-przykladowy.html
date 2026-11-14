@@ -37,7 +37,15 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#2a-2b-i-2c">2a, 2b i 2c</a></li><li><a href="#3a">3a</a></li><li><a href="#3b">3b</a></li><li><a href="#3c-i-3d">3c i 3d</a></li><li><a href="#4a-i-4b">4a i 4b</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Przykładowy arkusz CKE — formuła 2015</span></nav>
-<h1 class="page-title">Przykładowy arkusz CKE — formuła 2015</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="2a-2b-i-2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-2b-i-2c">2a, 2b i 2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pierwiastek_liniowo(n):
+<h1 class="page-title">Przykładowy arkusz CKE — formuła 2015</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2015-przykladowy-arkusz-cke-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="2a-2b-i-2c" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2a-2b-i-2c">2a, 2b i 2c</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Całkowity pierwiastek kwadratowy. Dla dodatniej liczby całkowitej n całkowitym pierwiastkiem kwadratowym nazywamy dodatnią liczbę całkowitą k taką, że k·k ≤ n i (k+1)·(k+1) &gt; n (np. 3 jest całkowitym pierwiastkiem z liczb 9–15). Specyfikacja: dane — dodatnia liczba całkowita <code>n</code>; wynik — <code>k</code>, całkowity pierwiastek kwadratowy z n. Przykład: dla n = 39 wynikiem jest k = 6.</p><ul><li>a) Uzupełnij wiersz (3) algorytmu tak, aby był poprawny, i podaj, ile razy sprawdzany jest warunek w wierszu (2) dla n = 32 i dla n = 1024:</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">(1) k ← 1
+(2) dopóki (k+1)*(k+1) ≤ n wykonuj
+(3)     k ← ......</code></pre></div></div></div><ul><li>b) Uzupełnij wiersz (5) algorytmu (div — dzielenie całkowite):</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">(1) k ← 1; m ← n
+(2) dopóki (k+1)*(k+1) ≤ n wykonuj
+(3)     s ← (k+m) div 2
+(4)     jeśli s*s ≤ n to
+(5)         k ← ......
+(6)     w przeciwnym przypadku
+(7)         m ← s</code></pre></div></div></div><ul><li>c) Podaj, ile razy sprawdzany jest warunek w wierszu (2) algorytmu z punktu b) dla n = 32 i dla n = 1024.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def pierwiastek_liniowo(n):
     # 2a - brakująca instrukcja: k &lt;- k + 1
     k = 1
     sprawdzenia = 0
@@ -67,7 +75,79 @@ def pierwiastek_binarnie(n):
 
 
 for n in [32, 1024]:
-    print(n, pierwiastek_liniowo(n)[1], pierwiastek_binarnie(n)[1])</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2a: k ← k + 1; liczba sprawdzeń: 5 (n = 32) i 32 (n = 1024). 2b: k ← s. 2c: 6 (n = 32) i 6 (n = 1024).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3a" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3a">3a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def schody(a):
+    print(n, pierwiastek_liniowo(n)[1], pierwiastek_binarnie(n)[1])</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;utility&gt;
+
+std::pair&lt;long long, int&gt; pierwiastek_liniowo(long long n) {
+    // 2a - brakująca instrukcja: k &lt;- k + 1
+    long long k = 1;
+    int sprawdzenia = 0;
+    while (true) {
+        sprawdzenia++;  // sprawdzenie warunku z wiersza (2)
+        if (!((k + 1) * (k + 1) &lt;= n))
+            break;
+        k = k + 1;
+    }
+    return {k, sprawdzenia};
+}
+
+std::pair&lt;long long, int&gt; pierwiastek_binarnie(long long n) {
+    // 2b - brakująca instrukcja: k &lt;- s (wyszukiwanie binarne w przedziale [k, m])
+    long long k = 1, m = n;
+    int sprawdzenia = 0;
+    while (true) {
+        sprawdzenia++;
+        if (!((k + 1) * (k + 1) &lt;= n))
+            break;
+        long long s = (k + m) / 2;
+        if (s * s &lt;= n)
+            k = s;
+        else
+            m = s;
+    }
+    return {k, sprawdzenia};
+}
+
+int main() {
+    for (long long n : {32, 1024})
+        std::cout &lt;&lt; n &lt;&lt; &#x27; &#x27; &lt;&lt; pierwiastek_liniowo(n).second &lt;&lt; &#x27; &#x27; &lt;&lt; pierwiastek_binarnie(n).second &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    // zwracają {k, liczba sprawdzeń}
+    static long[] pierwiastekLiniowo(long n) {
+        // 2a - brakująca instrukcja: k &lt;- k + 1
+        long k = 1;
+        int sprawdzenia = 0;
+        while (true) {
+            sprawdzenia++;  // sprawdzenie warunku z wiersza (2)
+            if (!((k + 1) * (k + 1) &lt;= n))
+                break;
+            k = k + 1;
+        }
+        return new long[] {k, sprawdzenia};
+    }
+
+    static long[] pierwiastekBinarnie(long n) {
+        // 2b - brakująca instrukcja: k &lt;- s (wyszukiwanie binarne w przedziale [k, m])
+        long k = 1, m = n;
+        int sprawdzenia = 0;
+        while (true) {
+            sprawdzenia++;
+            if (!((k + 1) * (k + 1) &lt;= n))
+                break;
+            long s = (k + m) / 2;
+            if (s * s &lt;= n)
+                k = s;
+            else
+                m = s;
+        }
+        return new long[] {k, sprawdzenia};
+    }
+
+    public static void main(String[] args) {
+        for (long n : new long[] {32, 1024})
+            System.out.println(n + &quot; &quot; + pierwiastekLiniowo(n)[1] + &quot; &quot; + pierwiastekBinarnie(n)[1]);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2a: k ← k + 1; liczba sprawdzeń: 5 (n = 32) i 32 (n = 1024). 2b: k ← s. 2c: 6 (n = 32) i 6 (n = 1024).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Przyk%C5%82adowy%20arkusz%20CKE%20%E2%80%94%20formu%C5%82a%202015%20%E2%80%94%202a%2C%202b%20i%202c&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html%232a-2b-i-2c" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3a" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3a">3a</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Progi i schody. W ciągu liczb naturalnych parę sąsiednich liczb nazywamy progiem, jeśli następna liczba jest mniejsza od poprzedniej. Schody do dołu to podciąg kolejnych elementów złożony z co najmniej dwóch liczb, w którym każda liczba (poza pierwszą) nie jest większa od poprzedniej i którego nie da się rozszerzyć w żadną stronę. Długość schodów to liczba ich elementów.</p><p>Przykład: ciąg 3, 7, 7, 6, 5, 4, 4, 4, 5 zawiera schody 7, 7, 6, 5, 4, 4, 4 o długości 7, z 3 progami (7 i 6, 6 i 5, 5 i 4).</p><p>Dla ciągu 2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7 wypisz kolejno wszystkie schody do dołu, podając przy każdych ich długość i liczbę progów.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def schody(a):
     # zwraca listę (schody, długość, liczba progów)
     wynik = []
     n = len(a)
@@ -89,7 +169,74 @@ for n in [32, 1024]:
 
 ciag = [2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]
 for schodki, dlugosc, progi in schody(ciag):
-    print(schodki, dlugosc, progi)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> (2, 2, 2) 3 0; (3, 1, 1) 3 1; (3, 3, 1) 3 1; (11, 7, 7, 6) 4 2; (7, 7) 2 0; (9, 9, 7) 3 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3b" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3b">3b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_progow(a):
+    print(schodki, dlugosc, progi)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;tuple&gt;
+#include &lt;vector&gt;
+
+// zwraca listę (schody, długość, liczba progów)
+std::vector&lt;std::tuple&lt;std::vector&lt;int&gt;, int, int&gt;&gt; schody(const std::vector&lt;int&gt;&amp; a) {
+    std::vector&lt;std::tuple&lt;std::vector&lt;int&gt;, int, int&gt;&gt; wynik;
+    int n = a.size();
+    int i = 0;
+    while (i &lt; n - 1) {
+        if (a[i + 1] &lt;= a[i]) {
+            int j = i;
+            int progi = 0;
+            while (j &lt; n - 1 &amp;&amp; a[j + 1] &lt;= a[j]) {
+                if (a[j + 1] &lt; a[j])
+                    progi++;
+                j++;
+            }
+            wynik.push_back({std::vector&lt;int&gt;(a.begin() + i, a.begin() + j + 1), j - i + 1, progi});
+            i = j;
+        } else {
+            i++;
+        }
+    }
+    return wynik;
+}
+
+int main() {
+    std::vector&lt;int&gt; ciag = {2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7};
+    for (const auto&amp; [schodki, dlugosc, progi] : schody(ciag)) {
+        std::cout &lt;&lt; &#x27;[&#x27;;  // lista wypisana jak w Pythonie
+        for (size_t k = 0; k &lt; schodki.size(); k++)
+            std::cout &lt;&lt; (k &gt; 0 ? &quot;, &quot; : &quot;&quot;) &lt;&lt; schodki[k];
+        std::cout &lt;&lt; &quot;] &quot; &lt;&lt; dlugosc &lt;&lt; &#x27; &#x27; &lt;&lt; progi &lt;&lt; &#x27;\n&#x27;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    record Schody(List&lt;Integer&gt; schodki, int dlugosc, int progi) {}
+
+    static List&lt;Schody&gt; schody(List&lt;Integer&gt; a) {
+        var wynik = new ArrayList&lt;Schody&gt;();
+        int n = a.size();
+        int i = 0;
+        while (i &lt; n - 1) {
+            if (a.get(i + 1) &lt;= a.get(i)) {
+                int j = i;
+                int progi = 0;
+                while (j &lt; n - 1 &amp;&amp; a.get(j + 1) &lt;= a.get(j)) {
+                    if (a.get(j + 1) &lt; a.get(j))
+                        progi++;
+                    j++;
+                }
+                wynik.add(new Schody(a.subList(i, j + 1), j - i + 1, progi));
+                i = j;
+            } else {
+                i++;
+            }
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) {
+        var ciag = List.of(2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7);
+        for (var s : schody(ciag))
+            System.out.println(s.schodki() + &quot; &quot; + s.dlugosc() + &quot; &quot; + s.progi());  // lista wypisuje się jak w Pythonie
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> (2, 2, 2) 3 0; (3, 1, 1) 3 1; (3, 3, 1) 3 1; (11, 7, 7, 6) 4 2; (7, 7) 2 0; (9, 9, 7) 3 1</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Przyk%C5%82adowy%20arkusz%20CKE%20%E2%80%94%20formu%C5%82a%202015%20%E2%80%94%203a&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html%233a" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3b" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3b">3b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Próg to para sąsiednich liczb ciągu, w której następna liczba jest mniejsza od poprzedniej. Opracuj algorytm (schemat blokowy, lista kroków lub język programowania) zgodny ze specyfikacją:</p><ul><li>Dane: dodatnia liczba całkowita <code>n</code> oraz tablica <code>a[1..n]</code> liczb całkowitych.</li><li>Wynik: <code>liczba_progów</code> — liczba wszystkich progów w ciągu zapisanym w tablicy a.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def liczba_progow(a):
     licznik = 0
     for i in range(len(a) - 1):
         if a[i] &gt; a[i + 1]:
@@ -97,7 +244,32 @@ for schodki, dlugosc, progi in schody(ciag):
     return licznik
 
 
-print(liczba_progow([2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> algorytm powyżej (dla ciągu z 3a: 5 progów)</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3c-i-3d" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3c-i-3d">3c i 3d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najw_liczba_progow(a):
+print(liczba_progow([2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int liczba_progow(const std::vector&lt;int&gt;&amp; a) {
+    int licznik = 0;
+    for (size_t i = 0; i + 1 &lt; a.size(); i++)
+        if (a[i] &gt; a[i + 1])
+            licznik++;
+    return licznik;
+}
+
+int main() {
+    std::cout &lt;&lt; liczba_progow({2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7}) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int liczbaProgow(int[] a) {
+        int licznik = 0;
+        for (int i = 0; i &lt; a.length - 1; i++)
+            if (a[i] &gt; a[i + 1])
+                licznik++;
+        return licznik;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(liczbaProgow(new int[] {2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> algorytm powyżej (dla ciągu z 3a: 5 progów)</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Przyk%C5%82adowy%20arkusz%20CKE%20%E2%80%94%20formu%C5%82a%202015%20%E2%80%94%203b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html%233b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3c-i-3d" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3c-i-3d">3c i 3d</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Próg to para sąsiednich liczb, w której następna jest mniejsza od poprzedniej; schody do dołu to nierozszerzalny podciąg co najmniej dwóch kolejnych elementów, w którym każdy element (poza pierwszym) nie jest większy od poprzedniego.</p><ul><li>c) Opracuj algorytm zgodny ze specyfikacją — dane: dodatnia liczba całkowita <code>n</code> i tablica <code>a[1..n]</code> liczb całkowitych; wynik: <code>najw_liczba_progów</code> — największa liczba progów w jednych schodach do dołu w ciągu a.</li><li>d) Podaj, ile dokładnie porównań między elementami ciągu wykona Twój algorytm z punktu c) w przypadku pesymistycznym, i uzasadnij odpowiedź.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def najw_liczba_progow(a):
     najw = 0
     w_schodach = 0
     for i in range(len(a) - 1):
@@ -115,7 +287,56 @@ print(liczba_progow([2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 
 
 
 print(najw_liczba_progow([3, 7, 7, 6, 5, 4, 4, 4, 5]))
-print(najw_liczba_progow([2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3c: algorytm powyżej (dla przykładu z treści: 3). 3d: 2(n − 1) porównań — w każdym z n − 1 obrotów pętli w najgorszym razie wykonywane są dwa porównania (wykrycie nowych schodów i wykrycie progu).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-i-4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a-i-4b">4a i 4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wiersze_z_anagramami = 0
+print(najw_liczba_progow([2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7]))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int najw_liczba_progow(const std::vector&lt;int&gt;&amp; a) {
+    int najw = 0;
+    int w_schodach = 0;
+    for (size_t i = 0; i + 1 &lt; a.size(); i++) {
+        if (a[i] &lt; a[i + 1]) {
+            // a[i + 1] może być początkiem nowych schodów
+            if (w_schodach &gt; najw)
+                najw = w_schodach;
+            w_schodach = 0;
+        } else if (a[i] &gt; a[i + 1]) {
+            w_schodach++;
+        }
+    }
+    // schody mogą kończyć się ostatnim elementem ciągu
+    if (w_schodach &gt; najw)
+        najw = w_schodach;
+    return najw;
+}
+
+int main() {
+    std::cout &lt;&lt; najw_liczba_progow({3, 7, 7, 6, 5, 4, 4, 4, 5}) &lt;&lt; &#x27;\n&#x27;;
+    std::cout &lt;&lt; najw_liczba_progow({2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7}) &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int najwLiczbaProgow(int[] a) {
+        int najw = 0;
+        int wSchodach = 0;
+        for (int i = 0; i &lt; a.length - 1; i++) {
+            if (a[i] &lt; a[i + 1]) {
+                // a[i + 1] może być początkiem nowych schodów
+                if (wSchodach &gt; najw)
+                    najw = wSchodach;
+                wSchodach = 0;
+            } else if (a[i] &gt; a[i + 1]) {
+                wSchodach++;
+            }
+        }
+        // schody mogą kończyć się ostatnim elementem ciągu
+        if (wSchodach &gt; najw)
+            najw = wSchodach;
+        return najw;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(najwLiczbaProgow(new int[] {3, 7, 7, 6, 5, 4, 4, 4, 5}));
+        System.out.println(najwLiczbaProgow(new int[] {2, 2, 2, 3, 1, 1, 3, 3, 1, 10, 11, 7, 7, 6, 7, 7, 8, 9, 9, 7}));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3c: algorytm powyżej (dla przykładu z treści: 3). 3d: 2(n − 1) porównań — w każdym z n − 1 obrotów pętli w najgorszym razie wykonywane są dwa porównania (wykrycie nowych schodów i wykrycie progu).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Przyk%C5%82adowy%20arkusz%20CKE%20%E2%80%94%20formu%C5%82a%202015%20%E2%80%94%203c%20i%203d&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html%233c-i-3d" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4a-i-4b" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4a-i-4b">4a i 4b</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Anagramy cyfrowe. Dwie liczby naturalne są anagramami cyfrowymi, jeśli zapis dziesiętny jednej da się utworzyć z cyfr drugiej, używając każdej cyfry dokładnie tyle razy, ile razy w niej występuje (liczby nie mają zer wiodących). W pliku <code>dane_anagramy.txt</code> jest 1000 par dodatnich liczb całkowitych nie większych niż 2 000 000, po jednej parze w wierszu, oddzielonych spacją. Odpowiedzi zapisz w pliku <code>wyniki_anagramy.txt</code>, każdą w osobnym wierszu poprzedzoną oznaczeniem pytania.</p><ul><li>a) W ilu wierszach obie liczby są anagramami cyfrowymi?</li><li>b) Ile maksymalnie liczb z pliku można wybrać tak, aby każde dwie były anagramami cyfrowymi?</li></ul><p>Przykład: dla wierszy <code>232 322</code>, <code>112 111</code>, <code>223 121</code>, <code>223 322</code> odpowiedź na a) to 2 (pierwszy i ostatni wiersz), a na b) to 5 (232, 322, 223, 223, 322).</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wiersze_z_anagramami = 0
 ile = {}  # posortowane cyfry liczby -&gt; ile liczb ma taki zestaw cyfr
 
 with open(&quot;dane_anagramy.txt&quot;) as file:
@@ -131,7 +352,63 @@ with open(&quot;dane_anagramy.txt&quot;) as file:
 
 with open(&quot;wyniki_anagramy.txt&quot;, &quot;w&quot;) as wynik:
     print(&quot;a)&quot;, wiersze_z_anagramami, file=wynik)
-    print(&quot;b)&quot;, max(ile.values()), file=wynik)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> a) 258; b) 11</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+    print(&quot;b)&quot;, max(ile.values()), file=wynik)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+
+int main() {
+    int wiersze_z_anagramami = 0;
+    std::map&lt;std::string, int&gt; ile;  // posortowane cyfry liczby -&gt; ile liczb ma taki zestaw cyfr
+
+    std::ifstream plik(&quot;dane_anagramy.txt&quot;);
+    std::string a, b;
+    while (plik &gt;&gt; a &gt;&gt; b) {
+        // anagramy cyfrowe mają ten sam posortowany zapis cyfr
+        std::string klucz_a = a, klucz_b = b;
+        std::ranges::sort(klucz_a);
+        std::ranges::sort(klucz_b);
+        if (klucz_a == klucz_b)
+            wiersze_z_anagramami++;
+        ile[klucz_a]++;
+        ile[klucz_b]++;
+    }
+
+    int najwiecej = 0;
+    for (const auto&amp; [klucz, liczba] : ile)
+        najwiecej = std::max(najwiecej, liczba);
+
+    std::ofstream wynik(&quot;wyniki_anagramy.txt&quot;);
+    wynik &lt;&lt; &quot;a) &quot; &lt;&lt; wiersze_z_anagramami &lt;&lt; &#x27;\n&#x27;;
+    wynik &lt;&lt; &quot;b) &quot; &lt;&lt; najwiecej &lt;&lt; &#x27;\n&#x27;;
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.PrintWriter;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    public static void main(String[] args) throws Exception {
+        int wierszeZAnagramami = 0;
+        var ile = new HashMap&lt;String, Integer&gt;();  // posortowane cyfry liczby -&gt; ile liczb ma taki zestaw cyfr
+
+        for (var line : Files.readAllLines(Path.of(&quot;dane_anagramy.txt&quot;))) {
+            var p = line.strip().split(&quot;\\s+&quot;);
+            // anagramy cyfrowe mają ten sam posortowany zapis cyfr
+            char[] a = p[0].toCharArray(), b = p[1].toCharArray();
+            Arrays.sort(a);
+            Arrays.sort(b);
+            String kluczA = new String(a), kluczB = new String(b);
+            if (kluczA.equals(kluczB))
+                wierszeZAnagramami++;
+            ile.merge(kluczA, 1, Integer::sum);
+            ile.merge(kluczB, 1, Integer::sum);
+        }
+
+        try (var wynik = new PrintWriter(&quot;wyniki_anagramy.txt&quot;)) {
+            wynik.println(&quot;a) &quot; + wierszeZAnagramami);
+            wynik.println(&quot;b) &quot; + Collections.max(ile.values()));
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> a) 258; b) 11</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Przyk%C5%82adowy%20arkusz%20CKE%20%E2%80%94%20formu%C5%82a%202015%20%E2%80%94%204a%20i%204b&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2015-przykladowy.html%234a-i-4b" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2015_przykladowy.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

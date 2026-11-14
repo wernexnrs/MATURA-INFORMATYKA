@@ -37,7 +37,7 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></li><li><a href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2022 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</span></nav>
-<h1 class="page-title">Matura 2022 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_kw_cyfr(n):
+<h1 class="page-title">Matura 2022 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2015)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ CZ. I</a><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona-2.pdf" target="_blank" rel="noopener">ARKUSZ CZ. II</a><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2022-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Dodatniej liczbie całkowitej przyporządkowujemy sumę kwadratów jej cyfr (np. 123 → 1²+2²+3² = 14). Tworzymy ciąg zaczynający się od n, w którym każdy kolejny wyraz to wynik tej operacji na poprzednim. Jeśli w ciągu pojawi się 1, liczba n jest <strong>nudna</strong>, w przeciwnym razie — <strong>ciekawa</strong> (np. 13 → 10 → 1, więc 13 jest nudna; 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 …, więc 4 jest ciekawa).</p><ul><li><strong>1.1</strong> — Dla liczb z tabeli arkusza wpisz TAK, jeśli liczba jest nudna, albo NIE.</li><li><strong>1.2</strong> — Napisz funkcję <code>SumaKwCyfr(n)</code> obliczającą sumę kwadratów cyfr dodatniej liczby n (bez funkcji wbudowanych).</li><li><strong>1.3</strong> — Napisz algorytm, który dla dodatniej n &lt; 1000 zwraca Prawda, gdy n jest nudna, i Fałsz, gdy ciekawa. Można użyć <code>SumaKwCyfr</code> i faktu, że suma kwadratów cyfr liczby co najwyżej trzycyfrowej nie przekracza 243.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def suma_kw_cyfr(n):
     suma = 0
     while n &gt; 0:
         cyfra = n % 10
@@ -63,7 +63,73 @@ for n in [4, 229, 82]:
     print(n, &quot;TAK&quot; if czy_nudna(n) else &quot;NIE&quot;)
 
 # 1.2
-print(suma_kw_cyfr(123))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 229 – NIE, 82 – TAK. 1.2: funkcja <code>suma_kw_cyfr</code>. 1.3: funkcja <code>czy_nudna</code> – liczymy kolejne sumy kwadratów cyfr aż do 1 (nudna) albo do powtórzenia wartości (ciekawa).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
+print(suma_kw_cyfr(123))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;vector&gt;
+
+int suma_kw_cyfr(int n) {
+    int suma = 0;
+    while (n &gt; 0) {
+        int cyfra = n % 10;
+        suma += cyfra * cyfra;
+        n /= 10;
+    }
+    return suma;
+}
+
+bool czy_nudna(int n) {
+    // n &lt; 1000, więc po pierwszym kroku wszystkie wyrazy ciągu są &lt;= 243
+    // zapamiętujemy, które liczby już wystąpiły - powtórzenie oznacza cykl bez 1
+    std::vector&lt;bool&gt; byla(1000, false);
+    while (n != 1) {
+        if (byla[n]) return false;
+        byla[n] = true;
+        n = suma_kw_cyfr(n);
+    }
+    return true;
+}
+
+int main() {
+    // 1.1
+    for (int n : {4, 229, 82}) std::println(&quot;{} {}&quot;, n, czy_nudna(n) ? &quot;TAK&quot; : &quot;NIE&quot;);
+
+    // 1.2
+    std::println(&quot;{}&quot;, suma_kw_cyfr(123));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int sumaKwCyfr(int n) {
+        int suma = 0;
+        while (n &gt; 0) {
+            int cyfra = n % 10;
+            suma += cyfra * cyfra;
+            n /= 10;
+        }
+        return suma;
+    }
+
+    static boolean czyNudna(int n) {
+        // n &lt; 1000, więc po pierwszym kroku wszystkie wyrazy ciągu są &lt;= 243
+        // zapamiętujemy, które liczby już wystąpiły - powtórzenie oznacza cykl bez 1
+        boolean[] byla = new boolean[1000];
+        while (n != 1) {
+            if (byla[n]) return false;
+            byla[n] = true;
+            n = sumaKwCyfr(n);
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1
+        for (int n : new int[] {4, 229, 82}) System.out.println(n + &quot; &quot; + (czyNudna(n) ? &quot;TAK&quot; : &quot;NIE&quot;));
+
+        // 1.2
+        System.out.println(sumaKwCyfr(123));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1: 229 – NIE, 82 – TAK. 1.2: funkcja <code>suma_kw_cyfr</code>. 1.3: funkcja <code>czy_nudna</code> – liczymy kolejne sumy kwadratów cyfr aż do 1 (nudna) albo do powtórzenia wartości (ciekawa).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202022%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-czerwiec.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-i-2-3" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-i-2-3">2.1, 2.2 i 2.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Funkcja Koduj(n) dla dodatniej liczby n zwraca słowo (puste lub złożone z liter A i B):</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">Koduj(n):
+    jeżeli n = 1: wynikiem jest &#x27;&#x27;
+    w przeciwnym wypadku:
+        k ← n div 2
+        jeżeli k mod 2 = 0: wynikiem jest Koduj(k) + &#x27;A&#x27;
+        w przeciwnym wypadku: wynikiem jest &#x27;B&#x27; + Koduj(k)</code></pre></div></div></div><ul><li><strong>2.1</strong> — Podaj wynik Koduj(n) dla wartości n z tabeli arkusza (np. Koduj(1) = '', Koduj(2) = 'B').</li><li><strong>2.2</strong> — Podaj łączną liczbę wywołań funkcji Koduj przy wywołaniu Koduj(12), Koduj(33) i Koduj(1022) (np. dla Koduj(2) — 2).</li><li><strong>2.3</strong> — Podaj dwie różne dodatnie liczby, dla których Koduj zwraca ten sam sześcioznakowy kod.</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">wywolania = 0
 
 
 def koduj(n):
@@ -91,7 +157,80 @@ for n in range(64, 128):
 for kod, lista in kody.items():
     if len(lista) &gt; 1:
         print(kod, lista)
-        break</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 12 → BBA, 33 → BAAAA, 158 → BBBBBAA. 2.2: 12 → 4, 33 → 6, 1022 → 10. 2.3: np. 64 i 65 (kod BAAAAA) – liczby 7-cyfrowe binarnie, różniące się tylko ostatnim bitem (klucz podaje np. 66 i 67 albo 94 i 111).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
+        break</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int wywolania = 0;
+
+std::string koduj(int n) {
+    wywolania++;
+    if (n == 1) return &quot;&quot;;
+    int k = n / 2;
+    if (k % 2 == 0)
+        return koduj(k) + &quot;A&quot;;
+    else
+        return &quot;B&quot; + koduj(k);
+}
+
+int main() {
+    // 2.1 i 2.2
+    for (int n : {1, 2, 12, 33, 158, 1022}) {
+        wywolania = 0;
+        std::string kod = koduj(n);
+        std::println(&quot;{} &#x27;{}&#x27; {}&quot;, n, kod, wywolania);
+    }
+
+    // 2.3 - kod ma 6 znaków dla liczb 7-bitowych (64..127); szukamy dwóch o tym samym kodzie
+    std::map&lt;std::string, std::vector&lt;int&gt;&gt; kody;
+    std::vector&lt;std::string&gt; kolejnosc;  // kody w kolejności pojawienia się
+    for (int n = 64; n &lt; 128; n++) {
+        std::string kod = koduj(n);
+        if (!kody.contains(kod)) kolejnosc.push_back(kod);
+        kody[kod].push_back(n);
+    }
+    for (auto&amp; kod : kolejnosc) {
+        if (kody[kod].size() &gt; 1) {
+            std::println(&quot;{} {}&quot;, kod, kody[kod]);
+            break;
+        }
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.util.*;
+
+public class Zadanie {
+    static int wywolania = 0;
+
+    static String koduj(int n) {
+        wywolania++;
+        if (n == 1) return &quot;&quot;;
+        int k = n / 2;
+        if (k % 2 == 0)
+            return koduj(k) + &quot;A&quot;;
+        else
+            return &quot;B&quot; + koduj(k);
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1 i 2.2
+        for (int n : new int[] {1, 2, 12, 33, 158, 1022}) {
+            wywolania = 0;
+            String kod = koduj(n);
+            System.out.println(n + &quot; &#x27;&quot; + kod + &quot;&#x27; &quot; + wywolania);
+        }
+
+        // 2.3 - kod ma 6 znaków dla liczb 7-bitowych (64..127); szukamy dwóch o tym samym kodzie
+        var kody = new LinkedHashMap&lt;String, List&lt;Integer&gt;&gt;();
+        for (int n = 64; n &lt; 128; n++)
+            kody.computeIfAbsent(koduj(n), k -&gt; new ArrayList&lt;&gt;()).add(n);
+        for (var e : kody.entrySet()) {
+            if (e.getValue().size() &gt; 1) {
+                System.out.println(e.getKey() + &quot; &quot; + e.getValue());
+                break;
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: 12 → BBA, 33 → BAAAA, 158 → BBBBBAA. 2.2: 12 → 4, 33 → 6, 1022 → 10. 2.3: np. 64 i 65 (kod BAAAAA) – liczby 7-cyfrowe binarnie, różniące się tylko ostatnim bitem (klucz podaje np. 66 i 67 albo 94 i 111).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202022%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%202.1%2C%202.2%20i%202.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-czerwiec.html%232-1-2-2-i-2-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4-1-4-2-4-3-i-4-4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4-1-4-2-4-3-i-4-4">4.1, 4.2, 4.3 i 4.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Plik <code>liczby.txt</code> zawiera 100 nieparzystych liczb całkowitych z przedziału [10, 9999] (mogą się powtarzać). Odbiciem liczby nazywamy liczbę o odwróconej kolejności cyfr (np. 2019 → 9102). Odpowiedzi zapisz w <code>wyniki4.txt</code>, poprzedzając je numerem zadania; plik <code>przyklad.txt</code> (11 liczb) służy do testów.</p><ul><li><strong>4.1</strong> — Wypisz te odbicia liczb z pliku, które są podzielne przez 17. (Przykład: 51.)</li><li><strong>4.2</strong> — Znajdź liczbę, dla której wartość bezwzględna różnicy liczby i jej odbicia jest największa (jest jedna); podaj ją i tę różnicę. (Przykład: 741 594.)</li><li><strong>4.3</strong> — Wypisz, każdą w osobnym wierszu, liczby pierwsze z pliku, których odbicia też są pierwsze (np. 13 i 31, 131).</li><li><strong>4.4</strong> — Podaj, ile różnych liczb jest w pliku, ile liczb występuje dokładnie dwa razy i ile dokładnie trzy razy. (Przykład: 10 1 0.)</li></ul></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">liczby = []
 with open(&quot;liczby.txt&quot;) as file:
     for line in file:
         liczby.append(int(line))
@@ -145,7 +284,119 @@ for n in ile_razy:
         dwa += 1
     if ile_razy[n] == 3:
         trzy += 1
-print(&quot;4.4&quot;, len(ile_razy), dwa, trzy)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 1156, 102, 51, 765, 119, 119, 731; 4.2: 1129 8082; 4.3: 157, 31, 347, 929, 941, 761; 4.4: 85 13 1</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2022_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(&quot;4.4&quot;, len(ile_razy), dwa, trzy)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;map&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+long long odbicie(long long n) {
+    std::string s = std::to_string(n);
+    std::reverse(s.begin(), s.end());
+    return std::stoll(s);
+}
+
+bool czy_pierwsza(long long n) {
+    if (n &lt; 2) return false;
+    for (long long d = 2; d * d &lt;= n; d++)
+        if (n % d == 0) return false;
+    return true;
+}
+
+int main() {
+    std::vector&lt;long long&gt; liczby;
+    std::ifstream plik(&quot;liczby.txt&quot;);
+    long long x;
+    while (plik &gt;&gt; x) liczby.push_back(x);
+
+    // 4.1
+    std::println(&quot;4.1&quot;);
+    for (long long n : liczby)
+        if (odbicie(n) % 17 == 0) std::println(&quot;{}&quot;, odbicie(n));
+
+    // 4.2
+    long long najwieksza_roznica = -1;
+    long long najlepsza = 0;
+    for (long long n : liczby) {
+        long long roznica = std::llabs(n - odbicie(n));
+        if (roznica &gt; najwieksza_roznica) {
+            najwieksza_roznica = roznica;
+            najlepsza = n;
+        }
+    }
+    std::println(&quot;4.2 {} {}&quot;, najlepsza, najwieksza_roznica);
+
+    // 4.3
+    std::println(&quot;4.3&quot;);
+    for (long long n : liczby)
+        if (czy_pierwsza(n) &amp;&amp; czy_pierwsza(odbicie(n))) std::println(&quot;{}&quot;, n);
+
+    // 4.4
+    std::map&lt;long long, int&gt; ile_razy;
+    for (long long n : liczby) ile_razy[n]++;
+    int dwa = 0;
+    int trzy = 0;
+    for (auto&amp; [n, ile] : ile_razy) {
+        if (ile == 2) dwa++;
+        if (ile == 3) trzy++;
+    }
+    std::println(&quot;4.4 {} {} {}&quot;, ile_razy.size(), dwa, trzy);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static long odbicie(long n) {
+        return Long.parseLong(new StringBuilder(Long.toString(n)).reverse().toString());
+    }
+
+    static boolean czyPierwsza(long n) {
+        if (n &lt; 2) return false;
+        for (long d = 2; d * d &lt;= n; d++)
+            if (n % d == 0) return false;
+        return true;
+    }
+
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;Long&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;liczby.txt&quot;)))
+            if (!linia.isBlank()) liczby.add(Long.parseLong(linia.trim()));
+
+        // 4.1
+        System.out.println(&quot;4.1&quot;);
+        for (long n : liczby)
+            if (odbicie(n) % 17 == 0) System.out.println(odbicie(n));
+
+        // 4.2
+        long najwiekszaRoznica = -1;
+        long najlepsza = 0;
+        for (long n : liczby) {
+            long roznica = Math.abs(n - odbicie(n));
+            if (roznica &gt; najwiekszaRoznica) {
+                najwiekszaRoznica = roznica;
+                najlepsza = n;
+            }
+        }
+        System.out.println(&quot;4.2 &quot; + najlepsza + &quot; &quot; + najwiekszaRoznica);
+
+        // 4.3
+        System.out.println(&quot;4.3&quot;);
+        for (long n : liczby)
+            if (czyPierwsza(n) &amp;&amp; czyPierwsza(odbicie(n))) System.out.println(n);
+
+        // 4.4
+        var ileRazy = new HashMap&lt;Long, Integer&gt;();
+        for (long n : liczby) ileRazy.merge(n, 1, Integer::sum);
+        int dwa = 0;
+        int trzy = 0;
+        for (int ile : ileRazy.values()) {
+            if (ile == 2) dwa++;
+            if (ile == 3) trzy++;
+        }
+        System.out.println(&quot;4.4 &quot; + ileRazy.size() + &quot; &quot; + dwa + &quot; &quot; + trzy);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 4.1: 1156, 102, 51, 765, 119, 119, 731; 4.2: 1129 8082; 4.3: 157, 31, 347, 929, 941, 761; 4.4: 85 13 1</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2022_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202022%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202015%29%20%E2%80%94%204.1%2C%204.2%2C%204.3%20i%204.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2022-czerwiec.html%234-1-4-2-4-3-i-4-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2022_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">

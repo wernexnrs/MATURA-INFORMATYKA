@@ -37,7 +37,16 @@
 <aside class="sidebar" id="sidebar"><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-list">Spis treści</button><div class="side-list" id="side-list"><ul style="--c:var(--g1)"><li><a href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></li><li><a href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></li><li><a href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></li><li><a href="#4">4</a></li></ul></div></aside>
 <main id="tresc" tabindex="-1">
 <nav class="crumbs" aria-label="Okruszki"><a href="../index.html">Start</a> / <a href="../arkusze.html">Arkusze</a> / <span>Matura 2023 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2023)</span></nav>
-<h1 class="page-title">Matura 2023 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><blockquote class="callout">W archiwum z danymi pliki do tego arkusza są w folderze <code>DANE_M</code> (folder <code>DANE_E</code> dotyczy arkusza w formule 2015).</blockquote><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dodawania = 0
+<h1 class="page-title">Matura 2023 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2023)</h1><p class="links"><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-rozszerzona.pdf" target="_blank" rel="noopener">ARKUSZ</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-rozszerzona-zalaczniki.zip" target="_blank" rel="noopener">DANE</a><a href="https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-rozszerzona-odpowiedzi.pdf" target="_blank" rel="noopener">ODPOWIEDZI</a></p><blockquote class="callout"><p>W archiwum z danymi pliki do tego arkusza są w folderze <code>DANE_M</code> (folder <code>DANE_E</code> dotyczy arkusza w formule 2015).</p></blockquote><section class="card tinted" id="1-1-1-2-i-1-3" style="--c:var(--g1)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#1-1-1-2-i-1-3">1.1, 1.2 i 1.3</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Mnożenie):</strong> Rekurencyjny algorytm mnożenia liczb całkowitych dodatnich x, y korzysta tylko z dodawania i dzielenia całkowitego przez 2:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">iloczyn(x, y):
+  jeżeli y = 1: wynikiem jest x
+  w przeciwnym razie:
+    k ← y div 2;  z ← iloczyn(x, k)
+    jeżeli y mod 2 = 0: wynikiem jest z + z
+    w przeciwnym razie: wynikiem jest x + z + z</code></pre></div></div></div><p>Np. <code>iloczyn(9, 11)</code> wykonuje 5 dodawań (wywołania z y = 11, 5, 2, 1).</p><ul><li><strong>1.1</strong> — Uzupełnij tabelę kolejnych wywołań (parametry x, y, obliczone k, z oraz wynik) dla <code>iloczyn(10, 45)</code>.</li><li><strong>1.2</strong> — Podaj liczbę operacji dodawania wykonanych przy obliczaniu <code>iloczyn(x, y)</code> dla par: (9, 11), (8, 32), (2, 47), (112, 112).</li><li><strong>1.3</strong> — Uzupełnij trzy luki w iteracyjnej wersji algorytmu obliczającej z = x·y (wolno używać tylko dodawania, odejmowania, <code>div</code> i <code>mod</code>, bez mnożenia):</li></ul><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">z ← ____
+dopóki ____ wykonuj:
+  jeżeli y mod 2 = 1: z ← z + x
+  x ← x + x
+  y ← ____</code></pre></div></div></div></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">dodawania = 0
 
 
 def iloczyn(x, y):
@@ -75,7 +84,95 @@ for x, y in [(9, 11), (8, 32), (2, 47), (112, 112)]:
     print(&quot;dodawań:&quot;, dodawania)
 
 # 1.3
-print(iloczyn_iteracyjny(10, 45), iloczyn_iteracyjny(112, 112))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 1.1 (x, y, k, z, wynik): (10, 45, 22, 220, 450), (10, 22, 11, 110, 220), (10, 11, 5, 50, 110), (10, 5, 2, 20, 50), (10, 2, 1, 10, 20), (10, 1, –, –, 10). 1.2: 8, 32 → 5; 2, 47 → 9; 112, 112 → 8. 1.3: <code>z ← 0</code>, <code>dopóki y ≥ 1</code>, <code>y ← y div 2</code> (funkcja <code>iloczyn_iteracyjny</code>).</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">porownania = 0
+print(iloczyn_iteracyjny(10, 45), iloczyn_iteracyjny(112, 112))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+
+int dodawania = 0;
+
+long long iloczyn(long long x, long long y) {
+    if (y == 1) return x;
+    long long k = y / 2;
+    long long z = iloczyn(x, k);
+    if (y % 2 == 0) {
+        dodawania += 1;
+        std::println(&quot;{} {} {} {} {}&quot;, x, y, k, z, z + z);
+        return z + z;
+    }
+    dodawania += 2;
+    std::println(&quot;{} {} {} {} {}&quot;, x, y, k, z, x + z + z);
+    return x + z + z;
+}
+
+long long iloczyn_iteracyjny(long long x, long long y) {
+    long long z = 0;
+    while (y &gt;= 1) {
+        if (y % 2 == 1) z = z + x;
+        x = x + x;
+        y = y / 2;
+    }
+    return z;
+}
+
+int main() {
+    // 1.1 - wiersze tabeli (od najgłębszego wywołania): x, y, k, z, wynik
+    iloczyn(10, 45);
+
+    // 1.2
+    int dane[4][2] = {{9, 11}, {8, 32}, {2, 47}, {112, 112}};
+    for (auto&amp; [x, y] : dane) {
+        dodawania = 0;
+        iloczyn(x, y);
+        std::println(&quot;dodawań: {}&quot;, dodawania);
+    }
+
+    // 1.3
+    std::println(&quot;{} {}&quot;, iloczyn_iteracyjny(10, 45), iloczyn_iteracyjny(112, 112));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static int dodawania = 0;
+
+    static long iloczyn(long x, long y) {
+        if (y == 1) return x;
+        long k = y / 2;
+        long z = iloczyn(x, k);
+        if (y % 2 == 0) {
+            dodawania += 1;
+            System.out.println(x + &quot; &quot; + y + &quot; &quot; + k + &quot; &quot; + z + &quot; &quot; + (z + z));
+            return z + z;
+        }
+        dodawania += 2;
+        System.out.println(x + &quot; &quot; + y + &quot; &quot; + k + &quot; &quot; + z + &quot; &quot; + (x + z + z));
+        return x + z + z;
+    }
+
+    static long iloczynIteracyjny(long x, long y) {
+        long z = 0;
+        while (y &gt;= 1) {
+            if (y % 2 == 1) z = z + x;
+            x = x + x;
+            y = y / 2;
+        }
+        return z;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 1.1 - wiersze tabeli (od najgłębszego wywołania): x, y, k, z, wynik
+        iloczyn(10, 45);
+
+        // 1.2
+        int[][] dane = {{9, 11}, {8, 32}, {2, 47}, {112, 112}};
+        for (var d : dane) {
+            dodawania = 0;
+            iloczyn(d[0], d[1]);
+            System.out.println(&quot;dodawań: &quot; + dodawania);
+        }
+
+        // 1.3
+        System.out.println(iloczynIteracyjny(10, 45) + &quot; &quot; + iloczynIteracyjny(112, 112));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 1.1 (x, y, k, z, wynik): (10, 45, 22, 220, 450), (10, 22, 11, 110, 220), (10, 11, 5, 50, 110), (10, 5, 2, 20, 50), (10, 2, 1, 10, 20), (10, 1, –, –, 10). 1.2: 8, 32 → 5; 2, 47 → 9; 112, 112 → 8. 1.3: <code>z ← 0</code>, <code>dopóki y ≥ 1</code>, <code>y ← y div 2</code> (funkcja <code>iloczyn_iteracyjny</code>).</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%201.1%2C%201.2%20i%201.3&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-czerwiec.html%231-1-1-2-i-1-3" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="2-1-2-2-2-3-i-2-4" style="--c:var(--g2)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#2-1-2-2-2-3-i-2-4">2.1, 2.2, 2.3 i 2.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Sufiksy):</strong> Słowo to ciąg małych liter alfabetu angielskiego. Sufiks <code>s[k..n]</code> słowa <code>s[1..n]</code> nazywamy k-tym sufiksem (np. sufiksy słowa <code>mascarpone</code> posortowane alfabetycznie mają numery 5, 2, 4, 10, 1, 9, 8, 7, 6, 3). Funkcja <code>czy_mniejszy(n, s, k1, k2)</code> zwraca PRAWDA, gdy sufiks k1 jest alfabetycznie mniejszy od sufiksu k2:</p><div class="code single" data-langs="kod"><div class="lang-pane" data-lang="kod"><div class="variant"><div class="variant-bar"><span>Kod</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="nohighlight">i ← k1;  j ← k2
+dopóki i ≤ n oraz j ≤ n:
+  jeżeli s[i] = s[j]: i ← i+1; j ← j+1
+  w przeciwnym razie: jeżeli s[i] &lt; s[j] zakończ z PRAWDA, w p.p. zakończ z FAŁSZ
+jeżeli j ≤ n zakończ z PRAWDA, w p.p. zakończ z FAŁSZ</code></pre></div></div></div><ul><li><strong>2.1</strong> — Podaj przykład słowa długości 10 i liczb k1 ≠ k2, dla których funkcja wykona dokładnie 6 porównań w pierwszej instrukcji <code>jeżeli</code> (np. dla <code>mascarpone</code>, k1=5, k2=2 wykonuje łącznie 3 porównania).</li><li><strong>2.2</strong> — Pliki <code>slowa1.txt</code>, <code>slowa2.txt</code>, <code>slowa3.txt</code> zawierają: w 1. wierszu n, w 2. słowo s, w 3. liczby k1 i k2. Zaimplementuj <code>czy_mniejszy</code> i dla każdego pliku wypisz <code>TAK</code> lub <code>NIE</code> (poprzedzone nazwą pliku) do <code>wyniki2_2.txt</code>.</li><li><strong>2.3</strong> — Z użyciem <code>czy_mniejszy</code> zapisz algorytm wyznaczający tablicę <code>T[1..n]</code> numerów sufiksów w porządku alfabetycznym (np. dla <code>kalafiorowa</code>: [11, 4, 2, 5, 6, 1, 3, 7, 9, 8, 10]); wolno używać tylko podstawowych operacji, bez funkcji wbudowanych.</li><li><strong>2.4</strong> — Plik <code>slowa4.txt</code> zawiera 10 wierszy z liczbą n (1 ≤ n ≤ 100) i n-literowym słowem. Dla każdego słowa wypisz jego najmniejszy alfabetycznie sufiks (np. <code>mascarpone</code> → <code>arpone</code>, <code>truskawki</code> → <code>awki</code>), każdy w osobnym wierszu pliku <code>wyniki2_4.txt</code>.</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">porownania = 0
 
 
 def czy_mniejszy(n, s, k1, k2):
@@ -135,7 +232,154 @@ with open(&quot;slowa4.txt&quot;) as file, open(&quot;wyniki2_4.txt&quot;, &quot
             if czy_mniejszy(n, s, k, najmniejszy):
                 najmniejszy = k
         print(s[najmniejszy - 1:])
-        wyniki.write(s[najmniejszy - 1:] + &quot;\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: np. s = aaaaaaaaaa, k1 = 2, k2 = 5 (6 porównań). 2.2: slowa1.txt TAK, slowa2.txt NIE, slowa3.txt NIE. 2.3: funkcja <code>tablica_sufiksow</code> (sortowanie bąbelkowe z porównaniem <code>czy_mniejszy</code>). 2.4: ato, a, abracadabrad, abecadlo, aaababbbbcaababaz, a, aaababbbbcaababaaabcaabb…, aaababbbbcaababaz, aaababbbbcaababacaacac…, aaababbbbcacbabaaabcaabb….</p><blockquote class="callout">W kluczu CKE do 2.1 pierwszy przykład (s = ababababb, k1 = 1, k2 = 3) daje 7 porównań, a nie 6 (6 równych par i jedna różna: s[7] = a, s[9] = b) — widać to w wyniku programu. Drugi przykład z klucza (aaaaaaaaaa, 2, 5) jest poprawny.</blockquote><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-3-3-i-3-4" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;anagram.txt&quot;) as file:
+        wyniki.write(s[najmniejszy - 1:] + &quot;\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+
+int porownania = 0;
+
+bool czy_mniejszy(int n, const std::string&amp; s, int k1, int k2) {
+    // s indeksowane od 0, k1 i k2 od 1 (jak w treści)
+    int i = k1;
+    int j = k2;
+    while (i &lt;= n &amp;&amp; j &lt;= n) {
+        porownania++;  // pierwsza instrukcja jeżeli
+        if (s[i - 1] == s[j - 1]) {
+            i++;
+            j++;
+        } else if (s[i - 1] &lt; s[j - 1]) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return j &lt;= n;
+}
+
+// 2.3 - sortowanie bąbelkowe numerów sufiksów
+std::vector&lt;int&gt; tablica_sufiksow(int n, const std::string&amp; s) {
+    std::vector&lt;int&gt; T;
+    for (int i = 1; i &lt;= n; i++) T.push_back(i);
+    for (int i = 0; i &lt; n - 1; i++)
+        for (int j = 0; j &lt; n - 1 - i; j++)
+            if (!czy_mniejszy(n, s, T[j], T[j + 1])) std::swap(T[j], T[j + 1]);
+    return T;
+}
+
+int main() {
+    // 2.1 - sprawdzenie odpowiedzi: s = aaaaaaaaaa, k1 = 2, k2 = 5
+    std::vector&lt;std::pair&lt;std::string, std::pair&lt;int, int&gt;&gt;&gt; testy = {{&quot;aaaaaaaaaa&quot;, {2, 5}}, {&quot;ababababb&quot;, {1, 3}}};
+    for (auto&amp; [s, k] : testy) {
+        porownania = 0;
+        czy_mniejszy(s.size(), s, k.first, k.second);
+        std::println(&quot;2.1 {} {} {} {}&quot;, s, k.first, k.second, porownania);
+    }
+
+    // 2.2
+    std::ofstream wyniki(&quot;wyniki2_2.txt&quot;);
+    for (std::string nazwa : {&quot;slowa1.txt&quot;, &quot;slowa2.txt&quot;, &quot;slowa3.txt&quot;}) {
+        std::ifstream plik(nazwa);
+        int n, k1, k2;
+        std::string s;
+        plik &gt;&gt; n &gt;&gt; s &gt;&gt; k1 &gt;&gt; k2;
+        std::string odp = czy_mniejszy(n, s, k1, k2) ? &quot;TAK&quot; : &quot;NIE&quot;;
+        std::println(&quot;{} {}&quot;, nazwa, odp);
+        wyniki &lt;&lt; nazwa &lt;&lt; &quot; &quot; &lt;&lt; odp &lt;&lt; &quot;\n&quot;;
+    }
+
+    std::println(&quot;2.3 {} {}&quot;, tablica_sufiksow(10, &quot;mascarpone&quot;), tablica_sufiksow(11, &quot;kalafiorowa&quot;));
+
+    // 2.4 - najmniejszy sufiks
+    std::ifstream plik(&quot;slowa4.txt&quot;);
+    std::ofstream wyniki4(&quot;wyniki2_4.txt&quot;);
+    int n;
+    std::string s;
+    while (plik &gt;&gt; n &gt;&gt; s) {
+        int najmniejszy = n;
+        for (int k = 1; k &lt; n; k++)
+            if (czy_mniejszy(n, s, k, najmniejszy)) najmniejszy = k;
+        std::println(&quot;{}&quot;, s.substr(najmniejszy - 1));
+        wyniki4 &lt;&lt; s.substr(najmniejszy - 1) &lt;&lt; &quot;\n&quot;;
+    }
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static int porownania = 0;
+
+    static boolean czyMniejszy(int n, String s, int k1, int k2) {
+        // s indeksowane od 0, k1 i k2 od 1 (jak w treści)
+        int i = k1;
+        int j = k2;
+        while (i &lt;= n &amp;&amp; j &lt;= n) {
+            porownania++;  // pierwsza instrukcja jeżeli
+            if (s.charAt(i - 1) == s.charAt(j - 1)) {
+                i++;
+                j++;
+            } else if (s.charAt(i - 1) &lt; s.charAt(j - 1)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return j &lt;= n;
+    }
+
+    // 2.3 - sortowanie bąbelkowe numerów sufiksów
+    static List&lt;Integer&gt; tablicaSufiksow(int n, String s) {
+        var T = new ArrayList&lt;Integer&gt;();
+        for (int i = 1; i &lt;= n; i++) T.add(i);
+        for (int i = 0; i &lt; n - 1; i++)
+            for (int j = 0; j &lt; n - 1 - i; j++)
+                if (!czyMniejszy(n, s, T.get(j), T.get(j + 1))) Collections.swap(T, j, j + 1);
+        return T;
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 2.1 - sprawdzenie odpowiedzi: s = aaaaaaaaaa, k1 = 2, k2 = 5
+        String[] slowa = {&quot;aaaaaaaaaa&quot;, &quot;ababababb&quot;};
+        int[][] k = {{2, 5}, {1, 3}};
+        for (int t = 0; t &lt; 2; t++) {
+            porownania = 0;
+            czyMniejszy(slowa[t].length(), slowa[t], k[t][0], k[t][1]);
+            System.out.println(&quot;2.1 &quot; + slowa[t] + &quot; &quot; + k[t][0] + &quot; &quot; + k[t][1] + &quot; &quot; + porownania);
+        }
+
+        // 2.2
+        try (var wyniki = new PrintWriter(&quot;wyniki2_2.txt&quot;)) {
+            for (String nazwa : new String[] {&quot;slowa1.txt&quot;, &quot;slowa2.txt&quot;, &quot;slowa3.txt&quot;}) {
+                var sc = new Scanner(Path.of(nazwa));
+                int n = sc.nextInt();
+                String s = sc.next();
+                int k1 = sc.nextInt(), k2 = sc.nextInt();
+                sc.close();
+                String odp = czyMniejszy(n, s, k1, k2) ? &quot;TAK&quot; : &quot;NIE&quot;;
+                System.out.println(nazwa + &quot; &quot; + odp);
+                wyniki.print(nazwa + &quot; &quot; + odp + &quot;\n&quot;);
+            }
+        }
+
+        System.out.println(&quot;2.3 &quot; + tablicaSufiksow(10, &quot;mascarpone&quot;) + &quot; &quot; + tablicaSufiksow(11, &quot;kalafiorowa&quot;));
+
+        // 2.4 - najmniejszy sufiks
+        try (var wyniki = new PrintWriter(&quot;wyniki2_4.txt&quot;)) {
+            for (var linia : Files.readAllLines(Path.of(&quot;slowa4.txt&quot;))) {
+                if (linia.isBlank()) continue;
+                var czesci = linia.trim().split(&quot;\\s+&quot;);
+                int n = Integer.parseInt(czesci[0]);
+                String s = czesci[1];
+                int najmniejszy = n;
+                for (int j = 1; j &lt; n; j++)
+                    if (czyMniejszy(n, s, j, najmniejszy)) najmniejszy = j;
+                System.out.println(s.substring(najmniejszy - 1));
+                wyniki.print(s.substring(najmniejszy - 1) + &quot;\n&quot;);
+            }
+        }
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 2.1: np. s = aaaaaaaaaa, k1 = 2, k2 = 5 (6 porównań). 2.2: slowa1.txt TAK, slowa2.txt NIE, slowa3.txt NIE. 2.3: funkcja <code>tablica_sufiksow</code> (sortowanie bąbelkowe z porównaniem <code>czy_mniejszy</code>). 2.4: ato, a, abracadabrad, abecadlo, aaababbbbcaababaz, a, aaababbbbcaababaaabcaabb…, aaababbbbcaababaz, aaababbbbcaababacaacac…, aaababbbbcacbabaaabcaabb….</p><blockquote class="callout"><p>W kluczu CKE do 2.1 pierwszy przykład (s = ababababb, k1 = 1, k2 = 3) daje 7 porównań, a nie 6 (6 równych par i jedna różna: s[7] = a, s[9] = b) — widać to w wyniku programu. Drugi przykład z klucza (aaaaaaaaaa, 2, 5) jest poprawny.</p></blockquote><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%202.1%2C%202.2%2C%202.3%20i%202.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-czerwiec.html%232-1-2-2-2-3-i-2-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="3-1-3-2-3-3-i-3-4" style="--c:var(--g3)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#3-1-3-2-3-3-i-3-4">3.1, 3.2, 3.3 i 3.4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><blockquote class="callout"><p><strong>Treść zadania (Anagramy):</strong> Plik <code>anagram.txt</code> zawiera 1000 różnych liczb binarnych (do 14 cyfr, każda zaczyna się od 1), po jednej w wierszu. Odpowiedzi zapisz w <code>wyniki3.txt</code> z numerami zadań (do testów: <code>przyklad.txt</code>, 100 wierszy).</p><ul><li><strong>3.1</strong> — Liczba binarna jest zrównoważona, gdy ma tyle samo zer co jedynek, a prawie zrównoważona, gdy te liczby różnią się o 1. Podaj, ile jest liczb zrównoważonych i ile prawie zrównoważonych (dla przykładu: 21 i 15).</li><li><strong>3.2</strong> — Anagramy to liczby z tego samego zestawu cyfr w innej kolejności, bez zera na początku (np. z 11100 powstaje 6 anagramów). Wypisz, w kolejności z pliku, wszystkie 8-cyfrowe liczby, z których można utworzyć najwięcej anagramów.</li><li><strong>3.3</strong> — Podaj w zapisie binarnym największą wartość bezwzględną różnicy między liczbami z sąsiednich wierszy (dla przykładu: <code>1110001010</code>).</li><li><strong>3.4</strong> — Zamień liczby na dziesiętne i: a) podaj, w ilu nie występuje cyfra 0; b) podaj liczbę o największej sumie różnych cyfr (przy remisie – pierwszą w pliku), np. dla 20462 suma różnych cyfr to 12. Dla przykładu: 81 i 895.</li></ul></blockquote><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">with open(&quot;anagram.txt&quot;) as file:
     liczby = [linia.strip() for linia in file if linia.strip()]
 
 # 3.1
@@ -189,7 +433,158 @@ for x in liczby:
     if suma &gt; najlepsza_suma:
         najlepsza_suma = suma
         najlepsza = dziesietna
-print(&quot;3.4&quot;, bez_zera, najlepsza, sep=&quot;\n&quot;)</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 118 zrównoważonych, 219 prawie zrównoważonych. 3.2: 10110101, 11010100, 10100101, 11001001, 10110100, 11001101, 11000110 (po 35 anagramów). 3.3: 10011000111001. 3.4: a) 728, b) 7896.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4">4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span></div></header><div class="code"><div class="code-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_dziesietny(napis, podstawa):
+print(&quot;3.4&quot;, bez_zera, najlepsza, sep=&quot;\n&quot;)</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+#include &lt;print&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// 3.2 - liczba anagramów: pierwsza cyfra to 1, pozostałe n-1 cyfr ustawiamy dowolnie
+long long silnia(int n) {
+    long long wynik = 1;
+    for (int i = 2; i &lt;= n; i++) wynik *= i;
+    return wynik;
+}
+
+long long anagramy(const std::string&amp; x) {
+    int jedynki = std::count(x.begin(), x.end(), &#x27;1&#x27;) - 1;
+    int zera = std::count(x.begin(), x.end(), &#x27;0&#x27;);
+    return silnia(jedynki + zera) / (silnia(jedynki) * silnia(zera));
+}
+
+std::string na_dwojkowy(long long n) {
+    if (n == 0) return &quot;0&quot;;
+    std::string wynik;
+    while (n &gt; 0) {
+        wynik = char(&#x27;0&#x27; + n % 2) + wynik;
+        n /= 2;
+    }
+    return wynik;
+}
+
+int main() {
+    std::vector&lt;std::string&gt; liczby;
+    std::ifstream plik(&quot;anagram.txt&quot;);
+    std::string linia;
+    while (plik &gt;&gt; linia) liczby.push_back(linia);
+
+    // 3.1
+    int zrownowazone = 0;
+    int prawie = 0;
+    for (auto&amp; x : liczby) {
+        int roznica = std::count(x.begin(), x.end(), &#x27;1&#x27;) - std::count(x.begin(), x.end(), &#x27;0&#x27;);
+        if (roznica == 0)
+            zrownowazone++;
+        else if (std::abs(roznica) == 1)
+            prawie++;
+    }
+    std::println(&quot;3.1\n{}\n{}&quot;, zrownowazone, prawie);
+
+    std::vector&lt;std::string&gt; osmiocyfrowe;
+    for (auto&amp; x : liczby)
+        if (x.size() == 8) osmiocyfrowe.push_back(x);
+    long long najwiecej = 0;
+    for (auto&amp; x : osmiocyfrowe) najwiecej = std::max(najwiecej, anagramy(x));
+    std::println(&quot;3.2&quot;);
+    for (auto&amp; x : osmiocyfrowe)
+        if (anagramy(x) == najwiecej) std::println(&quot;{}&quot;, x);
+
+    // 3.3
+    long long najwieksza = 0;
+    for (size_t i = 0; i + 1 &lt; liczby.size(); i++)
+        najwieksza = std::max(najwieksza, std::llabs(std::stoll(liczby[i], nullptr, 2) - std::stoll(liczby[i + 1], nullptr, 2)));
+    std::println(&quot;3.3 {}&quot;, na_dwojkowy(najwieksza));
+
+    // 3.4
+    int bez_zera = 0;
+    std::string najlepsza;
+    int najlepsza_suma = -1;
+    for (auto&amp; x : liczby) {
+        std::string dziesietna = std::to_string(std::stoll(x, nullptr, 2));
+        if (!dziesietna.contains(&#x27;0&#x27;)) bez_zera++;
+        std::set&lt;char&gt; rozne(dziesietna.begin(), dziesietna.end());
+        int suma = 0;
+        for (char c : rozne) suma += c - &#x27;0&#x27;;
+        if (suma &gt; najlepsza_suma) {
+            najlepsza_suma = suma;
+            najlepsza = dziesietna;
+        }
+    }
+    std::println(&quot;3.4\n{}\n{}&quot;, bez_zera, najlepsza);
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">import java.nio.file.*;
+import java.util.*;
+
+public class Zadanie {
+    static long ile(String x, char c) {
+        return x.chars().filter(z -&gt; z == c).count();
+    }
+
+    // 3.2 - liczba anagramów: pierwsza cyfra to 1, pozostałe n-1 cyfr ustawiamy dowolnie
+    static long silnia(int n) {
+        long wynik = 1;
+        for (int i = 2; i &lt;= n; i++) wynik *= i;
+        return wynik;
+    }
+
+    static long anagramy(String x) {
+        int jedynki = (int) ile(x, &#x27;1&#x27;) - 1;
+        int zera = (int) ile(x, &#x27;0&#x27;);
+        return silnia(jedynki + zera) / (silnia(jedynki) * silnia(zera));
+    }
+
+    public static void main(String[] args) throws Exception {
+        var liczby = new ArrayList&lt;String&gt;();
+        for (var linia : Files.readAllLines(Path.of(&quot;anagram.txt&quot;)))
+            if (!linia.isBlank()) liczby.add(linia.strip());
+
+        // 3.1
+        int zrownowazone = 0;
+        int prawie = 0;
+        for (var x : liczby) {
+            long roznica = ile(x, &#x27;1&#x27;) - ile(x, &#x27;0&#x27;);
+            if (roznica == 0)
+                zrownowazone++;
+            else if (Math.abs(roznica) == 1)
+                prawie++;
+        }
+        System.out.println(&quot;3.1\n&quot; + zrownowazone + &quot;\n&quot; + prawie);
+
+        var osmiocyfrowe = new ArrayList&lt;String&gt;();
+        for (var x : liczby)
+            if (x.length() == 8) osmiocyfrowe.add(x);
+        long najwiecej = 0;
+        for (var x : osmiocyfrowe) najwiecej = Math.max(najwiecej, anagramy(x));
+        System.out.println(&quot;3.2&quot;);
+        for (var x : osmiocyfrowe)
+            if (anagramy(x) == najwiecej) System.out.println(x);
+
+        // 3.3
+        long najwieksza = 0;
+        for (int i = 0; i + 1 &lt; liczby.size(); i++)
+            najwieksza = Math.max(najwieksza, Math.abs(Long.parseLong(liczby.get(i), 2) - Long.parseLong(liczby.get(i + 1), 2)));
+        System.out.println(&quot;3.3 &quot; + Long.toBinaryString(najwieksza));
+
+        // 3.4
+        int bezZera = 0;
+        String najlepsza = null;
+        int najlepszaSuma = -1;
+        for (var x : liczby) {
+            String dziesietna = Long.toString(Long.parseLong(x, 2));
+            if (!dziesietna.contains(&quot;0&quot;)) bezZera++;
+            var rozne = new HashSet&lt;Character&gt;();
+            for (char c : dziesietna.toCharArray()) rozne.add(c);
+            int suma = 0;
+            for (char c : rozne) suma += c - &#x27;0&#x27;;
+            if (suma &gt; najlepszaSuma) {
+                najlepszaSuma = suma;
+                najlepsza = dziesietna;
+            }
+        }
+        System.out.println(&quot;3.4\n&quot; + bezZera + &quot;\n&quot; + najlepsza);
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 3.1: 118 zrównoważonych, 219 prawie zrównoważonych. 3.2: 10110101, 11010100, 10100101, 11001001, 10110100, 11001101, 11000110 (po 35 anagramów). 3.3: 10011000111001. 3.4: a) 728, b) 7896.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%203.1%2C%203.2%2C%203.3%20i%203.4&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-czerwiec.html%233-1-3-2-3-3-i-3-4" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><section class="card tinted" id="4" style="--c:var(--g4)"><header class="card-head"><div class="head-text"><h2><a class="self" href="#4">4</a></h2></div><div class="langs"><span class="lang lang-python">Python</span><span class="lang lang-c">C++23</span><span class="lang lang-java">Java 25</span></div></header><details class="task-text" open><summary>Treść zadania</summary><div class="task-body"><p>Uzupełnij tabelę: liczbę (101201)₃ zapisz w systemie o podstawie 9, a liczbę (2487)₉ – w systemie o podstawie 3.</p></div></details><div class="code multi" data-langs="python,cpp,java"><div class="lang-switch" role="tablist" aria-label="Język"><button type="button" role="tab" class="lang-btn" data-lang="python" aria-selected="true"><span class="dot"></span>Python</button><button type="button" role="tab" class="lang-btn" data-lang="cpp" aria-selected="false"><span class="dot"></span>C++</button><button type="button" role="tab" class="lang-btn" data-lang="java" aria-selected="false"><span class="dot"></span>Java</button></div><div class="lang-pane" data-lang="python"><div class="variant"><div class="variant-bar"><span>Python</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-python">def na_dziesietny(napis, podstawa):
     liczba = 0
     for c in napis:
         liczba = liczba * podstawa + int(c)
@@ -205,7 +600,48 @@ def z_dziesietnego(liczba, podstawa):
 
 
 print(z_dziesietnego(na_dziesietny(&quot;101201&quot;, 3), 9))
-print(z_dziesietnego(na_dziesietny(&quot;2487&quot;, 9), 3))</code></pre></div><p class="answer"><strong>Odpowiedź:</strong> 101201₃ = 351₉, 2487₉ = 2112221₃.</p><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
+print(z_dziesietnego(na_dziesietny(&quot;2487&quot;, 9), 3))</code></pre></div></div><div class="lang-pane" data-lang="cpp" hidden><div class="variant"><div class="variant-bar"><span>C++23</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-cpp">#include &lt;print&gt;
+#include &lt;string&gt;
+
+long long na_dziesietny(const std::string&amp; napis, int podstawa) {
+    long long liczba = 0;
+    for (char c : napis) liczba = liczba * podstawa + (c - &#x27;0&#x27;);
+    return liczba;
+}
+
+std::string z_dziesietnego(long long liczba, int podstawa) {
+    std::string wynik;
+    while (liczba &gt; 0) {
+        wynik = std::to_string(liczba % podstawa) + wynik;
+        liczba = liczba / podstawa;
+    }
+    return wynik;
+}
+
+int main() {
+    std::println(&quot;{}&quot;, z_dziesietnego(na_dziesietny(&quot;101201&quot;, 3), 9));
+    std::println(&quot;{}&quot;, z_dziesietnego(na_dziesietny(&quot;2487&quot;, 9), 3));
+}</code></pre></div></div><div class="lang-pane" data-lang="java" hidden><div class="variant"><div class="variant-bar"><span>Java 25</span><button class="copy" type="button">Kopiuj</button></div><pre><code class="language-java">public class Zadanie {
+    static long naDziesietny(String napis, int podstawa) {
+        long liczba = 0;
+        for (char c : napis.toCharArray()) liczba = liczba * podstawa + (c - &#x27;0&#x27;);
+        return liczba;
+    }
+
+    static String zDziesietnego(long liczba, int podstawa) {
+        String wynik = &quot;&quot;;
+        while (liczba &gt; 0) {
+            wynik = (liczba % podstawa) + wynik;
+            liczba = liczba / podstawa;
+        }
+        return wynik;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(zDziesietnego(naDziesietny(&quot;101201&quot;, 3), 9));
+        System.out.println(zDziesietnego(naDziesietny(&quot;2487&quot;, 9), 3));
+    }
+}</code></pre></div></div></div><p class="answer"><strong>Odpowiedź:</strong> 101201₃ = 351₉, 2487₉ = 2112221₃.</p><div class="contrib"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/edit/master/dzialy/zadania_arkusze/2023_czerwiec.md" target="_blank" rel="noopener" title="Otwórz plik w edytorze GitHuba — zmiana trafi do akceptacji">✏️ Popraw lub dodaj</a><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new?template=blad.yml&amp;title=%5BB%C5%82%C4%85d%5D%20Matura%202023%20%E2%80%94%20czerwiec%20%28termin%20dodatkowy%29%2C%20poziom%20rozszerzony%20%28formu%C5%82a%202023%29%20%E2%80%94%204&amp;gdzie=https%3A//wernexnrs.github.io/MATURA-INFORMATYKA/arkusze/2023-czerwiec.html%234" target="_blank" rel="noopener">⚠ Zgłoś błąd</a></div><a class="to-top" href="#top" aria-label="Do góry">↑</a></section><p class="source"><a href="https://github.com/wernexnrs/MATURA-INFORMATYKA/blob/master/dzialy/zadania_arkusze/2023_czerwiec.md" target="_blank" rel="noopener">Edytuj na GitHubie</a></p>
 </main>
 </div>
 <footer class="footer">
