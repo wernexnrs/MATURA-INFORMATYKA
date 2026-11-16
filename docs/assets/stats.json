@@ -1,9 +1,7 @@
 {
  "generated_at": "2026-11-16T13:00:00Z",
  "since": "2026-11-14",
- "errors": [
-  "total: HTTP Error 404: Not Found"
- ],
+ "errors": [],
  "daily": [
   {
    "day": "2026-11-14",
@@ -18,6 +16,7 @@
    "count": 3
   }
  ],
+ "total": 3,
  "hourly": [
   0,
   0,
@@ -59,7 +58,6 @@
    "count": 2
   }
  ],
- "total": 3,
  "browsers": [
   {
    "name": "Chrome",
@@ -175,6 +173,12 @@
   ],
   "commits": [
    {
+    "message": "Statystyki: suma łączna z odpowiedzi dziennej (bez zapytania zwracającego 404)",
+    "date": "2026-11-16T12:32:23Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/be7ec654e0c847f4e9dfe3bd202f29807ecd4c99"
+   },
+   {
     "message": "Statystyki: pobieranie co 6 godzin i po zmianach, tylko adresy tej strony",
     "date": "2026-11-16T12:31:09Z",
     "author": "wernexnrs",
@@ -215,12 +219,6 @@
     "date": "2026-11-14T20:33:04Z",
     "author": "wernexnrs",
     "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/799002aaf257c760e97c8d2fae9e475ec2add7ab"
-   },
-   {
-    "message": "Statystyki: liczenie od założenia licznika i zapasowa suma; testy C++ w GCC 15; adnotacje błędów",
-    "date": "2026-11-14T20:27:14Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/8dd59c0a2c5927ec1bf33ff13e09cb2f32574cc5"
    }
   ],
   "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA"
