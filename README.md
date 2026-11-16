@@ -28,7 +28,7 @@ Ten projekt rozwija społeczność — uczniowie, absolwenci i nauczyciele. Każ
 - **Znalazłeś błąd?** [Zgłoś go](https://github.com/wernexnrs/MATURA-INFORMATYKA/issues/new/choose) — wystarczy opis, nie musisz umieć gita.
 - **Masz lepsze rozwiązanie albo nowy algorytm?** Przeczytaj **[CONTRIBUTING.md](CONTRIBUTING.md)** — krok po kroku, także dla osób, które nigdy nie robiły pull requesta.
 - **Chcesz pomóc, ale nie wiesz od czego zacząć?** Zajrzyj do zgłoszeń z etykietą [`dobre na start`](https://github.com/wernexnrs/MATURA-INFORMATYKA/labels/dobre%20na%20start).
-- **Pytania i pomysły:** [Dyskusje](https://github.com/wernexnrs/MATURA-INFORMATYKA/discussions) albo serwer Discord [Do matury](https://discord.gg/3hyj3kXQkt).
+- **Pytania i pomysły:** [Dyskusje](https://github.com/wernexnrs/MATURA-INFORMATYKA/discussions).
 
 Cała treść to zwykłe pliki Markdown w folderze [`dzialy/`](dzialy). Stronę generuje [`tools/build_site.py`](tools/build_site.py), a [`tools/check.py`](tools/check.py) sprawdza, czy wszystko działa.
 
