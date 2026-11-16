@@ -1,8 +1,9 @@
 {
- "generated_at": "2026-11-15T13:00:00Z",
+ "generated_at": "2026-11-16T13:00:00Z",
  "since": "2026-11-14",
- "errors": [],
- "total": 0,
+ "errors": [
+  "total: HTTP Error 404: Not Found"
+ ],
  "daily": [
   {
    "day": "2026-11-14",
@@ -11,6 +12,10 @@
   {
    "day": "2026-11-15",
    "count": 0
+  },
+  {
+   "day": "2026-11-16",
+   "count": 3
   }
  ],
  "hourly": [
@@ -27,7 +32,7 @@
   0,
   0,
   0,
-  0,
+  3,
   0,
   0,
   0,
@@ -39,13 +44,50 @@
   0,
   0
  ],
- "pages": [],
+ "pages": [
+  {
+   "path": "/MATURA-INFORMATYKA",
+   "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
+   "count": 2
+  }
+ ],
  "events": [],
- "pages_week": [],
- "browsers": [],
- "systems": [],
- "locations": [],
- "languages": [],
+ "pages_week": [
+  {
+   "path": "/MATURA-INFORMATYKA",
+   "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
+   "count": 2
+  }
+ ],
+ "total": 3,
+ "browsers": [
+  {
+   "name": "Chrome",
+   "count": 3
+  }
+ ],
+ "systems": [
+  {
+   "name": "Windows",
+   "count": 3
+  }
+ ],
+ "locations": [
+  {
+   "name": "Poland",
+   "count": 3
+  }
+ ],
+ "languages": [
+  {
+   "name": "(unknown)",
+   "count": 2
+  },
+  {
+   "name": "Polish",
+   "count": 1
+  }
+ ],
  "sizes": [
   {
    "name": "(nieznane)",
@@ -57,7 +99,7 @@
   },
   {
    "name": "(nieznane)",
-   "count": 0
+   "count": 2
   },
   {
    "name": "(nieznane)",
@@ -65,10 +107,15 @@
   },
   {
    "name": "(nieznane)",
-   "count": 0
+   "count": 1
   }
  ],
- "toprefs": [],
+ "toprefs": [
+  {
+   "name": "(nieznane)",
+   "count": 3
+  }
+ ],
  "github": {
   "stars": 208,
   "forks": 16,
@@ -128,6 +175,18 @@
   ],
   "commits": [
    {
+    "message": "Statystyki: pobieranie co 6 godzin i po zmianach, tylko adresy tej strony",
+    "date": "2026-11-16T12:31:09Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/bfceb9fa2b035abd8c079dfe28da7ee561322a3f"
+   },
+   {
+    "message": "Update README to remove Discord link",
+    "date": "2026-11-16T11:53:10Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/7add1cd12e95e4b1001e0e00b3a14a5094ea2f42"
+   },
+   {
     "message": "Baner podglądu strony przy udostępnianiu linku (og:image)",
     "date": "2026-11-14T21:08:53Z",
     "author": "wernexnrs",
@@ -162,18 +221,6 @@
     "date": "2026-11-14T20:27:14Z",
     "author": "wernexnrs",
     "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/8dd59c0a2c5927ec1bf33ff13e09cb2f32574cc5"
-   },
-   {
-    "message": "Licznik odwiedzin GoatCounter i publiczna strona Statystyki z wykresami",
-    "date": "2026-11-14T20:17:20Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/b4fbab62d052860c05b9da1462e4aef6c910d14b"
-   },
-   {
-    "message": "Karty arkuszy pokazują faktyczne języki rozwiązań (Python, C++, Java)",
-    "date": "2026-11-14T20:10:43Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/a078aa118268e8f1991ccefa603009ca00fa93a7"
    }
   ],
   "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA"
