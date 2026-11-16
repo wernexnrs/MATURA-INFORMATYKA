@@ -22,6 +22,7 @@ from datetime import datetime, timedelta, timezone
 SITE = os.environ.get("GOATCOUNTER_SITE", "https://wernexnrs.goatcounter.com")
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs", "assets", "stats.json")
 START_ALL = "2026-11-14T00:00:00Z"   # początek zbierania statystyk (założenie licznika)
+SITE_PREFIX = "/MATURA-INFORMATYKA"
 PAGES = ["browsers", "systems", "locations", "languages", "sizes", "toprefs"]
 
 
@@ -135,7 +136,10 @@ def main():
         for h in res.get("hits", []):
             seen.append(str(h.get("path_id")))
             item = {"path": h.get("path"), "title": h.get("title") or "", "count": h.get("count", 0)}
-            (events if h.get("event") else hits).append(item)
+            if h.get("event"):
+                events.append(item)
+            elif (item["path"] or "").startswith(SITE_PREFIX):  # tylko strony tej witryny (bez testów)
+                hits.append(item)
         if not res.get("more"):
             break
     out["pages"] = sorted(hits, key=lambda h: -h["count"])
@@ -144,7 +148,7 @@ def main():
     week = safe("week", lambda: get(token, "stats/hits", start=iso(now - timedelta(days=7)), end=iso(now), limit=50))
     if week:
         out["pages_week"] = [{"path": h.get("path"), "title": h.get("title") or "", "count": h.get("count", 0)}
-                             for h in week.get("hits", []) if not h.get("event")]
+                             for h in week.get("hits", []) if not h.get("event") and (h.get("path") or "").startswith(SITE_PREFIX)]
     if "total" not in out:
         # zapas: suma z danych dziennych albo ze stron
         out["total"] = max(sum(d["count"] for d in out.get("daily", [])), sum(h["count"] for h in hits))
