@@ -304,7 +304,7 @@
       var seen = {};
       var items = list.filter(function (h) {
         var k = norm(h.path);
-        if (skip.test(h.path) || seen[k] || !h.count) return false;
+        if (k === "/" || skip.test(h.path) || seen[k] || !h.count) return false;
         seen[k] = 1;
         return true;
       }).slice(0, 6);
@@ -357,8 +357,8 @@
         '</span><span class="cstat-label">' + s[2] + "</span></div>";
     }).join("");
     box.querySelector(".avatars").innerHTML = (g.contributors || []).slice(0, 24).map(function (c) {
-      return '<a href="' + esc(c.url) + '" target="_blank" rel="noopener" title="' + esc(c.login) + " — " + fmt(c.contributions) +
-        ' zmian"><img src="' + esc(c.avatar) + '&s=96" alt="' + esc(c.login) + '" width="44" height="44" loading="lazy"></a>';
+      return '<a href="' + esc(c.url) + '" target="_blank" rel="noopener" title="' + esc(c.login) + " — " + fmt(c.contributions) + " " + (c.contributions === 1 ? "zmiana" : (c.contributions % 10 >= 2 && c.contributions % 10 <= 4 && !(c.contributions % 100 >= 12 && c.contributions % 100 <= 14)) ? "zmiany" : "zmian") +
+        '"><img src="' + esc(c.avatar) + '&s=96" alt="' + esc(c.login) + '" width="44" height="44" loading="lazy"></a>';
     }).join("");
     box.hidden = false;
   });

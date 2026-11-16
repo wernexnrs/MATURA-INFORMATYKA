@@ -155,7 +155,8 @@ def main():
     for page in PAGES:
         res = safe(page, lambda p=page: get(token, "stats/" + p, start=START_ALL, end=iso(now), limit=20))
         if res:
-            out[page] = [{"name": s.get("name") or "(nieznane)", "count": s.get("count", 0)} for s in res.get("stats", [])]
+            out[page] = [{"name": s.get("name") or "", "id": s.get("id") or "", "count": s.get("count", 0)}
+                         for s in res.get("stats", [])]
 
     gh = safe("github", github_stats)
     if gh:

@@ -127,6 +127,29 @@
   }
 
 
+
+  /* ---------- polskie nazwy dla danych z GoatCountera ---------- */
+  var SIZES = { phone: "Telefon", largephone: "Duży telefon", tablet: "Tablet", desktop: "Komputer",
+                desktophd: "Duży monitor", unknown: "Nieznane" };
+  var PL = { "(unknown)": "Nieznane", "Unknown": "Nieznane", "Poland": "Polska", "Germany": "Niemcy",
+             "United Kingdom": "Wielka Brytania", "United States": "Stany Zjednoczone", "Ireland": "Irlandia",
+             "Netherlands": "Holandia", "Norway": "Norwegia", "France": "Francja", "Czechia": "Czechy",
+             "Ukraine": "Ukraina", "Sweden": "Szwecja", "Belgium": "Belgia", "Austria": "Austria", "Italy": "Włochy",
+             "Spain": "Hiszpania", "Denmark": "Dania", "Polish": "polski", "English": "angielski",
+             "German": "niemiecki", "Ukrainian": "ukraiński", "Russian": "rosyjski", "French": "francuski" };
+  function plName(kind, name, id) {
+    if (name === "(nieznane)") name = "";
+    if (kind === "sizes") return SIZES[id] || SIZES[(name || "").toLowerCase()] || name || "Nieznane";
+    if (kind === "toprefs" && !name) return "Wejścia bezpośrednie (bez linku)";
+    if (!name) return "Nieznane";
+    return PL[name] || name;
+  }
+  function zmian(n) {
+    if (n === 1) return "zmiana";
+    if (n % 10 >= 2 && n % 10 <= 4 && !(n % 100 >= 12 && n % 100 <= 14)) return "zmiany";
+    return "zmian";
+  }
+
   /* ---------- kiedy i jak się uczycie ---------- */
   function learning(d, daily) {
     var html = "";
@@ -181,7 +204,7 @@
     }).join("") + "</div>";
     var contrib = (g.contributors || []).map(function (c) {
       return '<li><a href="' + esc(c.url) + '" target="_blank" rel="noopener"><img src="' + esc(c.avatar) + '&s=80" alt="" width="36" height="36" loading="lazy">' +
-        '<span class="cname">' + esc(c.login) + '</span><span class="ccount">' + fmt(c.contributions) + " zmian</span></a></li>";
+        '<span class="cname">' + esc(c.login) + '</span><span class="ccount">' + fmt(c.contributions) + " " + zmian(c.contributions) + "</span></a></li>";
     }).join("");
     var commits = (g.commits || []).map(function (c) {
       return '<li><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.message) + '</a><span class="cmeta">' + esc(c.author) + " · " +
@@ -227,7 +250,14 @@
     var line = daily.length ? lineChart(daily) : null;
     if (line) html += line.html;
 
-    var toRows = function (list) { return (list || []).map(function (s) { return { name: s.name, count: s.count }; }); };
+    var toRows = function (list, kind) {
+      var rows = {};
+      (list || []).forEach(function (s) {
+        var n = plName(kind, s.name, s.id);
+        rows[n] = (rows[n] || 0) + s.count;
+      });
+      return Object.keys(rows).map(function (k) { return { name: k, count: rows[k] }; }).sort(function (a, b) { return b.count - a.count; });
+    };
     var pageRows = function (list) { return list.map(function (p) { return { name: pageLabel(p), count: p.count, href: pageHref(p.path) }; }); };
 
     html += '<div class="charts">' +
@@ -235,12 +265,12 @@
       bars("Najpopularniejsze strony", pageRows(pages), { limit: 12 }) +
       bars("Najczęściej otwierane arkusze", pageRows(arkusze), { limit: 10 }) +
       bars("Najczęściej czytane algorytmy", pageRows(algos), { limit: 10 }) +
-      bars("Skąd przychodzą odwiedzający", toRows(d.toprefs), { limit: 10, note: "Strony i wyszukiwarki, z których kliknięto link" }) +
-      bars("Urządzenia (szerokość ekranu)", toRows(d.sizes), { share: true }) +
-      bars("Kraje", toRows(d.locations), { limit: 10, share: true }) +
-      bars("Przeglądarki", toRows(d.browsers), { limit: 8, share: true }) +
-      bars("Systemy operacyjne", toRows(d.systems), { limit: 8, share: true }) +
-      bars("Języki przeglądarki", toRows(d.languages), { limit: 8, share: true }) +
+      bars("Skąd przychodzą odwiedzający", toRows(d.toprefs, "toprefs"), { limit: 10, note: "Strony i wyszukiwarki, z których kliknięto link" }) +
+      bars("Urządzenia (szerokość ekranu)", toRows(d.sizes, "sizes"), { share: true }) +
+      bars("Kraje", toRows(d.locations, "locations"), { limit: 10, share: true }) +
+      bars("Przeglądarki", toRows(d.browsers, "browsers"), { limit: 8, share: true }) +
+      bars("Systemy operacyjne", toRows(d.systems, "systems"), { limit: 8, share: true }) +
+      bars("Języki przeglądarki", toRows(d.languages, "languages"), { limit: 8, share: true }) +
       "</div>";
     html += learning(d, daily);
     html += community(d.github);
