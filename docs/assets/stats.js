@@ -41,7 +41,7 @@
     return t || (h.path || "").replace(/^\/MATURA-INFORMATYKA/, "") || "/";
   }
   function pageHref(path) {
-    return (path || "").replace(/^\/MATURA-INFORMATYKA\//, "").replace(/^\//, "") || "index.html";
+    return (path || "").replace(/^\/MATURA-INFORMATYKA\/?/, "").replace(/^\//, "") || "index.html";
   }
 
   /* ---------- poziome słupki (jedna seria) ---------- */
@@ -61,16 +61,11 @@
         '</span><span class="hb-track"><span class="hb-bar" style="width:' + pct.toFixed(1) + '%"></span></span>' +
         '<span class="hb-val">' + fmt(r.count) + share + "</span></li>";
     });
-    html += "</ol>" + table(rows, ["Nazwa", "Odwiedziny"]) + "</section>";
+    html += "</ol>" + "</section>";
     return html;
   }
 
-  function table(rows, head) {
-    return '<details class="chart-table"><summary>Pokaż tabelę</summary><table><thead><tr><th>' + head[0] +
-      '</th><th style="text-align:right">' + head[1] + "</th></tr></thead><tbody>" +
-      rows.map(function (r) { return "<tr><td>" + esc(r.name) + '</td><td style="text-align:right">' + fmt(r.count) + "</td></tr>"; }).join("") +
-      "</tbody></table></details>";
-  }
+
 
   /* ---------- wykres odwiedzin w czasie (SVG, crosshair + podpowiedź) ---------- */
   function lineChart(daily) {
@@ -101,8 +96,7 @@
     var sum30 = daily.slice(-30).reduce(function (a, d) { return a + d.count; }, 0);
     var html = '<section class="chart-card wide"><h3>Odwiedziny dzień po dniu</h3><p class="chart-note">Ostatnie ' + n +
       " dni · w ostatnich 30 dniach " + fmt(sum30) + '</p><div class="line-wrap">' + svg +
-      '<div class="tip" hidden></div></div>' +
-      table(daily.slice().reverse().map(function (d) { return { name: d.day, count: d.count }; }), ["Dzień", "Odwiedziny"]) + "</section>";
+      '<div class="tip" hidden></div></div>' + "</section>";
     return { html: html, bind: function (root) {
       var s = root.querySelector(".line-svg"), tip = root.querySelector(".tip");
       var cross = s.querySelector(".cross"), dot = s.querySelector(".cross-dot"), hit = s.querySelector(".hit");
@@ -189,8 +183,7 @@
     var rows = hours.map(function (v, h) { return { name: h + ":00–" + (h + 1) + ":00", count: v }; });
     return '<section class="chart-card"><h3>Godziny nauki</h3><p class="chart-note">O której najczęściej odwiedzacie stronę</p>' +
       '<svg viewBox="0 0 ' + W + " " + H + '" class="line-svg hours" role="img" aria-label="Odwiedziny według godziny">' +
-      '<line x1="0" x2="' + W + '" y1="' + (H - B) + '" y2="' + (H - B) + '" class="gridline"/>' + cols + "</svg>" +
-      table(rows, ["Godzina", "Odwiedziny"]) + "</section>";
+      '<line x1="0" x2="' + W + '" y1="' + (H - B) + '" y2="' + (H - B) + '" class="gridline"/>' + cols + "</svg>" + "</section>";
   }
 
   /* ---------- społeczność z GitHuba ---------- */
@@ -199,20 +192,16 @@
     var people = (g.contributors || []).length;
     var tiles = [["Gwiazdki na GitHubie", g.stars], ["Współtwórcy", people], ["Scalone poprawki (PR)", g.merged_prs],
                  ["Rozwiązane zgłoszenia", g.closed_issues], ["Forki", g.forks], ["Obserwujący", g.watchers]];
-    var html = '<h2 class="section-title">Społeczność</h2><div class="stats-grid">' + tiles.map(function (t) {
+    var html = '<h2 class="section-title">Społeczność</h2><div class="stats-grid six">' + tiles.map(function (t) {
       return '<div class="stat"><span class="stat-num">' + fmt(t[1]) + '</span><span class="stat-label">' + t[0] + "</span></div>";
     }).join("") + "</div>";
     var contrib = (g.contributors || []).map(function (c) {
       return '<li><a href="' + esc(c.url) + '" target="_blank" rel="noopener"><img src="' + esc(c.avatar) + '&s=80" alt="" width="36" height="36" loading="lazy">' +
         '<span class="cname">' + esc(c.login) + '</span><span class="ccount">' + fmt(c.contributions) + " " + zmian(c.contributions) + "</span></a></li>";
     }).join("");
-    var commits = (g.commits || []).map(function (c) {
-      return '<li><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.message) + '</a><span class="cmeta">' + esc(c.author) + " · " +
-        new Date(c.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" }) + "</span></li>";
-    }).join("");
     html += '<div class="charts"><section class="chart-card"><h3>Współtwórcy</h3><p class="chart-note">Dziękujemy! Każdy może dołączyć — zobacz <a href="' +
       esc((g.url || "") + "/blob/master/CONTRIBUTING.md") + '" target="_blank" rel="noopener">jak pomóc</a>.</p><ul class="contrib-list">' + contrib + "</ul></section>" +
-      '<section class="chart-card"><h3>Ostatnie zmiany</h3><ul class="commit-list">' + commits + "</ul></section></div>";
+      "</div>";
     return html;
   }
 

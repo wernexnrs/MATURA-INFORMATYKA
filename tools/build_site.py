@@ -741,6 +741,17 @@ NAV = [("index.html", "Start"), ("algorytmy.html", "Algorytmy CKE"), ("dodatkowe
        ("arkusze.html", "Arkusze"), ("funkcje.html", "Python"), ("statystyki.html", "Statystyki")]
 
 
+def asset(name):
+    """Adres pliku z docs/assets z odciskiem zawartości (?v=...), żeby przeglądarki nie trzymały starej wersji."""
+    import hashlib
+    path = os.path.join(DOCS, "assets", name)
+    try:
+        h = hashlib.sha1(open(path, "rb").read()).hexdigest()[:8]
+    except OSError:
+        return "assets/" + name
+    return "assets/%s?v=%s" % (name, h)
+
+
 def layout(out, title, description, content, sidebar="", crumbs=None, wide=False):
     root = rel(out, "index.html")[:-len("index.html")]
     canonical = SITE_URL + ("" if out == "index.html" else out)
@@ -793,7 +804,7 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{root}assets/style.css">
+<link rel="stylesheet" href="{root}{css}">
 <script>try{{var t=localStorage.getItem("motyw");if(t)document.documentElement.dataset.theme=t;}}catch(e){{}}</script>
 <script type="application/ld+json">{ld}</script>
 <script data-goatcounter="https://wernexnrs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -830,15 +841,15 @@ def layout(out, title, description, content, sidebar="", crumbs=None, wide=False
   </div>
 </div>
 <script>window.ROOT="{root}";</script>
-<script src="{root}assets/search-index.js" defer></script>
+<script src="{root}{searchjs}" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-<script src="{root}assets/app.js" defer></script>
+<script src="{root}{appjs}" defer></script>
 </body>
 </html>
 """.format(full_title=html.escape(full_title), desc=html.escape(description), canonical=canonical,
            site=SITE_NAME, title=html.escape(title), root=root, ld=json.dumps(ld, ensure_ascii=False),
            nav="".join(nav), repo=REPO_URL, side=side, crumbs=crumb_html, content=content,
-           wide=" no-side" if not sidebar else "", site_url=SITE_URL)
+           wide=" no-side" if not sidebar else "", site_url=SITE_URL, css=asset("style.css"), appjs=asset("app.js"), searchjs=asset("search-index.js"))
 
 
 def sidebar_html(page, out):
@@ -949,6 +960,17 @@ def main():
         for f in os.listdir(img_dir):
             shutil.copy(os.path.join(img_dir, f), os.path.join(DOCS, "assets", "img", f))
     write("assets/search-index.js", "window.SEARCH_INDEX=" + json.dumps(index_entries, ensure_ascii=False) + ";\n")
+    # odcisk indeksu wyszukiwarki powstaje dopiero teraz - podmieniamy go we wszystkich stronach
+    new_ref = asset("search-index.js").split("?v=")[-1]
+    for dirpath, _, files in os.walk(DOCS):
+        for fn in files:
+            if fn.endswith(".html"):
+                fp = os.path.join(dirpath, fn)
+                txt = open(fp, encoding="utf-8").read()
+                upd = re.sub(r"search-index\.js\?v=[0-9a-f]+", "search-index.js?v=" + new_ref, txt)
+                if upd != txt:
+                    with open(fp, "w", encoding="utf-8", newline="\n") as f:
+                        f.write(upd)
 
     # SEO
     urls = "".join("<url><loc>%s</loc></url>" % (SITE_URL + ("" if u == "index.html" else u)) for u in sorted(built))
@@ -1068,9 +1090,9 @@ def stats_page(stats, exam_info):
   <p class="stats-empty">Ładowanie statystyk…</p>
 </div>
 <noscript><p>Wykresy wymagają włączonego JavaScriptu.</p></noscript>
-<p class="source">Dane z <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>, aktualizowane automatycznie raz dziennie. Zbieramy tylko zbiorcze liczby — żadnych danych osobowych.</p>
-<script src="assets/stats.js" defer></script>
-""".format(content_tiles=content_tiles)
+<p class="source">Dane z <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>, aktualizowane automatycznie co kilka godzin. Zbieramy tylko zbiorcze liczby — żadnych danych osobowych.</p>
+<script src="%s" defer></script>
+""".format(content_tiles=content_tiles) % asset("stats.js")
     desc = "Statystyki strony Matura z informatyki: liczba odwiedzin, najpopularniejsze algorytmy i arkusze, urządzenia i kraje odwiedzających."
     return layout("statystyki.html", "Statystyki", desc, content, crumbs=[("index.html", "Start")])
 

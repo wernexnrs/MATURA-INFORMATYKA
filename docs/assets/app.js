@@ -312,7 +312,7 @@
       var ol = popular.querySelector("ol");
       ol.innerHTML = items.map(function (h, i) {
         var t = (h.title || "").replace(/\s*\|\s*Matura z informatyki\s*$/, "") || h.path;
-        var href = (h.path || "").replace(/^\/MATURA-INFORMATYKA\//, "").replace(/^\//, "");
+        var href = (h.path || "").replace(/^\/MATURA-INFORMATYKA\/?/, "").replace(/^\//, "") || "index.html";
         return '<li><a href="' + root + href + '"><span class="pop-rank">' + (i + 1) + '</span><span class="pop-title">' +
           t.replace(/[<>&]/g, "") + '</span><span class="pop-views">👁 ' + fmt(h.count) + "</span></a></li>";
       }).join("");
