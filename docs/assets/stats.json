@@ -13,10 +13,10 @@
   },
   {
    "day": "2026-11-16",
-   "count": 3
+   "count": 4
   }
  ],
- "total": 3,
+ "total": 4,
  "hourly": [
   0,
   0,
@@ -31,7 +31,7 @@
   0,
   0,
   0,
-  3,
+  4,
   0,
   0,
   0,
@@ -48,6 +48,11 @@
    "path": "/MATURA-INFORMATYKA",
    "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
    "count": 2
+  },
+  {
+   "path": "/MATURA-INFORMATYKA/statystyki.html",
+   "title": "Statystyki | Matura z informatyki",
+   "count": 1
   }
  ],
  "events": [],
@@ -56,62 +61,78 @@
    "path": "/MATURA-INFORMATYKA",
    "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
    "count": 2
+  },
+  {
+   "path": "/MATURA-INFORMATYKA/statystyki.html",
+   "title": "Statystyki | Matura z informatyki",
+   "count": 1
   }
  ],
  "browsers": [
   {
    "name": "Chrome",
-   "count": 3
+   "id": "Chrome",
+   "count": 4
   }
  ],
  "systems": [
   {
    "name": "Windows",
-   "count": 3
+   "id": "Windows",
+   "count": 4
   }
  ],
  "locations": [
   {
    "name": "Poland",
-   "count": 3
+   "id": "PL",
+   "count": 4
   }
  ],
  "languages": [
   {
    "name": "(unknown)",
+   "id": "(unknown)",
    "count": 2
   },
   {
    "name": "Polish",
-   "count": 1
+   "id": "pol",
+   "count": 2
   }
  ],
  "sizes": [
   {
-   "name": "(nieznane)",
+   "name": "",
+   "id": "phone",
    "count": 0
   },
   {
-   "name": "(nieznane)",
+   "name": "",
+   "id": "tablet",
    "count": 0
   },
   {
-   "name": "(nieznane)",
+   "name": "",
+   "id": "desktop",
    "count": 2
   },
   {
-   "name": "(nieznane)",
+   "name": "",
+   "id": "desktophd",
    "count": 0
   },
   {
-   "name": "(nieznane)",
-   "count": 1
+   "name": "",
+   "id": "unknown",
+   "count": 2
   }
  ],
  "toprefs": [
   {
-   "name": "(nieznane)",
-   "count": 3
+   "name": "",
+   "id": "",
+   "count": 4
   }
  ],
  "github": {
@@ -173,6 +194,12 @@
   ],
   "commits": [
    {
+    "message": "Statystyki: polskie nazwy, odmiana, typy ekranów, wejścia bezpośrednie; popularne bez strony głównej",
+    "date": "2026-11-16T12:34:48Z",
+    "author": "wernexnrs",
+    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/2d145f1736900792cf20654172f71509cfafff65"
+   },
+   {
     "message": "Statystyki: suma łączna z odpowiedzi dziennej (bez zapytania zwracającego 404)",
     "date": "2026-11-16T12:32:23Z",
     "author": "wernexnrs",
@@ -213,12 +240,6 @@
     "date": "2026-11-14T20:49:15Z",
     "author": "wernexnrs",
     "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/f886232323865c68ac621508927183b4429feb45"
-   },
-   {
-    "message": "Odliczanie do matury, społeczność z GitHuba, popularne, liczniki wyświetleń, zdarzenia",
-    "date": "2026-11-14T20:33:04Z",
-    "author": "wernexnrs",
-    "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA/commit/799002aaf257c760e97c8d2fae9e475ec2add7ab"
    }
   ],
   "url": "https://github.com/wernexnrs/MATURA-INFORMATYKA"
