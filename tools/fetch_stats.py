@@ -113,12 +113,11 @@ def main():
             out["errors"].append("%s: %s" % (name, e))
             return None
 
-    total = safe("total", lambda: get(token, "stats/total", start=START_ALL, end=iso(now)))
-    if total:
-        out["total"] = total.get("total", 0)
     days = safe("daily", lambda: get(token, "stats/total", start=iso(start90), end=iso(now)))
     if days:
         out["daily"] = [{"day": s.get("day"), "count": s.get("daily", 0)} for s in days.get("stats", []) if s.get("day")]
+        if isinstance(days.get("total"), int):
+            out["total"] = days["total"]  # odpowiedź zawiera też sumę za cały okres
         # suma odwiedzin w poszczególnych godzinach doby (strefa czasowa jak w ustawieniach GoatCounter)
         hours = [0] * 24
         for st in days.get("stats", []):
