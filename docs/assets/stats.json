@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T10:00:00Z",
+ "generated_at": "2026-11-24T23:00:00Z",
  "since": "2026-11-14",
  "errors": [],
  "daily": [
@@ -45,10 +45,14 @@
   },
   {
    "day": "2026-11-24",
+   "count": 1
+  },
+  {
+   "day": "2026-11-25",
    "count": 0
   }
  ],
- "total": 10,
+ "total": 11,
  "hourly": [
   0,
   0,
@@ -70,7 +74,7 @@
   0,
   0,
   0,
-  0,
+  1,
   0,
   0,
   0
@@ -79,7 +83,7 @@
   {
    "path": "/MATURA-INFORMATYKA",
    "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
-   "count": 3
+   "count": 4
   },
   {
    "path": "/MATURA-INFORMATYKA/statystyki.html",
@@ -110,6 +114,11 @@
  "events": [],
  "pages_week": [
   {
+   "path": "/MATURA-INFORMATYKA",
+   "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
+   "count": 2
+  },
+  {
    "path": "/MATURA-INFORMATYKA/arkusze/2024-czerwiec.html",
    "title": "Matura 2024 — czerwiec (termin dodatkowy), poziom rozszerzony (formuła 2023) | Matura z informatyki",
    "count": 1
@@ -133,11 +142,6 @@
    "path": "/MATURA-INFORMATYKA/statystyki.html",
    "title": "Statystyki | Matura z informatyki",
    "count": 1
-  },
-  {
-   "path": "/MATURA-INFORMATYKA",
-   "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
-   "count": 1
   }
  ],
  "browsers": [
@@ -149,7 +153,7 @@
   {
    "name": "Chrome",
    "id": "Chrome",
-   "count": 4
+   "count": 5
   }
  ],
  "systems": [
@@ -161,21 +165,21 @@
   {
    "name": "Windows",
    "id": "Windows",
-   "count": 4
+   "count": 5
   }
  ],
  "locations": [
   {
    "name": "Poland",
    "id": "PL",
-   "count": 10
+   "count": 11
   }
  ],
  "languages": [
   {
    "name": "Polish",
    "id": "pol",
-   "count": 8
+   "count": 9
   },
   {
    "name": "(unknown)",
@@ -197,7 +201,7 @@
   {
    "name": "",
    "id": "desktop",
-   "count": 8
+   "count": 9
   },
   {
    "name": "",
@@ -215,6 +219,11 @@
    "name": "",
    "id": "",
    "count": 4
+  },
+  {
+   "name": "github.com",
+   "id": "github.com",
+   "count": 1
   },
   {
    "name": "github.com/wernexnrs/MATURA-INFORMATYKA",
