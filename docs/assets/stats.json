@@ -1,93 +1,14 @@
 {
- "generated_at": "2026-11-26T09:00:00Z",
+ "generated_at": "2026-11-26T22:00:00Z",
  "since": "2026-11-14",
- "errors": [],
- "daily": [
-  {
-   "day": "2026-11-14",
-   "count": 0
-  },
-  {
-   "day": "2026-11-15",
-   "count": 0
-  },
-  {
-   "day": "2026-11-16",
-   "count": 4
-  },
-  {
-   "day": "2026-11-17",
-   "count": 0
-  },
-  {
-   "day": "2026-11-18",
-   "count": 0
-  },
-  {
-   "day": "2026-11-19",
-   "count": 0
-  },
-  {
-   "day": "2026-11-20",
-   "count": 0
-  },
-  {
-   "day": "2026-11-21",
-   "count": 0
-  },
-  {
-   "day": "2026-11-22",
-   "count": 0
-  },
-  {
-   "day": "2026-11-23",
-   "count": 6
-  },
-  {
-   "day": "2026-11-24",
-   "count": 1
-  },
-  {
-   "day": "2026-11-25",
-   "count": 1
-  },
-  {
-   "day": "2026-11-26",
-   "count": 0
-  }
- ],
- "total": 12,
- "hourly": [
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  10,
-  0,
-  0,
-  1,
-  0,
-  0,
-  0,
-  1,
-  0,
-  0,
-  0
+ "errors": [
+  "daily: HTTP Error 404: Not Found"
  ],
  "pages": [
   {
    "path": "/MATURA-INFORMATYKA",
    "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
-   "count": 5
+   "count": 6
   },
   {
    "path": "/MATURA-INFORMATYKA/statystyki.html",
@@ -120,7 +41,7 @@
   {
    "path": "/MATURA-INFORMATYKA",
    "title": "Matura z informatyki - algorytmy i arkusze w Pythonie",
-   "count": 3
+   "count": 4
   },
   {
    "path": "/MATURA-INFORMATYKA/arkusze/2024-czerwiec.html",
@@ -148,11 +69,12 @@
    "count": 1
   }
  ],
+ "total": 12,
  "browsers": [
   {
    "name": "Chrome",
    "id": "Chrome",
-   "count": 6
+   "count": 7
   },
   {
    "name": "Firefox",
@@ -174,21 +96,21 @@
   {
    "name": "macOS",
    "id": "macOS",
-   "count": 1
+   "count": 2
   }
  ],
  "locations": [
   {
    "name": "Poland",
    "id": "PL",
-   "count": 12
+   "count": 13
   }
  ],
  "languages": [
   {
    "name": "Polish",
    "id": "pol",
-   "count": 10
+   "count": 11
   },
   {
    "name": "(unknown)",
@@ -210,7 +132,7 @@
   {
    "name": "",
    "id": "desktop",
-   "count": 10
+   "count": 11
   },
   {
    "name": "",
@@ -232,7 +154,7 @@
   {
    "name": "github.com",
    "id": "github.com",
-   "count": 2
+   "count": 3
   },
   {
    "name": "github.com/wernexnrs/MATURA-INFORMATYKA",
